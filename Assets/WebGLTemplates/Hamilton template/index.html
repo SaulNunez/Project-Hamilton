@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Juego basico</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <link rel="stylesheet" href="./stylesheet.css" type="text/css">
+  </head>
+  <body>
+    <div id="code_editor"></div>
+    <div id="game_render">
+        <p>Este navegador no soporta correr esta aplicación. Intenta un navegador <a href="https://www.mozilla.org/en-US/firefox/windows/">más moderno</a>.</p>
+    </div>
+    <xml id="toolbox" style="display: none">
+      <block type="controls_if"></block>
+      <block type="controls_repeat_ext"></block>
+      <block type="logic_compare"></block>
+      <block type="math_number"></block>
+      <block type="math_arithmetic"></block>
+      <block type="text"></block>
+      <block type="text_print"></block>
+    </xml>
+    
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script> var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");</script>
+    <script type="text/javascript" src="./node_modules/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="./node_modules/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="./node_modules/blockly/msg/js/es.js"></script>
+    <script type="text/javascript" src="./script.js "></script>
+  </body>
+</html>
