@@ -1,0 +1,22 @@
+/* Para que el canvas pueda ocupar toda la pantalla */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background-color: black;
+}
+
+#code_editor {
+    position: absolute;
+    height: 95vh;
+    width: 25vw;
+    border-radius: 4px;
+    background-color: #FBF8EF;
+    margin: 1em;
+    min-width: 50em;
+    /* display: none; */
+}
+
+#game_render {
+    background-color: white;
+}

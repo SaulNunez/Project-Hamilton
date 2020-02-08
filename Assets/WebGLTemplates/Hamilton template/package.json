@@ -1,0 +1,23 @@
+{
+  "name": "tesis",
+  "version": "1.0.0",
+  "description": "Un videojuego cooperativo para la enseñanza de programacion de videojuegos.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "videojuego",
+    "cooperativo",
+    "programacion",
+    "basada",
+    "en",
+    "bloques",
+    "multijugador"
+  ],
+  "author": "Saul Nunez",
+  "license": "ISC",
+  "dependencies": {
+    "blockly": "git+https://github.com/google/blockly.git"
+  }
+}

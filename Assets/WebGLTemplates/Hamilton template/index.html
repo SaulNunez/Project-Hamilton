@@ -11,9 +11,9 @@
   </head>
   <body>
     <div id="code_editor"></div>
-    <div id="game_render">
+    <canvas id="game_render">
         <p>Este navegador no soporta correr esta aplicación. Intenta un navegador <a href="https://www.mozilla.org/en-US/firefox/windows/">más moderno</a>.</p>
-    </div>
+    </canvas>
     <xml id="toolbox" style="display: none">
       <block type="controls_if"></block>
       <block type="controls_repeat_ext"></block>
@@ -24,11 +24,10 @@
       <block type="text_print"></block>
     </xml>
     
-    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
-    <script> var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");</script>
     <script type="text/javascript" src="./node_modules/blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="./node_modules/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="./node_modules/blockly/javascript_compressed.js"></script>
     <script type="text/javascript" src="./node_modules/blockly/msg/js/es.js"></script>
+    <script type="text/javascript" src="./JS-Interpreter-master/acorn_interpreter.js"></script>
     <script type="text/javascript" src="./script.js "></script>
   </body>
 </html>
