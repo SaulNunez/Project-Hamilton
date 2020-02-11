@@ -1,3 +1,6 @@
+let editor = document.getElementById("code_editor");
+let sideWindow = document.getElementById("code_editor_sidewindow");
+
 function makeCanvasFillScreen(){
     let canvas = document.getElementById("game_render");
     canvas.width = window.innerWidth;
@@ -7,8 +10,7 @@ function makeCanvasFillScreen(){
 }
 
 function initBlocky(){
-    let codeDiv = document.getElementById('code_editor');
-    let workspace = Blockly.inject(codeDiv,
+    let workspace = Blockly.inject(editor,
       {toolbox: document.getElementById('toolbox')});
     window.addEventListener('resize', (e) => {
         Blockly.svgResize(workspace);
@@ -16,6 +18,18 @@ function initBlocky(){
 
 }
 
+function loadCodeEditor(initialStateXml, initFunction){
+    const xml = Blocky.Xml.textToDom(initialStateXml);
+    Blockly.Xml.domToWorkspace(xml, editor);
+}
+
+function openCodeEditor(){
+    sideWindow.style.display = "block";
+}
+
+function closeCodeEditor(){
+    sideWindow.style.display = "none";
+}
+
 makeCanvasFillScreen();
 initBlocky();
-console.log("Hello world");
