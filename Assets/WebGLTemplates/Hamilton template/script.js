@@ -4,14 +4,6 @@ let runButton = document.getElementById("run_program_button");
 
 let unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
 
-function makeCanvasFillScreen() {
-    let canvas = document.getElementById("game_render");
-    canvas.width = window.innerWidth;
-    canvas.height = document.innerHeight;
-    canvasW = canvas.width;
-    canvasH = canvas.height;
-}
-
 function initBlocky() {
     let workspace = Blockly.inject(editor,
         { toolbox: document.getElementById('toolbox') });
@@ -89,5 +81,4 @@ function closeCodeEditor() {
     sideWindow.style.display = "none";
 }
 
-makeCanvasFillScreen();
 initBlocky();
