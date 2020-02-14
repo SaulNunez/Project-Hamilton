@@ -21,8 +21,10 @@ const CHECK_FUNC = 3;
 //Un tipo de revision donde checamos si el codigo tiene un tipo de sentencia
 //Un objeto con el nombre de la variable como llave y el valor esperado como el valor esperado
 function loadCodeEditor(loadId, initialStateXml, checkType, variablesExpected) {
-    const xml = Blocky.Xml.textToDom(initialStateXml);
-    Blockly.Xml.domToWorkspace(xml, editor);
+    if(initialStateXml){
+        const xml = Blocky.Xml.textToDom(initialStateXml);
+        Blockly.Xml.domToWorkspace(xml, editor);
+    }
 
     //Iniciar sandbox para codigo
     runButton.onclick = () => {
