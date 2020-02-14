@@ -72,10 +72,6 @@ function loadCodeEditor(loadId, initialStateXml, checkType, variablesExpected) {
         interpreter.run();
     }
 
-    openCodeEditor();
-}
-
-function openCodeEditor() {
     sideWindow.style.display = "block";
 }
 
