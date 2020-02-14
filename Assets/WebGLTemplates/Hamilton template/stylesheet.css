@@ -1,4 +1,8 @@
 /* Para que el canvas pueda ocupar toda la pantalla */
+body {
+    height: 100%;
+}
+
 html, body {
     margin: 0 !important;
     padding: 0 !important;

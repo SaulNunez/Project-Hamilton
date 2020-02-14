@@ -18,6 +18,7 @@
   "author": "Saul Nunez",
   "license": "ISC",
   "dependencies": {
+    "acorn-walk": "^7.1.0",
     "blockly": "git+https://github.com/google/blockly.git"
   }
 }
