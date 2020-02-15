@@ -2,8 +2,6 @@ let editor = document.getElementById("code_editor");
 let sideWindow = document.getElementById("code_editor_sidewindow");
 let runButton = document.getElementById("run_program_button");
 
-let unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
-
 function initBlocky() {
     let workspace = Blockly.inject(editor,
         { toolbox: document.getElementById('toolbox') });
@@ -72,7 +70,7 @@ function loadCodeEditor(loadId, initialStateXml, checkType, variablesExpected) {
         interpreter.run();
     }
 
-    sideWindow.style.display = "block";
+    sideWindow.style.display = "flex";
 }
 
 function closeCodeEditor() {

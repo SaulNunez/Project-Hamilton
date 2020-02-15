@@ -6,6 +6,23 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void ShowEditor(string initialStateXml, int checkType, Dictionary<string, object> variablesExpected);
+    private static extern void ShowEditor(int id, string initialStateXml, int checkType, string variablesExpected);
 
+    [DllImport("__Internal")]
+    private static extern void CloseCodeEditor();
+
+    private bool open = false;
+
+    public void OnClick()
+    {
+        if (open)
+        {
+            CloseCodeEditor();
+        } else
+        {
+            ShowEditor(1, null, 0, null);
+        }
+
+        open = !open;
+    }
 }

@@ -20,7 +20,7 @@ html, body {
     min-width: 50em;
     padding: 0.5rem;
     /* Usar flex para que se ocomode en pantalla los elementos del editor*/
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: stretch;
 }
