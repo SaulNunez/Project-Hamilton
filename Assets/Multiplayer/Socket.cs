@@ -27,8 +27,7 @@ public class Socket: MonoBehaviour
     {
         Debug.Log($"Received event {eventType} with: {content}");
         listeners
-            .FindAll(listener => listener.eventToListen == eventType)
-            .ForEach(listener => listener.listener(content));
+            .FindAll(listener => listener.eventToListen == eventType).ForEach(listener => listener.listener(content));
     }
 
     public void OnConnect()
