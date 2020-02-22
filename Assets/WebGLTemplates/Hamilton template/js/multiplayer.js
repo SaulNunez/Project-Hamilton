@@ -17,10 +17,14 @@ function openSocket(gameObjectToCall, connectMethod, disconnectMethod){
     }
 }
 
-function addEvent(event, connectMethod){
+function addEvent(event, handlerMethod){
     socket.on(event, (data) => {
-        unityInstance.SendMessage(socketGameobjectHandler, connectMethod, data.toString());
+        unityInstance.SendMessage(socketGameobjectHandler, handlerMethod, event, data.toString());
     });
+}
+
+function sendToSocket(event, data){
+    socket.emit(event, data);
 }
 
 function stopSocket(){
