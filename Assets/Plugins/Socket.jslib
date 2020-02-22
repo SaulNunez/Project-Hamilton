@@ -1,6 +1,8 @@
 mergeInto(LibraryManager.library, {
-    StartSocket: function(objectToAlert, event) {
-        openSocket(Pointer_stringify(objectToAlert), Pointer_stringify(event));
+    StartSocket: function(gameObjectToCall, connectMethod, disconnectMethod) {
+        openSocket(Pointer_stringify(gameObjectToCall),
+                    Pointer_stringify(connectMethod), 
+                    Pointer_stringify(disconnectMethod));
     },
     EndConnection: function() {
         stopSocket();
