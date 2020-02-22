@@ -27,47 +27,7 @@ function loadCodeEditor(loadId, initialStateXml, checkType, variablesExpected) {
     //Iniciar sandbox para codigo
     runButton.onclick = () => {
         const code = Blockly.JavaScript.workspaceToCode(workspace);
-        //Cargar codigo al sandbox y agregar mi funcion de verificacion alla
 
-        //Revisar que el codigo tiene los objetos necesarios
-        if (checkType != CHECK_NOTHING) {
-            let syntaxTree = acorn.parse(code);
-            syntaxTree.find((expr) => {
-                let shouldContinue = false;
-
-                switch (checkType) {
-                    case CHECK_IF:
-                        shouldContinue = expr.type == "ConditionalExpression"
-                            || expr.type == "IfStatement";
-                        break;
-                    case CHECK_CICLES:
-                        shouldContinue = expr.type == "ForStatement"
-                            || expr.type == "WhileStatement"
-                            || expr.type == "DoWhileStatement";
-                        break;
-                    case CHECK_FUNC:
-                        shouldContinue = expr.type == "FunctionExpression";
-                        break;
-                }
-
-                return shouldContinue;
-            });
-        }
-
-        const interpreter = new Interpreter(code, (interpreter, scope) => {
-            interpreter.setProperty(scope, 'highlightBlock',
-                interpreter.createNativeFunction(id => (editor.highlightBlock(id))));
-
-            // Add an API function for the alert() block.
-            interpreter.setProperty(scope, 'alert',
-                interpreter.createNativeFunction(text => alert(arguments.length ? text : '')));
-
-            // Add an API function for the prompt() block.
-            interpreter.setProperty(scope, 'prompt',
-                interpreter.createNativeFunction((text) => prompt(text)));
-        });
-
-        interpreter.run();
     }
 
     sideWindow.style.display = "flex";
