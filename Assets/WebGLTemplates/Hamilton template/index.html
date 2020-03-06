@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>%UNITY_WEB_NAME%</title>
+
+<head>
+  <meta charset="UTF-8">
+  <title>%UNITY_WEB_NAME%</title>
   <meta name="author" content="name">
   <meta name="description" content="description here">
   <meta name="keywords" content="keywords,here">
   <link rel="stylesheet" href="./stylesheet.css" type="text/css">
   <style>
     #game_render {
-      width: %UNITY_WIDTH%px; 
-      height: %UNITY_HEIGHT%px; 
+      width: %UNITY_WIDTH%px;
+      height: %UNITY_HEIGHT%px;
       margin: auto;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  </head>
-  <body>
-    <div id="code_editor_sidewindow">
-      <div id="code_editor">
-      </div>
-      <button id="run_program_button">Correr programa</button>
-    </div>
-    <div id="game_render">
-        <p>Este navegador no soporta correr esta aplicación. Intenta un navegador <a href="https://www.mozilla.org/en-US/firefox/windows/">más moderno</a>.</p>
-    </div>
-    <xml id="toolbox" style="display: none">
-      <block type="controls_if"></block>
-      <block type="controls_repeat_ext"></block>
-      <block type="logic_compare"></block>
-      <block type="math_number"></block>
-      <block type="math_arithmetic"></block>
-      <block type="text"></block>
-      <block type="text_print"></block>
-    </xml>  
-    
-    <script type="text/javascript" src="./blockly/blockly_compressed.js"></script>
-    <script type="text/javascript" src="./blockly/blocks_compressed.js"></script>
-    <script type="text/javascript" src="./blockly/javascript_compressed.js"></script>
-    <script type="text/javascript" src="./blockly/msg/js/es.js"></script>
-    <script type="text/javascript" src="./js/page_setup.js"></script>
+</head>
 
-    <!--Brindado por el servidor de juego-->
-    <script src="/socket.io/socket.io.js"></script>
+<body>
+  <div id="code_editor_sidewindow">
+    <div id="code_editor">
+    </div>
+    <button id="run_program_button">Correr programa</button>
+  </div>
+  <div id="game_render">
+    <p>Este navegador no soporta correr esta aplicación. Intenta un navegador <a
+        href="https://www.mozilla.org/en-US/firefox/windows/">más moderno</a>.</p>
+  </div>
+  <xml id="toolbox" style="display: none">
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="logic_compare"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+  </xml>
 
-    <script src="./js/multiplayer.js"></script>
-    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
-    </script>
-  </body>
+  <script src="./blockly/blockly_compressed.js"></script>
+  <script src="./blockly/blocks_compressed.js"></script>
+  <script src="./blockly/javascript_compressed.js"></script>
+  <script src="./blockly/msg/js/es.js"></script>
+  <script src="./js/page_setup.js"></script>
+
+  <!--Brindado por el servidor de juego-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+  <script src="./js/multiplayer.js"></script>
+  <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+  <script>
+    var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
+
+    initBlocky();
+  </script>
+</body>
+
 </html>

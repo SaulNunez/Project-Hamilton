@@ -36,5 +36,3 @@ function loadCodeEditor(loadId, initialStateXml, checkType, variablesExpected) {
 function closeCodeEditor() {
     sideWindow.style.display = "none";
 }
-
-initBlocky();
