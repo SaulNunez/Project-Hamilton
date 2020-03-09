@@ -18,9 +18,13 @@ public class Socket: MonoBehaviour
     [DllImport("__Internal")]
     private static extern void AddEvent(string eventDescriptor, string handlerMethod);
 
+    public static Socket Instance;
+
     private void Start()
     {
         StartSocket(gameObject.name, "OnConnect", "OnDisconnect");
+
+        Instance = this;
     }
 
     public void Receive(string eventType, string content)
