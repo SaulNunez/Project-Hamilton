@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.Networking;
-using System.Net.WebSockets;
 using System.Threading;
 
 public class Socket: MonoBehaviour
@@ -10,24 +8,6 @@ public class Socket: MonoBehaviour
     public static Socket Instance;
 
     Uri u = new Uri(Application.absoluteURL);
-    ClientWebSocket clientWebSocket = null;
-    ArraySegment<byte> buf = new ArraySegment<byte>(new byte[1024]);
-
-    async void Connect()
-    {
-        clientWebSocket = new ClientWebSocket();
-        try
-        {
-            await clientWebSocket.ConnectAsync(u, CancellationToken.None);
-            if (clientWebSocket.State == WebSocketState.Open)
-            {
-
-            }
-        } catch(Exception e)
-        {
-
-        }
-    }
 
     private void Start()
     {
