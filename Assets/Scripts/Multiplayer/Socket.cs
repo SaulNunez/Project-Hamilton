@@ -1,29 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Runtime.InteropServices;
 using System;
+using UnityEngine.Networking;
+using System.Net.WebSockets;
+using System.Threading;
 
 public class Socket: MonoBehaviour
 {
-    [DllImport("__Internal")]
-    private static extern void StartSocket(string gameObjectToCall, string connectMethod, string disconnectMethod);
-
-    [DllImport("__Internal")]
-    private static extern void EndConnection();
-
-    [DllImport("__Internal")]
-    private static extern void SendToSocket(string eventDesriptor, string data);
-
-    [DllImport("__Internal")]
-    private static extern void AddEvent(string eventDescriptor, string handlerMethod);
-
     public static Socket Instance;
+
+    Uri u = new Uri(Application.absoluteURL);
+    ClientWebSocket clientWebSocket = null;
+    ArraySegment<byte> buf = new ArraySegment<byte>(new byte[1024]);
+
+    async void Connect()
+    {
+        clientWebSocket = new ClientWebSocket();
+        try
+        {
+            await clientWebSocket.ConnectAsync(u, CancellationToken.None);
+            if (clientWebSocket.State == WebSocketState.Open)
+            {
+
+            }
+        } catch(Exception e)
+        {
+
+        }
+    }
 
     private void Start()
     {
-        StartSocket(gameObject.name, "OnConnect", "OnDisconnect");
-
+       
         Instance = this;
     }
 
@@ -57,14 +65,14 @@ public class Socket: MonoBehaviour
 
     public void Send(string eventType, string content)
     {
-        SendToSocket(eventType, content);
+        
     }
 
-    public void RegisterListener(GameObject gameObject, 
+    public void RegisterListener(MonoBehaviour component, 
         Action<string> listener, string eventToListen)
     {
-        listeners.Add(new SocketEventListenerInfo(gameObject, listener, eventToListen));
-        AddEvent(eventToListen, "Receive");
+        listeners.Add(new SocketEventListenerInfo(component, listener, eventToListen));
+        
     }
 
     public void RemoveListener(Action<string> listener)
@@ -74,25 +82,25 @@ public class Socket: MonoBehaviour
 
     public void RemoveAllGameObjectListeners(GameObject gameObject)
     {
-        listeners.RemoveAll(listener => listener.gameObject == gameObject);
+        listeners.RemoveAll(listener => listener.component == gameObject);
     }
 
     private void OnDestroy()
     {
-        EndConnection();
+        
     }
 
     struct SocketEventListenerInfo
     {
-        public SocketEventListenerInfo(GameObject gameObject,
+        public SocketEventListenerInfo(MonoBehaviour component,
             Action<string> listener, string eventToListen)
         {
-            this.gameObject = gameObject;
+            this.component = component;
             this.listener = listener;
             this.eventToListen = eventToListen;
         }
 
-        public GameObject gameObject;
+        public MonoBehaviour component;
         public Action<string> listener;
         public string eventToListen;
     }
