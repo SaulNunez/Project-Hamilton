@@ -38,20 +38,15 @@
     <block type="text_print"></block>
   </xml>
 
-  <script src="./blockly/blockly_compressed.js"></script>
-  <script src="./blockly/blocks_compressed.js"></script>
-  <script src="./blockly/javascript_compressed.js"></script>
-  <script src="./blockly/msg/js/es.js"></script>
+  <script src="/blockly/blockly_compressed.js"></script>
+  <script src="/blockly/blocks_compressed.js"></script>
+  <script src="/blockly/javascript_compressed.js"></script>
+  <script src="/blockly/msg/js/es.js"></script>
   <script>
     // Como estuve pendejo, al parecer blocky no estaba iniciando antes de Unity, por lo que salia que Blocky no estaba declarado
     initBlocky();
   </script>
   <script src="./js/page_setup.js"></script>
-
-  <!--Brindado por el servidor de juego-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-
-  <script src="./js/multiplayer.js"></script>
   <script src="%UNITY_WEBGL_LOADER_URL%"></script>
   <script>
     var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
