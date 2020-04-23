@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743cde26197ee80439de91106d0489b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isConnected: 0
 --- !u!4 &1491270631
 Transform:
   m_ObjectHideFlags: 0
@@ -627,6 +628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JoinLobbyUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923236235452294984, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4923236235452294988, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
         type: 3}

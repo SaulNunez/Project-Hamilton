@@ -1,87 +1,54 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System.Threading;
+using Microsoft.AspNetCore.SignalR.Client;
+using System.Threading.Tasks;
 
 public class Socket: MonoBehaviour
 {
     public static Socket Instance;
+    public string url;
+    public HubConnection connection;
 
-    Uri u = new Uri(Application.absoluteURL);
-
-    private void Start()
+    private async void Start()
     {
-       
-        Instance = this;
-    }
-
-    public void Receive(string eventType, string content)
-    {
-        Debug.Log($"Received event {eventType} with: {content}");
-        listeners
-            .FindAll(listener => listener.eventToListen == eventType).ForEach(listener => listener.listener(content));
-    }
-
-    public void OnConnect()
-    {
-        onConnected?.Invoke();
-    }
-
-    public void OnDisconnect(string reason)
-    {
-        onDisconnected?.Invoke(reason);
-    }
-
-    public delegate void OnConnected();
-    public event OnConnected onConnected;
-
-    public delegate void OnDisconnected(string reason);
-    public event OnDisconnected onDisconnected;
-
-    public delegate void OnReceive(string eventType, string content);
-    public event OnReceive onReceive;
-
-    private List<SocketEventListenerInfo> listeners = new List<SocketEventListenerInfo>();
-
-    public void Send(string eventType, string content)
-    {
-        
-    }
-
-    public void RegisterListener(MonoBehaviour component, 
-        Action<string> listener, string eventToListen)
-    {
-        listeners.Add(new SocketEventListenerInfo(component, listener, eventToListen));
-        
-    }
-
-    public void RemoveListener(Action<string> listener)
-    {
-        listeners.RemoveAll(listenerItem => listenerItem.listener == listener);
-    }
-
-    public void RemoveAllGameObjectListeners(GameObject gameObject)
-    {
-        listeners.RemoveAll(listener => listener.component == gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        
-    }
-
-    struct SocketEventListenerInfo
-    {
-        public SocketEventListenerInfo(MonoBehaviour component,
-            Action<string> listener, string eventToListen)
+        if(Instance == null)
         {
-            this.component = component;
-            this.listener = listener;
-            this.eventToListen = eventToListen;
+            Instance = this;
+        } else
+        {
+            Debug.LogWarning($"Only a single instance of Socket is needed, killing this.");
+            Destroy(this);
         }
 
-        public MonoBehaviour component;
-        public Action<string> listener;
-        public string eventToListen;
+        connection = new HubConnectionBuilder()
+                 //Servidor esta hospedado en el mismo lugar que el juego
+                 .WithUrl($"{Application.absoluteURL}/game")
+                 .WithAutomaticReconnect()
+                 .Build();
+        connection.Closed += async (error) =>
+        {
+            //await Task.Delay(new System.Random().Next(0, 5) * 1000);
+            //await connection.StartAsync();
+        };
+
+        connection.Reconnecting += error =>
+        {
+            return Task.CompletedTask;
+        };
+
+        try
+        {
+            await connection.StartAsync();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError(ex);
+        }
+    }
+
+    private async void OnDestroy()
+    {
+        await connection.DisposeAsync();
     }
 }
