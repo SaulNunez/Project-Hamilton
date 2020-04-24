@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
 
     public async void MoveUp()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToTop", {
+        await Socket.Instance.connection.InvokeAsync("GoToTop", new {
             UserAuth = "",
             HubCode = ""
         });
@@ -25,7 +25,7 @@ public class CharacterMovement : MonoBehaviour
 
     public async void MoveDown()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToBottom", {
+        await Socket.Instance.connection.InvokeAsync("GoToBottom", new {
             UserAuth = "",
             HubCode = ""
         });
@@ -33,7 +33,7 @@ public class CharacterMovement : MonoBehaviour
 
     public async void MoveLeft()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToLeft", {
+        await Socket.Instance.connection.InvokeAsync("GoToLeft", new {
             UserAuth = "",
             HubCode = ""
         });
@@ -41,7 +41,7 @@ public class CharacterMovement : MonoBehaviour
 
     public async void MoveRight()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToRight", {
+        await Socket.Instance.connection.InvokeAsync("GoToRight", new {
             UserAuth = "",
             HubCode = ""
         });
