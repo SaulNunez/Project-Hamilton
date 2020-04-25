@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,26 +7,17 @@ public class JoinLobby : MonoBehaviour
 {
     public InputField codeInput;
     public Button sendToServer;
-    
-    void Start()
+
+    void OnJoinedLobby()
     {
-        Socket.Instance?.RegisterListener(this, (data) =>
-        {
-            gameObject.SetActive(false);
-            sendToServer.interactable = false;
-        }, "joined_lobby");
+        gameObject.SetActive(false);
+        sendToServer.interactable = false;
     }
 
-    public void TryToJoinLobby()
+    public async void TryToJoinLobby()
     {
         var lobby = new Models.JoinLobby(codeInput.text);
-        Socket.Instance?.Send("goto_lobby", JsonUtility.ToJson(lobby));
 
-        StartCoroutine(WaitForLobbyResponse());
-    }
-
-    IEnumerator WaitForLobbyResponse()
-    {
-        yield return new WaitForSecondsRealtime(10);
+        await Socket.Instance?.connection.InvokeAsync("EnterLobby", lobby);
     }
 }

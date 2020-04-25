@@ -9,7 +9,7 @@ public class Butler : MonoBehaviour
 
     void Awake()
     {
-        Socket.Instance.connection.On<Dictionary<Position, string>>("DefineRooms", (rooms) =>
+        Socket.Instance.connection.On<Dictionary<Position, string>>("SetRoomList", (rooms) =>
         {
 
         });
