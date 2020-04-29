@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using Microsoft.AspNetCore.SignalR.Client;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Microsoft.AspNetCore.SignalR.Client;
 
 public class CharacterMovement : MonoBehaviour
 {

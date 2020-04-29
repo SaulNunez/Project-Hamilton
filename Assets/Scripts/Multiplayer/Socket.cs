@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
-using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR.Client;
 
 public class Socket: MonoBehaviour
 {
@@ -24,27 +23,12 @@ public class Socket: MonoBehaviour
         connection = new HubConnectionBuilder()
                  //Servidor esta hospedado en el mismo lugar que el juego
                  .WithUrl($"{Application.absoluteURL}/game")
-                 .WithAutomaticReconnect()
                  .Build();
         connection.Closed += async (error) =>
         {
-            //await Task.Delay(new System.Random().Next(0, 5) * 1000);
-            //await connection.StartAsync();
-        };
-
-        connection.Reconnecting += error =>
-        {
-            return Task.CompletedTask;
-        };
-
-        try
-        {
+            await Task.Delay(new System.Random().Next(0, 5) * 1000);
             await connection.StartAsync();
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError(ex);
-        }
+        };
     }
 
     private async void OnDestroy()
