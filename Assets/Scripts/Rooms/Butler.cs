@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿//using Microsoft.AspNetCore.SignalR.Client;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +9,9 @@ public class Butler : MonoBehaviour
 
     void Awake()
     {
-        Socket.Instance.connection.On<Dictionary<Position, string>>("SetRoomList", (rooms) =>
-        {
+        //Socket.Instance.connection.On<Dictionary<Position, string>>("SetRoomList", (rooms) =>
+        //{
 
-        });
+        //});
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿//using Microsoft.AspNetCore.SignalR.Client;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +18,6 @@ public class JoinLobby : MonoBehaviour
     {
         var lobby = new Models.JoinLobby(codeInput.text);
 
-        await Socket.Instance?.connection.InvokeAsync("EnterLobby", lobby);
+        //await Socket.Instance?.connection.InvokeAsync("EnterLobby", lobby);
     }
 }

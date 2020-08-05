@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.SignalR.Client;
+﻿//using Microsoft.AspNetCore.SignalR.Client;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,34 +17,34 @@ public class CharacterMovement : MonoBehaviour
 
     public async void MoveUp()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToTop", new {
-            UserAuth = "",
-            HubCode = ""
-        });
+        //await Socket.Instance.connection.InvokeAsync("GoToTop", new {
+        //    UserAuth = "",
+        //    HubCode = ""
+        //});
     }
 
     public async void MoveDown()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToBottom", new {
-            UserAuth = "",
-            HubCode = ""
-        });
+        //await Socket.Instance.connection.InvokeAsync("GoToBottom", new {
+        //    UserAuth = "",
+        //    HubCode = ""
+        //});
     }
 
     public async void MoveLeft()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToLeft", new {
-            UserAuth = "",
-            HubCode = ""
-        });
+        //await Socket.Instance.connection.InvokeAsync("GoToLeft", new {
+        //    UserAuth = "",
+        //    HubCode = ""
+        //});
     }
 
     public async void MoveRight()
     {
-        await Socket.Instance.connection.InvokeAsync("GoToRight", new {
-            UserAuth = "",
-            HubCode = ""
-        });
+        //await Socket.Instance.connection.InvokeAsync("GoToRight", new {
+        //    UserAuth = "",
+        //    HubCode = ""
+        //});
     }
 
     public void ShowMovementUI()
@@ -59,11 +59,11 @@ public class CharacterMovement : MonoBehaviour
 
     private void Awake()
     {
-        Socket.Instance.connection.On<string, int, int>("MoveTo", (character, x, y) =>
-        {
-            this.x = x;
-            this.y = y;
-        });
+        //Socket.Instance.connection.On<string, int, int>("MoveTo", (character, x, y) =>
+        //{
+        //    this.x = x;
+        //    this.y = y;
+        //});
     }
 
     private void Update()
