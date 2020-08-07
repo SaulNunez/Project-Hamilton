@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
+using HybridWebSocket;
+using System.Text;
 using System;
-using System.Threading.Tasks;
-//using Microsoft.AspNetCore.SignalR.Client;
 
 public class Socket: MonoBehaviour
 {
     public static Socket Instance;
-    public string url;
-    //public HubConnection connection;
 
     private async void Start()
     {
@@ -19,20 +17,41 @@ public class Socket: MonoBehaviour
             Debug.LogWarning($"Only a single instance of Socket is needed, killing this.");
             Destroy(this);
         }
+        var webHostUrl = new Uri(Application.absoluteURL);
 
-        //connection = new HubConnectionBuilder()
-        //         //Servidor esta hospedado en el mismo lugar que el juego
-        //         .WithUrl($"{Application.absoluteURL}/game")
-        //         .Build();
-        //connection.Closed += async (error) =>
-        //{
-        //    await Task.Delay(new System.Random().Next(0, 5) * 1000);
-        //    await connection.StartAsync();
-        //};
-    }
+        WebSocket ws = WebSocketFactory.CreateInstance($"ws://{webHostUrl.Host}");
 
-    private async void OnDestroy()
-    {
-        //await connection.DisposeAsync();
+        // Add OnOpen event listener
+        ws.OnOpen += () =>
+        {
+            Debug.Log("WS connected!");
+            Debug.Log("WS state: " + ws.GetState().ToString());
+
+            ws.Send(Encoding.UTF8.GetBytes("Hello from Unity 3D!"));
+        };
+
+        // Add OnMessage event listener
+        ws.OnMessage += (byte[] msg) =>
+        {
+            Debug.Log("WS received message: " + Encoding.UTF8.GetString(msg));
+
+            ws.Close();
+        };
+
+        // Add OnError event listener
+        ws.OnError += (string errMsg) =>
+        {
+            Debug.Log("WS error: " + errMsg);
+        };
+
+        // Add OnClose event listener
+        ws.OnClose += (WebSocketCloseCode code) =>
+        {
+            Debug.Log("WS closed with code: " + code.ToString());
+        };
+
+        // Connect to the server
+        ws.Connect();
+
     }
 }
