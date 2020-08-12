@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject character;
+    public Transform currentPosition;
     private Vector3 target;
     public float movementSpeed = 0.5f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        target.x = character.transform.position.x;
-        target.y = character.transform.position.y;
+        target.x = currentPosition.transform.position.x;
+        target.y = currentPosition.transform.position.y;
         target.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, target, movementSpeed * Time.deltaTime);

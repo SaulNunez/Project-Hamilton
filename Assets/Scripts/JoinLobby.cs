@@ -8,16 +8,30 @@ public class JoinLobby : MonoBehaviour
     public InputField codeInput;
     public Button sendToServer;
 
-    void OnJoinedLobby()
+    private void Start()
     {
-        gameObject.SetActive(false);
-        sendToServer.interactable = false;
+        Socket.Instance.LobbyJoinedEvent += OnJoinedLobby;
     }
 
-    public async void TryToJoinLobby()
+    private void OnDestroy()
     {
-        var lobby = new Models.JoinLobby(codeInput.text);
+        Socket.Instance.LobbyJoinedEvent -= OnJoinedLobby;
+    }
 
-        //await Socket.Instance?.connection.InvokeAsync("EnterLobby", lobby);
+    void OnJoinedLobby(LobbyJoinedData data, string error = null)
+    {
+        gameObject.SetActive(false);
+        if(error != null)
+        {
+            sendToServer.interactable = true;
+        }
+    }
+
+    public void TryToJoinLobby()
+    {
+        Socket.Instance.EnterLobby(new EnterLobbyPayload { 
+            lobbyCode = codeInput.text 
+        });
+        sendToServer.interactable = false;
     }
 }

@@ -3,23 +3,52 @@ using HybridWebSocket;
 using System.Text;
 using System;
 
-public class Socket: MonoBehaviour
+public class Socket : MonoBehaviour
 {
     public static Socket Instance;
 
-    private async void Start()
+    WebSocket ws;
+
+    public void EnterLobby(EnterLobbyPayload payload)
     {
-        if(Instance == null)
+
+    }
+
+    public void GetAvailableCharacters()
+    {
+        ws.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(
+        new
+        {
+            type = "get_available_characters"
+        })));
+    }
+
+    public void SelectCharacter(SelectCharacterPayload payload)
+    {
+
+    }
+
+    public delegate void LobbyJoinedDelegate(LobbyJoinedData data, string error = null);
+    public event LobbyJoinedDelegate LobbyJoinedEvent;
+    public delegate void AvailableCharactersUpdateDelegate(AvailableCharactersData data, string error = null);
+    public event AvailableCharactersUpdateDelegate AvailableCharactersUpdateEvent;
+    public delegate void PlayerSelectedCharacterDelegate(PlayerSelectedCharacterData data, string error = null);
+    public event PlayerSelectedCharacterDelegate PlayerSelectedCharacterEvent;
+
+    private void Start()
+    {
+        if (Instance == null)
         {
             Instance = this;
-        } else
+        }
+        else
         {
             Debug.LogWarning($"Only a single instance of Socket is needed, killing this.");
             Destroy(this);
         }
         var webHostUrl = new Uri(Application.absoluteURL);
 
-        WebSocket ws = WebSocketFactory.CreateInstance($"ws://{webHostUrl.Host}");
+        ws = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}");
 
         // Add OnOpen event listener
         ws.OnOpen += () =>
@@ -35,7 +64,6 @@ public class Socket: MonoBehaviour
         {
             Debug.Log("WS received message: " + Encoding.UTF8.GetString(msg));
 
-            ws.Close();
         };
 
         // Add OnError event listener
@@ -53,5 +81,10 @@ public class Socket: MonoBehaviour
         // Connect to the server
         ws.Connect();
 
+    }
+
+    private void OnDestroy()
+    {
+        ws.Close();
     }
 }
