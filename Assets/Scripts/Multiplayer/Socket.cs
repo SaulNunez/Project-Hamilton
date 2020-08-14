@@ -2,7 +2,6 @@
 using NativeWebSocket;
 using System.Text;
 using System;
-using Assets.Scripts.Websockets;
 using Assets.Scripts.Multiplayer.ResultPayload;
 
 public class Socket : MonoBehaviour
@@ -39,7 +38,7 @@ public class Socket : MonoBehaviour
     public delegate void PlayerSelectedCharacterDelegate(string error = null);
     public event PlayerSelectedCharacterDelegate PlayerSelectedCharacterEvent;
 
-    private void Start()
+    private async void Start()
     {
         if (Instance == null)
         {
@@ -94,7 +93,7 @@ public class Socket : MonoBehaviour
         };
 
         // Connect to the server
-        ws.Connect();
+        await ws.Connect();
 
     }
 
