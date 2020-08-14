@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using HybridWebSocket;
+using NativeWebSocket;
 using System.Text;
 using System;
 using Assets.Scripts.Websockets;
@@ -58,9 +58,6 @@ public class Socket : MonoBehaviour
         ws.OnOpen += () =>
         {
             Debug.Log("WS connected!");
-            Debug.Log("WS state: " + ws.GetState().ToString());
-
-            ws.Send(Encoding.UTF8.GetBytes("Hello from Unity 3D!"));
         };
 
         // Add OnMessage event listener
