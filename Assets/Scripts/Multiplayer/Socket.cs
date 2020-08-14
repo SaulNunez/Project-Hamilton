@@ -52,7 +52,7 @@ public class Socket : MonoBehaviour
         }
         var webHostUrl = new Uri(Application.absoluteURL);
 
-        ws = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}");
+        ws = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}/gameapi");
 
         // Add OnOpen event listener
         ws.OnOpen += () =>
