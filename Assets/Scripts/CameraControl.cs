@@ -10,10 +10,10 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
-        target.x = currentPosition.transform.position.x;
-        target.y = currentPosition.transform.position.y;
-        target.z = transform.position.z;
+        //target.x = currentPosition.transform.position.x;
+        //target.y = currentPosition.transform.position.y;
+        //target.z = transform.position.z;
 
-        transform.position = Vector3.Lerp(transform.position, target, movementSpeed * Time.deltaTime);
+        //transform.position = Vector3.Lerp(transform.position, target, movementSpeed * Time.deltaTime);
     }
 }

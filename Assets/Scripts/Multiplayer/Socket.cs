@@ -8,24 +8,24 @@ public class Socket : MonoBehaviour
 {
     public static Socket Instance;
 
-    WebSocket ws;
+    WebSocket websocket;
 
     public void EnterLobby(EnterLobbyPayload payload) =>
-        ws.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
+        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
         {
             type = "enter_lobby",
             payload
         })));
 
     public void GetAvailableCharacters() =>
-        ws.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(
+        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(
         new
         {
             type = "get_available_characters"
         })));
 
     public void SelectCharacter(SelectCharacterPayload payload) =>
-        ws.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
+        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
         {
             type = "select_character",
             payload
@@ -51,16 +51,14 @@ public class Socket : MonoBehaviour
         }
         var webHostUrl = new Uri(Application.absoluteURL);
 
-        ws = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}/gameapi");
+        websocket = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}/gameapi");
 
-        // Add OnOpen event listener
-        ws.OnOpen += () =>
+        websocket.OnOpen += () =>
         {
             Debug.Log("WS connected!");
         };
 
-        // Add OnMessage event listener
-        ws.OnMessage += (byte[] msg) =>
+        websocket.OnMessage += (byte[] msg) =>
         {
             var messageContents = Encoding.UTF8.GetString(msg);
 
@@ -80,20 +78,17 @@ public class Socket : MonoBehaviour
             }
         };
 
-        // Add OnError event listener
-        ws.OnError += (string errMsg) =>
+        websocket.OnError += (string errMsg) =>
         {
             Debug.Log("WS error: " + errMsg);
         };
 
-        // Add OnClose event listener
-        ws.OnClose += (WebSocketCloseCode code) =>
+        websocket.OnClose += (WebSocketCloseCode code) =>
         {
             Debug.Log("WS closed with code: " + code.ToString());
         };
 
-        // Connect to the server
-        await ws.Connect();
+        await websocket.Connect();
 
     }
 
@@ -129,8 +124,8 @@ public class Socket : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private async void OnDestroy()
     {
-        ws.Close();
+        await websocket.Close();
     }
 }
