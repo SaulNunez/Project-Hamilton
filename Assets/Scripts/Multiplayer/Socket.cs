@@ -3,6 +3,7 @@ using NativeWebSocket;
 using System.Text;
 using System;
 using Assets.Scripts.Multiplayer.ResultPayload;
+using Assets.Scripts.Multiplayer.RequestPayload;
 
 public class Socket : MonoBehaviour
 {
@@ -10,26 +11,29 @@ public class Socket : MonoBehaviour
 
     WebSocket websocket;
 
-    public void EnterLobby(EnterLobbyPayload payload) =>
-        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
+    public void EnterLobby(EnterLobbyPayload payload)
+    {
+        print("Enter lobby message sent");
+        websocket?.SendText(JsonUtility.ToJson(new EnterLobbyRequest
         {
             type = "enter_lobby",
-            payload
-        })));
+            payload = payload
+        }));
+    }
 
     public void GetAvailableCharacters() =>
-        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(
-        new
+        websocket?.SendText(JsonUtility.ToJson(
+        new AvailableCharactersRequest
         {
             type = "get_available_characters"
-        })));
+        }));
 
     public void SelectCharacter(SelectCharacterPayload payload) =>
-        websocket?.Send(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new
+        websocket?.SendText(JsonUtility.ToJson(new SelectCharacterRequest
         {
             type = "select_character",
-            payload
-        })));
+            payload = payload
+        }));
 
     public delegate void LobbyJoinedDelegate(LobbyJoinedData data, string error = null);
     public event LobbyJoinedDelegate LobbyJoinedEvent;
@@ -63,6 +67,8 @@ public class Socket : MonoBehaviour
             var messageContents = Encoding.UTF8.GetString(msg);
 
             var messageTypeObj = JsonUtility.FromJson<EventData>(messageContents);
+
+            print($"Message received. Event type {messageTypeObj?.type}");
 
             switch (messageTypeObj.type)
             {

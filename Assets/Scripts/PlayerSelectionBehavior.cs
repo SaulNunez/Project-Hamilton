@@ -1,0 +1,109 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.UI;
+
+public class PlayerSelectionBehavior : MonoBehaviour
+{
+    [HideInInspector]
+    public string playerName;
+
+    [HideInInspector]
+    public string characterSelection;
+
+    public GameObject characterGrid;
+    public GameObject characterButtonPrefab;
+    
+    
+    public Text errorTextbox;
+    public GameObject errorPanel;
+
+    CharacterData[] charactersAvailable;
+
+    public void OnScreenNameEdit(string newVal)
+    {
+        playerName = newVal;
+    }
+
+    private void Start()
+    {
+        Socket.Instance.AvailableCharactersUpdateEvent += NewCharactersUpdate;
+        Socket.Instance.PlayerSelectedCharacterEvent += CharacterSelected;
+
+        //Obtener lista de personajes disponibles para llenar lista
+        Socket.Instance.GetAvailableCharacters();
+    }
+
+    private void OnDestroy()
+    {
+        Socket.Instance.AvailableCharactersUpdateEvent -= NewCharactersUpdate;
+        Socket.Instance.PlayerSelectedCharacterEvent -= CharacterSelected;
+    }
+
+    private void NewCharactersUpdate(AvailableCharactersData data, string error)
+    {
+        if(error != null)
+        {
+            charactersAvailable = data.charactersAvailable;
+
+            //Restablecer lista de jugadores en pantalla
+            foreach (Transform gmTransform in GetComponentInChildren<Transform>())
+            {
+                Destroy(gmTransform.gameObject);
+            }
+
+            foreach (var characterData in data.charactersAvailable)
+            {
+                var gameObject = Instantiate(characterButtonPrefab, transform);
+                var button = gameObject.GetComponent<Button>();
+
+                if(button != null)
+                {
+                    button.onClick.AddListener(() =>
+                    {
+                        characterSelection = characterData.prototypeId;
+                    });
+                }
+
+                var text = gameObject.GetComponent<Text>();
+                if(text != null)
+                {
+                    text.text = characterData.name;
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError(error);
+        }
+    }
+
+    private void CharacterSelected(string error)
+    {
+        if(error != null)
+        {
+            errorTextbox.text = error;
+            errorPanel.SetActive(true);
+        }
+
+    }
+
+    public void SendSelectedCharacterToServer()
+    {
+        Socket.Instance.SelectCharacter(new SelectCharacterPayload
+        {
+            displayName = playerName,
+            character = characterSelection
+        });
+    }
+
+    public void CloseErrorBox()
+    {
+        errorPanel.SetActive(false);
+
+        //Reactualizar lista, por si el error fue que ese jugador ya se ha ocupado
+        Socket.Instance.GetAvailableCharacters();
+    }
+}

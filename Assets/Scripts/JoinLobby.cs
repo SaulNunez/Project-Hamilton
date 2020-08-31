@@ -19,10 +19,10 @@ public class JoinLobby : MonoBehaviour
 
     void OnJoinedLobby(LobbyJoinedData data, string error = null)
     {
-        gameObject.SetActive(false);
         if(error != null)
         {
             sendToServer.interactable = true;
+            Debug.LogError(error);
         }
     }
 

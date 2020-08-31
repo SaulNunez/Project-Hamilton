@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b27df6095134a6e42b47f8ed3ca3f659
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - characterGrid: {instanceID: 0}
+  - characterButtonPrefab: {fileID: 6507269919015234155, guid: bf6e37d9e5e8f3842979d04ffaff4773,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

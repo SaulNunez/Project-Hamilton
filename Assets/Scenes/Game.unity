@@ -397,7 +397,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -493,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSelectionScreen: {fileID: 6602967117440732512}
+  joinLobbyScreen: {fileID: 8067639985653482752}
 --- !u!1 &1254936303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1285,7 @@ PrefabInstance:
     - target: {fileID: 6354568911822354232, guid: 59185993eebdcde40afc672e707343d5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.9986322
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6420506537730870650, guid: 59185993eebdcde40afc672e707343d5,
         type: 3}
@@ -1680,7 +1681,7 @@ PrefabInstance:
     - target: {fileID: 4923236236798499171, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
         type: 3}
       propertyPath: m_Text
-      value: "Escribe el c\xF3digo de lobby que te da tu instructor."
+      value: "Escribe el c\xF3digo de lobby en pantalla."
       objectReference: {fileID: 0}
     - target: {fileID: 4923236237151428171, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
         type: 3}
@@ -1702,6 +1703,12 @@ PrefabInstance:
 --- !u!224 &8067639985653482751 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4923236235452294988, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 8067639985653482750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8067639985653482752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923236235452294984, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
     type: 3}
   m_PrefabInstance: {fileID: 8067639985653482750}
   m_PrefabAsset: {fileID: 0}

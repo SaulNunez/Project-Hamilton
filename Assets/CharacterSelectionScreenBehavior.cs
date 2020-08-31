@@ -5,10 +5,13 @@ using UnityEngine;
 public class CharacterSelectionScreenBehavior : MonoBehaviour
 {
     public GameObject playerSelectionScreen;
+    public GameObject joinLobbyScreen;
 
     void Start()
     {
         Socket.Instance.LobbyJoinedEvent += OpenPlayerSelection;
+
+        joinLobbyScreen.SetActive(true);
     }
 
     private void OnDestroy()
@@ -18,10 +21,10 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
 
     private void OpenPlayerSelection(LobbyJoinedData data, string error = null)
     {
-        if(error == null)
+        if(data != null)
         {
+            joinLobbyScreen.SetActive(false);
             playerSelectionScreen.SetActive(true);
-            enabled = false;
         }
     }
 }
