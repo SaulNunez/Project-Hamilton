@@ -29,8 +29,8 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private void Start()
     {
-        Socket.Instance.AvailableCharactersUpdateEvent += NewCharactersUpdate;
-        Socket.Instance.PlayerSelectedCharacterEvent += CharacterSelected;
+        Socket.AvailableCharactersUpdate += NewCharactersUpdate;
+        Socket.PlayerSelectedCharacter += CharacterSelected;
 
         //Obtener lista de personajes disponibles para llenar lista
         Socket.Instance.GetAvailableCharacters();
@@ -38,8 +38,8 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private void OnDestroy()
     {
-        Socket.Instance.AvailableCharactersUpdateEvent -= NewCharactersUpdate;
-        Socket.Instance.PlayerSelectedCharacterEvent -= CharacterSelected;
+        Socket.AvailableCharactersUpdate -= NewCharactersUpdate;
+        Socket.PlayerSelectedCharacter -= CharacterSelected;
     }
 
     private void NewCharactersUpdate(AvailableCharactersData data, string error)

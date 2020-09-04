@@ -35,12 +35,12 @@ public class Socket : MonoBehaviour
             payload = payload
         }));
 
-    public delegate void LobbyJoinedDelegate(LobbyJoinedData data, string error = null);
-    public event LobbyJoinedDelegate LobbyJoinedEvent;
-    public delegate void AvailableCharactersUpdateDelegate(AvailableCharactersData data, string error = null);
-    public event AvailableCharactersUpdateDelegate AvailableCharactersUpdateEvent;
-    public delegate void PlayerSelectedCharacterDelegate(string error = null);
-    public event PlayerSelectedCharacterDelegate PlayerSelectedCharacterEvent;
+    public delegate void LobbyJoinedHandler(LobbyJoinedData data, string error = null);
+    public static event LobbyJoinedHandler LobbyJoined;
+    public delegate void AvailableCharactersUpdateHandler(AvailableCharactersData data, string error = null);
+    public static event AvailableCharactersUpdateHandler AvailableCharactersUpdate;
+    public delegate void PlayerSelectedCharacterHandler(string error = null);
+    public static event PlayerSelectedCharacterHandler PlayerSelectedCharacter;
 
     private async void Start()
     {
@@ -68,8 +68,6 @@ public class Socket : MonoBehaviour
 
             var messageTypeObj = JsonUtility.FromJson<EventData>(messageContents);
 
-            print($"Message received. Event type {messageTypeObj?.type}");
-
             switch (messageTypeObj.type)
             {
                 case "lobby_joined":
@@ -84,14 +82,14 @@ public class Socket : MonoBehaviour
             }
         };
 
-        websocket.OnError += (string errMsg) =>
+        websocket.OnError += async (string errMsg) =>
         {
-            Debug.Log("WS error: " + errMsg);
+            await websocket.Connect();
         };
 
-        websocket.OnClose += (WebSocketCloseCode code) =>
+        websocket.OnClose += async (WebSocketCloseCode code) =>
         {
-            Debug.Log("WS closed with code: " + code.ToString());
+            await websocket.Connect();
         };
 
         await websocket.Connect();
@@ -101,7 +99,7 @@ public class Socket : MonoBehaviour
     private void InvokePlayerSelectionSuccess(string messageContents)
     {
         var eventData = JsonUtility.FromJson<EventData<PlayerSelectedCharacterData>>(messageContents);
-        PlayerSelectedCharacterEvent?.Invoke(eventData.error);
+        PlayerSelectedCharacter?.Invoke(eventData.error);
     }
 
     private void InvokeAvailableCharactersUpdate(string messageContents)
@@ -109,24 +107,25 @@ public class Socket : MonoBehaviour
         var eventData = JsonUtility.FromJson<EventData<AvailableCharactersData>>(messageContents);
         if (eventData.error != null)
         {
-            AvailableCharactersUpdateEvent?.Invoke(eventData.payload);
+            AvailableCharactersUpdate?.Invoke(eventData.payload);
         }
         else
         {
-            AvailableCharactersUpdateEvent?.Invoke(null, eventData.error);
+            AvailableCharactersUpdate?.Invoke(null, eventData.error);
         }
     }
 
     private void InvokeLobbyJoinedEvent(string messageContents)
     {
+        print("Lobby joined event");
         var eventData = JsonUtility.FromJson<EventData<LobbyJoinedData>>(messageContents);
         if (eventData.error != null)
         {
-            LobbyJoinedEvent?.Invoke(eventData.payload);
+            LobbyJoined?.Invoke(eventData.payload);
         }
         else
         {
-            LobbyJoinedEvent?.Invoke(null, eventData.error);
+            LobbyJoined?.Invoke(null, eventData.error);
         }
     }
 

@@ -9,12 +9,12 @@ public class JoinLobby : MonoBehaviour
 
     private void Start()
     {
-        Socket.Instance.LobbyJoinedEvent += OnJoinedLobby;
+        Socket.LobbyJoined += OnJoinedLobby;
     }
 
     private void OnDestroy()
     {
-        Socket.Instance.LobbyJoinedEvent -= OnJoinedLobby;
+        Socket.LobbyJoined -= OnJoinedLobby;
     }
 
     void OnJoinedLobby(LobbyJoinedData data, string error = null)
