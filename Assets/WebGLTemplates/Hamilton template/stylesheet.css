@@ -5,12 +5,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Fira Code', monospace;
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
-    background-color: black;
+    background-color: url("./bkg.png");
+    background-repeat: repeat;
+    background-size: 32px;
 }
 
 #code_editor_sidewindow {
@@ -65,7 +66,11 @@ html, body {
 	top:1px;
 }
 
+.display {
+    font-size: x-large;
+    margin-top: 8rem;
+}
 
-#game_render {
-    background-color: white;
+.spacingOnTop {
+    margin-top: 4rem;
 }
