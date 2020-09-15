@@ -8,8 +8,8 @@ using Assets.Scripts.Multiplayer.RequestPayload;
 public class Socket : MonoBehaviour
 {
     public static Socket Instance;
-
     WebSocket websocket;
+    public string lobbyToken;
 
     public void EnterLobby(EnterLobbyPayload payload)
     {
@@ -25,7 +25,11 @@ public class Socket : MonoBehaviour
         websocket?.SendText(JsonUtility.ToJson(
         new AvailableCharactersRequest
         {
-            type = "get_available_characters"
+            type = "get_available_characters",
+            payload = new GetAvailableCharacterPayload
+            {
+                lobbyToken = lobbyToken
+            }
         }));
 
     public void SelectCharacter(SelectCharacterPayload payload) =>
@@ -54,8 +58,14 @@ public class Socket : MonoBehaviour
             Destroy(this);
         }
         var webHostUrl = new Uri(Application.absoluteURL);
+        int? port = webHostUrl.Port;
+        if(webHostUrl.IsDefaultPort || webHostUrl.Port == -1)
+        {
+            port = null;
+        }
 
-        websocket = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}/gameapi");
+        websocket = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}{(port != null ? $":{port}": "")}/gameapi");
+
 
         websocket.OnOpen += () =>
         {

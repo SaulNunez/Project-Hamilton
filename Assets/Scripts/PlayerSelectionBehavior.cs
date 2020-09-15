@@ -44,7 +44,10 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private void NewCharactersUpdate(AvailableCharactersData data, string error)
     {
-        if(error != null)
+
+        print("Update received to player information");
+
+        if(data != null)
         {
             charactersAvailable = data.charactersAvailable;
 
@@ -54,7 +57,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
                 Destroy(gmTransform.gameObject);
             }
 
-            foreach (var characterData in data.charactersAvailable)
+            foreach (var characterData in charactersAvailable)
             {
                 var gameObject = Instantiate(characterButtonPrefab, transform);
                 var button = gameObject.GetComponent<Button>();
