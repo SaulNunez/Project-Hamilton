@@ -1,14 +1,12 @@
 /* Para que el canvas pueda ocupar toda la pantalla */
 body {
-    flex: 1;
     padding: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Fira Code', monospace;
-}
+    flex-direction: column;
 
-html, body {
+    font-family: 'Fira Code', monospace;
+
     background-color: url("./bkg.png");
     background-repeat: repeat;
     background-size: 32px;
