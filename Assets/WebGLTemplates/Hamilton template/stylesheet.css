@@ -7,7 +7,7 @@ body {
 
     font-family: 'Fira Code', monospace;
 
-    background-color: url("./bkg.png");
+    background-image: url("./bkg.png");
     background-repeat: repeat;
     background-size: 32px;
 }
