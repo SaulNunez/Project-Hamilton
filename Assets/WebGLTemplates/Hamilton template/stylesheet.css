@@ -6,6 +6,7 @@ body {
     flex-direction: column;
 
     font-family: 'Fira Code', monospace;
+    color: #FBF8EF;
 
     background-image: url("./bkg.png");
     background-repeat: repeat;
