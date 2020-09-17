@@ -9,7 +9,7 @@ public class Socket : MonoBehaviour
 {
     public static Socket Instance;
     WebSocket websocket;
-    public string lobbyToken;
+    public string lobbyCode;
 
     public void EnterLobby(EnterLobbyPayload payload)
     {
@@ -28,7 +28,7 @@ public class Socket : MonoBehaviour
             type = "get_available_characters",
             payload = new GetAvailableCharacterPayload
             {
-                lobbyToken = lobbyToken
+                lobbyCode = lobbyCode
             }
         }));
 
@@ -132,6 +132,9 @@ public class Socket : MonoBehaviour
         var eventData = JsonUtility.FromJson<EventData<LobbyJoinedData>>(messageContents);
         if (eventData.error != null)
         {
+            //Save lobby for reconnection and stuff
+            lobbyCode = eventData.payload.lobbyCode;
+
             LobbyJoined?.Invoke(eventData.payload);
         }
         else

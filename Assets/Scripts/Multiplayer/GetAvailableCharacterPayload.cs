@@ -1,4 +1,4 @@
 ﻿public class GetAvailableCharacterPayload
 {
-    public string lobbyToken;
+    public string lobbyCode;
 }
