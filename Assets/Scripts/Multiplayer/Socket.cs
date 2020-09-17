@@ -64,8 +64,7 @@ public class Socket : MonoBehaviour
             port = null;
         }
 
-        websocket = WebSocketFactory.CreateInstance($"wss://{webHostUrl.Host}{(port != null ? $":{port}": "")}/gameapi");
-
+        websocket = WebSocketFactory.CreateInstance($"${(webHostUrl.Scheme == "https"? "wss": "ws")}://{webHostUrl.Host}{(port != null ? $":{port}": "")}/gameapi");
 
         websocket.OnOpen += () =>
         {
