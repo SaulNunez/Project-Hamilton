@@ -11,14 +11,53 @@ public class Socket : MonoBehaviour
     WebSocket websocket;
     public string lobbyCode;
 
-    public void EnterLobby(EnterLobbyPayload payload)
+    public void EnterLobby(string lobbyCode)
     {
-        print("Enter lobby message sent");
-        websocket?.SendText(JsonUtility.ToJson(new EnterLobbyRequest
+        var webHostUrl = new Uri(Application.absoluteURL);
+        int? port = webHostUrl.Port;
+        if (webHostUrl.IsDefaultPort || webHostUrl.Port == -1)
         {
-            type = "enter_lobby",
-            payload = payload
-        }));
+            port = null;
+        }
+
+        var websocketUrl = $"{(webHostUrl.Scheme == "https" ? "wss" : "ws")}://{webHostUrl.Host}{(port != null ? $":{port}" : "")}/gameapi/{lobbyCode}";
+        print(websocketUrl);
+        websocket = WebSocketFactory.CreateInstance(websocketUrl);
+
+        websocket.OnOpen += () =>
+        {
+            Debug.Log("WS connected!");
+            InvokeLobbyJoinedEvent();
+        };
+
+        websocket.OnMessage += (byte[] msg) =>
+        {
+            var messageContents = Encoding.UTF8.GetString(msg);
+
+            var messageTypeObj = JsonUtility.FromJson<EventData>(messageContents);
+
+            switch (messageTypeObj.type)
+            {
+                case "available_characters_update":
+                    InvokeAvailableCharactersUpdate(messageContents);
+                    break;
+                case "player_selection_sucess":
+                    InvokePlayerSelectionSuccess(messageContents);
+                    break;
+            }
+        };
+
+        websocket.OnError += async (string errMsg) =>
+        {
+            await websocket.Connect();
+        };
+
+        websocket.OnClose += async (WebSocketCloseCode code) =>
+        {
+            await websocket.Connect();
+        };
+
+        websocket.Connect();
     }
 
     public void GetAvailableCharacters() =>
@@ -39,7 +78,7 @@ public class Socket : MonoBehaviour
             payload = payload
         }));
 
-    public delegate void LobbyJoinedHandler(LobbyJoinedData data, string error = null);
+    public delegate void LobbyJoinedHandler();
     public static event LobbyJoinedHandler LobbyJoined;
     public delegate void AvailableCharactersUpdateHandler(AvailableCharactersData data, string error = null);
     public static event AvailableCharactersUpdateHandler AvailableCharactersUpdate;
@@ -57,54 +96,6 @@ public class Socket : MonoBehaviour
             Debug.LogWarning($"Only a single instance of Socket is needed, killing this.");
             Destroy(this);
         }
-        var webHostUrl = new Uri(Application.absoluteURL);
-        int? port = webHostUrl.Port;
-        if(webHostUrl.IsDefaultPort || webHostUrl.Port == -1)
-        {
-            port = null;
-        }
-
-        var websocketUrl = $"{(webHostUrl.Scheme == "https" ? "wss" : "ws")}://{webHostUrl.Host}{(port != null ? $":{port}" : "")}/gameapi";
-        print(websocketUrl);
-        websocket = WebSocketFactory.CreateInstance(websocketUrl);
-
-        websocket.OnOpen += () =>
-        {
-            Debug.Log("WS connected!");
-        };
-
-        websocket.OnMessage += (byte[] msg) =>
-        {
-            var messageContents = Encoding.UTF8.GetString(msg);
-
-            var messageTypeObj = JsonUtility.FromJson<EventData>(messageContents);
-
-            switch (messageTypeObj.type)
-            {
-                case "lobby_joined":
-                    InvokeLobbyJoinedEvent(messageContents);
-                    break;
-                case "available_characters_update":
-                    InvokeAvailableCharactersUpdate(messageContents);
-                    break;
-                case "player_selection_sucess":
-                    InvokePlayerSelectionSuccess(messageContents);
-                    break;
-            }
-        };
-
-        websocket.OnError += async (string errMsg) =>
-        {
-            await websocket.Connect();
-        };
-
-        websocket.OnClose += async (WebSocketCloseCode code) =>
-        {
-            await websocket.Connect();
-        };
-
-        await websocket.Connect();
-
     }
 
     private void InvokePlayerSelectionSuccess(string messageContents)
@@ -126,21 +117,10 @@ public class Socket : MonoBehaviour
         }
     }
 
-    private void InvokeLobbyJoinedEvent(string messageContents)
+    private void InvokeLobbyJoinedEvent()
     {
-        print("Lobby joined event");
-        var eventData = JsonUtility.FromJson<EventData<LobbyJoinedData>>(messageContents);
-        if (eventData.error != null)
-        {
-            //Save lobby for reconnection and stuff
-            lobbyCode = eventData.payload.lobbyCode;
+        LobbyJoined?.Invoke();
 
-            LobbyJoined?.Invoke(eventData.payload);
-        }
-        else
-        {
-            LobbyJoined?.Invoke(null, eventData.error);
-        }
     }
 
     private async void OnDestroy()

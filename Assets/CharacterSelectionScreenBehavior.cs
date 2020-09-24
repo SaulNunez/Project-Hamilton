@@ -19,14 +19,12 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         Socket.LobbyJoined -= OpenPlayerSelection;
     }
 
-    private void OpenPlayerSelection(LobbyJoinedData data, string error = null)
+    private void OpenPlayerSelection()
     {
-        print($"Hey, data: ${data}, error: ${error}");
-        if(error == null)
-        {
-            print("Showing player screen");
-            joinLobbyScreen.SetActive(false);
-            playerSelectionScreen.SetActive(true);
-        }
+
+        print("Showing player screen");
+        joinLobbyScreen.SetActive(false);
+        playerSelectionScreen.SetActive(true);
+
     }
 }

@@ -17,20 +17,13 @@ public class JoinLobby : MonoBehaviour
         Socket.LobbyJoined -= OnJoinedLobby;
     }
 
-    void OnJoinedLobby(LobbyJoinedData data, string error = null)
+    void OnJoinedLobby()
     {
-        if(error != null)
-        {
-            sendToServer.interactable = true;
-            Debug.LogError(error);
-        }
     }
 
     public void TryToJoinLobby()
     {
-        Socket.Instance.EnterLobby(new EnterLobbyPayload { 
-            lobbyCode = codeInput.text 
-        });
+        Socket.Instance.EnterLobby(codeInput.text);
         sendToServer.interactable = false;
     }
 }
