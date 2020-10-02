@@ -20,68 +20,64 @@ public class PlayerSelectionBehavior : MonoBehaviour
     public Text errorTextbox;
     public GameObject errorPanel;
 
-    CharacterData[] charactersAvailable;
+    List<CharacterData> charactersAvailable;
 
     public void OnScreenNameEdit(string newVal)
     {
         playerName = newVal;
     }
 
-    private void Start()
+    private async void OnEnable()
     {
-        Socket.AvailableCharactersUpdate += NewCharactersUpdate;
-        Socket.PlayerSelectedCharacter += CharacterSelected;
-
-        //Obtener lista de personajes disponibles para llenar lista
-        Socket.Instance.GetAvailableCharacters();
+        charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
     }
 
     private void OnDestroy()
     {
-        Socket.AvailableCharactersUpdate -= NewCharactersUpdate;
-        Socket.PlayerSelectedCharacter -= CharacterSelected;
+        //Socket.AvailableCharactersUpdate -= NewCharactersUpdate;
+        //Socket.PlayerSelectedCharacter -= CharacterSelected;
     }
 
-    private void NewCharactersUpdate(AvailableCharactersData data, string error)
-    {
+    //private void NewCharactersUpdate(AvailableCharactersData data, string error)
+    //{
 
-        print("Update received to player information");
+    //    print("Update received to player information");
 
-        if(data != null)
-        {
-            charactersAvailable = data.charactersAvailable;
+    //    if(data != null)
+    //    {
+    //        charactersAvailable = data.charactersAvailable;
 
-            //Restablecer lista de jugadores en pantalla
-            foreach (Transform gmTransform in GetComponentInChildren<Transform>())
-            {
-                Destroy(gmTransform.gameObject);
-            }
+    //        //Restablecer lista de jugadores en pantalla
+    //        foreach (Transform gmTransform in GetComponentInChildren<Transform>())
+    //        {
+    //            Destroy(gmTransform.gameObject);
+    //        }
 
-            foreach (var characterData in charactersAvailable)
-            {
-                var gameObject = Instantiate(characterButtonPrefab, transform);
-                var button = gameObject.GetComponent<Button>();
+    //        foreach (var characterData in charactersAvailable)
+    //        {
+    //            var gameObject = Instantiate(characterButtonPrefab, transform);
+    //            var button = gameObject.GetComponent<Button>();
 
-                if(button != null)
-                {
-                    button.onClick.AddListener(() =>
-                    {
-                        characterSelection = characterData.prototypeId;
-                    });
-                }
+    //            if(button != null)
+    //            {
+    //                button.onClick.AddListener(() =>
+    //                {
+    //                    characterSelection = characterData.prototypeId;
+    //                });
+    //            }
 
-                var text = gameObject.GetComponent<Text>();
-                if(text != null)
-                {
-                    text.text = characterData.name;
-                }
-            }
-        }
-        else
-        {
-            Debug.LogError(error);
-        }
-    }
+    //            var text = gameObject.GetComponent<Text>();
+    //            if(text != null)
+    //            {
+    //                text.text = characterData.name;
+    //            }
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError(error);
+    //    }
+    //}
 
     private void CharacterSelected(string error)
     {
@@ -95,11 +91,11 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     public void SendSelectedCharacterToServer()
     {
-        Socket.Instance.SelectCharacter(new SelectCharacterPayload
-        {
-            displayName = playerName,
-            character = characterSelection
-        });
+        //Socket.Instance.SelectCharacter(new SelectCharacterPayload
+        //{
+        //    displayName = playerName,
+        //    character = characterSelection
+        //});
     }
 
     public void CloseErrorBox()
@@ -107,6 +103,6 @@ public class PlayerSelectionBehavior : MonoBehaviour
         errorPanel.SetActive(false);
 
         //Reactualizar lista, por si el error fue que ese jugador ya se ha ocupado
-        Socket.Instance.GetAvailableCharacters();
+        //Socket.Instance.GetAvailableCharacters();
     }
 }

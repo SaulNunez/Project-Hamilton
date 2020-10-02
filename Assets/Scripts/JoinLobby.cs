@@ -7,23 +7,11 @@ public class JoinLobby : MonoBehaviour
     public InputField codeInput;
     public Button sendToServer;
 
-    private void Start()
+    public async void TryToJoinLobby()
     {
-        Socket.LobbyJoined += OnJoinedLobby;
-    }
-
-    private void OnDestroy()
-    {
-        Socket.LobbyJoined -= OnJoinedLobby;
-    }
-
-    void OnJoinedLobby()
-    {
-    }
-
-    public void TryToJoinLobby()
-    {
-        Socket.Instance.EnterLobby(codeInput.text);
         sendToServer.interactable = false;
+        var connectedToLobby = await HamiltonHub.Instance.ConnectToLobby(codeInput.text);
+        sendToServer.interactable = true;
+        gameObject.SetActive(!connectedToLobby);
     }
 }

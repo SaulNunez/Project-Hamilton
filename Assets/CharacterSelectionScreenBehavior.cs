@@ -9,19 +9,18 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
 
     void Start()
     {
-        Socket.LobbyJoined += OpenPlayerSelection;
+        HamiltonHub.Instance.onEnteredLobby += OpenPlayerSelection;
 
         joinLobbyScreen.SetActive(true);
     }
 
     private void OnDestroy()
     {
-        Socket.LobbyJoined -= OpenPlayerSelection;
+        HamiltonHub.Instance.onEnteredLobby -= OpenPlayerSelection;
     }
 
-    private void OpenPlayerSelection()
+    private void OpenPlayerSelection(string lobbyCode)
     {
-
         print("Showing player screen");
         joinLobbyScreen.SetActive(false);
         playerSelectionScreen.SetActive(true);
