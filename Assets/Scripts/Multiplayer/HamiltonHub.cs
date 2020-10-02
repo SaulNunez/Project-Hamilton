@@ -4,6 +4,7 @@ using BestHTTP.SignalRCore;
 using BestHTTP.SignalRCore.Encoders;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Assets.Scripts.Multiplayer.ResultPayload;
 
 public class HamiltonHub
 {
@@ -18,6 +19,12 @@ public class HamiltonHub
 
     public delegate void OnEnteredLobby(string lobbyCode);
     public event OnEnteredLobby onEnteredLobby;
+
+    public delegate void CharacterAvailableChangedDelegate(List<CharacterData> characters);
+    public event CharacterAvailableChangedDelegate OnCharacterAvailableChanged;
+
+    public delegate void PlayerSelectedCharacterDelegate();
+    public event PlayerSelectedCharacterDelegate OnPlayerSelectedCharacter;
 
     public string LobbyCode { get; private set; }
 
@@ -64,5 +71,12 @@ public class HamiltonHub
     public async Task<List<CharacterData>> GetAvailableCharactersInLobby()
     {
         return await hubConnection.InvokeAsync<List<CharacterData>>("GetAvailableCharacters", new { lobbyCode = this.LobbyCode });
+    }
+
+    public async Task<string> SelectCharacter(string playerName, string characterToUse)
+    {
+        var result = await hubConnection.InvokeAsync<PlayerSelectionResult>("SelectCharacter", new { character = characterToUse, name = playerName });
+
+        return result.playerToken;
     }
 }

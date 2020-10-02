@@ -32,77 +32,60 @@ public class PlayerSelectionBehavior : MonoBehaviour
         charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
     }
 
-    private void OnDestroy()
+    private void Start()
     {
-        //Socket.AvailableCharactersUpdate -= NewCharactersUpdate;
-        //Socket.PlayerSelectedCharacter -= CharacterSelected;
+        HamiltonHub.Instance.OnCharacterAvailableChanged += Instance_onCharacterAvailableChanged;
     }
 
-    //private void NewCharactersUpdate(AvailableCharactersData data, string error)
-    //{
-
-    //    print("Update received to player information");
-
-    //    if(data != null)
-    //    {
-    //        charactersAvailable = data.charactersAvailable;
-
-    //        //Restablecer lista de jugadores en pantalla
-    //        foreach (Transform gmTransform in GetComponentInChildren<Transform>())
-    //        {
-    //            Destroy(gmTransform.gameObject);
-    //        }
-
-    //        foreach (var characterData in charactersAvailable)
-    //        {
-    //            var gameObject = Instantiate(characterButtonPrefab, transform);
-    //            var button = gameObject.GetComponent<Button>();
-
-    //            if(button != null)
-    //            {
-    //                button.onClick.AddListener(() =>
-    //                {
-    //                    characterSelection = characterData.prototypeId;
-    //                });
-    //            }
-
-    //            var text = gameObject.GetComponent<Text>();
-    //            if(text != null)
-    //            {
-    //                text.text = characterData.name;
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError(error);
-    //    }
-    //}
-
-    private void CharacterSelected(string error)
+    private void Instance_onCharacterAvailableChanged(List<CharacterData> characters)
     {
-        if(error != null)
+        charactersAvailable = characters;
+
+        //Restablecer lista de jugadores en pantalla
+        foreach (Transform gmTransform in GetComponentInChildren<Transform>())
         {
-            errorTextbox.text = error;
-            errorPanel.SetActive(true);
+            Destroy(gmTransform.gameObject);
         }
 
+        foreach (var characterData in charactersAvailable)
+        {
+            var gameObject = Instantiate(characterButtonPrefab, transform);
+            var button = gameObject.GetComponent<Button>();
+
+            if (button != null)
+            {
+                button.onClick.AddListener(() =>
+                {
+                    characterSelection = characterData.id;
+                });
+            }
+
+            var text = gameObject.GetComponent<Text>();
+            if (text != null)
+            {
+                text.text = characterData.name;
+            }
+        }
     }
 
-    public void SendSelectedCharacterToServer()
+    private void OnDestroy()
     {
-        //Socket.Instance.SelectCharacter(new SelectCharacterPayload
-        //{
-        //    displayName = playerName,
-        //    character = characterSelection
-        //});
+        HamiltonHub.Instance.OnCharacterAvailableChanged -= Instance_onCharacterAvailableChanged;
+    }
+
+    public async void SendSelectedCharacterToServer()
+    {
+        if(await HamiltonHub.Instance.SelectCharacter(playerName, characterSelection) != null)
+        {
+            errorTextbox.text = "Algo ocurrio mal, porfavor selecciona tu personaje nuevamente";
+            errorPanel.SetActive(true);
+
+            charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
+        }
     }
 
     public void CloseErrorBox()
     {
         errorPanel.SetActive(false);
-
-        //Reactualizar lista, por si el error fue que ese jugador ya se ha ocupado
-        //Socket.Instance.GetAvailableCharacters();
     }
 }
