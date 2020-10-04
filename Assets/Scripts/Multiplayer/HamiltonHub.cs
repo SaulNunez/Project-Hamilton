@@ -63,6 +63,7 @@ public class HamiltonHub
 
         if (enteredLobby)
         {
+            LobbyCode = lobbyCode;
             onEnteredLobby?.Invoke(lobbyCode);
         }
 
