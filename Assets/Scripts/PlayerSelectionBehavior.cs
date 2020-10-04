@@ -15,8 +15,8 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     public GameObject characterGrid;
     public GameObject characterButtonPrefab;
-    
-    
+
+
     public Text errorTextbox;
     public GameObject errorPanel;
 
@@ -30,6 +30,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
     private async void OnEnable()
     {
         charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
+        ShowCharactersOnScreen();
     }
 
     private void Start()
@@ -40,31 +41,37 @@ public class PlayerSelectionBehavior : MonoBehaviour
     private void Instance_onCharacterAvailableChanged(List<CharacterData> characters)
     {
         charactersAvailable = characters;
+        ShowCharactersOnScreen();
+    }
 
+    private void ShowCharactersOnScreen()
+    {
         //Restablecer lista de jugadores en pantalla
-        foreach (Transform gmTransform in GetComponentInChildren<Transform>())
+        foreach (Transform gmTransform in characterGrid.GetComponentsInChildren<Transform>())
         {
-            Destroy(gmTransform.gameObject);
+            if(gmTransform != characterGrid.transform)
+            {
+                Destroy(gmTransform.gameObject);
+            }
         }
 
         foreach (var characterData in charactersAvailable)
         {
-            var gameObject = Instantiate(characterButtonPrefab, transform);
-            var button = gameObject.GetComponent<Button>();
+            print("Processing player");
 
-            if (button != null)
-            {
-                button.onClick.AddListener(() =>
-                {
-                    characterSelection = characterData.id;
-                });
-            }
+            var itemGameObject = Instantiate(characterButtonPrefab);
+            var button = itemGameObject.GetComponent<Button>();
 
-            var text = gameObject.GetComponent<Text>();
-            if (text != null)
+            button.onClick.AddListener(() =>
             {
-                text.text = characterData.name;
-            }
+                characterSelection = characterData.id;
+            });
+
+            print(characterData.name);
+            var text = itemGameObject.GetComponentInChildren<Text>();
+            text.text = characterData.name;
+
+            itemGameObject.transform.SetParent(characterGrid.transform);
         }
     }
 
@@ -75,12 +82,13 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     public async void SendSelectedCharacterToServer()
     {
-        if(await HamiltonHub.Instance.SelectCharacter(playerName, characterSelection) != null)
+        if (await HamiltonHub.Instance.SelectCharacter(playerName, characterSelection) != null)
         {
             errorTextbox.text = "Algo ocurrio mal, porfavor selecciona tu personaje nuevamente";
             errorPanel.SetActive(true);
 
             charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
+            ShowCharactersOnScreen();
         }
     }
 

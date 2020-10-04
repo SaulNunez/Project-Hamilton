@@ -5,6 +5,7 @@ using BestHTTP.SignalRCore.Encoders;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Assets.Scripts.Multiplayer.ResultPayload;
+using System.Linq;
 
 public class HamiltonHub
 {
@@ -70,7 +71,7 @@ public class HamiltonHub
 
     public async Task<List<CharacterData>> GetAvailableCharactersInLobby()
     {
-        return await hubConnection.InvokeAsync<List<CharacterData>>("GetAvailableCharacters", new { lobbyCode = this.LobbyCode });
+        return await hubConnection.InvokeAsync<List<CharacterData>>("GetAvailableCharacters", new { lobbyCode = LobbyCode });
     }
 
     public async Task<string> SelectCharacter(string playerName, string characterToUse)
