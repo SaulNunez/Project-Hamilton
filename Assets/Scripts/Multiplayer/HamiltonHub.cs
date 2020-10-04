@@ -63,15 +63,16 @@ public class HamiltonHub
 
         if (enteredLobby)
         {
+            LobbyCode = lobbyCode;
             onEnteredLobby?.Invoke(lobbyCode);
         }
 
         return enteredLobby;
     }
 
-    public async Task<List<CharacterData>> GetAvailableCharactersInLobby()
+    public async Task<CharacterAvailableResult> GetAvailableCharactersInLobby()
     {
-        return await hubConnection.InvokeAsync<List<CharacterData>>("GetAvailableCharacters", new { lobbyCode = LobbyCode });
+        return await hubConnection.InvokeAsync<CharacterAvailableResult>("GetAvailableCharacters", new { lobbyCode = LobbyCode });
     }
 
     public async Task<string> SelectCharacter(string playerName, string characterToUse)

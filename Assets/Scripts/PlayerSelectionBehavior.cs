@@ -29,7 +29,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private async void OnEnable()
     {
-        charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
+        charactersAvailable = (await HamiltonHub.Instance.GetAvailableCharactersInLobby()).available;
         ShowCharactersOnScreen();
     }
 
@@ -87,7 +87,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
             errorTextbox.text = "Algo ocurrio mal, porfavor selecciona tu personaje nuevamente";
             errorPanel.SetActive(true);
 
-            charactersAvailable = await HamiltonHub.Instance.GetAvailableCharactersInLobby();
+            charactersAvailable = (await HamiltonHub.Instance.GetAvailableCharactersInLobby()).available;
             ShowCharactersOnScreen();
         }
     }
