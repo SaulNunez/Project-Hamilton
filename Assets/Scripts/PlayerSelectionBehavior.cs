@@ -13,12 +13,11 @@ public class PlayerSelectionBehavior : MonoBehaviour
     [HideInInspector]
     public string characterSelection;
 
-    public GameObject characterGrid;
-    public GameObject characterButtonPrefab;
-
-
+    public GameObject characterListContainer;
+    public GameObject characterRadioPrefab;
     public Text errorTextbox;
     public GameObject errorPanel;
+    public ToggleGroup characterListToggleGroup;
 
     List<CharacterData> charactersAvailable;
 
@@ -47,9 +46,9 @@ public class PlayerSelectionBehavior : MonoBehaviour
     private void ShowCharactersOnScreen()
     {
         //Restablecer lista de jugadores en pantalla
-        foreach (Transform gmTransform in characterGrid.GetComponentsInChildren<Transform>())
+        foreach (Transform gmTransform in characterListContainer.GetComponentsInChildren<Transform>())
         {
-            if(gmTransform != characterGrid.transform)
+            if(gmTransform != characterListContainer.transform)
             {
                 Destroy(gmTransform.gameObject);
             }
@@ -57,21 +56,24 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
         foreach (var characterData in charactersAvailable)
         {
-            print("Processing player");
+            var itemGameObject = Instantiate(characterRadioPrefab);
+            var characterItem = itemGameObject.GetComponent<CharacterRadioButton>();
 
-            var itemGameObject = Instantiate(characterButtonPrefab);
-            var button = itemGameObject.GetComponent<Button>();
-
-            button.onClick.AddListener(() =>
+            characterItem.Toggle.onValueChanged.AddListener((selected) =>
             {
-                characterSelection = characterData.id;
+                if (selected)
+                {
+                    characterSelection = characterData.id;
+                }
             });
 
             print(characterData.name);
-            var text = itemGameObject.GetComponentInChildren<Text>();
-            text.text = characterData.name;
+            characterItem.Toggle.group = characterListToggleGroup;
+            characterItem.CharacterNameText.text = characterData.name;
+            characterItem.DescriptionText.text = characterData.description;
+            characterItem.StatsText.text = $"Valentía: {characterData.stats.Bravery} Inteligencia: {characterData.stats.Intelligence} Sanidad: {characterData.stats.Sanity} Fisico: {characterData.stats.Physical}";
 
-            itemGameObject.transform.SetParent(characterGrid.transform);
+            itemGameObject.transform.SetParent(characterListContainer.transform);
         }
     }
 
@@ -82,7 +84,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     public async void SendSelectedCharacterToServer()
     {
-        if (await HamiltonHub.Instance.SelectCharacter(playerName, characterSelection) != null)
+        if (await HamiltonHub.Instance.SelectCharacter(playerName, characterSelection) == null)
         {
             errorTextbox.text = "Algo ocurrio mal, porfavor selecciona tu personaje nuevamente";
             errorPanel.SetActive(true);
