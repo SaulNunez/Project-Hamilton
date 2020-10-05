@@ -28,6 +28,7 @@ public class HamiltonHub
     public event PlayerSelectedCharacterDelegate OnPlayerSelectedCharacter;
 
     public string LobbyCode { get; private set; }
+    public string PlayerToken { get; private set; }
 
     private HamiltonHub()
     {
@@ -78,7 +79,13 @@ public class HamiltonHub
     public async Task<string> SelectCharacter(string playerName, string characterToUse)
     {
         var result = await hubConnection.InvokeAsync<PlayerSelectionResult>("SelectCharacter", new { character = characterToUse, name = playerName });
+        if(result != null)
+        {
+            PlayerToken = result.playerToken;
+        }
 
-        return result.playerToken;
+        // Retornar null si llamar a funcion del servidor no retorna nada
+        // Como si el jugador ya ha sido seleccionado
+        return result?.playerToken ?? null;
     }
 }
