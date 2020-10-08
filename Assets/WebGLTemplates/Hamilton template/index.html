@@ -2,278 +2,294 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>%UNITY_WEB_NAME%</title>
-  <meta name="author" content="Saúl Nuñez">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./stylesheet.css" type="text/css">
-  <style>
-    #game_render {
-      width: %UNITY_WIDTH%px;
-      height: %UNITY_HEIGHT%px;
-      margin: auto;
-    }
-  </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>%UNITY_WEB_NAME%</title>
+    <meta name="author" content="Saúl Nuñez">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+    <style>
+        #game_render {
+            width: %UNITY_WIDTH%px;
+            height: %UNITY_HEIGHT%px;
+            margin: auto;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
 <body>
-  <div>
-    <h1 class="display">El terror en la masión</h1>
-    <p class="spacingOnTop">
-      El siguiente videojuego ha sido desarrollado como parte de un proyecto académico,... .
-      Por esta razón, la presente implementación se encarga de recolectar datos de las diferentes acciones
-      de los jugadores, y los diferentes eventos que ocurren dentro de cada partida.
-      Estos datos son almacenados en un servidor externo, donde posteriormente serán anonimizados,
-      analizados y posiblemente serán publicados.
-    </p>
-  </div>
-  <div id="game_container">
-    <!-- game -->
-    <div id="code_editor_sidewindow">
-      <div id="code_editor">
-      </div>
-      <button id="run_program_button">Correr programa</button>
+    <div class="max_width_column">
+        <h1 class="display-3">El terror en la masión</h1>
+        <p class="spacingOnTop">
+            El siguiente videojuego ha sido desarrollado como parte de un proyecto académico,... .
+            Por esta razón, la presente implementación se encarga de recolectar datos de las diferentes acciones
+            de los jugadores, y los diferentes eventos que ocurren dentro de cada partida.
+            Estos datos son almacenados en un servidor externo, donde posteriormente serán anonimizados,
+            analizados y posiblemente serán publicados.
+        </p>
     </div>
-    <div id="game_render">
-      <noscript>
-        <p>Este juego necesita que Javascript este habilitado. Puedes intentar cambia a otro navegador web.</p>
-      </noscript>
+    <div id="game_container">
+        <!-- game -->
+        <div id="code_editor_sidewindow" class="card">
+            <div class="sidebar">
+                <h1>Puzzle</h1>
+                <p id="instructions"></p>
+                <div class="alert alert-danger" role="alert" id="code_errors"></div>
+                <div class="alert alert-secondary" role="alert" id="code_output"></div>
+                <div class="card card-body" id="documentacion">
+                    
+                </div>
+            </div>
+            <div>
+                <div id="code_editor" />
+                <button class="btn btn-primary" id="run_program_button">Correr programa</button>
+            </div>
+        </div>
+        <div id="game_render">
+            <noscript>
+                <p>Este juego necesita que Javascript este habilitado. Puedes intentar cambia a otro navegador web.</p>
+            </noscript>
+        </div>
     </div>
-  </div>
-  <xml id="toolbox" style="display: none">
-    <category name="Variables" colour="330" custom="VARIABLE"></category>
-    <category name="Texto" colour="42">
-        <block type="text"></block>
-        <block type="text_join"></block>
-        <block type="text_append">
-            <value name="TEXT">
-                <shadow type="text"></shadow>
-            </value>
-        </block>
-        <block type="text_length">
-            <value name="VALUE">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_isEmpty">
-            <value name="VALUE">
-                <shadow type="text">
-                    <field name="TEXT"></field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_indexOf">
-            <value name="VALUE">
-                <block type="variables_get">
-                    <field name="VAR">{textVariable}</field>
-                </block>
-            </value>
-            <value name="FIND">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_charAt">
-            <value name="VALUE">
-                <block type="variables_get">
-                    <field name="VAR">{textVariable}</field>
-                </block>
-            </value>
-        </block>
-        <block type="text_getSubstring">
-            <value name="STRING">
-                <block type="variables_get">
-                    <field name="VAR">{textVariable}</field>
-                </block>
-            </value>
-        </block>
-        <block type="text_changeCase">
-            <value name="TEXT">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_trim">
-            <value name="TEXT">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_print">
-            <value name="TEXT">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="text_prompt_ext">
-            <value name="TEXT">
-                <shadow type="text">
-                    <field name="TEXT">abc</field>
-                </shadow>
-            </value>
-        </block>
-    </category>
-    <category name="Lógica" colour="210">
-        <block type="logic_boolean"></block>
-        <block type="logic_compare"></block>
-        <block type="logic_operation"></block>
-        <block type="logic_boolean"></block>
-        <block type="logic_negate"></block>
-        <block type="controls_if"></block>
-    </category>
-    <category name="Matemáticas" colour="230">
-        <block type="math_number">
-            <field name="NUM">123</field>
-        </block>
-        <block type="math_arithmetic">
-            <value name="A">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="B">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_single">
-            <value name="NUM">
-                <shadow type="math_number">
-                    <field name="NUM">9</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_trig">
-            <value name="NUM">
-                <shadow type="math_number">
-                    <field name="NUM">45</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_constant"></block>
-        <block type="math_number_property">
-            <value name="NUMBER_TO_CHECK">
-                <shadow type="math_number">
-                    <field name="NUM">0</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_round">
-            <value name="NUM">
-                <shadow type="math_number">
-                    <field name="NUM">3.1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_on_list"></block>
-        <block type="math_modulo">
-            <value name="DIVIDEND">
-                <shadow type="math_number">
-                    <field name="NUM">64</field>
-                </shadow>
-            </value>
-            <value name="DIVISOR">
-                <shadow type="math_number">
-                    <field name="NUM">10</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_constrain">
-            <value name="VALUE">
-                <shadow type="math_number">
-                    <field name="NUM">50</field>
-                </shadow>
-            </value>
-            <value name="LOW">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="HIGH">
-                <shadow type="math_number">
-                    <field name="NUM">100</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_random_int">
-            <value name="FROM">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="TO">
-                <shadow type="math_number">
-                    <field name="NUM">100</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="math_random_float"></block>
-        <block type="math_atan2">
-            <value name="X">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="Y">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-    </category>
-    <sep gap="8"></sep>
-    <category name="Ciclos" colour="120">
-        <block type="controls_repeat_ext">
-            <value name="TIMES">
-                <shadow type="math_number">
-                    <field name="NUM">10</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="controls_whileUntil"></block>
-        <block type="controls_for">
-            <value name="FROM">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-            <value name="TO">
-                <shadow type="math_number">
-                    <field name="NUM">10</field>
-                </shadow>
-            </value>
-            <value name="BY">
-                <shadow type="math_number">
-                    <field name="NUM">1</field>
-                </shadow>
-            </value>
-        </block>
-        <block type="controls_forEach"></block>
-        <block type="controls_flow_statements"></block>
+    <xml id="toolbox" style="display: none">
+        <category name="Variables" colour="330" custom="VARIABLE"></category>
+        <category name="Texto" colour="42">
+            <block type="text"></block>
+            <block type="text_join"></block>
+            <block type="text_append">
+                <value name="TEXT">
+                    <shadow type="text"></shadow>
+                </value>
+            </block>
+            <block type="text_length">
+                <value name="VALUE">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_isEmpty">
+                <value name="VALUE">
+                    <shadow type="text">
+                        <field name="TEXT"></field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_indexOf">
+                <value name="VALUE">
+                    <block type="variables_get">
+                        <field name="VAR">{textVariable}</field>
+                    </block>
+                </value>
+                <value name="FIND">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_charAt">
+                <value name="VALUE">
+                    <block type="variables_get">
+                        <field name="VAR">{textVariable}</field>
+                    </block>
+                </value>
+            </block>
+            <block type="text_getSubstring">
+                <value name="STRING">
+                    <block type="variables_get">
+                        <field name="VAR">{textVariable}</field>
+                    </block>
+                </value>
+            </block>
+            <block type="text_changeCase">
+                <value name="TEXT">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_trim">
+                <value name="TEXT">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_print">
+                <value name="TEXT">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="text_prompt_ext">
+                <value name="TEXT">
+                    <shadow type="text">
+                        <field name="TEXT">abc</field>
+                    </shadow>
+                </value>
+            </block>
+        </category>
+        <category name="Lógica" colour="210">
+            <block type="logic_boolean"></block>
+            <block type="logic_compare"></block>
+            <block type="logic_operation"></block>
+            <block type="logic_boolean"></block>
+            <block type="logic_negate"></block>
+            <block type="controls_if"></block>
+        </category>
+        <category name="Matemáticas" colour="230">
+            <block type="math_number">
+                <field name="NUM">123</field>
+            </block>
+            <block type="math_arithmetic">
+                <value name="A">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="B">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_single">
+                <value name="NUM">
+                    <shadow type="math_number">
+                        <field name="NUM">9</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_trig">
+                <value name="NUM">
+                    <shadow type="math_number">
+                        <field name="NUM">45</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_constant"></block>
+            <block type="math_number_property">
+                <value name="NUMBER_TO_CHECK">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_round">
+                <value name="NUM">
+                    <shadow type="math_number">
+                        <field name="NUM">3.1</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_on_list"></block>
+            <block type="math_modulo">
+                <value name="DIVIDEND">
+                    <shadow type="math_number">
+                        <field name="NUM">64</field>
+                    </shadow>
+                </value>
+                <value name="DIVISOR">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_constrain">
+                <value name="VALUE">
+                    <shadow type="math_number">
+                        <field name="NUM">50</field>
+                    </shadow>
+                </value>
+                <value name="LOW">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="HIGH">
+                    <shadow type="math_number">
+                        <field name="NUM">100</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_random_int">
+                <value name="FROM">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="TO">
+                    <shadow type="math_number">
+                        <field name="NUM">100</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="math_random_float"></block>
+            <block type="math_atan2">
+                <value name="X">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="Y">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+            </block>
+        </category>
+        <sep gap="8"></sep>
+        <category name="Ciclos" colour="120">
+            <block type="controls_repeat_ext">
+                <value name="TIMES">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="controls_whileUntil"></block>
+            <block type="controls_for">
+                <value name="FROM">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <value name="TO">
+                    <shadow type="math_number">
+                        <field name="NUM">10</field>
+                    </shadow>
+                </value>
+                <value name="BY">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="controls_forEach"></block>
+            <block type="controls_flow_statements"></block>
 
-    </category>
-    <category name="Funciones" colour="290" custom="PROCEDURE"></category>
-</xml>
+        </category>
+        <category name="Funciones" colour="290" custom="PROCEDURE"></category>
+    </xml>
 
-  <script src="/blockly/blockly_compressed.js"></script>
-  <script src="/blockly/blocks_compressed.js"></script>
-  <script src="/blockly/javascript_compressed.js"></script>
-  <script src="/blockly/msg/js/es.js"></script>
-  <script src="./js/page_setup.js"></script>
-  <script src="%UNITY_WEBGL_LOADER_URL%"></script>
-  <script>
-    var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
-
-    initBlocky();
-  </script>
+    <script src="/blockly/blockly_compressed.js"></script>
+    <script src="/blockly/blocks_compressed.js"></script>
+    <script src="/blockly/javascript_compressed.js"></script>
+    <script src="/blockly/msg/js/es.js"></script>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
+    </script>
+    <script src="./js/page_setup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxof
 </body>
 
 </html>
