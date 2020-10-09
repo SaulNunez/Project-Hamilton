@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Assets.Scripts.Multiplayer.ResultPayload;
 using System.Linq;
+using Assets.Scripts.Multiplayer.ServerRequestsPayload;
 
 public class HamiltonHub
 {
@@ -27,6 +28,9 @@ public class HamiltonHub
     public delegate void PlayerSelectedCharacterDelegate();
     public event PlayerSelectedCharacterDelegate OnPlayerSelectedCharacter;
 
+    public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
+    public event NeedToSolvePuzzleDelegate OnNeedToSolvePuzzle;
+
     public string LobbyCode { get; private set; }
     public string PlayerToken { get; private set; }
 
@@ -40,10 +44,18 @@ public class HamiltonHub
 
         var currentPageUrl = new Uri(connection);
         var rootUrl = new Uri(currentPageUrl.GetLeftPart(UriPartial.Authority));
-        hubConnection = new HubConnection(new Uri(rootUrl, "gameapi"), new JsonProtocol(new LitJsonEncoder()));
+        hubConnection = new HubConnection(
+            new Uri(rootUrl, "gameapi"), 
+            new JsonProtocol(new LitJsonEncoder())
+            );
 
         hubConnection.OnConnected += HubConnection_OnConnected;
         hubConnection.OnError += HubConnection_OnError;
+
+        hubConnection.On<ShowPuzzleRequestPayload>("SolvePuzzle", (payload) =>
+        {
+            OnNeedToSolvePuzzle?.Invoke(payload);
+        });
 
         hubConnection.StartConnect();
     }
@@ -69,6 +81,11 @@ public class HamiltonHub
         }
 
         return enteredLobby;
+    }
+
+    public async Task<PuzzleResult> GetPuzzleResult(string code, string puzzleId)
+    {
+        return await hubConnection.InvokeAsync<PuzzleResult>("CheckPuzzle", new { code, puzzleId });
     }
 
     public async Task<CharacterAvailableResult> GetAvailableCharactersInLobby()

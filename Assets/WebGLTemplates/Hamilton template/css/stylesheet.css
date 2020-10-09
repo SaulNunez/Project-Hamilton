@@ -1,0 +1,53 @@
+/* Para que el canvas pueda ocupar toda la pantalla */
+body {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: 'Fira Code', monospace;
+    color: #FBF8EF;
+
+    background-image: url("./bkg.png");
+    background-repeat: repeat;
+    background-size: 32px;
+}
+
+#code_editor_sidewindow {
+    position: fixed;
+    height: 95%;
+    top: 0;
+    left: 0;
+    min-width: 64rem;
+    margin: 1em;
+    /* Usar flex para que se ocomode en pantalla los elementos del editor*/
+    display: none;
+    flex-direction: row;
+    z-index: 999;
+}
+
+#code_editor {
+    /* Para que el editor de codigo ocupe toda el espacio posible del contenedor */
+    flex: 1;
+    flex-basis: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+.display {
+    font-size: x-large;
+    margin-top: 8rem;
+}
+
+.spacingOnTop {
+    margin-top: 4rem;
+}
+
+.sidebar {
+    margin: 1rem;
+    max-width: 16rem;
+}
+
+.max_width_column {
+    width: 64rem;
+}
