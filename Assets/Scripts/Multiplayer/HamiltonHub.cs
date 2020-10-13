@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using Assets.Scripts.Multiplayer.ResultPayload;
 using System.Linq;
 using Assets.Scripts.Multiplayer.ServerRequestsPayload;
+using Assets.Scripts.Players;
 
 public class HamiltonHub
 {
@@ -30,6 +31,13 @@ public class HamiltonHub
 
     public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
     public event NeedToSolvePuzzleDelegate OnNeedToSolvePuzzle;
+
+    public delegate void MoveUpdateDelegate(MovementRequest moveInfo);
+    public event MoveUpdateDelegate OnMoveUpdate;
+
+    public delegate void MovePlayerDelegate(AvailableMovementOptions options);
+    public event MovePlayerDelegate OnMoveRequest;
+
 
     public string LobbyCode { get; private set; }
     public string PlayerToken { get; private set; }
@@ -55,6 +63,16 @@ public class HamiltonHub
         hubConnection.On<ShowPuzzleRequestPayload>("SolvePuzzle", (payload) =>
         {
             OnNeedToSolvePuzzle?.Invoke(payload);
+        });
+
+        hubConnection.On<MovementRequest>("MoveCharacterToPosition", (movementRequest) =>
+        {
+            OnMoveUpdate?.Invoke(movementRequest);
+        });
+
+        hubConnection.On<AvailableMovementOptions>("OnMoveRequest", (movementOptions) =>
+        {
+            OnMoveRequest?.Invoke(movementOptions);
         });
 
         hubConnection.StartConnect();
@@ -105,4 +123,7 @@ public class HamiltonHub
         // Como si el jugador ya ha sido seleccionado
         return result?.playerToken ?? null;
     }
+
+    public async Task<MovementResult> SendPlayerWantedDirection(Direction direction) => 
+        await hubConnection.InvokeAsync<MovementResult>("Move", new { moveDirection = direction });
 }
