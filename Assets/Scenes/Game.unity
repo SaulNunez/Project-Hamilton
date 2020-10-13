@@ -7936,7 +7936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8905b03dcbebc4f49906763adc348178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui: {fileID: 0}
+  ui: {fileID: 1447913752}
+  rightButton: {fileID: 1382956880}
+  leftButton: {fileID: 1346179390}
+  upButton: {fileID: 502525006}
+  downButton: {fileID: 1092352060}
 --- !u!4 &372222384
 Transform:
   m_ObjectHideFlags: 0
@@ -10463,7 +10467,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 502525007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372222383}
+        m_MethodName: MoveUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &502525007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23820,7 +23835,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092352061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372222383}
+        m_MethodName: MoveDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1092352061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29928,7 +29954,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1346179391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372222383}
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1346179391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32003,7 +32040,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1382956881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372222383}
+        m_MethodName: MoveRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1382956881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33339,7 +33387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1447913753
 RectTransform:
   m_ObjectHideFlags: 0
