@@ -20,13 +20,13 @@ public class HamiltonHub
 
     readonly HubConnection hubConnection;
 
-    public delegate void OnEnteredLobby(string lobbyCode);
-    public event OnEnteredLobby onEnteredLobby;
+    public delegate void OnEnteredLobbyDelegate(string lobbyCode);
+    public event OnEnteredLobbyDelegate OnEnteredLobby;
 
     public delegate void CharacterAvailableChangedDelegate(List<CharacterData> characters);
     public event CharacterAvailableChangedDelegate OnCharacterAvailableChanged;
 
-    public delegate void PlayerSelectedCharacterDelegate();
+    public delegate void PlayerSelectedCharacterDelegate(NewPlayerInfo newPlayerInfo);
     public event PlayerSelectedCharacterDelegate OnPlayerSelectedCharacter;
 
     public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
@@ -39,8 +39,15 @@ public class HamiltonHub
     public event MovePlayerDelegate OnMoveRequest;
 
 
+    public delegate void StatsUpdateDelegate(NewStats newStats);
+    public event StatsUpdateDelegate OnStatsUpdate;
+
+    public delegate void TurnHasStartedDelegate();
+    public event TurnHasStartedDelegate OnTurnHasStarted;
+
     public string LobbyCode { get; private set; }
     public string PlayerToken { get; private set; }
+    public string SelectedCharacter { get; private set; }
 
     private HamiltonHub()
     {
@@ -75,6 +82,15 @@ public class HamiltonHub
             OnMoveRequest?.Invoke(movementOptions);
         });
 
+        hubConnection.On<NewStats>("ChangeStats", (newStats) =>
+        {
+            OnStatsUpdate?.Invoke(newStats);
+        });
+
+        hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnPlayerSelectedCharacter?.Invoke(playerInfo));
+
+        hubConnection.On("StartTurn", () => OnTurnHasStarted?.Invoke());
+
         hubConnection.StartConnect();
     }
 
@@ -95,7 +111,7 @@ public class HamiltonHub
         if (enteredLobby)
         {
             LobbyCode = lobbyCode;
-            onEnteredLobby?.Invoke(lobbyCode);
+            OnEnteredLobby?.Invoke(lobbyCode);
         }
 
         return enteredLobby;
@@ -116,6 +132,7 @@ public class HamiltonHub
         var result = await hubConnection.InvokeAsync<PlayerSelectionResult>("SelectCharacter", new { character = characterToUse, name = playerName });
         if(result != null)
         {
+            SelectedCharacter = characterToUse;
             PlayerToken = result.playerToken;
         }
 
@@ -126,4 +143,9 @@ public class HamiltonHub
 
     public async Task<MovementResult> SendPlayerWantedDirection(Direction direction) => 
         await hubConnection.InvokeAsync<MovementResult>("Move", new { moveDirection = direction });
+
+    public async Task<int> ThrowADice()
+    {
+        return (await hubConnection.InvokeAsync<ThrowResult>("ThrowDice")).DiceThrow;
+    }
 }

@@ -9,14 +9,14 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
 
     void Start()
     {
-        HamiltonHub.Instance.onEnteredLobby += OpenPlayerSelection;
+        HamiltonHub.Instance.OnEnteredLobby += OpenPlayerSelection;
 
         joinLobbyScreen.SetActive(true);
     }
 
     private void OnDestroy()
     {
-        HamiltonHub.Instance.onEnteredLobby -= OpenPlayerSelection;
+        HamiltonHub.Instance.OnEnteredLobby -= OpenPlayerSelection;
     }
 
     private void OpenPlayerSelection(string lobbyCode)
