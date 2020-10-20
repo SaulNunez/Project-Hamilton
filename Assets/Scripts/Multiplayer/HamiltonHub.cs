@@ -45,6 +45,9 @@ public class HamiltonHub
     public delegate void TurnHasStartedDelegate();
     public event TurnHasStartedDelegate OnTurnHasStarted;
 
+    public delegate void OnThrowDiceDelegate(int result);
+    public event OnThrowDiceDelegate OnThrowDice;
+
     public string LobbyCode { get; private set; }
     public string PlayerToken { get; private set; }
     public string SelectedCharacter { get; private set; }
