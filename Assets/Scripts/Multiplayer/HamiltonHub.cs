@@ -120,6 +120,14 @@ public class HamiltonHub
         return enteredLobby;
     }
 
+    public async Task<List<UniqueItemResult>> GetItemInfo()
+    {
+        var items = await hubConnection
+            .InvokeAsync<List<UniqueItemResult>>("GetItems", new { PlayerToken, LobbyCode });
+
+        return items;
+    }
+
     public async Task<PuzzleResult> GetPuzzleResult(string code, string puzzleId)
     {
         return await hubConnection.InvokeAsync<PuzzleResult>("CheckPuzzle", new { code, puzzleId });
