@@ -80,7 +80,7 @@ public class HamiltonHub
             OnMoveUpdate?.Invoke(movementRequest);
         });
 
-        hubConnection.On<AvailableMovementOptions>("OnMoveRequest", (movementOptions) =>
+        hubConnection.On<AvailableMovementOptions>("GetDirection", (movementOptions) =>
         {
             OnMoveRequest?.Invoke(movementOptions);
         });
@@ -88,6 +88,11 @@ public class HamiltonHub
         hubConnection.On<NewStats>("ChangeStats", (newStats) =>
         {
             OnStatsUpdate?.Invoke(newStats);
+        });
+
+        hubConnection.On("GetDirection", () =>
+        {
+
         });
 
         hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnPlayerSelectedCharacter?.Invoke(playerInfo));

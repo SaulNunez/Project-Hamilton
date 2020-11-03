@@ -8,6 +8,8 @@ public class CharacterMovement : MonoBehaviour
     public Button leftButton;
     public Button upButton;
     public Button downButton;
+    public Button upFloorButton;
+    public Button downFloorButton;
 
     private Assets.Scripts.Multiplayer.ResultPayload.AvailableMovementOptions options;
 
@@ -57,6 +59,20 @@ public class CharacterMovement : MonoBehaviour
     {
         await HamiltonHub.Instance
             .SendPlayerWantedDirection(Assets.Scripts.Players.Direction.Right);
+        HideMovementUI();
+    }
+
+    public async void MoveUpFloor()
+    {
+        await HamiltonHub.Instance
+            .SendPlayerWantedDirection(Assets.Scripts.Players.Direction.UpFloor);
+        HideMovementUI();
+    }
+
+    public async void MoveDownFloor()
+    {
+        await HamiltonHub.Instance
+            .SendPlayerWantedDirection(Assets.Scripts.Players.Direction.DownFloor);
         HideMovementUI();
     }
 
