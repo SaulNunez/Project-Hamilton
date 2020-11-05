@@ -25,7 +25,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Instance_OnMoveRequest(Assets.Scripts.Multiplayer.ResultPayload.AvailableMovementOptions options)
     {
-        ShowMovementUI();
+        //ShowMovementUI();
         this.options = options;
     }
 
