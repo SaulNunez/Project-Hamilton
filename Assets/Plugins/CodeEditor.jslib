@@ -12,7 +12,7 @@ mergeInto(LibraryManager.library, {
     },
     SetOutputInEditor: function(outputText) {
         setOutputInEditor(Pointer_stringify(outputText));
-    }
+    },
     CloseCodeEditor: function(){
         closeCodeEditor();
     }
