@@ -17,8 +17,15 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         HamiltonHub.Instance.OnMoveRequest += Instance_OnMoveRequest;
         HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
         HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter += Instance_OnCurrentPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnGameHasStarted += Instance_OnGameHasStarted;
 
         joinLobbyScreen.SetActive(true);
+    }
+
+    private void Instance_OnGameHasStarted()
+    {
+        loadingScreen.SetActive(false);
+        normalGameUI.SetActive(true);
     }
 
     private void Instance_OnCurrentPlayerSelectedCharacter()
@@ -46,7 +53,9 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
     {
         HamiltonHub.Instance.OnEnteredLobby -= OpenPlayerSelection;
         HamiltonHub.Instance.OnMoveRequest -= Instance_OnMoveRequest;
-        HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
+        HamiltonHub.Instance.OnMoveUpdate -= Instance_OnMoveUpdate;
+        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter -= Instance_OnCurrentPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnGameHasStarted -= Instance_OnGameHasStarted;
     }
 
     private void OpenPlayerSelection(string lobbyCode)

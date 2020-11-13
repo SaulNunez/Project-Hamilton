@@ -32,6 +32,9 @@ public class HamiltonHub
     public delegate void CurrentPlayerSelectedCharacter();
     public event CurrentPlayerSelectedCharacter OnCurrentPlayerSelectedCharacter;
 
+    public delegate void GameHasStartedDelegate();
+    public event GameHasStartedDelegate OnGameHasStarted;
+
     public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
     public event NeedToSolvePuzzleDelegate OnNeedToSolvePuzzle;
 
