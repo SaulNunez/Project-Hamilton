@@ -1,16 +1,14 @@
 /* Para que el canvas pueda ocupar toda la pantalla */
 body {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     font-family: 'Fira Code', monospace;
     color: #FBF8EF;
 
-    background-image: url("./bkg.png");
-    background-repeat: repeat;
-    background-size: 32px;
+    overflow: hidden;
+    
+    margin: 0;
+    padding: 0;
+
+    background-color: black;
 }
 
 #code_editor_sidewindow {

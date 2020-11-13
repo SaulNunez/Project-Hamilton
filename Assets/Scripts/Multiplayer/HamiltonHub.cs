@@ -27,7 +27,10 @@ public class HamiltonHub
     public event CharacterAvailableChangedDelegate OnCharacterAvailableChanged;
 
     public delegate void PlayerSelectedCharacterDelegate(NewPlayerInfo newPlayerInfo);
-    public event PlayerSelectedCharacterDelegate OnPlayerSelectedCharacter;
+    public event PlayerSelectedCharacterDelegate OnOtherPlayerSelectedCharacter;
+
+    public delegate void CurrentPlayerSelectedCharacter();
+    public event CurrentPlayerSelectedCharacter OnCurrentPlayerSelectedCharacter;
 
     public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
     public event NeedToSolvePuzzleDelegate OnNeedToSolvePuzzle;
@@ -95,7 +98,7 @@ public class HamiltonHub
 
         });
 
-        hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnPlayerSelectedCharacter?.Invoke(playerInfo));
+        hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnOtherPlayerSelectedCharacter?.Invoke(playerInfo));
 
         hubConnection.On("StartTurn", () => OnTurnHasStarted?.Invoke());
 
@@ -145,11 +148,13 @@ public class HamiltonHub
 
     public async Task<string> SelectCharacter(string playerName, string characterToUse)
     {
-        var result = await hubConnection.InvokeAsync<PlayerSelectionResult>("SelectCharacter", new { character = characterToUse, name = playerName });
+        var result = await hubConnection.InvokeAsync<PlayerSelectionResult>("SelectCharacter", new { lobbyCode = LobbyCode, character = characterToUse, name = playerName });
         if(result != null)
         {
             SelectedCharacter = characterToUse;
             PlayerToken = result.playerToken;
+
+            OnCurrentPlayerSelectedCharacter?.Invoke();
         }
 
         // Retornar null si llamar a funcion del servidor no retorna nada

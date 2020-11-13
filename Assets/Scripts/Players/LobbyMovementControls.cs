@@ -31,7 +31,7 @@ public class LobbyMovementControls : MonoBehaviour
     {
         HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
         HamiltonHub.Instance.OnStatsUpdate += Instance_OnStatsUpdate;
-        HamiltonHub.Instance.OnPlayerSelectedCharacter += Instance_OnPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter += Instance_OnPlayerSelectedCharacter;
     }
 
     private void Instance_OnPlayerSelectedCharacter(NewPlayerInfo newPlayerInfo)
@@ -67,6 +67,6 @@ public class LobbyMovementControls : MonoBehaviour
     {
         HamiltonHub.Instance.OnMoveUpdate -= Instance_OnMoveUpdate; 
         HamiltonHub.Instance.OnStatsUpdate -= Instance_OnStatsUpdate;
-        HamiltonHub.Instance.OnPlayerSelectedCharacter -= Instance_OnPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter -= Instance_OnPlayerSelectedCharacter;
     }
 }

@@ -201,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 8509101357007306146, guid: 28b84bbb5f883a449bd41ea6f739ce5f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8509101357007306174, guid: 28b84bbb5f883a449bd41ea6f739ce5f,
         type: 3}
@@ -10188,7 +10188,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10275,18 +10274,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819e14dcf3d205c4fa65cb24444495a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &530948705
 GameObject:
   m_ObjectHideFlags: 0
@@ -11854,6 +11841,12 @@ Transform:
   m_Father: {fileID: 677985639}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &715867684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1995506689000712620, guid: bdae2091fce5c9944a09e92ee452349f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7814020049954101433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &763272971
 GameObject:
   m_ObjectHideFlags: 0
@@ -16709,9 +16702,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSelectionScreen: {fileID: 6602967117440732512}
   joinLobbyScreen: {fileID: 8067639985653482752}
-  normalGameUI: {fileID: 0}
-  movementUI: {fileID: 0}
-  itemUI: {fileID: 0}
+  normalGameUI: {fileID: 9439470}
+  movementUI: {fileID: 4869191724887797753}
+  itemUI: {fileID: 1353690872971831233}
+  loadingScreen: {fileID: 715867684}
 --- !u!1 &887371130
 GameObject:
   m_ObjectHideFlags: 0
@@ -42490,6 +42484,7 @@ GameObject:
   - component: {fileID: 1996467107}
   - component: {fileID: 1996467106}
   - component: {fileID: 1996467105}
+  - component: {fileID: 1996467108}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -42545,6 +42540,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996467108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996467104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d245a115041fcde458c0e92042f74fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2027711114
 GameObject:
   m_ObjectHideFlags: 0
@@ -45877,6 +45884,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51f489792ee6cf4083ebda89537984e, type: 3}
+--- !u!1 &1353690872971831233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6666599418817011270, guid: e51f489792ee6cf4083ebda89537984e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353690872971831232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4869191724887797752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46176,6 +46189,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a95054abbabf094a8cf7892c9feb329, type: 3}
+--- !u!1 &4869191724887797753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4869191724187518688, guid: 7a95054abbabf094a8cf7892c9feb329,
+    type: 3}
+  m_PrefabInstance: {fileID: 4869191724887797752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6602967117440732510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46533,6 +46552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JoinLobbyUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923236235452294984, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4923236235452294988, guid: 0f95203ec43d9fa4fa8d171f5b9e8b14,
         type: 3}

@@ -9,14 +9,22 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
     public GameObject normalGameUI;
     public GameObject movementUI;
     public GameObject itemUI;
+    public GameObject loadingScreen;
 
     void Start()
     {
         HamiltonHub.Instance.OnEnteredLobby += OpenPlayerSelection;
         HamiltonHub.Instance.OnMoveRequest += Instance_OnMoveRequest;
         HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
+        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter += Instance_OnCurrentPlayerSelectedCharacter;
 
         joinLobbyScreen.SetActive(true);
+    }
+
+    private void Instance_OnCurrentPlayerSelectedCharacter()
+    {
+        playerSelectionScreen.SetActive(false);
+        loadingScreen.SetActive(true);
     }
 
     private void Instance_OnMoveUpdate(Assets.Scripts.Multiplayer.ServerRequestsPayload.MovementRequest moveInfo)

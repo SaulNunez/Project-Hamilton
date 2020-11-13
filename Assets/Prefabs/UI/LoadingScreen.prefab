@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -209,8 +209,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 34.127}
-  m_SizeDelta: {x: 384.3064, y: 68.253845}
+  m_AnchoredPosition: {x: 0, y: 34.127}
+  m_SizeDelta: {x: 454.8089, y: 68.253845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3689162594564683947
 CanvasRenderer:
@@ -240,7 +240,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: dae0e7ceca99e9045b642cfed21adf2e, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gracias por participar en las pruebas de este juego!
+  m_Text: Gracias por participar en las pruebas de este proyecto!
 --- !u!1 &6202086836254343736
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -38.8}
-  m_SizeDelta: {x: 220.05914, y: 58.516922}
+  m_AnchoredPosition: {x: 0.00019455, y: -47.73}
+  m_SizeDelta: {x: 454.8084, y: 76.37756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6726487861199409219
 CanvasRenderer:
@@ -318,7 +318,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: dae0e7ceca99e9045b642cfed21adf2e, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -330,5 +330,5 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: La partida comenzara en un momento, solo espera a que se unan el resto
+  m_Text: La partida comenzara en un momento, porfavor espere a que se unan el resto
     de los jugadores...

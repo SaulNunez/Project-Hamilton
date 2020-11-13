@@ -10,36 +10,33 @@
     <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
     <style>
         #game_render {
-            width: %UNITY_WIDTH%px;
-            height: %UNITY_HEIGHT%px;
-            margin: auto;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
 <body>
-    <div id="game_container">
-        <!-- game -->
-        <div id="code_editor_sidewindow" class="card">
-            <div class="sidebar">
-                <h1>Puzzle</h1>
-                <p id="instructions"></p>
-                <div class="alert alert-danger" role="alert" id="code_errors"></div>
-                <div class="alert alert-secondary" role="alert" id="code_output"></div>
-                <div class="card card-body" id="documentacion">
-                    
-                </div>
-            </div>
-            <div>
-                <div id="code_editor" />
-                <button class="btn btn-primary" id="run_program_button">Correr programa</button>
-            </div>
+    <div id="game_render">
+        <noscript>
+            <p>Este juego necesita que Javascript este habilitado. Puedes intentar cambia a otro navegador web.</p>
+        </noscript>
+    </div>
+    <div id="code_editor_sidewindow" class="card">
+        <div class="sidebar">
+            <h1>Puzzle</h1>
+            <p id="instructions"></p>
+            <div class="alert alert-danger" role="alert" id="code_errors"></div>
+            <div class="alert alert-secondary" role="alert" id="code_output"></div>
+            <div class="card card-body" id="documentacion"></div>
         </div>
-        <div id="game_render">
-            <noscript>
-                <p>Este juego necesita que Javascript este habilitado. Puedes intentar cambia a otro navegador web.</p>
-            </noscript>
+        <div>
+            <div id="code_editor" />
+            <button class="btn btn-primary" id="run_program_button">Correr programa</button>
         </div>
     </div>
     <xml id="toolbox" style="display: none">
@@ -271,6 +268,19 @@
     <script src="%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
         var unityInstance = UnityLoader.instantiate("game_render", "%UNITY_WEBGL_BUILD_URL%");
+
+        /*
+        var recaptureInputAndFocus = function () {
+            var canvas = document.getElementById("game_render");
+            if (canvas) {
+                canvas.setAttribute("tabindex", "1");
+                canvas.focus();
+            } else
+                setTimeout(recaptureInputAndFocus, 100);
+        }
+        */
+
+        recaptureInputAndFocus();
     </script>
     <script src="./js/page_setup.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -279,7 +289,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxof
-</body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxof" />
+    </body>
 
 </html>

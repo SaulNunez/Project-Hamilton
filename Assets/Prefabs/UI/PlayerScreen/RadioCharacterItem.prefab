@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -71.51, y: -88.31}
-  m_SizeDelta: {x: -191.02832, y: 176.62183}
+  m_AnchoredPosition: {x: 12.002, y: -96.956}
+  m_SizeDelta: {x: -24.00415, y: 193.9129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7540052498564279623
 MonoBehaviour:
@@ -99,7 +99,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 615.99976, y: 101.204895}
+  m_SizeDelta: {x: 367.47552, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3416531663155109755
 CanvasRenderer:
@@ -177,7 +177,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 616.00146, y: 24.799988}
+  m_SizeDelta: {x: 367.47552, y: 24.799988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &19631584973273242
 CanvasRenderer:
@@ -255,7 +255,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 616, y: 30}
+  m_SizeDelta: {x: 367.47552, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6508743013215377092
 CanvasRenderer:
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 3706933953808407756}
   - component: {fileID: 3473437829332847994}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: RadioCharacterItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 369.5, y: -97}
-  m_SizeDelta: {x: 739, y: 193.91199}
+  m_AnchoredPosition: {x: 200.00002, y: -96.95599}
+  m_SizeDelta: {x: 400, y: 193.91199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3706933953808407756
 MonoBehaviour:
