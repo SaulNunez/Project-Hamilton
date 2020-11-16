@@ -121,4 +121,9 @@ public class Butler : MonoBehaviour
         currentRoom = room;
         currentFloor = floor;
     }
+
+    private void OnDestroy()
+    {
+        HamiltonHub.Instance.OnGameHasStarted -= GetRoomPositions;
+    }
 }

@@ -83,6 +83,7 @@ public class HamiltonHub
 
         hubConnection.On<GameStartPayload>("StartGame", (payload) =>
         {
+            Debug.Log("Juego ha iniciado");
             OnGameHasStarted?.Invoke(payload);
         });
 
