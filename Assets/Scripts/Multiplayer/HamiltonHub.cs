@@ -32,7 +32,7 @@ public class HamiltonHub
     public delegate void CurrentPlayerSelectedCharacter();
     public event CurrentPlayerSelectedCharacter OnCurrentPlayerSelectedCharacter;
 
-    public delegate void GameHasStartedDelegate();
+    public delegate void GameHasStartedDelegate(GameStartPayload gameStartInfo);
     public event GameHasStartedDelegate OnGameHasStarted;
 
     public delegate void NeedToSolvePuzzleDelegate(ShowPuzzleRequestPayload showPuzzleRequestPayload);
@@ -79,6 +79,11 @@ public class HamiltonHub
         hubConnection.On<ShowPuzzleRequestPayload>("SolvePuzzle", (payload) =>
         {
             OnNeedToSolvePuzzle?.Invoke(payload);
+        });
+
+        hubConnection.On<GameStartPayload>("StartGame", (payload) =>
+        {
+            OnGameHasStarted?.Invoke(payload);
         });
 
         hubConnection.On<MovementRequest>("MoveCharacterToPosition", (movementRequest) =>

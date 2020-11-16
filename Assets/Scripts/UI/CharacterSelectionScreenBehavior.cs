@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Multiplayer.ResultPayload;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         joinLobbyScreen.SetActive(true);
     }
 
-    private void Instance_OnGameHasStarted()
+    private void Instance_OnGameHasStarted(GameStartPayload gameStartInfo)
     {
         loadingScreen.SetActive(false);
         normalGameUI.SetActive(true);
@@ -43,7 +44,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         }
     }
 
-    private void Instance_OnMoveRequest(Assets.Scripts.Multiplayer.ResultPayload.AvailableMovementOptions options)
+    private void Instance_OnMoveRequest(AvailableMovementOptions options)
     {
         normalGameUI.SetActive(false);
         movementUI.SetActive(true);

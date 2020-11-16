@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public struct Position
+﻿public struct Position
 {
+    public Position(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
     public int x;
     public int y;
 }
