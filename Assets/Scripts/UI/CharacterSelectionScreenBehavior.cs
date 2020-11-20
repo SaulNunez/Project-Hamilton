@@ -12,27 +12,35 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
     public GameObject itemUI;
     public GameObject loadingScreen;
 
+    private Animator animator;
+
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         HamiltonHub.Instance.OnEnteredLobby += OpenPlayerSelection;
         HamiltonHub.Instance.OnMoveRequest += Instance_OnMoveRequest;
         HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
         HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter += Instance_OnCurrentPlayerSelectedCharacter;
         HamiltonHub.Instance.OnGameHasStarted += Instance_OnGameHasStarted;
 
-        joinLobbyScreen.SetActive(true);
+        //joinLobbyScreen.SetActive(true);
     }
 
     private void Instance_OnGameHasStarted(GameStartPayload gameStartInfo)
     {
-        loadingScreen.SetActive(false);
-        normalGameUI.SetActive(true);
+        //loadingScreen.SetActive(false);
+        //normalGameUI.SetActive(true);
+
+        animator.SetBool("GameHasStarted", true);
     }
 
     private void Instance_OnCurrentPlayerSelectedCharacter()
     {
-        playerSelectionScreen.SetActive(false);
-        loadingScreen.SetActive(true);
+        //playerSelectionScreen.SetActive(false);
+        //loadingScreen.SetActive(true);
+
+        animator.SetBool("SelectedCharacter", true);
     }
 
     private void Instance_OnMoveUpdate(Assets.Scripts.Multiplayer.ServerRequestsPayload.MovementRequest moveInfo)
@@ -46,8 +54,10 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
 
     private void Instance_OnMoveRequest(AvailableMovementOptions options)
     {
-        normalGameUI.SetActive(false);
-        movementUI.SetActive(true);
+        //normalGameUI.SetActive(false);
+        //movementUI.SetActive(true);
+
+        animator.SetTrigger("MakeMovement");
     }
 
     private void OnDestroy()
@@ -62,8 +72,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
     private void OpenPlayerSelection(string lobbyCode)
     {
         print("Showing player screen");
-        joinLobbyScreen.SetActive(false);
-        playerSelectionScreen.SetActive(true);
+        animator.SetBool("EnteredLobby", true);
 
     }
 
