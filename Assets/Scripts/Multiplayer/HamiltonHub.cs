@@ -48,7 +48,7 @@ public class HamiltonHub
     public delegate void StatsUpdateDelegate(NewStats newStats);
     public event StatsUpdateDelegate OnStatsUpdate;
 
-    public delegate void TurnHasStartedDelegate();
+    public delegate void TurnHasStartedDelegate(NewTurnInformation newPlayerInfo);
     public event TurnHasStartedDelegate OnTurnHasStarted;
 
     public delegate void OnThrowDiceDelegate(int result);
@@ -109,7 +109,7 @@ public class HamiltonHub
 
         hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnOtherPlayerSelectedCharacter?.Invoke(playerInfo));
 
-        hubConnection.On("StartTurn", () => OnTurnHasStarted?.Invoke());
+        hubConnection.On<NewTurnInformation>("StartTurn", (info) => OnTurnHasStarted?.Invoke(info));
 
         hubConnection.StartConnect();
     }

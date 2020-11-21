@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Multiplayer.ResultPayload;
+using Assets.Scripts.Multiplayer.ServerRequestsPayload;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,12 +12,20 @@ public class UpdateScreen : MonoBehaviour
     public Text statPhysicalText;
     public Text statSanityText;
 
+    public Text character;
+
     private void Start()
     {
         HamiltonHub.Instance.OnStatsUpdate += StatsUpdate;
+        HamiltonHub.Instance.OnTurnHasStarted += TurnHasChangedPlayer;
     }
 
-    private void StatsUpdate(Assets.Scripts.Multiplayer.ServerRequestsPayload.NewStats newStats)
+    private void TurnHasChangedPlayer(NewTurnInformation newPlayerInfo)
+    {
+        character.text = newPlayerInfo.DisplayName;
+    }
+
+    private void StatsUpdate(NewStats newStats)
     {
         if(newStats.PlayerName == HamiltonHub.Instance.SelectedCharacter)
         {
