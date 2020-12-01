@@ -8,7 +8,25 @@ public class ItemUIHandling : MonoBehaviour
     public GameObject itemGrid;
     public GameObject itemPrefab;
 
-    async void OnEnable()
+    public static ItemUIHandling instance = null;
+
+    public enum Motive {
+        MOVEMENT_INTERACTION,
+        DICE_THROW_MODIFICATION
+    }
+
+    private void Start()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Debug.LogError("Hay más de una instancia de la pantalla de items.");
+        }
+    }
+
+    public async void OpenItems(Motive motive)
     {
         var items = await HamiltonHub.Instance.GetItemInfo();
         foreach (Transform gmTransform in itemGrid.GetComponentsInChildren<Transform>())
