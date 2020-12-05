@@ -20,10 +20,10 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        HamiltonHub.Instance.OnMoveRequest += Instance_OnMoveRequest;
+        HamiltonHub.Instance.OnMoveRequest += OnMovementUpdate;
     }
 
-    private void Instance_OnMoveRequest(Assets.Scripts.Multiplayer.ResultPayload.AvailableMovementOptions options)
+    private void OnMovementUpdate(Assets.Scripts.Multiplayer.ResultPayload.AvailableMovementOptions options)
     {
         //ShowMovementUI();
         this.options = options;
@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        HamiltonHub.Instance.OnMoveRequest -= Instance_OnMoveRequest;
+        HamiltonHub.Instance.OnMoveRequest -= OnMovementUpdate;
     }
 
     public async void MoveUp()

@@ -73,8 +73,8 @@ public class HamiltonHub
             new JsonProtocol(new LitJsonEncoder())
             );
 
-        hubConnection.OnConnected += HubConnection_OnConnected;
-        hubConnection.OnError += HubConnection_OnError;
+        hubConnection.OnConnected += OnConnected;
+        hubConnection.OnError += OnError;
 
         hubConnection.On<ShowPuzzleRequestPayload>("SolvePuzzle", (payload) =>
         {
@@ -114,12 +114,12 @@ public class HamiltonHub
         hubConnection.StartConnect();
     }
 
-    private void HubConnection_OnError(HubConnection arg1, string arg2)
+    private void OnError(HubConnection arg1, string arg2)
     {
         
     }
 
-    private void HubConnection_OnConnected(HubConnection obj)
+    private void OnConnected(HubConnection obj)
     {
         
     }

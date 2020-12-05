@@ -11,10 +11,10 @@ public class DiceAnimation : MonoBehaviour
 
     void Start()
     {
-        HamiltonHub.Instance.OnThrowDice += Instance_OnThrowDice;
+        HamiltonHub.Instance.OnThrowDice += OnDiceThrow;
     }
 
-    private async void Instance_OnThrowDice(int result)
+    private async void OnDiceThrow(int result)
     {
         canvas.SetActive(true);
         text.text = result.ToString();
@@ -25,6 +25,6 @@ public class DiceAnimation : MonoBehaviour
     // Update is called once per frame
     void OnDestroy()
     {
-        HamiltonHub.Instance.OnThrowDice -= Instance_OnThrowDice;
+        HamiltonHub.Instance.OnThrowDice -= OnDiceThrow;
     }
 }

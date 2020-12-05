@@ -1,4 +1,4 @@
-﻿public class Stats
+﻿ public class Stats
 {
     public int Sanity { get; set; }
     public int Physical { get; set; }

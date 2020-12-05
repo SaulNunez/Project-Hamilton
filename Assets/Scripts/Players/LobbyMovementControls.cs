@@ -29,12 +29,12 @@ public class LobbyMovementControls : MonoBehaviour
     
     void Start()
     {
-        HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
-        HamiltonHub.Instance.OnStatsUpdate += Instance_OnStatsUpdate;
-        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter += Instance_OnPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnMoveUpdate += OnPositionUpdate;
+        HamiltonHub.Instance.OnStatsUpdate += OnStatsUpdate;
+        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter += OnPlayerSelectionInLobby;
     }
 
-    private void Instance_OnPlayerSelectedCharacter(NewPlayerInfo newPlayerInfo)
+    private void OnPlayerSelectionInLobby(NewPlayerInfo newPlayerInfo)
     {
         var player = new Player(newPlayerInfo.CharacterSelected, newPlayerInfo.LobbyName, newPlayerInfo.StartingStats);
         playersInLobby.Add(player);
@@ -44,7 +44,7 @@ public class LobbyMovementControls : MonoBehaviour
         //TODO: Inicializar sprites del personaje
     }
 
-    private void Instance_OnStatsUpdate(NewStats newStats)
+    private void OnStatsUpdate(NewStats newStats)
     {
         var player = playersInLobby.Find(x => x.characterName == newStats.PlayerName);
 
@@ -54,7 +54,7 @@ public class LobbyMovementControls : MonoBehaviour
         player.stats.Sanity = newStats.Stats.Sanity;
     }
 
-    private void Instance_OnMoveUpdate(MovementRequest moveInfo)
+    private void OnPositionUpdate(MovementRequest moveInfo)
     {
         var player = playersInLobby.Find(x => x.characterName == moveInfo.Character);
 
@@ -65,8 +65,8 @@ public class LobbyMovementControls : MonoBehaviour
 
     void OnDestroy()
     {
-        HamiltonHub.Instance.OnMoveUpdate -= Instance_OnMoveUpdate; 
-        HamiltonHub.Instance.OnStatsUpdate -= Instance_OnStatsUpdate;
-        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter -= Instance_OnPlayerSelectedCharacter;
+        HamiltonHub.Instance.OnMoveUpdate -= OnPositionUpdate; 
+        HamiltonHub.Instance.OnStatsUpdate -= OnStatsUpdate;
+        HamiltonHub.Instance.OnOtherPlayerSelectedCharacter -= OnPlayerSelectionInLobby;
     }
 }
