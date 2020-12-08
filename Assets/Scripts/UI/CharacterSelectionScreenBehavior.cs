@@ -19,15 +19,15 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         animator = GetComponent<Animator>();
 
         HamiltonHub.Instance.OnEnteredLobby += OpenPlayerSelection;
-        HamiltonHub.Instance.OnMoveRequest += Instance_OnMoveRequest;
-        HamiltonHub.Instance.OnMoveUpdate += Instance_OnMoveUpdate;
-        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter += Instance_OnCurrentPlayerSelectedCharacter;
-        HamiltonHub.Instance.OnGameHasStarted += Instance_OnGameHasStarted;
+        HamiltonHub.Instance.OnMoveRequest += OnMovementUpdate;
+        HamiltonHub.Instance.OnMoveUpdate += OnMoveUpdate;
+        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter += OnCharacterSelectedByPlayer;
+        HamiltonHub.Instance.OnGameHasStarted += OnGameStart;
 
         //joinLobbyScreen.SetActive(true);
     }
 
-    private void Instance_OnGameHasStarted(GameStartPayload gameStartInfo)
+    private void OnGameStart(GameStartPayload gameStartInfo)
     {
         //loadingScreen.SetActive(false);
         //normalGameUI.SetActive(true);
@@ -35,7 +35,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         animator.SetBool("GameHasStarted", true);
     }
 
-    private void Instance_OnCurrentPlayerSelectedCharacter()
+    private void OnCharacterSelectedByPlayer()
     {
         //playerSelectionScreen.SetActive(false);
         //loadingScreen.SetActive(true);
@@ -43,7 +43,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         animator.SetBool("SelectedCharacter", true);
     }
 
-    private void Instance_OnMoveUpdate(Assets.Scripts.Multiplayer.ServerRequestsPayload.MovementRequest moveInfo)
+    private void OnMoveUpdate(Assets.Scripts.Multiplayer.ServerRequestsPayload.MovementRequest moveInfo)
     {
         if (movementUI.activeSelf && moveInfo.Character == HamiltonHub.Instance.SelectedCharacter)
         {
@@ -52,7 +52,7 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
         }
     }
 
-    private void Instance_OnMoveRequest(AvailableMovementOptions options)
+    private void OnMovementUpdate(AvailableMovementOptions options)
     {
         //normalGameUI.SetActive(false);
         //movementUI.SetActive(true);
@@ -63,10 +63,10 @@ public class CharacterSelectionScreenBehavior : MonoBehaviour
     private void OnDestroy()
     {
         HamiltonHub.Instance.OnEnteredLobby -= OpenPlayerSelection;
-        HamiltonHub.Instance.OnMoveRequest -= Instance_OnMoveRequest;
-        HamiltonHub.Instance.OnMoveUpdate -= Instance_OnMoveUpdate;
-        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter -= Instance_OnCurrentPlayerSelectedCharacter;
-        HamiltonHub.Instance.OnGameHasStarted -= Instance_OnGameHasStarted;
+        HamiltonHub.Instance.OnMoveRequest -= OnMovementUpdate;
+        HamiltonHub.Instance.OnMoveUpdate -= OnMoveUpdate;
+        HamiltonHub.Instance.OnCurrentPlayerSelectedCharacter -= OnCharacterSelectedByPlayer;
+        HamiltonHub.Instance.OnGameHasStarted -= OnGameStart;
     }
 
     private void OpenPlayerSelection(string lobbyCode)
