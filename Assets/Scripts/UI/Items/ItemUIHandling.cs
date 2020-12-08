@@ -26,8 +26,10 @@ public class ItemUIHandling : MonoBehaviour
         }
     }
 
-    public async void OpenItems(Motive motive)
+    async void OnEnable()
     {
+        gameObject.SetActive(true);
+
         var items = await HamiltonHub.Instance.GetItemInfo();
         foreach (Transform gmTransform in itemGrid.GetComponentsInChildren<Transform>())
         {
