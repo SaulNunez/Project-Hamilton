@@ -1,5 +1,6 @@
 ﻿//using Microsoft.AspNetCore.SignalR.Client;
 using Assets.Scripts.Rooms;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,116 +11,92 @@ public class Butler : MonoBehaviour
     public GameObject basementRoomsParent;
     public GameObject mainFloorRoomsParent;
 
-    private readonly Dictionary<string, GameObject> topFloor = new Dictionary<string, GameObject>();
-    private readonly Dictionary<string, GameObject> basement = new Dictionary<string, GameObject>();
-    private readonly Dictionary<string, GameObject> mainFloor = new Dictionary<string, GameObject>();
-
-    private readonly Dictionary<Position, string> mainFloorRoomPositions = new Dictionary<Position, string>();
-    private readonly Dictionary<Position, string> basementRoomPositions = new Dictionary<Position, string>();
-    private readonly Dictionary<Position, string> topFloorRoomPositions = new Dictionary<Position, string>();
-
-    private string currentRoom;
-    private Floors currentFloor;
-
-    private void Start()
+    [Serializable]
+    public class RoomInfo
     {
-        HamiltonHub.Instance.OnGameHasStarted += GetRoomPositions;
-        foreach (Transform room in topFloorRoomsParent.transform)
-        {
-            topFloor.Add(room.gameObject.name, room.gameObject);
-        }
+        public GameObject roomGameObject;
+        public string name;
+        public int x;
+        public int y;
+        public Floors floor;
 
-        foreach (Transform room in basementRoomsParent.transform)
-        {
-            basement.Add(room.gameObject.name, room.gameObject);
-        }
-
-        foreach (Transform room in mainFloorRoomsParent.transform)
-        {
-            mainFloor.Add(room.gameObject.name, room.gameObject);
-        }
-
-        SetRoomAsActive("entrance", Floors.MAIN_FLOOR);
+        public Vector2 PositionOnWorld() => new Vector2(x * 8, y * 8);
     }
+
+    private readonly List<RoomInfo> rooms = new List<RoomInfo>();
+
+    private Floors currentFloor;
 
     private void GetRoomPositions(Assets.Scripts.Multiplayer.ResultPayload.GameStartPayload gameStartInfo)
     {
         gameStartInfo.RoomPositions.MainFloor.ForEach(rInfo =>
         {
-            mainFloorRoomPositions.Add(new Position(rInfo.X, rInfo.Y), rInfo.RoomId);
+            var roomGameObject = mainFloorRoomsParent.transform.Find(rInfo.Name);
+            var roomInfo = new RoomInfo
+            {
+                roomGameObject = roomGameObject.gameObject,
+                name = rInfo.Name,
+                x = rInfo.X,
+                y = rInfo.Y,
+                floor = Floors.MAIN_FLOOR
+            };
+
+            rooms.Add(roomInfo);
+
+            roomGameObject.position = roomInfo.PositionOnWorld();
         });
 
         gameStartInfo.RoomPositions.Basement.ForEach(rInfo =>
         {
-            basementRoomPositions.Add(new Position(rInfo.X, rInfo.Y), rInfo.RoomId);
+            var roomGameObject = basementRoomsParent.transform.Find(rInfo.Name);
+            var roomInfo = new RoomInfo
+            {
+                roomGameObject = roomGameObject.gameObject,
+                name = rInfo.Name,
+                x = rInfo.X,
+                y = rInfo.Y,
+                floor = Floors.BASEMENT
+            };
+
+            rooms.Add(roomInfo);
+
+            roomGameObject.position = roomInfo.PositionOnWorld();
         });
 
         gameStartInfo.RoomPositions.TopFloor.ForEach(rInfo =>
         {
-            topFloorRoomPositions.Add(new Position(rInfo.X, rInfo.Y), rInfo.RoomId);
+            var roomGameObject = topFloorRoomsParent.transform.Find(rInfo.Name);
+            var roomInfo = new RoomInfo
+            {
+                roomGameObject = roomGameObject.gameObject,
+                name = rInfo.Name,
+                x = rInfo.X,
+                y = rInfo.Y,
+                floor = Floors.TOP_FLOOR
+            };
+
+            rooms.Add(roomInfo);
+
+            roomGameObject.position = roomInfo.PositionOnWorld();
         });
     }
 
-    public void SetRoomAsActive(int x, int y, Floors floor)
+    public void SetFloorAsActive(Floors floor)
     {
+        currentFloor = floor;
+
         switch (floor)
         {
             case Floors.BASEMENT:
-                SetRoomAsActive(basementRoomPositions[new Position(x, y)], floor);
+                basementRoomsParent.SetActive(false);
                 break;
             case Floors.MAIN_FLOOR:
-                SetRoomAsActive(mainFloorRoomPositions[new Position(x, y)], floor);
+                mainFloorRoomsParent.SetActive(false);
                 break;
             case Floors.TOP_FLOOR:
-                SetRoomAsActive(topFloorRoomPositions[new Position(x, y)], floor);
+                topFloorRoomsParent.SetActive(false);
                 break;
         }
-    }
-
-    public void SetRoomAsActive(string room, Floors floor)
-    {
-        if(room != currentRoom && floor != currentFloor)
-        {
-            return;
-        }
-
-        switch (currentFloor)
-        {
-            case Floors.BASEMENT:
-                foreach(GameObject r in basement.Values)
-                {
-                    r.SetActive(false);
-                }
-                break;
-            case Floors.MAIN_FLOOR:
-                foreach (GameObject r in mainFloor.Values)
-                {
-                    r.SetActive(false);
-                }
-                break;
-            case Floors.TOP_FLOOR:
-                foreach (GameObject r in topFloor.Values)
-                {
-                    r.SetActive(false);
-                }
-                break;
-        }
-
-        switch (currentFloor)
-        {
-            case Floors.BASEMENT:
-                basement[room].SetActive(true);
-                break;
-            case Floors.MAIN_FLOOR:
-                mainFloor[room].SetActive(true);
-                break;
-            case Floors.TOP_FLOOR:
-                topFloor[room].SetActive(true);
-                break;
-        }
-
-        currentRoom = room;
-        currentFloor = floor;
     }
 
     private void OnDestroy()
