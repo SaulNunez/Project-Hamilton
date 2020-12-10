@@ -8,6 +8,7 @@ using Assets.Scripts.Multiplayer.ResultPayload;
 using System.Linq;
 using Assets.Scripts.Multiplayer.ServerRequestsPayload;
 using Assets.Scripts.Players;
+using Assets.Scripts.Multiplayer;
 
 public class HamiltonHub
 {
@@ -58,6 +59,9 @@ public class HamiltonHub
     public string PlayerToken { get; private set; }
     public string SelectedCharacter { get; private set; }
 
+    public bool playerOnTurn { get; private set; }
+    public List<PlayerInfo> playersInLobby;
+
     private HamiltonHub()
     {
         string connection = "https://hamilton-service-a.herokuapp.com/";
@@ -99,6 +103,9 @@ public class HamiltonHub
 
         hubConnection.On<NewStats>("ChangeStats", (newStats) =>
         {
+            var player = playersInLobby.Find(x => x.characterPrototype == newStats.PlayerName);
+            player.stats = newStats.Stats;
+
             OnStatsUpdate?.Invoke(newStats);
         });
 
@@ -107,9 +114,28 @@ public class HamiltonHub
 
         });
 
-        hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => OnOtherPlayerSelectedCharacter?.Invoke(playerInfo));
+        hubConnection.On<NewPlayerInfo>("PlayerSelectedCharacter", (playerInfo) => {
+            playersInLobby.Add(new PlayerInfo
+            {
+                characterPrototype = playerInfo.CharacterSelected,
+                nameOnScreen = playerInfo.LobbyName,
+                stats = playerInfo.StartingStats
+            });
 
-        hubConnection.On<NewTurnInformation>("StartTurn", (info) => OnTurnHasStarted?.Invoke(info));
+            OnOtherPlayerSelectedCharacter?.Invoke(playerInfo);
+            });
+
+        hubConnection.On<NewTurnInformation>("StartTurn", (info) => { 
+            if(info.CharacterId == SelectedCharacter)
+            {
+                playerOnTurn = true;
+            } else
+            {
+                playerOnTurn = false;
+            }
+
+            OnTurnHasStarted?.Invoke(info);
+        });
 
         hubConnection.StartConnect();
     }
