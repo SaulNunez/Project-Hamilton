@@ -34,10 +34,10 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private void Start()
     {
-        HamiltonHub.Instance.OnCharacterAvailableChanged += Instance_onCharacterAvailableChanged;
+        HamiltonHub.Instance.OnCharacterAvailableChanged += OnAvailableCharactersChanged;
     }
 
-    private void Instance_onCharacterAvailableChanged(List<CharacterData> characters)
+    private void OnAvailableCharactersChanged(List<CharacterData> characters)
     {
         charactersAvailable = characters;
         ShowCharactersOnScreen();
@@ -79,7 +79,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
 
     private void OnDestroy()
     {
-        HamiltonHub.Instance.OnCharacterAvailableChanged -= Instance_onCharacterAvailableChanged;
+        HamiltonHub.Instance.OnCharacterAvailableChanged -= OnAvailableCharactersChanged;
     }
 
     public async void SendSelectedCharacterToServer()

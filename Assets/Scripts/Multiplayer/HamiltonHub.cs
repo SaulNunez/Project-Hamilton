@@ -29,8 +29,8 @@ public class HamiltonHub
     public delegate void PlayerSelectedCharacterDelegate(NewPlayerInfo newPlayerInfo);
     public event PlayerSelectedCharacterDelegate OnOtherPlayerSelectedCharacter;
 
-    public delegate void CurrentPlayerSelectedCharacter();
-    public event CurrentPlayerSelectedCharacter OnCurrentPlayerSelectedCharacter;
+    public delegate void CurrentPlayerSelectedCharacterDelegate();
+    public event CurrentPlayerSelectedCharacterDelegate OnCurrentPlayerSelectedCharacter;
 
     public delegate void GameHasStartedDelegate(GameStartPayload gameStartInfo);
     public event GameHasStartedDelegate OnGameHasStarted;

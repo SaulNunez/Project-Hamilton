@@ -26,6 +26,15 @@ public class LobbyMovementControls : MonoBehaviour
     }
 
     public List<Player> playersInLobby;
+
+    [System.Serializable]
+    public class ScreenCharacterInfo
+    {
+        public string Name;
+        public Sprite CharacterSprite;
+    }
+
+    public List<ScreenCharacterInfo> characterInfo;
     
     void Start()
     {
@@ -41,7 +50,10 @@ public class LobbyMovementControls : MonoBehaviour
 
         player.gameObject = Instantiate(playerBase, transform);
 
-        //TODO: Inicializar sprites del personaje
+        var newCharacterInfo = characterInfo.Find(ci => ci.Name == newPlayerInfo.CharacterSelected);
+
+        var spriteRendererInplayer = player.gameObject.GetComponent<SpriteRenderer>();
+        spriteRendererInplayer.sprite = newCharacterInfo.CharacterSprite;
     }
 
     private void OnStatsUpdate(NewStats newStats)
