@@ -27,6 +27,12 @@ public class Butler : MonoBehaviour
 
     private Floors currentFloor;
 
+    private void Start()
+    {
+        HamiltonHub.Instance.OnGameHasStarted += GetRoomPositions;
+    }
+    
+
     private void GetRoomPositions(Assets.Scripts.Multiplayer.ResultPayload.GameStartPayload gameStartInfo)
     {
         gameStartInfo.RoomPositions.MainFloor.ForEach(rInfo =>
