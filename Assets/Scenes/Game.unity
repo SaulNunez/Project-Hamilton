@@ -2438,7 +2438,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBase: {fileID: 8205453721926670665, guid: 572baf1c5bab8b747a853f778780f920,
     type: 3}
-  characterInfo: []
+  characterInfo:
+  - Name: gates
+    CharacterSprite: {fileID: 21300000, guid: ae67548c0184e724ab9284f2d044cd81, type: 3}
+  - Name: lawrence
+    CharacterSprite: {fileID: 21300000, guid: 4cd7a9cbd0bea154b9cded41da232945, type: 3}
+  - Name: werner
+    CharacterSprite: {fileID: 21300000, guid: 5860dda2b92a5534f80ef7ffb7fd2bda, type: 3}
+  - Name: lewis
+    CharacterSprite: {fileID: 21300000, guid: 34988cd713ffb924388bbd19598b162c, type: 3}
+  - Name: ordonez
+    CharacterSprite: {fileID: 21300000, guid: b0ac1526e3f452d4ba8edbe43d07f220, type: 3}
+  - Name: macarthur
+    CharacterSprite: {fileID: 21300000, guid: 8dcfc0daa7cff704e9bbebfec51aaf7c, type: 3}
+  - Name: wu
+    CharacterSprite: {fileID: 21300000, guid: 1801451ed3c713240b8c36e6d82737e2, type: 3}
+  - Name: brown
+    CharacterSprite: {fileID: 21300000, guid: 953ac2ec4cc836443892874f636b554a, type: 3}
 --- !u!1 &169141751
 GameObject:
   m_ObjectHideFlags: 0
