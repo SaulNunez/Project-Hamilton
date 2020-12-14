@@ -52,6 +52,8 @@ public class Butler : MonoBehaviour
                 rooms.Add(roomInfo);
 
                 roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(true);
             } else
             {
                 Debug.LogError($"Didn't found room with name: {rInfo.RoomId}");
@@ -75,6 +77,8 @@ public class Butler : MonoBehaviour
                 rooms.Add(roomInfo);
 
                 roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(false);
             }
             else
             {
@@ -99,6 +103,8 @@ public class Butler : MonoBehaviour
                 rooms.Add(roomInfo);
 
                 roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(false);
             }
             else
             {
