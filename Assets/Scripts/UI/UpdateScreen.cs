@@ -20,6 +20,16 @@ public class UpdateScreen : MonoBehaviour
         HamiltonHub.Instance.OnTurnHasStarted += TurnHasChangedPlayer;
     }
 
+    private void OnEnable()
+    {
+        var currentPlayer = HamiltonHub.Instance.playersInLobby.Find(x => x.characterPrototype == HamiltonHub.Instance.SelectedCharacter);
+
+        statBraveryText.text = currentPlayer.stats.Bravery.ToString();
+        statIntelligenceText.text = currentPlayer.stats.Intelligence.ToString();
+        statPhysicalText.text = currentPlayer.stats.Physical.ToString();
+        statSanityText.text = currentPlayer.stats.Sanity.ToString();
+    }
+
     private void TurnHasChangedPlayer(NewTurnInformation newPlayerInfo)
     {
         character.text = newPlayerInfo.DisplayName;

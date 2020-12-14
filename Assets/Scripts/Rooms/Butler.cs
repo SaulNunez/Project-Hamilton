@@ -27,57 +27,89 @@ public class Butler : MonoBehaviour
 
     private Floors currentFloor;
 
+    private void Start()
+    {
+        HamiltonHub.Instance.OnGameHasStarted += GetRoomPositions;
+    }
+    
+
     private void GetRoomPositions(Assets.Scripts.Multiplayer.ResultPayload.GameStartPayload gameStartInfo)
     {
         gameStartInfo.RoomPositions.MainFloor.ForEach(rInfo =>
         {
-            var roomGameObject = mainFloorRoomsParent.transform.Find(rInfo.Name);
-            var roomInfo = new RoomInfo
+            var roomGameObject = mainFloorRoomsParent.transform.Find(rInfo.RoomId);
+            if(roomGameObject != null)
             {
-                roomGameObject = roomGameObject.gameObject,
-                name = rInfo.Name,
-                x = rInfo.X,
-                y = rInfo.Y,
-                floor = Floors.MAIN_FLOOR
-            };
+                var roomInfo = new RoomInfo
+                {
+                    roomGameObject = roomGameObject.gameObject,
+                    name = rInfo.Name,
+                    x = rInfo.X,
+                    y = rInfo.Y,
+                    floor = Floors.MAIN_FLOOR
+                };
 
-            rooms.Add(roomInfo);
+                rooms.Add(roomInfo);
 
-            roomGameObject.position = roomInfo.PositionOnWorld();
+                roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(true);
+            } else
+            {
+                Debug.LogError($"Didn't found room with name: {rInfo.RoomId}");
+            }
         });
 
         gameStartInfo.RoomPositions.Basement.ForEach(rInfo =>
         {
-            var roomGameObject = basementRoomsParent.transform.Find(rInfo.Name);
-            var roomInfo = new RoomInfo
+            var roomGameObject = basementRoomsParent.transform.Find(rInfo.RoomId);
+            if (roomGameObject != null)
             {
-                roomGameObject = roomGameObject.gameObject,
-                name = rInfo.Name,
-                x = rInfo.X,
-                y = rInfo.Y,
-                floor = Floors.BASEMENT
-            };
+                var roomInfo = new RoomInfo
+                {
+                    roomGameObject = roomGameObject.gameObject,
+                    name = rInfo.Name,
+                    x = rInfo.X,
+                    y = rInfo.Y,
+                    floor = Floors.BASEMENT
+                };
 
-            rooms.Add(roomInfo);
+                rooms.Add(roomInfo);
 
-            roomGameObject.position = roomInfo.PositionOnWorld();
+                roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError($"Didn't found room with name: {rInfo.RoomId}");
+            }
         });
 
         gameStartInfo.RoomPositions.TopFloor.ForEach(rInfo =>
         {
-            var roomGameObject = topFloorRoomsParent.transform.Find(rInfo.Name);
-            var roomInfo = new RoomInfo
+            var roomGameObject = topFloorRoomsParent.transform.Find(rInfo.RoomId);
+            if (roomGameObject != null)
             {
-                roomGameObject = roomGameObject.gameObject,
-                name = rInfo.Name,
-                x = rInfo.X,
-                y = rInfo.Y,
-                floor = Floors.TOP_FLOOR
-            };
+                var roomInfo = new RoomInfo
+                {
+                    roomGameObject = roomGameObject.gameObject,
+                    name = rInfo.Name,
+                    x = rInfo.X,
+                    y = rInfo.Y,
+                    floor = Floors.TOP_FLOOR
+                };
 
-            rooms.Add(roomInfo);
+                rooms.Add(roomInfo);
 
-            roomGameObject.position = roomInfo.PositionOnWorld();
+                roomGameObject.position = roomInfo.PositionOnWorld();
+                // Habilitar cuando esten en la lista, en caso que no todos esten en la lista que nos manda el servidor
+                roomGameObject.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.LogError($"Didn't found room with name: {rInfo.RoomId}");
+            }
         });
     }
 
