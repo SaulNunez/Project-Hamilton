@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public Transform currentPosition;
-    private Vector3 target;
-    public float movementSpeed = 0.5f;
+    // https://answers.unity.com/questions/387800/click-holddrag-move-camera.html
 
-    void Update()
+    private Vector3 ResetCamera; // original camera position
+    private Vector3 Origin; // place where mouse is first pressed
+    private Vector3 Diference; // change in position of mouse relative to origin
+    void Start()
     {
-        //target.x = currentPosition.transform.position.x;
-        //target.y = currentPosition.transform.position.y;
-        //target.z = transform.position.z;
-
-        //transform.position = Vector3.Lerp(transform.position, target, movementSpeed * Time.deltaTime);
+        ResetCamera = Camera.main.transform.position;
+    }
+    void LateUpdate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Origin = MousePos();
+        }
+        if (Input.GetMouseButton(0))
+        {
+            Diference = MousePos() - transform.position;
+            transform.position = Origin - Diference;
+        }
+        if (Input.GetMouseButton(1)) // reset camera to original position
+        {
+            transform.position = ResetCamera;
+        }
+    }
+    // return the position of the mouse in world coordinates (helper method)
+    Vector3 MousePos()
+    {
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
