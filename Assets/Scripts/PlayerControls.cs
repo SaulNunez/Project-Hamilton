@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class PlayerControls : NetworkBehaviour
 {
-    public float speed = 2f;
+    public float speed = 4f;
+    public Rigidbody2D rigidbody2D;
 
-    void Update()
+    private Vector2 velocity = Vector2.zero;
+
+    private void Update()
     {
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime;
+        velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    }
+
+    void FixedUpdate()
+    {
+        if (hasAuthority)
+        {
+            rigidbody2D.MovePosition((Vector2)transform.position + (velocity * speed * Time.deltaTime));
+        }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9042978578640194738}
   - component: {fileID: 5015883353243695435}
-  - component: {fileID: 2697937141220016841}
+  - component: {fileID: 1793910705562314053}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -48,7 +48,7 @@ MonoBehaviour:
   serverOnly: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &2697937141220016841
+--- !u!114 &1793910705562314053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,11 +57,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 232118669558889199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79874ac94d5b1314788ecf0e86bd23fd, type: 3}
+  m_Script: {fileID: 11500000, guid: aaba017604e4d38429fd72994ddaa10a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  showRoomGUI: 1
-  readyToBegin: 0
-  index: 0
