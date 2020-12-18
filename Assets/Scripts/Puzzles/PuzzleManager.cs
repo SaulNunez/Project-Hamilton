@@ -45,6 +45,17 @@ public class PuzzleManager : NetworkBehaviour
     [Command]
     public void SendCodeToServer(string code, NetworkConnectionToClient sender = null)
     {
+        var puzzleCheckGameObject = GameObject.FindGameObjectWithTag("PuzzleCheck");
+
+        if (puzzleCheckGameObject != null)
+        {
+            var puzzleCheckSystem = puzzleCheckGameObject.GetComponent<PuzzleChecking>();
+
+            puzzleCheckSystem.CheckPuzzle();
+        } else
+        {
+            
+        }
         /*var result = await HamiltonHub.Instance.GetPuzzleResult(code, currentPuzzleId);
 
         SetOutputInEditor(result.Output);
