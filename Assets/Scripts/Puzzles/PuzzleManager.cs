@@ -1,11 +1,12 @@
 ﻿using Assets.Scripts.Multiplayer.ServerRequestsPayload;
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PuzzleManager : MonoBehaviour
+public class PuzzleManager : NetworkBehaviour
 {
     [DllImport("__Internal")]
     private static extern void ShowEditor(string initialStateXml,
@@ -41,15 +42,16 @@ public class PuzzleManager : MonoBehaviour
         );
     }
 
-    public async void SendCodeToServer(string code)
+    [Command]
+    public void SendCodeToServer(string code, NetworkConnectionToClient sender = null)
     {
-        var result = await HamiltonHub.Instance.GetPuzzleResult(code, currentPuzzleId);
+        /*var result = await HamiltonHub.Instance.GetPuzzleResult(code, currentPuzzleId);
 
         SetOutputInEditor(result.Output);
 
         if (result.Correct)
         {
             CloseCodeEditor();
-        }
+        } */
     }
 }
