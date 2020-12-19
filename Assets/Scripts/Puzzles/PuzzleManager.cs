@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Multiplayer.ServerRequestsPayload;
-using Mirror;
+﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -22,14 +21,12 @@ public class PuzzleManager : NetworkBehaviour
     [DllImport("__Internal")]
     private static extern void CloseCodeEditor();
 
-    private void Start() => HamiltonHub.Instance.OnNeedToSolvePuzzle += StartPuzzle;
-    private void OnDestroy() => HamiltonHub.Instance.OnNeedToSolvePuzzle -= StartPuzzle;
 
     private string currentPuzzleId = null;
 
     public UnityEvent onPuzzleCorrect;
 
-    public void StartPuzzle(ShowPuzzleRequestPayload showPuzzleRequestPayload)
+    /*public void StartPuzzle(ShowPuzzleRequestPayload showPuzzleRequestPayload)
     {
         currentPuzzleId = showPuzzleRequestPayload.PuzzleId;
 
@@ -40,7 +37,7 @@ public class PuzzleManager : NetworkBehaviour
             name,
             "SendCodeToServer"
         );
-    }
+    }*/
 
     [Command]
     public void SendCodeToServer(string code, NetworkConnectionToClient sender = null)

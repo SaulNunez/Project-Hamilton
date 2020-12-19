@@ -26,7 +26,7 @@ public class ItemUIHandling : MonoBehaviour
         }
     }
 
-    async void OnEnable()
+    /*async void OnEnable()
     {
         gameObject.SetActive(true);
 
@@ -47,5 +47,5 @@ public class ItemUIHandling : MonoBehaviour
             itemModel.Name = item.Name;
             itemModel.Description = item.Description;
         }
-    }
+    }*/
 }

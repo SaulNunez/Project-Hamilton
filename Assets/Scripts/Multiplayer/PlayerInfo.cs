@@ -10,6 +10,6 @@ namespace Assets.Scripts.Multiplayer
     {
         public string characterPrototype;
         public string nameOnScreen;
-        public Stats stats;
+        //public Stats stats;
     }
 }
