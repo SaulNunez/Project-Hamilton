@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 654267507}
   m_Layer: 0
   m_Name: NetworkManager
-  m_TagString: Untagged
+  m_TagString: NetworkManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   onlineScene: Assets/Scenes/Lobby.unity
   transport: {fileID: 654267506}
   networkAddress: localhost
-  maxConnections: 4
+  maxConnections: 8
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}

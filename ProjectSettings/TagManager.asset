@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - PuzzleCheck
+  - NetworkManager
   layers:
   - Default
   - TransparentFX
