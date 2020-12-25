@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 654267509}
   - component: {fileID: 654267506}
   - component: {fileID: 654267507}
+  - component: {fileID: 654267508}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: NetworkManager
@@ -385,6 +386,18 @@ MonoBehaviour:
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
+--- !u!114 &654267508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654267505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ece1bc0a377e6640a551242a37c39f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &654267509
 Transform:
   m_ObjectHideFlags: 0
