@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class UIGameStart : NetworkBehaviour
 {
-    public LobbyNetworkManager lobbyNetworkManager;
+    public NetworkManager lobbyNetworkManager;
 
     public void StartGame()
     {
-        if (isServer)
-        {
-            lobbyNetworkManager.ServerChangeScene(lobbyNetworkManager.gameStart);
-        }
+        //if (isServer)
+        //{
+        //    lobbyNetworkManager.ServerChangeScene(lobbyNetworkManager.gameStart);
+        //}
     }
 }

@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class UILobbyConnect : MonoBehaviour
 {
-    public NetworkManager lobbyNetworkManager;
+    public NetworkRoomManager lobbyNetworkManager;
 
     public void CreateLobby()
     {
-        lobbyNetworkManager.StartServer();
-
     }
 }

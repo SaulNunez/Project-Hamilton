@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9042978578640194738}
   - component: {fileID: 5015883353243695435}
-  - component: {fileID: 1793910705562314053}
+  - component: {fileID: 689386715880538707}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LobbyNetworkPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   serverOnly: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &1793910705562314053
+--- !u!114 &689386715880538707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,8 +57,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 232118669558889199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaba017604e4d38429fd72994ddaa10a, type: 3}
+  m_Script: {fileID: 11500000, guid: d52950ef91d3f764c9d0877eabfdf28b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  showRoomGUI: 1
+  readyToBegin: 0
+  index: 0
