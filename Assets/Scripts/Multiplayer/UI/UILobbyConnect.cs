@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class UILobbyConnect : MonoBehaviour
 {
-    public NetworkRoomManager lobbyNetworkManager;
+    [SerializeField]
+    private NetworkManager networkManager;
 
-    public void CreateLobby()
+    public void LookForGameOnServer()
     {
+        networkManager.StartClient();
     }
 }
