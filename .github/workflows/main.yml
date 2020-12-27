@@ -14,7 +14,7 @@ jobs:
           lfs: true
       - uses: actions/cache@v1.1.0
         with:
-          path: ${{ GITHUB_WORKSPACE }}/Library
+          path: /Library
           key: Library-MyProjectName-TargetPlatform
           restore-keys: |
             Library-MyProjectName-
@@ -22,7 +22,7 @@ jobs:
       - uses: webbertakken/unity-test-runner@v1.4
         id: tests
         with:
-          projectPath: ${{ GITHUB_WORKSPACE }}
+          projectPath: .
           unityVersion: 2019.4.8f1
       - uses: actions/upload-artifact@v1
         with:
