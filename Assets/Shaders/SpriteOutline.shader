@@ -7,6 +7,8 @@
     }
         SubShader
         {
+            //Usando: 
+            //https://www.febucci.com/2019/06/sprite-outline-shader/
             Tags
             {
                 "RenderType" = "Transparent"
