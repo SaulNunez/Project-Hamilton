@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31e4936388e681448c4042d71e540d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkManager: {fileID: 654267507}
+  networkManager: {fileID: 0}
 --- !u!1 &654267505
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,11 +596,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 654267509}
-  - component: {fileID: 654267506}
+  - component: {fileID: 654267510}
   - component: {fileID: 654267507}
   - component: {fileID: 654267508}
-  - component: {fileID: 654267510}
   - component: {fileID: 654267511}
+  - component: {fileID: 654267506}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: NetworkManager
@@ -617,24 +617,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 654267505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0110f245bfcfc7d459681f7bd9ebc590, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 7778
-  maxMessageSize: 16384
-  handshakeMaxSize: 3000
-  noDelay: 1
-  sendTimeout: 5000
-  receiveTimeout: 20000
-  serverMaxMessagesPerTick: 10000
-  clientMaxMessagesPerTick: 1000
-  batchSend: 1
-  waitBeforeSend: 0
-  clientUseWss: 0
-  sslEnabled: 0
-  sslCertJson: ./cert.json
-  sslProtocols: 3072
-  _logLevels: 0
+  Port: 7777
+  NoDelay: 1
+  Interval: 10
+  FastResend: 2
+  CongestionWindow: 0
+  SendWindowSize: 128
+  ReceiveWindowSize: 128
+  debugLog: 1
+  debugGUI: 1
 --- !u!114 &654267507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,36 +638,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 654267505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615e6c6589cf9e54cad646b5a11e0529, type: 3}
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  runInBackground: 1
-  autoStartServerBuild: 1
-  showDebugMessages: 0
-  serverTickRate: 30
-  offlineScene: Assets/Scenes/StartMenu.unity
-  onlineScene: Assets/Scenes/StartMenu.unity
-  transport: {fileID: 654267506}
-  networkAddress: localhost
-  maxConnections: 8
-  disconnectInactiveConnections: 0
-  disconnectInactiveTimeout: 60
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 8205453721926670665, guid: 572baf1c5bab8b747a853f778780f920,
-    type: 3}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 0
-  spawnPrefabs: []
-  showRoomGUI: 0
-  minPlayers: 1
-  roomPlayerPrefab: {fileID: 689386715880538707, guid: 7cd5d2983d983334e9287c6d2709ee91,
-    type: 3}
-  RoomScene: Assets/Scenes/Lobby.unity
-  GameplayScene: Assets/Scenes/Game.unity
-  _allPlayersReady: 0
-  roomSlots: []
-  clientIndex: 0
+  showGUI: 1
+  offsetX: 0
+  offsetY: 0
 --- !u!114 &654267508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,12 +679,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 654267505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ae11b866c41204a87bc1d8ef03dfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  showDebugMessages: 0
+  serverTickRate: 30
+  offlineScene: 
+  onlineScene: Assets/Scenes/Lobby.unity
+  transport: {fileID: 654267506}
+  networkAddress: localhost
+  maxConnections: 8
+  disconnectInactiveConnections: 0
+  disconnectInactiveTimeout: 60
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 8205453721926670665, guid: 572baf1c5bab8b747a853f778780f920,
+    type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 1
+  spawnPrefabs: []
+  showRoomGUI: 1
+  minPlayers: 1
+  roomPlayerPrefab: {fileID: 689386715880538707, guid: 7cd5d2983d983334e9287c6d2709ee91,
+    type: 3}
+  RoomScene: Assets/Scenes/Lobby.unity
+  GameplayScene: Assets/Scenes/Game.unity
+  _allPlayersReady: 0
+  roomSlots: []
+  clientIndex: 0
 --- !u!114 &654267511
 MonoBehaviour:
   m_ObjectHideFlags: 0

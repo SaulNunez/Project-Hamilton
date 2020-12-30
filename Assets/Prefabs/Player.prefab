@@ -1110,14 +1110,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 20
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &9044405477081943198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1156,6 +1156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677bcba7509b16d47bff4ea102275605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  chatBox: {fileID: 0}
+  messageBox: {fileID: 0}
 --- !u!1 &8226008768917524623
 GameObject:
   m_ObjectHideFlags: 0
