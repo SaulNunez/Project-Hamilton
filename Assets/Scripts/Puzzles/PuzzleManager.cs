@@ -1,11 +1,11 @@
-﻿using Assets.Scripts.Multiplayer.ServerRequestsPayload;
+﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PuzzleManager : MonoBehaviour
+public class PuzzleManager : NetworkBehaviour
 {
     [DllImport("__Internal")]
     private static extern void ShowEditor(string initialStateXml,
@@ -21,14 +21,12 @@ public class PuzzleManager : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void CloseCodeEditor();
 
-    private void Start() => HamiltonHub.Instance.OnNeedToSolvePuzzle += StartPuzzle;
-    private void OnDestroy() => HamiltonHub.Instance.OnNeedToSolvePuzzle -= StartPuzzle;
 
     private string currentPuzzleId = null;
 
     public UnityEvent onPuzzleCorrect;
 
-    public void StartPuzzle(ShowPuzzleRequestPayload showPuzzleRequestPayload)
+    /*public void StartPuzzle(ShowPuzzleRequestPayload showPuzzleRequestPayload)
     {
         currentPuzzleId = showPuzzleRequestPayload.PuzzleId;
 
@@ -39,17 +37,29 @@ public class PuzzleManager : MonoBehaviour
             name,
             "SendCodeToServer"
         );
-    }
+    }*/
 
-    public async void SendCodeToServer(string code)
+    [Command]
+    public void SendCodeToServer(string code, NetworkConnectionToClient sender = null)
     {
-        var result = await HamiltonHub.Instance.GetPuzzleResult(code, currentPuzzleId);
+        var puzzleCheckGameObject = GameObject.FindGameObjectWithTag("PuzzleCheck");
+
+        if (puzzleCheckGameObject != null)
+        {
+            var puzzleCheckSystem = puzzleCheckGameObject.GetComponent<PuzzleChecking>();
+
+            puzzleCheckSystem.CheckPuzzle();
+        } else
+        {
+            
+        }
+        /*var result = await HamiltonHub.Instance.GetPuzzleResult(code, currentPuzzleId);
 
         SetOutputInEditor(result.Output);
 
         if (result.Correct)
         {
             CloseCodeEditor();
-        }
+        } */
     }
 }

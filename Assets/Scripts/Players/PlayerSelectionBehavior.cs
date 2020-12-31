@@ -19,7 +19,7 @@ public class PlayerSelectionBehavior : MonoBehaviour
     public GameObject errorPanel;
     public ToggleGroup characterListToggleGroup;
 
-    List<CharacterData> charactersAvailable;
+    /*List<CharacterData> charactersAvailable;
 
     public void OnScreenNameEdit(string newVal)
     {
@@ -97,5 +97,5 @@ public class PlayerSelectionBehavior : MonoBehaviour
     public void CloseErrorBox()
     {
         errorPanel.SetActive(false);
-    }
+    }*/
 }

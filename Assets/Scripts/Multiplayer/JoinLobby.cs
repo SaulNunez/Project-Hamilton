@@ -10,8 +10,8 @@ public class JoinLobby : MonoBehaviour
     public async void TryToJoinLobby()
     {
         sendToServer.interactable = false;
-        var connectedToLobby = await HamiltonHub.Instance.ConnectToLobby(codeInput.text);
+        
         sendToServer.interactable = true;
-        gameObject.SetActive(!connectedToLobby);
+        
     }
 }

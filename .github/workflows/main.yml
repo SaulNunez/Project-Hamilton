@@ -1,0 +1,54 @@
+name: Testing
+on: 
+  pull_request: {}
+  push: { branches: [main] }
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+jobs:
+  test:
+    name: Running tests on project 🧪
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - uses: actions/cache@v1.1.0
+        with:
+          path: /Library
+          key: Library-MyProjectName-TargetPlatform
+          restore-keys: |
+            Library-MyProjectName-
+            Library-
+      - uses: webbertakken/unity-test-runner@v1.4
+        id: tests
+        with:
+          unityVersion: 2019.4.8f1
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Test results
+          path: ${{ steps.tests.outputs.artifactsPath }}
+  build:
+    name: Building game for Linux (Server) and WebGL
+    strategy:
+      matrix:
+        targetPlatform:
+          - StandaloneLinux64
+          - WebGL
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - uses: actions/cache@v1.1.0
+        with:
+          path: /Library
+          key: Library-MyProjectName-TargetPlatform
+          restore-keys: |
+            Library-MyProjectName-
+            Library-
+      - uses: webbertakken/unity-builder@<version>
+        with:
+          versioning: Semantic
+          targetPlatform: ${{ matrix.targetPlatform }}
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Build
+          path: build
