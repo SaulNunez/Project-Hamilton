@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PuzzleCheck
   - NetworkManager
+  - Activities
   layers:
   - Default
   - TransparentFX
