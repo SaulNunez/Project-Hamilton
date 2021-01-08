@@ -12,7 +12,7 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     [SyncVar]
     public bool isImpostor = false;
 
-    public readonly SyncList<Activity> activitiesToDo = new SyncList<Activity>();
+    //public readonly SyncList<Activity> activitiesToDo = new SyncList<Activity>();
 
     public override void OnStartServer()
     {
@@ -20,7 +20,7 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
         var activitiesList = activities.GetComponent<ActivityList>();
         if(activitiesList != null){
             //TODO: Leer de configuracion de lobby cantidad de tareas a spawnear
-            activitiesToDo.AddRange(activitiesList.activities.PickRandom(6));
+            //activitiesToDo.AddRange(activitiesList.activities.PickRandom(6));
         }
     }
 }

@@ -18,19 +18,22 @@ public class WorldInteraction : NetworkBehaviour
 
     void Update()
     {
-        bool somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
+        if(hasAuthority){
+            //Objeto es
+            bool somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
 
-        if(somethingNear != objectNear)
-        {
-            if (somethingNear)
+            if(somethingNear != objectNear)
             {
-                OnObjectStartDetected?.Invoke();
-            } else
-            {
-                OnObjectEndDetected?.Invoke();
+                if (somethingNear)
+                {
+                    OnObjectStartDetected?.Invoke();
+                } else
+                {
+                    OnObjectEndDetected?.Invoke();
+                }
             }
+            objectNear = somethingNear;
         }
-        objectNear = somethingNear;
     }
 
     public void InteractWithEnvironment()
@@ -45,11 +48,11 @@ public class WorldInteraction : NetworkBehaviour
     public void CmdInteractWithNearObject()
     {
         Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
-        var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
-
-        foreach(var interactuable in interactuables)
-        {
-            interactuable.OnApproach(gameObject);
+        if(somethingNear){
+            var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
+            foreach(var interactuable in interactuables){
+                interactuable.OnApproach(gameObject);
+            }
         }
     }
 }
