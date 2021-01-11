@@ -14,7 +14,7 @@ public class PlayersChat : NetworkBehaviour
 
     public static event Action<string, string> onNewMessage;
 
-    public override void OnStartAuthority()
+    public override void OnStartClient()
     {
         onNewMessage += PrintOnScreen;
     }

@@ -38643,12 +38643,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884805047}
-  - component: {fileID: 884805042}
   - component: {fileID: 884805046}
   - component: {fileID: 884805045}
   - component: {fileID: 884805044}
   - component: {fileID: 884805043}
-  - component: {fileID: 884805041}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -38656,37 +38654,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &884805041
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884805040}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3e6ebce1c3a98e4c9051aaf142ba338, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &884805042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884805040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7c6567e6c0ccb449b4e9b6520f6a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &884805043
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39124,7 +39091,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1413950265}
         m_MethodName: SendMessage
         m_Mode: 1
         m_Arguments:
@@ -39233,7 +39200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1413950264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39268,8 +39235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  chatBox: {fileID: 0}
-  messageBox: {fileID: 0}
+  chatBox: {fileID: 1017409414}
+  messageBox: {fileID: 2129865125}
 --- !u!114 &1413950266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40609,7 +40576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2143304562
 RectTransform:
   m_ObjectHideFlags: 0
