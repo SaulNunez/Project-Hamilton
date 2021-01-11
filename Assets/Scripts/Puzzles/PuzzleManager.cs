@@ -26,18 +26,27 @@ public class PuzzleManager : NetworkBehaviour
 
     public UnityEvent onPuzzleCorrect;
 
-    /*public void StartPuzzle(ShowPuzzleRequestPayload showPuzzleRequestPayload)
+    public static PuzzleManager Instance = null;
+
+    public override void OnStartClient()
     {
-        currentPuzzleId = showPuzzleRequestPayload.PuzzleId;
+        base.OnStartClient();
+
+        if(Instance == null) Instance = this;
+    }
+
+    public void StartPuzzle(ShowPuzzleRequest showPuzzleRequest)
+    {
+        currentPuzzleId = showPuzzleRequest.PuzzleId;
 
         ShowEditor(
-            showPuzzleRequestPayload.InitialWorkspaceConfiguration ?? null,
-            showPuzzleRequestPayload.Instructions,
-            showPuzzleRequestPayload.Documentation,
+            showPuzzleRequest.InitialWorkspaceConfiguration ?? null,
+            showPuzzleRequest.Instructions,
+            showPuzzleRequest.Documentation,
             name,
             "SendCodeToServer"
         );
-    }*/
+    }
 
     [Command]
     public void SendCodeToServer(string code, NetworkConnectionToClient sender = null)
@@ -61,5 +70,12 @@ public class PuzzleManager : NetworkBehaviour
         {
             CloseCodeEditor();
         } */
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+
+        Instance = null;
     }
 }

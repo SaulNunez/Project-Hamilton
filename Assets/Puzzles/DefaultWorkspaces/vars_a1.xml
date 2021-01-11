@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="P^Aust1VimM_z:VGvlt}">miTexto</variable>
+  </variables>
+  <block type="variables_set" id="cg*62+USe=S~wAh)=Cf}" x="38" y="38">
+    <field name="VAR" id="P^Aust1VimM_z:VGvlt}">miTexto</field>
+    <value name="VALUE">
+      <block type="text" id="eW7GKH7FcZ).Zya2q*7q">
+        <field name="TEXT">Hola mundo</field>
+      </block>
+    </value>
+  </block>
+</xml>

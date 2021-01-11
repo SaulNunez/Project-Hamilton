@@ -12,7 +12,7 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     [SyncVar]
     public bool isImpostor = false;
 
-    //public readonly SyncList<Activity> activitiesToDo = new SyncList<Activity>();
+    public SyncList<ActivityInfo> activitiesToDo = new SyncList<ActivityInfo>();
 
     public override void OnStartServer()
     {

@@ -36,6 +36,13 @@ public class WorldInteraction : NetworkBehaviour
         }
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        GameUI.onGeneralClick += InteractWithEnvironment;
+    }
+
     public void InteractWithEnvironment()
     {
         if (objectNear)
@@ -54,5 +61,12 @@ public class WorldInteraction : NetworkBehaviour
                 interactuable.OnApproach(gameObject);
             }
         }
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+
+        GameUI.onGeneralClick -= InteractWithEnvironment;
     }
 }

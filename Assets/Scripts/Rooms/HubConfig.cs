@@ -22,4 +22,7 @@ public class HubConfig : NetworkBehaviour
     
     [SyncVar]
     public int secondsOfCooldownForSabotage = 25;
+    
+    [SyncVar]
+    public float actDistance = 2f;
 }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="^20Kp:`(:YIgSr-:7!a`">entrada</variable>
+    <variable id="Af2I@KcI,|egn$`o*QBY">entradaAlCuadrado</variable>
+  </variables>
+  <block type="variables_set" id="E:eN!5LzLA$/ZzCP$=Ab" x="38" y="38">
+    <field name="VAR" id="^20Kp:`(:YIgSr-:7!a`">entrada</field>
+    <value name="VALUE">
+      <block type="math_number" id=").-l]a$PtpRMph9Vm#;{">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="^GkUh.ix{@^D)R+={uS-">
+        <field name="VAR" id="Af2I@KcI,|egn$`o*QBY">entradaAlCuadrado</field>
+        <next>
+          <block type="text_print" id="tQxv3c.%scENOt_Zqak/">
+            <value name="TEXT">
+              <shadow type="text" id="EZ_}hTw}KA(a,vbuaYbF">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="variables_get" id="QmJgTbMF`nx$7sRSIH$X">
+                <field name="VAR" id="Af2I@KcI,|egn$`o*QBY">entradaAlCuadrado</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
