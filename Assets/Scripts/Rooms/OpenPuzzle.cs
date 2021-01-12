@@ -19,11 +19,12 @@ public class OpenPuzzle : InteractuableBehavior
 
     [Server]
     public override void OnApproach(GameObject approachedBy)
-    {
-        if((approachedBy.transform.position - transform.position).sqrMagnitude <= (hubConfig.actDistance * hubConfig.actDistance)){
-            //Checar en el servidor que el jugador este cerca
-
+    {   
+        print("aaa");
+        //Checar en el servidor que el jugador este cerca
+        if(Vector2.Distance(approachedBy.transform.position,transform.position) <= hubConfig.actDistance){
             //var puzzlesOfPlayer = approachedBy.GetComponent<PuzzleInformation>()
+            print("aaaaaaa");
         }
     }
 
@@ -37,7 +38,7 @@ public class OpenPuzzle : InteractuableBehavior
 
     [Server]
     public void GetPuzzle(List<string> passed, List<string> notPassed){
-
+        
     }
 
     [ClientRpc]

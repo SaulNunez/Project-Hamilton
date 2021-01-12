@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class WorldInteraction : NetworkBehaviour
 {
     public delegate void ObjectStartDetected();
@@ -15,6 +16,8 @@ public class WorldInteraction : NetworkBehaviour
 
     [SerializeField]
     LayerMask taskMask;
+
+    HubConfig hubConfig;
 
     void Update()
     {
@@ -36,11 +39,30 @@ public class WorldInteraction : NetworkBehaviour
         }
     }
 
+    void EnableInteractOnUi(){
+        GameUI.Instance.InteractionEnabled = true;
+    }
+
+    void DisableInteractOnUi(){
+        GameUI.Instance.InteractionEnabled = false;
+    }
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+
+        var lobbyConfigs = GameObject.FindGameObjectWithTag(Tags.HubConfig);
+        hubConfig = lobbyConfigs.GetComponent<HubConfig>();
+    }
+
     public override void OnStartClient()
     {
         base.OnStartClient();
 
         GameUI.onGeneralClick += InteractWithEnvironment;
+
+        OnObjectStartDetected += EnableInteractOnUi;
+        OnObjectEndDetected += DisableInteractOnUi;
     }
 
     public void InteractWithEnvironment()
@@ -51,10 +73,10 @@ public class WorldInteraction : NetworkBehaviour
         }
     }
 
-    [Server]
+    [Command]
     public void CmdInteractWithNearObject()
     {
-        Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
+        Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, hubConfig.actDistance, taskMask);
         if(somethingNear){
             var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
             foreach(var interactuable in interactuables){
@@ -68,5 +90,8 @@ public class WorldInteraction : NetworkBehaviour
         base.OnStopClient();
 
         GameUI.onGeneralClick -= InteractWithEnvironment;
+
+        OnObjectStartDetected -= EnableInteractOnUi;
+        OnObjectEndDetected -= DisableInteractOnUi;
     }
 }
