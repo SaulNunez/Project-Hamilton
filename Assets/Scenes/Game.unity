@@ -34935,6 +34935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e5e9a997327f949afe204b37cca920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!4 &593956203
 Transform:
   m_ObjectHideFlags: 0
@@ -39383,6 +39385,7 @@ GameObject:
   - component: {fileID: 1485471330}
   - component: {fileID: 1485471331}
   - component: {fileID: 1485471329}
+  - component: {fileID: 1485471332}
   m_Layer: 0
   m_Name: PuzzleSystem
   m_TagString: Untagged
@@ -39437,6 +39440,19 @@ MonoBehaviour:
   serverOnly: 0
   m_AssetId: 
   hasSpawned: 0
+--- !u!114 &1485471332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485471328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1f96ceeccfa824da44df77c3af1da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
 --- !u!1 &1589488143
 GameObject:
   m_ObjectHideFlags: 0

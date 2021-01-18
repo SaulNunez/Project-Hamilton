@@ -13,12 +13,22 @@ public class Puzzle : ScriptableObject
             Functions
         }
 
+    public enum Class {
+        A = 1,
+        B = 2,
+        C = 3
+    }
+
     public string id;
     public Type type;
+
+    public Class puzzleClass;
+
     [TextArea]
     public string instructions;
     public TextAsset defaultWorkspace;
 
     public string expectedOutput;
-    
+
+    public List<FunctionCheck> functionChecks;
 }
