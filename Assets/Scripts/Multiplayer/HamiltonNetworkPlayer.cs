@@ -5,13 +5,6 @@ using UnityEngine;
 
 public class HamiltonNetworkPlayer : NetworkRoomPlayer
 {
-    [Header("Player stats")]
-    [SyncVar]
-    public bool alive = true;
-
-    [SyncVar]
-    public bool isImpostor = false;
-
     public SyncList<ActivityInfo> activitiesToDo = new SyncList<ActivityInfo>();
 
     public override void OnStartServer()
