@@ -7,10 +7,15 @@ public class Die : InteractuableBehavior
 {
     public bool isDead = false;
 
-    readonly LayerMask layerMask = LayerMask.NameToLayer(Layers.Players);
+    LayerMask layerMask;
 
     HubConfig hubConfig;
 
+
+    private void Awake()
+    {
+        layerMask = LayerMask.NameToLayer(Layers.Players);
+    }
 
     public override void OnStartServer()
     {
