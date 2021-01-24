@@ -29,11 +29,11 @@ jobs:
           path: ${{ steps.tests.outputs.artifactsPath }}
   build:
     name: Building game for Linux (Server) and WebGL
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        targetPlatform:
-          - StandaloneLinux64
-          - WebGL
+        targetPlatform: [StandaloneLinux64, WebGL]
+    steps:
       - uses: actions/checkout@v2
         with:
           lfs: true
