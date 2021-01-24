@@ -24,7 +24,7 @@ public class OpenPuzzle : InteractuableBehavior
         print("aaa");
         //Checar en el servidor que el jugador este cerca
         if(Vector2.Distance(approachedBy.transform.position,transform.position) <= hubConfig.actDistance){
-            PuzzleManager.Instance.RequestPuzzle(approachedBy);
+            
         }
     }
 }

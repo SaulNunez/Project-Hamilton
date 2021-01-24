@@ -3,34 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Die : InteractuableBehavior
+public class Die : NetworkBehaviour
 {
     public bool isDead = false;
 
-    LayerMask layerMask;
-
-    HubConfig hubConfig;
-
-
-    private void Awake()
-    {
-        layerMask = LayerMask.NameToLayer(Layers.Players);
-    }
+    [SerializeField]
+    GameObject deathPrefab;
+    Animator anim;
 
     public override void OnStartServer()
     {
         var lobbyConfigs = GameObject.FindGameObjectWithTag(Tags.HubConfig);
-        hubConfig = lobbyConfigs.GetComponent<HubConfig>();
+
+        anim = GetComponent<Animator>();
     }
 
     [Server]
-    public override void OnApproach(GameObject approachedBy)
+    public void SetDed()
     {
-        base.OnApproach(approachedBy);
+        anim.SetBool("Dead", true);
 
-        Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, hubConfig.actDistance, layerMask);
-        if (somethingNear)
-        {
-        }
+        //Mostrar tumbita
+        var deathRemainings = Instantiate(deathPrefab, transform.position, Quaternion.identity);
+        NetworkServer.Spawn(deathRemainings);
+
+        var ghostLayer = LayerMask.NameToLayer("Ghost");
+        gameObject.layer = ghostLayer;
     }
 }
