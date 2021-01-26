@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="kw2,P4tnTv/+LvMyG.2;">x</variable>
+    <variable id="4,7-CjR:iyjjN0NyA~Yh">y</variable>
+  </variables>
+  <block type="variables_set" id="O.E[N%`x~XAZWPyCq;wI" x="38" y="38">
+    <field name="VAR" id="kw2,P4tnTv/+LvMyG.2;">x</field>
+    <value name="VALUE">
+      <block type="math_number" id="DNxZ7+]~C6fbe_R8GY{(">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="rHl66X0Ls~ZnHl|g/{#E">
+        <field name="VAR" id="4,7-CjR:iyjjN0NyA~Yh">y</field>
+        <value name="VALUE">
+          <block type="math_number" id="pBV66Xzu-XDUOh;w@w#s">
+            <field name="NUM">3</field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

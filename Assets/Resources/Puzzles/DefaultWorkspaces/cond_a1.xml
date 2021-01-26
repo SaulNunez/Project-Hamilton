@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="iDg49af)?cM,Kc~=,N#D">entrada</variable>
+  </variables>
+  <block type="variables_set" id="-F]`U|79,{nLn^+R%vt*" x="13" y="13">
+    <field name="VAR" id="iDg49af)?cM,Kc~=,N#D">entrada</field>
+    <value name="VALUE">
+      <block type="logic_boolean" id="CiZY${PTI94dTek;?P@P">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="1a]jHPuSP06uCPb-5b@*">
+        <value name="IF0">
+          <block type="logic_compare" id="@;e-m4pn^h|=yz?jO1M7">
+            <field name="OP">EQ</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="n,@HLU;/XKPf;8MY`4^X">
+            <value name="TEXT">
+              <shadow type="text" id="~s$G%RiT32#ME,Rx%jFc">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text" id="9xHw%nB?jwWHY#;}~+3X">
+                <field name="TEXT">Todo bien</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

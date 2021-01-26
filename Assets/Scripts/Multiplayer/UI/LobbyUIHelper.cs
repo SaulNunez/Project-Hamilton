@@ -10,8 +10,10 @@ public class LobbyUIHelper : NetworkBehaviour
     GameObject readyUi;
     HamiltonNetworkRoomManager nrm;
 
-    void Start()
+    public override void OnStartClient()
     {
+        base.OnStartClient();
+
         readyUi.SetActive(hasAuthority);
 
         nrm = NetworkManager.singleton as HamiltonNetworkRoomManager;

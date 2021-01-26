@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class WorldInteraction : NetworkBehaviour
 {
     public delegate void ObjectStartDetected();
@@ -16,21 +17,52 @@ public class WorldInteraction : NetworkBehaviour
     [SerializeField]
     LayerMask taskMask;
 
+    HubConfig hubConfig;
+
     void Update()
     {
-        bool somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
+        if(hasAuthority){
+            //Objeto es
+            bool somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
 
-        if(somethingNear != objectNear)
-        {
-            if (somethingNear)
+            if(somethingNear != objectNear)
             {
-                OnObjectStartDetected?.Invoke();
-            } else
-            {
-                OnObjectEndDetected?.Invoke();
+                if (somethingNear)
+                {
+                    OnObjectStartDetected?.Invoke();
+                } else
+                {
+                    OnObjectEndDetected?.Invoke();
+                }
             }
+            objectNear = somethingNear;
         }
-        objectNear = somethingNear;
+    }
+
+    void EnableInteractOnUi(){
+        GameUI.Instance.InteractionEnabled = true;
+    }
+
+    void DisableInteractOnUi(){
+        GameUI.Instance.InteractionEnabled = false;
+    }
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+
+        var lobbyConfigs = GameObject.FindGameObjectWithTag(Tags.HubConfig);
+        hubConfig = lobbyConfigs.GetComponent<HubConfig>();
+    }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        GameUI.onGeneralClick += InteractWithEnvironment;
+
+        OnObjectStartDetected += EnableInteractOnUi;
+        OnObjectEndDetected += DisableInteractOnUi;
     }
 
     public void InteractWithEnvironment()
@@ -41,15 +73,25 @@ public class WorldInteraction : NetworkBehaviour
         }
     }
 
-    [Server]
+    [Command]
     public void CmdInteractWithNearObject()
     {
-        Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, 3f, taskMask);
-        var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
-
-        foreach(var interactuable in interactuables)
-        {
-            interactuable.OnApproach(gameObject);
+        Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, hubConfig.actDistance, taskMask);
+        if(somethingNear){
+            var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
+            foreach(var interactuable in interactuables){
+                interactuable.OnApproach(gameObject);
+            }
         }
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+
+        GameUI.onGeneralClick -= InteractWithEnvironment;
+
+        OnObjectStartDetected -= EnableInteractOnUi;
+        OnObjectEndDetected -= DisableInteractOnUi;
     }
 }

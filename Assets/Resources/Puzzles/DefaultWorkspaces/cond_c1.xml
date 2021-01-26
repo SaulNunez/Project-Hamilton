@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="~np5S^~.~ywmIz(+f-PB">x</variable>
+    <variable id="E;*e~gL}G~r8+[6K}?}f">y</variable>
+  </variables>
+  <block type="variables_set" id="^Gn*bK}7[}wB1i-)B=52" x="13" y="13">
+    <field name="VAR" id="~np5S^~.~ywmIz(+f-PB">x</field>
+    <value name="VALUE">
+      <block type="math_number" id="X*8RWDEabt#GfXMONi23">
+        <field name="NUM">5</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="UtAGpm{b73,yz$wD4AL5">
+        <field name="VAR" id="E;*e~gL}G~r8+[6K}?}f">y</field>
+        <value name="VALUE">
+          <block type="math_number" id="]`_$ig,e%fNnzFFBZiv{">
+            <field name="NUM">4</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="O6i}htu39UIIUlsjMT73">
+            <statement name="DO0">
+              <block type="text_print" id="ywxx[WNOz+4X0Fyzh#FW">
+                <value name="TEXT">
+                  <shadow type="text" id="+A{W_2?1l1T]j:=18!x4">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text" id="@z)A]FX,/@|6)@,9N,B2">
+                    <field name="TEXT">Es igual</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="@m]FB2bMmI%BT2ZMaVHj">calificacion</variable>
+  </variables>
+  <block type="variables_set" id=",#*zllEw}BWUT15~}qX~" x="38" y="38">
+    <field name="VAR" id="@m]FB2bMmI%BT2ZMaVHj">calificacion</field>
+    <value name="VALUE">
+      <block type="math_number" id="U::K13@K!~s^z@=mt$D6">
+        <field name="NUM">8.2</field>
+      </block>
+    </value>
+  </block>
+</xml>

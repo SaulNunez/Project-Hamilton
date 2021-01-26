@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="Z]%T5`5%I0=U6fZPI(G1">entrada</variable>
+  </variables>
+  <block type="variables_set" id="fkawi!2,p]1^Fa*VQEYA" x="38" y="38">
+    <field name="VAR" id="Z]%T5`5%I0=U6fZPI(G1">entrada</field>
+    <value name="VALUE">
+      <block type="math_number" id="Jui]hna^j+C*F{VM;910">
+        <field name="NUM">-1</field>
+      </block>
+    </value>
+  </block>
+</xml>

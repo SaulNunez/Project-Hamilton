@@ -14,7 +14,7 @@ public class PlayersChat : NetworkBehaviour
 
     public static event Action<string, string> onNewMessage;
 
-    public override void OnStartAuthority()
+    public override void OnStartClient()
     {
         onNewMessage += PrintOnScreen;
     }
@@ -25,7 +25,7 @@ public class PlayersChat : NetworkBehaviour
     }
 
     [Client]
-    public void SendMessage()
+    public void SendMessageOnEnter()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -33,6 +33,14 @@ public class PlayersChat : NetworkBehaviour
             //Clean textbox;
             messageBox.text = string.Empty;
         }
+    }
+
+    [Client]
+    public void SendMessage()
+    {
+        CmdTransmitMessage("a", messageBox.text);
+        //Clean textbox;
+        messageBox.text = string.Empty;
     }
 
     [Command]
