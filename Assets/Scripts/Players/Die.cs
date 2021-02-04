@@ -13,8 +13,6 @@ public class Die : NetworkBehaviour
 
     public override void OnStartServer()
     {
-        var lobbyConfigs = GameObject.FindGameObjectWithTag(Tags.HubConfig);
-
         anim = GetComponent<Animator>();
     }
 
@@ -27,6 +25,14 @@ public class Die : NetworkBehaviour
         var deathRemainings = Instantiate(deathPrefab, transform.position, Quaternion.identity);
         NetworkServer.Spawn(deathRemainings);
 
+        var ghostLayer = LayerMask.NameToLayer("Ghost");
+        gameObject.layer = ghostLayer;
+    }
+
+    [Server]
+    public void SetSimpleDeath()
+    {
+        anim.SetBool("Dead", true);
         var ghostLayer = LayerMask.NameToLayer("Ghost");
         gameObject.layer = ghostLayer;
     }

@@ -50,13 +50,10 @@ public class DetectDead : NetworkBehaviour
     {
         if (detected)
         {
+            var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
+            var votingManager = votingManagerGameObject.GetComponent<VotingManager>();
 
+            votingManager.StartVoting();
         }
-    }
-
-    [ClientRpc]
-    public void RpcStartVoting()
-    {
-
     }
 }

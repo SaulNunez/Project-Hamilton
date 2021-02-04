@@ -25,4 +25,7 @@ public class HubConfig : NetworkBehaviour
     
     [SyncVar]
     public float actDistance = 2f;
+
+    [SyncVar]
+    public int secondsForVoting = 30;
 }

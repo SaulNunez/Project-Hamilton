@@ -21,10 +21,8 @@ public class Killing : NetworkBehaviour
 
     private void OnKillStateChanged(bool oldValue, bool newValue)
     {
-        print("bbbbb");
         if (hasAuthority)
         {
-            print("aaaaa");
             GameUI.Instance.CanInteractWithKillButton = newValue;
         }
     }
