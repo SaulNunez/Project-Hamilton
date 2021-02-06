@@ -12,16 +12,6 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     Button killButton;
 
-    public enum InteractionType {
-        USE,
-        SABOTAGE,
-        ESCAPE
-    }
-
-    public InteractionType Type {
-        get; set;
-    }
-
     public bool InteractionEnabled {
         get => interactionButton.interactable;
 
@@ -34,7 +24,6 @@ public class GameUI : MonoBehaviour
         set => killButton.gameObject.SetActive(value);
     }
      
-
     public bool CanInteractWithKillButton {
         get => killButton.interactable;
 
