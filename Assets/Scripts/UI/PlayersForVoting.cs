@@ -18,7 +18,6 @@ public class PlayersForVoting : NetworkBehaviour
     void OnEnable()
     {
         var players = GameObject.FindGameObjectsWithTag(Tags.Player);
-        print($"Players: ${players.Length}");
 
         //Quitar jugadores existentes
         foreach (Transform child in playerButtonParent.transform)

@@ -17,7 +17,7 @@ public class VotingManager : NetworkBehaviour
     private double votingStartTime;
 
     [SyncVar(hook = nameof(TimeRemainingChanged))]
-    public int timeRemaining = 100;
+    private int timeRemaining = 100;
 
     public static event Action<int> CurrentTimeRemaining;
 
@@ -40,6 +40,7 @@ public class VotingManager : NetworkBehaviour
         base.OnStartServer();
 
         config = GameObject.FindGameObjectWithTag(Tags.HubConfig).GetComponent<HubConfig>();
+        timeRemaining = config.secondsForVoting;
     }
 
     [Server]
@@ -47,6 +48,7 @@ public class VotingManager : NetworkBehaviour
     {
         voting.Clear();
         votingStartTime = NetworkTime.time;
+        timeRemaining = config.secondsForVoting;
         canVote = true;
         StartCoroutine(nameof(WaitForVoting));
 
