@@ -12,6 +12,9 @@ public class OpenPuzzle : InteractuableBehavior
     [SerializeField]
     LayerMask playerLayer;
 
+    [SerializeField]
+    PuzzleId opens;
+
     public override void OnStartServer()
     {
         var lobbyConfigs = GameObject.FindGameObjectWithTag(Tags.HubConfig);
@@ -20,11 +23,14 @@ public class OpenPuzzle : InteractuableBehavior
 
     [Server]
     public override void OnApproach(GameObject approachedBy)
-    {   
-        print("aaa");
-        //Checar en el servidor que el jugador este cerca
-        if(Vector2.Distance(approachedBy.transform.position,transform.position) <= hubConfig.actDistance){
-            
-        }
+    {
+        //TODO: Crear id de puzzle en el servidor para mantener el estado
+        TargetOpenPuzzleOnPlayer(approachedBy.GetComponent<NetworkTransform>().connectionToClient);
+    }
+
+    [TargetRpc]
+    void TargetOpenPuzzleOnPlayer(NetworkConnection target)
+    {
+        ShowPuzzle.Instance.OpenPuzzles(opens);
     }
 }

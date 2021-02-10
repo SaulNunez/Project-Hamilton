@@ -49,6 +49,16 @@ public class VotingManager : NetworkBehaviour
         votingStartTime = NetworkTime.time;
         canVote = true;
         StartCoroutine(nameof(WaitForVoting));
+
+        RpcInvokeStartVotingEvent();
+    }
+
+    public static event Action OnVotingStarted;
+
+    [ClientRpc]
+    public void RpcInvokeStartVotingEvent()
+    {
+        OnVotingStarted?.Invoke();
     }
 
     [Command(ignoreAuthority = true)]

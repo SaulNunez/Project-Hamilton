@@ -1,15 +1,19 @@
 ﻿using Mirror;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 namespace Puzzles.Variables.Int
 {
     public class PuzzleStart : NetworkBehaviour
     {
         [SyncVar]
-        private int defaultTemp;
+        private int defTem;
+
+        [SyncVar]
+        private int sliderDefTem;
 
         [SerializeField]
         TextMeshProUGUI currentTemp;
@@ -17,29 +21,39 @@ namespace Puzzles.Variables.Int
         [SerializeField]
         TextMeshProUGUI sliderTemp;
 
+        [SerializeField]
+        Slider tempSlider;
+
         public override void OnStartServer()
         {
             base.OnStartServer();
 
-            defaultTemp = Random.Range(32, 99);
+            defTem = Random.Range(32, 99);
+
+            //Suma o resta una cantidad aleatoria a defTemp como valor inicial del slider 
+            sliderDefTem = (int)Mathf.Clamp(defTem + (Random.Range(5, 20) * Mathf.Sign(Random.Range(-1, 1))), 32f, 99f);
         }
 
         public override void OnStartClient()
         {
             base.OnStartClient();
 
-            currentTemp.text = $"{defaultTemp} C";
+            tempSlider.onValueChanged.AddListener(OnInputUpdate);
+
+            currentTemp.text = $"{defTem} C";
+            sliderTemp.text = $"{sliderDefTem} C";
         }
 
-        void Start()
+        private void OnEnable()
         {
-
+            currentTemp.text = $"{defTem} C";
+            tempSlider.value = sliderDefTem;
         }
 
-        // Update is called once per frame
-        void Update()
+        void OnInputUpdate(float value)
         {
-
+            sliderDefTem = (int)value;
+            sliderTemp.text = $"{sliderDefTem} C";
         }
     }
 }
