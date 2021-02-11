@@ -14,12 +14,12 @@ jobs:
           lfs: true
       - uses: actions/cache@v1.1.0
         with:
-          path: /Library
-          key: Library-MyProjectName-TargetPlatform
+          path: Library
+          key: Library
           restore-keys: |
             Library-MyProjectName-
             Library-
-      - uses: webbertakken/unity-test-runner@v1.4
+      - uses: webbertakken/unity-test-runner@v1.7
         id: tests
         with:
           unityVersion: 2019.4.8f1
@@ -39,12 +39,9 @@ jobs:
           lfs: true
       - uses: actions/cache@v1.1.0
         with:
-          path: /Library
-          key: Library-MyProjectName-TargetPlatform
-          restore-keys: |
-            Library-MyProjectName-
-            Library-
-      - uses: webbertakken/unity-builder@v2.0-alpha-6
+          path: Library
+          key: Library
+      - uses: webbertakken/unity-builder@v1.4
         with:
           unityVersion: 2019.4.8f1
           targetPlatform: ${{ matrix.targetPlatform }}
