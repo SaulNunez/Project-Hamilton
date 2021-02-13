@@ -12,10 +12,16 @@ public class CreateLocalPuzzleUI : NetworkBehaviour
     {
         base.OnStartClient();
 
+        CmdSpawnPuzzleIdOnServer();
+    }
+
+    [Command(ignoreAuthority = true)]
+    public void CmdSpawnPuzzleIdOnServer(NetworkConnectionToClient sender = null)
+    {
         var uiCanvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
 
         var ui = Instantiate(puzzleUiPrefab, uiCanvas.transform);
 
-        NetworkServer.Spawn(ui);
+        NetworkServer.Spawn(ui, sender);
     }
 }

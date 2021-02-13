@@ -39,7 +39,9 @@ public class ShowPuzzle : NetworkBehaviour
     {
         base.OnStartAuthority();
 
-        if (Instance != null)
+        print("Loading puzzle manager");
+
+        if (Instance == null)
         {
             Instance = this;
         }

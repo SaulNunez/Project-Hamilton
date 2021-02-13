@@ -8,7 +8,7 @@ public class Killing : NetworkBehaviour
 {
     [HideInInspector]
     [SyncVar(hook = nameof(OnKillStateChanged))]
-    public bool canKill;
+    public bool canKill = false;
 
     [SerializeField]
     private LayerMask playersLayerMask;
