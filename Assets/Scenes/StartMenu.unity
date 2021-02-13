@@ -632,7 +632,8 @@ MonoBehaviour:
   SendWindowSize: 128
   ReceiveWindowSize: 128
   debugLog: 1
-  debugGUI: 1
+  statisticsGUI: 0
+  statisticsLog: 0
 --- !u!114 &654267507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +692,8 @@ MonoBehaviour:
   autoStartServerBuild: 1
   showDebugMessages: 0
   serverTickRate: 30
+  serverBatching: 0
+  serverBatchInterval: 0
   offlineScene: 
   onlineScene: Assets/Scenes/Lobby.unity
   transport: {fileID: 654267506}
@@ -706,6 +709,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 9154673738827038458, guid: fb8d658676b169d4d9596427aacdf2b2, type: 3}
   - {fileID: 3048914688293434532, guid: 9381c5d5f5f67bf449901232f8447f0c, type: 3}
+  - {fileID: 480826847864722511, guid: 9b5f3aad41e48df44bf47443fc4435c0, type: 3}
   showRoomGUI: 1
   minPlayers: 1
   roomPlayerPrefab: {fileID: 689386715880538707, guid: 7cd5d2983d983334e9287c6d2709ee91,
@@ -910,7 +914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A night in the mansion
+  m_text: A night in the house of Hunt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 579bc9936a8cfac44b36e2df846cb8d5, type: 2}
   m_sharedMaterial: {fileID: -6434557386601724864, guid: 579bc9936a8cfac44b36e2df846cb8d5,
@@ -939,7 +943,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 38.25
+  m_fontSize: 35.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -980,12 +984,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1435374556}
-    characterCount: 22
+    characterCount: 28
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 5
+    spaceCount: 6
+    wordCount: 7
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

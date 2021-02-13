@@ -390,11 +390,6 @@ namespace Mirror
 
         IEnumerator IEnumerable.GetEnumerator() => new Enumerator(this);
 
-        public void Add(SyncList<string> failedPuzzles)
-        {
-            throw new NotImplementedException();
-        }
-
         // default Enumerator allocates. we need a custom struct Enumerator to
         // not allocate on the heap.
         // (System.Collections.Generic.List<T> source code does the same)

@@ -46,8 +46,11 @@ namespace Puzzles.Variables.Int
 
         private void OnEnable()
         {
-            currentTemp.text = $"{defTem} C";
-            tempSlider.value = sliderDefTem;
+            if (isClient)
+            {
+                currentTemp.text = $"{defTem} C";
+                tempSlider.value = sliderDefTem;
+            }
         }
 
         void OnInputUpdate(float value)

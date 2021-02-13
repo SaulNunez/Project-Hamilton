@@ -9,6 +9,7 @@ TagManager:
   - Activities
   - HubConfig
   - VotingManager
+  - UIManager
   layers:
   - Default
   - TransparentFX

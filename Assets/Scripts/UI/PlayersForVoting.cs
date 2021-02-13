@@ -17,28 +17,33 @@ public class PlayersForVoting : NetworkBehaviour
 
     void OnEnable()
     {
-        var players = GameObject.FindGameObjectsWithTag(Tags.Player);
-
-        //Quitar jugadores existentes
-        foreach (Transform child in playerButtonParent.transform)
+        if (isServer)
         {
-            Destroy(child.gameObject);
-        }
+            var players = GameObject.FindGameObjectsWithTag(Tags.Player);
 
-        foreach (var player in players)
-        {
-            var button = Instantiate(playerButtonPrefab, playerButtonParent.transform);
+            //Quitar jugadores existentes
+            foreach (Transform child in playerButtonParent.transform)
+            {
+                NetworkServer.UnSpawn(child.gameObject);
+            }
 
-            //Obtener sprites
-            var playerSprite = player.GetComponent<SpriteRenderer>().sprite;
+            foreach (var player in players)
+            {
+                var button = Instantiate(playerButtonPrefab, playerButtonParent.transform);
 
-            //Get name
-            var playerName = player.GetComponentInChildren<PlayerName>().playerName;
+                //Obtener sprites
+                var playerSprite = player.GetComponent<SpriteRenderer>().sprite;
 
-            var playerButton = button.GetComponent<PlayerVotingButton>();
+                //Get name
+                var playerName = player.GetComponentInChildren<PlayerName>().playerName;
 
-            playerButton.PlayerSprite = playerSprite;
-            playerButton.Name = playerName;
+                var playerButton = button.GetComponent<PlayerVotingButton>();
+
+                playerButton.PlayerSprite = playerSprite;
+                playerButton.Name = playerName;
+
+                NetworkServer.Spawn(button);
+            }
         }
     }
 }
