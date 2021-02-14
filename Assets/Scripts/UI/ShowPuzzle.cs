@@ -7,50 +7,123 @@ public class ShowPuzzle : NetworkBehaviour
 {
     [Header("Puzzles")]
     [SerializeField]
+    GameObject boilerIntPrefab;
+    [SerializeField]
+    GameObject sequencePrefab;
+    [SerializeField]
+    GameObject variablesStringPrefab;
+    [SerializeField]
+    GameObject variablesBoolPrefab;
+    [SerializeField]
+    GameObject doWhileCarStarterPrefab;
+    [SerializeField]
+    GameObject floatThermostatPrefab;
+    [SerializeField]
+    GameObject forWashingPrefab;
+    [SerializeField]
+    GameObject whileFillWaterBucketPrefab;
+    [SerializeField]
+    GameObject ifPickFlowerPrefab;
+    [SerializeField]
+    GameObject substringPrefab;
+    [SerializeField]
+    GameObject ifelseCakePrefab;
+    [SerializeField]
+    GameObject sabotagePresurePrefab;
+    [SerializeField]
+    GameObject sabotageElectricityPrefab;
+
+    [SyncVar]
     GameObject boilerInt;
-    [SerializeField]
+    [SyncVar]
     GameObject sequence;
-    [SerializeField]
+    [SyncVar]
     GameObject variablesString;
-    [SerializeField]
+    [SyncVar]
     GameObject variablesBool;
-    [SerializeField]
+    [SyncVar]
     GameObject doWhileCarStarter;
-    [SerializeField]
+    [SyncVar]
     GameObject floatThermostat;
-    [SerializeField]
+    [SyncVar]
     GameObject forWashing;
-    [SerializeField]
+    [SyncVar]
     GameObject whileFillWaterBucket;
-    [SerializeField]
+    [SyncVar]
     GameObject ifPickFlower;
-    [SerializeField]
+    [SyncVar]
     GameObject substring;
-    [SerializeField]
+    [SyncVar]
     GameObject ifelseCake;
-    [SerializeField]
+    [SyncVar]
     GameObject sabotagePresure;
-    [SerializeField]
+    [SyncVar]
     GameObject sabotageElectricity;
 
-    public static ShowPuzzle Instance = null;
-
-    public override void OnStartAuthority()
+    public override void OnStartClient()
     {
-        base.OnStartAuthority();
-
-        print("Loading puzzle manager");
-
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Debug.LogError("Algo salio mal, hay dos instancias actualmente");
-        }
+        base.OnStartClient();
 
         VotingManager.OnVotingStarted += StopCurrentPuzzle;
+    }
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+
+        var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
+
+        var boilerIntInstance = Instantiate(boilerIntPrefab, canvas.transform);
+        NetworkServer.Spawn(boilerIntInstance, gameObject);
+        boilerInt = boilerIntInstance;
+
+        var sequenceInstance = Instantiate(sequencePrefab, canvas.transform);
+        NetworkServer.Spawn(sequenceInstance, gameObject);
+        sequence = sequenceInstance;
+
+        var variablesStringInstance = Instantiate(variablesStringPrefab, canvas.transform);
+        NetworkServer.Spawn(variablesStringInstance, gameObject);
+        variablesString = variablesStringInstance;
+
+        var variablesBoolInstance = Instantiate(variablesBoolPrefab, canvas.transform);
+        NetworkServer.Spawn(variablesBoolInstance, gameObject);
+        variablesBool = variablesBoolInstance;
+
+        var doWhileCarStarterInstance = Instantiate(doWhileCarStarterPrefab, canvas.transform);
+        NetworkServer.Spawn(doWhileCarStarterInstance, gameObject);
+        doWhileCarStarter = doWhileCarStarterInstance;
+
+        var floatThermostatInstance = Instantiate(floatThermostatPrefab, canvas.transform);
+        NetworkServer.Spawn(floatThermostatInstance, gameObject);
+        floatThermostat = floatThermostatInstance;
+
+        var forWashingInstance = Instantiate(forWashingPrefab, canvas.transform);
+        NetworkServer.Spawn(forWashingInstance, gameObject);
+        forWashing = forWashingInstance;
+
+        var whileFillWaterBucketInstance = Instantiate(whileFillWaterBucketPrefab, canvas.transform);
+        NetworkServer.Spawn(whileFillWaterBucketInstance, gameObject);
+        whileFillWaterBucket = whileFillWaterBucketInstance;
+
+        var ifPickFlowerInstance = Instantiate(ifPickFlowerPrefab, canvas.transform);
+        NetworkServer.Spawn(ifPickFlowerInstance, gameObject);
+        ifPickFlower = ifPickFlowerInstance;
+
+        var substringInstance = Instantiate(substringPrefab, canvas.transform);
+        NetworkServer.Spawn(substringInstance, gameObject);
+        substring = substringInstance;
+
+        var ifelseCakeInstance = Instantiate(ifelseCakePrefab, canvas.transform);
+        NetworkServer.Spawn(ifelseCakeInstance, gameObject);
+        ifelseCake = ifelseCakeInstance;
+
+        var sabotagePresureInstance = Instantiate(sabotagePresurePrefab, canvas.transform);
+        NetworkServer.Spawn(sabotagePresureInstance, gameObject);
+        sabotagePresure = sabotagePresureInstance;
+
+        var sabotageElectricityInstance = Instantiate(sabotageElectricityPrefab, canvas.transform);
+        NetworkServer.Spawn(sabotageElectricityInstance, gameObject);
+        sabotageElectricity = sabotageElectricityInstance;
     }
 
     private void StopCurrentPuzzle()
@@ -70,11 +143,9 @@ public class ShowPuzzle : NetworkBehaviour
         sabotageElectricity.SetActive(false);
     }
 
-    public override void OnStopAuthority()
+    public override void OnStopClient()
     {
-        base.OnStopAuthority();
-
-        Instance = null;
+        base.OnStopClient();
 
         VotingManager.OnVotingStarted -= StopCurrentPuzzle;
     }

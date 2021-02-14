@@ -10,10 +10,10 @@ namespace Puzzles.Variables.Int
     public class PuzzleStart : NetworkBehaviour
     {
         [SyncVar]
-        private int defTem;
+        public int defTem;
 
         [SyncVar]
-        private int sliderDefTem;
+        public int sliderDefTem;
 
         [SerializeField]
         TextMeshProUGUI currentTemp;
@@ -28,6 +28,8 @@ namespace Puzzles.Variables.Int
         {
             base.OnStartServer();
 
+            print("Update on server");
+
             defTem = Random.Range(32, 99);
 
             //Suma o resta una cantidad aleatoria a defTemp como valor inicial del slider 
@@ -38,10 +40,9 @@ namespace Puzzles.Variables.Int
         {
             base.OnStartClient();
 
-            tempSlider.onValueChanged.AddListener(OnInputUpdate);
-
             currentTemp.text = $"{defTem} C";
             sliderTemp.text = $"{sliderDefTem} C";
+            tempSlider.value = sliderDefTem;
         }
 
         private void OnEnable()
@@ -53,7 +54,7 @@ namespace Puzzles.Variables.Int
             }
         }
 
-        void OnInputUpdate(float value)
+        public void OnInputUpdate(float value)
         {
             sliderDefTem = (int)value;
             sliderTemp.text = $"{sliderDefTem} C";

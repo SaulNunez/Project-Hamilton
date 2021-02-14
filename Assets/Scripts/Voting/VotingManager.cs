@@ -8,7 +8,7 @@ using UnityEngine;
 public class VotingManager : NetworkBehaviour
 {
     [SyncVar(hook = nameof(OnVoteChanged))]
-    private bool canVote = false;
+    public bool canVote = false;
 
     [SerializeField]
     private GameObject votingScreen;
@@ -17,7 +17,7 @@ public class VotingManager : NetworkBehaviour
     private double votingStartTime;
 
     [SyncVar(hook = nameof(TimeRemainingChanged))]
-    private int timeRemaining = 100;
+    public int timeRemaining = 100;
 
     public static event Action<int> CurrentTimeRemaining;
 

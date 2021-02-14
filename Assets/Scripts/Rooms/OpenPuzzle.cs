@@ -24,13 +24,10 @@ public class OpenPuzzle : InteractuableBehavior
     [Server]
     public override void OnApproach(GameObject approachedBy)
     {
+        print("Show puzzle");
         //TODO: Crear id de puzzle en el servidor para mantener el estado
-        TargetOpenPuzzleOnPlayer(approachedBy.GetComponent<NetworkTransform>().connectionToClient);
-    }
-
-    [TargetRpc]
-    void TargetOpenPuzzleOnPlayer(NetworkConnection target)
-    {
-        ShowPuzzle.Instance.OpenPuzzles(opens);
+        //TargetOpenPuzzleOnPlayer(approachedBy.GetComponent<NetworkTransform>().connectionToClient);
+        var puzzleManager = approachedBy.GetComponent<ShowPuzzle>();
+        puzzleManager.OpenPuzzles(opens);
     }
 }
