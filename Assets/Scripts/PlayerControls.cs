@@ -7,28 +7,16 @@ public class PlayerControls : NetworkBehaviour
 {
     public float speed = 4f;
     public float timeToMax = 0.4f;
-    public Rigidbody2D rigidbody2D;
-
-    private Vector2 newPositionVec = Vector2.zero;
-
-    private float xInputVelocity;
-    private float yInputVelocity;
-
-    private void Update()
-    {
-        float xComponent = Mathf.SmoothDamp(transform.position.x, 
-            transform.position.x + (Input.GetAxis("Horizontal") * speed), ref xInputVelocity, timeToMax);
-        float yComponent = Mathf.SmoothDamp(transform.position.y, 
-            transform.position.y + (Input.GetAxis("Vertical") * speed), ref yInputVelocity, timeToMax);
-
-        newPositionVec = new Vector2(xComponent, yComponent);
-    }
+    public new Rigidbody2D rigidbody2D;
 
     void FixedUpdate()
     {
         if (hasAuthority)
         {
-            rigidbody2D.MovePosition(newPositionVec);
+            var x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            var y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+
+            rigidbody2D.MovePosition(new Vector2(x + transform.position.x, y + transform.position.y));
         }
     }
 }
