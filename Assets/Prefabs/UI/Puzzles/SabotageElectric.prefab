@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179765454714695302}
   - component: {fileID: -5368926225053612455}
-  - component: {fileID: -6987816583084615092}
+  - component: {fileID: 6337678169523331157}
   m_Layer: 0
   m_Name: SabotageElectric
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MonoBehaviour:
   serverOnly: 0
   m_AssetId: 
   hasSpawned: 0
---- !u!114 &-6987816583084615092
+--- !u!114 &6337678169523331157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,8 +62,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6288897808561546861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fd0c51bbe07c140bc30978b91e9182, type: 3}
+  m_Script: {fileID: 11500000, guid: 23201c9f8c7f3234da1f670f962682fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1

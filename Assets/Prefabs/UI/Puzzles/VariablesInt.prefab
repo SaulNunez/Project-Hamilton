@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 1230917435120130363}
   - component: {fileID: 2068060250673617520}
   - component: {fileID: 7133054953182470677}
-  - component: {fileID: -2284288160712356665}
+  - component: {fileID: -4438346709857302567}
   m_Layer: 8
   m_Name: VariablesInt
   m_TagString: Untagged
@@ -803,7 +803,7 @@ MonoBehaviour:
   currentTemp: {fileID: 1692896084062577189}
   sliderTemp: {fileID: 8529027347077529744}
   tempSlider: {fileID: 7601438294744029797}
---- !u!114 &-2284288160712356665
+--- !u!114 &-4438346709857302567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -812,11 +812,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4990831156063259213}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fd0c51bbe07c140bc30978b91e9182, type: 3}
+  m_Script: {fileID: 11500000, guid: 23201c9f8c7f3234da1f670f962682fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!1 &6848435821565425180
 GameObject:
   m_ObjectHideFlags: 0

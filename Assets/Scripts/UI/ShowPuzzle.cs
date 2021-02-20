@@ -74,55 +74,55 @@ public class ShowPuzzle : NetworkBehaviour
         var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
 
         var boilerIntInstance = Instantiate(boilerIntPrefab, canvas.transform);
-        NetworkServer.Spawn(boilerIntInstance, gameObject);
+        NetworkServer.Spawn(boilerIntInstance, netIdentity.connectionToServer);
         boilerInt = boilerIntInstance;
 
         var sequenceInstance = Instantiate(sequencePrefab, canvas.transform);
-        NetworkServer.Spawn(sequenceInstance, gameObject);
+        NetworkServer.Spawn(sequenceInstance, netIdentity.connectionToServer);
         sequence = sequenceInstance;
 
         var variablesStringInstance = Instantiate(variablesStringPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesStringInstance, gameObject);
+        NetworkServer.Spawn(variablesStringInstance, netIdentity.connectionToServer);
         variablesString = variablesStringInstance;
 
         var variablesBoolInstance = Instantiate(variablesBoolPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesBoolInstance, gameObject);
+        NetworkServer.Spawn(variablesBoolInstance, netIdentity.connectionToServer);
         variablesBool = variablesBoolInstance;
 
         var doWhileCarStarterInstance = Instantiate(doWhileCarStarterPrefab, canvas.transform);
-        NetworkServer.Spawn(doWhileCarStarterInstance, gameObject);
+        NetworkServer.Spawn(doWhileCarStarterInstance, netIdentity.connectionToServer);
         doWhileCarStarter = doWhileCarStarterInstance;
 
         var floatThermostatInstance = Instantiate(floatThermostatPrefab, canvas.transform);
-        NetworkServer.Spawn(floatThermostatInstance, gameObject);
+        NetworkServer.Spawn(floatThermostatInstance, netIdentity.connectionToServer);
         floatThermostat = floatThermostatInstance;
 
         var forWashingInstance = Instantiate(forWashingPrefab, canvas.transform);
-        NetworkServer.Spawn(forWashingInstance, gameObject);
+        NetworkServer.Spawn(forWashingInstance, netIdentity.connectionToServer);
         forWashing = forWashingInstance;
 
         var whileFillWaterBucketInstance = Instantiate(whileFillWaterBucketPrefab, canvas.transform);
-        NetworkServer.Spawn(whileFillWaterBucketInstance, gameObject);
+        NetworkServer.Spawn(whileFillWaterBucketInstance, netIdentity.connectionToServer);
         whileFillWaterBucket = whileFillWaterBucketInstance;
 
         var ifPickFlowerInstance = Instantiate(ifPickFlowerPrefab, canvas.transform);
-        NetworkServer.Spawn(ifPickFlowerInstance, gameObject);
+        NetworkServer.Spawn(ifPickFlowerInstance, netIdentity.connectionToServer);
         ifPickFlower = ifPickFlowerInstance;
 
         var substringInstance = Instantiate(substringPrefab, canvas.transform);
-        NetworkServer.Spawn(substringInstance, gameObject);
+        NetworkServer.Spawn(substringInstance, netIdentity.connectionToServer);
         substring = substringInstance;
 
         var ifelseCakeInstance = Instantiate(ifelseCakePrefab, canvas.transform);
-        NetworkServer.Spawn(ifelseCakeInstance, gameObject);
+        NetworkServer.Spawn(ifelseCakeInstance, netIdentity.connectionToServer);
         ifelseCake = ifelseCakeInstance;
 
         var sabotagePresureInstance = Instantiate(sabotagePresurePrefab, canvas.transform);
-        NetworkServer.Spawn(sabotagePresureInstance, gameObject);
+        NetworkServer.Spawn(sabotagePresureInstance, netIdentity.connectionToServer);
         sabotagePresure = sabotagePresureInstance;
 
         var sabotageElectricityInstance = Instantiate(sabotageElectricityPrefab, canvas.transform);
-        NetworkServer.Spawn(sabotageElectricityInstance, gameObject);
+        NetworkServer.Spawn(sabotageElectricityInstance, netIdentity.connectionToServer);
         sabotageElectricity = sabotageElectricityInstance;
     }
 
@@ -150,50 +150,74 @@ public class ShowPuzzle : NetworkBehaviour
         VotingManager.OnVotingStarted -= StopCurrentPuzzle;
     }
 
-    [Client]
     public void OpenPuzzles(PuzzleId puzzle)
     {
-        switch (puzzle)
+
+        if (isServer)
         {
-            case PuzzleId.BoilersVariableInteger:
-                boilerInt.SetActive(true);
-                break;
-            case PuzzleId.Sequence1:
-                sequence.SetActive(true);
-                break;
-            case PuzzleId.VariableString:
-                variablesString.SetActive(true);
-                break;
-            case PuzzleId.VariableBoolean:
-                variablesBool.SetActive(true);
-                break;
-            case PuzzleId.DoWhileMotorStarter:
-                doWhileCarStarter.SetActive(true);
-                break;
-            case PuzzleId.VariableFloat:
-                floatThermostat.SetActive(true);
-                break;
-            case PuzzleId.ForWashingBucket:
-                forWashing.SetActive(true);
-                break;
-            case PuzzleId.WhileFillingBucket:
-                whileFillWaterBucket.SetActive(true);
-                break;
-            case PuzzleId.IfFlowerPicking:
-                ifPickFlower.SetActive(true);
-                break;
-            case PuzzleId.Substring:
-                substring.SetActive(true);
-                break;
-            case PuzzleId.IfElse:
-                ifelseCake.SetActive(true);
-                break;
-            case PuzzleId.SabotageBoilerPressure:
-                sabotagePresure.SetActive(true);
-                break;
-            case PuzzleId.SabotageElectricity:
-                sabotageElectricity.SetActive(true);
-                break;
+            RpcOpenPuzzleOnClient(puzzle);
+        }
+
+        if(isClient)
+        {
+            ActivatePuzzleOnClient(puzzle);
+        }
+        
+    }
+
+    [ClientRpc]
+    private void RpcOpenPuzzleOnClient(PuzzleId puzzle)
+    {
+        ActivatePuzzleOnClient(puzzle);
+    }
+
+    [Client]
+    private void ActivatePuzzleOnClient(PuzzleId puzzle)
+    {
+        if (hasAuthority)
+        {
+            switch (puzzle)
+            {
+                case PuzzleId.BoilersVariableInteger:
+                    boilerInt.SetActive(true);
+                    break;
+                case PuzzleId.Sequence1:
+                    sequence.SetActive(true);
+                    break;
+                case PuzzleId.VariableString:
+                    variablesString.SetActive(true);
+                    break;
+                case PuzzleId.VariableBoolean:
+                    variablesBool.SetActive(true);
+                    break;
+                case PuzzleId.DoWhileMotorStarter:
+                    doWhileCarStarter.SetActive(true);
+                    break;
+                case PuzzleId.VariableFloat:
+                    floatThermostat.SetActive(true);
+                    break;
+                case PuzzleId.ForWashingBucket:
+                    forWashing.SetActive(true);
+                    break;
+                case PuzzleId.WhileFillingBucket:
+                    whileFillWaterBucket.SetActive(true);
+                    break;
+                case PuzzleId.IfFlowerPicking:
+                    ifPickFlower.SetActive(true);
+                    break;
+                case PuzzleId.Substring:
+                    substring.SetActive(true);
+                    break;
+                case PuzzleId.IfElse:
+                    ifelseCake.SetActive(true);
+                    break;
+                case PuzzleId.SabotageBoilerPressure:
+                    sabotagePresure.SetActive(true);
+                    break;
+                case PuzzleId.SabotageElectricity:
+                    sabotageElectricity.SetActive(true);
+                    break;
+            }
         }
     }
 }

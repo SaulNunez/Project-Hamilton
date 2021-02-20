@@ -10,6 +10,7 @@ TagManager:
   - HubConfig
   - VotingManager
   - UIManager
+  - Canvas
   layers:
   - Default
   - TransparentFX
