@@ -9,4 +9,5 @@ public static class Tags
     public const string Player = "Player";
     public const string VotingManager = "VotingManager";
     public const string UiManager = "UIManager";
+    public const string Nanabot = "Nanabot";
 }

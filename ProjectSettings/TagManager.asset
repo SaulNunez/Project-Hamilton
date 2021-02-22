@@ -10,7 +10,7 @@ TagManager:
   - HubConfig
   - VotingManager
   - UIManager
-  - Canvas
+  - Nanabot
   layers:
   - Default
   - TransparentFX

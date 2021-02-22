@@ -11,6 +11,6 @@ public class Teletransport : InteractuableBehavior
     {
         base.OnApproach(approachedBy);
 
-        approachedBy.transform.position = teletransportTo.position;
+        approachedBy.transform.position = (Vector2)teletransportTo.position;
     }
 }

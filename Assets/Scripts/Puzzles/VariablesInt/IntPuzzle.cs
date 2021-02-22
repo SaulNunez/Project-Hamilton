@@ -28,8 +28,6 @@ namespace Puzzles.Variables.Int
         {
             base.OnStartServer();
 
-            print("Update on server");
-
             defTem = Random.Range(32, 99);
 
             //Suma o resta una cantidad aleatoria a defTemp como valor inicial del slider 

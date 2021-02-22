@@ -8,10 +8,25 @@ public class HelloNanabot : NetworkBehaviour
 {
     public TMP_InputField textbox;
 
-    public void UpdateNanabot()
+    public void EndPuzzle()
     {
-        var nanaBot = GameObject.Find("Nanabot");
-        var controls = nanaBot.GetComponent<NanaBot>();
-        controls.Talk($"Hola {textbox.text}");
+        CheckMessage(textbox.text);
+    }
+
+    [Command]
+    void CheckMessage(string message)
+    {
+        // Si quisieramos hacer mayor verificacion.
+        // Ej. revisar que no tenga algun mensaje obsceno, aqui sucederia 
+        var helloMessage = $"Hola {message}";
+        SayOnClient(netIdentity.connectionToClient, helloMessage);
+    }
+
+    [TargetRpc]
+    void SayOnClient(NetworkConnection target, string message)
+    {
+        var nanabot = GameObject.FindGameObjectWithTag(Tags.Nanabot);
+        var nanabotSays = nanabot.GetComponent<NanabotSays>();
+        nanabotSays.SayMessage(message);
     }
 }
