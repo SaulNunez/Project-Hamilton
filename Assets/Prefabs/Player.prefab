@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1029578670153045496}
   - component: {fileID: 4544063956130321910}
   - component: {fileID: 1210587208360967914}
+  - component: {fileID: 3320764101421821677}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -401,7 +402,7 @@ Animator:
   m_GameObject: {fileID: 8205453721926670665}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c255005803752c64495541591b812e48, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -514,4 +515,20 @@ MonoBehaviour:
   sabotagePresurePrefab: {fileID: 5394860816317871795, guid: 46b4018600aeb3a41b079468acccb945,
     type: 3}
   sabotageElectricityPrefab: {fileID: 6288897808561546861, guid: 519e7fe627d6a404fab0ece3f02aa1f2,
+    type: 3}
+--- !u!114 &3320764101421821677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205453721926670665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dca946a1a3f184f8e090643a4ba2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  votingScreenPrefab: {fileID: 4920821009805460555, guid: 5cea5a704f3757e459c3d9444b60b071,
     type: 3}

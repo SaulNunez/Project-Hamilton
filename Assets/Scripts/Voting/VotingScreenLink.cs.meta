@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c6dca946a1a3f184f8e090643a4ba2e3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - votingScreenPrefab: {fileID: 4920821009805460555, guid: 5cea5a704f3757e459c3d9444b60b071,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

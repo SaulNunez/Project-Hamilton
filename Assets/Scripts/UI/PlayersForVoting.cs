@@ -17,14 +17,17 @@ public class PlayersForVoting : NetworkBehaviour
 
     void OnEnable()
     {
-        if (isServer)
+        if (isClient)
         {
             var players = GameObject.FindGameObjectsWithTag(Tags.Player);
 
             //Quitar jugadores existentes
             foreach (Transform child in playerButtonParent.transform)
             {
-                NetworkServer.UnSpawn(child.gameObject);
+                if(child != this.transform)
+                {
+                    Destroy(child.gameObject);
+                }
             }
 
             foreach (var player in players)
@@ -41,9 +44,22 @@ public class PlayersForVoting : NetworkBehaviour
 
                 playerButton.PlayerSprite = playerSprite;
                 playerButton.Name = playerName;
-
-                NetworkServer.Spawn(button);
+                playerButton.onSelect.AddListener(() => VoteForPlayer(player));
             }
         }
+    }
+
+    [Client]
+    void VoteForPlayer(GameObject player)
+    {
+        foreach(var button in playerButtonParent.GetComponentsInChildren<Button>())
+        {
+            button.interactable = false;
+        }
+
+        var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
+        var votingManager = votingManagerGameObject.GetComponent<VotingManager>();
+
+        votingManager.CmdCastVote(player);
     }
 }

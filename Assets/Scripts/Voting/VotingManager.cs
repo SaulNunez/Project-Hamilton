@@ -7,30 +7,28 @@ using UnityEngine;
 
 public class VotingManager : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(OnVoteChanged))]
     public bool canVote = false;
-
-    [SerializeField]
-    private GameObject votingScreen;
 
     private Dictionary<NetworkConnection, GameObject> voting = new Dictionary<NetworkConnection, GameObject>();
     private double votingStartTime;
 
-    [SyncVar(hook = nameof(TimeRemainingChanged))]
+    [SyncVar]
     public int timeRemaining = 100;
 
+    /// <summary>
+    /// Event called everytime a second goes down on voting time.
+    /// </summary>
+    /// <remarks>
+    /// <strong>Only called on server</strong>
+    /// </remarks>
     public static event Action<int> CurrentTimeRemaining;
 
-    void OnVoteChanged(bool oldValue, bool newValue)
-    {
-        votingScreen.SetActive(newValue);
-    }
-
-    void TimeRemainingChanged(int oldValue, int newValue)
-    {
-        CurrentTimeRemaining?.Invoke(newValue);
-    }
-
+    /// <summary>
+    /// Event called when time ends for voting.
+    /// </summary>
+    /// <remarks>
+    /// <strong>Only called on server</strong>
+    /// </remarks>
     public static event Action OnVotingEnded;
 
     HubConfig config;
@@ -50,19 +48,28 @@ public class VotingManager : NetworkBehaviour
         votingStartTime = NetworkTime.time;
         timeRemaining = config.secondsForVoting;
         canVote = true;
-        StartCoroutine(nameof(WaitForVoting));
 
-        RpcInvokeStartVotingEvent();
+        OnVotingStarted?.Invoke();
+
+        StartCoroutine(nameof(WaitForVoting));
     }
 
+    /// <summary>
+    /// Event called when starting voting.
+    /// </summary>
+    /// <remarks>
+    /// <strong>Only called on server</strong>
+    /// </remarks>
     public static event Action OnVotingStarted;
 
-    [ClientRpc]
-    public void RpcInvokeStartVotingEvent()
-    {
-        OnVotingStarted?.Invoke();
-    }
-
+    /// <summary>
+    /// Cast vote.
+    /// </summary>
+    /// <remarks>
+    /// Can be called several times bacause only first vote counts
+    /// </remarks>
+    /// <param name="playerVoted">Gameobject of player voted as killer</param>
+    /// <param name="sender"></param>
     [Command(ignoreAuthority = true)]
     public void CmdCastVote(GameObject playerVoted, NetworkConnectionToClient sender = null)
     {
@@ -89,6 +96,7 @@ public class VotingManager : NetworkBehaviour
         while(timeRemaining > 0)
         {
             timeRemaining--;
+            CurrentTimeRemaining?.Invoke(timeRemaining);
             yield return new WaitForSeconds(1f);
         }
 
@@ -112,27 +120,32 @@ public class VotingManager : NetworkBehaviour
 
         print($"Voting results: {JsonUtility.ToJson(votesForPlayer)}");
 
+        int skipVotes = 0;
         //Hay jugadores que no votaron porque no eligieron nada a tiempo, estos por default votan por pasar votacion
         if(voting.Count < NetworkManager.singleton.numPlayers)
         {
             if (votesForPlayer.ContainsKey(null))
             {
-                votesForPlayer[null] = votesForPlayer[null] + NetworkManager.singleton.numPlayers - voting.Count();
+                skipVotes =  NetworkManager.singleton.numPlayers - voting.Count();
             } else
             {
-                votesForPlayer[null] = NetworkManager.singleton.numPlayers - voting.Count();
+                skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
             }
         }
+        var mostVotedKV = votesForPlayer.OrderByDescending(x => x.Value).First();
 
-        var getMostVotedPlayerGameObject = votesForPlayer.OrderByDescending(x => x.Value).First().Key;
+        if(skipVotes > mostVotedKV.Value)
+        {
+            //Mas jugadores votaron por expulsar a nadie
+            return;
+        }
+
+        var getMostVotedPlayerGameObject = mostVotedKV.Key;
 
         if(getMostVotedPlayerGameObject != null)
         {
             var dedPlayer = getMostVotedPlayerGameObject.GetComponent<Die>();
             dedPlayer.SetSimpleDeath();
-        } else
-        {
-
         }
     }
 }

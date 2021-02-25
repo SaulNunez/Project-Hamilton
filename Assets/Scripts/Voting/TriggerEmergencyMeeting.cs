@@ -3,19 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerEmergencyMeeting : NetworkBehaviour
+public class TriggerEmergencyMeeting : InteractuableBehavior
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        CmdStartMeeting();
-    }
-
-    [Command]
-    private void CmdStartMeeting()
-    {
+    public override void OnApproach(GameObject approachedBy) {
         var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
         var votingManager = votingManagerGameObject.GetComponent<VotingManager>();
 
         votingManager.StartVoting();
+
+        print("Button pressed");
     }
 }

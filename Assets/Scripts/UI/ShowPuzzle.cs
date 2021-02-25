@@ -60,16 +60,11 @@ public class ShowPuzzle : NetworkBehaviour
     [SyncVar]
     GameObject sabotageElectricity;
 
-    public override void OnStartClient()
-    {
-        base.OnStartClient();
-
-        VotingManager.OnVotingStarted += StopCurrentPuzzle;
-    }
-
     public override void OnStartServer()
     {
         base.OnStartServer();
+
+        VotingManager.OnVotingStarted += StopCurrentPuzzle;
 
         var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
 
@@ -143,9 +138,9 @@ public class ShowPuzzle : NetworkBehaviour
         sabotageElectricity.SetActive(false);
     }
 
-    public override void OnStopClient()
+    public override void OnStopServer()
     {
-        base.OnStopClient();
+        base.OnStopServer();
 
         VotingManager.OnVotingStarted -= StopCurrentPuzzle;
     }

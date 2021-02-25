@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Puzzles.Variables.Int
 {
-    public class PuzzleStart : NetworkBehaviour
+    public class IntPuzzle : NetworkBehaviour
     {
         [SyncVar]
         public int defTem;

@@ -41483,7 +41483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386116400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.035923, y: 7.2221346, z: -9.37291}
+  m_LocalPosition: {x: -23.035923, y: 7.2221346, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1733179467}
@@ -41786,7 +41786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595118255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.975922, y: 1.2821345, z: -9.37291}
+  m_LocalPosition: {x: -12.975922, y: 1.2821345, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1733179467}
@@ -41961,7 +41961,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   canVote: 0
-  votingScreen: {fileID: 0}
   timeRemaining: 100
 --- !u!1 &1746034988
 GameObject:
@@ -42247,7 +42246,7 @@ GameObject:
   - component: {fileID: 1925255971}
   - component: {fileID: 1925255975}
   - component: {fileID: 1925255974}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: EmergencyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42264,7 +42263,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.018679023, y: 0.028018951}
@@ -42723,7 +42722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043124672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.88, y: 11.78, z: 0}
+  m_LocalPosition: {x: 16.88, y: 11.78, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

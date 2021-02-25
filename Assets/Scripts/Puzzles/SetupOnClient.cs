@@ -8,6 +8,6 @@ public class SetupOnClient : MonoBehaviour
     {
         var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
 
-        this.transform.parent = canvas.transform;
+        this.transform.SetParent(canvas.transform);
     }
 }

@@ -29,6 +29,9 @@ public class Die : NetworkBehaviour
         gameObject.layer = ghostLayer;
     }
 
+    /// <summary>
+    /// Muerte cuando el jugador no spawnea esqueleto donde murio.
+    /// </summary>
     [Server]
     public void SetSimpleDeath()
     {
