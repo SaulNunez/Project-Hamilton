@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Handles activating a canvas on clients with authority. AKA in the client they belong.
+/// </summary>
 public class LobbyUIHelper : NetworkBehaviour
 {
     [SerializeField]
@@ -25,6 +28,10 @@ public class LobbyUIHelper : NetworkBehaviour
         readyUi.SetActive(nrm.RoomScene == SceneManager.GetActiveScene().name && hasAuthority);
     }
 
+    /// <summary>
+    /// Updates ready state on the network player
+    /// </summary>
+    /// <param name="ready"></param>
     public void SetAsReady(bool ready)
     {
         var networkPlayer = GetComponent<NetworkRoomPlayer>();

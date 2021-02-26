@@ -4,14 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Sets up player buttons for the voting screen.
+/// </summary>
 public class PlayersForVoting : NetworkBehaviour
 {
+    /// <summary>
+    /// Button prefab, to be spawned
+    /// </summary>
     [SerializeField]
     private GameObject playerButtonPrefab;
 
+    /// <summary>
+    /// Gameobject to attach the buttons
+    /// </summary>
     [SerializeField]
     private GameObject playerButtonParent;
 
+    /// <summary>
+    /// Button to listen for skip
+    /// </summary>
     [SerializeField]
     private Button skipButton;
 
@@ -49,6 +61,10 @@ public class PlayersForVoting : NetworkBehaviour
         }
     }
 
+    /// <summary>
+    /// Utility vote casting method for the buttons.
+    /// </summary>
+    /// <param name="player"></param>
     [Client]
     void VoteForPlayer(GameObject player)
     {

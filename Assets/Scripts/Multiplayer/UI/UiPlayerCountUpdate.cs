@@ -19,7 +19,7 @@ public class UiPlayerCountUpdate : MonoBehaviour
     {
         textbox = GetComponent<TextMeshProUGUI>();
 
-        //LobbyNetworkManager.OnClientConnected += UpdateScreen;
+        //NetworkManager.OnClientConnected += UpdateScreen;
 
         var nmGameObject = GameObject.FindGameObjectWithTag("NetworkManager");
         lobbyNetworkManager = nmGameObject.GetComponent<NetworkManager>();
