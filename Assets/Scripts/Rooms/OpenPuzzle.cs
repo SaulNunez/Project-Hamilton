@@ -7,7 +7,7 @@ using System.Linq;
 
 public class OpenPuzzle : InteractuableBehavior
 {
-    [SyncVar]
+    [SyncVar(hook = nameof(UpdateVisuals))]
     public bool puzzleIsAvailable = true;
 
     [SerializeField]
@@ -15,6 +15,12 @@ public class OpenPuzzle : InteractuableBehavior
 
     [SerializeField]
     PuzzleId opens;
+
+    void UpdateVisuals(bool oldValue, bool newValue)
+    {
+        var materialSet = GetComponent<PuzzleActiveOutline>();
+        materialSet.IsActive = newValue;
+    }
 
     [Server]
     public override void OnApproach(GameObject approachedBy)
