@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -760666986433711300}
   - component: {fileID: 1433344681147416195}
   - component: {fileID: 6397468672269511076}
+  - component: {fileID: 1665009279431305131}
   m_Layer: 0
   m_Name: WhileFillBucket
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
+--- !u!114 &1665009279431305131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717789502006183773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883dfba9929240e478f117a85ef6c394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
