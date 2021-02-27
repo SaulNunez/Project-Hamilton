@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// String puzzle logic
+/// </summary>
 public class HelloNanabot : NetworkBehaviour
 {
     public TMP_InputField textbox;
 
-    public void EndPuzzle()
+    public void CommitPuzzle()
     {
         CheckMessage(textbox.text);
     }
