@@ -16,6 +16,28 @@ public class OpenPuzzle : InteractuableBehavior
     [SerializeField]
     PuzzleId opens;
 
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+
+        PuzzleCompletion.OnPuzzleCompleted += OnPuzzleCompleted;
+    }
+
+    private void OnPuzzleCompleted(PuzzleId obj)
+    {
+        if(obj == opens)
+        {
+            puzzleIsAvailable = false;
+        }
+    }
+
+    public override void OnStopServer()
+    {
+        base.OnStopServer();
+
+        PuzzleCompletion.OnPuzzleCompleted -= OnPuzzleCompleted;
+    }
+
     void UpdateVisuals(bool oldValue, bool newValue)
     {
         var materialSet = GetComponent<PuzzleActiveOutline>();
