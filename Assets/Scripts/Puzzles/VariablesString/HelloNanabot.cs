@@ -23,6 +23,7 @@ public class HelloNanabot : NetworkBehaviour
         // Ej. revisar que no tenga algun mensaje obsceno, aqui sucederia 
         var helloMessage = $"Hola {message}";
         SayOnClient(netIdentity.connectionToClient, helloMessage);
+        PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableString);
     }
 
     [TargetRpc]

@@ -56,6 +56,11 @@ namespace Puzzles.Variables.Int
         {
             sliderDefTem = (int)value;
             sliderTemp.text = $"{sliderDefTem} C";
+
+            if(value == defTem)
+            {
+                PuzzleCompletion.instance.MarkCompleted(PuzzleId.BoilersVariableInteger);
+            }
         }
     }
 }
