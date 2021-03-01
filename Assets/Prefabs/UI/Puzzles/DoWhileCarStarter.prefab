@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2453008503072441345}
   - component: {fileID: -6731843277556064204}
   - component: {fileID: -9123077201720039375}
+  - component: {fileID: -3831687639521227476}
   m_Layer: 0
   m_Name: DoWhileCarStarter
   m_TagString: Untagged
@@ -95,6 +96,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 883dfba9929240e478f117a85ef6c394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+--- !u!114 &-3831687639521227476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7082839617737043622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fd0c51bbe07c140bc30978b91e9182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
