@@ -372,6 +372,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.IfElsePuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.IfElsePuzzle.html",
+          "hash": "BdPRz31QIFu819Sqfh5aPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.InteractuableBehavior.yml",
       "output": {
         ".html": {
@@ -1012,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "Zqfw0CpZvMmMlBWuOG0S4Q=="
+          "hash": "adyLB07hs/gEJbHThthTFg=="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1036,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "DOHkGH10dsqvbKWEjbxXGw=="
+          "hash": "wCmxO1CIWKBKs5k+dm0rDw=="
         }
       },
       "is_incremental": false,
@@ -1133,7 +1145,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 83,
+          "total_file_count": 84,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

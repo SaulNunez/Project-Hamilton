@@ -819,6 +819,51 @@ references:
   commentId: F:Global.HubConfig.secondsOfCooldownToEmergencies
   fullName: HubConfig.secondsOfCooldownToEmergencies
   nameWithType: HubConfig.secondsOfCooldownToEmergencies
+- uid: Global.IfElsePuzzle
+  name: IfElsePuzzle
+  href: api/Global.IfElsePuzzle.html
+  commentId: T:Global.IfElsePuzzle
+  fullName: IfElsePuzzle
+  nameWithType: IfElsePuzzle
+- uid: Global.IfElsePuzzle.OnCerezasClick
+  name: OnCerezasClick()
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnCerezasClick
+  commentId: M:Global.IfElsePuzzle.OnCerezasClick
+  fullName: IfElsePuzzle.OnCerezasClick()
+  nameWithType: IfElsePuzzle.OnCerezasClick()
+- uid: Global.IfElsePuzzle.OnCerezasClick*
+  name: OnCerezasClick
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnCerezasClick_
+  commentId: Overload:Global.IfElsePuzzle.OnCerezasClick
+  isSpec: "True"
+  fullName: IfElsePuzzle.OnCerezasClick
+  nameWithType: IfElsePuzzle.OnCerezasClick
+- uid: Global.IfElsePuzzle.OnChispitasClick
+  name: OnChispitasClick()
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnChispitasClick
+  commentId: M:Global.IfElsePuzzle.OnChispitasClick
+  fullName: IfElsePuzzle.OnChispitasClick()
+  nameWithType: IfElsePuzzle.OnChispitasClick()
+- uid: Global.IfElsePuzzle.OnChispitasClick*
+  name: OnChispitasClick
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnChispitasClick_
+  commentId: Overload:Global.IfElsePuzzle.OnChispitasClick
+  isSpec: "True"
+  fullName: IfElsePuzzle.OnChispitasClick
+  nameWithType: IfElsePuzzle.OnChispitasClick
+- uid: Global.IfElsePuzzle.OnStartServer
+  name: OnStartServer()
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnStartServer
+  commentId: M:Global.IfElsePuzzle.OnStartServer
+  fullName: IfElsePuzzle.OnStartServer()
+  nameWithType: IfElsePuzzle.OnStartServer()
+- uid: Global.IfElsePuzzle.OnStartServer*
+  name: OnStartServer
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnStartServer_
+  commentId: Overload:Global.IfElsePuzzle.OnStartServer
+  isSpec: "True"
+  fullName: IfElsePuzzle.OnStartServer
+  nameWithType: IfElsePuzzle.OnStartServer
 - uid: Global.InteractuableBehavior
   name: InteractuableBehavior
   href: api/Global.InteractuableBehavior.html
