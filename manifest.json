@@ -96,6 +96,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.CharacterTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.CharacterTypes.html",
+          "hash": "4G5vxCg0IAZPpJTjy+qTAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.CompleteBoolPuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.CompleteBoolPuzzle.html",
+          "hash": "j79nl8e2FA9FcZ2/IPXxMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.CreateLocalPuzzleUI.yml",
       "output": {
         ".html": {
@@ -192,6 +216,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.FixActiveStateOnStart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.FixActiveStateOnStart.html",
+          "hash": "Tid++iMac5r9uSqBjZzD+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.FlowerButtonModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.FlowerButtonModel.html",
+          "hash": "KFpsgjK85rvCaLiaXUyz2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.FlowerTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.FlowerTypes.html",
+          "hash": "wN5UYQiGDKVJc2sQblPCXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.FunctionCheck.yml",
       "output": {
         ".html": {
@@ -244,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkPlayer.html",
-          "hash": "8hnZKaesOx/xkLg5Pn+Kiw=="
+          "hash": "J50KOyi6gxQnx4aafbNI+Q=="
         }
       },
       "is_incremental": false,
@@ -280,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HelloNanabot.html",
-          "hash": "N4di/UzSmvkEEU8XCNL9Gw=="
+          "hash": "RLb3yRCZ1kgLHJvZejNt3g=="
         }
       },
       "is_incremental": false,
@@ -388,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.LobbyUIHelper.html",
-          "hash": "0RtUR3k8BpA/r6malUduEg=="
+          "hash": "NQLX5/H0gE0bfNstp1n6ww=="
         }
       },
       "is_incremental": false,
@@ -436,7 +496,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.OpenPuzzle.html",
-          "hash": "nJkoDQkAcptjmqmJIu6qZQ=="
+          "hash": "6oY/bNL9a5vUh/J5Tf9YqA=="
         }
       },
       "is_incremental": false,
@@ -520,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayersForVoting.html",
-          "hash": "Xk5HWwKtZ0wzDmx7q4LLZQ=="
+          "hash": "HRaBFA6uFFLFJ2rha93j/g=="
         }
       },
       "is_incremental": false,
@@ -564,6 +624,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleActiveOutline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleActiveOutline.html",
+          "hash": "1rw3qeUsZ7ED9SIse+LkUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzleCache.yml",
       "output": {
         ".html": {
@@ -593,6 +665,18 @@
         ".html": {
           "relative_path": "api/Global.PuzzleChecking.html",
           "hash": "raU+XO3u3kZ2F3LOiExvDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleCompletion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleCompletion.html",
+          "hash": "3XfPmxsHufhMSGH5wa2x7g=="
         }
       },
       "is_incremental": false,
@@ -665,6 +749,18 @@
         ".html": {
           "relative_path": "api/Global.SetServerUrlToNetworkManagerOnStart.html",
           "hash": "EEI2QezmKCpiHXH6C1/aow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetupDefaultFlowers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetupDefaultFlowers.html",
+          "hash": "lJWxyeNQTiKhvTPWkIDL/Q=="
         }
       },
       "is_incremental": false,
@@ -804,6 +900,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.UpdatePlayerName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UpdatePlayerName.html",
+          "hash": "1Qp0V172TFZo0uGFxm8SKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.UpdateTimeRemaining.yml",
       "output": {
         ".html": {
@@ -904,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "7dcLfkl4n5ThYq/g1d8fqg=="
+          "hash": "Zqfw0CpZvMmMlBWuOG0S4Q=="
         }
       },
       "is_incremental": false,
@@ -916,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "PnuDyOlSmjVG7SFKUWIRqQ=="
+          "hash": "DOHkGH10dsqvbKWEjbxXGw=="
         }
       },
       "is_incremental": false,
@@ -1025,7 +1133,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 74,
+          "total_file_count": 83,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

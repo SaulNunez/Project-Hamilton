@@ -153,6 +153,73 @@ references:
   isSpec: "True"
   fullName: CharacterRadioButton.Toggle
   nameWithType: CharacterRadioButton.Toggle
+- uid: Global.CharacterTypes
+  name: CharacterTypes
+  href: api/Global.CharacterTypes.html
+  commentId: T:Global.CharacterTypes
+  fullName: CharacterTypes
+  nameWithType: CharacterTypes
+- uid: Global.CharacterTypes.AndreaLewis
+  name: AndreaLewis
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_AndreaLewis
+  commentId: F:Global.CharacterTypes.AndreaLewis
+  fullName: CharacterTypes.AndreaLewis
+  nameWithType: CharacterTypes.AndreaLewis
+- uid: Global.CharacterTypes.CyrilGates
+  name: CyrilGates
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_CyrilGates
+  commentId: F:Global.CharacterTypes.CyrilGates
+  fullName: CharacterTypes.CyrilGates
+  nameWithType: CharacterTypes.CyrilGates
+- uid: Global.CharacterTypes.JohanaOrdonez
+  name: JohanaOrdonez
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_JohanaOrdonez
+  commentId: F:Global.CharacterTypes.JohanaOrdonez
+  fullName: CharacterTypes.JohanaOrdonez
+  nameWithType: CharacterTypes.JohanaOrdonez
+- uid: Global.CharacterTypes.JohannMacArthur
+  name: JohannMacArthur
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_JohannMacArthur
+  commentId: F:Global.CharacterTypes.JohannMacArthur
+  fullName: CharacterTypes.JohannMacArthur
+  nameWithType: CharacterTypes.JohannMacArthur
+- uid: Global.CharacterTypes.JohnWu
+  name: JohnWu
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_JohnWu
+  commentId: F:Global.CharacterTypes.JohnWu
+  fullName: CharacterTypes.JohnWu
+  nameWithType: CharacterTypes.JohnWu
+- uid: Global.CharacterTypes.JosephLawrence
+  name: JosephLawrence
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_JosephLawrence
+  commentId: F:Global.CharacterTypes.JosephLawrence
+  fullName: CharacterTypes.JosephLawrence
+  nameWithType: CharacterTypes.JosephLawrence
+- uid: Global.CharacterTypes.MathewBrown
+  name: MathewBrown
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_MathewBrown
+  commentId: F:Global.CharacterTypes.MathewBrown
+  fullName: CharacterTypes.MathewBrown
+  nameWithType: CharacterTypes.MathewBrown
+- uid: Global.CompleteBoolPuzzle
+  name: CompleteBoolPuzzle
+  href: api/Global.CompleteBoolPuzzle.html
+  commentId: T:Global.CompleteBoolPuzzle
+  fullName: CompleteBoolPuzzle
+  nameWithType: CompleteBoolPuzzle
+- uid: Global.CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
+  name: CompletePuzzle(Boolean)
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle_System_Boolean_
+  commentId: M:Global.CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
+  fullName: CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
+  nameWithType: CompleteBoolPuzzle.CompletePuzzle(Boolean)
+- uid: Global.CompleteBoolPuzzle.CompletePuzzle*
+  name: CompletePuzzle
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle_
+  commentId: Overload:Global.CompleteBoolPuzzle.CompletePuzzle
+  isSpec: "True"
+  fullName: CompleteBoolPuzzle.CompletePuzzle
+  nameWithType: CompleteBoolPuzzle.CompletePuzzle
 - uid: Global.CreateLocalPuzzleUI
   name: CreateLocalPuzzleUI
   href: api/Global.CreateLocalPuzzleUI.html
@@ -383,6 +450,86 @@ references:
   fullName.vb: EnumerableExtension.Shuffle(Of T)(System.Collections.Generic.IEnumerable(Of T))
   nameWithType: EnumerableExtension.Shuffle<T>(IEnumerable<T>)
   nameWithType.vb: EnumerableExtension.Shuffle(Of T)(IEnumerable(Of T))
+- uid: Global.FixActiveStateOnStart
+  name: FixActiveStateOnStart
+  href: api/Global.FixActiveStateOnStart.html
+  commentId: T:Global.FixActiveStateOnStart
+  fullName: FixActiveStateOnStart
+  nameWithType: FixActiveStateOnStart
+- uid: Global.FixActiveStateOnStart.OnStartClient
+  name: OnStartClient()
+  href: api/Global.FixActiveStateOnStart.html#Global_FixActiveStateOnStart_OnStartClient
+  commentId: M:Global.FixActiveStateOnStart.OnStartClient
+  fullName: FixActiveStateOnStart.OnStartClient()
+  nameWithType: FixActiveStateOnStart.OnStartClient()
+- uid: Global.FixActiveStateOnStart.OnStartClient*
+  name: OnStartClient
+  href: api/Global.FixActiveStateOnStart.html#Global_FixActiveStateOnStart_OnStartClient_
+  commentId: Overload:Global.FixActiveStateOnStart.OnStartClient
+  isSpec: "True"
+  fullName: FixActiveStateOnStart.OnStartClient
+  nameWithType: FixActiveStateOnStart.OnStartClient
+- uid: Global.FlowerButtonModel
+  name: FlowerButtonModel
+  href: api/Global.FlowerButtonModel.html
+  commentId: T:Global.FlowerButtonModel
+  fullName: FlowerButtonModel
+  nameWithType: FlowerButtonModel
+- uid: Global.FlowerButtonModel.button
+  name: button
+  href: api/Global.FlowerButtonModel.html#Global_FlowerButtonModel_button
+  commentId: F:Global.FlowerButtonModel.button
+  fullName: FlowerButtonModel.button
+  nameWithType: FlowerButtonModel.button
+- uid: Global.FlowerButtonModel.ButtonSprite
+  name: ButtonSprite
+  href: api/Global.FlowerButtonModel.html#Global_FlowerButtonModel_ButtonSprite
+  commentId: P:Global.FlowerButtonModel.ButtonSprite
+  fullName: FlowerButtonModel.ButtonSprite
+  nameWithType: FlowerButtonModel.ButtonSprite
+- uid: Global.FlowerButtonModel.ButtonSprite*
+  name: ButtonSprite
+  href: api/Global.FlowerButtonModel.html#Global_FlowerButtonModel_ButtonSprite_
+  commentId: Overload:Global.FlowerButtonModel.ButtonSprite
+  isSpec: "True"
+  fullName: FlowerButtonModel.ButtonSprite
+  nameWithType: FlowerButtonModel.ButtonSprite
+- uid: Global.FlowerTypes
+  name: FlowerTypes
+  href: api/Global.FlowerTypes.html
+  commentId: T:Global.FlowerTypes
+  fullName: FlowerTypes
+  nameWithType: FlowerTypes
+- uid: Global.FlowerTypes.Daisy
+  name: Daisy
+  href: api/Global.FlowerTypes.html#Global_FlowerTypes_Daisy
+  commentId: F:Global.FlowerTypes.Daisy
+  fullName: FlowerTypes.Daisy
+  nameWithType: FlowerTypes.Daisy
+- uid: Global.FlowerTypes.Roses
+  name: Roses
+  href: api/Global.FlowerTypes.html#Global_FlowerTypes_Roses
+  commentId: F:Global.FlowerTypes.Roses
+  fullName: FlowerTypes.Roses
+  nameWithType: FlowerTypes.Roses
+- uid: Global.FlowerTypes.Sunflower
+  name: Sunflower
+  href: api/Global.FlowerTypes.html#Global_FlowerTypes_Sunflower
+  commentId: F:Global.FlowerTypes.Sunflower
+  fullName: FlowerTypes.Sunflower
+  nameWithType: FlowerTypes.Sunflower
+- uid: Global.FlowerTypes.Tulip
+  name: Tulip
+  href: api/Global.FlowerTypes.html#Global_FlowerTypes_Tulip
+  commentId: F:Global.FlowerTypes.Tulip
+  fullName: FlowerTypes.Tulip
+  nameWithType: FlowerTypes.Tulip
+- uid: Global.FlowerTypes.Types
+  name: Types
+  href: api/Global.FlowerTypes.html#Global_FlowerTypes_Types
+  commentId: F:Global.FlowerTypes.Types
+  fullName: FlowerTypes.Types
+  nameWithType: FlowerTypes.Types
 - uid: Global.FunctionCheck
   name: FunctionCheck
   href: api/Global.FunctionCheck.html
@@ -531,6 +678,31 @@ references:
   commentId: T:Global.HamiltonNetworkPlayer
   fullName: HamiltonNetworkPlayer
   nameWithType: HamiltonNetworkPlayer
+- uid: Global.HamiltonNetworkPlayer.characterType
+  name: characterType
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_characterType
+  commentId: F:Global.HamiltonNetworkPlayer.characterType
+  fullName: HamiltonNetworkPlayer.characterType
+  nameWithType: HamiltonNetworkPlayer.characterType
+- uid: Global.HamiltonNetworkPlayer.OnStartServer
+  name: OnStartServer()
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer
+  commentId: M:Global.HamiltonNetworkPlayer.OnStartServer
+  fullName: HamiltonNetworkPlayer.OnStartServer()
+  nameWithType: HamiltonNetworkPlayer.OnStartServer()
+- uid: Global.HamiltonNetworkPlayer.OnStartServer*
+  name: OnStartServer
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer_
+  commentId: Overload:Global.HamiltonNetworkPlayer.OnStartServer
+  isSpec: "True"
+  fullName: HamiltonNetworkPlayer.OnStartServer
+  nameWithType: HamiltonNetworkPlayer.OnStartServer
+- uid: Global.HamiltonNetworkPlayer.playerName
+  name: playerName
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_playerName
+  commentId: F:Global.HamiltonNetworkPlayer.playerName
+  fullName: HamiltonNetworkPlayer.playerName
+  nameWithType: HamiltonNetworkPlayer.playerName
 - uid: Global.HamiltonNetworkRoomManager
   name: HamiltonNetworkRoomManager
   href: api/Global.HamiltonNetworkRoomManager.html
@@ -568,19 +740,19 @@ references:
   commentId: T:Global.HelloNanabot
   fullName: HelloNanabot
   nameWithType: HelloNanabot
-- uid: Global.HelloNanabot.EndPuzzle
-  name: EndPuzzle()
-  href: api/Global.HelloNanabot.html#Global_HelloNanabot_EndPuzzle
-  commentId: M:Global.HelloNanabot.EndPuzzle
-  fullName: HelloNanabot.EndPuzzle()
-  nameWithType: HelloNanabot.EndPuzzle()
-- uid: Global.HelloNanabot.EndPuzzle*
-  name: EndPuzzle
-  href: api/Global.HelloNanabot.html#Global_HelloNanabot_EndPuzzle_
-  commentId: Overload:Global.HelloNanabot.EndPuzzle
+- uid: Global.HelloNanabot.CommitPuzzle
+  name: CommitPuzzle()
+  href: api/Global.HelloNanabot.html#Global_HelloNanabot_CommitPuzzle
+  commentId: M:Global.HelloNanabot.CommitPuzzle
+  fullName: HelloNanabot.CommitPuzzle()
+  nameWithType: HelloNanabot.CommitPuzzle()
+- uid: Global.HelloNanabot.CommitPuzzle*
+  name: CommitPuzzle
+  href: api/Global.HelloNanabot.html#Global_HelloNanabot_CommitPuzzle_
+  commentId: Overload:Global.HelloNanabot.CommitPuzzle
   isSpec: "True"
-  fullName: HelloNanabot.EndPuzzle
-  nameWithType: HelloNanabot.EndPuzzle
+  fullName: HelloNanabot.CommitPuzzle
+  nameWithType: HelloNanabot.CommitPuzzle
 - uid: Global.HelloNanabot.textbox
   name: textbox
   href: api/Global.HelloNanabot.html#Global_HelloNanabot_textbox
@@ -996,6 +1168,25 @@ references:
   isSpec: "True"
   fullName: OpenPuzzle.OnStartServer
   nameWithType: OpenPuzzle.OnStartServer
+- uid: Global.OpenPuzzle.OnStopServer
+  name: OnStopServer()
+  href: api/Global.OpenPuzzle.html#Global_OpenPuzzle_OnStopServer
+  commentId: M:Global.OpenPuzzle.OnStopServer
+  fullName: OpenPuzzle.OnStopServer()
+  nameWithType: OpenPuzzle.OnStopServer()
+- uid: Global.OpenPuzzle.OnStopServer*
+  name: OnStopServer
+  href: api/Global.OpenPuzzle.html#Global_OpenPuzzle_OnStopServer_
+  commentId: Overload:Global.OpenPuzzle.OnStopServer
+  isSpec: "True"
+  fullName: OpenPuzzle.OnStopServer
+  nameWithType: OpenPuzzle.OnStopServer
+- uid: Global.OpenPuzzle.puzzleIsAvailable
+  name: puzzleIsAvailable
+  href: api/Global.OpenPuzzle.html#Global_OpenPuzzle_puzzleIsAvailable
+  commentId: F:Global.OpenPuzzle.puzzleIsAvailable
+  fullName: OpenPuzzle.puzzleIsAvailable
+  nameWithType: OpenPuzzle.puzzleIsAvailable
 - uid: Global.PlayerAction
   name: PlayerAction
   href: api/Global.PlayerAction.html
@@ -1361,6 +1552,25 @@ references:
   commentId: F:Global.Puzzle.Type.Variables
   fullName: Puzzle.Type.Variables
   nameWithType: Puzzle.Type.Variables
+- uid: Global.PuzzleActiveOutline
+  name: PuzzleActiveOutline
+  href: api/Global.PuzzleActiveOutline.html
+  commentId: T:Global.PuzzleActiveOutline
+  fullName: PuzzleActiveOutline
+  nameWithType: PuzzleActiveOutline
+- uid: Global.PuzzleActiveOutline.IsActive
+  name: IsActive
+  href: api/Global.PuzzleActiveOutline.html#Global_PuzzleActiveOutline_IsActive
+  commentId: P:Global.PuzzleActiveOutline.IsActive
+  fullName: PuzzleActiveOutline.IsActive
+  nameWithType: PuzzleActiveOutline.IsActive
+- uid: Global.PuzzleActiveOutline.IsActive*
+  name: IsActive
+  href: api/Global.PuzzleActiveOutline.html#Global_PuzzleActiveOutline_IsActive_
+  commentId: Overload:Global.PuzzleActiveOutline.IsActive
+  isSpec: "True"
+  fullName: PuzzleActiveOutline.IsActive
+  nameWithType: PuzzleActiveOutline.IsActive
 - uid: Global.PuzzleCache
   name: PuzzleCache
   href: api/Global.PuzzleCache.html
@@ -1431,6 +1641,82 @@ references:
   commentId: F:Global.PuzzleCheckResult.runOutput
   fullName: PuzzleCheckResult.runOutput
   nameWithType: PuzzleCheckResult.runOutput
+- uid: Global.PuzzleCompletion
+  name: PuzzleCompletion
+  href: api/Global.PuzzleCompletion.html
+  commentId: T:Global.PuzzleCompletion
+  fullName: PuzzleCompletion
+  nameWithType: PuzzleCompletion
+- uid: Global.PuzzleCompletion.instance
+  name: instance
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_instance
+  commentId: F:Global.PuzzleCompletion.instance
+  fullName: PuzzleCompletion.instance
+  nameWithType: PuzzleCompletion.instance
+- uid: Global.PuzzleCompletion.MarkCompleted(PuzzleId)
+  name: MarkCompleted(PuzzleId)
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_MarkCompleted_PuzzleId_
+  commentId: M:Global.PuzzleCompletion.MarkCompleted(PuzzleId)
+  fullName: PuzzleCompletion.MarkCompleted(PuzzleId)
+  nameWithType: PuzzleCompletion.MarkCompleted(PuzzleId)
+- uid: Global.PuzzleCompletion.MarkCompleted*
+  name: MarkCompleted
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_MarkCompleted_
+  commentId: Overload:Global.PuzzleCompletion.MarkCompleted
+  isSpec: "True"
+  fullName: PuzzleCompletion.MarkCompleted
+  nameWithType: PuzzleCompletion.MarkCompleted
+- uid: Global.PuzzleCompletion.OnPuzzleCompleted
+  name: OnPuzzleCompleted
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnPuzzleCompleted
+  commentId: E:Global.PuzzleCompletion.OnPuzzleCompleted
+  fullName: PuzzleCompletion.OnPuzzleCompleted
+  nameWithType: PuzzleCompletion.OnPuzzleCompleted
+- uid: Global.PuzzleCompletion.OnStartServer
+  name: OnStartServer()
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStartServer
+  commentId: M:Global.PuzzleCompletion.OnStartServer
+  fullName: PuzzleCompletion.OnStartServer()
+  nameWithType: PuzzleCompletion.OnStartServer()
+- uid: Global.PuzzleCompletion.OnStartServer*
+  name: OnStartServer
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStartServer_
+  commentId: Overload:Global.PuzzleCompletion.OnStartServer
+  isSpec: "True"
+  fullName: PuzzleCompletion.OnStartServer
+  nameWithType: PuzzleCompletion.OnStartServer
+- uid: Global.PuzzleCompletion.OnStopServer
+  name: OnStopServer()
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStopServer
+  commentId: M:Global.PuzzleCompletion.OnStopServer
+  fullName: PuzzleCompletion.OnStopServer()
+  nameWithType: PuzzleCompletion.OnStopServer()
+- uid: Global.PuzzleCompletion.OnStopServer*
+  name: OnStopServer
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStopServer_
+  commentId: Overload:Global.PuzzleCompletion.OnStopServer
+  isSpec: "True"
+  fullName: PuzzleCompletion.OnStopServer
+  nameWithType: PuzzleCompletion.OnStopServer
+- uid: Global.PuzzleCompletion.puzzlesCompleted
+  name: puzzlesCompleted
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_puzzlesCompleted
+  commentId: F:Global.PuzzleCompletion.puzzlesCompleted
+  fullName: PuzzleCompletion.puzzlesCompleted
+  nameWithType: PuzzleCompletion.puzzlesCompleted
+- uid: Global.PuzzleCompletion.PuzzlesDone
+  name: PuzzlesDone
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_PuzzlesDone
+  commentId: P:Global.PuzzleCompletion.PuzzlesDone
+  fullName: PuzzleCompletion.PuzzlesDone
+  nameWithType: PuzzleCompletion.PuzzlesDone
+- uid: Global.PuzzleCompletion.PuzzlesDone*
+  name: PuzzlesDone
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_PuzzlesDone_
+  commentId: Overload:Global.PuzzleCompletion.PuzzlesDone
+  isSpec: "True"
+  fullName: PuzzleCompletion.PuzzlesDone
+  nameWithType: PuzzleCompletion.PuzzlesDone
 - uid: Global.PuzzleId
   name: PuzzleId
   href: api/Global.PuzzleId.html
@@ -1609,6 +1895,25 @@ references:
   commentId: T:Global.SetServerUrlToNetworkManagerOnStart
   fullName: SetServerUrlToNetworkManagerOnStart
   nameWithType: SetServerUrlToNetworkManagerOnStart
+- uid: Global.SetupDefaultFlowers
+  name: SetupDefaultFlowers
+  href: api/Global.SetupDefaultFlowers.html
+  commentId: T:Global.SetupDefaultFlowers
+  fullName: SetupDefaultFlowers
+  nameWithType: SetupDefaultFlowers
+- uid: Global.SetupDefaultFlowers.OnStartServer
+  name: OnStartServer()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartServer
+  commentId: M:Global.SetupDefaultFlowers.OnStartServer
+  fullName: SetupDefaultFlowers.OnStartServer()
+  nameWithType: SetupDefaultFlowers.OnStartServer()
+- uid: Global.SetupDefaultFlowers.OnStartServer*
+  name: OnStartServer
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartServer_
+  commentId: Overload:Global.SetupDefaultFlowers.OnStartServer
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.OnStartServer
+  nameWithType: SetupDefaultFlowers.OnStartServer
 - uid: Global.SetupOnClient
   name: SetupOnClient
   href: api/Global.SetupOnClient.html
@@ -1851,6 +2156,25 @@ references:
   commentId: T:Global.UiPlayerCountUpdate
   fullName: UiPlayerCountUpdate
   nameWithType: UiPlayerCountUpdate
+- uid: Global.UpdatePlayerName
+  name: UpdatePlayerName
+  href: api/Global.UpdatePlayerName.html
+  commentId: T:Global.UpdatePlayerName
+  fullName: UpdatePlayerName
+  nameWithType: UpdatePlayerName
+- uid: Global.UpdatePlayerName.CmdUpdateName(System.String)
+  name: CmdUpdateName(String)
+  href: api/Global.UpdatePlayerName.html#Global_UpdatePlayerName_CmdUpdateName_System_String_
+  commentId: M:Global.UpdatePlayerName.CmdUpdateName(System.String)
+  fullName: UpdatePlayerName.CmdUpdateName(System.String)
+  nameWithType: UpdatePlayerName.CmdUpdateName(String)
+- uid: Global.UpdatePlayerName.CmdUpdateName*
+  name: CmdUpdateName
+  href: api/Global.UpdatePlayerName.html#Global_UpdatePlayerName_CmdUpdateName_
+  commentId: Overload:Global.UpdatePlayerName.CmdUpdateName
+  isSpec: "True"
+  fullName: UpdatePlayerName.CmdUpdateName
+  nameWithType: UpdatePlayerName.CmdUpdateName
 - uid: Global.UpdateTimeRemaining
   name: UpdateTimeRemaining
   href: api/Global.UpdateTimeRemaining.html

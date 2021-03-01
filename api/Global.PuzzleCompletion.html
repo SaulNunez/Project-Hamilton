@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class OpenPuzzle
+    <title>Class PuzzleCompletion
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class OpenPuzzle
+    <meta name="title" content="Class PuzzleCompletion
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.56.6.0">
     
@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.OpenPuzzle">
+            <article class="content wrap" id="_content" data-uid="Global.PuzzleCompletion">
   
   
-  <h1 id="Global_OpenPuzzle" data-uid="Global.OpenPuzzle" class="text-break">Class OpenPuzzle
+  <h1 id="Global_PuzzleCompletion" data-uid="Global.PuzzleCompletion" class="text-break">Class PuzzleCompletion
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -89,25 +89,24 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><a class="xref" href="Global.InteractuableBehavior.html">InteractuableBehavior</a></div>
-    <div class="level3"><span class="xref">OpenPuzzle</span></div>
+    <div class="level2"><span class="xref">PuzzleCompletion</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_OpenPuzzle_syntax">Syntax</h5>
+  <h5 id="Global_PuzzleCompletion_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OpenPuzzle : InteractuableBehavior</code></pre>
+    <pre><code class="lang-csharp hljs">public class PuzzleCompletion : NetworkBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Global_OpenPuzzle_puzzleIsAvailable" data-uid="Global.OpenPuzzle.puzzleIsAvailable">puzzleIsAvailable</h4>
+  <h4 id="Global_PuzzleCompletion_instance" data-uid="Global.PuzzleCompletion.instance">instance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool puzzleIsAvailable</code></pre>
+    <pre><code class="lang-csharp hljs">public static PuzzleCompletion instance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +118,58 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><a class="xref" href="Global.PuzzleCompletion.html">PuzzleCompletion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Global_PuzzleCompletion_puzzlesCompleted" data-uid="Global.PuzzleCompletion.puzzlesCompleted">puzzlesCompleted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SyncList&lt;PuzzleId&gt; puzzlesCompleted</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mirror.SyncList</span>&lt;<a class="xref" href="Global.PuzzleId.html">PuzzleId</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_PuzzleCompletion_PuzzlesDone_" data-uid="Global.PuzzleCompletion.PuzzlesDone*"></a>
+  <h4 id="Global_PuzzleCompletion_PuzzlesDone" data-uid="Global.PuzzleCompletion.PuzzlesDone">PuzzlesDone</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PuzzlesDone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -128,13 +178,14 @@
   </h3>
   
   
-  <a id="Global_OpenPuzzle_OnApproach_" data-uid="Global.OpenPuzzle.OnApproach*"></a>
-  <h4 id="Global_OpenPuzzle_OnApproach_GameObject_" data-uid="Global.OpenPuzzle.OnApproach(GameObject)">OnApproach(GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Global_PuzzleCompletion_MarkCompleted_" data-uid="Global.PuzzleCompletion.MarkCompleted*"></a>
+  <h4 id="Global_PuzzleCompletion_MarkCompleted_PuzzleId_" data-uid="Global.PuzzleCompletion.MarkCompleted(PuzzleId)">MarkCompleted(PuzzleId)</h4>
+  <div class="markdown level1 summary"><p>Register puzzle as completed</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnApproach(GameObject approachedBy)</code></pre>
+    <pre><code class="lang-csharp hljs">public void MarkCompleted(PuzzleId id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -147,18 +198,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">GameObject</span></td>
-        <td><span class="parametername">approachedBy</span></td>
+        <td><a class="xref" href="Global.PuzzleId.html">PuzzleId</a></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Global.InteractuableBehavior.html#Global_InteractuableBehavior_OnApproach_GameObject_">InteractuableBehavior.OnApproach(GameObject)</a></div>
   
   
-  <a id="Global_OpenPuzzle_OnStartServer_" data-uid="Global.OpenPuzzle.OnStartServer*"></a>
-  <h4 id="Global_OpenPuzzle_OnStartServer" data-uid="Global.OpenPuzzle.OnStartServer">OnStartServer()</h4>
+  <a id="Global_PuzzleCompletion_OnStartServer_" data-uid="Global.PuzzleCompletion.OnStartServer*"></a>
+  <h4 id="Global_PuzzleCompletion_OnStartServer" data-uid="Global.PuzzleCompletion.OnStartServer">OnStartServer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -169,8 +218,8 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartServer()</span></div>
   
   
-  <a id="Global_OpenPuzzle_OnStopServer_" data-uid="Global.OpenPuzzle.OnStopServer*"></a>
-  <h4 id="Global_OpenPuzzle_OnStopServer" data-uid="Global.OpenPuzzle.OnStopServer">OnStopServer()</h4>
+  <a id="Global_PuzzleCompletion_OnStopServer_" data-uid="Global.PuzzleCompletion.OnStopServer*"></a>
+  <h4 id="Global_PuzzleCompletion_OnStopServer" data-uid="Global.PuzzleCompletion.OnStopServer">OnStopServer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -179,6 +228,36 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkBehaviour.OnStopServer()</span></div>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Global_PuzzleCompletion_OnPuzzleCompleted" data-uid="Global.PuzzleCompletion.OnPuzzleCompleted">OnPuzzleCompleted</h4>
+  <div class="markdown level1 summary"><p>Called on puzzle completion.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;PuzzleId&gt; OnPuzzleCompleted</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Global.PuzzleId.html">PuzzleId</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Global_PuzzleCompletion_OnPuzzleCompleted_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p><strong>Only applicable on the server</strong></p>
+</div>
 </article>
           </div>
           

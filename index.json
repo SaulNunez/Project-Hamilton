@@ -29,6 +29,16 @@
     "title": "Class CharacterRadioButton | A night in the house of Hunt",
     "keywords": "Class CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. Inheritance Object CharacterRadioButton Namespace : Global Assembly : cs.temp.dll.dll Syntax public class CharacterRadioButton : MonoBehaviour Properties CharacterNameText Declaration public Text CharacterNameText { get; } Property Value Type Description Text DescriptionText Declaration public Text DescriptionText { get; } Property Value Type Description Text StatsText Declaration public Text StatsText { get; } Property Value Type Description Text Toggle Declaration public Toggle Toggle { get; } Property Value Type Description Toggle"
   },
+  "api/Global.CharacterTypes.html": {
+    "href": "api/Global.CharacterTypes.html",
+    "title": "Enum CharacterTypes | A night in the house of Hunt",
+    "keywords": "Enum CharacterTypes Available characters in game (for passing around) Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum CharacterTypes Fields Name Description AndreaLewis CyrilGates JohanaOrdonez JohannMacArthur JohnWu JosephLawrence MathewBrown"
+  },
+  "api/Global.CompleteBoolPuzzle.html": {
+    "href": "api/Global.CompleteBoolPuzzle.html",
+    "title": "Class CompleteBoolPuzzle | A night in the house of Hunt",
+    "keywords": "Class CompleteBoolPuzzle Inheritance Object Mirror.NetworkBehaviour CompleteBoolPuzzle Namespace : Global Assembly : cs.temp.dll.dll Syntax public class CompleteBoolPuzzle : NetworkBehaviour Methods CompletePuzzle(Boolean) Declaration public void CompletePuzzle(bool toggleState) Parameters Type Name Description Boolean toggleState"
+  },
   "api/Global.CreateLocalPuzzleUI.html": {
     "href": "api/Global.CreateLocalPuzzleUI.html",
     "title": "Class CreateLocalPuzzleUI | A night in the house of Hunt",
@@ -69,6 +79,21 @@
     "title": "Class EnumerableExtension | A night in the house of Hunt",
     "keywords": "Class EnumerableExtension Inheritance Object EnumerableExtension Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class EnumerableExtension Methods PickRandom<T>(IEnumerable<T>) Declaration public static T PickRandom<T>(this IEnumerable<T> source) Parameters Type Name Description IEnumerable <T> source Returns Type Description T Type Parameters Name Description T PickRandom<T>(IEnumerable<T>, Int32) Declaration public static IEnumerable<T> PickRandom<T>(this IEnumerable<T> source, int count) Parameters Type Name Description IEnumerable <T> source Int32 count Returns Type Description IEnumerable <T> Type Parameters Name Description T Shuffle<T>(IEnumerable<T>) Declaration public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source) Parameters Type Name Description IEnumerable <T> source Returns Type Description IEnumerable <T> Type Parameters Name Description T"
   },
+  "api/Global.FixActiveStateOnStart.html": {
+    "href": "api/Global.FixActiveStateOnStart.html",
+    "title": "Class FixActiveStateOnStart | A night in the house of Hunt",
+    "keywords": "Class FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. Inheritance Object Mirror.NetworkBehaviour FixActiveStateOnStart Namespace : Global Assembly : cs.temp.dll.dll Syntax public class FixActiveStateOnStart : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient()"
+  },
+  "api/Global.FlowerButtonModel.html": {
+    "href": "api/Global.FlowerButtonModel.html",
+    "title": "Class FlowerButtonModel | A night in the house of Hunt",
+    "keywords": "Class FlowerButtonModel Inheritance Object FlowerButtonModel Namespace : Global Assembly : cs.temp.dll.dll Syntax public class FlowerButtonModel : MonoBehaviour Fields button Declaration public Button button Field Value Type Description Button Properties ButtonSprite Declaration public Sprite ButtonSprite { get; set; } Property Value Type Description Sprite"
+  },
+  "api/Global.FlowerTypes.html": {
+    "href": "api/Global.FlowerTypes.html",
+    "title": "Class FlowerTypes | A night in the house of Hunt",
+    "keywords": "Class FlowerTypes Inheritance Object FlowerTypes Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class FlowerTypes Fields Daisy Declaration public const string Daisy = \"Daisy\" Field Value Type Description String Roses Declaration public const string Roses = \"Roses\" Field Value Type Description String Sunflower Declaration public const string Sunflower = \"Sunflower\" Field Value Type Description String Tulip Declaration public const string Tulip = \"Tulip\" Field Value Type Description String Types Declaration public static readonly List<string> Types Field Value Type Description List < String >"
+  },
   "api/Global.FunctionCheck.html": {
     "href": "api/Global.FunctionCheck.html",
     "title": "Class FunctionCheck | A night in the house of Hunt",
@@ -92,7 +117,7 @@
   "api/Global.HamiltonNetworkPlayer.html": {
     "href": "api/Global.HamiltonNetworkPlayer.html",
     "title": "Class HamiltonNetworkPlayer | A night in the house of Hunt",
-    "keywords": "Class HamiltonNetworkPlayer Inheritance Object Mirror.NetworkBehaviour Mirror.NetworkRoomPlayer HamiltonNetworkPlayer Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HamiltonNetworkPlayer : NetworkRoomPlayer"
+    "keywords": "Class HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. Inheritance Object Mirror.NetworkBehaviour Mirror.NetworkRoomPlayer HamiltonNetworkPlayer Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HamiltonNetworkPlayer : NetworkRoomPlayer Fields characterType Declaration public CharacterTypes characterType Field Value Type Description CharacterTypes playerName Declaration public string playerName Field Value Type Description String Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
   },
   "api/Global.HamiltonNetworkRoomManager.html": {
     "href": "api/Global.HamiltonNetworkRoomManager.html",
@@ -107,7 +132,7 @@
   "api/Global.HelloNanabot.html": {
     "href": "api/Global.HelloNanabot.html",
     "title": "Class HelloNanabot | A night in the house of Hunt",
-    "keywords": "Class HelloNanabot Inheritance Object Mirror.NetworkBehaviour HelloNanabot Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HelloNanabot : NetworkBehaviour Fields textbox Declaration public TMP_InputField textbox Field Value Type Description TMP_InputField Methods EndPuzzle() Declaration public void EndPuzzle()"
+    "keywords": "Class HelloNanabot String puzzle logic Inheritance Object Mirror.NetworkBehaviour HelloNanabot Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HelloNanabot : NetworkBehaviour Fields textbox Declaration public TMP_InputField textbox Field Value Type Description TMP_InputField Methods CommitPuzzle() Declaration public void CommitPuzzle()"
   },
   "api/Global.Highlight.html": {
     "href": "api/Global.Highlight.html",
@@ -117,7 +142,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | A night in the house of Hunt",
-    "keywords": "Namespace Global Classes ActivityInfo ActivityInteractuableInfo ActivityList CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die DisableOnLackOfAuthority EnumerableExtension FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer HamiltonNetworkRoomManager HelloNanabot Highlight HubConfig InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting PlayerVotingButton Puzzle PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleIdSerialization PuzzleInformation PuzzlesToDo ReportDeath SetServerUrlToNetworkManagerOnStart SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags Teletransport Test TriggerEmergencyMeeting UIGameStart UILobbyConnect UiPlayerCountUpdate UpdateTimeRemaining VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WorldInteraction Enums FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
+    "keywords": "Namespace Global Classes ActivityInfo ActivityInteractuableInfo ActivityList CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CompleteBoolPuzzle CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die DisableOnLackOfAuthority EnumerableExtension FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. FlowerButtonModel FlowerTypes FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. HamiltonNetworkRoomManager HelloNanabot String puzzle logic Highlight HubConfig InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting Sets up player buttons for the voting screen. PlayerVotingButton Puzzle PuzzleActiveOutline PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleCompletion PuzzleIdSerialization PuzzleInformation PuzzlesToDo ReportDeath SetServerUrlToNetworkManagerOnStart SetupDefaultFlowers SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags Teletransport Test TriggerEmergencyMeeting UIGameStart UILobbyConnect UiPlayerCountUpdate UpdatePlayerName UpdateTimeRemaining VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WorldInteraction Enums CharacterTypes Available characters in game (for passing around) FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
   },
   "api/Global.HubConfig.html": {
     "href": "api/Global.HubConfig.html",
@@ -157,7 +182,7 @@
   "api/Global.LobbyUIHelper.html": {
     "href": "api/Global.LobbyUIHelper.html",
     "title": "Class LobbyUIHelper | A night in the house of Hunt",
-    "keywords": "Class LobbyUIHelper Inheritance Object Mirror.NetworkBehaviour LobbyUIHelper Namespace : Global Assembly : cs.temp.dll.dll Syntax public class LobbyUIHelper : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() SetAsReady(Boolean) Declaration public void SetAsReady(bool ready) Parameters Type Name Description Boolean ready"
+    "keywords": "Class LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. Inheritance Object Mirror.NetworkBehaviour LobbyUIHelper Namespace : Global Assembly : cs.temp.dll.dll Syntax public class LobbyUIHelper : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() SetAsReady(Boolean) Updates ready state on the network player Declaration public void SetAsReady(bool ready) Parameters Type Name Description Boolean ready"
   },
   "api/Global.NanaBot.html": {
     "href": "api/Global.NanaBot.html",
@@ -177,7 +202,7 @@
   "api/Global.OpenPuzzle.html": {
     "href": "api/Global.OpenPuzzle.html",
     "title": "Class OpenPuzzle | A night in the house of Hunt",
-    "keywords": "Class OpenPuzzle Inheritance Object Mirror.NetworkBehaviour InteractuableBehavior OpenPuzzle Namespace : Global Assembly : cs.temp.dll.dll Syntax public class OpenPuzzle : InteractuableBehavior Methods OnApproach(GameObject) Declaration public override void OnApproach(GameObject approachedBy) Parameters Type Name Description GameObject approachedBy Overrides InteractuableBehavior.OnApproach(GameObject) OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
+    "keywords": "Class OpenPuzzle Inheritance Object Mirror.NetworkBehaviour InteractuableBehavior OpenPuzzle Namespace : Global Assembly : cs.temp.dll.dll Syntax public class OpenPuzzle : InteractuableBehavior Fields puzzleIsAvailable Declaration public bool puzzleIsAvailable Field Value Type Description Boolean Methods OnApproach(GameObject) Declaration public override void OnApproach(GameObject approachedBy) Parameters Type Name Description GameObject approachedBy Overrides InteractuableBehavior.OnApproach(GameObject) OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopServer() Declaration public override void OnStopServer() Overrides Mirror.NetworkBehaviour.OnStopServer()"
   },
   "api/Global.PlayerAction.html": {
     "href": "api/Global.PlayerAction.html",
@@ -207,7 +232,7 @@
   "api/Global.PlayersForVoting.html": {
     "href": "api/Global.PlayersForVoting.html",
     "title": "Class PlayersForVoting | A night in the house of Hunt",
-    "keywords": "Class PlayersForVoting Inheritance Object Mirror.NetworkBehaviour PlayersForVoting Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayersForVoting : NetworkBehaviour"
+    "keywords": "Class PlayersForVoting Sets up player buttons for the voting screen. Inheritance Object Mirror.NetworkBehaviour PlayersForVoting Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayersForVoting : NetworkBehaviour"
   },
   "api/Global.PlayerVotingButton.html": {
     "href": "api/Global.PlayerVotingButton.html",
@@ -229,6 +254,11 @@
     "title": "Enum Puzzle.Type | A night in the house of Hunt",
     "keywords": "Enum Puzzle.Type Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum Type Fields Name Description Conditionals Cycles Functions Variables"
   },
+  "api/Global.PuzzleActiveOutline.html": {
+    "href": "api/Global.PuzzleActiveOutline.html",
+    "title": "Class PuzzleActiveOutline | A night in the house of Hunt",
+    "keywords": "Class PuzzleActiveOutline Inheritance Object PuzzleActiveOutline Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PuzzleActiveOutline : MonoBehaviour Properties IsActive Declaration public bool IsActive { get; set; } Property Value Type Description Boolean"
+  },
   "api/Global.PuzzleCache.html": {
     "href": "api/Global.PuzzleCache.html",
     "title": "Class PuzzleCache | A night in the house of Hunt",
@@ -243,6 +273,11 @@
     "href": "api/Global.PuzzleCheckResult.html",
     "title": "Class PuzzleCheckResult | A night in the house of Hunt",
     "keywords": "Class PuzzleCheckResult Inheritance Object PuzzleCheckResult Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PuzzleCheckResult Fields hasFunctions Declaration public bool hasFunctions Field Value Type Description Boolean matchesOutput Declaration public bool matchesOutput Field Value Type Description Boolean passedCheck Declaration public bool passedCheck Field Value Type Description Boolean runOutput Declaration public string[] runOutput Field Value Type Description String []"
+  },
+  "api/Global.PuzzleCompletion.html": {
+    "href": "api/Global.PuzzleCompletion.html",
+    "title": "Class PuzzleCompletion | A night in the house of Hunt",
+    "keywords": "Class PuzzleCompletion Inheritance Object Mirror.NetworkBehaviour PuzzleCompletion Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PuzzleCompletion : NetworkBehaviour Fields instance Declaration public static PuzzleCompletion instance Field Value Type Description PuzzleCompletion puzzlesCompleted Declaration public SyncList<PuzzleId> puzzlesCompleted Field Value Type Description Mirror.SyncList < PuzzleId > Properties PuzzlesDone Declaration public int PuzzlesDone { get; } Property Value Type Description Int32 Methods MarkCompleted(PuzzleId) Register puzzle as completed Declaration public void MarkCompleted(PuzzleId id) Parameters Type Name Description PuzzleId id OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopServer() Declaration public override void OnStopServer() Overrides Mirror.NetworkBehaviour.OnStopServer() Events OnPuzzleCompleted Called on puzzle completion. Declaration public static event Action<PuzzleId> OnPuzzleCompleted Event Type Type Description Action < PuzzleId > Remarks Only applicable on the server"
   },
   "api/Global.PuzzleId.html": {
     "href": "api/Global.PuzzleId.html",
@@ -273,6 +308,11 @@
     "href": "api/Global.SetServerUrlToNetworkManagerOnStart.html",
     "title": "Class SetServerUrlToNetworkManagerOnStart | A night in the house of Hunt",
     "keywords": "Class SetServerUrlToNetworkManagerOnStart Inheritance Object SetServerUrlToNetworkManagerOnStart Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SetServerUrlToNetworkManagerOnStart : MonoBehaviour"
+  },
+  "api/Global.SetupDefaultFlowers.html": {
+    "href": "api/Global.SetupDefaultFlowers.html",
+    "title": "Class SetupDefaultFlowers | A night in the house of Hunt",
+    "keywords": "Class SetupDefaultFlowers Inheritance Object Mirror.NetworkBehaviour SetupDefaultFlowers Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SetupDefaultFlowers : NetworkBehaviour Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
   },
   "api/Global.SetupOnClient.html": {
     "href": "api/Global.SetupOnClient.html",
@@ -328,6 +368,11 @@
     "href": "api/Global.UiPlayerCountUpdate.html",
     "title": "Class UiPlayerCountUpdate | A night in the house of Hunt",
     "keywords": "Class UiPlayerCountUpdate Inheritance Object UiPlayerCountUpdate Namespace : Global Assembly : cs.temp.dll.dll Syntax public class UiPlayerCountUpdate : MonoBehaviour"
+  },
+  "api/Global.UpdatePlayerName.html": {
+    "href": "api/Global.UpdatePlayerName.html",
+    "title": "Class UpdatePlayerName | A night in the house of Hunt",
+    "keywords": "Class UpdatePlayerName Inheritance Object Mirror.NetworkBehaviour UpdatePlayerName Namespace : Global Assembly : cs.temp.dll.dll Syntax public class UpdatePlayerName : NetworkBehaviour Methods CmdUpdateName(String) Sends a command to server to change name. This name will be visible on top of the player. Declaration public void CmdUpdateName(string newName) Parameters Type Name Description String newName New player name Remarks Must be on a object with authority. Must be on a network player prefab."
   },
   "api/Global.UpdateTimeRemaining.html": {
     "href": "api/Global.UpdateTimeRemaining.html",
