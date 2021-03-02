@@ -1008,6 +1008,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.WhilePuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.WhilePuzzle.html",
+          "hash": "GSvvHSJX2bmz5WYmoI+dlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.WorldInteraction.ObjectEndDetected.yml",
       "output": {
         ".html": {
@@ -1048,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "vNoLo4gVwJzke8LdMJG6NQ=="
+          "hash": "xZ/ngFURDh04MhVvXmN1vw=="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "CBMBAYUy/04s8JNU2JK+Vw=="
+          "hash": "zpqT99dtA23nuRUiULtysQ=="
         }
       },
       "is_incremental": false,
@@ -1169,7 +1181,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 86,
+          "total_file_count": 87,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

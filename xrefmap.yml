@@ -2427,6 +2427,31 @@ references:
   commentId: T:Global.WebGLInputTacticalIgnore
   fullName: WebGLInputTacticalIgnore
   nameWithType: WebGLInputTacticalIgnore
+- uid: Global.WhilePuzzle
+  name: WhilePuzzle
+  href: api/Global.WhilePuzzle.html
+  commentId: T:Global.WhilePuzzle
+  fullName: WhilePuzzle
+  nameWithType: WhilePuzzle
+- uid: Global.WhilePuzzle.CheckInput(System.String)
+  name: CheckInput(String)
+  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_CheckInput_System_String_
+  commentId: M:Global.WhilePuzzle.CheckInput(System.String)
+  fullName: WhilePuzzle.CheckInput(System.String)
+  nameWithType: WhilePuzzle.CheckInput(String)
+- uid: Global.WhilePuzzle.CheckInput*
+  name: CheckInput
+  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_CheckInput_
+  commentId: Overload:Global.WhilePuzzle.CheckInput
+  isSpec: "True"
+  fullName: WhilePuzzle.CheckInput
+  nameWithType: WhilePuzzle.CheckInput
+- uid: Global.WhilePuzzle.defaultValue
+  name: defaultValue
+  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_defaultValue
+  commentId: F:Global.WhilePuzzle.defaultValue
+  fullName: WhilePuzzle.defaultValue
+  nameWithType: WhilePuzzle.defaultValue
 - uid: Global.WorldInteraction
   name: WorldInteraction
   href: api/Global.WorldInteraction.html
