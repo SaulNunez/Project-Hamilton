@@ -403,6 +403,25 @@ references:
   commentId: T:Global.DisableOnLackOfAuthority
   fullName: DisableOnLackOfAuthority
   nameWithType: DisableOnLackOfAuthority
+- uid: Global.DoWhilePuzzle
+  name: DoWhilePuzzle
+  href: api/Global.DoWhilePuzzle.html
+  commentId: T:Global.DoWhilePuzzle
+  fullName: DoWhilePuzzle
+  nameWithType: DoWhilePuzzle
+- uid: Global.DoWhilePuzzle.CheckTextboxInput(System.String)
+  name: CheckTextboxInput(String)
+  href: api/Global.DoWhilePuzzle.html#Global_DoWhilePuzzle_CheckTextboxInput_System_String_
+  commentId: M:Global.DoWhilePuzzle.CheckTextboxInput(System.String)
+  fullName: DoWhilePuzzle.CheckTextboxInput(System.String)
+  nameWithType: DoWhilePuzzle.CheckTextboxInput(String)
+- uid: Global.DoWhilePuzzle.CheckTextboxInput*
+  name: CheckTextboxInput
+  href: api/Global.DoWhilePuzzle.html#Global_DoWhilePuzzle_CheckTextboxInput_
+  commentId: Overload:Global.DoWhilePuzzle.CheckTextboxInput
+  isSpec: "True"
+  fullName: DoWhilePuzzle.CheckTextboxInput
+  nameWithType: DoWhilePuzzle.CheckTextboxInput
 - uid: Global.EnumerableExtension
   name: EnumerableExtension
   href: api/Global.EnumerableExtension.html
@@ -530,6 +549,44 @@ references:
   commentId: F:Global.FlowerTypes.Types
   fullName: FlowerTypes.Types
   nameWithType: FlowerTypes.Types
+- uid: Global.ForPuzzle
+  name: ForPuzzle
+  href: api/Global.ForPuzzle.html
+  commentId: T:Global.ForPuzzle
+  fullName: ForPuzzle
+  nameWithType: ForPuzzle
+- uid: Global.ForPuzzle.CheckResultIsCorrect(System.String)
+  name: CheckResultIsCorrect(String)
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CheckResultIsCorrect_System_String_
+  commentId: M:Global.ForPuzzle.CheckResultIsCorrect(System.String)
+  fullName: ForPuzzle.CheckResultIsCorrect(System.String)
+  nameWithType: ForPuzzle.CheckResultIsCorrect(String)
+- uid: Global.ForPuzzle.CheckResultIsCorrect*
+  name: CheckResultIsCorrect
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CheckResultIsCorrect_
+  commentId: Overload:Global.ForPuzzle.CheckResultIsCorrect
+  isSpec: "True"
+  fullName: ForPuzzle.CheckResultIsCorrect
+  nameWithType: ForPuzzle.CheckResultIsCorrect
+- uid: Global.ForPuzzle.instructionText
+  name: instructionText
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_instructionText
+  commentId: F:Global.ForPuzzle.instructionText
+  fullName: ForPuzzle.instructionText
+  nameWithType: ForPuzzle.instructionText
+- uid: Global.ForPuzzle.OnStartServer
+  name: OnStartServer()
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartServer
+  commentId: M:Global.ForPuzzle.OnStartServer
+  fullName: ForPuzzle.OnStartServer()
+  nameWithType: ForPuzzle.OnStartServer()
+- uid: Global.ForPuzzle.OnStartServer*
+  name: OnStartServer
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartServer_
+  commentId: Overload:Global.ForPuzzle.OnStartServer
+  isSpec: "True"
+  fullName: ForPuzzle.OnStartServer
+  nameWithType: ForPuzzle.OnStartServer
 - uid: Global.FunctionCheck
   name: FunctionCheck
   href: api/Global.FunctionCheck.html

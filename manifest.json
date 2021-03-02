@@ -204,6 +204,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.DoWhilePuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DoWhilePuzzle.html",
+          "hash": "TFkVMSXALkDtcWJhR24BHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.EnumerableExtension.yml",
       "output": {
         ".html": {
@@ -245,6 +257,18 @@
         ".html": {
           "relative_path": "api/Global.FlowerTypes.html",
           "hash": "wN5UYQiGDKVJc2sQblPCXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.ForPuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.ForPuzzle.html",
+          "hash": "wsT6YSZ9yGtQUQNkLYp7RA=="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1048,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "adyLB07hs/gEJbHThthTFg=="
+          "hash": "vNoLo4gVwJzke8LdMJG6NQ=="
         }
       },
       "is_incremental": false,
@@ -1036,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "wCmxO1CIWKBKs5k+dm0rDw=="
+          "hash": "CBMBAYUy/04s8JNU2JK+Vw=="
         }
       },
       "is_incremental": false,
@@ -1145,7 +1169,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 84,
+          "total_file_count": 86,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
