@@ -9,61 +9,30 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
-- uid: Global.ActivityInfo
-  name: ActivityInfo
-  href: api/Global.ActivityInfo.html
-  commentId: T:Global.ActivityInfo
-  fullName: ActivityInfo
-  nameWithType: ActivityInfo
-- uid: Global.ActivityInfo.activityName
-  name: activityName
-  href: api/Global.ActivityInfo.html#Global_ActivityInfo_activityName
-  commentId: F:Global.ActivityInfo.activityName
-  fullName: ActivityInfo.activityName
-  nameWithType: ActivityInfo.activityName
-- uid: Global.ActivityInfo.id
-  name: id
-  href: api/Global.ActivityInfo.html#Global_ActivityInfo_id
-  commentId: F:Global.ActivityInfo.id
-  fullName: ActivityInfo.id
-  nameWithType: ActivityInfo.id
-- uid: Global.ActivityInteractuableInfo
-  name: ActivityInteractuableInfo
-  href: api/Global.ActivityInteractuableInfo.html
-  commentId: T:Global.ActivityInteractuableInfo
-  fullName: ActivityInteractuableInfo
-  nameWithType: ActivityInteractuableInfo
-- uid: Global.ActivityInteractuableInfo.forActivityId
-  name: forActivityId
-  href: api/Global.ActivityInteractuableInfo.html#Global_ActivityInteractuableInfo_forActivityId
-  commentId: F:Global.ActivityInteractuableInfo.forActivityId
-  fullName: ActivityInteractuableInfo.forActivityId
-  nameWithType: ActivityInteractuableInfo.forActivityId
-- uid: Global.ActivityList
-  name: ActivityList
-  href: api/Global.ActivityList.html
-  commentId: T:Global.ActivityList
-  fullName: ActivityList
-  nameWithType: ActivityList
-- uid: Global.ActivityList.activities
-  name: activities
-  href: api/Global.ActivityList.html#Global_ActivityList_activities
-  commentId: F:Global.ActivityList.activities
-  fullName: ActivityList.activities
-  nameWithType: ActivityList.activities
-- uid: Global.ActivityList.OnStartServer
-  name: OnStartServer()
-  href: api/Global.ActivityList.html#Global_ActivityList_OnStartServer
-  commentId: M:Global.ActivityList.OnStartServer
-  fullName: ActivityList.OnStartServer()
-  nameWithType: ActivityList.OnStartServer()
-- uid: Global.ActivityList.OnStartServer*
-  name: OnStartServer
-  href: api/Global.ActivityList.html#Global_ActivityList_OnStartServer_
-  commentId: Overload:Global.ActivityList.OnStartServer
-  isSpec: "True"
-  fullName: ActivityList.OnStartServer
-  nameWithType: ActivityList.OnStartServer
+- uid: Global.BoilerSabotageOptions
+  name: BoilerSabotageOptions
+  href: api/Global.BoilerSabotageOptions.html
+  commentId: T:Global.BoilerSabotageOptions
+  fullName: BoilerSabotageOptions
+  nameWithType: BoilerSabotageOptions
+- uid: Global.BoilerSabotageOptions.gauge
+  name: gauge
+  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_gauge
+  commentId: F:Global.BoilerSabotageOptions.gauge
+  fullName: BoilerSabotageOptions.gauge
+  nameWithType: BoilerSabotageOptions.gauge
+- uid: Global.BoilerSabotageOptions.maximum
+  name: maximum
+  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_maximum
+  commentId: F:Global.BoilerSabotageOptions.maximum
+  fullName: BoilerSabotageOptions.maximum
+  nameWithType: BoilerSabotageOptions.maximum
+- uid: Global.BoilerSabotageOptions.minimum
+  name: minimum
+  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_minimum
+  commentId: F:Global.BoilerSabotageOptions.minimum
+  fullName: BoilerSabotageOptions.minimum
+  nameWithType: BoilerSabotageOptions.minimum
 - uid: Global.CameraControl
   name: CameraControl
   href: api/Global.CameraControl.html
@@ -1552,6 +1521,12 @@ references:
   isSpec: "True"
   fullName: PlayerVotingButton.PlayerSprite
   nameWithType: PlayerVotingButton.PlayerSprite
+- uid: Global.PressureSabotagePuzzle
+  name: PressureSabotagePuzzle
+  href: api/Global.PressureSabotagePuzzle.html
+  commentId: T:Global.PressureSabotagePuzzle
+  fullName: PressureSabotagePuzzle
+  nameWithType: PressureSabotagePuzzle
 - uid: Global.Puzzle
   name: Puzzle
   href: api/Global.Puzzle.html
@@ -1947,6 +1922,25 @@ references:
   commentId: F:Global.PuzzleInformation.completed
   fullName: PuzzleInformation.completed
   nameWithType: PuzzleInformation.completed
+- uid: Global.PuzzleInformation.Equals(PuzzleInformation)
+  name: Equals(PuzzleInformation)
+  href: api/Global.PuzzleInformation.html#Global_PuzzleInformation_Equals_PuzzleInformation_
+  commentId: M:Global.PuzzleInformation.Equals(PuzzleInformation)
+  fullName: PuzzleInformation.Equals(PuzzleInformation)
+  nameWithType: PuzzleInformation.Equals(PuzzleInformation)
+- uid: Global.PuzzleInformation.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Global.PuzzleInformation.html#Global_PuzzleInformation_Equals_System_Object_
+  commentId: M:Global.PuzzleInformation.Equals(System.Object)
+  fullName: PuzzleInformation.Equals(System.Object)
+  nameWithType: PuzzleInformation.Equals(Object)
+- uid: Global.PuzzleInformation.Equals*
+  name: Equals
+  href: api/Global.PuzzleInformation.html#Global_PuzzleInformation_Equals_
+  commentId: Overload:Global.PuzzleInformation.Equals
+  isSpec: "True"
+  fullName: PuzzleInformation.Equals
+  nameWithType: PuzzleInformation.Equals
 - uid: Global.PuzzlesToDo
   name: PuzzlesToDo
   href: api/Global.PuzzlesToDo.html
@@ -1991,6 +1985,51 @@ references:
   isSpec: "True"
   fullName: ReportDeath.OnApproach
   nameWithType: ReportDeath.OnApproach
+- uid: Global.SabotageBoilers
+  name: SabotageBoilers
+  href: api/Global.SabotageBoilers.html
+  commentId: T:Global.SabotageBoilers
+  fullName: SabotageBoilers
+  nameWithType: SabotageBoilers
+- uid: Global.SabotageBoilers.OnStartServer
+  name: OnStartServer()
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartServer
+  commentId: M:Global.SabotageBoilers.OnStartServer
+  fullName: SabotageBoilers.OnStartServer()
+  nameWithType: SabotageBoilers.OnStartServer()
+- uid: Global.SabotageBoilers.OnStartServer*
+  name: OnStartServer
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartServer_
+  commentId: Overload:Global.SabotageBoilers.OnStartServer
+  isSpec: "True"
+  fullName: SabotageBoilers.OnStartServer
+  nameWithType: SabotageBoilers.OnStartServer
+- uid: Global.SabotageBoilers.SetMaximum(System.String)
+  name: SetMaximum(String)
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMaximum_System_String_
+  commentId: M:Global.SabotageBoilers.SetMaximum(System.String)
+  fullName: SabotageBoilers.SetMaximum(System.String)
+  nameWithType: SabotageBoilers.SetMaximum(String)
+- uid: Global.SabotageBoilers.SetMaximum*
+  name: SetMaximum
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMaximum_
+  commentId: Overload:Global.SabotageBoilers.SetMaximum
+  isSpec: "True"
+  fullName: SabotageBoilers.SetMaximum
+  nameWithType: SabotageBoilers.SetMaximum
+- uid: Global.SabotageBoilers.SetMinimum(System.String)
+  name: SetMinimum(String)
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMinimum_System_String_
+  commentId: M:Global.SabotageBoilers.SetMinimum(System.String)
+  fullName: SabotageBoilers.SetMinimum(System.String)
+  nameWithType: SabotageBoilers.SetMinimum(String)
+- uid: Global.SabotageBoilers.SetMinimum*
+  name: SetMinimum
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMinimum_
+  commentId: Overload:Global.SabotageBoilers.SetMinimum
+  isSpec: "True"
+  fullName: SabotageBoilers.SetMinimum
+  nameWithType: SabotageBoilers.SetMinimum
 - uid: Global.SetServerUrlToNetworkManagerOnStart
   name: SetServerUrlToNetworkManagerOnStart
   href: api/Global.SetServerUrlToNetworkManagerOnStart.html

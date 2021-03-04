@@ -1,18 +1,8 @@
 {
-  "api/Global.ActivityInfo.html": {
-    "href": "api/Global.ActivityInfo.html",
-    "title": "Class ActivityInfo | A night in the house of Hunt",
-    "keywords": "Class ActivityInfo Inheritance Object ActivityInfo Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ActivityInfo : ScriptableObject Fields activityName Declaration public string activityName Field Value Type Description String id Declaration public string id Field Value Type Description String"
-  },
-  "api/Global.ActivityInteractuableInfo.html": {
-    "href": "api/Global.ActivityInteractuableInfo.html",
-    "title": "Class ActivityInteractuableInfo | A night in the house of Hunt",
-    "keywords": "Class ActivityInteractuableInfo Inheritance Object ActivityInteractuableInfo Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ActivityInteractuableInfo : MonoBehaviour Fields forActivityId Declaration public string forActivityId Field Value Type Description String"
-  },
-  "api/Global.ActivityList.html": {
-    "href": "api/Global.ActivityList.html",
-    "title": "Class ActivityList | A night in the house of Hunt",
-    "keywords": "Class ActivityList Inheritance Object Mirror.NetworkBehaviour ActivityList Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ActivityList : NetworkBehaviour Fields activities Declaration public SyncList<ActivityInfo> activities Field Value Type Description Mirror.SyncList < ActivityInfo > Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
+  "api/Global.BoilerSabotageOptions.html": {
+    "href": "api/Global.BoilerSabotageOptions.html",
+    "title": "Class BoilerSabotageOptions | A night in the house of Hunt",
+    "keywords": "Class BoilerSabotageOptions Inheritance Object BoilerSabotageOptions Namespace : Global Assembly : cs.temp.dll.dll Syntax public class BoilerSabotageOptions Fields gauge Declaration public Sprite gauge Field Value Type Description Sprite maximum Declaration public int maximum Field Value Type Description Int32 minimum Declaration public int minimum Field Value Type Description Int32"
   },
   "api/Global.CameraControl.html": {
     "href": "api/Global.CameraControl.html",
@@ -152,7 +142,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | A night in the house of Hunt",
-    "keywords": "Namespace Global Classes ActivityInfo ActivityInteractuableInfo ActivityList CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CompleteBoolPuzzle CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die DisableOnLackOfAuthority DoWhilePuzzle Logic for do while puzzle EnumerableExtension FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. FlowerButtonModel FlowerTypes ForPuzzle FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. HamiltonNetworkRoomManager HelloNanabot String puzzle logic Highlight HubConfig IfElsePuzzle InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting Sets up player buttons for the voting screen. PlayerVotingButton Puzzle PuzzleActiveOutline PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleCompletion PuzzleIdSerialization PuzzleInformation PuzzlesToDo ReportDeath SetServerUrlToNetworkManagerOnStart SetupDefaultFlowers SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags Teletransport Test TriggerEmergencyMeeting UIGameStart UILobbyConnect UiPlayerCountUpdate UpdatePlayerName UpdateTimeRemaining VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WhilePuzzle WorldInteraction Enums CharacterTypes Available characters in game (for passing around) FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
+    "keywords": "Namespace Global Classes BoilerSabotageOptions CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CompleteBoolPuzzle CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die DisableOnLackOfAuthority DoWhilePuzzle Logic for do while puzzle EnumerableExtension FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. FlowerButtonModel FlowerTypes ForPuzzle FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. HamiltonNetworkRoomManager HelloNanabot String puzzle logic Highlight HubConfig IfElsePuzzle InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting Sets up player buttons for the voting screen. PlayerVotingButton PressureSabotagePuzzle Puzzle PuzzleActiveOutline PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleCompletion PuzzleIdSerialization PuzzlesToDo ReportDeath SabotageBoilers SetServerUrlToNetworkManagerOnStart SetupDefaultFlowers SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags Teletransport Test TriggerEmergencyMeeting UIGameStart UILobbyConnect UiPlayerCountUpdate UpdatePlayerName UpdateTimeRemaining VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WhilePuzzle WorldInteraction Structs PuzzleInformation Enums CharacterTypes Available characters in game (for passing around) FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
   },
   "api/Global.HubConfig.html": {
     "href": "api/Global.HubConfig.html",
@@ -254,6 +244,11 @@
     "title": "Class PlayerVotingButton | A night in the house of Hunt",
     "keywords": "Class PlayerVotingButton Inheritance Object PlayerVotingButton Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayerVotingButton : MonoBehaviour Fields onSelect Declaration public UnityEvent onSelect Field Value Type Description UnityEvent Properties IsDead Declaration public bool IsDead { get; set; } Property Value Type Description Boolean Name Declaration public string Name { get; set; } Property Value Type Description String PlayerSprite Declaration public Sprite PlayerSprite { get; set; } Property Value Type Description Sprite"
   },
+  "api/Global.PressureSabotagePuzzle.html": {
+    "href": "api/Global.PressureSabotagePuzzle.html",
+    "title": "Class PressureSabotagePuzzle | A night in the house of Hunt",
+    "keywords": "Class PressureSabotagePuzzle Inheritance Object Mirror.NetworkBehaviour PressureSabotagePuzzle Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PressureSabotagePuzzle : NetworkBehaviour"
+  },
   "api/Global.Puzzle.Class.html": {
     "href": "api/Global.Puzzle.Class.html",
     "title": "Enum Puzzle.Class | A night in the house of Hunt",
@@ -306,8 +301,8 @@
   },
   "api/Global.PuzzleInformation.html": {
     "href": "api/Global.PuzzleInformation.html",
-    "title": "Class PuzzleInformation | A night in the house of Hunt",
-    "keywords": "Class PuzzleInformation Inheritance Object PuzzleInformation Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PuzzleInformation Fields completed Declaration public bool completed Field Value Type Description Boolean"
+    "title": "Struct PuzzleInformation | A night in the house of Hunt",
+    "keywords": "Struct PuzzleInformation Implements IEquatable < PuzzleInformation > Namespace : Global Assembly : cs.temp.dll.dll Syntax public struct PuzzleInformation : IEquatable<PuzzleInformation> Fields completed Declaration public bool completed Field Value Type Description Boolean Methods Equals(PuzzleInformation) Declaration public bool Equals(PuzzleInformation other) Parameters Type Name Description PuzzleInformation other Returns Type Description Boolean Equals(Object) Declaration public override bool Equals(object obj) Parameters Type Name Description Object obj Returns Type Description Boolean Overrides ValueType.Equals(Object) Implements IEquatable<>"
   },
   "api/Global.PuzzlesToDo.html": {
     "href": "api/Global.PuzzlesToDo.html",
@@ -318,6 +313,11 @@
     "href": "api/Global.ReportDeath.html",
     "title": "Class ReportDeath | A night in the house of Hunt",
     "keywords": "Class ReportDeath Inheritance Object Mirror.NetworkBehaviour InteractuableBehavior ReportDeath Namespace : Global Assembly : cs.temp.dll.dll Syntax public class ReportDeath : InteractuableBehavior Methods OnApproach(GameObject) Declaration public override void OnApproach(GameObject approachedBy) Parameters Type Name Description GameObject approachedBy Overrides InteractuableBehavior.OnApproach(GameObject)"
+  },
+  "api/Global.SabotageBoilers.html": {
+    "href": "api/Global.SabotageBoilers.html",
+    "title": "Class SabotageBoilers | A night in the house of Hunt",
+    "keywords": "Class SabotageBoilers Inheritance Object Mirror.NetworkBehaviour SabotageBoilers Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SabotageBoilers : NetworkBehaviour Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() SetMaximum(String) Declaration public void SetMaximum(string input) Parameters Type Name Description String input SetMinimum(String) Declaration public void SetMinimum(string input) Parameters Type Name Description String input"
   },
   "api/Global.SetServerUrlToNetworkManagerOnStart.html": {
     "href": "api/Global.SetServerUrlToNetworkManagerOnStart.html",
