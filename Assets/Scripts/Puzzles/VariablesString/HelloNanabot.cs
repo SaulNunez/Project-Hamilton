@@ -24,6 +24,7 @@ public class HelloNanabot : NetworkBehaviour
         var helloMessage = $"Hola {message}";
         SayOnClient(netIdentity.connectionToClient, helloMessage);
         PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableString);
+        RpcClosePuzzle();
     }
 
     [TargetRpc]
@@ -32,5 +33,11 @@ public class HelloNanabot : NetworkBehaviour
         var nanabot = GameObject.FindGameObjectWithTag(Tags.Nanabot);
         var nanabotSays = nanabot.GetComponent<NanabotSays>();
         nanabotSays.SayMessage(message);
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

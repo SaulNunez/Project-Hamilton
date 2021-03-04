@@ -55,6 +55,13 @@ public class IfElsePuzzle : NetworkBehaviour
         if (!isCake)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse);
+            RpcClosePuzzle();
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

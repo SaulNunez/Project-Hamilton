@@ -94,6 +94,13 @@ public class SabotageBoilers : NetworkBehaviour
         if (isCorrect)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.SabotageBoilerPressure);
+            RpcClosePuzzle();
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

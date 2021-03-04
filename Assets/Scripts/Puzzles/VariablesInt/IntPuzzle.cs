@@ -114,7 +114,14 @@ namespace Puzzles.Variables.Int
             if (value == defTem)
             {
                 PuzzleCompletion.instance.MarkCompleted(useFloatDefaultTemperature ? PuzzleId.VariableFloat : PuzzleId.BoilersVariableInteger);
+                RpcClosePuzzle();
             }
+        }
+
+        [ClientRpc]
+        void RpcClosePuzzle()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

@@ -69,55 +69,55 @@ public class ShowPuzzle : NetworkBehaviour
         var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
 
         var boilerIntInstance = Instantiate(boilerIntPrefab, canvas.transform);
-        NetworkServer.Spawn(boilerIntInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(boilerIntInstance, netIdentity.connectionToClient);
         boilerInt = boilerIntInstance;
 
         var sequenceInstance = Instantiate(sequencePrefab, canvas.transform);
-        NetworkServer.Spawn(sequenceInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(sequenceInstance, netIdentity.connectionToClient);
         sequence = sequenceInstance;
 
         var variablesStringInstance = Instantiate(variablesStringPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesStringInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(variablesStringInstance, netIdentity.connectionToClient);
         variablesString = variablesStringInstance;
 
         var variablesBoolInstance = Instantiate(variablesBoolPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesBoolInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(variablesBoolInstance, netIdentity.connectionToClient);
         variablesBool = variablesBoolInstance;
 
         var doWhileCarStarterInstance = Instantiate(doWhileCarStarterPrefab, canvas.transform);
-        NetworkServer.Spawn(doWhileCarStarterInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(doWhileCarStarterInstance, netIdentity.connectionToClient);
         doWhileCarStarter = doWhileCarStarterInstance;
 
         var floatThermostatInstance = Instantiate(floatThermostatPrefab, canvas.transform);
-        NetworkServer.Spawn(floatThermostatInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(floatThermostatInstance, netIdentity.connectionToClient);
         floatThermostat = floatThermostatInstance;
 
         var forWashingInstance = Instantiate(forWashingPrefab, canvas.transform);
-        NetworkServer.Spawn(forWashingInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(forWashingInstance, netIdentity.connectionToClient);
         forWashing = forWashingInstance;
 
         var whileFillWaterBucketInstance = Instantiate(whileFillWaterBucketPrefab, canvas.transform);
-        NetworkServer.Spawn(whileFillWaterBucketInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(whileFillWaterBucketInstance, netIdentity.connectionToClient);
         whileFillWaterBucket = whileFillWaterBucketInstance;
 
         var ifPickFlowerInstance = Instantiate(ifPickFlowerPrefab, canvas.transform);
-        NetworkServer.Spawn(ifPickFlowerInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(ifPickFlowerInstance, netIdentity.connectionToClient);
         ifPickFlower = ifPickFlowerInstance;
 
         var substringInstance = Instantiate(substringPrefab, canvas.transform);
-        NetworkServer.Spawn(substringInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(substringInstance, netIdentity.connectionToClient);
         substring = substringInstance;
 
         var ifelseCakeInstance = Instantiate(ifelseCakePrefab, canvas.transform);
-        NetworkServer.Spawn(ifelseCakeInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(ifelseCakeInstance, netIdentity.connectionToClient);
         ifelseCake = ifelseCakeInstance;
 
         var sabotagePresureInstance = Instantiate(sabotagePresurePrefab, canvas.transform);
-        NetworkServer.Spawn(sabotagePresureInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(sabotagePresureInstance, netIdentity.connectionToClient);
         sabotagePresure = sabotagePresureInstance;
 
         var sabotageElectricityInstance = Instantiate(sabotageElectricityPrefab, canvas.transform);
-        NetworkServer.Spawn(sabotageElectricityInstance, netIdentity.connectionToServer);
+        NetworkServer.Spawn(sabotageElectricityInstance, netIdentity.connectionToClient);
         sabotageElectricity = sabotageElectricityInstance;
     }
 

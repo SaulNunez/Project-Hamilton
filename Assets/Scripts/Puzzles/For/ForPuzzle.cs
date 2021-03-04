@@ -66,6 +66,13 @@ public class ForPuzzle : NetworkBehaviour
         if(input == turnsToWash)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket);
+            RpcClosePuzzle();
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

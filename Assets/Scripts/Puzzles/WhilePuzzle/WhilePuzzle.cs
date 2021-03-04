@@ -27,6 +27,13 @@ public class WhilePuzzle : NetworkBehaviour
         if(input == defaultValue)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket);
+            RpcClosePuzzle();
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -19,6 +19,13 @@ public class DoWhilePuzzle : NetworkBehaviour
         if(text.ToLower() == "verdadero")
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.DoWhileMotorStarter);
+            RpcClosePuzzle();
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }

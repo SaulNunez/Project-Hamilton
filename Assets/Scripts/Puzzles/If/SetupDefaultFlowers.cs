@@ -65,6 +65,7 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         if(clickFlowerType == defaultFlowerType)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking);
+            RpcClosePuzzle();
         }
     }
 
@@ -92,5 +93,11 @@ public class SetupDefaultFlowers: NetworkBehaviour {
             //En click, mandar seleccion al servidor
             flowerButtons[i].button.onClick.AddListener(() => CmdOnButtonClick(flowerTypes[i]));
         }
+    }
+
+    [ClientRpc]
+    void RpcClosePuzzle()
+    {
+        gameObject.SetActive(false);
     }
 }
