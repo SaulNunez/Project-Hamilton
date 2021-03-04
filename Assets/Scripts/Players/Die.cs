@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Controls alive status on client and what to do when player dies.
+/// </summary>
 public class Die : NetworkBehaviour
 {
     public bool isDead = false;
@@ -19,14 +23,11 @@ public class Die : NetworkBehaviour
     [Server]
     public void SetDed()
     {
-        anim.SetBool("Dead", true);
+        SetSimpleDeath();
 
         //Mostrar tumbita
         var deathRemainings = Instantiate(deathPrefab, transform.position, Quaternion.identity);
         NetworkServer.Spawn(deathRemainings);
-
-        var ghostLayer = LayerMask.NameToLayer("Ghost");
-        gameObject.layer = ghostLayer;
     }
 
     /// <summary>
@@ -38,5 +39,13 @@ public class Die : NetworkBehaviour
         anim.SetBool("Dead", true);
         var ghostLayer = LayerMask.NameToLayer("Ghost");
         gameObject.layer = ghostLayer;
+        TargetOnDeathConfig(netIdentity.connectionToClient);
+    }
+
+    [TargetRpc]
+    void TargetOnDeathConfig(NetworkConnection target)
+    {
+        //Mostrar capa de fantasmas
+        Camera.main.cullingMask = Camera.main.cullingMask | LayerMask.NameToLayer(Layers.Ghost);
     }
 }
