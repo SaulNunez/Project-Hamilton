@@ -18,4 +18,9 @@ public struct PuzzleInformation : IEquatable<PuzzleInformation>
     {
         return completed == other.completed;
     }
+
+    public PuzzleInformation(bool completed)
+    {
+        this.completed = completed;
+    }
 }
