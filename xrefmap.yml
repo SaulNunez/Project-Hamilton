@@ -1052,6 +1052,12 @@ references:
   commentId: T:Global.Layers
   fullName: Layers
   nameWithType: Layers
+- uid: Global.Layers.Ghost
+  name: Ghost
+  href: api/Global.Layers.html#Global_Layers_Ghost
+  commentId: F:Global.Layers.Ghost
+  fullName: Layers.Ghost
+  nameWithType: Layers.Ghost
 - uid: Global.Layers.Interactuable
   name: Interactuable
   href: api/Global.Layers.html#Global_Layers_Interactuable
@@ -1470,6 +1476,19 @@ references:
   commentId: T:Global.PlayersForVoting
   fullName: PlayersForVoting
   nameWithType: PlayersForVoting
+- uid: Global.PlayersForVoting.SkipVoting
+  name: SkipVoting()
+  href: api/Global.PlayersForVoting.html#Global_PlayersForVoting_SkipVoting
+  commentId: M:Global.PlayersForVoting.SkipVoting
+  fullName: PlayersForVoting.SkipVoting()
+  nameWithType: PlayersForVoting.SkipVoting()
+- uid: Global.PlayersForVoting.SkipVoting*
+  name: SkipVoting
+  href: api/Global.PlayersForVoting.html#Global_PlayersForVoting_SkipVoting_
+  commentId: Overload:Global.PlayersForVoting.SkipVoting
+  isSpec: "True"
+  fullName: PlayersForVoting.SkipVoting
+  nameWithType: PlayersForVoting.SkipVoting
 - uid: Global.PlayerVotingButton
   name: PlayerVotingButton
   href: api/Global.PlayerVotingButton.html
@@ -2247,6 +2266,18 @@ references:
   isSpec: "True"
   fullName: TriggerEmergencyMeeting.OnApproach
   nameWithType: TriggerEmergencyMeeting.OnApproach
+- uid: Global.UiElements
+  name: UiElements
+  href: api/Global.UiElements.html
+  commentId: T:Global.UiElements
+  fullName: UiElements
+  nameWithType: UiElements
+- uid: Global.UiElements.votingScreen
+  name: votingScreen
+  href: api/Global.UiElements.html#Global_UiElements_votingScreen
+  commentId: F:Global.UiElements.votingScreen
+  fullName: UiElements.votingScreen
+  nameWithType: UiElements.votingScreen
 - uid: Global.UIGameStart
   name: UIGameStart
   href: api/Global.UIGameStart.html

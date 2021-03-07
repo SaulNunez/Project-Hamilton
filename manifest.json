@@ -160,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Die.html",
-          "hash": "6GigBm+KMwWF/AmOrbSQsg=="
+          "hash": "HQA9VFNSfknigTkb3N20SQ=="
         }
       },
       "is_incremental": false,
@@ -448,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Layers.html",
-          "hash": "YG/a80AkVbUQcC5iVa8/kQ=="
+          "hash": "jMGTA1XPdoBOyIPvtqYZ9w=="
         }
       },
       "is_incremental": false,
@@ -592,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayersForVoting.html",
-          "hash": "66BY5TWqTDjilZmD9oT2iA=="
+          "hash": "gIVtD+s4Y1pg/Fv7R/prhQ=="
         }
       },
       "is_incremental": false,
@@ -924,6 +924,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.UiElements.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UiElements.html",
+          "hash": "O/D9W4K7BwSVDwjDlTF/8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.UiPlayerCountUpdate.yml",
       "output": {
         ".html": {
@@ -952,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpdateTimeRemaining.html",
-          "hash": "Lgpswo7MxUBe/rUWNmTphA=="
+          "hash": "jNnSGV7O2+nQ7RN/VdjL8A=="
         }
       },
       "is_incremental": false,
@@ -976,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.VotingManager.html",
-          "hash": "jRcfStN2lEvhAu/0eXIbXQ=="
+          "hash": "fszqhYGUqyUc+5ULj47eWw=="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "Gni7BD5iEPr1DGjjviLW1A=="
+          "hash": "UzF81QtK1skfwGvJAtyhVg=="
         }
       },
       "is_incremental": false,
@@ -1072,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BYLKBMx3TXYEVP6mWnP0HA=="
+          "hash": "v/sShKuX2YR3MeqCXmEJNw=="
         }
       },
       "is_incremental": false,
@@ -1181,7 +1193,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 87,
+          "total_file_count": 88,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
