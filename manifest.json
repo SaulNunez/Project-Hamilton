@@ -736,7 +736,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleInformation.html",
-          "hash": "6y16eOqMkALxSdEDyQQ6Aw=="
+          "hash": "GBFeS9q9fBGsXXd3/ucpFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleInformationSerialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleInformationSerialization.html",
+          "hash": "7D/ufI6QfzVNrXv38/Zm+Q=="
         }
       },
       "is_incremental": false,
@@ -1072,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "UzF81QtK1skfwGvJAtyhVg=="
+          "hash": "NR0D6NcsITO85RLsfJ73Wg=="
         }
       },
       "is_incremental": false,
@@ -1084,7 +1096,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "v/sShKuX2YR3MeqCXmEJNw=="
+          "hash": "g9WSL5HxFHLlj6/StEFy8g=="
         }
       },
       "is_incremental": false,
@@ -1193,7 +1205,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 88,
+          "total_file_count": 89,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

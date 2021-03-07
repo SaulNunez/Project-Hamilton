@@ -1935,6 +1935,19 @@ references:
   commentId: T:Global.PuzzleInformation
   fullName: PuzzleInformation
   nameWithType: PuzzleInformation
+- uid: Global.PuzzleInformation.#ctor(System.Boolean)
+  name: PuzzleInformation(Boolean)
+  href: api/Global.PuzzleInformation.html#Global_PuzzleInformation__ctor_System_Boolean_
+  commentId: M:Global.PuzzleInformation.#ctor(System.Boolean)
+  fullName: PuzzleInformation.PuzzleInformation(System.Boolean)
+  nameWithType: PuzzleInformation.PuzzleInformation(Boolean)
+- uid: Global.PuzzleInformation.#ctor*
+  name: PuzzleInformation
+  href: api/Global.PuzzleInformation.html#Global_PuzzleInformation__ctor_
+  commentId: Overload:Global.PuzzleInformation.#ctor
+  isSpec: "True"
+  fullName: PuzzleInformation.PuzzleInformation
+  nameWithType: PuzzleInformation.PuzzleInformation
 - uid: Global.PuzzleInformation.completed
   name: completed
   href: api/Global.PuzzleInformation.html#Global_PuzzleInformation_completed
@@ -1960,6 +1973,38 @@ references:
   isSpec: "True"
   fullName: PuzzleInformation.Equals
   nameWithType: PuzzleInformation.Equals
+- uid: Global.PuzzleInformationSerialization
+  name: PuzzleInformationSerialization
+  href: api/Global.PuzzleInformationSerialization.html
+  commentId: T:Global.PuzzleInformationSerialization
+  fullName: PuzzleInformationSerialization
+  nameWithType: PuzzleInformationSerialization
+- uid: Global.PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
+  name: ReadPuzzleId(NetworkReader)
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleId_Mirror_NetworkReader_
+  commentId: M:Global.PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
+  fullName: PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
+  nameWithType: PuzzleInformationSerialization.ReadPuzzleId(NetworkReader)
+- uid: Global.PuzzleInformationSerialization.ReadPuzzleId*
+  name: ReadPuzzleId
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleId_
+  commentId: Overload:Global.PuzzleInformationSerialization.ReadPuzzleId
+  isSpec: "True"
+  fullName: PuzzleInformationSerialization.ReadPuzzleId
+  nameWithType: PuzzleInformationSerialization.ReadPuzzleId
+- uid: Global.PuzzleInformationSerialization.WritePuzzleId(Mirror.NetworkWriter,PuzzleInformation)
+  name: WritePuzzleId(NetworkWriter, PuzzleInformation)
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_WritePuzzleId_Mirror_NetworkWriter_PuzzleInformation_
+  commentId: M:Global.PuzzleInformationSerialization.WritePuzzleId(Mirror.NetworkWriter,PuzzleInformation)
+  fullName: PuzzleInformationSerialization.WritePuzzleId(Mirror.NetworkWriter, PuzzleInformation)
+  nameWithType: PuzzleInformationSerialization.WritePuzzleId(NetworkWriter, PuzzleInformation)
+- uid: Global.PuzzleInformationSerialization.WritePuzzleId*
+  name: WritePuzzleId
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_WritePuzzleId_
+  commentId: Overload:Global.PuzzleInformationSerialization.WritePuzzleId
+  isSpec: "True"
+  fullName: PuzzleInformationSerialization.WritePuzzleId
+  nameWithType: PuzzleInformationSerialization.WritePuzzleId
 - uid: Global.PuzzlesToDo
   name: PuzzlesToDo
   href: api/Global.PuzzlesToDo.html
