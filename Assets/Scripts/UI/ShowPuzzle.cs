@@ -121,7 +121,7 @@ public class ShowPuzzle : NetworkBehaviour
         sabotageElectricity = sabotageElectricityInstance;
     }
 
-    private void StopCurrentPuzzle()
+    private void StopCurrentPuzzle(int _)
     {
         boilerInt.SetActive(false);
         sequence.SetActive(false);

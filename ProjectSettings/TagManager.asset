@@ -11,6 +11,8 @@ TagManager:
   - VotingManager
   - UIManager
   - Nanabot
+  - ChatWindow
+  - VotingScreen
   layers:
   - Default
   - TransparentFX

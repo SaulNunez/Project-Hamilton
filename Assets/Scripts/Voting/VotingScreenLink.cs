@@ -1,6 +1,5 @@
 ﻿using Mirror;
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -9,47 +8,42 @@ using UnityEngine;
 /// </summary>
 public class VotingScreenLink : NetworkBehaviour
 {
-    [SerializeField]
-    GameObject votingScreenPrefab;
-
-    [SyncVar]
-    GameObject instancedVotingScreen;
+    readonly Lazy<GameObject> instancedVotingScreen =
+        new Lazy<GameObject>(() => GameObject.FindGameObjectWithTag(Tags.UiManager).GetComponent<UiElements>().votingScreen);
 
     public override void OnStartServer()
     {
         base.OnStartServer();
 
-        var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
-        var instanced = Instantiate(votingScreenPrefab, canvas.transform);
-
-        //Spawnear con ownership del jugador
-        NetworkServer.Spawn(instanced, gameObject);
-
-        instancedVotingScreen = instanced;
-
-        VotingManager.OnVotingStarted += OpenVotingScreen;
-        VotingManager.OnVotingEnded += ClosingVotingScreen;
+        VotingManager.OnVotingStarted += RpcOpenVotingScreen;
+        VotingManager.OnVotingEnded += RpcClosingVotingScreen;
     }
 
-    [Server]
-    private void OpenVotingScreen()
+    [ClientRpc]
+    private void RpcOpenVotingScreen(int _)
     {
-        print("Show puzzle");
-        instancedVotingScreen.SetActive(true);
+        if (hasAuthority)
+        {
+            print("Show voting screen");
+            instancedVotingScreen.Value.SetActive(true);
+        }
     }
 
-    [Server]
-    private void ClosingVotingScreen()
+    [ClientRpc]
+    private void RpcClosingVotingScreen()
     {
-        print("Hide puzzle");
-        instancedVotingScreen.SetActive(false);
+        if (hasAuthority)
+        {
+            print("Hide voting screen");
+            instancedVotingScreen.Value.SetActive(false);
+        }
     }
 
     public override void OnStopServer()
     {
         base.OnStopServer();
 
-        VotingManager.OnVotingStarted -= OpenVotingScreen;
-        VotingManager.OnVotingEnded -= ClosingVotingScreen;
+        VotingManager.OnVotingStarted -= RpcOpenVotingScreen;
+        VotingManager.OnVotingEnded -= RpcClosingVotingScreen;
     }
 }

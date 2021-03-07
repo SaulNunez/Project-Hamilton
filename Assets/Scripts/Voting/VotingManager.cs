@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class VotingManager : NetworkBehaviour
 {
+    [SyncVar]
     public bool canVote = false;
 
     private Dictionary<NetworkConnection, GameObject> voting = new Dictionary<NetworkConnection, GameObject>();
@@ -49,7 +50,7 @@ public class VotingManager : NetworkBehaviour
         timeRemaining = config.secondsForVoting;
         canVote = true;
 
-        OnVotingStarted?.Invoke();
+        OnVotingStarted?.Invoke(config.secondsForVoting);
 
         StartCoroutine(nameof(WaitForVoting));
     }
@@ -60,7 +61,7 @@ public class VotingManager : NetworkBehaviour
     /// <remarks>
     /// <strong>Only called on server</strong>
     /// </remarks>
-    public static event Action OnVotingStarted;
+    public static event Action<int> OnVotingStarted;
 
     /// <summary>
     /// Cast vote.
@@ -73,27 +74,32 @@ public class VotingManager : NetworkBehaviour
     [Command(ignoreAuthority = true)]
     public void CmdCastVote(GameObject playerVoted, NetworkConnectionToClient sender = null)
     {
-        if (canVote)
+        if (!canVote)
         {
-            var playerDeathComponent = playerVoted.GetComponent<Die>();
-            if (playerDeathComponent != null && playerDeathComponent.isDead)
-            {
-                return;
-            }
-
-            if (voting.ContainsKey(sender))
-            {
-                return;
-            }
-
-            voting.Add(sender, playerVoted);
+            print("Can't vote because no voting has been invoked.");
+            return;
         }
+
+        if (playerVoted != null && playerVoted.GetComponent<Die>().isDead)
+        {
+            print("Player is dead");
+            return;
+        }
+
+        if (voting.ContainsKey(sender))
+        {
+            print("Player has already voted");
+            return;
+        }
+
+        voting.Add(sender, playerVoted);
+        print("Casted vote");
     }
 
     [Server]
     private IEnumerator WaitForVoting()
     {
-        while(timeRemaining > 0)
+        while (timeRemaining > 0)
         {
             timeRemaining--;
             CurrentTimeRemaining?.Invoke(timeRemaining);
@@ -113,28 +119,23 @@ public class VotingManager : NetworkBehaviour
         var votedPlayers = voting.Values.Distinct();
         var votesForPlayer = new Dictionary<GameObject, int>();
 
-        foreach(var player in votedPlayers)
+        foreach (var player in votedPlayers)
         {
             votesForPlayer.Add(player, voting.Values.Count(p => p == player));
         }
 
-        print($"Voting results: {JsonUtility.ToJson(votesForPlayer)}");
+        print($"Voting results: {votesForPlayer.Count}, {voting.Count}");
 
         int skipVotes = 0;
         //Hay jugadores que no votaron porque no eligieron nada a tiempo, estos por default votan por pasar votacion
-        if(voting.Count < NetworkManager.singleton.numPlayers)
+        if (voting.Count < NetworkManager.singleton.numPlayers)
         {
-            if (votesForPlayer.ContainsKey(null))
-            {
-                skipVotes =  NetworkManager.singleton.numPlayers - voting.Count();
-            } else
-            {
-                skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
-            }
+            skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
+
         }
         var mostVotedKV = votesForPlayer.OrderByDescending(x => x.Value).First();
 
-        if(skipVotes > mostVotedKV.Value)
+        if (skipVotes >= mostVotedKV.Value)
         {
             //Mas jugadores votaron por expulsar a nadie
             return;
@@ -142,7 +143,7 @@ public class VotingManager : NetworkBehaviour
 
         var getMostVotedPlayerGameObject = mostVotedKV.Key;
 
-        if(getMostVotedPlayerGameObject != null)
+        if (getMostVotedPlayerGameObject != null)
         {
             var dedPlayer = getMostVotedPlayerGameObject.GetComponent<Die>();
             dedPlayer.SetSimpleDeath();

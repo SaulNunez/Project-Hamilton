@@ -4,6 +4,7 @@ using UnityEngine;
 using Mirror;
 using System;
 
+[Serializable]
 public struct PuzzleInformation : IEquatable<PuzzleInformation>
 {
     public bool completed;
