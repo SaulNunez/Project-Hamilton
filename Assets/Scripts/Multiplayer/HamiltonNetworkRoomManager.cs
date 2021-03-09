@@ -7,6 +7,8 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
 {
     public delegate void SceneChanged();
     public event SceneChanged OnSceneChanged;
+
+    public string PlayerName {get; set;}
     
     public override void OnRoomClientSceneChanged(NetworkConnection conn)
     {

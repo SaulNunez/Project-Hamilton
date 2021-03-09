@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4874987391272967792}
   - component: {fileID: 109999293131254291}
   - component: {fileID: 4172715172699204841}
-  - component: {fileID: 8778735591825429869}
   m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
@@ -94,19 +93,6 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!114 &8778735591825429869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367462530399185292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300fa8b1ce3cd47408351fba40dd744a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: 
 --- !u!1 &8205453721926670665
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +120,7 @@ GameObject:
   - component: {fileID: 4544063956130321910}
   - component: {fileID: 1210587208360967914}
   - component: {fileID: 3320764101421821677}
+  - component: {fileID: 5185405550642313587}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -530,5 +517,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  votingScreenPrefab: {fileID: 4920821009805460555, guid: 5cea5a704f3757e459c3d9444b60b071,
-    type: 3}
+--- !u!114 &5185405550642313587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205453721926670665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300fa8b1ce3cd47408351fba40dd744a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNameLabel: {fileID: 4172715172699204841}

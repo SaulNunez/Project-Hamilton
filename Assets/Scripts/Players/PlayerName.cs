@@ -1,8 +1,19 @@
-﻿using System.Collections;
+﻿using Mirror;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerName : MonoBehaviour
+public class PlayerName : NetworkBehaviour
 {
-    public string playerName;
+    [SerializeField]
+    TextMesh playerNameLabel;
+
+    public string Name { get => playerNameLabel.text; set => playerNameLabel.text = value; }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        Name = (NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName;
+    }
 }
