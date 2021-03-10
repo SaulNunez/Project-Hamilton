@@ -754,6 +754,19 @@ references:
   commentId: E:Global.HamiltonNetworkRoomManager.OnSceneChanged
   fullName: HamiltonNetworkRoomManager.OnSceneChanged
   nameWithType: HamiltonNetworkRoomManager.OnSceneChanged
+- uid: Global.HamiltonNetworkRoomManager.PlayerName
+  name: PlayerName
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_PlayerName
+  commentId: P:Global.HamiltonNetworkRoomManager.PlayerName
+  fullName: HamiltonNetworkRoomManager.PlayerName
+  nameWithType: HamiltonNetworkRoomManager.PlayerName
+- uid: Global.HamiltonNetworkRoomManager.PlayerName*
+  name: PlayerName
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_PlayerName_
+  commentId: Overload:Global.HamiltonNetworkRoomManager.PlayerName
+  isSpec: "True"
+  fullName: HamiltonNetworkRoomManager.PlayerName
+  nameWithType: HamiltonNetworkRoomManager.PlayerName
 - uid: Global.HamiltonNetworkRoomManager.SceneChanged
   name: HamiltonNetworkRoomManager.SceneChanged
   href: api/Global.HamiltonNetworkRoomManager.SceneChanged.html
@@ -1313,12 +1326,32 @@ references:
   commentId: T:Global.PlayerName
   fullName: PlayerName
   nameWithType: PlayerName
-- uid: Global.PlayerName.playerName
-  name: playerName
-  href: api/Global.PlayerName.html#Global_PlayerName_playerName
-  commentId: F:Global.PlayerName.playerName
-  fullName: PlayerName.playerName
-  nameWithType: PlayerName.playerName
+- uid: Global.PlayerName.Name
+  name: Name
+  href: api/Global.PlayerName.html#Global_PlayerName_Name
+  commentId: P:Global.PlayerName.Name
+  fullName: PlayerName.Name
+  nameWithType: PlayerName.Name
+- uid: Global.PlayerName.Name*
+  name: Name
+  href: api/Global.PlayerName.html#Global_PlayerName_Name_
+  commentId: Overload:Global.PlayerName.Name
+  isSpec: "True"
+  fullName: PlayerName.Name
+  nameWithType: PlayerName.Name
+- uid: Global.PlayerName.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PlayerName.html#Global_PlayerName_OnStartClient
+  commentId: M:Global.PlayerName.OnStartClient
+  fullName: PlayerName.OnStartClient()
+  nameWithType: PlayerName.OnStartClient()
+- uid: Global.PlayerName.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PlayerName.html#Global_PlayerName_OnStartClient_
+  commentId: Overload:Global.PlayerName.OnStartClient
+  isSpec: "True"
+  fullName: PlayerName.OnStartClient
+  nameWithType: PlayerName.OnStartClient
 - uid: Global.PlayersChat
   name: PlayersChat
   href: api/Global.PlayersChat.html
@@ -2094,6 +2127,67 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.SetMinimum
   nameWithType: SabotageBoilers.SetMinimum
+- uid: Global.SequenceEditor
+  name: SequenceEditor
+  href: api/Global.SequenceEditor.html
+  commentId: T:Global.SequenceEditor
+  fullName: SequenceEditor
+  nameWithType: SequenceEditor
+- uid: Global.SequenceEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/Global.SequenceEditor.html#Global_SequenceEditor_OnInspectorGUI
+  commentId: M:Global.SequenceEditor.OnInspectorGUI
+  fullName: SequenceEditor.OnInspectorGUI()
+  nameWithType: SequenceEditor.OnInspectorGUI()
+- uid: Global.SequenceEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/Global.SequenceEditor.html#Global_SequenceEditor_OnInspectorGUI_
+  commentId: Overload:Global.SequenceEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: SequenceEditor.OnInspectorGUI
+  nameWithType: SequenceEditor.OnInspectorGUI
+- uid: Global.SequenceGrid
+  name: SequenceGrid
+  href: api/Global.SequenceGrid.html
+  commentId: T:Global.SequenceGrid
+  fullName: SequenceGrid
+  nameWithType: SequenceGrid
+- uid: Global.SequenceGrid.floor
+  name: floor
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_floor
+  commentId: F:Global.SequenceGrid.floor
+  fullName: SequenceGrid.floor
+  nameWithType: SequenceGrid.floor
+- uid: Global.SequenceGrid.floorBackground
+  name: floorBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_floorBackground
+  commentId: F:Global.SequenceGrid.floorBackground
+  fullName: SequenceGrid.floorBackground
+  nameWithType: SequenceGrid.floorBackground
+- uid: Global.SequenceGrid.horizontalSize
+  name: horizontalSize
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_horizontalSize
+  commentId: F:Global.SequenceGrid.horizontalSize
+  fullName: SequenceGrid.horizontalSize
+  nameWithType: SequenceGrid.horizontalSize
+- uid: Global.SequenceGrid.OnPositionUpdate
+  name: OnPositionUpdate
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_OnPositionUpdate
+  commentId: E:Global.SequenceGrid.OnPositionUpdate
+  fullName: SequenceGrid.OnPositionUpdate
+  nameWithType: SequenceGrid.OnPositionUpdate
+- uid: Global.SequenceGrid.verticalSize
+  name: verticalSize
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_verticalSize
+  commentId: F:Global.SequenceGrid.verticalSize
+  fullName: SequenceGrid.verticalSize
+  nameWithType: SequenceGrid.verticalSize
+- uid: Global.SequenceGrid.voidBackground
+  name: voidBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_voidBackground
+  commentId: F:Global.SequenceGrid.voidBackground
+  fullName: SequenceGrid.voidBackground
+  nameWithType: SequenceGrid.voidBackground
 - uid: Global.SetServerUrlToNetworkManagerOnStart
   name: SetServerUrlToNetworkManagerOnStart
   href: api/Global.SetServerUrlToNetworkManagerOnStart.html
@@ -2367,12 +2461,6 @@ references:
   isSpec: "True"
   fullName: UILobbyConnect.LookForGameOnServer
   nameWithType: UILobbyConnect.LookForGameOnServer
-- uid: Global.UiPlayerCountUpdate
-  name: UiPlayerCountUpdate
-  href: api/Global.UiPlayerCountUpdate.html
-  commentId: T:Global.UiPlayerCountUpdate
-  fullName: UiPlayerCountUpdate
-  nameWithType: UiPlayerCountUpdate
 - uid: Global.UpdatePlayerName
   name: UpdatePlayerName
   href: api/Global.UpdatePlayerName.html
