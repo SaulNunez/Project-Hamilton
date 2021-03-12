@@ -16,5 +16,6 @@ public enum PuzzleId
     Substring,
     IfElse,
     SabotageBoilerPressure,
-    SabotageElectricity
+    SabotageElectricity,
+    TheoryVariety
 }
