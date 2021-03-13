@@ -207,9 +207,11 @@ public class ShowPuzzle : NetworkBehaviour
                     ifelseCake.SetActive(true);
                     break;
                 case PuzzleId.SabotageBoilerPressure:
+                    Emergency.instance.StartEmergency(puzzle);
                     sabotagePresure.SetActive(true);
                     break;
                 case PuzzleId.SabotageElectricity:
+                    Emergency.instance.StartEmergency(puzzle);
                     sabotageElectricity.SetActive(true);
                     break;
             }
