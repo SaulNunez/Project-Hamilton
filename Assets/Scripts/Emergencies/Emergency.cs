@@ -27,7 +27,7 @@ public class Emergency : NetworkBehaviour
     /// </remarks>
     private HubConfig hubConfig;
 
-    [SyncVar]
+    [SyncVar(hook = nameof(OnSabotageAvailabilityChanged))]
     private bool areEmergenciesAvailable = false;
 
     [SyncVar]
@@ -66,13 +66,9 @@ public class Emergency : NetworkBehaviour
     /// </summary>
     public static event Action OnEmergencyResolved;
 
-    private void OnBoilerSabotageAvailabilityChange(bool oldValue, bool newValue)
+    private void OnSabotageAvailabilityChanged(bool oldValue, bool newValue)
     {
         boilerSabotage.interactable = newValue;
-    }
-
-    private void OnElectricitySabotageAvailabilityChange(bool oldValue, bool newValue)
-    {
         electricitySabotage.interactable = newValue;
     }
 
@@ -105,6 +101,9 @@ public class Emergency : NetworkBehaviour
     private void StopSabotageOnVotingStarted(int _)
     {
         areEmergenciesAvailable = false;
+        onSabotage = false;
+
+        OnEmergencyResolved?.Invoke();
     }
 
     /// <summary>
@@ -148,6 +147,7 @@ public class Emergency : NetworkBehaviour
         timeRemainingOnEmergency--;
         if(timeRemainingOnEmergency > 0)
         {
+            OnTimeRemaingForEmergencyChanged?.Invoke(timeRemainingOnEmergency);
             Invoke(nameof(CountdownTimeRemaining), 1f);
             return;
         }
@@ -164,6 +164,7 @@ public class Emergency : NetworkBehaviour
     public void StopEmergency()
     {
         CancelInvoke(nameof(OnTimeEnded));
+        CancelInvoke(nameof(CountdownToAvailability));
         onSabotage = false;
         StartCooldown();
 
