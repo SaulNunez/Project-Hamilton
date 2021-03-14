@@ -54,10 +54,15 @@ public class Emergency : NetworkBehaviour
     public static Emergency instance = null;
 
     /// <summary>
+    /// Called when an emergency is finished, when solved by several persons.
+    /// </summary>
+    public static event Action OnEmergencyStarted;
+
+    /// <summary>
     /// Called when time remaining changed. This is the time remaining to solve an emergency, useful for updating UI.
     /// </summary>
     /// <remarks>
-    /// Only available on client.
+    /// Only available on server.
     /// </remarks>
     public static event Action<int> OnTimeRemaingForEmergencyChanged;
 
@@ -136,6 +141,8 @@ public class Emergency : NetworkBehaviour
 
         areEmergenciesAvailable = false;
         onSabotage = true;
+
+        OnEmergencyStarted?.Invoke();
 
         currentActiveSabotage = puzzleId;
         Invoke(nameof(OnTimeEnded), hubConfig.secondsEmergencyDuration);
