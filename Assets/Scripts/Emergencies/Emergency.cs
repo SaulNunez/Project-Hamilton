@@ -56,6 +56,9 @@ public class Emergency : NetworkBehaviour
     /// <summary>
     /// Called when an emergency is finished, when solved by several persons.
     /// </summary>
+/// <remarks>
+    /// Only available on server.
+    /// </remarks>
     public static event Action OnEmergencyStarted;
 
     /// <summary>
@@ -69,7 +72,19 @@ public class Emergency : NetworkBehaviour
     /// <summary>
     /// Called when an emergency is finished, when solved by several persons.
     /// </summary>
+    /// <remarks>
+    /// Only available on server.
+    /// </remarks>
     public static event Action OnEmergencyResolved;
+
+
+    /// <summary>
+    /// Called when the emergency couldn't be stoped, this means players loose.
+    /// </summary>
+    /// <remarks>
+    /// Only available on server
+    /// </remarks>
+    public static event Action OnPlayersCouldntStopEmergency;
 
     private void OnSabotageAvailabilityChanged(bool oldValue, bool newValue)
     {
@@ -164,6 +179,7 @@ public class Emergency : NetworkBehaviour
     [Server]
     private void OnTimeEnded()
     {
+        OnPlayersCouldntStopEmergency?.Invoke();
         //TODO: Connect with end game system
     }
 
