@@ -28,7 +28,7 @@ jobs:
           name: Test results
           path: ${{ steps.tests.outputs.artifactsPath }}
   build:
-    name: Building game for Linux (Server) and WebGL
+    name: Building game for Linux (Server) and WebGL, and uploading new versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
