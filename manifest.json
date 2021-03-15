@@ -180,11 +180,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.DisableWhenOnEmergency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DisableWhenOnEmergency.html",
+          "hash": "GVI0GbiZnAvRHBLka/21Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.DoWhilePuzzle.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.DoWhilePuzzle.html",
           "hash": "ICezsByXj+GXrrEUR6qQfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.Emergency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Emergency.html",
+          "hash": "BLF/DzEOfjj/Jgxvz2Jo/w=="
         }
       },
       "is_incremental": false,
@@ -468,6 +492,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.Messages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Messages.html",
+          "hash": "Bq9SiJhcDhnmaisvW2mhHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.NanaBot.yml",
       "output": {
         ".html": {
@@ -712,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleId.html",
-          "hash": "Q/s7KLGjOobxz3UPPMhFHg=="
+          "hash": "SaDinWnRX1FE3BJikiVNDg=="
         }
       },
       "is_incremental": false,
@@ -785,6 +821,42 @@
         ".html": {
           "relative_path": "api/Global.SabotageBoilers.html",
           "hash": "CdP+x9o/p5G1fhv/F0RcVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SabotageQuestionList.Question.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SabotageQuestionList.Question.html",
+          "hash": "IY2m5kYfJCX0gj42LLussg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SabotageQuestionList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SabotageQuestionList.html",
+          "hash": "o7iYA3WSVpCyP1jokzYCGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SabotageQuestions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SabotageQuestions.html",
+          "hash": "JPbS7dMrluUDM2hzXTdrsw=="
         }
       },
       "is_incremental": false,
@@ -900,6 +972,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.TaskProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TaskProgress.html",
+          "hash": "9c6KgWVhzPfH4cmN15usrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.Teletransport.yml",
       "output": {
         ".html": {
@@ -977,6 +1061,18 @@
         ".html": {
           "relative_path": "api/Global.UpdatePlayerName.html",
           "hash": "+aJe3JlKEmQpjCQhH+RrdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.UpdateTaskList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UpdateTaskList.html",
+          "hash": "N6KWp/lFChRtz2jouVDHIg=="
         }
       },
       "is_incremental": false,
@@ -1096,7 +1192,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "1PTe8hCmFLAUr1l/KwoR6w=="
+          "hash": "G+oYM0NDL9/DNk2BTGkcnA=="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "F2GjXaApIV5T02owL5byPA=="
+          "hash": "/OO0Y8vxpjb+TdPQUH+bQQ=="
         }
       },
       "is_incremental": false,
@@ -1217,7 +1313,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 90,
+          "total_file_count": 98,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

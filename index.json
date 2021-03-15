@@ -64,10 +64,20 @@
     "title": "Class DisableOnLackOfAuthority | A night in the house of Hunt",
     "keywords": "Class DisableOnLackOfAuthority Inheritance Object Mirror.NetworkBehaviour DisableOnLackOfAuthority Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DisableOnLackOfAuthority : NetworkBehaviour"
   },
+  "api/Global.DisableWhenOnEmergency.html": {
+    "href": "api/Global.DisableWhenOnEmergency.html",
+    "title": "Class DisableWhenOnEmergency | A night in the house of Hunt",
+    "keywords": "Class DisableWhenOnEmergency Inheritance Object Mirror.NetworkBehaviour DisableWhenOnEmergency Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DisableWhenOnEmergency : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopServer() Declaration public override void OnStopServer() Overrides Mirror.NetworkBehaviour.OnStopServer()"
+  },
   "api/Global.DoWhilePuzzle.html": {
     "href": "api/Global.DoWhilePuzzle.html",
     "title": "Class DoWhilePuzzle | A night in the house of Hunt",
     "keywords": "Class DoWhilePuzzle Logic for do while puzzle Inheritance Object Mirror.NetworkBehaviour DoWhilePuzzle Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DoWhilePuzzle : NetworkBehaviour Methods CheckTextboxInput(String) Declaration public void CheckTextboxInput(string text) Parameters Type Name Description String text"
+  },
+  "api/Global.Emergency.html": {
+    "href": "api/Global.Emergency.html",
+    "title": "Class Emergency | A night in the house of Hunt",
+    "keywords": "Class Emergency Handles emergency logic, like activating buttons to turn emergency types. Also handles wait to activate, and progress; offers countdown event for clients. Emergencies have three states: Waiting to activate After voting, there's a wait before them being available When a player uses them there's another wait before being available Available (assasins can activate them) In progress, when an assasin used them, players are currently scrambling to solve it. Failure to do so finishes the game with victory to the assasins. Inheritance Object Mirror.NetworkBehaviour Emergency Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Emergency : NetworkBehaviour Fields instance Declaration public static Emergency instance Field Value Type Description Emergency Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopServer() Declaration public override void OnStopServer() Overrides Mirror.NetworkBehaviour.OnStopServer() StartCountdownForEmergency() Declaration public void StartCountdownForEmergency() StartEmergency(PuzzleId) Declaration public void StartEmergency(PuzzleId puzzleId) Parameters Type Name Description PuzzleId puzzleId StopEmergency() Declaration public void StopEmergency() Events OnEmergencyResolved Called when an emergency is finished, when solved by several persons. Declaration public static event Action OnEmergencyResolved Event Type Type Description Action OnEmergencyStarted Called when an emergency is finished, when solved by several persons. Declaration public static event Action OnEmergencyStarted Event Type Type Description Action OnTimeRemaingForEmergencyChanged Called when time remaining changed. This is the time remaining to solve an emergency, useful for updating UI. Declaration public static event Action<int> OnTimeRemaingForEmergencyChanged Event Type Type Description Action < Int32 > Remarks Only available on server."
   },
   "api/Global.EnumerableExtension.html": {
     "href": "api/Global.EnumerableExtension.html",
@@ -142,7 +152,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace Global | A night in the house of Hunt",
-    "keywords": "Namespace Global Classes BoilerSabotageOptions CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CompleteBoolPuzzle CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die Controls alive status on client and what to do when player dies. DisableOnLackOfAuthority DoWhilePuzzle Logic for do while puzzle EnumerableExtension FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. FlowerButtonModel FlowerTypes ForPuzzle FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. HamiltonNetworkRoomManager HelloNanabot String puzzle logic Highlight HubConfig IfElsePuzzle InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting Sets up player buttons for the voting screen. PlayerVotingButton PressureSabotagePuzzle Puzzle PuzzleActiveOutline PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleCompletion PuzzleIdSerialization PuzzleInformationSerialization Custom serialization because weaver is ignoring my struct PuzzlesToDo ReportDeath SabotageBoilers SequenceEditor Custom editor to simplify creating a variety of sequence puzzles SequenceGrid Logic for playground for sequence puzzle SetServerUrlToNetworkManagerOnStart SetupDefaultFlowers SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags Teletransport Test TriggerEmergencyMeeting UiElements UIGameStart UILobbyConnect UpdatePlayerName UpdateTimeRemaining Updates a given text with the time remaining for voting. For use with the voting screen. VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WhilePuzzle WorldInteraction Structs PuzzleInformation Enums CharacterTypes Available characters in game (for passing around) FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
+    "keywords": "Namespace Global Classes BoilerSabotageOptions CameraControl CameraFollowPlayer CharacterRadioButton Esto es una clase de ayuda. Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab. Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten. CompleteBoolPuzzle CreateLocalPuzzleUI DetectDead Dialog DiceAnimation DiceThrow Die Controls alive status on client and what to do when player dies. DisableOnLackOfAuthority DisableWhenOnEmergency DoWhilePuzzle Logic for do while puzzle Emergency Handles emergency logic, like activating buttons to turn emergency types. Also handles wait to activate, and progress; offers countdown event for clients. Emergencies have three states: Waiting to activate After voting, there's a wait before them being available When a player uses them there's another wait before being available Available (assasins can activate them) In progress, when an assasin used them, players are currently scrambling to solve it. Failure to do so finishes the game with victory to the assasins. EnumerableExtension FixActiveStateOnStart Workaround on failing to passing gameobject active property when spawning UI on client. Disables UI to prevent poluding the screen on the user. FlowerButtonModel FlowerTypes ForPuzzle FunctionCheck FunctionParameter GameUI HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. HamiltonNetworkRoomManager HelloNanabot String puzzle logic Highlight HubConfig IfElsePuzzle InteractuableBehavior ItemUIHandling JoinLobby Killing Layers LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. Messages NanaBot NanabotSays NetworkLayerChecker OpenPuzzle PlayerAction PlayerControls PlayerName PlayersChat PlayerSelectionBehavior PlayersForVoting Sets up player buttons for the voting screen. PlayerVotingButton PressureSabotagePuzzle Puzzle PuzzleActiveOutline PuzzleCache PuzzleChecking PuzzleCheckResult PuzzleCompletion PuzzleIdSerialization PuzzleInformationSerialization Custom serialization because weaver is ignoring my struct PuzzlesToDo ReportDeath SabotageBoilers SabotageQuestionList SabotageQuestionList.Question SabotageQuestions SequenceEditor Custom editor to simplify creating a variety of sequence puzzles SequenceGrid Logic for playground for sequence puzzle SetServerUrlToNetworkManagerOnStart SetupDefaultFlowers SetupOnClient ShowPuzzle ShowPuzzleRequest StartServer Tags TaskProgress Teletransport Test TriggerEmergencyMeeting UiElements UIGameStart UILobbyConnect UpdatePlayerName UpdateTaskList Can be added anywhere accepts a Text to update list in UI UpdateTimeRemaining Updates a given text with the time remaining for voting. For use with the voting screen. VoteAdmin Maneja realizar voto para un unico jugador VotingManager VotingScreenLink Se debe agregar al jugador Spawnea una ventana de votación para el WebGLInputTacticalIgnore WhilePuzzle WorldInteraction Structs PuzzleInformation Enums CharacterTypes Available characters in game (for passing around) FunctionParameter.ParameterType ItemUIHandling.Motive Puzzle.Class Puzzle.Type PuzzleId Delegates HamiltonNetworkRoomManager.SceneChanged WorldInteraction.ObjectEndDetected WorldInteraction.ObjectStartDetected"
   },
   "api/Global.HubConfig.html": {
     "href": "api/Global.HubConfig.html",
@@ -188,6 +198,11 @@
     "href": "api/Global.LobbyUIHelper.html",
     "title": "Class LobbyUIHelper | A night in the house of Hunt",
     "keywords": "Class LobbyUIHelper Handles activating a canvas on clients with authority. AKA in the client they belong. Inheritance Object Mirror.NetworkBehaviour LobbyUIHelper Namespace : Global Assembly : cs.temp.dll.dll Syntax public class LobbyUIHelper : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() SetAsReady(Boolean) Updates ready state on the network player Declaration public void SetAsReady(bool ready) Parameters Type Name Description Boolean ready"
+  },
+  "api/Global.Messages.html": {
+    "href": "api/Global.Messages.html",
+    "title": "Class Messages | A night in the house of Hunt",
+    "keywords": "Class Messages Inheritance Object Mirror.NetworkBehaviour Messages Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Messages : NetworkBehaviour Fields instance Declaration public static Messages instance Field Value Type Description Messages timeOnScreen Declaration public int timeOnScreen Field Value Type Description Int32 Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() ShowMessageIndividual(NetworkConnection, String) Declaration public void ShowMessageIndividual(NetworkConnection networkConnection, string message) Parameters Type Name Description Mirror.NetworkConnection networkConnection String message ShowMessageToAll(String) Declaration public void ShowMessageToAll(string message) Parameters Type Name Description String message"
   },
   "api/Global.NanaBot.html": {
     "href": "api/Global.NanaBot.html",
@@ -292,7 +307,7 @@
   "api/Global.PuzzleId.html": {
     "href": "api/Global.PuzzleId.html",
     "title": "Enum PuzzleId | A night in the house of Hunt",
-    "keywords": "Enum PuzzleId Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum PuzzleId Fields Name Description BoilersVariableInteger DoWhileMotorStarter ForWashingBucket IfElse IfFlowerPicking SabotageBoilerPressure SabotageElectricity Sequence1 Substring VariableBoolean VariableFloat VariableString WhileFillingBucket"
+    "keywords": "Enum PuzzleId Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum PuzzleId Fields Name Description BoilersVariableInteger DoWhileMotorStarter ForWashingBucket IfElse IfFlowerPicking SabotageBoilerPressure SabotageElectricity Sequence1 Substring TheoryVariety VariableBoolean VariableFloat VariableString WhileFillingBucket"
   },
   "api/Global.PuzzleIdSerialization.html": {
     "href": "api/Global.PuzzleIdSerialization.html",
@@ -323,6 +338,21 @@
     "href": "api/Global.SabotageBoilers.html",
     "title": "Class SabotageBoilers | A night in the house of Hunt",
     "keywords": "Class SabotageBoilers Inheritance Object Mirror.NetworkBehaviour SabotageBoilers Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SabotageBoilers : NetworkBehaviour Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() SetMaximum(String) Declaration public void SetMaximum(string input) Parameters Type Name Description String input SetMinimum(String) Declaration public void SetMinimum(string input) Parameters Type Name Description String input"
+  },
+  "api/Global.SabotageQuestionList.html": {
+    "href": "api/Global.SabotageQuestionList.html",
+    "title": "Class SabotageQuestionList | A night in the house of Hunt",
+    "keywords": "Class SabotageQuestionList Inheritance Object SabotageQuestionList Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SabotageQuestionList : ScriptableObject Fields questions Declaration public List<SabotageQuestionList.Question> questions Field Value Type Description List < SabotageQuestionList.Question >"
+  },
+  "api/Global.SabotageQuestionList.Question.html": {
+    "href": "api/Global.SabotageQuestionList.Question.html",
+    "title": "Class SabotageQuestionList.Question | A night in the house of Hunt",
+    "keywords": "Class SabotageQuestionList.Question Inheritance Object SabotageQuestionList.Question Namespace : Global Assembly : cs.temp.dll.dll Syntax [Serializable] public class Question Fields answers Declaration public List<string> answers Field Value Type Description List < String > correctAnswerIndex Declaration public int correctAnswerIndex Field Value Type Description Int32 question Declaration public string question Field Value Type Description String"
+  },
+  "api/Global.SabotageQuestions.html": {
+    "href": "api/Global.SabotageQuestions.html",
+    "title": "Class SabotageQuestions | A night in the house of Hunt",
+    "keywords": "Class SabotageQuestions Inheritance Object Mirror.NetworkBehaviour SabotageQuestions Namespace : Global Assembly : cs.temp.dll.dll Syntax public class SabotageQuestions : NetworkBehaviour"
   },
   "api/Global.SequenceEditor.html": {
     "href": "api/Global.SequenceEditor.html",
@@ -369,6 +399,11 @@
     "title": "Class Tags | A night in the house of Hunt",
     "keywords": "Class Tags Inheritance Object Tags Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class Tags Fields HubConfig Declaration public const string HubConfig = \"HubConfig\" Field Value Type Description String MainCamera Declaration public const string MainCamera = \"MainCamera\" Field Value Type Description String Nanabot Declaration public const string Nanabot = \"Nanabot\" Field Value Type Description String Player Declaration public const string Player = \"Player\" Field Value Type Description String UiManager Declaration public const string UiManager = \"UIManager\" Field Value Type Description String VotingManager Declaration public const string VotingManager = \"VotingManager\" Field Value Type Description String"
   },
+  "api/Global.TaskProgress.html": {
+    "href": "api/Global.TaskProgress.html",
+    "title": "Class TaskProgress | A night in the house of Hunt",
+    "keywords": "Class TaskProgress Inheritance Object Mirror.NetworkBehaviour TaskProgress Namespace : Global Assembly : cs.temp.dll.dll Syntax public class TaskProgress : NetworkBehaviour Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopServer() Declaration public override void OnStopServer() Overrides Mirror.NetworkBehaviour.OnStopServer()"
+  },
   "api/Global.Teletransport.html": {
     "href": "api/Global.Teletransport.html",
     "title": "Class Teletransport | A night in the house of Hunt",
@@ -403,6 +438,11 @@
     "href": "api/Global.UpdatePlayerName.html",
     "title": "Class UpdatePlayerName | A night in the house of Hunt",
     "keywords": "Class UpdatePlayerName Inheritance Object Mirror.NetworkBehaviour UpdatePlayerName Namespace : Global Assembly : cs.temp.dll.dll Syntax public class UpdatePlayerName : NetworkBehaviour Methods CmdUpdateName(String) Sends a command to server to change name. This name will be visible on top of the player. Declaration public void CmdUpdateName(string newName) Parameters Type Name Description String newName New player name Remarks Must be on a object with authority. Must be on a network player prefab."
+  },
+  "api/Global.UpdateTaskList.html": {
+    "href": "api/Global.UpdateTaskList.html",
+    "title": "Class UpdateTaskList | A night in the house of Hunt",
+    "keywords": "Class UpdateTaskList Can be added anywhere accepts a Text to update list in UI Inheritance Object UpdateTaskList Namespace : Global Assembly : cs.temp.dll.dll Syntax public class UpdateTaskList : MonoBehaviour"
   },
   "api/Global.UpdateTimeRemaining.html": {
     "href": "api/Global.UpdateTimeRemaining.html",

@@ -372,6 +372,51 @@ references:
   commentId: T:Global.DisableOnLackOfAuthority
   fullName: DisableOnLackOfAuthority
   nameWithType: DisableOnLackOfAuthority
+- uid: Global.DisableWhenOnEmergency
+  name: DisableWhenOnEmergency
+  href: api/Global.DisableWhenOnEmergency.html
+  commentId: T:Global.DisableWhenOnEmergency
+  fullName: DisableWhenOnEmergency
+  nameWithType: DisableWhenOnEmergency
+- uid: Global.DisableWhenOnEmergency.OnStartClient
+  name: OnStartClient()
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStartClient
+  commentId: M:Global.DisableWhenOnEmergency.OnStartClient
+  fullName: DisableWhenOnEmergency.OnStartClient()
+  nameWithType: DisableWhenOnEmergency.OnStartClient()
+- uid: Global.DisableWhenOnEmergency.OnStartClient*
+  name: OnStartClient
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStartClient_
+  commentId: Overload:Global.DisableWhenOnEmergency.OnStartClient
+  isSpec: "True"
+  fullName: DisableWhenOnEmergency.OnStartClient
+  nameWithType: DisableWhenOnEmergency.OnStartClient
+- uid: Global.DisableWhenOnEmergency.OnStartServer
+  name: OnStartServer()
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStartServer
+  commentId: M:Global.DisableWhenOnEmergency.OnStartServer
+  fullName: DisableWhenOnEmergency.OnStartServer()
+  nameWithType: DisableWhenOnEmergency.OnStartServer()
+- uid: Global.DisableWhenOnEmergency.OnStartServer*
+  name: OnStartServer
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStartServer_
+  commentId: Overload:Global.DisableWhenOnEmergency.OnStartServer
+  isSpec: "True"
+  fullName: DisableWhenOnEmergency.OnStartServer
+  nameWithType: DisableWhenOnEmergency.OnStartServer
+- uid: Global.DisableWhenOnEmergency.OnStopServer
+  name: OnStopServer()
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStopServer
+  commentId: M:Global.DisableWhenOnEmergency.OnStopServer
+  fullName: DisableWhenOnEmergency.OnStopServer()
+  nameWithType: DisableWhenOnEmergency.OnStopServer()
+- uid: Global.DisableWhenOnEmergency.OnStopServer*
+  name: OnStopServer
+  href: api/Global.DisableWhenOnEmergency.html#Global_DisableWhenOnEmergency_OnStopServer_
+  commentId: Overload:Global.DisableWhenOnEmergency.OnStopServer
+  isSpec: "True"
+  fullName: DisableWhenOnEmergency.OnStopServer
+  nameWithType: DisableWhenOnEmergency.OnStopServer
 - uid: Global.DoWhilePuzzle
   name: DoWhilePuzzle
   href: api/Global.DoWhilePuzzle.html
@@ -391,6 +436,101 @@ references:
   isSpec: "True"
   fullName: DoWhilePuzzle.CheckTextboxInput
   nameWithType: DoWhilePuzzle.CheckTextboxInput
+- uid: Global.Emergency
+  name: Emergency
+  href: api/Global.Emergency.html
+  commentId: T:Global.Emergency
+  fullName: Emergency
+  nameWithType: Emergency
+- uid: Global.Emergency.instance
+  name: instance
+  href: api/Global.Emergency.html#Global_Emergency_instance
+  commentId: F:Global.Emergency.instance
+  fullName: Emergency.instance
+  nameWithType: Emergency.instance
+- uid: Global.Emergency.OnEmergencyResolved
+  name: OnEmergencyResolved
+  href: api/Global.Emergency.html#Global_Emergency_OnEmergencyResolved
+  commentId: E:Global.Emergency.OnEmergencyResolved
+  fullName: Emergency.OnEmergencyResolved
+  nameWithType: Emergency.OnEmergencyResolved
+- uid: Global.Emergency.OnEmergencyStarted
+  name: OnEmergencyStarted
+  href: api/Global.Emergency.html#Global_Emergency_OnEmergencyStarted
+  commentId: E:Global.Emergency.OnEmergencyStarted
+  fullName: Emergency.OnEmergencyStarted
+  nameWithType: Emergency.OnEmergencyStarted
+- uid: Global.Emergency.OnStartServer
+  name: OnStartServer()
+  href: api/Global.Emergency.html#Global_Emergency_OnStartServer
+  commentId: M:Global.Emergency.OnStartServer
+  fullName: Emergency.OnStartServer()
+  nameWithType: Emergency.OnStartServer()
+- uid: Global.Emergency.OnStartServer*
+  name: OnStartServer
+  href: api/Global.Emergency.html#Global_Emergency_OnStartServer_
+  commentId: Overload:Global.Emergency.OnStartServer
+  isSpec: "True"
+  fullName: Emergency.OnStartServer
+  nameWithType: Emergency.OnStartServer
+- uid: Global.Emergency.OnStopServer
+  name: OnStopServer()
+  href: api/Global.Emergency.html#Global_Emergency_OnStopServer
+  commentId: M:Global.Emergency.OnStopServer
+  fullName: Emergency.OnStopServer()
+  nameWithType: Emergency.OnStopServer()
+- uid: Global.Emergency.OnStopServer*
+  name: OnStopServer
+  href: api/Global.Emergency.html#Global_Emergency_OnStopServer_
+  commentId: Overload:Global.Emergency.OnStopServer
+  isSpec: "True"
+  fullName: Emergency.OnStopServer
+  nameWithType: Emergency.OnStopServer
+- uid: Global.Emergency.OnTimeRemaingForEmergencyChanged
+  name: OnTimeRemaingForEmergencyChanged
+  href: api/Global.Emergency.html#Global_Emergency_OnTimeRemaingForEmergencyChanged
+  commentId: E:Global.Emergency.OnTimeRemaingForEmergencyChanged
+  fullName: Emergency.OnTimeRemaingForEmergencyChanged
+  nameWithType: Emergency.OnTimeRemaingForEmergencyChanged
+- uid: Global.Emergency.StartCountdownForEmergency
+  name: StartCountdownForEmergency()
+  href: api/Global.Emergency.html#Global_Emergency_StartCountdownForEmergency
+  commentId: M:Global.Emergency.StartCountdownForEmergency
+  fullName: Emergency.StartCountdownForEmergency()
+  nameWithType: Emergency.StartCountdownForEmergency()
+- uid: Global.Emergency.StartCountdownForEmergency*
+  name: StartCountdownForEmergency
+  href: api/Global.Emergency.html#Global_Emergency_StartCountdownForEmergency_
+  commentId: Overload:Global.Emergency.StartCountdownForEmergency
+  isSpec: "True"
+  fullName: Emergency.StartCountdownForEmergency
+  nameWithType: Emergency.StartCountdownForEmergency
+- uid: Global.Emergency.StartEmergency(PuzzleId)
+  name: StartEmergency(PuzzleId)
+  href: api/Global.Emergency.html#Global_Emergency_StartEmergency_PuzzleId_
+  commentId: M:Global.Emergency.StartEmergency(PuzzleId)
+  fullName: Emergency.StartEmergency(PuzzleId)
+  nameWithType: Emergency.StartEmergency(PuzzleId)
+- uid: Global.Emergency.StartEmergency*
+  name: StartEmergency
+  href: api/Global.Emergency.html#Global_Emergency_StartEmergency_
+  commentId: Overload:Global.Emergency.StartEmergency
+  isSpec: "True"
+  fullName: Emergency.StartEmergency
+  nameWithType: Emergency.StartEmergency
+- uid: Global.Emergency.StopEmergency
+  name: StopEmergency()
+  href: api/Global.Emergency.html#Global_Emergency_StopEmergency
+  commentId: M:Global.Emergency.StopEmergency
+  fullName: Emergency.StopEmergency()
+  nameWithType: Emergency.StopEmergency()
+- uid: Global.Emergency.StopEmergency*
+  name: StopEmergency
+  href: api/Global.Emergency.html#Global_Emergency_StopEmergency_
+  commentId: Overload:Global.Emergency.StopEmergency
+  isSpec: "True"
+  fullName: Emergency.StopEmergency
+  nameWithType: Emergency.StopEmergency
 - uid: Global.EnumerableExtension
   name: EnumerableExtension
   href: api/Global.EnumerableExtension.html
@@ -1115,6 +1255,63 @@ references:
   isSpec: "True"
   fullName: LobbyUIHelper.SetAsReady
   nameWithType: LobbyUIHelper.SetAsReady
+- uid: Global.Messages
+  name: Messages
+  href: api/Global.Messages.html
+  commentId: T:Global.Messages
+  fullName: Messages
+  nameWithType: Messages
+- uid: Global.Messages.instance
+  name: instance
+  href: api/Global.Messages.html#Global_Messages_instance
+  commentId: F:Global.Messages.instance
+  fullName: Messages.instance
+  nameWithType: Messages.instance
+- uid: Global.Messages.OnStartServer
+  name: OnStartServer()
+  href: api/Global.Messages.html#Global_Messages_OnStartServer
+  commentId: M:Global.Messages.OnStartServer
+  fullName: Messages.OnStartServer()
+  nameWithType: Messages.OnStartServer()
+- uid: Global.Messages.OnStartServer*
+  name: OnStartServer
+  href: api/Global.Messages.html#Global_Messages_OnStartServer_
+  commentId: Overload:Global.Messages.OnStartServer
+  isSpec: "True"
+  fullName: Messages.OnStartServer
+  nameWithType: Messages.OnStartServer
+- uid: Global.Messages.ShowMessageIndividual(Mirror.NetworkConnection,System.String)
+  name: ShowMessageIndividual(NetworkConnection, String)
+  href: api/Global.Messages.html#Global_Messages_ShowMessageIndividual_Mirror_NetworkConnection_System_String_
+  commentId: M:Global.Messages.ShowMessageIndividual(Mirror.NetworkConnection,System.String)
+  fullName: Messages.ShowMessageIndividual(Mirror.NetworkConnection, System.String)
+  nameWithType: Messages.ShowMessageIndividual(NetworkConnection, String)
+- uid: Global.Messages.ShowMessageIndividual*
+  name: ShowMessageIndividual
+  href: api/Global.Messages.html#Global_Messages_ShowMessageIndividual_
+  commentId: Overload:Global.Messages.ShowMessageIndividual
+  isSpec: "True"
+  fullName: Messages.ShowMessageIndividual
+  nameWithType: Messages.ShowMessageIndividual
+- uid: Global.Messages.ShowMessageToAll(System.String)
+  name: ShowMessageToAll(String)
+  href: api/Global.Messages.html#Global_Messages_ShowMessageToAll_System_String_
+  commentId: M:Global.Messages.ShowMessageToAll(System.String)
+  fullName: Messages.ShowMessageToAll(System.String)
+  nameWithType: Messages.ShowMessageToAll(String)
+- uid: Global.Messages.ShowMessageToAll*
+  name: ShowMessageToAll
+  href: api/Global.Messages.html#Global_Messages_ShowMessageToAll_
+  commentId: Overload:Global.Messages.ShowMessageToAll
+  isSpec: "True"
+  fullName: Messages.ShowMessageToAll
+  nameWithType: Messages.ShowMessageToAll
+- uid: Global.Messages.timeOnScreen
+  name: timeOnScreen
+  href: api/Global.Messages.html#Global_Messages_timeOnScreen
+  commentId: F:Global.Messages.timeOnScreen
+  fullName: Messages.timeOnScreen
+  nameWithType: Messages.timeOnScreen
 - uid: Global.NanaBot
   name: NanaBot
   href: api/Global.NanaBot.html
@@ -1906,6 +2103,12 @@ references:
   commentId: F:Global.PuzzleId.Substring
   fullName: PuzzleId.Substring
   nameWithType: PuzzleId.Substring
+- uid: Global.PuzzleId.TheoryVariety
+  name: TheoryVariety
+  href: api/Global.PuzzleId.html#Global_PuzzleId_TheoryVariety
+  commentId: F:Global.PuzzleId.TheoryVariety
+  fullName: PuzzleId.TheoryVariety
+  nameWithType: PuzzleId.TheoryVariety
 - uid: Global.PuzzleId.VariableBoolean
   name: VariableBoolean
   href: api/Global.PuzzleId.html#Global_PuzzleId_VariableBoolean
@@ -2127,6 +2330,48 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.SetMinimum
   nameWithType: SabotageBoilers.SetMinimum
+- uid: Global.SabotageQuestionList
+  name: SabotageQuestionList
+  href: api/Global.SabotageQuestionList.html
+  commentId: T:Global.SabotageQuestionList
+  fullName: SabotageQuestionList
+  nameWithType: SabotageQuestionList
+- uid: Global.SabotageQuestionList.Question
+  name: SabotageQuestionList.Question
+  href: api/Global.SabotageQuestionList.Question.html
+  commentId: T:Global.SabotageQuestionList.Question
+  fullName: SabotageQuestionList.Question
+  nameWithType: SabotageQuestionList.Question
+- uid: Global.SabotageQuestionList.Question.answers
+  name: answers
+  href: api/Global.SabotageQuestionList.Question.html#Global_SabotageQuestionList_Question_answers
+  commentId: F:Global.SabotageQuestionList.Question.answers
+  fullName: SabotageQuestionList.Question.answers
+  nameWithType: SabotageQuestionList.Question.answers
+- uid: Global.SabotageQuestionList.Question.correctAnswerIndex
+  name: correctAnswerIndex
+  href: api/Global.SabotageQuestionList.Question.html#Global_SabotageQuestionList_Question_correctAnswerIndex
+  commentId: F:Global.SabotageQuestionList.Question.correctAnswerIndex
+  fullName: SabotageQuestionList.Question.correctAnswerIndex
+  nameWithType: SabotageQuestionList.Question.correctAnswerIndex
+- uid: Global.SabotageQuestionList.Question.question
+  name: question
+  href: api/Global.SabotageQuestionList.Question.html#Global_SabotageQuestionList_Question_question
+  commentId: F:Global.SabotageQuestionList.Question.question
+  fullName: SabotageQuestionList.Question.question
+  nameWithType: SabotageQuestionList.Question.question
+- uid: Global.SabotageQuestionList.questions
+  name: questions
+  href: api/Global.SabotageQuestionList.html#Global_SabotageQuestionList_questions
+  commentId: F:Global.SabotageQuestionList.questions
+  fullName: SabotageQuestionList.questions
+  nameWithType: SabotageQuestionList.questions
+- uid: Global.SabotageQuestions
+  name: SabotageQuestions
+  href: api/Global.SabotageQuestions.html
+  commentId: T:Global.SabotageQuestions
+  fullName: SabotageQuestions
+  nameWithType: SabotageQuestions
 - uid: Global.SequenceEditor
   name: SequenceEditor
   href: api/Global.SequenceEditor.html
@@ -2342,6 +2587,38 @@ references:
   commentId: F:Global.Tags.VotingManager
   fullName: Tags.VotingManager
   nameWithType: Tags.VotingManager
+- uid: Global.TaskProgress
+  name: TaskProgress
+  href: api/Global.TaskProgress.html
+  commentId: T:Global.TaskProgress
+  fullName: TaskProgress
+  nameWithType: TaskProgress
+- uid: Global.TaskProgress.OnStartServer
+  name: OnStartServer()
+  href: api/Global.TaskProgress.html#Global_TaskProgress_OnStartServer
+  commentId: M:Global.TaskProgress.OnStartServer
+  fullName: TaskProgress.OnStartServer()
+  nameWithType: TaskProgress.OnStartServer()
+- uid: Global.TaskProgress.OnStartServer*
+  name: OnStartServer
+  href: api/Global.TaskProgress.html#Global_TaskProgress_OnStartServer_
+  commentId: Overload:Global.TaskProgress.OnStartServer
+  isSpec: "True"
+  fullName: TaskProgress.OnStartServer
+  nameWithType: TaskProgress.OnStartServer
+- uid: Global.TaskProgress.OnStopServer
+  name: OnStopServer()
+  href: api/Global.TaskProgress.html#Global_TaskProgress_OnStopServer
+  commentId: M:Global.TaskProgress.OnStopServer
+  fullName: TaskProgress.OnStopServer()
+  nameWithType: TaskProgress.OnStopServer()
+- uid: Global.TaskProgress.OnStopServer*
+  name: OnStopServer
+  href: api/Global.TaskProgress.html#Global_TaskProgress_OnStopServer_
+  commentId: Overload:Global.TaskProgress.OnStopServer
+  isSpec: "True"
+  fullName: TaskProgress.OnStopServer
+  nameWithType: TaskProgress.OnStopServer
 - uid: Global.Teletransport
   name: Teletransport
   href: api/Global.Teletransport.html
@@ -2480,6 +2757,12 @@ references:
   isSpec: "True"
   fullName: UpdatePlayerName.CmdUpdateName
   nameWithType: UpdatePlayerName.CmdUpdateName
+- uid: Global.UpdateTaskList
+  name: UpdateTaskList
+  href: api/Global.UpdateTaskList.html
+  commentId: T:Global.UpdateTaskList
+  fullName: UpdateTaskList
+  nameWithType: UpdateTaskList
 - uid: Global.UpdateTimeRemaining
   name: UpdateTimeRemaining
   href: api/Global.UpdateTimeRemaining.html
