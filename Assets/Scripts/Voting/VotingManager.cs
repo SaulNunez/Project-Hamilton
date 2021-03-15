@@ -137,7 +137,10 @@ public class VotingManager : NetworkBehaviour
 
         if (skipVotes >= mostVotedKV.Value)
         {
-            //Mas jugadores votaron por expulsar a nadie
+            //Most players skipped or not voted
+
+            Messages.instance.ShowMessageToAll("No player has been voted out.");
+
             return;
         }
 
@@ -145,8 +148,11 @@ public class VotingManager : NetworkBehaviour
 
         if (getMostVotedPlayerGameObject != null)
         {
-            var dedPlayer = getMostVotedPlayerGameObject.GetComponent<Die>();
-            dedPlayer.SetSimpleDeath();
+            var dedPlayerName = getMostVotedPlayerGameObject.GetComponent<PlayerName>();
+            Messages.instance.ShowMessageToAll($"{dedPlayerName.Name} has been voted out.");
+
+            var dedPlayerDie = getMostVotedPlayerGameObject.GetComponent<Die>();
+            dedPlayerDie.SetSimpleDeath();
         }
     }
 }
