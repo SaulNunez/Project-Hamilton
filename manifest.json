@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Emergency.html",
-          "hash": "BLF/DzEOfjj/Jgxvz2Jo/w=="
+          "hash": "IF1Y0zFwxOmiuNLjBKdEpg=="
         }
       },
       "is_incremental": false,
@@ -948,6 +948,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SoundAlarmDuringEmergency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SoundAlarmDuringEmergency.html",
+          "hash": "hMGYCR0ThRoZ0zKN7Z9nXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.StartServer.yml",
       "output": {
         ".html": {
@@ -1192,7 +1204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "G+oYM0NDL9/DNk2BTGkcnA=="
+          "hash": "aHuLKKq+RcmFS0PmQdUVMQ=="
         }
       },
       "is_incremental": false,
@@ -1204,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/OO0Y8vxpjb+TdPQUH+bQQ=="
+          "hash": "b8kxxISMf0kGX620sQKQeA=="
         }
       },
       "is_incremental": false,
@@ -1313,7 +1325,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 98,
+          "total_file_count": 99,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
