@@ -16,7 +16,7 @@ public class DoWhilePuzzle : NetworkBehaviour
     [Command]
     void CmdCheckResultInServer(string text)
     {
-        if(text.ToLower() == "verdadero")
+        if(text.ToLower() == "verdadero" || text.ToLower() == "true")
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.DoWhileMotorStarter);
             RpcClosePuzzle();
