@@ -707,10 +707,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   defaultFlowerImage: {fileID: 6869458371210954739}
-  sunflowerSprite: {fileID: 0}
-  daisySprite: {fileID: 0}
-  tulipSprite: {fileID: 0}
-  rosesSprite: {fileID: 0}
+  sunflowerSprite: {fileID: 21300000, guid: fe7060bc372ed8b4fadc1c23e8199767, type: 3}
+  daisySprite: {fileID: 21300000, guid: b936ae8c83f90df40a59f695d4a6939d, type: 3}
+  tulipSprite: {fileID: 21300000, guid: ed7cfbbf03da7c14cbe57698cd4cc9cc, type: 3}
+  rosesSprite: {fileID: 21300000, guid: b3dce4a9b1cec624bad051c186e74f07, type: 3}
   flowerButtons:
   - {fileID: 8897033701305456260}
   - {fileID: 3117116371334595643}

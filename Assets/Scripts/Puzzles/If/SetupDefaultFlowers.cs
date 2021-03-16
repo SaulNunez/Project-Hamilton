@@ -5,6 +5,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls logic for if puzzle.
+/// 
+/// On server a flower type is decided on start.
+/// Also a random selection of six flowers is created and send to client to create buttons for user.
+/// On click, these send a message on client to check they are the correct type.
+/// </summary>
 public class SetupDefaultFlowers: NetworkBehaviour {
     [SyncVar(hook = nameof(OnDefaultFlowerSet))]
     string defaultFlowerType;
