@@ -61872,7 +61872,7 @@ MonoBehaviour:
   ui: {fileID: 929814941}
   requireNumberOfPlayersToSolve: 2
   timeoutSecondsBeforeClearing: 20
-  gaugeImage: {fileID: 0}
+  gaugeImage: {fileID: 1779300970}
   gaugesSetups: []
 --- !u!1 &2114290354
 GameObject:
