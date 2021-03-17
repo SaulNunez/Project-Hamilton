@@ -204,6 +204,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.ElectricitySabotage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.ElectricitySabotage.html",
+          "hash": "xqDuXNiUuyzxKnMBNKjx3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.Emergency.yml",
       "output": {
         ".html": {
@@ -636,18 +648,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.PressureSabotagePuzzle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.PressureSabotagePuzzle.html",
-          "hash": "aibdGSFShgbDdXT4GR93vg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.Puzzle.Class.yml",
       "output": {
         ".html": {
@@ -820,7 +820,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageBoilers.html",
-          "hash": "CdP+x9o/p5G1fhv/F0RcVg=="
+          "hash": "S0XCrn56eeIPwGXGiU1TKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SabotagePuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SabotagePuzzle.html",
+          "hash": "mfnA+EQTnDK94FZMD5GQQw=="
         }
       },
       "is_incremental": false,
@@ -1204,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "sCCQQtkWfHeQIjtXN9BXQA=="
+          "hash": "Tk+VSCIPRk42GSlr+m6xPg=="
         }
       },
       "is_incremental": false,
@@ -1216,7 +1228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "b8kxxISMf0kGX620sQKQeA=="
+          "hash": "PwL5ZLznQ6kIUkAtzJ8keg=="
         }
       },
       "is_incremental": false,
@@ -1325,7 +1337,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 99,
+          "total_file_count": 100,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
