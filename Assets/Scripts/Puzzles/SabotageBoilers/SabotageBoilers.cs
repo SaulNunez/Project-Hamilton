@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 /// <summary>
 /// 
 /// </summary>
-public class SabotageBoilers : NetworkBehaviour
+public class SabotageBoilers : SabotagePuzzle
 {
     [SerializeField]
     Image gaugeImage;
