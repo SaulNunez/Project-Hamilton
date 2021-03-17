@@ -86,4 +86,9 @@ public class SabotagePuzzle : NetworkBehaviour
 
         VotingManager.OnVotingStarted -= ClearOnVoting;
     }
+
+    protected void ClosePuzzle()
+    {
+        isPuzzleEnabled = true;
+    }
 }

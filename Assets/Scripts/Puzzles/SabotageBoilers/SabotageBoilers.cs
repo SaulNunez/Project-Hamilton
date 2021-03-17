@@ -18,46 +18,69 @@ public class SabotageBoilers : SabotagePuzzle
     [SerializeField]
     List<BoilerSabotageOptions> gaugesSetups;
 
-    [SyncVar]
+    /// <summary>
+    /// Minimum set in the UI
+    /// </summary>
+    /// <remarks>
+    /// Only usable on client
+    /// </remarks>
     int minimum;
-
-    [SyncVar]
+    
+    /// <summary>
+    /// Maximum set in the UI
+    /// </summary>
+    /// <remarks>
+    /// Only usable on client
+    /// </remarks>
     int maximum;
 
-    [SyncVar(hook = nameof(SetupScreen))]
+    [SyncVar(hook = nameof(OnSetupDefined))]
     int setupUsed;
 
     public override void OnStartServer()
     {
         base.OnStartServer();
 
+        SetNewSetup();
+    }
+
+
+    /// <summary>
+    /// To be used to select a new setup. 
+    /// Main usage is to set a different gauge setup when it's new sabotage to the boilers.
+    /// </summary>
+    /// <remarks>
+    /// Only to be called on the server
+    /// </remarks>
+    [Server]
+    public void SetNewSetup()
+    {
         setupUsed = Random.Range(0, gaugesSetups.Count);
     }
 
-    void SetupScreen(int oldValue, int newValue)
+    void OnSetupDefined(int oldValue, int newValue)
     {
         gaugeImage.sprite = gaugesSetups[newValue].gauge;
     }
 
+    /// <summary>
+    /// To be used on the client UI to update internal state of the minimum
+    /// </summary>
+    /// <param name="input">Current text of the UI element that handles minimum</param>
     [Client]
     public void SetMinimum(string input)
     {
         try
         {
             var processedInput = int.Parse(input);
-            CmdUpdateMinimum(processedInput);
-        }catch(Exception e)
+            minimum = processedInput;
+
+            CmdCheckCorrect(minimum, maximum);
+        }
+        catch(Exception e)
         {
             Debug.LogError(e);
         }
-    }
-
-    [Command]
-    void CmdUpdateMinimum(int min)
-    {
-        minimum = min;
-
-        CheckCorrect();
     }
 
     [Client]
@@ -66,7 +89,9 @@ public class SabotageBoilers : SabotagePuzzle
         try
         {
             var processedInput = int.Parse(input);
-            CmdUpdateMaximum(processedInput);
+            maximum = processedInput;
+
+            CmdCheckCorrect(minimum, maximum);
         }
         catch (Exception e)
         {
@@ -74,33 +99,19 @@ public class SabotageBoilers : SabotagePuzzle
         }
     }
 
-    [Command]
-    void CmdUpdateMaximum(int max)
+    [Command(ignoreAuthority = true)]
+    void CmdCheckCorrect(int min, int max, NetworkConnectionToClient sender = null)
     {
-        maximum = max;
-
-        CheckCorrect();
-    }
-
-    void CheckCorrect()
-    {
-        var isCorrect = false;
-
-        if(maximum <= gaugesSetups[setupUsed].maximum && minimum >= gaugesSetups[setupUsed].minimum)
+        if(max <= gaugesSetups[setupUsed].maximum && min >= gaugesSetups[setupUsed].minimum)
         {
-            isCorrect = true;
-        }
-
-        if (isCorrect)
-        {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.SabotageBoilerPressure);
-            RpcClosePuzzle();
+            SetPuzzleAsCompleted(sender);
         }
     }
 
-    [ClientRpc]
-    void RpcClosePuzzle()
+    protected override void OnPuzzleCompleted()
     {
-        gameObject.SetActive(false);
+        base.OnPuzzleCompleted();
+
+        ClosePuzzle();
     }
 }
