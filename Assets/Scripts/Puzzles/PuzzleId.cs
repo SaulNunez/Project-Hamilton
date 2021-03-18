@@ -15,7 +15,5 @@ public enum PuzzleId
     IfFlowerPicking,
     Substring,
     IfElse,
-    SabotageBoilerPressure,
-    SabotageElectricity,
     TheoryVariety
 }

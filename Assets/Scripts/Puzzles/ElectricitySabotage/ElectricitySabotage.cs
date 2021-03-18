@@ -33,7 +33,6 @@ public class ElectricitySabotage : SabotagePuzzle
         if(value == expectedVoltage)
         {
             SetPuzzleAsCompleted(sender);
-            ClosePuzzle();
         }
     }
 }

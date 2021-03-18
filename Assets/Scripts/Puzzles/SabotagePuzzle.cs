@@ -5,6 +5,8 @@ using UnityEngine;
 
 /// <summary>
 /// Base for sabotages. Has facilities for puzzles that require multiple players to respond it in a time limit to be marked as done.
+/// 
+/// Opening puzzle is done by the client. Closing will be done automagically from the server, either when sabotage is solved (closing in all clients) or when a player gets it right.
 /// </summary>
 public class SabotagePuzzle : NetworkBehaviour
 {
@@ -13,8 +15,12 @@ public class SabotagePuzzle : NetworkBehaviour
     [Tooltip("UI that players interact to solve puzzle")]
     protected GameObject ui;
 
+    /// <summary>
+    /// Is UI for puzzle currently active
+    /// </summary>
+    [HideInInspector]
     [SyncVar]
-    bool isPuzzleEnabled = false;
+    protected bool isPuzzleEnabled = false;
 
     [Header("Multiple users")]
     [Range(1, 6)]
@@ -24,11 +30,6 @@ public class SabotagePuzzle : NetworkBehaviour
     [Range(1f, 90f)]
     [SerializeField]
     float timeoutSecondsBeforeClearing = 20f;
-
-    void OnPuzzleEnabledChanged(bool oldValue, bool newValue)
-    {
-        ui.SetActive(newValue);
-    }
 
     /// <summary>
     /// Connections of those who have solved the puzzle
@@ -57,6 +58,20 @@ public class SabotagePuzzle : NetworkBehaviour
     }
 
     /// <summary>
+    /// Shows sabotage UI. To be used by other components.
+    /// 
+    /// Note. This might not show if for example, this sabotage isn't active.
+    /// </summary>
+    [Client]
+    public void ShowPuzzle()
+    {
+        if (isPuzzleEnabled)
+        {
+            ui.SetActive(true);
+        }
+    }
+
+    /// <summary>
     /// Call on the server when the puzzle has been finished by the user.
     /// </summary>
     [Server]
@@ -66,6 +81,8 @@ public class SabotagePuzzle : NetworkBehaviour
         CancelInvoke(nameof(ClearSolvedOnTimeout));
 
         playersWhoSolved.Add(player);
+
+        TargetClosePuzzle(player);
 
         if (playersWhoSolved.Count == requireNumberOfPlayersToSolve)
         {
@@ -77,8 +94,12 @@ public class SabotagePuzzle : NetworkBehaviour
 
     /// <summary>
     /// Implement on inheritors to set the action to do when the puzzle has been solved by the players
+    /// 
+    /// Allways call base implementation via `base.OnPuzzleCompleted()` or some default behaviour will be missing!
     /// </summary>
-    protected virtual void OnPuzzleCompleted() { }
+    protected virtual void OnPuzzleCompleted() {
+        CloseAllPuzzle();
+    }
 
     public override void OnStopServer()
     {
@@ -87,8 +108,15 @@ public class SabotagePuzzle : NetworkBehaviour
         VotingManager.OnVotingStarted -= ClearOnVoting;
     }
 
-    protected void ClosePuzzle()
+    [TargetRpc]
+    protected void TargetClosePuzzle(NetworkConnection target)
     {
-        isPuzzleEnabled = true;
+        ui.SetActive(false);
+    }
+
+    [ClientRpc]
+    protected void CloseAllPuzzle()
+    {
+        ui.SetActive(false);
     }
 }

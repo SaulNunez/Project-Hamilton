@@ -28,10 +28,6 @@ public class ShowPuzzle : NetworkBehaviour
     GameObject substringPrefab;
     [SerializeField]
     GameObject ifelseCakePrefab;
-    [SerializeField]
-    GameObject sabotagePresurePrefab;
-    [SerializeField]
-    GameObject sabotageElectricityPrefab;
 
     [SyncVar]
     GameObject boilerInt;
@@ -55,10 +51,6 @@ public class ShowPuzzle : NetworkBehaviour
     GameObject substring;
     [SyncVar]
     GameObject ifelseCake;
-    [SyncVar]
-    GameObject sabotagePresure;
-    [SyncVar]
-    GameObject sabotageElectricity;
 
     public override void OnStartServer()
     {
@@ -111,14 +103,6 @@ public class ShowPuzzle : NetworkBehaviour
         var ifelseCakeInstance = Instantiate(ifelseCakePrefab, canvas.transform);
         NetworkServer.Spawn(ifelseCakeInstance, netIdentity.connectionToClient);
         ifelseCake = ifelseCakeInstance;
-
-        var sabotagePresureInstance = Instantiate(sabotagePresurePrefab, canvas.transform);
-        NetworkServer.Spawn(sabotagePresureInstance, netIdentity.connectionToClient);
-        sabotagePresure = sabotagePresureInstance;
-
-        var sabotageElectricityInstance = Instantiate(sabotageElectricityPrefab, canvas.transform);
-        NetworkServer.Spawn(sabotageElectricityInstance, netIdentity.connectionToClient);
-        sabotageElectricity = sabotageElectricityInstance;
     }
 
     private void StopCurrentPuzzle(int _)
@@ -134,8 +118,6 @@ public class ShowPuzzle : NetworkBehaviour
         ifPickFlower.SetActive(false);
         substring.SetActive(false);
         ifelseCake.SetActive(false);
-        sabotagePresure.SetActive(false);
-        sabotageElectricity.SetActive(false);
     }
 
     public override void OnStopServer()
@@ -205,14 +187,6 @@ public class ShowPuzzle : NetworkBehaviour
                     break;
                 case PuzzleId.IfElse:
                     ifelseCake.SetActive(true);
-                    break;
-                case PuzzleId.SabotageBoilerPressure:
-                    Emergency.instance.StartEmergency(puzzle);
-                    sabotagePresure.SetActive(true);
-                    break;
-                case PuzzleId.SabotageElectricity:
-                    Emergency.instance.StartEmergency(puzzle);
-                    sabotageElectricity.SetActive(true);
                     break;
             }
         }

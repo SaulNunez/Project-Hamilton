@@ -112,6 +112,5 @@ public class SabotageBoilers : SabotagePuzzle
     {
         base.OnPuzzleCompleted();
 
-        ClosePuzzle();
     }
 }
