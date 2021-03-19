@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ElectricitySabotage.html",
-          "hash": "xqDuXNiUuyzxKnMBNKjx3Q=="
+          "hash": "gcrRluxRn/IsgTracJ775g=="
         }
       },
       "is_incremental": false,
@@ -424,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.InteractuableBehavior.html",
-          "hash": "LXhx3PWJg/EEzfyo+ccDTQ=="
+          "hash": "6sij3XY03TiT4QnUz73XkQ=="
         }
       },
       "is_incremental": false,
@@ -520,19 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.NanaBot.html",
-          "hash": "e0Os7arVtALP/nz9JCq+lA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.NanabotSays.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.NanabotSays.html",
-          "hash": "XkFZ7ryl20ALikm04USHlw=="
+          "hash": "cLg4r4bgmXrzNT96Kfh+XA=="
         }
       },
       "is_incremental": false,
@@ -557,6 +545,18 @@
         ".html": {
           "relative_path": "api/Global.OpenPuzzle.html",
           "hash": "nWoZItstdCp64tLFrQ2OFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.OpenSabotage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.OpenSabotage.html",
+          "hash": "Fp6F25CRkthMMw97kRtg3Q=="
         }
       },
       "is_incremental": false,
@@ -748,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleId.html",
-          "hash": "SaDinWnRX1FE3BJikiVNDg=="
+          "hash": "vh2OOLcuvenZrQxwVmnMGw=="
         }
       },
       "is_incremental": false,
@@ -820,7 +820,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageBoilers.html",
-          "hash": "S0XCrn56eeIPwGXGiU1TKA=="
+          "hash": "gFcXMqNuVjpQX5h9HT55Jw=="
         }
       },
       "is_incremental": false,
@@ -832,7 +832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotagePuzzle.html",
-          "hash": "mfnA+EQTnDK94FZMD5GQQw=="
+          "hash": "T60CqgTP2nFzS3K8dgGktg=="
         }
       },
       "is_incremental": false,
@@ -1216,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "Tk+VSCIPRk42GSlr+m6xPg=="
+          "hash": "tPFz7qSQ20suG6I7FFIghA=="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "PwL5ZLznQ6kIUkAtzJ8keg=="
+          "hash": "9N/ywaaQir62L46n0ryfLA=="
         }
       },
       "is_incremental": false,

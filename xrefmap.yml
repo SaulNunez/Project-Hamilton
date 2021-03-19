@@ -1369,25 +1369,6 @@ references:
   isSpec: "True"
   fullName: NanaBot.Talk
   nameWithType: NanaBot.Talk
-- uid: Global.NanabotSays
-  name: NanabotSays
-  href: api/Global.NanabotSays.html
-  commentId: T:Global.NanabotSays
-  fullName: NanabotSays
-  nameWithType: NanabotSays
-- uid: Global.NanabotSays.SayMessage(System.String)
-  name: SayMessage(String)
-  href: api/Global.NanabotSays.html#Global_NanabotSays_SayMessage_System_String_
-  commentId: M:Global.NanabotSays.SayMessage(System.String)
-  fullName: NanabotSays.SayMessage(System.String)
-  nameWithType: NanabotSays.SayMessage(String)
-- uid: Global.NanabotSays.SayMessage*
-  name: SayMessage
-  href: api/Global.NanabotSays.html#Global_NanabotSays_SayMessage_
-  commentId: Overload:Global.NanabotSays.SayMessage
-  isSpec: "True"
-  fullName: NanabotSays.SayMessage
-  nameWithType: NanabotSays.SayMessage
 - uid: Global.NetworkLayerChecker
   name: NetworkLayerChecker
   href: api/Global.NetworkLayerChecker.html
@@ -1512,6 +1493,51 @@ references:
   commentId: F:Global.OpenPuzzle.puzzleIsAvailable
   fullName: OpenPuzzle.puzzleIsAvailable
   nameWithType: OpenPuzzle.puzzleIsAvailable
+- uid: Global.OpenSabotage
+  name: OpenSabotage
+  href: api/Global.OpenSabotage.html
+  commentId: T:Global.OpenSabotage
+  fullName: OpenSabotage
+  nameWithType: OpenSabotage
+- uid: Global.OpenSabotage.OnApproach(GameObject)
+  name: OnApproach(GameObject)
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnApproach_GameObject_
+  commentId: M:Global.OpenSabotage.OnApproach(GameObject)
+  fullName: OpenSabotage.OnApproach(GameObject)
+  nameWithType: OpenSabotage.OnApproach(GameObject)
+- uid: Global.OpenSabotage.OnApproach*
+  name: OnApproach
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnApproach_
+  commentId: Overload:Global.OpenSabotage.OnApproach
+  isSpec: "True"
+  fullName: OpenSabotage.OnApproach
+  nameWithType: OpenSabotage.OnApproach
+- uid: Global.OpenSabotage.OnStartServer
+  name: OnStartServer()
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnStartServer
+  commentId: M:Global.OpenSabotage.OnStartServer
+  fullName: OpenSabotage.OnStartServer()
+  nameWithType: OpenSabotage.OnStartServer()
+- uid: Global.OpenSabotage.OnStartServer*
+  name: OnStartServer
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnStartServer_
+  commentId: Overload:Global.OpenSabotage.OnStartServer
+  isSpec: "True"
+  fullName: OpenSabotage.OnStartServer
+  nameWithType: OpenSabotage.OnStartServer
+- uid: Global.OpenSabotage.OnStopServer
+  name: OnStopServer()
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnStopServer
+  commentId: M:Global.OpenSabotage.OnStopServer
+  fullName: OpenSabotage.OnStopServer()
+  nameWithType: OpenSabotage.OnStopServer()
+- uid: Global.OpenSabotage.OnStopServer*
+  name: OnStopServer
+  href: api/Global.OpenSabotage.html#Global_OpenSabotage_OnStopServer_
+  commentId: Overload:Global.OpenSabotage.OnStopServer
+  isSpec: "True"
+  fullName: OpenSabotage.OnStopServer
+  nameWithType: OpenSabotage.OnStopServer
 - uid: Global.PlayerAction
   name: PlayerAction
   href: api/Global.PlayerAction.html
@@ -2111,18 +2137,6 @@ references:
   commentId: F:Global.PuzzleId.IfFlowerPicking
   fullName: PuzzleId.IfFlowerPicking
   nameWithType: PuzzleId.IfFlowerPicking
-- uid: Global.PuzzleId.SabotageBoilerPressure
-  name: SabotageBoilerPressure
-  href: api/Global.PuzzleId.html#Global_PuzzleId_SabotageBoilerPressure
-  commentId: F:Global.PuzzleId.SabotageBoilerPressure
-  fullName: PuzzleId.SabotageBoilerPressure
-  nameWithType: PuzzleId.SabotageBoilerPressure
-- uid: Global.PuzzleId.SabotageElectricity
-  name: SabotageElectricity
-  href: api/Global.PuzzleId.html#Global_PuzzleId_SabotageElectricity
-  commentId: F:Global.PuzzleId.SabotageElectricity
-  fullName: PuzzleId.SabotageElectricity
-  nameWithType: PuzzleId.SabotageElectricity
 - uid: Global.PuzzleId.Sequence1
   name: Sequence1
   href: api/Global.PuzzleId.html#Global_PuzzleId_Sequence1
@@ -2394,19 +2408,25 @@ references:
   commentId: T:Global.SabotagePuzzle
   fullName: SabotagePuzzle
   nameWithType: SabotagePuzzle
-- uid: Global.SabotagePuzzle.ClosePuzzle
-  name: ClosePuzzle()
-  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ClosePuzzle
-  commentId: M:Global.SabotagePuzzle.ClosePuzzle
-  fullName: SabotagePuzzle.ClosePuzzle()
-  nameWithType: SabotagePuzzle.ClosePuzzle()
-- uid: Global.SabotagePuzzle.ClosePuzzle*
-  name: ClosePuzzle
-  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ClosePuzzle_
-  commentId: Overload:Global.SabotagePuzzle.ClosePuzzle
+- uid: Global.SabotagePuzzle.CloseAllPuzzle
+  name: CloseAllPuzzle()
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_CloseAllPuzzle
+  commentId: M:Global.SabotagePuzzle.CloseAllPuzzle
+  fullName: SabotagePuzzle.CloseAllPuzzle()
+  nameWithType: SabotagePuzzle.CloseAllPuzzle()
+- uid: Global.SabotagePuzzle.CloseAllPuzzle*
+  name: CloseAllPuzzle
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_CloseAllPuzzle_
+  commentId: Overload:Global.SabotagePuzzle.CloseAllPuzzle
   isSpec: "True"
-  fullName: SabotagePuzzle.ClosePuzzle
-  nameWithType: SabotagePuzzle.ClosePuzzle
+  fullName: SabotagePuzzle.CloseAllPuzzle
+  nameWithType: SabotagePuzzle.CloseAllPuzzle
+- uid: Global.SabotagePuzzle.isPuzzleEnabled
+  name: isPuzzleEnabled
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_isPuzzleEnabled
+  commentId: F:Global.SabotagePuzzle.isPuzzleEnabled
+  fullName: SabotagePuzzle.isPuzzleEnabled
+  nameWithType: SabotagePuzzle.isPuzzleEnabled
 - uid: Global.SabotagePuzzle.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleCompleted
@@ -2459,6 +2479,32 @@ references:
   isSpec: "True"
   fullName: SabotagePuzzle.SetPuzzleAsCompleted
   nameWithType: SabotagePuzzle.SetPuzzleAsCompleted
+- uid: Global.SabotagePuzzle.ShowPuzzle
+  name: ShowPuzzle()
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ShowPuzzle
+  commentId: M:Global.SabotagePuzzle.ShowPuzzle
+  fullName: SabotagePuzzle.ShowPuzzle()
+  nameWithType: SabotagePuzzle.ShowPuzzle()
+- uid: Global.SabotagePuzzle.ShowPuzzle*
+  name: ShowPuzzle
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ShowPuzzle_
+  commentId: Overload:Global.SabotagePuzzle.ShowPuzzle
+  isSpec: "True"
+  fullName: SabotagePuzzle.ShowPuzzle
+  nameWithType: SabotagePuzzle.ShowPuzzle
+- uid: Global.SabotagePuzzle.TargetClosePuzzle(Mirror.NetworkConnection)
+  name: TargetClosePuzzle(NetworkConnection)
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_TargetClosePuzzle_Mirror_NetworkConnection_
+  commentId: M:Global.SabotagePuzzle.TargetClosePuzzle(Mirror.NetworkConnection)
+  fullName: SabotagePuzzle.TargetClosePuzzle(Mirror.NetworkConnection)
+  nameWithType: SabotagePuzzle.TargetClosePuzzle(NetworkConnection)
+- uid: Global.SabotagePuzzle.TargetClosePuzzle*
+  name: TargetClosePuzzle
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_TargetClosePuzzle_
+  commentId: Overload:Global.SabotagePuzzle.TargetClosePuzzle
+  isSpec: "True"
+  fullName: SabotagePuzzle.TargetClosePuzzle
+  nameWithType: SabotagePuzzle.TargetClosePuzzle
 - uid: Global.SabotagePuzzle.ui
   name: ui
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ui
