@@ -31,8 +31,8 @@ public class HelloNanabot : NetworkBehaviour
     void SayOnClient(NetworkConnection target, string message)
     {
         var nanabot = GameObject.FindGameObjectWithTag(Tags.Nanabot);
-        var nanabotSays = nanabot.GetComponent<NanabotSays>();
-        nanabotSays.SayMessage(message);
+        var nanabotSays = nanabot.GetComponent<NanaBot>();
+        nanabotSays.Talk(message);
     }
 
     [ClientRpc]
