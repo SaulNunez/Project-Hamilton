@@ -165,7 +165,7 @@ public class Emergency : NetworkBehaviour
     [Client]
     public void StartBoilerSabotage() => CmdStartEmergency(EmergencyType.ChangeBoilerPressure);
 
-    [Command]
+    [Command(ignoreAuthority = true)]
     public void CmdStartEmergency(EmergencyType sabotageType)
     {
         if (!areEmergenciesAvailable)
