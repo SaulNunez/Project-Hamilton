@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ff21e3c054b0f4f8dbc5fcc9915bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &491674975260841228
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,7 +7434,6 @@ GameObject:
   - component: {fileID: 747015235304950333}
   - component: {fileID: 7471045139805426628}
   - component: {fileID: 5641099504301028362}
-  - component: {fileID: 1448872952748184562}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7578,18 +7579,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1448872952748184562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8274070876379458573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe95d0c1ee78114e88995c609725d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8423515692031860130
 GameObject:
   m_ObjectHideFlags: 0

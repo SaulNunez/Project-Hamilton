@@ -11,7 +11,16 @@ using UnityEngine;
 [Serializable]
 public class BoilerSabotageOptions
 {
+    /// <summary>
+    /// Image to use for gauge representation
+    /// </summary>
     public Sprite gauge;
+    /// <summary>
+    /// Maximum pressure of this valve
+    /// </summary>
     public int maximum;
+    /// <summary>
+    /// Minimum pressure of this valve
+    /// </summary>
     public int minimum;
 }

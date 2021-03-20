@@ -63,7 +63,9 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         defaultFlowerType = FlowerTypes.Types.PickRandom();
 
         var buttonFlower = FlowerTypes.Types.PickRandom(6).ToList();
-        SetupOnClient(buttonFlower);
+        RpcSetupOnClient(buttonFlower);
+
+        print("Puzzle started");
     }
 
     [Command]
@@ -77,10 +79,12 @@ public class SetupDefaultFlowers: NetworkBehaviour {
     }
 
     [ClientRpc]
-    void SetupOnClient(List<string> flowerTypes)
+    void RpcSetupOnClient(List<string> flowerTypes)
     {
+        print("Empezando configuracion");
         for(int i = 0; i < flowerButtons.Count; i++)
         {
+            print($"Configurando numero {i}");
             switch (flowerTypes[i])
             {
                 case FlowerTypes.Sunflower:
