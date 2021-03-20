@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// To be used on the emergency button.
+/// Sends a RPC call to turn off collisions when emergency has started 
+/// and turns them back on when the emergency has been solved.
+/// </summary>
 [RequireComponent(typeof(Collider2D))]
 public class DisableWhenOnEmergency : NetworkBehaviour
 {
