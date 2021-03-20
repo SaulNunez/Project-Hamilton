@@ -19,6 +19,13 @@ using UnityEngine.UI;
 /// </summary>
 public class Emergency : NetworkBehaviour
 {
+    public enum EmergencyType
+    {
+        TurnDownGenerator,
+        ChangeBoilerPressure
+    }
+
+
     /// <summary>
     /// Hub config
     /// </summary>
@@ -37,7 +44,7 @@ public class Emergency : NetworkBehaviour
     private bool onSabotage = false;
 
     [SyncVar]
-    private PuzzleId currentActiveSabotage;
+    private EmergencyType currentActiveSabotage;
 
     [SyncVar]
     private int timeRemainingOnEmergency;
@@ -146,8 +153,20 @@ public class Emergency : NetworkBehaviour
         areEmergenciesAvailable = true;
     }
 
-    [Server]
-    public void StartEmergency(PuzzleId puzzleId)
+    /// <summary>
+    /// For UI on client, starts emergency sabotaging electric generators 
+    /// </summary>
+    [Client]
+    public void StartElectricitySabotage() => CmdStartEmergency(EmergencyType.TurnDownGenerator);
+
+    /// <summary>
+    /// For UI on client, starts emergency sabotaging boiler pressure 
+    /// </summary>
+    [Client]
+    public void StartBoilerSabotage() => CmdStartEmergency(EmergencyType.ChangeBoilerPressure);
+
+    [Command]
+    public void CmdStartEmergency(EmergencyType sabotageType)
     {
         if (!areEmergenciesAvailable)
         {
@@ -159,7 +178,7 @@ public class Emergency : NetworkBehaviour
 
         OnEmergencyStarted?.Invoke();
 
-        currentActiveSabotage = puzzleId;
+        currentActiveSabotage = sabotageType;
         Invoke(nameof(OnTimeEnded), hubConfig.secondsEmergencyDuration);
         StartCountdownForEmergency();
     }
@@ -194,7 +213,7 @@ public class Emergency : NetworkBehaviour
         OnEmergencyResolved?.Invoke();
     }
 
-    public void StartCountdownForEmergency()
+    void StartCountdownForEmergency()
     {
         timeRemainingOnEmergency = hubConfig.secondsEmergencyDuration;
         Invoke(nameof(CountdownTimeRemaining), 1f);
