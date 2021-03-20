@@ -32,13 +32,13 @@ public class DisableWhenOnEmergency : NetworkBehaviour
         colliderInGameObject = GetComponent<Collider2D>();
     }
 
-    [TargetRpc]
+    [ClientRpc]
     private void RpcOnEmergencyResolved()
     {
         colliderInGameObject.enabled = true;
     }
 
-    [TargetRpc]
+    [ClientRpc]
     private void RpcOnEmergencyStarted()
     {
         colliderInGameObject.enabled = false;
