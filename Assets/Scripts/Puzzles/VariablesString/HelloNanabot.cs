@@ -11,6 +11,9 @@ public class HelloNanabot : NetworkBehaviour
 {
     public TMP_InputField textbox;
 
+    /// <summary>
+    /// Gets value of textbox and sends it to the server
+    /// </summary>
     public void CommitPuzzle()
     {
         CheckMessage(textbox.text);

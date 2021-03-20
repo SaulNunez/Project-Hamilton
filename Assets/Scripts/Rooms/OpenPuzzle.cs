@@ -51,9 +51,7 @@ public class OpenPuzzle : InteractuableBehavior
         {
             print("Show puzzle");
             //TODO: Crear id de puzzle en el servidor para mantener el estado
-            //TargetOpenPuzzleOnPlayer(approachedBy.GetComponent<NetworkTransform>().connectionToClient);
-            var puzzleManager = approachedBy.GetComponent<ShowPuzzle>();
-            puzzleManager.OpenPuzzles(opens);
+            ShowPuzzle.instance.OpenPuzzles(opens);
         }
     }
 }

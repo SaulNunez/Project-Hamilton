@@ -5,8 +5,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Hears puzzle completion and updates task progress bar in client
+/// </summary>
 public class TaskProgress : NetworkBehaviour
 {
+    [Tooltip("Slider that doubles duty as progress bar for tasks in UI")]
     [SerializeField]
     Slider taskSlider;
 
@@ -16,12 +20,12 @@ public class TaskProgress : NetworkBehaviour
     [SyncVar(hook = nameof(AllTasksUpdated))]
     int allTasks;
 
-    private void DoneTasksUpdated(int oldValue, int newValue)
+    private void DoneTasksUpdated(int _, int newValue)
     {
         taskSlider.value = newValue;
     }
 
-    private void AllTasksUpdated(int oldValue, int newValue)
+    private void AllTasksUpdated(int _, int newValue)
     {
         taskSlider.maxValue = allTasks;
     }
@@ -34,7 +38,7 @@ public class TaskProgress : NetworkBehaviour
         allTasks = Enum.GetNames(typeof(PuzzleId)).Length;
     }
 
-    private void UpdatePuzzleCount(PuzzleId obj)
+    private void UpdatePuzzleCount(PuzzleId _)
     {
         doneTasks++;
     }

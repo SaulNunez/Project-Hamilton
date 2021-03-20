@@ -3,54 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there's voting.
+/// </summary>
 public class ShowPuzzle : NetworkBehaviour
 {
-    [Header("Puzzles")]
     [SerializeField]
-    GameObject boilerIntPrefab;
-    [SerializeField]
-    GameObject sequencePrefab;
-    [SerializeField]
-    GameObject variablesStringPrefab;
-    [SerializeField]
-    GameObject variablesBoolPrefab;
-    [SerializeField]
-    GameObject doWhileCarStarterPrefab;
-    [SerializeField]
-    GameObject floatThermostatPrefab;
-    [SerializeField]
-    GameObject forWashingPrefab;
-    [SerializeField]
-    GameObject whileFillWaterBucketPrefab;
-    [SerializeField]
-    GameObject ifPickFlowerPrefab;
-    [SerializeField]
-    GameObject substringPrefab;
-    [SerializeField]
-    GameObject ifelseCakePrefab;
-
-    [SyncVar]
     GameObject boilerInt;
-    [SyncVar]
+    [SerializeField]
     GameObject sequence;
-    [SyncVar]
+    [SerializeField]
     GameObject variablesString;
-    [SyncVar]
+    [SerializeField]
     GameObject variablesBool;
-    [SyncVar]
+    [SerializeField]
     GameObject doWhileCarStarter;
-    [SyncVar]
+    [SerializeField]
     GameObject floatThermostat;
-    [SyncVar]
+    [SerializeField]
     GameObject forWashing;
-    [SyncVar]
+    [SerializeField]
     GameObject whileFillWaterBucket;
-    [SyncVar]
+    [SerializeField]
     GameObject ifPickFlower;
-    [SyncVar]
+    [SerializeField]
     GameObject substring;
-    [SyncVar]
+    [SerializeField]
     GameObject ifelseCake;
+
+
+    public static ShowPuzzle instance = null;
 
     public override void OnStartServer()
     {
@@ -58,51 +41,13 @@ public class ShowPuzzle : NetworkBehaviour
 
         VotingManager.OnVotingStarted += StopCurrentPuzzle;
 
-        var canvas = GameObject.FindGameObjectWithTag(Tags.UiManager);
-
-        var boilerIntInstance = Instantiate(boilerIntPrefab, canvas.transform);
-        NetworkServer.Spawn(boilerIntInstance, netIdentity.connectionToClient);
-        boilerInt = boilerIntInstance;
-
-        var sequenceInstance = Instantiate(sequencePrefab, canvas.transform);
-        NetworkServer.Spawn(sequenceInstance, netIdentity.connectionToClient);
-        sequence = sequenceInstance;
-
-        var variablesStringInstance = Instantiate(variablesStringPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesStringInstance, netIdentity.connectionToClient);
-        variablesString = variablesStringInstance;
-
-        var variablesBoolInstance = Instantiate(variablesBoolPrefab, canvas.transform);
-        NetworkServer.Spawn(variablesBoolInstance, netIdentity.connectionToClient);
-        variablesBool = variablesBoolInstance;
-
-        var doWhileCarStarterInstance = Instantiate(doWhileCarStarterPrefab, canvas.transform);
-        NetworkServer.Spawn(doWhileCarStarterInstance, netIdentity.connectionToClient);
-        doWhileCarStarter = doWhileCarStarterInstance;
-
-        var floatThermostatInstance = Instantiate(floatThermostatPrefab, canvas.transform);
-        NetworkServer.Spawn(floatThermostatInstance, netIdentity.connectionToClient);
-        floatThermostat = floatThermostatInstance;
-
-        var forWashingInstance = Instantiate(forWashingPrefab, canvas.transform);
-        NetworkServer.Spawn(forWashingInstance, netIdentity.connectionToClient);
-        forWashing = forWashingInstance;
-
-        var whileFillWaterBucketInstance = Instantiate(whileFillWaterBucketPrefab, canvas.transform);
-        NetworkServer.Spawn(whileFillWaterBucketInstance, netIdentity.connectionToClient);
-        whileFillWaterBucket = whileFillWaterBucketInstance;
-
-        var ifPickFlowerInstance = Instantiate(ifPickFlowerPrefab, canvas.transform);
-        NetworkServer.Spawn(ifPickFlowerInstance, netIdentity.connectionToClient);
-        ifPickFlower = ifPickFlowerInstance;
-
-        var substringInstance = Instantiate(substringPrefab, canvas.transform);
-        NetworkServer.Spawn(substringInstance, netIdentity.connectionToClient);
-        substring = substringInstance;
-
-        var ifelseCakeInstance = Instantiate(ifelseCakePrefab, canvas.transform);
-        NetworkServer.Spawn(ifelseCakeInstance, netIdentity.connectionToClient);
-        ifelseCake = ifelseCakeInstance;
+        if(instance == null)
+        {
+            instance = this;
+        } else
+        {
+            Debug.LogError($"Another instance of component was found.");
+        }
     }
 
     private void StopCurrentPuzzle(int _)
@@ -127,6 +72,10 @@ public class ShowPuzzle : NetworkBehaviour
         VotingManager.OnVotingStarted -= StopCurrentPuzzle;
     }
 
+    /// <summary>
+    /// Opens puzzle
+    /// </summary>
+    /// <param name="puzzle">Id of puzzle</param>
     public void OpenPuzzles(PuzzleId puzzle)
     {
 

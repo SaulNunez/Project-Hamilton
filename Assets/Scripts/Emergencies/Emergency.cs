@@ -58,6 +58,12 @@ public class Emergency : NetworkBehaviour
     [SerializeField]
     Button electricitySabotage;
 
+    /// <summary>
+    /// Single instance of the class.
+    /// </summary>
+    /// <remarks>
+    /// Only available on server
+    /// </remarks>
     public static Emergency instance = null;
 
     /// <summary>

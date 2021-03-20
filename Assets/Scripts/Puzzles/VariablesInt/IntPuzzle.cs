@@ -18,15 +18,19 @@ namespace Puzzles.Variables.Int
         [SyncVar]
         float sliderDefTem;
 
+        [Tooltip("Mode to use, false uses int, in true it uses 2 digit after point float numbers")]
         [SerializeField]
         bool useFloatDefaultTemperature = false;
 
+        [Tooltip("Component to use to display the current temperature")]
         [SerializeField]
         TextMeshProUGUI currentTemp;
 
+        [Tooltip("(Optional) Component for current slider temp")]
         [SerializeField]
         TextMeshProUGUI sliderTemp;
 
+        [Tooltip("(Optional) Slider for default int setup. Technically can be used for float, but might become hard to the user")]
         [SerializeField]
         Slider tempSlider;
 

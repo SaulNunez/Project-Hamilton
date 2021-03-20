@@ -13,6 +13,7 @@ TagManager:
   - Nanabot
   - ChatWindow
   - VotingScreen
+  - PuzzleManager
   layers:
   - Default
   - TransparentFX

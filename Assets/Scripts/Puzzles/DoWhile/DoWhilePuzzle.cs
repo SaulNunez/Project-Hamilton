@@ -13,7 +13,7 @@ public class DoWhilePuzzle : NetworkBehaviour
         CmdCheckResultInServer(text);
     }
 
-    [Command]
+    [Command(ignoreAuthority = true)]
     void CmdCheckResultInServer(string text)
     {
         var textClean = text.Trim().ToLower();
