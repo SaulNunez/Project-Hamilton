@@ -41,10 +41,11 @@ public class ShowPuzzle : NetworkBehaviour
 
         VotingManager.OnVotingStarted += RpcStopCurrentPuzzle;
 
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
-        } else
+        }
+        else
         {
             Debug.LogError($"Another instance of component was found.");
         }
@@ -104,10 +105,17 @@ public class ShowPuzzle : NetworkBehaviour
     /// Opens puzzle
     /// </summary>
     /// <param name="puzzle">Id of puzzle</param>
+    /// <param name="openedBy">GameObject that interacted, a player (that contains a NetworkIdentity)</param>
     [Server]
     public void OpenPuzzles(PuzzleId puzzle, GameObject openedBy)
     {
-        TargetOpenPuzzleOnClient(openedBy.GetComponent<NetworkIdentity>().connectionToClient, puzzle);
+        var openedByNetworkIdentity = openedBy.GetComponent<NetworkIdentity>();
+        if (openedByNetworkIdentity == null)
+        {
+            return;
+        }
+
+        TargetOpenPuzzleOnClient(openedByNetworkIdentity.connectionToClient, puzzle);
     }
 
     [TargetRpc]
@@ -119,44 +127,42 @@ public class ShowPuzzle : NetworkBehaviour
     [Client]
     private void ActivatePuzzleOnClient(PuzzleId puzzle)
     {
-        if (hasAuthority)
+        switch (puzzle)
         {
-            switch (puzzle)
-            {
-                case PuzzleId.BoilersVariableInteger:
-                    boilerInt.SetActive(true);
-                    break;
-                case PuzzleId.Sequence1:
-                    sequence.SetActive(true);
-                    break;
-                case PuzzleId.VariableString:
-                    variablesString.SetActive(true);
-                    break;
-                case PuzzleId.VariableBoolean:
-                    variablesBool.SetActive(true);
-                    break;
-                case PuzzleId.DoWhileMotorStarter:
-                    doWhileCarStarter.SetActive(true);
-                    break;
-                case PuzzleId.VariableFloat:
-                    floatThermostat.SetActive(true);
-                    break;
-                case PuzzleId.ForWashingBucket:
-                    forWashing.SetActive(true);
-                    break;
-                case PuzzleId.WhileFillingBucket:
-                    whileFillWaterBucket.SetActive(true);
-                    break;
-                case PuzzleId.IfFlowerPicking:
-                    ifPickFlower.SetActive(true);
-                    break;
-                case PuzzleId.Substring:
-                    substring.SetActive(true);
-                    break;
-                case PuzzleId.IfElse:
-                    ifelseCake.SetActive(true);
-                    break;
-            }
+            case PuzzleId.BoilersVariableInteger:
+                boilerInt.SetActive(true);
+                break;
+            case PuzzleId.Sequence1:
+                sequence.SetActive(true);
+                break;
+            case PuzzleId.VariableString:
+                variablesString.SetActive(true);
+                break;
+            case PuzzleId.VariableBoolean:
+                variablesBool.SetActive(true);
+                break;
+            case PuzzleId.DoWhileMotorStarter:
+                doWhileCarStarter.SetActive(true);
+                break;
+            case PuzzleId.VariableFloat:
+                floatThermostat.SetActive(true);
+                break;
+            case PuzzleId.ForWashingBucket:
+                forWashing.SetActive(true);
+                break;
+            case PuzzleId.WhileFillingBucket:
+                whileFillWaterBucket.SetActive(true);
+                break;
+            case PuzzleId.IfFlowerPicking:
+                ifPickFlower.SetActive(true);
+                break;
+            case PuzzleId.Substring:
+                substring.SetActive(true);
+                break;
+            case PuzzleId.IfElse:
+                ifelseCake.SetActive(true);
+                break;
         }
+
     }
 }

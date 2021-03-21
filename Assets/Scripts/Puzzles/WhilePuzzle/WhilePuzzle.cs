@@ -31,7 +31,7 @@ public class WhilePuzzle : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
+    [TargetRpc]
     void RpcClosePuzzle(NetworkConnection target)
     {
         ShowPuzzle.instance.ClosePuzzles();

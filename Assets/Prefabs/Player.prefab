@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 4314256330667214963}
   - component: {fileID: 1029578670153045496}
   - component: {fileID: 4544063956130321910}
-  - component: {fileID: 1210587208360967914}
   - component: {fileID: 3320764101421821677}
   - component: {fileID: 5185405550642313587}
   m_Layer: 8
@@ -463,42 +462,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
---- !u!114 &1210587208360967914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205453721926670665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217d7b709939ccd4ca7110cf8f5937d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  boilerIntPrefab: {fileID: 4990831156063259213, guid: a5b1963004f95e448aeba20a885c2fcc,
-    type: 3}
-  sequencePrefab: {fileID: 895513022113233564, guid: ae184fc6d568ac142ad9b7ef9bb580c7,
-    type: 3}
-  variablesStringPrefab: {fileID: 5311835978060217453, guid: 85475e205fc219e4e8287c184afdd037,
-    type: 3}
-  variablesBoolPrefab: {fileID: 4801008134873145487, guid: ec877f668961b31419c43078f54fcc3b,
-    type: 3}
-  doWhileCarStarterPrefab: {fileID: 7082839617737043622, guid: cc836486dae17a442a4b9112451f0a7e,
-    type: 3}
-  floatThermostatPrefab: {fileID: 3797668447048670100, guid: 994c4f6ea531b914fb41ad668c1443d4,
-    type: 3}
-  forWashingPrefab: {fileID: 2434214535746900211, guid: e8941b369b71d2543801cef312b4eaf7,
-    type: 3}
-  whileFillWaterBucketPrefab: {fileID: 6717789502006183773, guid: b5a87296ef4923b43bdad153b2753339,
-    type: 3}
-  ifPickFlowerPrefab: {fileID: 2607294053379864870, guid: 2c4df80c5130dd24e81212b51f489fd6,
-    type: 3}
-  substringPrefab: {fileID: 2710689203424774717, guid: 5727f82ca54c9814e89a56a57d4f0a7c,
-    type: 3}
-  ifelseCakePrefab: {fileID: 3335899373672739547, guid: b6b7dc5fcededb046af69be2bbb62ef2,
-    type: 3}
 --- !u!114 &3320764101421821677
 MonoBehaviour:
   m_ObjectHideFlags: 0

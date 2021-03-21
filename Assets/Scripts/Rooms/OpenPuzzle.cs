@@ -51,7 +51,7 @@ public class OpenPuzzle : InteractuableBehavior
         {
             print("Show puzzle");
             //TODO: Crear id de puzzle en el servidor para mantener el estado
-            ShowPuzzle.instance.OpenPuzzles(opens, gameObject);
+            ShowPuzzle.instance.OpenPuzzles(opens, approachedBy);
         }
     }
 }
