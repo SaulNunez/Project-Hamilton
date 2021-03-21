@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -9,7 +10,7 @@ using UnityEngine;
 public class NanaBot : MonoBehaviour
 {
     [SerializeField]
-    TextMesh worldText;
+    TextMeshPro worldText;
 
     [SerializeField]
     int showForSeconds = 4;
