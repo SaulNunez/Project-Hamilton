@@ -474,6 +474,37 @@ references:
   commentId: T:Global.Emergency
   fullName: Emergency
   nameWithType: Emergency
+- uid: Global.Emergency.CmdStartEmergency(Emergency.EmergencyType)
+  name: CmdStartEmergency(Emergency.EmergencyType)
+  href: api/Global.Emergency.html#Global_Emergency_CmdStartEmergency_Emergency_EmergencyType_
+  commentId: M:Global.Emergency.CmdStartEmergency(Emergency.EmergencyType)
+  fullName: Emergency.CmdStartEmergency(Emergency.EmergencyType)
+  nameWithType: Emergency.CmdStartEmergency(Emergency.EmergencyType)
+- uid: Global.Emergency.CmdStartEmergency*
+  name: CmdStartEmergency
+  href: api/Global.Emergency.html#Global_Emergency_CmdStartEmergency_
+  commentId: Overload:Global.Emergency.CmdStartEmergency
+  isSpec: "True"
+  fullName: Emergency.CmdStartEmergency
+  nameWithType: Emergency.CmdStartEmergency
+- uid: Global.Emergency.EmergencyType
+  name: Emergency.EmergencyType
+  href: api/Global.Emergency.EmergencyType.html
+  commentId: T:Global.Emergency.EmergencyType
+  fullName: Emergency.EmergencyType
+  nameWithType: Emergency.EmergencyType
+- uid: Global.Emergency.EmergencyType.ChangeBoilerPressure
+  name: ChangeBoilerPressure
+  href: api/Global.Emergency.EmergencyType.html#Global_Emergency_EmergencyType_ChangeBoilerPressure
+  commentId: F:Global.Emergency.EmergencyType.ChangeBoilerPressure
+  fullName: Emergency.EmergencyType.ChangeBoilerPressure
+  nameWithType: Emergency.EmergencyType.ChangeBoilerPressure
+- uid: Global.Emergency.EmergencyType.TurnDownGenerator
+  name: TurnDownGenerator
+  href: api/Global.Emergency.EmergencyType.html#Global_Emergency_EmergencyType_TurnDownGenerator
+  commentId: F:Global.Emergency.EmergencyType.TurnDownGenerator
+  fullName: Emergency.EmergencyType.TurnDownGenerator
+  nameWithType: Emergency.EmergencyType.TurnDownGenerator
 - uid: Global.Emergency.instance
   name: instance
   href: api/Global.Emergency.html#Global_Emergency_instance
@@ -530,32 +561,32 @@ references:
   commentId: E:Global.Emergency.OnTimeRemaingForEmergencyChanged
   fullName: Emergency.OnTimeRemaingForEmergencyChanged
   nameWithType: Emergency.OnTimeRemaingForEmergencyChanged
-- uid: Global.Emergency.StartCountdownForEmergency
-  name: StartCountdownForEmergency()
-  href: api/Global.Emergency.html#Global_Emergency_StartCountdownForEmergency
-  commentId: M:Global.Emergency.StartCountdownForEmergency
-  fullName: Emergency.StartCountdownForEmergency()
-  nameWithType: Emergency.StartCountdownForEmergency()
-- uid: Global.Emergency.StartCountdownForEmergency*
-  name: StartCountdownForEmergency
-  href: api/Global.Emergency.html#Global_Emergency_StartCountdownForEmergency_
-  commentId: Overload:Global.Emergency.StartCountdownForEmergency
+- uid: Global.Emergency.StartBoilerSabotage
+  name: StartBoilerSabotage()
+  href: api/Global.Emergency.html#Global_Emergency_StartBoilerSabotage
+  commentId: M:Global.Emergency.StartBoilerSabotage
+  fullName: Emergency.StartBoilerSabotage()
+  nameWithType: Emergency.StartBoilerSabotage()
+- uid: Global.Emergency.StartBoilerSabotage*
+  name: StartBoilerSabotage
+  href: api/Global.Emergency.html#Global_Emergency_StartBoilerSabotage_
+  commentId: Overload:Global.Emergency.StartBoilerSabotage
   isSpec: "True"
-  fullName: Emergency.StartCountdownForEmergency
-  nameWithType: Emergency.StartCountdownForEmergency
-- uid: Global.Emergency.StartEmergency(PuzzleId)
-  name: StartEmergency(PuzzleId)
-  href: api/Global.Emergency.html#Global_Emergency_StartEmergency_PuzzleId_
-  commentId: M:Global.Emergency.StartEmergency(PuzzleId)
-  fullName: Emergency.StartEmergency(PuzzleId)
-  nameWithType: Emergency.StartEmergency(PuzzleId)
-- uid: Global.Emergency.StartEmergency*
-  name: StartEmergency
-  href: api/Global.Emergency.html#Global_Emergency_StartEmergency_
-  commentId: Overload:Global.Emergency.StartEmergency
+  fullName: Emergency.StartBoilerSabotage
+  nameWithType: Emergency.StartBoilerSabotage
+- uid: Global.Emergency.StartElectricitySabotage
+  name: StartElectricitySabotage()
+  href: api/Global.Emergency.html#Global_Emergency_StartElectricitySabotage
+  commentId: M:Global.Emergency.StartElectricitySabotage
+  fullName: Emergency.StartElectricitySabotage()
+  nameWithType: Emergency.StartElectricitySabotage()
+- uid: Global.Emergency.StartElectricitySabotage*
+  name: StartElectricitySabotage
+  href: api/Global.Emergency.html#Global_Emergency_StartElectricitySabotage_
+  commentId: Overload:Global.Emergency.StartElectricitySabotage
   isSpec: "True"
-  fullName: Emergency.StartEmergency
-  nameWithType: Emergency.StartEmergency
+  fullName: Emergency.StartElectricitySabotage
+  nameWithType: Emergency.StartElectricitySabotage
 - uid: Global.Emergency.StopEmergency
   name: StopEmergency()
   href: api/Global.Emergency.html#Global_Emergency_StopEmergency
@@ -1538,25 +1569,6 @@ references:
   isSpec: "True"
   fullName: OpenSabotage.OnStopServer
   nameWithType: OpenSabotage.OnStopServer
-- uid: Global.PlayerAction
-  name: PlayerAction
-  href: api/Global.PlayerAction.html
-  commentId: T:Global.PlayerAction
-  fullName: PlayerAction
-  nameWithType: PlayerAction
-- uid: Global.PlayerAction.Action(Mirror.NetworkConnection)
-  name: Action(NetworkConnection)
-  href: api/Global.PlayerAction.html#Global_PlayerAction_Action_Mirror_NetworkConnection_
-  commentId: M:Global.PlayerAction.Action(Mirror.NetworkConnection)
-  fullName: PlayerAction.Action(Mirror.NetworkConnection)
-  nameWithType: PlayerAction.Action(NetworkConnection)
-- uid: Global.PlayerAction.Action*
-  name: Action
-  href: api/Global.PlayerAction.html#Global_PlayerAction_Action_
-  commentId: Overload:Global.PlayerAction.Action
-  isSpec: "True"
-  fullName: PlayerAction.Action
-  nameWithType: PlayerAction.Action
 - uid: Global.PlayerControls
   name: PlayerControls
   href: api/Global.PlayerControls.html
@@ -2651,6 +2663,38 @@ references:
   commentId: T:Global.ShowPuzzle
   fullName: ShowPuzzle
   nameWithType: ShowPuzzle
+- uid: Global.ShowPuzzle.ClosePuzzles
+  name: ClosePuzzles()
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_ClosePuzzles
+  commentId: M:Global.ShowPuzzle.ClosePuzzles
+  fullName: ShowPuzzle.ClosePuzzles()
+  nameWithType: ShowPuzzle.ClosePuzzles()
+- uid: Global.ShowPuzzle.ClosePuzzles*
+  name: ClosePuzzles
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_ClosePuzzles_
+  commentId: Overload:Global.ShowPuzzle.ClosePuzzles
+  isSpec: "True"
+  fullName: ShowPuzzle.ClosePuzzles
+  nameWithType: ShowPuzzle.ClosePuzzles
+- uid: Global.ShowPuzzle.instance
+  name: instance
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_instance
+  commentId: F:Global.ShowPuzzle.instance
+  fullName: ShowPuzzle.instance
+  nameWithType: ShowPuzzle.instance
+- uid: Global.ShowPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartClient
+  commentId: M:Global.ShowPuzzle.OnStartClient
+  fullName: ShowPuzzle.OnStartClient()
+  nameWithType: ShowPuzzle.OnStartClient()
+- uid: Global.ShowPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartClient_
+  commentId: Overload:Global.ShowPuzzle.OnStartClient
+  isSpec: "True"
+  fullName: ShowPuzzle.OnStartClient
+  nameWithType: ShowPuzzle.OnStartClient
 - uid: Global.ShowPuzzle.OnStartServer
   name: OnStartServer()
   href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartServer
@@ -2677,12 +2721,12 @@ references:
   isSpec: "True"
   fullName: ShowPuzzle.OnStopServer
   nameWithType: ShowPuzzle.OnStopServer
-- uid: Global.ShowPuzzle.OpenPuzzles(PuzzleId)
-  name: OpenPuzzles(PuzzleId)
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OpenPuzzles_PuzzleId_
-  commentId: M:Global.ShowPuzzle.OpenPuzzles(PuzzleId)
-  fullName: ShowPuzzle.OpenPuzzles(PuzzleId)
-  nameWithType: ShowPuzzle.OpenPuzzles(PuzzleId)
+- uid: Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)
+  name: OpenPuzzles(PuzzleId, GameObject)
+  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OpenPuzzles_PuzzleId_GameObject_
+  commentId: M:Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)
+  fullName: ShowPuzzle.OpenPuzzles(PuzzleId, GameObject)
+  nameWithType: ShowPuzzle.OpenPuzzles(PuzzleId, GameObject)
 - uid: Global.ShowPuzzle.OpenPuzzles*
   name: OpenPuzzles
   href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OpenPuzzles_

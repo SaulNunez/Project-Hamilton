@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.BoilerSabotageOptions.html",
-          "hash": "454FkfZoZKNy6SQHtyIXgw=="
+          "hash": "hAsm8zKAFyfIhQHa4xv+PQ=="
         }
       },
       "is_incremental": false,
@@ -184,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.DisableWhenOnEmergency.html",
-          "hash": "GVI0GbiZnAvRHBLka/21Ng=="
+          "hash": "AHftea/0apRgCLwrUTDxPw=="
         }
       },
       "is_incremental": false,
@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.DoWhilePuzzle.html",
-          "hash": "ICezsByXj+GXrrEUR6qQfQ=="
+          "hash": "U30Sdc5VEinbje6r7BvLZA=="
         }
       },
       "is_incremental": false,
@@ -216,11 +216,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.Emergency.EmergencyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Emergency.EmergencyType.html",
+          "hash": "pRJxqX4HvM5xBr9fodRVYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.Emergency.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.Emergency.html",
-          "hash": "IF1Y0zFwxOmiuNLjBKdEpg=="
+          "hash": "vQ7rhBb4nvzCaNFygRm6nQ=="
         }
       },
       "is_incremental": false,
@@ -256,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.FlowerButtonModel.html",
-          "hash": "kB3e09n+KwXwl2MUyV907A=="
+          "hash": "oQq88cXnnEwxqjHQaZYrFQ=="
         }
       },
       "is_incremental": false,
@@ -376,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HelloNanabot.html",
-          "hash": "6xtzqELqxF4C9vebBQa4Rw=="
+          "hash": "echMrGLBjIF2AqPUSeOmbw=="
         }
       },
       "is_incremental": false,
@@ -557,18 +569,6 @@
         ".html": {
           "relative_path": "api/Global.OpenSabotage.html",
           "hash": "Fp6F25CRkthMMw97kRtg3Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.PlayerAction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.PlayerAction.html",
-          "hash": "EmSjCmLSz6uj8iY2Qjs/Yg=="
         }
       },
       "is_incremental": false,
@@ -940,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ShowPuzzle.html",
-          "hash": "t7RusbGXLeGUPk8PXGRbZw=="
+          "hash": "+cgVJrJ/E7/RVGWwlL02cQ=="
         }
       },
       "is_incremental": false,
@@ -1000,7 +1000,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TaskProgress.html",
-          "hash": "9c6KgWVhzPfH4cmN15usrA=="
+          "hash": "Esx2ncJx5Zqi2A6HCWkcPA=="
         }
       },
       "is_incremental": false,
@@ -1216,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "tPFz7qSQ20suG6I7FFIghA=="
+          "hash": "euA676NQKqOJT1HFpMvj9Q=="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9N/ywaaQir62L46n0ryfLA=="
+          "hash": "yF/d/79DL/bfwKgq40Xzmw=="
         }
       },
       "is_incremental": false,

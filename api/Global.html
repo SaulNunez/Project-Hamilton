@@ -88,7 +88,9 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Global.BoilerSabotageOptions.html">BoilerSabotageOptions</a></h4>
-      <section></section>
+      <section><p>Used by boiler sabotage component.</p>
+<p>There&apos;s a variety of gauges. This is used to provided several gauges configurations.</p>
+</section>
       <h4><a class="xref" href="Global.CameraControl.html">CameraControl</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.CameraFollowPlayer.html">CameraFollowPlayer</a></h4>
@@ -115,7 +117,10 @@ Para evitar todos los problemas de buscar componentes y tener que conocer como e
       <h4><a class="xref" href="Global.DisableOnLackOfAuthority.html">DisableOnLackOfAuthority</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.DisableWhenOnEmergency.html">DisableWhenOnEmergency</a></h4>
-      <section></section>
+      <section><p>To be used on the emergency button.
+Sends a RPC call to turn off collisions when emergency has started 
+and turns them back on when the emergency has been solved.</p>
+</section>
       <h4><a class="xref" href="Global.DoWhilePuzzle.html">DoWhilePuzzle</a></h4>
       <section><p>Logic for do while puzzle</p>
 </section>
@@ -141,7 +146,10 @@ Also handles wait to activate, and progress; offers countdown event for clients.
 Disables UI to prevent poluding the screen on the user.</p>
 </section>
       <h4><a class="xref" href="Global.FlowerButtonModel.html">FlowerButtonModel</a></h4>
-      <section></section>
+      <section><p>In <em>if</em> flower puzzle, serves as a weak abstraction to separate concerns.
+Can also prevent change in button structure from breaking code that handles button setup.</p>
+<p>Button component is served directly, but the sprite is a property that can be modified to acomodate new ways of displaying.</p>
+</section>
       <h4><a class="xref" href="Global.FlowerTypes.html">FlowerTypes</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.ForPuzzle.html">ForPuzzle</a></h4>
@@ -190,8 +198,6 @@ Has text floating on top of her head.</p>
       <h4><a class="xref" href="Global.OpenPuzzle.html">OpenPuzzle</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.OpenSabotage.html">OpenSabotage</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Global.PlayerAction.html">PlayerAction</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.PlayerControls.html">PlayerControls</a></h4>
       <section></section>
@@ -256,7 +262,8 @@ On click, these send a message on client to check they are the correct type.</p>
       <h4><a class="xref" href="Global.SetupOnClient.html">SetupOnClient</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.ShowPuzzle.html">ShowPuzzle</a></h4>
-      <section></section>
+      <section><p>Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there&apos;s voting.</p>
+</section>
       <h4><a class="xref" href="Global.ShowPuzzleRequest.html">ShowPuzzleRequest</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.SoundAlarmDuringEmergency.html">SoundAlarmDuringEmergency</a></h4>
@@ -269,7 +276,8 @@ Starts alarm on emergency start. Ends when resolved or players lost.</p>
       <h4><a class="xref" href="Global.Tags.html">Tags</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.TaskProgress.html">TaskProgress</a></h4>
-      <section></section>
+      <section><p>Hears puzzle completion and updates task progress bar in client</p>
+</section>
       <h4><a class="xref" href="Global.Teletransport.html">Teletransport</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.Test.html">Test</a></h4>
@@ -314,6 +322,8 @@ Spawnea una ventana de votación para el</p>
       <h4><a class="xref" href="Global.CharacterTypes.html">CharacterTypes</a></h4>
       <section><p>Available characters in game (for passing around)</p>
 </section>
+      <h4><a class="xref" href="Global.Emergency.EmergencyType.html">Emergency.EmergencyType</a></h4>
+      <section></section>
       <h4><a class="xref" href="Global.FunctionParameter.ParameterType.html">FunctionParameter.ParameterType</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.ItemUIHandling.Motive.html">ItemUIHandling.Motive</a></h4>

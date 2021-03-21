@@ -83,7 +83,8 @@
   
   <h1 id="Global_ShowPuzzle" data-uid="Global.ShowPuzzle" class="text-break">Class ShowPuzzle
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there&apos;s voting.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -97,8 +98,57 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ShowPuzzle : NetworkBehaviour</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Global_ShowPuzzle_instance" data-uid="Global.ShowPuzzle.instance">instance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ShowPuzzle instance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Global.ShowPuzzle.html">ShowPuzzle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Global_ShowPuzzle_ClosePuzzles_" data-uid="Global.ShowPuzzle.ClosePuzzles*"></a>
+  <h4 id="Global_ShowPuzzle_ClosePuzzles" data-uid="Global.ShowPuzzle.ClosePuzzles">ClosePuzzles()</h4>
+  <div class="markdown level1 summary"><p>Usable in the client, closes any puzzle on screen</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClosePuzzles()</code></pre>
+  </div>
+  
+  
+  <a id="Global_ShowPuzzle_OnStartClient_" data-uid="Global.ShowPuzzle.OnStartClient*"></a>
+  <h4 id="Global_ShowPuzzle_OnStartClient" data-uid="Global.ShowPuzzle.OnStartClient">OnStartClient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
   
   
   <a id="Global_ShowPuzzle_OnStartServer_" data-uid="Global.ShowPuzzle.OnStartServer*"></a>
@@ -126,12 +176,13 @@
   
   
   <a id="Global_ShowPuzzle_OpenPuzzles_" data-uid="Global.ShowPuzzle.OpenPuzzles*"></a>
-  <h4 id="Global_ShowPuzzle_OpenPuzzles_PuzzleId_" data-uid="Global.ShowPuzzle.OpenPuzzles(PuzzleId)">OpenPuzzles(PuzzleId)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Global_ShowPuzzle_OpenPuzzles_PuzzleId_GameObject_" data-uid="Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)">OpenPuzzles(PuzzleId, GameObject)</h4>
+  <div class="markdown level1 summary"><p>Opens puzzle</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OpenPuzzles(PuzzleId puzzle)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OpenPuzzles(PuzzleId puzzle, GameObject openedBy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,7 +197,14 @@
       <tr>
         <td><a class="xref" href="Global.PuzzleId.html">PuzzleId</a></td>
         <td><span class="parametername">puzzle</span></td>
-        <td></td>
+        <td><p>Id of puzzle</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">openedBy</span></td>
+        <td><p>GameObject that interacted, a player (that contains a NetworkIdentity)</p>
+</td>
       </tr>
     </tbody>
   </table>

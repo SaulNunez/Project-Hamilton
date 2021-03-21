@@ -112,7 +112,8 @@ Also handles wait to activate, and progress; offers countdown event for clients.
   
   
   <h4 id="Global_Emergency_instance" data-uid="Global.Emergency.instance">instance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Single instance of the class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -133,8 +134,38 @@ Also handles wait to activate, and progress; offers countdown event for clients.
       </tr>
     </tbody>
   </table>
+  <h5 id="Global_Emergency_instance_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only available on server</p>
+</div>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Global_Emergency_CmdStartEmergency_" data-uid="Global.Emergency.CmdStartEmergency*"></a>
+  <h4 id="Global_Emergency_CmdStartEmergency_Emergency_EmergencyType_" data-uid="Global.Emergency.CmdStartEmergency(Emergency.EmergencyType)">CmdStartEmergency(Emergency.EmergencyType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CmdStartEmergency(Emergency.EmergencyType sabotageType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Global.Emergency.EmergencyType.html">Emergency.EmergencyType</a></td>
+        <td><span class="parametername">sabotageType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Global_Emergency_OnStartServer_" data-uid="Global.Emergency.OnStartServer*"></a>
@@ -161,41 +192,26 @@ Also handles wait to activate, and progress; offers countdown event for clients.
   <div><span class="xref">Mirror.NetworkBehaviour.OnStopServer()</span></div>
   
   
-  <a id="Global_Emergency_StartCountdownForEmergency_" data-uid="Global.Emergency.StartCountdownForEmergency*"></a>
-  <h4 id="Global_Emergency_StartCountdownForEmergency" data-uid="Global.Emergency.StartCountdownForEmergency">StartCountdownForEmergency()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Global_Emergency_StartBoilerSabotage_" data-uid="Global.Emergency.StartBoilerSabotage*"></a>
+  <h4 id="Global_Emergency_StartBoilerSabotage" data-uid="Global.Emergency.StartBoilerSabotage">StartBoilerSabotage()</h4>
+  <div class="markdown level1 summary"><p>For UI on client, starts emergency sabotaging boiler pressure </p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartCountdownForEmergency()</code></pre>
+    <pre><code class="lang-csharp hljs">public void StartBoilerSabotage()</code></pre>
   </div>
   
   
-  <a id="Global_Emergency_StartEmergency_" data-uid="Global.Emergency.StartEmergency*"></a>
-  <h4 id="Global_Emergency_StartEmergency_PuzzleId_" data-uid="Global.Emergency.StartEmergency(PuzzleId)">StartEmergency(PuzzleId)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Global_Emergency_StartElectricitySabotage_" data-uid="Global.Emergency.StartElectricitySabotage*"></a>
+  <h4 id="Global_Emergency_StartElectricitySabotage" data-uid="Global.Emergency.StartElectricitySabotage">StartElectricitySabotage()</h4>
+  <div class="markdown level1 summary"><p>For UI on client, starts emergency sabotaging electric generators </p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartEmergency(PuzzleId puzzleId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StartElectricitySabotage()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Global.PuzzleId.html">PuzzleId</a></td>
-        <td><span class="parametername">puzzleId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Global_Emergency_StopEmergency_" data-uid="Global.Emergency.StopEmergency*"></a>
