@@ -34,6 +34,10 @@ namespace Puzzles.Variables.Int
         [SerializeField]
         Slider tempSlider;
 
+        [Tooltip("(Optional) InputField to input floating point temperatures")]
+        [SerializeField]
+        TMP_InputField temperatureInputField;
+
         public override void OnStartServer()
         {
             base.OnStartServer();
@@ -56,6 +60,11 @@ namespace Puzzles.Variables.Int
             if(tempSlider != null)
             {
                 tempSlider.value = sliderDefTem;
+            }
+
+            if(temperatureInputField != null)
+            {
+                temperatureInputField.onEndEdit.AddListener(OnInputUpdate);
             }
         }
 

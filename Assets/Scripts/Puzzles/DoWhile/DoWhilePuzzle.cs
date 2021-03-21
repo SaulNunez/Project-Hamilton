@@ -1,6 +1,7 @@
 ﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -8,6 +9,17 @@ using UnityEngine;
 /// </summary>
 public class DoWhilePuzzle : NetworkBehaviour
 {
+    [SerializeField]
+    [Tooltip("The input field used to input the boolean that solves this question")]
+    TMP_InputField input;
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        input.onEndEdit.AddListener(CheckTextboxInput);
+    }
+
     /// <summary>
     /// To be used in the UI in the client to check input in server
     /// </summary>
@@ -15,6 +27,7 @@ public class DoWhilePuzzle : NetworkBehaviour
     [Client]
     public void CheckTextboxInput(string text)
     {
+        print($"Sending to server: {text}");
         CmdCheckResultInServer(text);
     }
 

@@ -2,11 +2,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WhilePuzzle : NetworkBehaviour
 {
-    public const int defaultValue = 6;
+    [Tooltip("Default value to ask users to input")]
+    [SerializeField]
+    int defaultBucketValue = 6;
+
+    [Tooltip("InputField to use to get the expected value to solve the puzzle")]
+    [SerializeField]
+    TMP_InputField input;
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        input.onEndEdit.AddListener(CheckInput);
+    }
 
     public void CheckInput(string input)
     {
@@ -24,7 +38,7 @@ public class WhilePuzzle : NetworkBehaviour
     [Command(ignoreAuthority = true)]
     void CmdCheckInput(int input, NetworkConnectionToClient sender = null)
     {
-        if(input == defaultValue)
+        if(input == defaultBucketValue)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket);
             RpcClosePuzzle(sender);
