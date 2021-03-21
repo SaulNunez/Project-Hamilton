@@ -68,13 +68,13 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         print("Puzzle started");
     }
 
-    [Command]
-    void CmdOnButtonClick(string clickFlowerType)
+    [Command(ignoreAuthority = true)]
+    void CmdOnButtonClick(string clickFlowerType, NetworkConnectionToClient sender = null)
     {
         if(clickFlowerType == defaultFlowerType)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking);
-            RpcClosePuzzle();
+            TargetClosePuzzle(sender);
         }
     }
 
@@ -106,9 +106,9 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         }
     }
 
-    [ClientRpc]
-    void RpcClosePuzzle()
+    [TargetRpc]
+    void TargetClosePuzzle(NetworkConnection target)
     {
-        gameObject.SetActive(false);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }

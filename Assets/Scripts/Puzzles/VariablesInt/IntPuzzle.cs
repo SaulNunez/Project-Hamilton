@@ -112,20 +112,20 @@ namespace Puzzles.Variables.Int
         /// Check input on server
         /// </summary>
         /// <param name="value"></param>
-        [Command]
-        void CmdCheckInput(float value)
+        [Command(ignoreAuthority = true)]
+        void CmdCheckInput(float value, NetworkConnectionToClient sender = null)
         {
             if (value == defTem)
             {
                 PuzzleCompletion.instance.MarkCompleted(useFloatDefaultTemperature ? PuzzleId.VariableFloat : PuzzleId.BoilersVariableInteger);
-                RpcClosePuzzle();
+                TargetClosePuzzle(sender);
             }
         }
 
-        [ClientRpc]
-        void RpcClosePuzzle()
+        [TargetRpc]
+        void TargetClosePuzzle(NetworkConnection target)
         {
-            gameObject.SetActive(false);
+            ShowPuzzle.instance.ClosePuzzles();
         }
     }
 }

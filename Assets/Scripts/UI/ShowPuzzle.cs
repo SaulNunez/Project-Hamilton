@@ -39,7 +39,7 @@ public class ShowPuzzle : NetworkBehaviour
     {
         base.OnStartServer();
 
-        VotingManager.OnVotingStarted += StopCurrentPuzzle;
+        VotingManager.OnVotingStarted += RpcStopCurrentPuzzle;
 
         if(instance == null)
         {
@@ -50,7 +50,35 @@ public class ShowPuzzle : NetworkBehaviour
         }
     }
 
-    private void StopCurrentPuzzle(int _)
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogError($"Another instance of component was found.");
+        }
+    }
+
+    /// <summary>
+    /// Close all open  puzzles in all clients
+    /// </summary>
+    /// <param name="_"></param>
+    [ClientRpc]
+    private void RpcStopCurrentPuzzle(int _)
+    {
+        ClosePuzzles();
+    }
+
+    /// <summary>
+    /// Usable in the client, closes any puzzle on screen
+    /// </summary>
+    [Client]
+    public void ClosePuzzles()
     {
         boilerInt.SetActive(false);
         sequence.SetActive(false);
@@ -69,30 +97,21 @@ public class ShowPuzzle : NetworkBehaviour
     {
         base.OnStopServer();
 
-        VotingManager.OnVotingStarted -= StopCurrentPuzzle;
+        VotingManager.OnVotingStarted -= RpcStopCurrentPuzzle;
     }
 
     /// <summary>
     /// Opens puzzle
     /// </summary>
     /// <param name="puzzle">Id of puzzle</param>
-    public void OpenPuzzles(PuzzleId puzzle)
+    [Server]
+    public void OpenPuzzles(PuzzleId puzzle, GameObject openedBy)
     {
-
-        if (isServer)
-        {
-            RpcOpenPuzzleOnClient(puzzle);
-        }
-
-        if(isClient)
-        {
-            ActivatePuzzleOnClient(puzzle);
-        }
-        
+        TargetOpenPuzzleOnClient(openedBy.GetComponent<NetworkIdentity>().connectionToClient, puzzle);
     }
 
-    [ClientRpc]
-    private void RpcOpenPuzzleOnClient(PuzzleId puzzle)
+    [TargetRpc]
+    private void TargetOpenPuzzleOnClient(NetworkConnection target, PuzzleId puzzle)
     {
         ActivatePuzzleOnClient(puzzle);
     }

@@ -60,19 +60,19 @@ public class ForPuzzle : NetworkBehaviour
     /// Checks client input to match turnsToWash.
     /// </summary>
     /// <param name="input"></param>
-    [Command]
-    void CmdCheckInputMatchesTurns(int input)
+    [Command(ignoreAuthority = true)]
+    void CmdCheckInputMatchesTurns(int input, NetworkConnectionToClient sender = null)
     {
         if(input == turnsToWash)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket);
-            RpcClosePuzzle();
+            RpcClosePuzzle(sender);
         }
     }
 
-    [ClientRpc]
-    void RpcClosePuzzle()
+    [TargetRpc]
+    void RpcClosePuzzle(NetworkConnection target)
     {
-        gameObject.SetActive(false);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }

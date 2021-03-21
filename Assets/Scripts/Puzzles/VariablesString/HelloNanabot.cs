@@ -14,20 +14,21 @@ public class HelloNanabot : NetworkBehaviour
     /// <summary>
     /// Gets value of textbox and sends it to the server
     /// </summary>
+    [Client]
     public void CommitPuzzle()
     {
         CheckMessage(textbox.text);
     }
 
-    [Command]
-    void CheckMessage(string message)
+    [Command(ignoreAuthority = true)]
+    void CheckMessage(string message, NetworkConnectionToClient sender = null)
     {
         // Si quisieramos hacer mayor verificacion.
         // Ej. revisar que no tenga algun mensaje obsceno, aqui sucederia 
         var helloMessage = $"Hola {message}";
-        SayOnClient(netIdentity.connectionToClient, helloMessage);
+        SayOnClient(sender, helloMessage);
         PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableString);
-        RpcClosePuzzle();
+        TargetClosePuzzle(sender);
     }
 
     [TargetRpc]
@@ -38,9 +39,9 @@ public class HelloNanabot : NetworkBehaviour
         nanabotSays.Talk(message);
     }
 
-    [ClientRpc]
-    void RpcClosePuzzle()
+    [TargetRpc]
+    void TargetClosePuzzle(NetworkConnection target)
     {
-        gameObject.SetActive(false);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }

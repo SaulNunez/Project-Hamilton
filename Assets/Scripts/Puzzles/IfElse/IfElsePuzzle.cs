@@ -38,30 +38,33 @@ public class IfElsePuzzle : NetworkBehaviour
 
     public void OnCerezasClick() => CmdCerezasClick();
 
-    [Command]
-    void CmdCerezasClick()
+    //TODO: Future work, do check in only one function
+
+    [Command(ignoreAuthority = true)]
+    void CmdCerezasClick(NetworkConnectionToClient sender = null)
     {
         if (isCake)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse);
+            TargetClosePuzzle(sender);
         }
     }
 
     public void OnChispitasClick() => CmdChispitasClick();
 
-    [Command]
-    void CmdChispitasClick()
+    [Command(ignoreAuthority = true)]
+    void CmdChispitasClick(NetworkConnectionToClient sender = null)
     {
         if (!isCake)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse);
-            RpcClosePuzzle();
+            TargetClosePuzzle(sender);
         }
     }
 
-    [ClientRpc]
-    void RpcClosePuzzle()
+    [TargetRpc]
+    void TargetClosePuzzle(NetworkConnection target)
     {
-        gameObject.SetActive(false);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }

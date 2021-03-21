@@ -21,19 +21,19 @@ public class WhilePuzzle : NetworkBehaviour
         }
     }
 
-    [Command]
-    void CmdCheckInput(int input)
+    [Command(ignoreAuthority = true)]
+    void CmdCheckInput(int input, NetworkConnectionToClient sender = null)
     {
         if(input == defaultValue)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket);
-            RpcClosePuzzle();
+            RpcClosePuzzle(sender);
         }
     }
 
     [ClientRpc]
-    void RpcClosePuzzle()
+    void RpcClosePuzzle(NetworkConnection target)
     {
-        gameObject.SetActive(false);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }
