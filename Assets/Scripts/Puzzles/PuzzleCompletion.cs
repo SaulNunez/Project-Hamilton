@@ -14,6 +14,11 @@ public class PuzzleCompletion : NetworkBehaviour
     /// </remarks>
     public static event Action<PuzzleId> OnPuzzleCompleted;
 
+    /// <summary>
+    /// Called when all puzzles are solved
+    /// </summary>
+    public static event Action OnFinishedAllPuzzles;
+
     public SyncList<PuzzleId> puzzlesCompleted = new SyncList<PuzzleId>();
 
     //private void Start()
@@ -28,6 +33,8 @@ public class PuzzleCompletion : NetworkBehaviour
 
     //    }
     //}
+
+    public readonly int puzzlesAvailable = Enum.GetNames(typeof(PuzzleId)).Length;
 
     public static PuzzleCompletion instance = null;
 
@@ -59,5 +66,10 @@ public class PuzzleCompletion : NetworkBehaviour
     {
         OnPuzzleCompleted?.Invoke(id);
         puzzlesCompleted.Add(id);
+
+        if(PuzzlesDone == puzzlesAvailable)
+        {
+            OnFinishedAllPuzzles?.Invoke();
+        }
     }
 }

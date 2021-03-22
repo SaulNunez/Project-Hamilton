@@ -17,6 +17,12 @@ using UnityEngine;
 /// </summary>
 public class SetWinnerLoserOnGameEnd : NetworkBehaviour
 {
+    [SerializeField]
+    GameObject winnerScreen;
+
+    [SerializeField]
+    GameObject looserScreen;
+
     private EndGameResult? result = null;
 
     public enum EndGameResult
@@ -30,6 +36,12 @@ public class SetWinnerLoserOnGameEnd : NetworkBehaviour
         base.OnStartServer();
 
         Emergency.OnPlayersCouldntStopEmergency += OnPlayersCouldntStopEmergency;
+        PuzzleCompletion.OnFinishedAllPuzzles += OnPuzzlesFinished;
+    }
+
+    private void OnPuzzlesFinished()
+    {
+        result = EndGameResult.ProgrammersWin;
     }
 
     private void OnPlayersCouldntStopEmergency()
