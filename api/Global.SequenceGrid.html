@@ -83,7 +83,7 @@
   
   <h1 id="Global_SequenceGrid" data-uid="Global.SequenceGrid" class="text-break">Class SequenceGrid
   </h1>
-  <div class="markdown level0 summary"><p>Logic for playground for sequence puzzle</p>
+  <div class="markdown level0 summary"><p>Playground for sequence puzzle</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -101,38 +101,8 @@
   </h3>
   
   
-  <h4 id="Global_SequenceGrid_floor" data-uid="Global.SequenceGrid.floor">floor</h4>
-  <div class="markdown level1 summary"><p>The walkable blocks in this sequence puzzle. Represents two dimensions, the array elements with true mean that it can be walked upon.
-Can map to needed index with (currentPosition.y * horizontalSize) + currentPosition.x]</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool[] floor</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Global_SequenceGrid_floor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If changed on runtime, it will run into unforseen consequences. Only to set in editor.</p>
-</div>
-  
-  
   <h4 id="Global_SequenceGrid_floorBackground" data-uid="Global.SequenceGrid.floorBackground">floorBackground</h4>
-  <div class="markdown level1 summary"><p>Sprite to use in walkable boxes</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -153,17 +123,20 @@ Can map to needed index with (currentPosition.y * horizontalSize) + currentPosit
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   
   
-  <h4 id="Global_SequenceGrid_horizontalSize" data-uid="Global.SequenceGrid.horizontalSize">horizontalSize</h4>
-  <div class="markdown level1 summary"><p>Horizontal size of game area</p>
+  <a id="Global_SequenceGrid_FloorBackground_" data-uid="Global.SequenceGrid.FloorBackground*"></a>
+  <h4 id="Global_SequenceGrid_FloorBackground" data-uid="Global.SequenceGrid.FloorBackground">FloorBackground</h4>
+  <div class="markdown level1 summary"><p>Sprite to use in boxes player can walk in</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int horizontalSize</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite FloorBackground { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -173,22 +146,23 @@ Can map to needed index with (currentPosition.y * horizontalSize) + currentPosit
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">Sprite</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Global_SequenceGrid_verticalSize" data-uid="Global.SequenceGrid.verticalSize">verticalSize</h4>
-  <div class="markdown level1 summary"><p>Vertical size of game area</p>
+  <a id="Global_SequenceGrid_Player_" data-uid="Global.SequenceGrid.Player*"></a>
+  <h4 id="Global_SequenceGrid_Player" data-uid="Global.SequenceGrid.Player">Player</h4>
+  <div class="markdown level1 summary"><p>Player sprite</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int verticalSize</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite Player { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -198,22 +172,49 @@ Can map to needed index with (currentPosition.y * horizontalSize) + currentPosit
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">Sprite</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Global_SequenceGrid_voidBackground" data-uid="Global.SequenceGrid.voidBackground">voidBackground</h4>
+  <a id="Global_SequenceGrid_Sequence_" data-uid="Global.SequenceGrid.Sequence*"></a>
+  <h4 id="Global_SequenceGrid_Sequence" data-uid="Global.SequenceGrid.Sequence">Sequence</h4>
+  <div class="markdown level1 summary"><p>Sequence to show in screen. Updates screen as soon as it changes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SequenceConfig Sequence { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Global.SequenceConfig.html">SequenceConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_SequenceGrid_VoidBackground_" data-uid="Global.SequenceGrid.VoidBackground*"></a>
+  <h4 id="Global_SequenceGrid_VoidBackground" data-uid="Global.SequenceGrid.VoidBackground">VoidBackground</h4>
   <div class="markdown level1 summary"><p>Sprite to use in boxes that if you walk into, you&apos;d fall</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sprite voidBackground</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite VoidBackground { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>

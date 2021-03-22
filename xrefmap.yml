@@ -436,6 +436,19 @@ references:
   isSpec: "True"
   fullName: DoWhilePuzzle.CheckTextboxInput
   nameWithType: DoWhilePuzzle.CheckTextboxInput
+- uid: Global.DoWhilePuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.DoWhilePuzzle.html#Global_DoWhilePuzzle_OnStartClient
+  commentId: M:Global.DoWhilePuzzle.OnStartClient
+  fullName: DoWhilePuzzle.OnStartClient()
+  nameWithType: DoWhilePuzzle.OnStartClient()
+- uid: Global.DoWhilePuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.DoWhilePuzzle.html#Global_DoWhilePuzzle_OnStartClient_
+  commentId: Overload:Global.DoWhilePuzzle.OnStartClient
+  isSpec: "True"
+  fullName: DoWhilePuzzle.OnStartClient
+  nameWithType: DoWhilePuzzle.OnStartClient
 - uid: Global.ElectricitySabotage
   name: ElectricitySabotage
   href: api/Global.ElectricitySabotage.html
@@ -752,6 +765,19 @@ references:
   commentId: F:Global.ForPuzzle.instructionText
   fullName: ForPuzzle.instructionText
   nameWithType: ForPuzzle.instructionText
+- uid: Global.ForPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartClient
+  commentId: M:Global.ForPuzzle.OnStartClient
+  fullName: ForPuzzle.OnStartClient()
+  nameWithType: ForPuzzle.OnStartClient()
+- uid: Global.ForPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartClient_
+  commentId: Overload:Global.ForPuzzle.OnStartClient
+  isSpec: "True"
+  fullName: ForPuzzle.OnStartClient
+  nameWithType: ForPuzzle.OnStartClient
 - uid: Global.ForPuzzle.OnStartServer
   name: OnStartServer()
   href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartServer
@@ -2565,6 +2591,36 @@ references:
   commentId: T:Global.SabotageQuestions
   fullName: SabotageQuestions
   nameWithType: SabotageQuestions
+- uid: Global.SequenceConfig
+  name: SequenceConfig
+  href: api/Global.SequenceConfig.html
+  commentId: T:Global.SequenceConfig
+  fullName: SequenceConfig
+  nameWithType: SequenceConfig
+- uid: Global.SequenceConfig.floor
+  name: floor
+  href: api/Global.SequenceConfig.html#Global_SequenceConfig_floor
+  commentId: F:Global.SequenceConfig.floor
+  fullName: SequenceConfig.floor
+  nameWithType: SequenceConfig.floor
+- uid: Global.SequenceConfig.horizontalSize
+  name: horizontalSize
+  href: api/Global.SequenceConfig.html#Global_SequenceConfig_horizontalSize
+  commentId: F:Global.SequenceConfig.horizontalSize
+  fullName: SequenceConfig.horizontalSize
+  nameWithType: SequenceConfig.horizontalSize
+- uid: Global.SequenceConfig.startPosition
+  name: startPosition
+  href: api/Global.SequenceConfig.html#Global_SequenceConfig_startPosition
+  commentId: F:Global.SequenceConfig.startPosition
+  fullName: SequenceConfig.startPosition
+  nameWithType: SequenceConfig.startPosition
+- uid: Global.SequenceConfig.verticalSize
+  name: verticalSize
+  href: api/Global.SequenceConfig.html#Global_SequenceConfig_verticalSize
+  commentId: F:Global.SequenceConfig.verticalSize
+  fullName: SequenceConfig.verticalSize
+  nameWithType: SequenceConfig.verticalSize
 - uid: Global.SequenceEditor
   name: SequenceEditor
   href: api/Global.SequenceEditor.html
@@ -2590,42 +2646,102 @@ references:
   commentId: T:Global.SequenceGrid
   fullName: SequenceGrid
   nameWithType: SequenceGrid
-- uid: Global.SequenceGrid.floor
-  name: floor
-  href: api/Global.SequenceGrid.html#Global_SequenceGrid_floor
-  commentId: F:Global.SequenceGrid.floor
-  fullName: SequenceGrid.floor
-  nameWithType: SequenceGrid.floor
 - uid: Global.SequenceGrid.floorBackground
   name: floorBackground
   href: api/Global.SequenceGrid.html#Global_SequenceGrid_floorBackground
   commentId: F:Global.SequenceGrid.floorBackground
   fullName: SequenceGrid.floorBackground
   nameWithType: SequenceGrid.floorBackground
-- uid: Global.SequenceGrid.horizontalSize
-  name: horizontalSize
-  href: api/Global.SequenceGrid.html#Global_SequenceGrid_horizontalSize
-  commentId: F:Global.SequenceGrid.horizontalSize
-  fullName: SequenceGrid.horizontalSize
-  nameWithType: SequenceGrid.horizontalSize
+- uid: Global.SequenceGrid.FloorBackground
+  name: FloorBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_FloorBackground
+  commentId: P:Global.SequenceGrid.FloorBackground
+  fullName: SequenceGrid.FloorBackground
+  nameWithType: SequenceGrid.FloorBackground
+- uid: Global.SequenceGrid.FloorBackground*
+  name: FloorBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_FloorBackground_
+  commentId: Overload:Global.SequenceGrid.FloorBackground
+  isSpec: "True"
+  fullName: SequenceGrid.FloorBackground
+  nameWithType: SequenceGrid.FloorBackground
 - uid: Global.SequenceGrid.OnPositionUpdate
   name: OnPositionUpdate
   href: api/Global.SequenceGrid.html#Global_SequenceGrid_OnPositionUpdate
   commentId: E:Global.SequenceGrid.OnPositionUpdate
   fullName: SequenceGrid.OnPositionUpdate
   nameWithType: SequenceGrid.OnPositionUpdate
-- uid: Global.SequenceGrid.verticalSize
-  name: verticalSize
-  href: api/Global.SequenceGrid.html#Global_SequenceGrid_verticalSize
-  commentId: F:Global.SequenceGrid.verticalSize
-  fullName: SequenceGrid.verticalSize
-  nameWithType: SequenceGrid.verticalSize
-- uid: Global.SequenceGrid.voidBackground
-  name: voidBackground
-  href: api/Global.SequenceGrid.html#Global_SequenceGrid_voidBackground
-  commentId: F:Global.SequenceGrid.voidBackground
-  fullName: SequenceGrid.voidBackground
-  nameWithType: SequenceGrid.voidBackground
+- uid: Global.SequenceGrid.Player
+  name: Player
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_Player
+  commentId: P:Global.SequenceGrid.Player
+  fullName: SequenceGrid.Player
+  nameWithType: SequenceGrid.Player
+- uid: Global.SequenceGrid.Player*
+  name: Player
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_Player_
+  commentId: Overload:Global.SequenceGrid.Player
+  isSpec: "True"
+  fullName: SequenceGrid.Player
+  nameWithType: SequenceGrid.Player
+- uid: Global.SequenceGrid.Sequence
+  name: Sequence
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_Sequence
+  commentId: P:Global.SequenceGrid.Sequence
+  fullName: SequenceGrid.Sequence
+  nameWithType: SequenceGrid.Sequence
+- uid: Global.SequenceGrid.Sequence*
+  name: Sequence
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_Sequence_
+  commentId: Overload:Global.SequenceGrid.Sequence
+  isSpec: "True"
+  fullName: SequenceGrid.Sequence
+  nameWithType: SequenceGrid.Sequence
+- uid: Global.SequenceGrid.VoidBackground
+  name: VoidBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_VoidBackground
+  commentId: P:Global.SequenceGrid.VoidBackground
+  fullName: SequenceGrid.VoidBackground
+  nameWithType: SequenceGrid.VoidBackground
+- uid: Global.SequenceGrid.VoidBackground*
+  name: VoidBackground
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_VoidBackground_
+  commentId: Overload:Global.SequenceGrid.VoidBackground
+  isSpec: "True"
+  fullName: SequenceGrid.VoidBackground
+  nameWithType: SequenceGrid.VoidBackground
+- uid: Global.SequencePuzzleTileModel
+  name: SequencePuzzleTileModel
+  href: api/Global.SequencePuzzleTileModel.html
+  commentId: T:Global.SequencePuzzleTileModel
+  fullName: SequencePuzzleTileModel
+  nameWithType: SequencePuzzleTileModel
+- uid: Global.SequencePuzzleTileModel.BackgroundSprite
+  name: BackgroundSprite
+  href: api/Global.SequencePuzzleTileModel.html#Global_SequencePuzzleTileModel_BackgroundSprite
+  commentId: P:Global.SequencePuzzleTileModel.BackgroundSprite
+  fullName: SequencePuzzleTileModel.BackgroundSprite
+  nameWithType: SequencePuzzleTileModel.BackgroundSprite
+- uid: Global.SequencePuzzleTileModel.BackgroundSprite*
+  name: BackgroundSprite
+  href: api/Global.SequencePuzzleTileModel.html#Global_SequencePuzzleTileModel_BackgroundSprite_
+  commentId: Overload:Global.SequencePuzzleTileModel.BackgroundSprite
+  isSpec: "True"
+  fullName: SequencePuzzleTileModel.BackgroundSprite
+  nameWithType: SequencePuzzleTileModel.BackgroundSprite
+- uid: Global.SequencePuzzleTileModel.ForegroundSprite
+  name: ForegroundSprite
+  href: api/Global.SequencePuzzleTileModel.html#Global_SequencePuzzleTileModel_ForegroundSprite
+  commentId: P:Global.SequencePuzzleTileModel.ForegroundSprite
+  fullName: SequencePuzzleTileModel.ForegroundSprite
+  nameWithType: SequencePuzzleTileModel.ForegroundSprite
+- uid: Global.SequencePuzzleTileModel.ForegroundSprite*
+  name: ForegroundSprite
+  href: api/Global.SequencePuzzleTileModel.html#Global_SequencePuzzleTileModel_ForegroundSprite_
+  commentId: Overload:Global.SequencePuzzleTileModel.ForegroundSprite
+  isSpec: "True"
+  fullName: SequencePuzzleTileModel.ForegroundSprite
+  nameWithType: SequencePuzzleTileModel.ForegroundSprite
 - uid: Global.SetServerUrlToNetworkManagerOnStart
   name: SetServerUrlToNetworkManagerOnStart
   href: api/Global.SetServerUrlToNetworkManagerOnStart.html
@@ -3189,12 +3305,19 @@ references:
   isSpec: "True"
   fullName: WhilePuzzle.CheckInput
   nameWithType: WhilePuzzle.CheckInput
-- uid: Global.WhilePuzzle.defaultValue
-  name: defaultValue
-  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_defaultValue
-  commentId: F:Global.WhilePuzzle.defaultValue
-  fullName: WhilePuzzle.defaultValue
-  nameWithType: WhilePuzzle.defaultValue
+- uid: Global.WhilePuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_OnStartClient
+  commentId: M:Global.WhilePuzzle.OnStartClient
+  fullName: WhilePuzzle.OnStartClient()
+  nameWithType: WhilePuzzle.OnStartClient()
+- uid: Global.WhilePuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.WhilePuzzle.html#Global_WhilePuzzle_OnStartClient_
+  commentId: Overload:Global.WhilePuzzle.OnStartClient
+  isSpec: "True"
+  fullName: WhilePuzzle.OnStartClient
+  nameWithType: WhilePuzzle.OnStartClient
 - uid: Global.WorldInteraction
   name: WorldInteraction
   href: api/Global.WorldInteraction.html

@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DoWhilePuzzle
+    <title>Class SequencePuzzleTileModel
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DoWhilePuzzle
+    <meta name="title" content="Class SequencePuzzleTileModel
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -78,69 +78,79 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.DoWhilePuzzle">
+            <article class="content wrap" id="_content" data-uid="Global.SequencePuzzleTileModel">
   
   
-  <h1 id="Global_DoWhilePuzzle" data-uid="Global.DoWhilePuzzle" class="text-break">Class DoWhilePuzzle
+  <h1 id="Global_SequencePuzzleTileModel" data-uid="Global.SequencePuzzleTileModel" class="text-break">Class SequencePuzzleTileModel
   </h1>
-  <div class="markdown level0 summary"><p>Logic for do while puzzle</p>
+  <div class="markdown level0 summary"><p>Model for setup of sequence tiles</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><span class="xref">DoWhilePuzzle</span></div>
+    <div class="level1"><span class="xref">SequencePuzzleTileModel</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_DoWhilePuzzle_syntax">Syntax</h5>
+  <h5 id="Global_SequencePuzzleTileModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DoWhilePuzzle : NetworkBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class SequencePuzzleTileModel : MonoBehaviour</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Global_DoWhilePuzzle_CheckTextboxInput_" data-uid="Global.DoWhilePuzzle.CheckTextboxInput*"></a>
-  <h4 id="Global_DoWhilePuzzle_CheckTextboxInput_System_String_" data-uid="Global.DoWhilePuzzle.CheckTextboxInput(System.String)">CheckTextboxInput(String)</h4>
-  <div class="markdown level1 summary"><p>To be used in the UI in the client to check input in server</p>
+  <a id="Global_SequencePuzzleTileModel_BackgroundSprite_" data-uid="Global.SequencePuzzleTileModel.BackgroundSprite*"></a>
+  <h4 id="Global_SequencePuzzleTileModel_BackgroundSprite" data-uid="Global.SequencePuzzleTileModel.BackgroundSprite">BackgroundSprite</h4>
+  <div class="markdown level1 summary"><p>Sprite to use for background (floor tiles)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CheckTextboxInput(string text)</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite BackgroundSprite { get; set; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">text</span></td>
-        <td><p>InputField current text</p>
-</td>
+        <td><span class="xref">Sprite</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Global_DoWhilePuzzle_OnStartClient_" data-uid="Global.DoWhilePuzzle.OnStartClient*"></a>
-  <h4 id="Global_DoWhilePuzzle_OnStartClient" data-uid="Global.DoWhilePuzzle.OnStartClient">OnStartClient()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Global_SequencePuzzleTileModel_ForegroundSprite_" data-uid="Global.SequencePuzzleTileModel.ForegroundSprite*"></a>
+  <h4 id="Global_SequencePuzzleTileModel_ForegroundSprite" data-uid="Global.SequencePuzzleTileModel.ForegroundSprite">ForegroundSprite</h4>
+  <div class="markdown level1 summary"><p>Sprite to use for foreground (player, maybe obstacles)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite ForegroundSprite { get; set; }</code></pre>
   </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sprite</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
