@@ -10,6 +10,10 @@ public class SequenceConfig : ScriptableObject
     /// Position where the player starts to move to
     /// </summary>
     public Vector2Int startPosition;
+    /// <summary>
+    /// Position the player must get to to complete
+    /// </summary>
+    public Vector2Int endPosition;
     //---SEQUENCE CONFIGURATION
     /// <summary>
     /// Horizontal size of game area

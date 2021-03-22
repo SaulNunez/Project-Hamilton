@@ -105,6 +105,9 @@ public class SequenceGrid : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    SequencePuzzle sequencePuzzle;
+
     private void Start()
     {
         currentPosition = sequence.startPosition;
@@ -159,6 +162,14 @@ public class SequenceGrid : MonoBehaviour
         if (!sequence.floor[(currentPosition.y * sequence.horizontalSize) + currentPosition.x])
         {
             currentPosition = sequence.startPosition;
+        }
+
+        if(currentPosition == sequence.endPosition)
+        {
+            if(sequencePuzzle != null)
+            {
+                sequencePuzzle.SetPuzzleComplete();
+            }
         }
 
         OnPositionUpdate?.Invoke(currentPosition);
