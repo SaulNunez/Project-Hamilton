@@ -736,7 +736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleCompletion.html",
-          "hash": "CzAL2bDab+AeQpiB5fokqg=="
+          "hash": "t9eKGlVPcE3PhUP25IzeKw=="
         }
       },
       "is_incremental": false,
@@ -929,6 +929,30 @@
         ".html": {
           "relative_path": "api/Global.SetServerUrlToNetworkManagerOnStart.html",
           "hash": "l0xj3FkxrfuAWTa/KUvzbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetWinnerLoserOnGameEnd.EndGameResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html",
+          "hash": "ESrcjbmZlHzSzTC6wztxOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetWinnerLoserOnGameEnd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetWinnerLoserOnGameEnd.html",
+          "hash": "1X1Y2jeE6xKTg02K3SfozQ=="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1264,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "0hQizURMbu9cPYvB3rnUMg=="
+          "hash": "NNWgD6lovM8lGUKYPt7dSg=="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1276,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "skCDyCW17+67E4NnVfgucA=="
+          "hash": "etkMXlZSLN2sx5FXI28Dlw=="
         }
       },
       "is_incremental": false,
@@ -1361,7 +1385,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 102,
+          "total_file_count": 104,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -2088,6 +2088,12 @@ references:
   isSpec: "True"
   fullName: PuzzleCompletion.MarkCompleted
   nameWithType: PuzzleCompletion.MarkCompleted
+- uid: Global.PuzzleCompletion.OnFinishedAllPuzzles
+  name: OnFinishedAllPuzzles
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnFinishedAllPuzzles
+  commentId: E:Global.PuzzleCompletion.OnFinishedAllPuzzles
+  fullName: PuzzleCompletion.OnFinishedAllPuzzles
+  nameWithType: PuzzleCompletion.OnFinishedAllPuzzles
 - uid: Global.PuzzleCompletion.OnPuzzleCompleted
   name: OnPuzzleCompleted
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnPuzzleCompleted
@@ -2120,6 +2126,12 @@ references:
   isSpec: "True"
   fullName: PuzzleCompletion.OnStopServer
   nameWithType: PuzzleCompletion.OnStopServer
+- uid: Global.PuzzleCompletion.puzzlesAvailable
+  name: puzzlesAvailable
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_puzzlesAvailable
+  commentId: F:Global.PuzzleCompletion.puzzlesAvailable
+  fullName: PuzzleCompletion.puzzlesAvailable
+  nameWithType: PuzzleCompletion.puzzlesAvailable
 - uid: Global.PuzzleCompletion.puzzlesCompleted
   name: puzzlesCompleted
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_puzzlesCompleted
@@ -2773,6 +2785,56 @@ references:
   commentId: T:Global.SetupOnClient
   fullName: SetupOnClient
   nameWithType: SetupOnClient
+- uid: Global.SetWinnerLoserOnGameEnd
+  name: SetWinnerLoserOnGameEnd
+  href: api/Global.SetWinnerLoserOnGameEnd.html
+  commentId: T:Global.SetWinnerLoserOnGameEnd
+  fullName: SetWinnerLoserOnGameEnd
+  nameWithType: SetWinnerLoserOnGameEnd
+- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult
+  name: SetWinnerLoserOnGameEnd.EndGameResult
+  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html
+  commentId: T:Global.SetWinnerLoserOnGameEnd.EndGameResult
+  fullName: SetWinnerLoserOnGameEnd.EndGameResult
+  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult
+- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
+  name: AssasinsWin
+  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html#Global_SetWinnerLoserOnGameEnd_EndGameResult_AssasinsWin
+  commentId: F:Global.SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
+  fullName: SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
+  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
+- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
+  name: ProgrammersWin
+  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html#Global_SetWinnerLoserOnGameEnd_EndGameResult_ProgrammersWin
+  commentId: F:Global.SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
+  fullName: SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
+  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
+- uid: Global.SetWinnerLoserOnGameEnd.OnStartServer
+  name: OnStartServer()
+  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStartServer
+  commentId: M:Global.SetWinnerLoserOnGameEnd.OnStartServer
+  fullName: SetWinnerLoserOnGameEnd.OnStartServer()
+  nameWithType: SetWinnerLoserOnGameEnd.OnStartServer()
+- uid: Global.SetWinnerLoserOnGameEnd.OnStartServer*
+  name: OnStartServer
+  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStartServer_
+  commentId: Overload:Global.SetWinnerLoserOnGameEnd.OnStartServer
+  isSpec: "True"
+  fullName: SetWinnerLoserOnGameEnd.OnStartServer
+  nameWithType: SetWinnerLoserOnGameEnd.OnStartServer
+- uid: Global.SetWinnerLoserOnGameEnd.OnStopServer
+  name: OnStopServer()
+  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStopServer
+  commentId: M:Global.SetWinnerLoserOnGameEnd.OnStopServer
+  fullName: SetWinnerLoserOnGameEnd.OnStopServer()
+  nameWithType: SetWinnerLoserOnGameEnd.OnStopServer()
+- uid: Global.SetWinnerLoserOnGameEnd.OnStopServer*
+  name: OnStopServer
+  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStopServer_
+  commentId: Overload:Global.SetWinnerLoserOnGameEnd.OnStopServer
+  isSpec: "True"
+  fullName: SetWinnerLoserOnGameEnd.OnStopServer
+  nameWithType: SetWinnerLoserOnGameEnd.OnStopServer
 - uid: Global.ShowPuzzle
   name: ShowPuzzle
   href: api/Global.ShowPuzzle.html
