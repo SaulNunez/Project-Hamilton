@@ -6,36 +6,25 @@ using UnityEngine;
 /// <summary>
 /// Custom editor to simplify creating a variety of sequence puzzles
 /// </summary>
-[CustomEditor(typeof(SequenceGrid))]
+[CustomEditor(typeof(SequenceConfig))]
 public class SequenceEditor : Editor
 {
     SerializedProperty floorMask;
     SerializedProperty horizontal;
     SerializedProperty vertical;
-    SerializedProperty boxPrefab;
     SerializedProperty startPosition;
-    SerializedProperty spriteForVoid;
-    SerializedProperty spriteForFloor;
 
     private void OnEnable()
     {
         floorMask = serializedObject.FindProperty("floor");
         horizontal = serializedObject.FindProperty("horizontalSize");
         vertical = serializedObject.FindProperty("verticalSize");
-        boxPrefab = serializedObject.FindProperty("tilePrefab");
         startPosition = serializedObject.FindProperty("startPosition");
-        spriteForVoid = serializedObject.FindProperty("voidBackground");
-        spriteForFloor = serializedObject.FindProperty("floorBackground");
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-
-        EditorGUILayout.PropertyField(boxPrefab);
-
-        EditorGUILayout.PropertyField(spriteForVoid);
-        EditorGUILayout.PropertyField(spriteForFloor);
 
         EditorGUILayout.PropertyField(startPosition);
 

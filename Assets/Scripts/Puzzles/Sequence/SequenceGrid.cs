@@ -5,16 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Logic for playground for sequence puzzle
+/// Playground for sequence puzzle
 /// </summary>
 [RequireComponent(typeof(GridLayoutGroup))]
 public class SequenceGrid : MonoBehaviour
 {
     //---EVENTS
     public static event Action<Vector2Int> OnPositionUpdate;
-
-    [SerializeField]
-    Vector2Int startPosition;
 
     //---STATE
     Vector2Int currentPosition;
@@ -27,56 +24,102 @@ public class SequenceGrid : MonoBehaviour
     GameObject tilePrefab;
 
     //---SPRITES CUSTOMIZABLES
+    [Header("Sprites")]
+    [Tooltip("Sprite to use in boxes that if you walk into, you'd fall")]
+    [SerializeField]
+    Sprite voidBackground;
+
     /// <summary>
     /// Sprite to use in boxes that if you walk into, you'd fall
     /// </summary>
-    [Header("Sprites")]
-    public Sprite voidBackground;
+    public Sprite VoidBackground
+    {
+        get => voidBackground;
+        set
+        {
+            voidBackground = value;
+
+            UpdateBkgSprite();
+        }
+    }
+
+    [Tooltip("Sprite to use in boxes player can walk in")]
+    [SerializeField]
+    public Sprite floorBackground;
 
     /// <summary>
-    /// Sprite to use in walkable boxes
+    /// Sprite to use in boxes player can walk in
     /// </summary>
-    public Sprite floorBackground;
+    public Sprite FloorBackground
+    {
+        get => floorBackground;
+        set
+        {
+            floorBackground = value;
+
+            UpdateBkgSprite();
+        }
+    }
+
+    [Tooltip("Player sprite")]
+    [SerializeField]
+    Sprite player;
+
+    /// <summary>
+    /// Player sprite
+    /// </summary>
+    public Sprite Player
+    {
+        get => player;
+
+        set
+        {
+            player = value;
+
+            UpdateOverlaySprite();
+        }
+    } 
 
     //---CONTROLLED LAYOUT GROUP
 
     GridLayoutGroup grid;
 
-    //---SEQUENCE CONFIGURATION
-    /// <summary>
-    /// Horizontal size of game area
-    /// </summary>
-    [Header("Sequence configuration")]
-    public int horizontalSize;
-    /// <summary>
-    /// Vertical size of game area
-    /// </summary>
-    public int verticalSize;
+    //---Sequence
+    [Tooltip("Sequence to show in screen")]
+    [SerializeField]
+    SequenceConfig sequence;
 
     /// <summary>
-    /// The walkable blocks in this sequence puzzle. Represents two dimensions, the array elements with true mean that it can be walked upon.
-    /// Can map to needed index with (currentPosition.y * horizontalSize) + currentPosition.x]
+    /// Sequence to show in screen. Updates screen as soon as it changes
     /// </summary>
-    /// <remarks>
-    /// If changed on runtime, it will run into unforseen consequences. Only to set in editor.
-    /// </remarks>
-    [Header("Floor")]
-    public bool[] floor;
+    public SequenceConfig Sequence
+    {
+        get => sequence;
+
+        set
+        {
+            sequence = value;
+
+            UpdateBkgSprite();
+            UpdateOverlaySprite();
+        }
+    }
 
     private void Start()
     {
-        currentPosition = startPosition;
+        currentPosition = sequence.startPosition;
 
-        tilesSpawned = new GameObject[horizontalSize * verticalSize];
+        tilesSpawned = new GameObject[sequence.horizontalSize * sequence.verticalSize];
 
-        for(var i = 0; i < tilesSpawned.Length; i++)
+        for (var i = 0; i < tilesSpawned.Length; i++)
         {
             tilesSpawned[i] = Instantiate(tilePrefab, transform);
+            tilesSpawned[i].name = $"Tile_{i}";
         }
 
         grid = GetComponent<GridLayoutGroup>();
         grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        grid.constraintCount = horizontalSize;
+        grid.constraintCount = sequence.horizontalSize;
 
         UpdateBkgSprite();
         UpdateOverlaySprite();
@@ -85,25 +128,25 @@ public class SequenceGrid : MonoBehaviour
     private void Update()
     {
         var updated = false;
-        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             updated = true;
-            currentPosition -= Vector2Int.up;
+            currentPosition += Vector2Int.up;
         }
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             updated = true;
-            currentPosition -= Vector2Int.down;
+            currentPosition += Vector2Int.down;
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             updated = true;
-            currentPosition -= Vector2Int.left;
+            currentPosition += Vector2Int.left;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             updated = true;
-            currentPosition -= Vector2Int.right;
+            currentPosition += Vector2Int.right;
         }
 
         if (!updated)
@@ -111,11 +154,11 @@ public class SequenceGrid : MonoBehaviour
             return;
         }
 
-        currentPosition.Clamp(Vector2Int.zero, new Vector2Int(horizontalSize, verticalSize));
+        currentPosition.Clamp(Vector2Int.zero, new Vector2Int(sequence.horizontalSize, sequence.verticalSize));
 
-        if (!floor[(currentPosition.y * horizontalSize) + currentPosition.x])
+        if (!sequence.floor[(currentPosition.y * sequence.horizontalSize) + currentPosition.x])
         {
-            currentPosition = startPosition;
+            currentPosition = sequence.startPosition;
         }
 
         OnPositionUpdate?.Invoke(currentPosition);
@@ -125,19 +168,18 @@ public class SequenceGrid : MonoBehaviour
 
     private void UpdateBkgSprite()
     {
-        for(var i = 0; i < tilesSpawned.Length; i++)
+        for (int i = 0; i < tilesSpawned.Length; i++)
         {
-            tilesSpawned[i].GetComponent<Image>().sprite = floor[i] ? floorBackground : voidBackground;
+            tilesSpawned[i].GetComponent<SequencePuzzleTileModel>().BackgroundSprite = sequence.floor[i] ? floorBackground : voidBackground;
         }
     }
 
     private void UpdateOverlaySprite()
     {
-        var currentPlayerPos = (currentPosition.y * currentPosition.x) + currentPosition.x;
-        for (var i = 0; i < tilesSpawned.Length; i++)
+        var currentPlayerPos = (currentPosition.y * sequence.horizontalSize) + currentPosition.x;
+        for (int i = 0; i < tilesSpawned.Length; i++)
         {
-            //TODO: Set player sprite here
-            tilesSpawned[i].GetComponent<Image>().sprite = currentPlayerPos == i ? floorBackground : null;
+            tilesSpawned[i].GetComponent<SequencePuzzleTileModel>().ForegroundSprite = currentPlayerPos == i ? player : null;
         }
     }
 }
