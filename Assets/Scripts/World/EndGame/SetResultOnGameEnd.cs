@@ -15,7 +15,7 @@ using UnityEngine;
 /// * Assasins win when there's the same number of programmers as of them, either by killing or by voting out
 /// * Assasins win when players don't fix a sabotage on time
 /// </summary>
-public class SetWinnerLoserOnGameEnd : NetworkBehaviour
+public class SetResultOnGameEnd : NetworkBehaviour
 {
     [SerializeField]
     GameObject winnerScreen;
