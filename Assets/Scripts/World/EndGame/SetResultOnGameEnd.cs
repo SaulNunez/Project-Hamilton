@@ -23,12 +23,19 @@ public class SetResultOnGameEnd : NetworkBehaviour
     [SerializeField]
     GameObject looserScreen;
 
-    private EndGameResult? result = null;
+    [SyncVar(hook = nameof(OnEndGameResultSet))]
+    private EndGameResult result = EndGameResult.NoOneHasWonYet;
 
     public enum EndGameResult
     {
+        NoOneHasWonYet,
         AssasinsWin,
         ProgrammersWin
+    }
+
+    void OnEndGameResultSet(EndGameResult oldValue, EndGameResult newValue)
+    {
+
     }
 
     public override void OnStartServer()
