@@ -57132,8 +57132,8 @@ MonoBehaviour:
   syncInterval: 0.1
   toDecoratedImage: {fileID: 2956393149068110760, guid: b6b7dc5fcededb046af69be2bbb62ef2,
     type: 3}
-  cake: {fileID: 0}
-  cupcake: {fileID: 0}
+  cake: {fileID: 21300000, guid: a7e164df7ad3ce0499cf9b094f8f32db, type: 3}
+  cupcake: {fileID: 21300000, guid: fe4c5342c84820647b2dc460c6ac09e9, type: 3}
 --- !u!114 &542604656
 MonoBehaviour:
   m_ObjectHideFlags: 0
