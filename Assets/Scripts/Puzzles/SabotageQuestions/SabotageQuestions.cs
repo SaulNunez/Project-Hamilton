@@ -5,59 +5,118 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SabotageQuestions : NetworkBehaviour
+public class SabotageQuestions : SabotagePuzzle
 {
-    // --- STATE
-    [SyncVar]
-    int correctAnswers = 0;
-
-    [SyncVar(hook = nameof(AnswerDoneSet))]
-    int answersDone = 0;
-
-    int currentAnswer;
-
-    [SerializeField]
-    SabotageQuestionList questions;
-
-    [SerializeField]
-    int correctAnswersNeeded;
+    /// <summary>
+    /// Used for the state machine of the sabotage questions
+    /// </summary>
+    public enum QuestionState
+    {
+        WaitingPlayers,
+        OnQuestion,
+        Finished
+    }
 
     [Header("UI components")]
+    [Tooltip("GameObject containing the UI to show when waiting enough players to respond to emergency")]
+    [SerializeField]
+    GameObject waitingPlayersUi;
+
+    [Tooltip("GameObject containing the UI when waiting other players to solve their question")]
+    [SerializeField]
+    GameObject waitingOnUsersToSolveUi;
+
+    [Tooltip("GameObject containing the UI for showing the question")]
+    [SerializeField]
+    GameObject onQuestionUi;
+
+    [Tooltip("Text to show question")]
     [SerializeField]
     TextMeshProUGUI question;
 
+    [Tooltip("GameObject to append answers")]
     [SerializeField]
     GameObject answersParent;
 
-    [SerializeField]
-    Slider progressSlider;
-
+    [Tooltip("A texbox showing the amount of questions solved")]
     [SerializeField]
     TextMeshProUGUI answersDoneTextbox;
 
+    [Tooltip("Shows how many questions are remaining")]
+    [SerializeField]
+    Slider progressSlider;
+
+    [Tooltip("GameObject containing the UI to show when all the questions have been solved")]
+    [SerializeField]
+    GameObject finishedUi;
+
     [Header("Prefabs")]
+    [Tooltip("Prefab used for buttons for answers")]
     [SerializeField]
     GameObject answerButtonPrefab;
+
+    [Header("Questions")]
+    [Tooltip("List of possible questions to make")]
+    [SerializeField]
+    SabotageQuestionList questions;
+
+    [Tooltip("How many questions ask to players before marking as solved")]
+    [SerializeField]
+    int questionsNeededToSolve;
+
+    /// <summary>
+    /// Players status in question results
+    /// </summary>
+    /// <remarks>
+    /// Only used on server
+    /// </remarks>
+    Dictionary<NetworkConnection,int> playerProgress = new Dictionary<NetworkConnection, int>();
+
+    /// <summary>
+    /// Amount of questions that all players have answered
+    /// </summary>
+    [SyncVar(hook = nameof(AnswerDoneSet))]
+    int questionsSolved;
+
+    [SyncVar]
+    int onQuestionIndex;
+
+    [SyncVar(hook = nameof(OnStateChanged))]
+    QuestionState currentSabotageState;
+    
+    private void OnStateChanged(QuestionState oldValue, QuestionState newValue)
+    {
+        waitingPlayersUi.SetActive(false);
+        waitingOnUsersToSolveUi.SetActive(false);
+        finishedUi.SetActive(false);
+
+        switch (newValue)
+        {
+            case QuestionState.WaitingPlayers:
+                waitingPlayersUi.SetActive(true);
+                break;
+            case QuestionState.OnQuestion:
+                waitingOnUsersToSolveUi.SetActive(true);
+                break;
+            case QuestionState.Finished:
+                finishedUi.SetActive(true);
+                break;
+        }
+    }
 
     private void AnswerDoneSet(int oldValue, int newValue)
     {
         answersDoneTextbox.text = newValue.ToString();
     }
 
-    private void OnEnable()
+    protected override void OnPuzzleActivated()
     {
-        if (hasAuthority)
-        {
-            CmdStartQuestions();
-        }
-    }
+        base.OnPuzzleActivated();
+        questionsSolved = 0;
 
-    [Command]
-    void CmdStartQuestions()
-    {
-        correctAnswers = 0;
-        answersDone = 0;
-        SetNewQuestion();
+        playerProgress.Clear();
+
+        currentSabotageState = QuestionState.WaitingPlayers;
     }
 
     /// <summary>
@@ -71,6 +130,33 @@ public class SabotageQuestions : NetworkBehaviour
         RpcSetQuestion(question.question, question.answers);
     }
 
+    /// <summary>
+    /// Used by UI. Sets on server as one of the players to solve questions
+    /// </summary>
+    [Client]
+    public void SetAsResponder()
+    {
+        CmdSetAsResponder();
+    }
+
+    [Command]
+    void CmdSetAsResponder(NetworkConnectionToClient sender = null)
+    {
+        playerProgress.Add(sender, 0);
+
+        var areEnoughPlayers = playerProgress.Count == questionsNeededToSolve;
+
+        if (areEnoughPlayers)
+        {
+            SetNewQuestion();
+        }
+    }
+
+    /// <summary>
+    /// Setting new question on clients
+    /// </summary>
+    /// <param name="question">Question instructions</param>
+    /// <param name="answers">List of available answers</param>
     [ClientRpc]
     void RpcSetQuestion(string question, List<string> answers)
     {
@@ -99,8 +185,8 @@ public class SabotageQuestions : NetworkBehaviour
     [ClientRpc]
     void RpcSetProgress()
     {
-        progressSlider.value = correctAnswers;
-        progressSlider.maxValue = correctAnswersNeeded;
+        progressSlider.value = questionsSolved;
+        progressSlider.maxValue = questionsNeededToSolve;
     }
 
     [ClientRpc]
@@ -111,16 +197,13 @@ public class SabotageQuestions : NetworkBehaviour
     }
 
     [Command]
-    void CmdSendAnswer(int answerIndex)
+    void CmdSendAnswer(int answerIndex, NetworkConnectionToClient sender = null)
     {
-        answersDone++;
-        if(questions.questions[currentAnswer].correctAnswerIndex == answerIndex)
+        var isCorrectAnswer = questions.questions[onQuestionIndex].correctAnswerIndex == answerIndex;
+
+        if (isCorrectAnswer)
         {
-            correctAnswers++;
-            if(correctAnswers >= correctAnswersNeeded)
-            {
-                RpcOnQuestionsEnded();
-            }
+            playerProgress[sender] = playerProgress[sender] + 1;
         }
         SetNewQuestion();
         RpcSetProgress();

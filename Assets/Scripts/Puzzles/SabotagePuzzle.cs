@@ -20,7 +20,7 @@ public class SabotagePuzzle : NetworkBehaviour
     /// </summary>
     [HideInInspector]
     [SyncVar]
-    protected bool isPuzzleEnabled = false;
+    private bool isPuzzleEnabled = false;
 
     [Header("Multiple users")]
     [Range(1, 6)]
@@ -38,6 +38,20 @@ public class SabotagePuzzle : NetworkBehaviour
     /// Only available on the server
     /// </remarks>
     private List<NetworkConnection> playersWhoSolved = new List<NetworkConnection>();
+
+    protected bool IsPuzzleEnabled
+    {
+        get => isPuzzleEnabled; 
+        set
+        {
+            if(value == true)
+            {
+                OnPuzzleActivated();
+            }
+
+            isPuzzleEnabled = value;
+        }
+    }
 
     public override void OnStartServer()
     {
@@ -58,18 +72,27 @@ public class SabotagePuzzle : NetworkBehaviour
     }
 
     /// <summary>
-    /// Shows sabotage UI. To be used by other components.
+    /// Shows sabotage UI.
     /// 
-    /// Note. This might not show if for example, this sabotage isn't active.
+    /// Note. Might not activate if for example, this sabotage isn't active.
     /// </summary>
     [Client]
     public void ShowPuzzle()
     {
-        if (isPuzzleEnabled)
+        if (IsPuzzleEnabled)
         {
             ui.SetActive(true);
         }
     }
+
+    /// <summary>
+    /// Called when puzzle was shown.
+    /// </summary>
+    /// <remarks>
+    /// Should be called on server
+    /// </remarks>
+    [Server]
+    protected virtual void OnPuzzleActivated() { }
 
     /// <summary>
     /// Call on the server when the puzzle has been finished by the user.

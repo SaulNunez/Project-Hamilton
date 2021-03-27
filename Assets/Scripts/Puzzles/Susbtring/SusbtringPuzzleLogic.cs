@@ -108,7 +108,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
         var substring = defaultText.Substring(currentStartValue, currentEndValue);
         var postSubstring = defaultText.Substring(currentEndValue);
 
-        substringPlaygroundText.text = $"{preSusbtring}<color={ColorUtility.ToHtmlStringRGBA(substringColorInUi)}>{substring}</color>{postSubstring}";
+        substringPlaygroundText.text = $"{preSusbtring}<color=#{ColorUtility.ToHtmlStringRGBA(substringColorInUi)}>{substring}</color>{postSubstring}";
     }
 
     [Client]

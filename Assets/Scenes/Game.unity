@@ -64229,6 +64229,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076308445}
   m_CullTransparentMesh: 0
+--- !u!1 &1085483720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085483723}
+  - component: {fileID: 1085483722}
+  - component: {fileID: 1085483721}
+  m_Layer: 0
+  m_Name: QuestionSabotage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1085483721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085483720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba068d5eef7d374fb0f9014f90c47b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  ui: {fileID: 0}
+  requireNumberOfPlayersToSolve: 2
+  timeoutSecondsBeforeClearing: 20
+  waitingPlayersUi: {fileID: 0}
+  waitingOnUsersToSolveUi: {fileID: 0}
+  onQuestionUi: {fileID: 0}
+  question: {fileID: 0}
+  answersParent: {fileID: 0}
+  answersDoneTextbox: {fileID: 0}
+  progressSlider: {fileID: 0}
+  finishedUi: {fileID: 0}
+  answerButtonPrefab: {fileID: 0}
+  questions: {fileID: 0}
+  questionsNeededToSolve: 0
+--- !u!114 &1085483722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085483720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3516333209
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!4 &1085483723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085483720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101464277
 GameObject:
   m_ObjectHideFlags: 0
@@ -70755,6 +70831,7 @@ MonoBehaviour:
   syncInterval: 0.1
   instructionTextbox: {fileID: 285979133}
   instructionText: Lavar una prendar requiere {0} vueltas
+  input: {fileID: 257246356}
 --- !u!114 &1661882622
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class ForPuzzle : NetworkBehaviour
     public string instructionText;
 
     [Tooltip("Input field to input the expected amount needed to wash")]
+    [SerializeField]
     TMP_InputField input;
 
     /// <summary>
