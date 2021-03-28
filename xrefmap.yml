@@ -176,12 +176,12 @@ references:
   commentId: T:Global.CompleteBoolPuzzle
   fullName: CompleteBoolPuzzle
   nameWithType: CompleteBoolPuzzle
-- uid: Global.CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
-  name: CompletePuzzle(Boolean)
-  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle_System_Boolean_
-  commentId: M:Global.CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
-  fullName: CompleteBoolPuzzle.CompletePuzzle(System.Boolean)
-  nameWithType: CompleteBoolPuzzle.CompletePuzzle(Boolean)
+- uid: Global.CompleteBoolPuzzle.CompletePuzzle
+  name: CompletePuzzle()
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle
+  commentId: M:Global.CompleteBoolPuzzle.CompletePuzzle
+  fullName: CompleteBoolPuzzle.CompletePuzzle()
+  nameWithType: CompleteBoolPuzzle.CompletePuzzle()
 - uid: Global.CompleteBoolPuzzle.CompletePuzzle*
   name: CompletePuzzle
   href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle_
@@ -2471,12 +2471,32 @@ references:
   isSpec: "True"
   fullName: SabotagePuzzle.CloseAllPuzzle
   nameWithType: SabotagePuzzle.CloseAllPuzzle
-- uid: Global.SabotagePuzzle.isPuzzleEnabled
-  name: isPuzzleEnabled
-  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_isPuzzleEnabled
-  commentId: F:Global.SabotagePuzzle.isPuzzleEnabled
-  fullName: SabotagePuzzle.isPuzzleEnabled
-  nameWithType: SabotagePuzzle.isPuzzleEnabled
+- uid: Global.SabotagePuzzle.IsPuzzleEnabled
+  name: IsPuzzleEnabled
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_IsPuzzleEnabled
+  commentId: P:Global.SabotagePuzzle.IsPuzzleEnabled
+  fullName: SabotagePuzzle.IsPuzzleEnabled
+  nameWithType: SabotagePuzzle.IsPuzzleEnabled
+- uid: Global.SabotagePuzzle.IsPuzzleEnabled*
+  name: IsPuzzleEnabled
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_IsPuzzleEnabled_
+  commentId: Overload:Global.SabotagePuzzle.IsPuzzleEnabled
+  isSpec: "True"
+  fullName: SabotagePuzzle.IsPuzzleEnabled
+  nameWithType: SabotagePuzzle.IsPuzzleEnabled
+- uid: Global.SabotagePuzzle.OnPuzzleActivated
+  name: OnPuzzleActivated()
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleActivated
+  commentId: M:Global.SabotagePuzzle.OnPuzzleActivated
+  fullName: SabotagePuzzle.OnPuzzleActivated()
+  nameWithType: SabotagePuzzle.OnPuzzleActivated()
+- uid: Global.SabotagePuzzle.OnPuzzleActivated*
+  name: OnPuzzleActivated
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleActivated_
+  commentId: Overload:Global.SabotagePuzzle.OnPuzzleActivated
+  isSpec: "True"
+  fullName: SabotagePuzzle.OnPuzzleActivated
+  nameWithType: SabotagePuzzle.OnPuzzleActivated
 - uid: Global.SabotagePuzzle.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleCompleted
@@ -2603,12 +2623,68 @@ references:
   commentId: T:Global.SabotageQuestions
   fullName: SabotageQuestions
   nameWithType: SabotageQuestions
+- uid: Global.SabotageQuestions.OnPuzzleActivated
+  name: OnPuzzleActivated()
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_OnPuzzleActivated
+  commentId: M:Global.SabotageQuestions.OnPuzzleActivated
+  fullName: SabotageQuestions.OnPuzzleActivated()
+  nameWithType: SabotageQuestions.OnPuzzleActivated()
+- uid: Global.SabotageQuestions.OnPuzzleActivated*
+  name: OnPuzzleActivated
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_OnPuzzleActivated_
+  commentId: Overload:Global.SabotageQuestions.OnPuzzleActivated
+  isSpec: "True"
+  fullName: SabotageQuestions.OnPuzzleActivated
+  nameWithType: SabotageQuestions.OnPuzzleActivated
+- uid: Global.SabotageQuestions.QuestionState
+  name: SabotageQuestions.QuestionState
+  href: api/Global.SabotageQuestions.QuestionState.html
+  commentId: T:Global.SabotageQuestions.QuestionState
+  fullName: SabotageQuestions.QuestionState
+  nameWithType: SabotageQuestions.QuestionState
+- uid: Global.SabotageQuestions.QuestionState.Finished
+  name: Finished
+  href: api/Global.SabotageQuestions.QuestionState.html#Global_SabotageQuestions_QuestionState_Finished
+  commentId: F:Global.SabotageQuestions.QuestionState.Finished
+  fullName: SabotageQuestions.QuestionState.Finished
+  nameWithType: SabotageQuestions.QuestionState.Finished
+- uid: Global.SabotageQuestions.QuestionState.OnQuestion
+  name: OnQuestion
+  href: api/Global.SabotageQuestions.QuestionState.html#Global_SabotageQuestions_QuestionState_OnQuestion
+  commentId: F:Global.SabotageQuestions.QuestionState.OnQuestion
+  fullName: SabotageQuestions.QuestionState.OnQuestion
+  nameWithType: SabotageQuestions.QuestionState.OnQuestion
+- uid: Global.SabotageQuestions.QuestionState.WaitingPlayers
+  name: WaitingPlayers
+  href: api/Global.SabotageQuestions.QuestionState.html#Global_SabotageQuestions_QuestionState_WaitingPlayers
+  commentId: F:Global.SabotageQuestions.QuestionState.WaitingPlayers
+  fullName: SabotageQuestions.QuestionState.WaitingPlayers
+  nameWithType: SabotageQuestions.QuestionState.WaitingPlayers
+- uid: Global.SabotageQuestions.SetAsResponder
+  name: SetAsResponder()
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_SetAsResponder
+  commentId: M:Global.SabotageQuestions.SetAsResponder
+  fullName: SabotageQuestions.SetAsResponder()
+  nameWithType: SabotageQuestions.SetAsResponder()
+- uid: Global.SabotageQuestions.SetAsResponder*
+  name: SetAsResponder
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_SetAsResponder_
+  commentId: Overload:Global.SabotageQuestions.SetAsResponder
+  isSpec: "True"
+  fullName: SabotageQuestions.SetAsResponder
+  nameWithType: SabotageQuestions.SetAsResponder
 - uid: Global.SequenceConfig
   name: SequenceConfig
   href: api/Global.SequenceConfig.html
   commentId: T:Global.SequenceConfig
   fullName: SequenceConfig
   nameWithType: SequenceConfig
+- uid: Global.SequenceConfig.endPosition
+  name: endPosition
+  href: api/Global.SequenceConfig.html#Global_SequenceConfig_endPosition
+  commentId: F:Global.SequenceConfig.endPosition
+  fullName: SequenceConfig.endPosition
+  nameWithType: SequenceConfig.endPosition
 - uid: Global.SequenceConfig.floor
   name: floor
   href: api/Global.SequenceConfig.html#Global_SequenceConfig_floor
@@ -2722,6 +2798,25 @@ references:
   isSpec: "True"
   fullName: SequenceGrid.VoidBackground
   nameWithType: SequenceGrid.VoidBackground
+- uid: Global.SequencePuzzle
+  name: SequencePuzzle
+  href: api/Global.SequencePuzzle.html
+  commentId: T:Global.SequencePuzzle
+  fullName: SequencePuzzle
+  nameWithType: SequencePuzzle
+- uid: Global.SequencePuzzle.SetPuzzleComplete
+  name: SetPuzzleComplete()
+  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_SetPuzzleComplete
+  commentId: M:Global.SequencePuzzle.SetPuzzleComplete
+  fullName: SequencePuzzle.SetPuzzleComplete()
+  nameWithType: SequencePuzzle.SetPuzzleComplete()
+- uid: Global.SequencePuzzle.SetPuzzleComplete*
+  name: SetPuzzleComplete
+  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_SetPuzzleComplete_
+  commentId: Overload:Global.SequencePuzzle.SetPuzzleComplete
+  isSpec: "True"
+  fullName: SequencePuzzle.SetPuzzleComplete
+  nameWithType: SequencePuzzle.SetPuzzleComplete
 - uid: Global.SequencePuzzleTileModel
   name: SequencePuzzleTileModel
   href: api/Global.SequencePuzzleTileModel.html
@@ -2754,6 +2849,62 @@ references:
   isSpec: "True"
   fullName: SequencePuzzleTileModel.ForegroundSprite
   nameWithType: SequencePuzzleTileModel.ForegroundSprite
+- uid: Global.SetResultOnGameEnd
+  name: SetResultOnGameEnd
+  href: api/Global.SetResultOnGameEnd.html
+  commentId: T:Global.SetResultOnGameEnd
+  fullName: SetResultOnGameEnd
+  nameWithType: SetResultOnGameEnd
+- uid: Global.SetResultOnGameEnd.EndGameResult
+  name: SetResultOnGameEnd.EndGameResult
+  href: api/Global.SetResultOnGameEnd.EndGameResult.html
+  commentId: T:Global.SetResultOnGameEnd.EndGameResult
+  fullName: SetResultOnGameEnd.EndGameResult
+  nameWithType: SetResultOnGameEnd.EndGameResult
+- uid: Global.SetResultOnGameEnd.EndGameResult.AssasinsWin
+  name: AssasinsWin
+  href: api/Global.SetResultOnGameEnd.EndGameResult.html#Global_SetResultOnGameEnd_EndGameResult_AssasinsWin
+  commentId: F:Global.SetResultOnGameEnd.EndGameResult.AssasinsWin
+  fullName: SetResultOnGameEnd.EndGameResult.AssasinsWin
+  nameWithType: SetResultOnGameEnd.EndGameResult.AssasinsWin
+- uid: Global.SetResultOnGameEnd.EndGameResult.NoOneHasWonYet
+  name: NoOneHasWonYet
+  href: api/Global.SetResultOnGameEnd.EndGameResult.html#Global_SetResultOnGameEnd_EndGameResult_NoOneHasWonYet
+  commentId: F:Global.SetResultOnGameEnd.EndGameResult.NoOneHasWonYet
+  fullName: SetResultOnGameEnd.EndGameResult.NoOneHasWonYet
+  nameWithType: SetResultOnGameEnd.EndGameResult.NoOneHasWonYet
+- uid: Global.SetResultOnGameEnd.EndGameResult.ProgrammersWin
+  name: ProgrammersWin
+  href: api/Global.SetResultOnGameEnd.EndGameResult.html#Global_SetResultOnGameEnd_EndGameResult_ProgrammersWin
+  commentId: F:Global.SetResultOnGameEnd.EndGameResult.ProgrammersWin
+  fullName: SetResultOnGameEnd.EndGameResult.ProgrammersWin
+  nameWithType: SetResultOnGameEnd.EndGameResult.ProgrammersWin
+- uid: Global.SetResultOnGameEnd.OnStartServer
+  name: OnStartServer()
+  href: api/Global.SetResultOnGameEnd.html#Global_SetResultOnGameEnd_OnStartServer
+  commentId: M:Global.SetResultOnGameEnd.OnStartServer
+  fullName: SetResultOnGameEnd.OnStartServer()
+  nameWithType: SetResultOnGameEnd.OnStartServer()
+- uid: Global.SetResultOnGameEnd.OnStartServer*
+  name: OnStartServer
+  href: api/Global.SetResultOnGameEnd.html#Global_SetResultOnGameEnd_OnStartServer_
+  commentId: Overload:Global.SetResultOnGameEnd.OnStartServer
+  isSpec: "True"
+  fullName: SetResultOnGameEnd.OnStartServer
+  nameWithType: SetResultOnGameEnd.OnStartServer
+- uid: Global.SetResultOnGameEnd.OnStopServer
+  name: OnStopServer()
+  href: api/Global.SetResultOnGameEnd.html#Global_SetResultOnGameEnd_OnStopServer
+  commentId: M:Global.SetResultOnGameEnd.OnStopServer
+  fullName: SetResultOnGameEnd.OnStopServer()
+  nameWithType: SetResultOnGameEnd.OnStopServer()
+- uid: Global.SetResultOnGameEnd.OnStopServer*
+  name: OnStopServer
+  href: api/Global.SetResultOnGameEnd.html#Global_SetResultOnGameEnd_OnStopServer_
+  commentId: Overload:Global.SetResultOnGameEnd.OnStopServer
+  isSpec: "True"
+  fullName: SetResultOnGameEnd.OnStopServer
+  nameWithType: SetResultOnGameEnd.OnStopServer
 - uid: Global.SetServerUrlToNetworkManagerOnStart
   name: SetServerUrlToNetworkManagerOnStart
   href: api/Global.SetServerUrlToNetworkManagerOnStart.html
@@ -2785,56 +2936,6 @@ references:
   commentId: T:Global.SetupOnClient
   fullName: SetupOnClient
   nameWithType: SetupOnClient
-- uid: Global.SetWinnerLoserOnGameEnd
-  name: SetWinnerLoserOnGameEnd
-  href: api/Global.SetWinnerLoserOnGameEnd.html
-  commentId: T:Global.SetWinnerLoserOnGameEnd
-  fullName: SetWinnerLoserOnGameEnd
-  nameWithType: SetWinnerLoserOnGameEnd
-- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult
-  name: SetWinnerLoserOnGameEnd.EndGameResult
-  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html
-  commentId: T:Global.SetWinnerLoserOnGameEnd.EndGameResult
-  fullName: SetWinnerLoserOnGameEnd.EndGameResult
-  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult
-- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
-  name: AssasinsWin
-  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html#Global_SetWinnerLoserOnGameEnd_EndGameResult_AssasinsWin
-  commentId: F:Global.SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
-  fullName: SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
-  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult.AssasinsWin
-- uid: Global.SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
-  name: ProgrammersWin
-  href: api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html#Global_SetWinnerLoserOnGameEnd_EndGameResult_ProgrammersWin
-  commentId: F:Global.SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
-  fullName: SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
-  nameWithType: SetWinnerLoserOnGameEnd.EndGameResult.ProgrammersWin
-- uid: Global.SetWinnerLoserOnGameEnd.OnStartServer
-  name: OnStartServer()
-  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStartServer
-  commentId: M:Global.SetWinnerLoserOnGameEnd.OnStartServer
-  fullName: SetWinnerLoserOnGameEnd.OnStartServer()
-  nameWithType: SetWinnerLoserOnGameEnd.OnStartServer()
-- uid: Global.SetWinnerLoserOnGameEnd.OnStartServer*
-  name: OnStartServer
-  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStartServer_
-  commentId: Overload:Global.SetWinnerLoserOnGameEnd.OnStartServer
-  isSpec: "True"
-  fullName: SetWinnerLoserOnGameEnd.OnStartServer
-  nameWithType: SetWinnerLoserOnGameEnd.OnStartServer
-- uid: Global.SetWinnerLoserOnGameEnd.OnStopServer
-  name: OnStopServer()
-  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStopServer
-  commentId: M:Global.SetWinnerLoserOnGameEnd.OnStopServer
-  fullName: SetWinnerLoserOnGameEnd.OnStopServer()
-  nameWithType: SetWinnerLoserOnGameEnd.OnStopServer()
-- uid: Global.SetWinnerLoserOnGameEnd.OnStopServer*
-  name: OnStopServer
-  href: api/Global.SetWinnerLoserOnGameEnd.html#Global_SetWinnerLoserOnGameEnd_OnStopServer_
-  commentId: Overload:Global.SetWinnerLoserOnGameEnd.OnStopServer
-  isSpec: "True"
-  fullName: SetWinnerLoserOnGameEnd.OnStopServer
-  nameWithType: SetWinnerLoserOnGameEnd.OnStopServer
 - uid: Global.ShowPuzzle
   name: ShowPuzzle
   href: api/Global.ShowPuzzle.html
@@ -2980,6 +3081,38 @@ references:
   commentId: T:Global.StartServer
   fullName: StartServer
   nameWithType: StartServer
+- uid: Global.SusbtringPuzzleLogic
+  name: SusbtringPuzzleLogic
+  href: api/Global.SusbtringPuzzleLogic.html
+  commentId: T:Global.SusbtringPuzzleLogic
+  fullName: SusbtringPuzzleLogic
+  nameWithType: SusbtringPuzzleLogic
+- uid: Global.SusbtringPuzzleLogic.OnStartClient
+  name: OnStartClient()
+  href: api/Global.SusbtringPuzzleLogic.html#Global_SusbtringPuzzleLogic_OnStartClient
+  commentId: M:Global.SusbtringPuzzleLogic.OnStartClient
+  fullName: SusbtringPuzzleLogic.OnStartClient()
+  nameWithType: SusbtringPuzzleLogic.OnStartClient()
+- uid: Global.SusbtringPuzzleLogic.OnStartClient*
+  name: OnStartClient
+  href: api/Global.SusbtringPuzzleLogic.html#Global_SusbtringPuzzleLogic_OnStartClient_
+  commentId: Overload:Global.SusbtringPuzzleLogic.OnStartClient
+  isSpec: "True"
+  fullName: SusbtringPuzzleLogic.OnStartClient
+  nameWithType: SusbtringPuzzleLogic.OnStartClient
+- uid: Global.SusbtringPuzzleLogic.OnStartServer
+  name: OnStartServer()
+  href: api/Global.SusbtringPuzzleLogic.html#Global_SusbtringPuzzleLogic_OnStartServer
+  commentId: M:Global.SusbtringPuzzleLogic.OnStartServer
+  fullName: SusbtringPuzzleLogic.OnStartServer()
+  nameWithType: SusbtringPuzzleLogic.OnStartServer()
+- uid: Global.SusbtringPuzzleLogic.OnStartServer*
+  name: OnStartServer
+  href: api/Global.SusbtringPuzzleLogic.html#Global_SusbtringPuzzleLogic_OnStartServer_
+  commentId: Overload:Global.SusbtringPuzzleLogic.OnStartServer
+  isSpec: "True"
+  fullName: SusbtringPuzzleLogic.OnStartServer
+  nameWithType: SusbtringPuzzleLogic.OnStartServer
 - uid: Global.Tags
   name: Tags
   href: api/Global.Tags.html

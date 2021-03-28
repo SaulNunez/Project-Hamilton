@@ -94,6 +94,7 @@
     <div class="level2"><span class="xref">SabotagePuzzle</span></div>
       <div class="level3"><a class="xref" href="Global.ElectricitySabotage.html">ElectricitySabotage</a></div>
       <div class="level3"><a class="xref" href="Global.SabotageBoilers.html">SabotageBoilers</a></div>
+      <div class="level3"><a class="xref" href="Global.SabotageQuestions.html">SabotageQuestions</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -103,31 +104,6 @@
   </div>
   <h3 id="fields">Fields
   </h3>
-  
-  
-  <h4 id="Global_SabotagePuzzle_isPuzzleEnabled" data-uid="Global.SabotagePuzzle.isPuzzleEnabled">isPuzzleEnabled</h4>
-  <div class="markdown level1 summary"><p>Is UI for puzzle currently active</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool isPuzzleEnabled</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <h4 id="Global_SabotagePuzzle_ui" data-uid="Global.SabotagePuzzle.ui">ui</h4>
@@ -152,6 +128,33 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_SabotagePuzzle_IsPuzzleEnabled_" data-uid="Global.SabotagePuzzle.IsPuzzleEnabled*"></a>
+  <h4 id="Global_SabotagePuzzle_IsPuzzleEnabled" data-uid="Global.SabotagePuzzle.IsPuzzleEnabled">IsPuzzleEnabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsPuzzleEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -164,6 +167,20 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void CloseAllPuzzle()</code></pre>
   </div>
+  
+  
+  <a id="Global_SabotagePuzzle_OnPuzzleActivated_" data-uid="Global.SabotagePuzzle.OnPuzzleActivated*"></a>
+  <h4 id="Global_SabotagePuzzle_OnPuzzleActivated" data-uid="Global.SabotagePuzzle.OnPuzzleActivated">OnPuzzleActivated()</h4>
+  <div class="markdown level1 summary"><p>Called when puzzle was shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPuzzleActivated()</code></pre>
+  </div>
+  <h5 id="Global_SabotagePuzzle_OnPuzzleActivated_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Should be called on server</p>
+</div>
   
   
   <a id="Global_SabotagePuzzle_OnPuzzleCompleted_" data-uid="Global.SabotagePuzzle.OnPuzzleCompleted*"></a>
@@ -232,8 +249,8 @@
   
   <a id="Global_SabotagePuzzle_ShowPuzzle_" data-uid="Global.SabotagePuzzle.ShowPuzzle*"></a>
   <h4 id="Global_SabotagePuzzle_ShowPuzzle" data-uid="Global.SabotagePuzzle.ShowPuzzle">ShowPuzzle()</h4>
-  <div class="markdown level1 summary"><p>Shows sabotage UI. To be used by other components.</p>
-<p>Note. This might not show if for example, this sabotage isn&apos;t active.</p>
+  <div class="markdown level1 summary"><p>Shows sabotage UI.</p>
+<p>Note. Might not activate if for example, this sabotage isn&apos;t active.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

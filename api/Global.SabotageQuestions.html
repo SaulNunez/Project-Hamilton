@@ -89,13 +89,69 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><span class="xref">SabotageQuestions</span></div>
+    <div class="level2"><a class="xref" href="Global.SabotagePuzzle.html">SabotagePuzzle</a></div>
+    <div class="level3"><span class="xref">SabotageQuestions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ui">SabotagePuzzle.ui</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_IsPuzzleEnabled">SabotagePuzzle.IsPuzzleEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnStartServer">SabotagePuzzle.OnStartServer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ShowPuzzle">SabotagePuzzle.ShowPuzzle()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_SetPuzzleAsCompleted_Mirror_NetworkConnection_">SabotagePuzzle.SetPuzzleAsCompleted(NetworkConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleCompleted">SabotagePuzzle.OnPuzzleCompleted()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnStopServer">SabotagePuzzle.OnStopServer()</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_TargetClosePuzzle_Mirror_NetworkConnection_">SabotagePuzzle.TargetClosePuzzle(NetworkConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_CloseAllPuzzle">SabotagePuzzle.CloseAllPuzzle()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Global_SabotageQuestions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SabotageQuestions : NetworkBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class SabotageQuestions : SabotagePuzzle</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Global_SabotageQuestions_OnPuzzleActivated_" data-uid="Global.SabotageQuestions.OnPuzzleActivated*"></a>
+  <h4 id="Global_SabotageQuestions_OnPuzzleActivated" data-uid="Global.SabotageQuestions.OnPuzzleActivated">OnPuzzleActivated()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPuzzleActivated()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleActivated">SabotagePuzzle.OnPuzzleActivated()</a></div>
+  
+  
+  <a id="Global_SabotageQuestions_SetAsResponder_" data-uid="Global.SabotageQuestions.SetAsResponder*"></a>
+  <h4 id="Global_SabotageQuestions_SetAsResponder" data-uid="Global.SabotageQuestions.SetAsResponder">SetAsResponder()</h4>
+  <div class="markdown level1 summary"><p>Used by UI. Sets on server as one of the players to solve questions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAsResponder()</code></pre>
   </div>
 </article>
           </div>

@@ -100,7 +100,8 @@
 Para evitar todos los problemas de buscar componentes y tener que conocer como esta implementado el prefab.<br>Esta clase provee facil acceso a todas las cosas que puede buscar los scripts que lo necesiten.</p>
 </section>
       <h4><a class="xref" href="Global.CompleteBoolPuzzle.html">CompleteBoolPuzzle</a></h4>
-      <section></section>
+      <section><p>Used for puzzle regarding booleans. Uses a lever as a way to teach concept of booleans.</p>
+</section>
       <h4><a class="xref" href="Global.CreateLocalPuzzleUI.html">CreateLocalPuzzleUI</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.DetectDead.html">DetectDead</a></h4>
@@ -257,20 +258,14 @@ Has text floating on top of her head.</p>
       <h4><a class="xref" href="Global.SequenceGrid.html">SequenceGrid</a></h4>
       <section><p>Playground for sequence puzzle</p>
 </section>
+      <h4><a class="xref" href="Global.SequencePuzzle.html">SequencePuzzle</a></h4>
+      <section><p>Sequence puzzle config</p>
+<p>Currently messy, there&apos;s no way to make sure on server this has been completed correctly.</p>
+</section>
       <h4><a class="xref" href="Global.SequencePuzzleTileModel.html">SequencePuzzleTileModel</a></h4>
       <section><p>Model for setup of sequence tiles</p>
 </section>
-      <h4><a class="xref" href="Global.SetServerUrlToNetworkManagerOnStart.html">SetServerUrlToNetworkManagerOnStart</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Global.SetupDefaultFlowers.html">SetupDefaultFlowers</a></h4>
-      <section><p>Controls logic for if puzzle.</p>
-<p>On server a flower type is decided on start.
-Also a random selection of six flowers is created and send to client to create buttons for user.
-On click, these send a message on client to check they are the correct type.</p>
-</section>
-      <h4><a class="xref" href="Global.SetupOnClient.html">SetupOnClient</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Global.SetWinnerLoserOnGameEnd.html">SetWinnerLoserOnGameEnd</a></h4>
+      <h4><a class="xref" href="Global.SetResultOnGameEnd.html">SetResultOnGameEnd</a></h4>
       <section><p>In charge of controlling stuff that happens when the games end.</p>
 <p>Actions:</p>
 <ul>
@@ -284,6 +279,16 @@ On click, these send a message on client to check they are the correct type.</p>
 <li>Assasins win when players don&apos;t fix a sabotage on time</li>
 </ul>
 </section>
+      <h4><a class="xref" href="Global.SetServerUrlToNetworkManagerOnStart.html">SetServerUrlToNetworkManagerOnStart</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.SetupDefaultFlowers.html">SetupDefaultFlowers</a></h4>
+      <section><p>Controls logic for if puzzle.</p>
+<p>On server a flower type is decided on start.
+Also a random selection of six flowers is created and send to client to create buttons for user.
+On click, these send a message on client to check they are the correct type.</p>
+</section>
+      <h4><a class="xref" href="Global.SetupOnClient.html">SetupOnClient</a></h4>
+      <section></section>
       <h4><a class="xref" href="Global.ShowPuzzle.html">ShowPuzzle</a></h4>
       <section><p>Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there&apos;s voting.</p>
 </section>
@@ -295,6 +300,8 @@ Starts alarm on emergency start. Ends when resolved or players lost.</p>
 <p>Events are listened on server and an RPC call controls the AudioSource on the client.</p>
 </section>
       <h4><a class="xref" href="Global.StartServer.html">StartServer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.SusbtringPuzzleLogic.html">SusbtringPuzzleLogic</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.Tags.html">Tags</a></h4>
       <section></section>
@@ -331,7 +338,8 @@ Starts alarm on emergency start. Ends when resolved or players lost.</p>
 Spawnea una ventana de votación para el</p>
 </section>
       <h4><a class="xref" href="Global.WebGLInputTacticalIgnore.html">WebGLInputTacticalIgnore</a></h4>
-      <section></section>
+      <section><p>For WebGL, on complex templates, makes sure inputs are usable in the host web template</p>
+</section>
       <h4><a class="xref" href="Global.WhilePuzzle.html">WhilePuzzle</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.WorldInteraction.html">WorldInteraction</a></h4>
@@ -357,7 +365,10 @@ Spawnea una ventana de votación para el</p>
       <section></section>
       <h4><a class="xref" href="Global.PuzzleId.html">PuzzleId</a></h4>
       <section></section>
-      <h4><a class="xref" href="Global.SetWinnerLoserOnGameEnd.EndGameResult.html">SetWinnerLoserOnGameEnd.EndGameResult</a></h4>
+      <h4><a class="xref" href="Global.SabotageQuestions.QuestionState.html">SabotageQuestions.QuestionState</a></h4>
+      <section><p>Used for the state machine of the sabotage questions</p>
+</section>
+      <h4><a class="xref" href="Global.SetResultOnGameEnd.EndGameResult.html">SetResultOnGameEnd.EndGameResult</a></h4>
       <section></section>
     <h3 id="delegates">Delegates
   </h3>

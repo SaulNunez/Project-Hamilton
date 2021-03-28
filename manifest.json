@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.CompleteBoolPuzzle.html",
-          "hash": "Q48B7iMit9ZXvgt9GXt99g=="
+          "hash": "cGfNb8JcOZJjmu5/Mgsh8g=="
         }
       },
       "is_incremental": false,
@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ElectricitySabotage.html",
-          "hash": "gcrRluxRn/IsgTracJ775g=="
+          "hash": "VRLPzsFYOYZBHdUhMPYZ1Q=="
         }
       },
       "is_incremental": false,
@@ -820,7 +820,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageBoilers.html",
-          "hash": "gFcXMqNuVjpQX5h9HT55Jw=="
+          "hash": "gPTJEOE2WSvNokhmT0QiNQ=="
         }
       },
       "is_incremental": false,
@@ -832,7 +832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotagePuzzle.html",
-          "hash": "T60CqgTP2nFzS3K8dgGktg=="
+          "hash": "m2V6z6rGS7N/yDXg96x4rQ=="
         }
       },
       "is_incremental": false,
@@ -864,11 +864,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SabotageQuestions.QuestionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SabotageQuestions.QuestionState.html",
+          "hash": "HnCpXgaFkgpI6A5oF0WtTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.SabotageQuestions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageQuestions.html",
-          "hash": "JPbS7dMrluUDM2hzXTdrsw=="
+          "hash": "yJhsDRR0H3GRsHMiPEbZXg=="
         }
       },
       "is_incremental": false,
@@ -880,7 +892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SequenceConfig.html",
-          "hash": "6SPq7sBW3WR0Y9lP4v5G3A=="
+          "hash": "tWwu49vQQKRfXK1ASn1dqg=="
         }
       },
       "is_incremental": false,
@@ -912,6 +924,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SequencePuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SequencePuzzle.html",
+          "hash": "eH6netiKDoX2/adU3MLuJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.SequencePuzzleTileModel.yml",
       "output": {
         ".html": {
@@ -924,35 +948,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetResultOnGameEnd.EndGameResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetResultOnGameEnd.EndGameResult.html",
+          "hash": "AMwL/95Jilh5iYj/pnfCZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetResultOnGameEnd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetResultOnGameEnd.html",
+          "hash": "QXW91dZjjhpxzsKfKSOzmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.SetServerUrlToNetworkManagerOnStart.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.SetServerUrlToNetworkManagerOnStart.html",
           "hash": "l0xj3FkxrfuAWTa/KUvzbw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.SetWinnerLoserOnGameEnd.EndGameResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.SetWinnerLoserOnGameEnd.EndGameResult.html",
-          "hash": "ESrcjbmZlHzSzTC6wztxOg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.SetWinnerLoserOnGameEnd.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.SetWinnerLoserOnGameEnd.html",
-          "hash": "1X1Y2jeE6xKTg02K3SfozQ=="
         }
       },
       "is_incremental": false,
@@ -1025,6 +1049,18 @@
         ".html": {
           "relative_path": "api/Global.StartServer.html",
           "hash": "+yujB5ZOcM69iKHlbwY3KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.SusbtringPuzzleLogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SusbtringPuzzleLogic.html",
+          "hash": "7gUJVlrEygNUS2o5PJY4lQ=="
         }
       },
       "is_incremental": false,
@@ -1204,7 +1240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WebGLInputTacticalIgnore.html",
-          "hash": "whOaG6wqoMDG4i11gh8MhA=="
+          "hash": "9/W8FB9+RN7eDBjvKe+VHw=="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1300,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "NNWgD6lovM8lGUKYPt7dSg=="
+          "hash": "obFbtU5dljUbhjH4M7UK2w=="
         }
       },
       "is_incremental": false,
@@ -1276,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "etkMXlZSLN2sx5FXI28Dlw=="
+          "hash": "eW/ziktxvUNydrpSPzgBCQ=="
         }
       },
       "is_incremental": false,
@@ -1385,7 +1421,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 104,
+          "total_file_count": 107,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
