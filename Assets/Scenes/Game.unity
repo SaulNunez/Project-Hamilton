@@ -1319,18 +1319,10 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 127981826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 983190225}
-        m_MethodName: CompletePuzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: [{m_Target: {fileID: 983190225}, m_MethodName: CompletePuzzle, m_Mode: 1,
+          m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object,
+              UnityEngine', m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '',
+            m_BoolArgument: 0}, m_CallState: 1}]
 --- !u!114 &127981826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,7 +3633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &235902240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56949,7 +56941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485210914}
   m_Layer: 0
-  m_Name: ---PuzzleLogic
+  m_Name: '---PuzzleLogic'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59146,7 +59138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733931568}
   m_Layer: 0
-  m_Name: ---Puzzles
+  m_Name: '---Puzzles'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77096,7 +77088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733179467}
   m_Layer: 0
-  m_Name: ---TeletransportSystem
+  m_Name: '---TeletransportSystem'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78475,7 +78467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824011700}
   m_Layer: 0
-  m_Name: ---StartPositions
+  m_Name: '---StartPositions'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
