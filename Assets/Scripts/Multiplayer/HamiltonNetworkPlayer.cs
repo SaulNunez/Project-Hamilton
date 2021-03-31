@@ -6,16 +6,15 @@
 public class HamiltonNetworkPlayer : NetworkRoomPlayer
 {
     [SyncVar]
-    public string playerName;
+    public CharacterTypes characterType;
 
     [SyncVar]
-    public CharacterTypes characterType;
+    public bool isImpostor = false;
 
 
     public override void OnStartServer()
     {
         base.OnStartServer();
-
-        playerName = $"Player{index}";
     }
+
 }

@@ -13,5 +13,6 @@ public enum CharacterTypes
     JohanaOrdonez,
     JohannMacArthur,
     JohnWu,
-    MathewBrown
+    MathewBrown,
+    WernerLaffayette
 }
