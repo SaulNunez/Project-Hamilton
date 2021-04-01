@@ -31,7 +31,7 @@ public class OpenSabotage : InteractuableBehavior
         sabotageIsAvailable = false;
     }
 
-    private void EnableButtonOnEmergency()
+    private void EnableButtonOnEmergency(Emergency.EmergencyType _)
     {
         sabotageIsAvailable = true;
     }

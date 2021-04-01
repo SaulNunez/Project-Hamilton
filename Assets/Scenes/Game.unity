@@ -3815,7 +3815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &235902240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59553,7 +59553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733931568}
   m_Layer: 0
-  m_Name: ---Puzzles
+  m_Name: ---PuzzlesInWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59567,7 +59567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733931567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.37812, y: 11.453349, z: -1.9937792}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81485,7 +81485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905294666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6000004, y: 46.2, z: -1}
+  m_LocalPosition: {x: 19.5, y: 46.2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84320,6 +84320,7 @@ GameObject:
   - component: {fileID: 2102020988}
   - component: {fileID: 2102020987}
   - component: {fileID: 2102020989}
+  - component: {fileID: 2102020990}
   m_Layer: 0
   m_Name: PuzzlesAndEmergencies
   m_TagString: PuzzleManager
@@ -84551,6 +84552,21 @@ MonoBehaviour:
   ifPickFlower: {fileID: 679769960}
   substring: {fileID: 1633233996}
   ifelseCake: {fileID: 1237871156}
+--- !u!114 &2102020990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102020980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e781c81ac837e47baf4f3dfa14cc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  taskText: {fileID: 1955793553}
 --- !u!1 &2108480324
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class SoundAlarmDuringEmergency : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void RpcOnEmergencyStart()
+    private void RpcOnEmergencyStart(Emergency.EmergencyType _)
     {
         audioSource.Play();
     }

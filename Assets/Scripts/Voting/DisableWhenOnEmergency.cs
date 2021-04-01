@@ -44,7 +44,7 @@ public class DisableWhenOnEmergency : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void RpcOnEmergencyStarted()
+    private void RpcOnEmergencyStarted(Emergency.EmergencyType _)
     {
         colliderInGameObject.enabled = false;
     }

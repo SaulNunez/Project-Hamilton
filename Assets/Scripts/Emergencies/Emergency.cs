@@ -43,6 +43,8 @@ public class Emergency : NetworkBehaviour
     [SyncVar]
     private bool onSabotage = false;
 
+    public EmergencyType CurrentActiveSabotage { get => currentActiveSabotage;  }
+
     [SyncVar]
     private EmergencyType currentActiveSabotage;
 
@@ -72,7 +74,7 @@ public class Emergency : NetworkBehaviour
 /// <remarks>
     /// Only available on server.
     /// </remarks>
-    public static event Action OnEmergencyStarted;
+    public static event Action<EmergencyType> OnEmergencyStarted;
 
     /// <summary>
     /// Called when time remaining changed. This is the time remaining to solve an emergency, useful for updating UI.
@@ -182,7 +184,7 @@ public class Emergency : NetworkBehaviour
         areEmergenciesAvailable = false;
         onSabotage = true;
 
-        OnEmergencyStarted?.Invoke();
+        OnEmergencyStarted?.Invoke(sabotageType);
 
         currentActiveSabotage = sabotageType;
         Invoke(nameof(OnTimeEnded), hubConfig.secondsEmergencyDuration);
