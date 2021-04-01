@@ -83,7 +83,8 @@
   
   <h1 id="Global_HamiltonNetworkRoomManager" data-uid="Global.HamiltonNetworkRoomManager" class="text-break">Class HamiltonNetworkRoomManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Extension to the network room manager, handles handling settings done by user from network player to player as well as providing several new events</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -156,6 +157,73 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkRoomManager.OnRoomClientSceneChanged(Mirror.NetworkConnection)</span></div>
+  
+  
+  <a id="Global_HamiltonNetworkRoomManager_OnRoomServerPlayersReady_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady*"></a>
+  <h4 id="Global_HamiltonNetworkRoomManager_OnRoomServerPlayersReady" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady">OnRoomServerPlayersReady()</h4>
+  <div class="markdown level1 summary"><p>In this custom implementation upon all players ready, they are randomly selected to become impostors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnRoomServerPlayersReady()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkRoomManager.OnRoomServerPlayersReady()</span></div>
+  
+  
+  <a id="Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer*"></a>
+  <h4 id="Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_Mirror_NetworkConnection_GameObject_GameObject_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection,GameObject,GameObject)">OnRoomServerSceneLoadedForPlayer(NetworkConnection, GameObject, GameObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mirror.NetworkConnection</span></td>
+        <td><span class="parametername">conn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">roomPlayer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">gamePlayer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection, GameObject, GameObject)</span></div>
   <h3 id="events">Events
   </h3>
   
@@ -165,7 +233,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event HamiltonNetworkRoomManager.SceneChanged OnSceneChanged</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action OnSceneChanged</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +245,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Global.HamiltonNetworkRoomManager.SceneChanged.html">HamiltonNetworkRoomManager.SceneChanged</a></td>
+        <td><span class="xref">Action</span></td>
         <td></td>
       </tr>
     </tbody>

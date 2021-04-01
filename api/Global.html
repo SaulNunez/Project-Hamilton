@@ -122,6 +122,9 @@ Para evitar todos los problemas de buscar componentes y tener que conocer como e
 Sends a RPC call to turn off collisions when emergency has started 
 and turns them back on when the emergency has been solved.</p>
 </section>
+      <h4><a class="xref" href="Global.DontKillOnSceneChange.html">DontKillOnSceneChange</a></h4>
+      <section><p>Utility that can be added to any gameobject that needs to persist scene changes.</p>
+</section>
       <h4><a class="xref" href="Global.DoWhilePuzzle.html">DoWhilePuzzle</a></h4>
       <section><p>Logic for do while puzzle</p>
 </section>
@@ -169,7 +172,8 @@ if correct, it&apos;s registered as a done puzzle and closes puzzle for player.<
       <section><p>Custom network player, has some player information that persists between sessions.</p>
 </section>
       <h4><a class="xref" href="Global.HamiltonNetworkRoomManager.html">HamiltonNetworkRoomManager</a></h4>
-      <section></section>
+      <section><p>Extension to the network room manager, handles handling settings done by user from network player to player as well as providing several new events</p>
+</section>
       <h4><a class="xref" href="Global.HelloNanabot.html">HelloNanabot</a></h4>
       <section><p>String puzzle logic</p>
 </section>
@@ -189,6 +193,9 @@ if correct, it&apos;s registered as a done puzzle and closes puzzle for player.<
       <section></section>
       <h4><a class="xref" href="Global.Layers.html">Layers</a></h4>
       <section></section>
+      <h4><a class="xref" href="Global.LobbyOptionsUiConnections.html">LobbyOptionsUiConnections</a></h4>
+      <section><p>Future work, handles updating UI state with hub config in lobby to allow setup</p>
+</section>
       <h4><a class="xref" href="Global.LobbyUIHelper.html">LobbyUIHelper</a></h4>
       <section><p>Handles activating a canvas on clients with authority. AKA in the client they belong.</p>
 </section>
@@ -212,6 +219,13 @@ Has text floating on top of her head.</p>
       <section></section>
       <h4><a class="xref" href="Global.PlayerSelectionBehavior.html">PlayerSelectionBehavior</a></h4>
       <section></section>
+      <h4><a class="xref" href="Global.PlayerSelectionInLobby.html">PlayerSelectionInLobby</a></h4>
+      <section><p>Handles setting a character type for current player, to be connected with lobby UI, before game starts.</p>
+<p>Can be used anywhere in the hierarchy.</p>
+</section>
+      <h4><a class="xref" href="Global.PlayerSelectionInLobby.ToggleAndCharacter.html">PlayerSelectionInLobby.ToggleAndCharacter</a></h4>
+      <section><p>Tiny container class that matches toggle with a character type</p>
+</section>
       <h4><a class="xref" href="Global.PlayersForVoting.html">PlayersForVoting</a></h4>
       <section><p>Sets up player buttons for the voting screen.</p>
 </section>
@@ -234,8 +248,12 @@ Has text floating on top of her head.</p>
       <h4><a class="xref" href="Global.PuzzleInformationSerialization.html">PuzzleInformationSerialization</a></h4>
       <section><p>Custom serialization because weaver is ignoring my struct</p>
 </section>
+      <h4><a class="xref" href="Global.PuzzlesListUi.html">PuzzlesListUi</a></h4>
+      <section><p>Shows in UI location of not yet solved puzzles and ocurring emergencies. Listens to puzzle completion and emergencies started to update list.  </p>
+</section>
       <h4><a class="xref" href="Global.PuzzlesToDo.html">PuzzlesToDo</a></h4>
-      <section></section>
+      <section><p>Currently unused. Expected to be used when implementing a list of tasks by user</p>
+</section>
       <h4><a class="xref" href="Global.ReportDeath.html">ReportDeath</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.SabotageBoilers.html">SabotageBoilers</a></h4>
@@ -320,8 +338,6 @@ Starts alarm on emergency start. Ends when resolved or players lost.</p>
       <section></section>
       <h4><a class="xref" href="Global.UILobbyConnect.html">UILobbyConnect</a></h4>
       <section></section>
-      <h4><a class="xref" href="Global.UpdatePlayerName.html">UpdatePlayerName</a></h4>
-      <section></section>
       <h4><a class="xref" href="Global.UpdateTaskList.html">UpdateTaskList</a></h4>
       <section><p>Can be added anywhere accepts a Text to update list in UI</p>
 </section>
@@ -372,8 +388,6 @@ Spawnea una ventana de votación para el</p>
       <section></section>
     <h3 id="delegates">Delegates
   </h3>
-      <h4><a class="xref" href="Global.HamiltonNetworkRoomManager.SceneChanged.html">HamiltonNetworkRoomManager.SceneChanged</a></h4>
-      <section></section>
       <h4><a class="xref" href="Global.WorldInteraction.ObjectEndDetected.html">WorldInteraction.ObjectEndDetected</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.WorldInteraction.ObjectStartDetected.html">WorldInteraction.ObjectStartDetected</a></h4>

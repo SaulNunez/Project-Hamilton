@@ -137,6 +137,33 @@ Also handles wait to activate, and progress; offers countdown event for clients.
   <h5 id="Global_Emergency_instance_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Only available on server</p>
 </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_Emergency_CurrentActiveSabotage_" data-uid="Global.Emergency.CurrentActiveSabotage*"></a>
+  <h4 id="Global_Emergency_CurrentActiveSabotage" data-uid="Global.Emergency.CurrentActiveSabotage">CurrentActiveSabotage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Emergency.EmergencyType CurrentActiveSabotage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Global.Emergency.EmergencyType.html">Emergency.EmergencyType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -260,7 +287,7 @@ Also handles wait to activate, and progress; offers countdown event for clients.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action OnEmergencyStarted</code></pre>
+    <pre><code class="lang-csharp hljs">public static event Action&lt;Emergency.EmergencyType&gt; OnEmergencyStarted</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,7 +299,7 @@ Also handles wait to activate, and progress; offers countdown event for clients.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Global.Emergency.EmergencyType.html">Emergency.EmergencyType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

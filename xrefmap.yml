@@ -170,6 +170,12 @@ references:
   commentId: F:Global.CharacterTypes.MathewBrown
   fullName: CharacterTypes.MathewBrown
   nameWithType: CharacterTypes.MathewBrown
+- uid: Global.CharacterTypes.WernerLaffayette
+  name: WernerLaffayette
+  href: api/Global.CharacterTypes.html#Global_CharacterTypes_WernerLaffayette
+  commentId: F:Global.CharacterTypes.WernerLaffayette
+  fullName: CharacterTypes.WernerLaffayette
+  nameWithType: CharacterTypes.WernerLaffayette
 - uid: Global.CompleteBoolPuzzle
   name: CompleteBoolPuzzle
   href: api/Global.CompleteBoolPuzzle.html
@@ -417,6 +423,12 @@ references:
   isSpec: "True"
   fullName: DisableWhenOnEmergency.OnStopServer
   nameWithType: DisableWhenOnEmergency.OnStopServer
+- uid: Global.DontKillOnSceneChange
+  name: DontKillOnSceneChange
+  href: api/Global.DontKillOnSceneChange.html
+  commentId: T:Global.DontKillOnSceneChange
+  fullName: DontKillOnSceneChange
+  nameWithType: DontKillOnSceneChange
 - uid: Global.DoWhilePuzzle
   name: DoWhilePuzzle
   href: api/Global.DoWhilePuzzle.html
@@ -500,6 +512,19 @@ references:
   isSpec: "True"
   fullName: Emergency.CmdStartEmergency
   nameWithType: Emergency.CmdStartEmergency
+- uid: Global.Emergency.CurrentActiveSabotage
+  name: CurrentActiveSabotage
+  href: api/Global.Emergency.html#Global_Emergency_CurrentActiveSabotage
+  commentId: P:Global.Emergency.CurrentActiveSabotage
+  fullName: Emergency.CurrentActiveSabotage
+  nameWithType: Emergency.CurrentActiveSabotage
+- uid: Global.Emergency.CurrentActiveSabotage*
+  name: CurrentActiveSabotage
+  href: api/Global.Emergency.html#Global_Emergency_CurrentActiveSabotage_
+  commentId: Overload:Global.Emergency.CurrentActiveSabotage
+  isSpec: "True"
+  fullName: Emergency.CurrentActiveSabotage
+  nameWithType: Emergency.CurrentActiveSabotage
 - uid: Global.Emergency.EmergencyType
   name: Emergency.EmergencyType
   href: api/Global.Emergency.EmergencyType.html
@@ -945,6 +970,12 @@ references:
   commentId: F:Global.HamiltonNetworkPlayer.characterType
   fullName: HamiltonNetworkPlayer.characterType
   nameWithType: HamiltonNetworkPlayer.characterType
+- uid: Global.HamiltonNetworkPlayer.isImpostor
+  name: isImpostor
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_isImpostor
+  commentId: F:Global.HamiltonNetworkPlayer.isImpostor
+  fullName: HamiltonNetworkPlayer.isImpostor
+  nameWithType: HamiltonNetworkPlayer.isImpostor
 - uid: Global.HamiltonNetworkPlayer.OnStartServer
   name: OnStartServer()
   href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer
@@ -958,12 +989,6 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkPlayer.OnStartServer
   nameWithType: HamiltonNetworkPlayer.OnStartServer
-- uid: Global.HamiltonNetworkPlayer.playerName
-  name: playerName
-  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_playerName
-  commentId: F:Global.HamiltonNetworkPlayer.playerName
-  fullName: HamiltonNetworkPlayer.playerName
-  nameWithType: HamiltonNetworkPlayer.playerName
 - uid: Global.HamiltonNetworkRoomManager
   name: HamiltonNetworkRoomManager
   href: api/Global.HamiltonNetworkRoomManager.html
@@ -983,6 +1008,32 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkRoomManager.OnRoomClientSceneChanged
   nameWithType: HamiltonNetworkRoomManager.OnRoomClientSceneChanged
+- uid: Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady
+  name: OnRoomServerPlayersReady()
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomServerPlayersReady
+  commentId: M:Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady
+  fullName: HamiltonNetworkRoomManager.OnRoomServerPlayersReady()
+  nameWithType: HamiltonNetworkRoomManager.OnRoomServerPlayersReady()
+- uid: Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady*
+  name: OnRoomServerPlayersReady
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomServerPlayersReady_
+  commentId: Overload:Global.HamiltonNetworkRoomManager.OnRoomServerPlayersReady
+  isSpec: "True"
+  fullName: HamiltonNetworkRoomManager.OnRoomServerPlayersReady
+  nameWithType: HamiltonNetworkRoomManager.OnRoomServerPlayersReady
+- uid: Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection,GameObject,GameObject)
+  name: OnRoomServerSceneLoadedForPlayer(NetworkConnection, GameObject, GameObject)
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_Mirror_NetworkConnection_GameObject_GameObject_
+  commentId: M:Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection,GameObject,GameObject)
+  fullName: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection, GameObject, GameObject)
+  nameWithType: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(NetworkConnection, GameObject, GameObject)
+- uid: Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer*
+  name: OnRoomServerSceneLoadedForPlayer
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_
+  commentId: Overload:Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer
+  isSpec: "True"
+  fullName: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer
+  nameWithType: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer
 - uid: Global.HamiltonNetworkRoomManager.OnSceneChanged
   name: OnSceneChanged
   href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnSceneChanged
@@ -1002,12 +1053,6 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkRoomManager.PlayerName
   nameWithType: HamiltonNetworkRoomManager.PlayerName
-- uid: Global.HamiltonNetworkRoomManager.SceneChanged
-  name: HamiltonNetworkRoomManager.SceneChanged
-  href: api/Global.HamiltonNetworkRoomManager.SceneChanged.html
-  commentId: T:Global.HamiltonNetworkRoomManager.SceneChanged
-  fullName: HamiltonNetworkRoomManager.SceneChanged
-  nameWithType: HamiltonNetworkRoomManager.SceneChanged
 - uid: Global.HelloNanabot
   name: HelloNanabot
   href: api/Global.HelloNanabot.html
@@ -1318,6 +1363,12 @@ references:
   commentId: F:Global.Layers.Players
   fullName: Layers.Players
   nameWithType: Layers.Players
+- uid: Global.LobbyOptionsUiConnections
+  name: LobbyOptionsUiConnections
+  href: api/Global.LobbyOptionsUiConnections.html
+  commentId: T:Global.LobbyOptionsUiConnections
+  fullName: LobbyOptionsUiConnections
+  nameWithType: LobbyOptionsUiConnections
 - uid: Global.LobbyUIHelper
   name: LobbyUIHelper
   href: api/Global.LobbyUIHelper.html
@@ -1802,6 +1853,43 @@ references:
   commentId: F:Global.PlayerSelectionBehavior.playerName
   fullName: PlayerSelectionBehavior.playerName
   nameWithType: PlayerSelectionBehavior.playerName
+- uid: Global.PlayerSelectionInLobby
+  name: PlayerSelectionInLobby
+  href: api/Global.PlayerSelectionInLobby.html
+  commentId: T:Global.PlayerSelectionInLobby
+  fullName: PlayerSelectionInLobby
+  nameWithType: PlayerSelectionInLobby
+- uid: Global.PlayerSelectionInLobby.Commit
+  name: Commit()
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_Commit
+  commentId: M:Global.PlayerSelectionInLobby.Commit
+  fullName: PlayerSelectionInLobby.Commit()
+  nameWithType: PlayerSelectionInLobby.Commit()
+- uid: Global.PlayerSelectionInLobby.Commit*
+  name: Commit
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_Commit_
+  commentId: Overload:Global.PlayerSelectionInLobby.Commit
+  isSpec: "True"
+  fullName: PlayerSelectionInLobby.Commit
+  nameWithType: PlayerSelectionInLobby.Commit
+- uid: Global.PlayerSelectionInLobby.ToggleAndCharacter
+  name: PlayerSelectionInLobby.ToggleAndCharacter
+  href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html
+  commentId: T:Global.PlayerSelectionInLobby.ToggleAndCharacter
+  fullName: PlayerSelectionInLobby.ToggleAndCharacter
+  nameWithType: PlayerSelectionInLobby.ToggleAndCharacter
+- uid: Global.PlayerSelectionInLobby.ToggleAndCharacter.characterType
+  name: characterType
+  href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html#Global_PlayerSelectionInLobby_ToggleAndCharacter_characterType
+  commentId: F:Global.PlayerSelectionInLobby.ToggleAndCharacter.characterType
+  fullName: PlayerSelectionInLobby.ToggleAndCharacter.characterType
+  nameWithType: PlayerSelectionInLobby.ToggleAndCharacter.characterType
+- uid: Global.PlayerSelectionInLobby.ToggleAndCharacter.toggle
+  name: toggle
+  href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html#Global_PlayerSelectionInLobby_ToggleAndCharacter_toggle
+  commentId: F:Global.PlayerSelectionInLobby.ToggleAndCharacter.toggle
+  fullName: PlayerSelectionInLobby.ToggleAndCharacter.toggle
+  nameWithType: PlayerSelectionInLobby.ToggleAndCharacter.toggle
 - uid: Global.PlayersForVoting
   name: PlayersForVoting
   href: api/Global.PlayersForVoting.html
@@ -2337,6 +2425,38 @@ references:
   isSpec: "True"
   fullName: PuzzleInformationSerialization.WritePuzzleId
   nameWithType: PuzzleInformationSerialization.WritePuzzleId
+- uid: Global.PuzzlesListUi
+  name: PuzzlesListUi
+  href: api/Global.PuzzlesListUi.html
+  commentId: T:Global.PuzzlesListUi
+  fullName: PuzzlesListUi
+  nameWithType: PuzzlesListUi
+- uid: Global.PuzzlesListUi.OnStartServer
+  name: OnStartServer()
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStartServer
+  commentId: M:Global.PuzzlesListUi.OnStartServer
+  fullName: PuzzlesListUi.OnStartServer()
+  nameWithType: PuzzlesListUi.OnStartServer()
+- uid: Global.PuzzlesListUi.OnStartServer*
+  name: OnStartServer
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStartServer_
+  commentId: Overload:Global.PuzzlesListUi.OnStartServer
+  isSpec: "True"
+  fullName: PuzzlesListUi.OnStartServer
+  nameWithType: PuzzlesListUi.OnStartServer
+- uid: Global.PuzzlesListUi.OnStopServer
+  name: OnStopServer()
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStopServer
+  commentId: M:Global.PuzzlesListUi.OnStopServer
+  fullName: PuzzlesListUi.OnStopServer()
+  nameWithType: PuzzlesListUi.OnStopServer()
+- uid: Global.PuzzlesListUi.OnStopServer*
+  name: OnStopServer
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStopServer_
+  commentId: Overload:Global.PuzzlesListUi.OnStopServer
+  isSpec: "True"
+  fullName: PuzzlesListUi.OnStopServer
+  nameWithType: PuzzlesListUi.OnStopServer
 - uid: Global.PuzzlesToDo
   name: PuzzlesToDo
   href: api/Global.PuzzlesToDo.html
@@ -3306,25 +3426,6 @@ references:
   isSpec: "True"
   fullName: UILobbyConnect.LookForGameOnServer
   nameWithType: UILobbyConnect.LookForGameOnServer
-- uid: Global.UpdatePlayerName
-  name: UpdatePlayerName
-  href: api/Global.UpdatePlayerName.html
-  commentId: T:Global.UpdatePlayerName
-  fullName: UpdatePlayerName
-  nameWithType: UpdatePlayerName
-- uid: Global.UpdatePlayerName.CmdUpdateName(System.String)
-  name: CmdUpdateName(String)
-  href: api/Global.UpdatePlayerName.html#Global_UpdatePlayerName_CmdUpdateName_System_String_
-  commentId: M:Global.UpdatePlayerName.CmdUpdateName(System.String)
-  fullName: UpdatePlayerName.CmdUpdateName(System.String)
-  nameWithType: UpdatePlayerName.CmdUpdateName(String)
-- uid: Global.UpdatePlayerName.CmdUpdateName*
-  name: CmdUpdateName
-  href: api/Global.UpdatePlayerName.html#Global_UpdatePlayerName_CmdUpdateName_
-  commentId: Overload:Global.UpdatePlayerName.CmdUpdateName
-  isSpec: "True"
-  fullName: UpdatePlayerName.CmdUpdateName
-  nameWithType: UpdatePlayerName.CmdUpdateName
 - uid: Global.UpdateTaskList
   name: UpdateTaskList
   href: api/Global.UpdateTaskList.html

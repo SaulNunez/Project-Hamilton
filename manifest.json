@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.CharacterTypes.html",
-          "hash": "7J2QAmUvxLflMsRDOcgGbA=="
+          "hash": "KrQ5f2hiAxvogihhgf1Dgg=="
         }
       },
       "is_incremental": false,
@@ -204,6 +204,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.DontKillOnSceneChange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DontKillOnSceneChange.html",
+          "hash": "0NzwYS67ETdPamcClTIILw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.ElectricitySabotage.yml",
       "output": {
         ".html": {
@@ -232,7 +244,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Emergency.html",
-          "hash": "vQ7rhBb4nvzCaNFygRm6nQ=="
+          "hash": "4TaSmz0W1OsRsk1H/XWYDg=="
         }
       },
       "is_incremental": false,
@@ -352,19 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkPlayer.html",
-          "hash": "F/ygh0i3PJvnbQQnAvoAFg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.HamiltonNetworkRoomManager.SceneChanged.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.HamiltonNetworkRoomManager.SceneChanged.html",
-          "hash": "UgzH4MW/LaTzhohG/U/ApA=="
+          "hash": "u2xRkEDQkrSYYjeBW+nAaA=="
         }
       },
       "is_incremental": false,
@@ -376,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkRoomManager.html",
-          "hash": "xPbbJJsSCWtDFH1unOGXJA=="
+          "hash": "mAqHjPntWy65Evg1tQgpGQ=="
         }
       },
       "is_incremental": false,
@@ -504,6 +504,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.LobbyOptionsUiConnections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.LobbyOptionsUiConnections.html",
+          "hash": "BaS5bskOMxRhH8cyq9OFBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.LobbyUIHelper.yml",
       "output": {
         ".html": {
@@ -605,6 +617,30 @@
         ".html": {
           "relative_path": "api/Global.PlayerSelectionBehavior.html",
           "hash": "0471Pr4wFJu87u81ZhBHig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PlayerSelectionInLobby.ToggleAndCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html",
+          "hash": "tM/4gikFpQMLboBHZ4jHsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PlayerSelectionInLobby.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PlayerSelectionInLobby.html",
+          "hash": "TTsTTBGbGzG/ssLfJoeGQQ=="
         }
       },
       "is_incremental": false,
@@ -792,11 +828,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzlesListUi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzlesListUi.html",
+          "hash": "ln9sjvMnBS0Peus89nbt0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzlesToDo.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzlesToDo.html",
-          "hash": "TD/8SVSlmgKdGmRIumgG9A=="
+          "hash": "cIUORWg0ze4gLm34CjBFIQ=="
         }
       },
       "is_incremental": false,
@@ -1164,18 +1212,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.UpdatePlayerName.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.UpdatePlayerName.html",
-          "hash": "+aJe3JlKEmQpjCQhH+RrdQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.UpdateTaskList.yml",
       "output": {
         ".html": {
@@ -1300,7 +1336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "obFbtU5dljUbhjH4M7UK2w=="
+          "hash": "jBP7RbIzazpPV23LJQLuZg=="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1348,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eW/ziktxvUNydrpSPzgBCQ=="
+          "hash": "RTbbB9UMVRtCVXxOmqMHsw=="
         }
       },
       "is_incremental": false,
@@ -1421,7 +1457,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 107,
+          "total_file_count": 110,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
