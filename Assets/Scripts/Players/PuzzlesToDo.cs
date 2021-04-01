@@ -6,8 +6,14 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Currently unused. Expected to be used when implementing a list of tasks by user
+/// </summary>
 public class PuzzlesToDo : NetworkBehaviour
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public SyncDictionary<PuzzleId, PuzzleInformation> puzzles = new SyncDictionary<PuzzleId, PuzzleInformation>();
 
     public override void OnStartServer()
