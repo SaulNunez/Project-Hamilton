@@ -45,10 +45,6 @@ public class ShowPuzzle : NetworkBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Debug.LogError($"Another instance of component was found.");
-        }
     }
 
     public override void OnStartClient()
@@ -58,10 +54,6 @@ public class ShowPuzzle : NetworkBehaviour
         if (instance == null)
         {
             instance = this;
-        }
-        else
-        {
-            Debug.LogError($"Another instance of component was found.");
         }
     }
 

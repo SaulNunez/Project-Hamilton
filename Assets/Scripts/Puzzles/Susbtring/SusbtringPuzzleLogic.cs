@@ -18,7 +18,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
     /// Set on server, value expected for end slider
     /// </summary>
     [SyncVar]
-    int setEndValue;
+    int expectedLenghtValue;
 
     /// <summary>
     /// Current value of start value, set on client when editing
@@ -27,7 +27,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
     /// <summary>
     /// Current value of end value, set on client when editing
     /// </summary>
-    int currentEndValue;
+    int currentLenght;
 
     /// <summary>
     /// Substring expected. Used for displaying on clients
@@ -80,13 +80,15 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
         startSlider.maxValue = defaultText.Length;
 
         endSlider.onValueChanged.AddListener(OnEndSliderChanged);
+        endSlider.minValue = 1;
         endSlider.maxValue = defaultText.Length;
+        endSlider.value = 1;
     }
 
     [Client]
     private void OnEndSliderChanged(float value)
     {
-        currentEndValue = (int)value;
+        currentLenght = (int)value;
 
         UpdateScreen();
         CheckValues();
@@ -104,23 +106,25 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
     [Client]
     private void UpdateScreen()
     {
-        var preSusbtring = defaultText.Substring(0, currentStartValue);
-        var substring = defaultText.Substring(currentStartValue, currentEndValue);
-        var postSubstring = defaultText.Substring(currentEndValue);
+        var preSusbtring = defaultText.Substring(0, Mathf.Clamp(currentStartValue, 0, int.MaxValue));
+        var substring = defaultText.Substring(currentStartValue, Mathf.Clamp(currentLenght, 0, defaultText.Length - currentStartValue));
+        var postSubstring = defaultText.Substring(currentStartValue+currentLenght);
 
-        substringPlaygroundText.text = $"{preSusbtring}<color=#{ColorUtility.ToHtmlStringRGBA(substringColorInUi)}>{substring}</color>{postSubstring}";
+        substringPlaygroundText.text = $"{preSusbtring}<b>{substring}</b>{postSubstring}";
     }
 
     [Client]
     void CheckValues()
     {
-        CmdCheckIsCorrect(currentStartValue, currentEndValue);
+        print("Send verificatrion");
+        CmdCheckIsCorrect(currentStartValue, currentLenght);
     }
     
-    [Command]
+    [Command(ignoreAuthority = true)]
     void CmdCheckIsCorrect(int start, int end, NetworkConnectionToClient sender = null)
     {
-        if(start == setStartValue && end == setEndValue)
+        print($"Check, start: {start}, end: {end}");
+        if(start == setStartValue && end == expectedLenghtValue)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.Substring);
             TargetClosePuzzle(sender);
@@ -139,8 +143,10 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
 
         setStartValue = Random.Range(0, defaultText.Length - 1);
 
-        setEndValue = Random.Range(setStartValue, defaultText.Length);
+        expectedLenghtValue = Random.Range(0, defaultText.Length-setStartValue);
 
-        selectValue = defaultText.Substring(setStartValue, setEndValue);
+        selectValue = defaultText.Substring(setStartValue, expectedLenghtValue);
+
+        print($"Substring puzzle: start value {setStartValue}, lenght {expectedLenghtValue}, selectValue {selectValue}");
     }
 }
