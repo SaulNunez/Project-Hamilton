@@ -10,7 +10,9 @@ public class Teletransport : InteractuableBehavior
     public override void OnApproach(GameObject approachedBy)
     {
         base.OnApproach(approachedBy);
-
-        approachedBy.transform.position = (Vector2)teletransportTo.position;
+        
+        //Teletransport is done server side, and server doesn't have authority in gameobject
+        var networkTransform = approachedBy.GetComponent<NetworkTransform>();
+        networkTransform.ServerTeleport(teletransportTo.position);
     }
 }
