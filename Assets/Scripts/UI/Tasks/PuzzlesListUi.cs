@@ -22,8 +22,13 @@ public class PuzzlesListUi : NetworkBehaviour
         PuzzleCompletion.OnPuzzleCompleted += OnPuzzleCompletionChanged;
         Emergency.OnEmergencyStarted += OnEmergencyStarted;
         Emergency.OnEmergencyResolved += OnEmergencyResolved;
+    }
 
-        RpcRecreateText();
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        taskText.text = $"{CreateEmergencyList()}\n{CreateTasksList()}";
     }
 
     private void OnEmergencyResolved() => RpcRecreateText();
@@ -96,15 +101,17 @@ public class PuzzlesListUi : NetworkBehaviour
     string CreateEmergencyList()
     {
         var emergencyList = "";
-
-        switch (Emergency.instance.CurrentActiveSabotage)
+        if(Emergency.instance != null)
         {
-            case Emergency.EmergencyType.ChangeBoilerPressure:
-                emergencyList += "<color=#ff0000ff>Emergencia\nBoilers: Controlar la presión</color>";
-                break;
-            case Emergency.EmergencyType.TurnDownGenerator:
-                emergencyList += "<color=#ff0000ff>Emergencia\nElectricidad: Enciende el generador de emergencia</color>";
-                break;
+            switch (Emergency.instance.CurrentActiveSabotage)
+            {
+                case Emergency.EmergencyType.ChangeBoilerPressure:
+                    emergencyList += "<color=#ff0000ff>Emergencia\nBoilers: Controlar la presión</color>";
+                    break;
+                case Emergency.EmergencyType.TurnDownGenerator:
+                    emergencyList += "<color=#ff0000ff>Emergencia\nElectricidad: Enciende el generador de emergencia</color>";
+                    break;
+            }
         }
 
         return emergencyList;

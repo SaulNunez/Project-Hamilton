@@ -21,6 +21,7 @@ public class Emergency : NetworkBehaviour
 {
     public enum EmergencyType
     {
+        None,
         TurnDownGenerator,
         ChangeBoilerPressure
     }
@@ -46,7 +47,7 @@ public class Emergency : NetworkBehaviour
     public EmergencyType CurrentActiveSabotage { get => currentActiveSabotage;  }
 
     [SyncVar]
-    private EmergencyType currentActiveSabotage;
+    private EmergencyType currentActiveSabotage = EmergencyType.None;
 
     [SyncVar]
     private int timeRemainingOnEmergency;
@@ -64,7 +65,7 @@ public class Emergency : NetworkBehaviour
     /// Single instance of the class.
     /// </summary>
     /// <remarks>
-    /// Only available on server
+    /// Only available on server and client
     /// </remarks>
     public static Emergency instance = null;
 
@@ -123,6 +124,16 @@ public class Emergency : NetworkBehaviour
         VotingManager.OnVotingStarted += StopSabotageOnVotingStarted;
 
         StartCooldown();
+    }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        if (instance != null)
+        {
+            instance = this;
+        }
     }
 
     public override void OnStopServer()
@@ -216,6 +227,7 @@ public class Emergency : NetworkBehaviour
         CancelInvoke(nameof(OnTimeEnded));
         CancelInvoke(nameof(CountdownToAvailability));
         onSabotage = false;
+        currentActiveSabotage = EmergencyType.None;
         StartCooldown();
 
         OnEmergencyResolved?.Invoke();
