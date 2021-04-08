@@ -38,17 +38,23 @@ public class SabotageQuestions : SabotagePuzzle
     [SerializeField]
     GameObject answersParent;
 
-    [Tooltip("A texbox showing the amount of questions solved")]
+    [SerializeField]
+    [Tooltip("Text format to use for answers done by player, use {0} for input there the number of answers done")]
+    [TextArea]
+    string answersDoneFormat;
+
+    [Tooltip("A texbox showing the amount of questions solved by player")]
     [SerializeField]
     TextMeshProUGUI answersDoneTextbox;
 
-    [Tooltip("Shows how many questions are remaining")]
+    [Tooltip("Shows how many questions have been answered by all players")]
     [SerializeField]
-    Slider progressSlider;
+    TextMeshProUGUI progressText;
 
-    [Tooltip("GameObject containing the UI to show when all the questions have been solved")]
     [SerializeField]
-    GameObject finishedUi;
+    [Tooltip("Text format used for all questions done by all the players, use {0} for the number of questions done, {1} for the number of questions to do.")]
+    [TextArea]
+    string progressTextFormat;
 
     [Header("Prefabs")]
     [Tooltip("Prefab used for buttons for answers")]
@@ -70,7 +76,7 @@ public class SabotageQuestions : SabotagePuzzle
     /// <remarks>
     /// Only used on server
     /// </remarks>
-    Dictionary<NetworkConnection,int> playerProgress = new Dictionary<NetworkConnection, int>();
+    readonly Dictionary<NetworkConnection,int> playerProgress = new Dictionary<NetworkConnection, int>();
 
     /// <summary>
     /// Amount of questions that all players have answered
@@ -81,28 +87,27 @@ public class SabotageQuestions : SabotagePuzzle
     [SyncVar]
     int onQuestionIndex;
 
-    [SyncVar(hook = nameof(OnStateChanged))]
-    QuestionState currentSabotageState;
-    
-    private void OnStateChanged(QuestionState oldValue, QuestionState newValue)
-    {
-        waitingPlayersUi.SetActive(false);
-        waitingOnUsersToSolveUi.SetActive(false);
-        finishedUi.SetActive(false);
+    // We are going to ignore states on this moment, only show questions 
 
-        switch (newValue)
-        {
-            case QuestionState.WaitingPlayers:
-                waitingPlayersUi.SetActive(true);
-                break;
-            case QuestionState.OnQuestion:
-                waitingOnUsersToSolveUi.SetActive(true);
-                break;
-            case QuestionState.Finished:
-                finishedUi.SetActive(true);
-                break;
-        }
-    }
+    //[SyncVar(hook = nameof(OnStateChanged))]
+    //QuestionState currentSabotageState;
+    
+    //private void OnStateChanged(QuestionState oldValue, QuestionState newValue)
+    //{
+    //    // Reseting before settings new value
+    //    waitingPlayersUi.SetActive(false);
+    //    waitingOnUsersToSolveUi.SetActive(false);
+
+    //    switch (newValue)
+    //    {
+    //        case QuestionState.WaitingPlayers:
+    //            waitingPlayersUi.SetActive(true);
+    //            break;
+    //        case QuestionState.OnQuestion:
+    //            waitingOnUsersToSolveUi.SetActive(true);
+    //            break;
+    //    }
+    //}
 
     private void AnswerDoneSet(int oldValue, int newValue)
     {
@@ -116,7 +121,9 @@ public class SabotageQuestions : SabotagePuzzle
 
         playerProgress.Clear();
 
-        currentSabotageState = QuestionState.WaitingPlayers;
+        //currentSabotageState = QuestionState.WaitingPlayers;
+
+        SetNewQuestion();
     }
 
     /// <summary>
@@ -185,8 +192,7 @@ public class SabotageQuestions : SabotagePuzzle
     [ClientRpc]
     void RpcSetProgress()
     {
-        progressSlider.value = questionsSolved;
-        progressSlider.maxValue = questionsNeededToSolve;
+        progressText.text = string.Format(progressTextFormat, questionsSolved, questionsNeededToSolve);
     }
 
     [ClientRpc]
@@ -203,7 +209,13 @@ public class SabotageQuestions : SabotagePuzzle
 
         if (isCorrectAnswer)
         {
-            playerProgress[sender] = playerProgress[sender] + 1;
+            if (playerProgress.ContainsKey(sender))
+            {
+                playerProgress[sender] = playerProgress[sender] + 1;
+            } else
+            {
+                playerProgress.Add(sender, 1);
+            }
         }
         SetNewQuestion();
         RpcSetProgress();

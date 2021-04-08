@@ -23,7 +23,8 @@ public class Emergency : NetworkBehaviour
     {
         None,
         TurnDownGenerator,
-        ChangeBoilerPressure
+        ChangeBoilerPressure,
+        QuestionSabotage
     }
 
 
@@ -60,6 +61,10 @@ public class Emergency : NetworkBehaviour
     [Tooltip("Button for activating electricity sabotage")]
     [SerializeField]
     Button electricitySabotage;
+
+    [Tooltip("Button for activating telegram sabotage")]
+    [SerializeField]
+    Button questionsSabotage;
 
     /// <summary>
     /// Single instance of the class.
@@ -106,6 +111,7 @@ public class Emergency : NetworkBehaviour
     {
         boilerSabotage.interactable = newValue;
         electricitySabotage.interactable = newValue;
+        questionsSabotage.interactable = newValue;
     }
 
     public override void OnStartServer()
@@ -183,6 +189,9 @@ public class Emergency : NetworkBehaviour
     /// </summary>
     [Client]
     public void StartBoilerSabotage() => CmdStartEmergency(EmergencyType.ChangeBoilerPressure);
+
+    [Client]
+    public void StartTelegraphSabotage() => CmdStartEmergency(EmergencyType.QuestionSabotage);
 
     [Command(ignoreAuthority = true)]
     public void CmdStartEmergency(EmergencyType sabotageType)
