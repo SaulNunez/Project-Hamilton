@@ -537,6 +537,18 @@ references:
   commentId: F:Global.Emergency.EmergencyType.ChangeBoilerPressure
   fullName: Emergency.EmergencyType.ChangeBoilerPressure
   nameWithType: Emergency.EmergencyType.ChangeBoilerPressure
+- uid: Global.Emergency.EmergencyType.None
+  name: None
+  href: api/Global.Emergency.EmergencyType.html#Global_Emergency_EmergencyType_None
+  commentId: F:Global.Emergency.EmergencyType.None
+  fullName: Emergency.EmergencyType.None
+  nameWithType: Emergency.EmergencyType.None
+- uid: Global.Emergency.EmergencyType.QuestionSabotage
+  name: QuestionSabotage
+  href: api/Global.Emergency.EmergencyType.html#Global_Emergency_EmergencyType_QuestionSabotage
+  commentId: F:Global.Emergency.EmergencyType.QuestionSabotage
+  fullName: Emergency.EmergencyType.QuestionSabotage
+  nameWithType: Emergency.EmergencyType.QuestionSabotage
 - uid: Global.Emergency.EmergencyType.TurnDownGenerator
   name: TurnDownGenerator
   href: api/Global.Emergency.EmergencyType.html#Global_Emergency_EmergencyType_TurnDownGenerator
@@ -567,6 +579,19 @@ references:
   commentId: E:Global.Emergency.OnPlayersCouldntStopEmergency
   fullName: Emergency.OnPlayersCouldntStopEmergency
   nameWithType: Emergency.OnPlayersCouldntStopEmergency
+- uid: Global.Emergency.OnStartClient
+  name: OnStartClient()
+  href: api/Global.Emergency.html#Global_Emergency_OnStartClient
+  commentId: M:Global.Emergency.OnStartClient
+  fullName: Emergency.OnStartClient()
+  nameWithType: Emergency.OnStartClient()
+- uid: Global.Emergency.OnStartClient*
+  name: OnStartClient
+  href: api/Global.Emergency.html#Global_Emergency_OnStartClient_
+  commentId: Overload:Global.Emergency.OnStartClient
+  isSpec: "True"
+  fullName: Emergency.OnStartClient
+  nameWithType: Emergency.OnStartClient
 - uid: Global.Emergency.OnStartServer
   name: OnStartServer()
   href: api/Global.Emergency.html#Global_Emergency_OnStartServer
@@ -625,6 +650,19 @@ references:
   isSpec: "True"
   fullName: Emergency.StartElectricitySabotage
   nameWithType: Emergency.StartElectricitySabotage
+- uid: Global.Emergency.StartTelegraphSabotage
+  name: StartTelegraphSabotage()
+  href: api/Global.Emergency.html#Global_Emergency_StartTelegraphSabotage
+  commentId: M:Global.Emergency.StartTelegraphSabotage
+  fullName: Emergency.StartTelegraphSabotage()
+  nameWithType: Emergency.StartTelegraphSabotage()
+- uid: Global.Emergency.StartTelegraphSabotage*
+  name: StartTelegraphSabotage
+  href: api/Global.Emergency.html#Global_Emergency_StartTelegraphSabotage_
+  commentId: Overload:Global.Emergency.StartTelegraphSabotage
+  isSpec: "True"
+  fullName: Emergency.StartTelegraphSabotage
+  nameWithType: Emergency.StartTelegraphSabotage
 - uid: Global.Emergency.StopEmergency
   name: StopEmergency()
   href: api/Global.Emergency.html#Global_Emergency_StopEmergency
@@ -2431,6 +2469,19 @@ references:
   commentId: T:Global.PuzzlesListUi
   fullName: PuzzlesListUi
   nameWithType: PuzzlesListUi
+- uid: Global.PuzzlesListUi.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStartClient
+  commentId: M:Global.PuzzlesListUi.OnStartClient
+  fullName: PuzzlesListUi.OnStartClient()
+  nameWithType: PuzzlesListUi.OnStartClient()
+- uid: Global.PuzzlesListUi.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStartClient_
+  commentId: Overload:Global.PuzzlesListUi.OnStartClient
+  isSpec: "True"
+  fullName: PuzzlesListUi.OnStartClient
+  nameWithType: PuzzlesListUi.OnStartClient
 - uid: Global.PuzzlesListUi.OnStartServer
   name: OnStartServer()
   href: api/Global.PuzzlesListUi.html#Global_PuzzlesListUi_OnStartServer
