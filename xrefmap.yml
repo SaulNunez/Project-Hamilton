@@ -39,6 +39,32 @@ references:
   commentId: T:Global.CameraControl
   fullName: CameraControl
   nameWithType: CameraControl
+- uid: Global.CameraControl.FollowPlayer
+  name: FollowPlayer()
+  href: api/Global.CameraControl.html#Global_CameraControl_FollowPlayer
+  commentId: M:Global.CameraControl.FollowPlayer
+  fullName: CameraControl.FollowPlayer()
+  nameWithType: CameraControl.FollowPlayer()
+- uid: Global.CameraControl.FollowPlayer*
+  name: FollowPlayer
+  href: api/Global.CameraControl.html#Global_CameraControl_FollowPlayer_
+  commentId: Overload:Global.CameraControl.FollowPlayer
+  isSpec: "True"
+  fullName: CameraControl.FollowPlayer
+  nameWithType: CameraControl.FollowPlayer
+- uid: Global.CameraControl.MoveCameraToTarget(Vector2)
+  name: MoveCameraToTarget(Vector2)
+  href: api/Global.CameraControl.html#Global_CameraControl_MoveCameraToTarget_Vector2_
+  commentId: M:Global.CameraControl.MoveCameraToTarget(Vector2)
+  fullName: CameraControl.MoveCameraToTarget(Vector2)
+  nameWithType: CameraControl.MoveCameraToTarget(Vector2)
+- uid: Global.CameraControl.MoveCameraToTarget*
+  name: MoveCameraToTarget
+  href: api/Global.CameraControl.html#Global_CameraControl_MoveCameraToTarget_
+  commentId: Overload:Global.CameraControl.MoveCameraToTarget
+  isSpec: "True"
+  fullName: CameraControl.MoveCameraToTarget
+  nameWithType: CameraControl.MoveCameraToTarget
 - uid: Global.CameraControl.target
   name: target
   href: api/Global.CameraControl.html#Global_CameraControl_target
