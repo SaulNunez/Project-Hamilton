@@ -3314,6 +3314,12 @@ references:
   commentId: F:Global.Tags.Player
   fullName: Tags.Player
   nameWithType: Tags.Player
+- uid: Global.Tags.TeletransportHelper
+  name: TeletransportHelper
+  href: api/Global.Tags.html#Global_Tags_TeletransportHelper
+  commentId: F:Global.Tags.TeletransportHelper
+  fullName: Tags.TeletransportHelper
+  nameWithType: Tags.TeletransportHelper
 - uid: Global.Tags.UiManager
   name: UiManager
   href: api/Global.Tags.html#Global_Tags_UiManager
@@ -3364,6 +3370,24 @@ references:
   commentId: T:Global.Teletransport
   fullName: Teletransport
   nameWithType: Teletransport
+- uid: Global.Teletransport.GoUpOn
+  name: Teletransport.GoUpOn
+  href: api/Global.Teletransport.GoUpOn.html
+  commentId: T:Global.Teletransport.GoUpOn
+  fullName: Teletransport.GoUpOn
+  nameWithType: Teletransport.GoUpOn
+- uid: Global.Teletransport.GoUpOn.OriginVent
+  name: OriginVent
+  href: api/Global.Teletransport.GoUpOn.html#Global_Teletransport_GoUpOn_OriginVent
+  commentId: F:Global.Teletransport.GoUpOn.OriginVent
+  fullName: Teletransport.GoUpOn.OriginVent
+  nameWithType: Teletransport.GoUpOn.OriginVent
+- uid: Global.Teletransport.GoUpOn.TeletransportVent
+  name: TeletransportVent
+  href: api/Global.Teletransport.GoUpOn.html#Global_Teletransport_GoUpOn_TeletransportVent
+  commentId: F:Global.Teletransport.GoUpOn.TeletransportVent
+  fullName: Teletransport.GoUpOn.TeletransportVent
+  nameWithType: Teletransport.GoUpOn.TeletransportVent
 - uid: Global.Teletransport.OnApproach(GameObject)
   name: OnApproach(GameObject)
   href: api/Global.Teletransport.html#Global_Teletransport_OnApproach_GameObject_
@@ -3383,6 +3407,128 @@ references:
   commentId: F:Global.Teletransport.teletransportTo
   fullName: Teletransport.teletransportTo
   nameWithType: Teletransport.teletransportTo
+- uid: Global.TeletransportManager
+  name: TeletransportManager
+  href: api/Global.TeletransportManager.html
+  commentId: T:Global.TeletransportManager
+  fullName: TeletransportManager
+  nameWithType: TeletransportManager
+- uid: Global.TeletransportManager.AddToTeletransportList(Mirror.NetworkIdentity,GameObject)
+  name: AddToTeletransportList(NetworkIdentity, GameObject)
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_AddToTeletransportList_Mirror_NetworkIdentity_GameObject_
+  commentId: M:Global.TeletransportManager.AddToTeletransportList(Mirror.NetworkIdentity,GameObject)
+  fullName: TeletransportManager.AddToTeletransportList(Mirror.NetworkIdentity, GameObject)
+  nameWithType: TeletransportManager.AddToTeletransportList(NetworkIdentity, GameObject)
+- uid: Global.TeletransportManager.AddToTeletransportList*
+  name: AddToTeletransportList
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_AddToTeletransportList_
+  commentId: Overload:Global.TeletransportManager.AddToTeletransportList
+  isSpec: "True"
+  fullName: TeletransportManager.AddToTeletransportList
+  nameWithType: TeletransportManager.AddToTeletransportList
+- uid: Global.TeletransportManager.CmdMoveToNextVent(Mirror.NetworkConnectionToClient)
+  name: CmdMoveToNextVent(NetworkConnectionToClient)
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_CmdMoveToNextVent_Mirror_NetworkConnectionToClient_
+  commentId: M:Global.TeletransportManager.CmdMoveToNextVent(Mirror.NetworkConnectionToClient)
+  fullName: TeletransportManager.CmdMoveToNextVent(Mirror.NetworkConnectionToClient)
+  nameWithType: TeletransportManager.CmdMoveToNextVent(NetworkConnectionToClient)
+- uid: Global.TeletransportManager.CmdMoveToNextVent*
+  name: CmdMoveToNextVent
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_CmdMoveToNextVent_
+  commentId: Overload:Global.TeletransportManager.CmdMoveToNextVent
+  isSpec: "True"
+  fullName: TeletransportManager.CmdMoveToNextVent
+  nameWithType: TeletransportManager.CmdMoveToNextVent
+- uid: Global.TeletransportManager.ComeOut
+  name: ComeOut()
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_ComeOut
+  commentId: M:Global.TeletransportManager.ComeOut
+  fullName: TeletransportManager.ComeOut()
+  nameWithType: TeletransportManager.ComeOut()
+- uid: Global.TeletransportManager.ComeOut*
+  name: ComeOut
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_ComeOut_
+  commentId: Overload:Global.TeletransportManager.ComeOut
+  isSpec: "True"
+  fullName: TeletransportManager.ComeOut
+  nameWithType: TeletransportManager.ComeOut
+- uid: Global.TeletransportManager.instance
+  name: instance
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_instance
+  commentId: F:Global.TeletransportManager.instance
+  fullName: TeletransportManager.instance
+  nameWithType: TeletransportManager.instance
+- uid: Global.TeletransportManager.MoveToNextVent
+  name: MoveToNextVent()
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_MoveToNextVent
+  commentId: M:Global.TeletransportManager.MoveToNextVent
+  fullName: TeletransportManager.MoveToNextVent()
+  nameWithType: TeletransportManager.MoveToNextVent()
+- uid: Global.TeletransportManager.MoveToNextVent*
+  name: MoveToNextVent
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_MoveToNextVent_
+  commentId: Overload:Global.TeletransportManager.MoveToNextVent
+  isSpec: "True"
+  fullName: TeletransportManager.MoveToNextVent
+  nameWithType: TeletransportManager.MoveToNextVent
+- uid: Global.TeletransportManager.OnStartServer
+  name: OnStartServer()
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_OnStartServer
+  commentId: M:Global.TeletransportManager.OnStartServer
+  fullName: TeletransportManager.OnStartServer()
+  nameWithType: TeletransportManager.OnStartServer()
+- uid: Global.TeletransportManager.OnStartServer*
+  name: OnStartServer
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_OnStartServer_
+  commentId: Overload:Global.TeletransportManager.OnStartServer
+  isSpec: "True"
+  fullName: TeletransportManager.OnStartServer
+  nameWithType: TeletransportManager.OnStartServer
+- uid: Global.TeletransportManager.RemoveToTeletransportList(Mirror.NetworkIdentity)
+  name: RemoveToTeletransportList(NetworkIdentity)
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_RemoveToTeletransportList_Mirror_NetworkIdentity_
+  commentId: M:Global.TeletransportManager.RemoveToTeletransportList(Mirror.NetworkIdentity)
+  fullName: TeletransportManager.RemoveToTeletransportList(Mirror.NetworkIdentity)
+  nameWithType: TeletransportManager.RemoveToTeletransportList(NetworkIdentity)
+- uid: Global.TeletransportManager.RemoveToTeletransportList*
+  name: RemoveToTeletransportList
+  href: api/Global.TeletransportManager.html#Global_TeletransportManager_RemoveToTeletransportList_
+  commentId: Overload:Global.TeletransportManager.RemoveToTeletransportList
+  isSpec: "True"
+  fullName: TeletransportManager.RemoveToTeletransportList
+  nameWithType: TeletransportManager.RemoveToTeletransportList
+- uid: Global.TeletransportUiConnect
+  name: TeletransportUiConnect
+  href: api/Global.TeletransportUiConnect.html
+  commentId: T:Global.TeletransportUiConnect
+  fullName: TeletransportUiConnect
+  nameWithType: TeletransportUiConnect
+- uid: Global.TeletransportUiConnect.HideUi
+  name: HideUi()
+  href: api/Global.TeletransportUiConnect.html#Global_TeletransportUiConnect_HideUi
+  commentId: M:Global.TeletransportUiConnect.HideUi
+  fullName: TeletransportUiConnect.HideUi()
+  nameWithType: TeletransportUiConnect.HideUi()
+- uid: Global.TeletransportUiConnect.HideUi*
+  name: HideUi
+  href: api/Global.TeletransportUiConnect.html#Global_TeletransportUiConnect_HideUi_
+  commentId: Overload:Global.TeletransportUiConnect.HideUi
+  isSpec: "True"
+  fullName: TeletransportUiConnect.HideUi
+  nameWithType: TeletransportUiConnect.HideUi
+- uid: Global.TeletransportUiConnect.OpenUi
+  name: OpenUi()
+  href: api/Global.TeletransportUiConnect.html#Global_TeletransportUiConnect_OpenUi
+  commentId: M:Global.TeletransportUiConnect.OpenUi
+  fullName: TeletransportUiConnect.OpenUi()
+  nameWithType: TeletransportUiConnect.OpenUi()
+- uid: Global.TeletransportUiConnect.OpenUi*
+  name: OpenUi
+  href: api/Global.TeletransportUiConnect.html#Global_TeletransportUiConnect_OpenUi_
+  commentId: Overload:Global.TeletransportUiConnect.OpenUi
+  isSpec: "True"
+  fullName: TeletransportUiConnect.OpenUi
+  nameWithType: TeletransportUiConnect.OpenUi
 - uid: Global.Test
   name: Test
   href: api/Global.Test.html
