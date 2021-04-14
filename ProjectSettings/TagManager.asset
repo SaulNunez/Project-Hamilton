@@ -14,6 +14,7 @@ TagManager:
   - ChatWindow
   - VotingScreen
   - PuzzleManager
+  - TeletransportHelper
   layers:
   - Default
   - TransparentFX

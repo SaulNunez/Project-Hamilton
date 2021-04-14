@@ -119,6 +119,14 @@ public class PuzzlesListUi : NetworkBehaviour
 
     List<PuzzleId> AvailablePuzzles() => 
         new List<PuzzleId>((IEnumerable<PuzzleId>)Enum.GetValues(typeof(PuzzleId)))
-            .Where(pId => !PuzzleCompletion.instance.puzzlesCompleted.Contains(pId))
+            .Where(pId =>
+            {
+                //Cuando el juego apenas esta iniciando, puede que se inicie ligeramente mas tarde, simplemente retornar todos
+                if(PuzzleCompletion.instance == null)
+                {
+                    return true;
+                }
+                return !PuzzleCompletion.instance.puzzlesCompleted.Contains(pId);
+            })
             .ToList();
 }
