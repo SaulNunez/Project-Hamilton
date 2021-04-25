@@ -25,6 +25,19 @@ public class TeletransportManager : NetworkBehaviour
         onTeletrasportMode.Add(player, currentVent);
 
         TargetAskPermisionForTeletrasport(player.connectionToClient);
+
+        //Move camera target
+        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
+
+        var cameraControl = camera.GetComponent<CameraControl>();
+        cameraControl.MoveCameraToTarget(currentVent.transform.position);
+
+        //Move outside of world to not appear on screen - 200 IQ Move
+        var netTransform = player.GetComponent<NetworkTransform>();
+        if(netTransform != null)
+        {
+            netTransform.ServerTeleport(new Vector2(200, 200));
+        }
     }
 
     [Server]
@@ -44,6 +57,17 @@ public class TeletransportManager : NetworkBehaviour
 
         onTeletrasportMode[sender.identity] = ventTechnology.teletransportTo.gameObject;
 
+        MovePlayerCameraToVent(sender);
+    }
+
+    [TargetRpc]
+    void MovePlayerCameraToVent(NetworkConnection target)
+    {
+        //Move camera target
+        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
+
+        var cameraControl = camera.GetComponent<CameraControl>();
+        cameraControl.MoveCameraToTarget(onTeletrasportMode[target.identity].transform.position);
     }
 
 
@@ -69,6 +93,12 @@ public class TeletransportManager : NetworkBehaviour
         RemoveToTeletransportList(sender.identity);
 
         TargetDisablePermisionForTeletransport(sender);
+
+        //Come out vent
+        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
+
+        var cameraControl = camera.GetComponent<CameraControl>();
+        cameraControl.FollowPlayer();
     }
 
     [TargetRpc]
