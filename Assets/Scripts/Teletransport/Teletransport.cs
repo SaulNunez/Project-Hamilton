@@ -18,6 +18,13 @@ public class Teletransport : InteractuableBehavior
     {
         base.OnApproach(approachedBy);
 
+        // Only impostors can teletransport
+        var killingComponent = approachedBy.GetComponent<Killing>();
+        if(killingComponent != null && killingComponent.canKill == true)
+        {
+            return;
+        }
+
         var netIdentityOfApproached = approachedBy.GetComponent<NetworkIdentity>();
         if (netIdentityOfApproached != null)
         {
