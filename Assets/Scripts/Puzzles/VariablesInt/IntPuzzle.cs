@@ -5,8 +5,6 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
-namespace Puzzles.Variables.Int
-{
     /// <summary>
     /// Handles the logic of both float and int thermostat puzzle variants
     /// </summary>
@@ -137,4 +135,3 @@ namespace Puzzles.Variables.Int
             ShowPuzzle.instance.ClosePuzzles();
         }
     }
-}
