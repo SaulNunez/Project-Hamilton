@@ -47,5 +47,6 @@ public class Die : NetworkBehaviour
     {
         //Mostrar capa de fantasmas
         Camera.main.cullingMask = Camera.main.cullingMask | LayerMask.NameToLayer(Layers.Ghost);
+        ShowPuzzle.instance.ClosePuzzles();
     }
 }
