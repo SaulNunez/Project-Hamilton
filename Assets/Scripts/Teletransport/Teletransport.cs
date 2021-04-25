@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Acknowledges when player has interacted with teletransport vent, and adds player to teletransport manager to handle on teletransport options and such
+/// </summary>
 public class Teletransport : InteractuableBehavior
 {
     public enum GoUpOn
