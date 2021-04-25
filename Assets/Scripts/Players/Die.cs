@@ -20,6 +20,9 @@ public class Die : NetworkBehaviour
         anim = GetComponent<Animator>();
     }
 
+    /// <summary>
+    /// Handles death when killed and a tomb is spawned
+    /// </summary>
     [Server]
     public void SetDed()
     {
@@ -31,7 +34,7 @@ public class Die : NetworkBehaviour
     }
 
     /// <summary>
-    /// Muerte cuando el jugador no spawnea esqueleto donde murio.
+    /// Handles death when killed by votes
     /// </summary>
     [Server]
     public void SetSimpleDeath()
