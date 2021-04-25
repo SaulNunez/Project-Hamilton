@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class IfElsePuzzle
+    <title>Class IntPuzzle
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class IfElsePuzzle
+    <meta name="title" content="Class IntPuzzle
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.57.2.0">
     
@@ -78,51 +78,101 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.IfElsePuzzle">
+            <article class="content wrap" id="_content" data-uid="Global.IntPuzzle">
   
   
-  <h1 id="Global_IfElsePuzzle" data-uid="Global.IfElsePuzzle" class="text-break">Class IfElsePuzzle
+  <h1 id="Global_IntPuzzle" data-uid="Global.IntPuzzle" class="text-break">Class IntPuzzle
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Handles the logic of both float and int thermostat puzzle variants</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><span class="xref">IfElsePuzzle</span></div>
+    <div class="level2"><span class="xref">IntPuzzle</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_IfElsePuzzle_syntax">Syntax</h5>
+  <h5 id="Global_IntPuzzle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IfElsePuzzle : NetworkBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class IntPuzzle : NetworkBehaviour</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Global_IfElsePuzzle_OnCerezasClick_" data-uid="Global.IfElsePuzzle.OnCerezasClick*"></a>
-  <h4 id="Global_IfElsePuzzle_OnCerezasClick" data-uid="Global.IfElsePuzzle.OnCerezasClick">OnCerezasClick()</h4>
+  <a id="Global_IntPuzzle_OnInputUpdate_" data-uid="Global.IntPuzzle.OnInputUpdate*"></a>
+  <h4 id="Global_IntPuzzle_OnInputUpdate_System_Single_" data-uid="Global.IntPuzzle.OnInputUpdate(System.Single)">OnInputUpdate(Single)</h4>
+  <div class="markdown level1 summary"><p>Exposed to be linked on editor to on value changed on slider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputUpdate(float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_IntPuzzle_OnInputUpdate_" data-uid="Global.IntPuzzle.OnInputUpdate*"></a>
+  <h4 id="Global_IntPuzzle_OnInputUpdate_System_String_" data-uid="Global.IntPuzzle.OnInputUpdate(System.String)">OnInputUpdate(String)</h4>
+  <div class="markdown level1 summary"><p>Exposed to be linked on editor to onEndEdit of a InputField</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnInputUpdate(string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>InputField content</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_IntPuzzle_OnStartClient_" data-uid="Global.IntPuzzle.OnStartClient*"></a>
+  <h4 id="Global_IntPuzzle_OnStartClient" data-uid="Global.IntPuzzle.OnStartClient">OnStartClient()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnCerezasClick()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
   
   
-  <a id="Global_IfElsePuzzle_OnChispitasClick_" data-uid="Global.IfElsePuzzle.OnChispitasClick*"></a>
-  <h4 id="Global_IfElsePuzzle_OnChispitasClick" data-uid="Global.IfElsePuzzle.OnChispitasClick">OnChispitasClick()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnChispitasClick()</code></pre>
-  </div>
-  
-  
-  <a id="Global_IfElsePuzzle_OnStartServer_" data-uid="Global.IfElsePuzzle.OnStartServer*"></a>
-  <h4 id="Global_IfElsePuzzle_OnStartServer" data-uid="Global.IfElsePuzzle.OnStartServer">OnStartServer()</h4>
+  <a id="Global_IntPuzzle_OnStartServer_" data-uid="Global.IntPuzzle.OnStartServer*"></a>
+  <h4 id="Global_IntPuzzle_OnStartServer" data-uid="Global.IntPuzzle.OnStartServer">OnStartServer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

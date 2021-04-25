@@ -1266,6 +1266,57 @@ references:
   isSpec: "True"
   fullName: InteractuableBehavior.OnApproach
   nameWithType: InteractuableBehavior.OnApproach
+- uid: Global.IntPuzzle
+  name: IntPuzzle
+  href: api/Global.IntPuzzle.html
+  commentId: T:Global.IntPuzzle
+  fullName: IntPuzzle
+  nameWithType: IntPuzzle
+- uid: Global.IntPuzzle.OnInputUpdate(System.Single)
+  name: OnInputUpdate(Single)
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_System_Single_
+  commentId: M:Global.IntPuzzle.OnInputUpdate(System.Single)
+  fullName: IntPuzzle.OnInputUpdate(System.Single)
+  nameWithType: IntPuzzle.OnInputUpdate(Single)
+- uid: Global.IntPuzzle.OnInputUpdate(System.String)
+  name: OnInputUpdate(String)
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_System_String_
+  commentId: M:Global.IntPuzzle.OnInputUpdate(System.String)
+  fullName: IntPuzzle.OnInputUpdate(System.String)
+  nameWithType: IntPuzzle.OnInputUpdate(String)
+- uid: Global.IntPuzzle.OnInputUpdate*
+  name: OnInputUpdate
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_
+  commentId: Overload:Global.IntPuzzle.OnInputUpdate
+  isSpec: "True"
+  fullName: IntPuzzle.OnInputUpdate
+  nameWithType: IntPuzzle.OnInputUpdate
+- uid: Global.IntPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartClient
+  commentId: M:Global.IntPuzzle.OnStartClient
+  fullName: IntPuzzle.OnStartClient()
+  nameWithType: IntPuzzle.OnStartClient()
+- uid: Global.IntPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartClient_
+  commentId: Overload:Global.IntPuzzle.OnStartClient
+  isSpec: "True"
+  fullName: IntPuzzle.OnStartClient
+  nameWithType: IntPuzzle.OnStartClient
+- uid: Global.IntPuzzle.OnStartServer
+  name: OnStartServer()
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartServer
+  commentId: M:Global.IntPuzzle.OnStartServer
+  fullName: IntPuzzle.OnStartServer()
+  nameWithType: IntPuzzle.OnStartServer()
+- uid: Global.IntPuzzle.OnStartServer*
+  name: OnStartServer
+  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartServer_
+  commentId: Overload:Global.IntPuzzle.OnStartServer
+  isSpec: "True"
+  fullName: IntPuzzle.OnStartServer
+  nameWithType: IntPuzzle.OnStartServer
 - uid: Global.ItemUIHandling
   name: ItemUIHandling
   href: api/Global.ItemUIHandling.html
