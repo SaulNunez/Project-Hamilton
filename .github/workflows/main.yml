@@ -1,4 +1,4 @@
-name: Testing
+name: Building
 on: 
   pull_request: {}
   push: { branches: [master] }
@@ -28,11 +28,11 @@ jobs:
           name: Test results
           path: ${{ steps.tests.outputs.artifactsPath }}
   build:
-    name: Building game for Linux (Server) and WebGL, and uploading new versions
+    name: Building game for Windows (Server) and WebGL, and uploading new versions
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        targetPlatform: [StandaloneWindows64, WebGL]
+        targetPlatform: [StandaloneLinux64, WebGL]
     steps:
       - uses: actions/checkout@v2
         with:
