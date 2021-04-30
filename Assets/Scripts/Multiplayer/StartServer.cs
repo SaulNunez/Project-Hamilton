@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Starts server automatically when game is started unnatended (with flag -batchmode) 
+/// </summary>
 public class StartServer : MonoBehaviour
 {
     void Start()
