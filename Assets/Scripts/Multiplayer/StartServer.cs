@@ -6,6 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Starts server automatically when game is started unnatended (with flag -batchmode) 
 /// </summary>
+[RequireComponent(typeof(NetworkManager))]
 public class StartServer : MonoBehaviour
 {
     void Start()
