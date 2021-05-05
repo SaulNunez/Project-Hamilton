@@ -15,7 +15,9 @@ public class SetServerUrlToNetworkManagerOnStart : MonoBehaviour
         if(Application.platform == RuntimePlatform.WebGLPlayer)
         {
             var networkManager = GetComponent<NetworkManager>();
-            networkManager.networkAddress = "servidorpruebas.saulnunez.com";
+            var serverUrlUri = new Uri(Application.absoluteURL);
+            var server = new Uri(serverUrlUri, "server");
+            networkManager.networkAddress = server.ToString();
         }
     }
 }
