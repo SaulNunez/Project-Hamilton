@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        targetPlatform: [StandaloneWindows64, WebGL]
+        targetPlatform: [StandaloneLinux64, WebGL]
     steps:
       - uses: actions/checkout@v2
         with:
