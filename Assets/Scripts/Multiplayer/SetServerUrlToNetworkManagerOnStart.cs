@@ -16,8 +16,8 @@ public class SetServerUrlToNetworkManagerOnStart : MonoBehaviour
         {
             var networkManager = GetComponent<NetworkManager>();
             var serverUrlUri = new Uri(Application.absoluteURL);
-            var server = new Uri(serverUrlUri, "server");
-            networkManager.networkAddress = server.ToString();
+            var server = new Uri(serverUrlUri, "/server");
+            networkManager.networkAddress = server.Host + server.PathAndQuery + server.Fragment;
         }
     }
 }
