@@ -62568,7 +62568,7 @@ GameObject:
   - component: {fileID: 741683879}
   - component: {fileID: 741683878}
   m_Layer: 0
-  m_Name: Image
+  m_Name: MapSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62612,9 +62612,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 58114b092fe5c4f4791c5724ccc46979, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
