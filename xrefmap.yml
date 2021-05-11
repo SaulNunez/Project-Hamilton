@@ -1142,6 +1142,12 @@ references:
   commentId: F:Global.HelloNanabot.textbox
   fullName: HelloNanabot.textbox
   nameWithType: HelloNanabot.textbox
+- uid: Global.HideGuiIfNotEditor
+  name: HideGuiIfNotEditor
+  href: api/Global.HideGuiIfNotEditor.html
+  commentId: T:Global.HideGuiIfNotEditor
+  fullName: HideGuiIfNotEditor
+  nameWithType: HideGuiIfNotEditor
 - uid: Global.Highlight
   name: Highlight
   href: api/Global.Highlight.html
