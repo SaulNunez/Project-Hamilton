@@ -28,7 +28,7 @@ public class PlayerSelectionInLobby : MonoBehaviour
     [SerializeField]
     List<ToggleAndCharacter> toggles;
 
-    CharacterTypes currentCharacterType = CharacterTypes.AndreaLewis;
+    public CharacterTypes currentCharacterType = CharacterTypes.AndreaLewis;
 
     void Start()
     {

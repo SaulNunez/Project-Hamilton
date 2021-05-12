@@ -892,6 +892,7 @@ MonoBehaviour:
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
+  charactersMapping: {fileID: 11400000, guid: b674fd8bb78d50e4db322d37b7f6ae4e, type: 2}
 --- !u!114 &654267511
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,10 @@ using UnityEngine;
 /// </summary>
 public class HamiltonNetworkRoomManager : NetworkRoomManager
 {
+    [Tooltip("How to map character to setting up sprite and visuals specific to their character")]
+    [Header("Character mapping")]
+    public AvailableCharacters charactersMapping;
+
     public event Action OnSceneChanged;
 
     public string PlayerName {get; set;}
@@ -25,6 +29,14 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
 
         var killingComponent = gamePlayer.GetComponent<Killing>();
         killingComponent.canKill = networkPlayer.isImpostor;
+
+        var playerSelectionComponent = roomPlayer.GetComponent<PlayerSelectionInLobby>();
+        var characterSelected = playerSelectionComponent.currentCharacterType;
+
+        var mapping = charactersMapping.characters.Find(x => x.characterType == characterSelected);
+
+        var spriteComponent = gamePlayer.GetComponent<SpriteRenderer>();
+        spriteComponent.sprite = mapping.playerCharacter;
 
         return base.OnRoomServerSceneLoadedForPlayer(conn, roomPlayer, gamePlayer);
     }
