@@ -89,9 +89,6 @@ public class PuzzlesListUi : NetworkBehaviour
                 case PuzzleId.IfElse:
                     taskList += "Cocina: Decora el cupcake o el pastel \n";
                     break;
-                case PuzzleId.TheoryVariety:
-                    taskList += "aaaaa \n";
-                    break;
             }
         }
 
@@ -110,6 +107,9 @@ public class PuzzlesListUi : NetworkBehaviour
                     break;
                 case Emergency.EmergencyType.TurnDownGenerator:
                     emergencyList += "<color=#ff0000ff>Emergencia\nElectricidad: Enciende el generador de emergencia</color>";
+                    break;
+                case Emergency.EmergencyType.QuestionSabotage:
+                    emergencyList += "<color=#ff0000ff>Emergencia\nLibreria: Consigue a un compañero para contestar unas preguntas</color>";
                     break;
             }
         }
