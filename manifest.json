@@ -24,6 +24,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.AvailableCharacters.CharacterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AvailableCharacters.CharacterInfo.html",
+          "hash": "63D2Ep2Gbid23tYGRzoRk40IeBC0n9fLapdEhE7GrJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.AvailableCharacters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AvailableCharacters.html",
+          "hash": "jXUSlWG7sHmcDVMw1HUFtuXWuaO/s2kdznMYZj6gCLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.BoilerSabotageOptions.yml",
       "output": {
         ".html": {
@@ -376,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkRoomManager.html",
-          "hash": "+5wWPfltQfhJzuyx2kFc/Fx6/PT+TsuzuWEsgfwowtQ="
+          "hash": "H7UqG7U+mPWUb29irHwVJVoDfxcNZ1KhVCNTMZeApz0="
         }
       },
       "is_incremental": false,
@@ -664,7 +688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayerSelectionInLobby.html",
-          "hash": "50swCeo0iukO4X5qy+3IPoMhxTGrBjzzkYFFzljA2iA="
+          "hash": "R/mKilvk9J4sZBdCPPrYMEQgKOf1XO5tN81nWPg3wIg="
         }
       },
       "is_incremental": false,
@@ -1116,6 +1140,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SpriteFlipOnVelocity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SpriteFlipOnVelocity.html",
+          "hash": "x1pJ6XWvoJ4vWvCFqkNQTGVlRQzjbk4t4Iv1DIpp+Ao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.StartServer.yml",
       "output": {
         ".html": {
@@ -1276,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.UpdateTaskList.html",
-          "hash": "15koJnJLB3OY+RRbDpFerp1QXaeL+xvbWGHhRcCvrtw="
+          "hash": "oemHFyC2bHxr2g26HQmA9aUhSPS1SysHZGQP0eG9xy8="
         }
       },
       "is_incremental": false,
@@ -1396,7 +1432,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "1K0ZM0WYSl9n4z8ZdcFi2c6aIVYKBTjUM9xNtkSxRKs="
+          "hash": "OYV8hUNdolo3eqNR0EAOePXrxbf9dofFuvSuBKjqQeM="
         }
       },
       "is_incremental": false,
@@ -1408,7 +1444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "83Ek6or7IUhuPUxskQesXbHEr5EgYkeSeJhz6y3S5jA="
+          "hash": "f+gLtQXgO0Zs3DxOwzKscS2qlWMpZU8tx3u7iRweYg8="
         }
       },
       "is_incremental": false,
@@ -1517,7 +1553,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 115,
+          "total_file_count": 118,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

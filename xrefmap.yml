@@ -9,6 +9,36 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.AvailableCharacters
+  name: AvailableCharacters
+  href: api/Global.AvailableCharacters.html
+  commentId: T:Global.AvailableCharacters
+  fullName: AvailableCharacters
+  nameWithType: AvailableCharacters
+- uid: Global.AvailableCharacters.CharacterInfo
+  name: AvailableCharacters.CharacterInfo
+  href: api/Global.AvailableCharacters.CharacterInfo.html
+  commentId: T:Global.AvailableCharacters.CharacterInfo
+  fullName: AvailableCharacters.CharacterInfo
+  nameWithType: AvailableCharacters.CharacterInfo
+- uid: Global.AvailableCharacters.CharacterInfo.characterType
+  name: characterType
+  href: api/Global.AvailableCharacters.CharacterInfo.html#Global_AvailableCharacters_CharacterInfo_characterType
+  commentId: F:Global.AvailableCharacters.CharacterInfo.characterType
+  fullName: AvailableCharacters.CharacterInfo.characterType
+  nameWithType: AvailableCharacters.CharacterInfo.characterType
+- uid: Global.AvailableCharacters.CharacterInfo.playerCharacter
+  name: playerCharacter
+  href: api/Global.AvailableCharacters.CharacterInfo.html#Global_AvailableCharacters_CharacterInfo_playerCharacter
+  commentId: F:Global.AvailableCharacters.CharacterInfo.playerCharacter
+  fullName: AvailableCharacters.CharacterInfo.playerCharacter
+  nameWithType: AvailableCharacters.CharacterInfo.playerCharacter
+- uid: Global.AvailableCharacters.characters
+  name: characters
+  href: api/Global.AvailableCharacters.html#Global_AvailableCharacters_characters
+  commentId: F:Global.AvailableCharacters.characters
+  fullName: AvailableCharacters.characters
+  nameWithType: AvailableCharacters.characters
 - uid: Global.BoilerSabotageOptions
   name: BoilerSabotageOptions
   href: api/Global.BoilerSabotageOptions.html
@@ -1059,6 +1089,12 @@ references:
   commentId: T:Global.HamiltonNetworkRoomManager
   fullName: HamiltonNetworkRoomManager
   nameWithType: HamiltonNetworkRoomManager
+- uid: Global.HamiltonNetworkRoomManager.charactersMapping
+  name: charactersMapping
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_charactersMapping
+  commentId: F:Global.HamiltonNetworkRoomManager.charactersMapping
+  fullName: HamiltonNetworkRoomManager.charactersMapping
+  nameWithType: HamiltonNetworkRoomManager.charactersMapping
 - uid: Global.HamiltonNetworkRoomManager.OnRoomClientSceneChanged(Mirror.NetworkConnection)
   name: OnRoomClientSceneChanged(NetworkConnection)
   href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomClientSceneChanged_Mirror_NetworkConnection_
@@ -1993,6 +2029,12 @@ references:
   isSpec: "True"
   fullName: PlayerSelectionInLobby.Commit
   nameWithType: PlayerSelectionInLobby.Commit
+- uid: Global.PlayerSelectionInLobby.currentCharacterType
+  name: currentCharacterType
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_currentCharacterType
+  commentId: F:Global.PlayerSelectionInLobby.currentCharacterType
+  fullName: PlayerSelectionInLobby.currentCharacterType
+  nameWithType: PlayerSelectionInLobby.currentCharacterType
 - uid: Global.PlayerSelectionInLobby.ToggleAndCharacter
   name: PlayerSelectionInLobby.ToggleAndCharacter
   href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html
@@ -3329,6 +3371,12 @@ references:
   isSpec: "True"
   fullName: SoundAlarmDuringEmergency.OnStopServer
   nameWithType: SoundAlarmDuringEmergency.OnStopServer
+- uid: Global.SpriteFlipOnVelocity
+  name: SpriteFlipOnVelocity
+  href: api/Global.SpriteFlipOnVelocity.html
+  commentId: T:Global.SpriteFlipOnVelocity
+  fullName: SpriteFlipOnVelocity
+  nameWithType: SpriteFlipOnVelocity
 - uid: Global.StartServer
   name: StartServer
   href: api/Global.StartServer.html
