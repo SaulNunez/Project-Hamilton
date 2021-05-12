@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 /// <summary>
-/// Can be added anywhere accepts a Text to update list in UI
+/// Can be added anywhere accepts a Text to update task list 
 /// </summary>
 public class UpdateTaskList : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class UpdateTaskList : MonoBehaviour
 
     private void OnDestroy()
     {
-        Emergency.OnTimeRemaingForEmergencyChanged += OnEmergencyCountdownUpdate;
+        Emergency.OnTimeRemaingForEmergencyChanged -= OnEmergencyCountdownUpdate;
     }
 
 }
