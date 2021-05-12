@@ -132,6 +132,6 @@ using UnityEngine.UI;
         [TargetRpc]
         void TargetClosePuzzle(NetworkConnection target)
         {
-            ShowPuzzle.instance.ClosePuzzles();
+            PuzzleUI.instance.ClosePuzzles();
         }
     }

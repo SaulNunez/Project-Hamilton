@@ -48,6 +48,6 @@ public class WhilePuzzle : NetworkBehaviour
     [TargetRpc]
     void RpcClosePuzzle(NetworkConnection target)
     {
-        ShowPuzzle.instance.ClosePuzzles();
+        PuzzleUI.instance.ClosePuzzles();
     }
 }

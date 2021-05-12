@@ -39,6 +39,6 @@ public class CompleteBoolPuzzle : NetworkBehaviour
     [TargetRpc]
     void TargetClosePuzzle(NetworkConnection target)
     {
-        ShowPuzzle.instance.ClosePuzzles();
+        PuzzleUI.instance.ClosePuzzles();
     }
 }

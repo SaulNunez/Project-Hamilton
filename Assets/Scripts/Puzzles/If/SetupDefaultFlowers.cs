@@ -109,6 +109,6 @@ public class SetupDefaultFlowers: NetworkBehaviour {
     [TargetRpc]
     void TargetClosePuzzle(NetworkConnection target)
     {
-        ShowPuzzle.instance.ClosePuzzles();
+        PuzzleUI.instance.ClosePuzzles();
     }
 }

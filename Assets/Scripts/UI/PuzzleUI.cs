@@ -1,13 +1,17 @@
 ﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 /// <summary>
-/// Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there's voting.
+/// Handles logic of puzzle UI with a simple interface for other code. 
+/// * Handles closing UI when there's voting.
+/// * Handles opening puzzle.
+/// * Handles closing puzzle when user presses `ESC`
 /// </summary>
-public class ShowPuzzle : NetworkBehaviour
+public class PuzzleUI : NetworkBehaviour
 {
     [SerializeField]
     GameObject boilerInt;
@@ -32,8 +36,24 @@ public class ShowPuzzle : NetworkBehaviour
     [SerializeField]
     GameObject ifelseCake;
 
+    /// <summary>
+    /// Called when a puzzle UI is to be shown on a specific client.
+    /// </summary>
+    /// <remarks>
+    /// Only applicable on clients
+    /// </remarks>
+    public static event Action OnOpenPuzzleInClient;
 
-    public static ShowPuzzle instance = null;
+    /// <summary>
+    /// Called when close puzzle is called, there might be a screen visible but it's not guaranteed.
+    /// </summary>
+    /// <remarks>
+    /// Only applicable on clients
+    /// </remarks>
+    public static event Action OnClosePuzzleInClient;
+
+
+    public static PuzzleUI instance = null;
 
     public override void OnStartServer()
     {
@@ -55,6 +75,15 @@ public class ShowPuzzle : NetworkBehaviour
         {
             instance = this;
         }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ClosePuzzles();
+        }
+
     }
 
     /// <summary>
@@ -84,6 +113,8 @@ public class ShowPuzzle : NetworkBehaviour
         ifPickFlower.SetActive(false);
         substring.SetActive(false);
         ifelseCake.SetActive(false);
+
+        OnClosePuzzleInClient?.Invoke();
     }
 
     public override void OnStopServer()
@@ -156,5 +187,6 @@ public class ShowPuzzle : NetworkBehaviour
                 break;
         }
 
+        OnOpenPuzzleInClient?.Invoke();
     }
 }

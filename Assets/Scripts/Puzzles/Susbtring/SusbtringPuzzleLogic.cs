@@ -134,7 +134,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
     [TargetRpc]
     void TargetClosePuzzle(NetworkConnection target)
     {
-        ShowPuzzle.instance.ClosePuzzles();
+        PuzzleUI.instance.ClosePuzzles();
     }
 
     public override void OnStartServer()
