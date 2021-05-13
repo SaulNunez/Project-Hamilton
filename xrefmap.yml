@@ -1809,6 +1809,32 @@ references:
   commentId: T:Global.PlayerControls
   fullName: PlayerControls
   nameWithType: PlayerControls
+- uid: Global.PlayerControls.OnStartAuthority
+  name: OnStartAuthority()
+  href: api/Global.PlayerControls.html#Global_PlayerControls_OnStartAuthority
+  commentId: M:Global.PlayerControls.OnStartAuthority
+  fullName: PlayerControls.OnStartAuthority()
+  nameWithType: PlayerControls.OnStartAuthority()
+- uid: Global.PlayerControls.OnStartAuthority*
+  name: OnStartAuthority
+  href: api/Global.PlayerControls.html#Global_PlayerControls_OnStartAuthority_
+  commentId: Overload:Global.PlayerControls.OnStartAuthority
+  isSpec: "True"
+  fullName: PlayerControls.OnStartAuthority
+  nameWithType: PlayerControls.OnStartAuthority
+- uid: Global.PlayerControls.OnStopAuthority
+  name: OnStopAuthority()
+  href: api/Global.PlayerControls.html#Global_PlayerControls_OnStopAuthority
+  commentId: M:Global.PlayerControls.OnStopAuthority
+  fullName: PlayerControls.OnStopAuthority()
+  nameWithType: PlayerControls.OnStopAuthority()
+- uid: Global.PlayerControls.OnStopAuthority*
+  name: OnStopAuthority
+  href: api/Global.PlayerControls.html#Global_PlayerControls_OnStopAuthority_
+  commentId: Overload:Global.PlayerControls.OnStopAuthority
+  isSpec: "True"
+  fullName: PlayerControls.OnStopAuthority
+  nameWithType: PlayerControls.OnStopAuthority
 - uid: Global.PlayerControls.rigidbody2D
   name: rigidbody2D
   href: api/Global.PlayerControls.html#Global_PlayerControls_rigidbody2D
@@ -2658,6 +2684,95 @@ references:
   commentId: F:Global.PuzzlesToDo.puzzles
   fullName: PuzzlesToDo.puzzles
   nameWithType: PuzzlesToDo.puzzles
+- uid: Global.PuzzleUI
+  name: PuzzleUI
+  href: api/Global.PuzzleUI.html
+  commentId: T:Global.PuzzleUI
+  fullName: PuzzleUI
+  nameWithType: PuzzleUI
+- uid: Global.PuzzleUI.ClosePuzzles
+  name: ClosePuzzles()
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_ClosePuzzles
+  commentId: M:Global.PuzzleUI.ClosePuzzles
+  fullName: PuzzleUI.ClosePuzzles()
+  nameWithType: PuzzleUI.ClosePuzzles()
+- uid: Global.PuzzleUI.ClosePuzzles*
+  name: ClosePuzzles
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_ClosePuzzles_
+  commentId: Overload:Global.PuzzleUI.ClosePuzzles
+  isSpec: "True"
+  fullName: PuzzleUI.ClosePuzzles
+  nameWithType: PuzzleUI.ClosePuzzles
+- uid: Global.PuzzleUI.instance
+  name: instance
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_instance
+  commentId: F:Global.PuzzleUI.instance
+  fullName: PuzzleUI.instance
+  nameWithType: PuzzleUI.instance
+- uid: Global.PuzzleUI.OnClosePuzzleInClient
+  name: OnClosePuzzleInClient
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnClosePuzzleInClient
+  commentId: E:Global.PuzzleUI.OnClosePuzzleInClient
+  fullName: PuzzleUI.OnClosePuzzleInClient
+  nameWithType: PuzzleUI.OnClosePuzzleInClient
+- uid: Global.PuzzleUI.OnOpenPuzzleInClient
+  name: OnOpenPuzzleInClient
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnOpenPuzzleInClient
+  commentId: E:Global.PuzzleUI.OnOpenPuzzleInClient
+  fullName: PuzzleUI.OnOpenPuzzleInClient
+  nameWithType: PuzzleUI.OnOpenPuzzleInClient
+- uid: Global.PuzzleUI.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStartClient
+  commentId: M:Global.PuzzleUI.OnStartClient
+  fullName: PuzzleUI.OnStartClient()
+  nameWithType: PuzzleUI.OnStartClient()
+- uid: Global.PuzzleUI.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStartClient_
+  commentId: Overload:Global.PuzzleUI.OnStartClient
+  isSpec: "True"
+  fullName: PuzzleUI.OnStartClient
+  nameWithType: PuzzleUI.OnStartClient
+- uid: Global.PuzzleUI.OnStartServer
+  name: OnStartServer()
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStartServer
+  commentId: M:Global.PuzzleUI.OnStartServer
+  fullName: PuzzleUI.OnStartServer()
+  nameWithType: PuzzleUI.OnStartServer()
+- uid: Global.PuzzleUI.OnStartServer*
+  name: OnStartServer
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStartServer_
+  commentId: Overload:Global.PuzzleUI.OnStartServer
+  isSpec: "True"
+  fullName: PuzzleUI.OnStartServer
+  nameWithType: PuzzleUI.OnStartServer
+- uid: Global.PuzzleUI.OnStopServer
+  name: OnStopServer()
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStopServer
+  commentId: M:Global.PuzzleUI.OnStopServer
+  fullName: PuzzleUI.OnStopServer()
+  nameWithType: PuzzleUI.OnStopServer()
+- uid: Global.PuzzleUI.OnStopServer*
+  name: OnStopServer
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OnStopServer_
+  commentId: Overload:Global.PuzzleUI.OnStopServer
+  isSpec: "True"
+  fullName: PuzzleUI.OnStopServer
+  nameWithType: PuzzleUI.OnStopServer
+- uid: Global.PuzzleUI.OpenPuzzles(PuzzleId,GameObject)
+  name: OpenPuzzles(PuzzleId, GameObject)
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OpenPuzzles_PuzzleId_GameObject_
+  commentId: M:Global.PuzzleUI.OpenPuzzles(PuzzleId,GameObject)
+  fullName: PuzzleUI.OpenPuzzles(PuzzleId, GameObject)
+  nameWithType: PuzzleUI.OpenPuzzles(PuzzleId, GameObject)
+- uid: Global.PuzzleUI.OpenPuzzles*
+  name: OpenPuzzles
+  href: api/Global.PuzzleUI.html#Global_PuzzleUI_OpenPuzzles_
+  commentId: Overload:Global.PuzzleUI.OpenPuzzles
+  isSpec: "True"
+  fullName: PuzzleUI.OpenPuzzles
+  nameWithType: PuzzleUI.OpenPuzzles
 - uid: Global.ReportDeath
   name: ReportDeath
   href: api/Global.ReportDeath.html
@@ -3232,83 +3347,6 @@ references:
   commentId: T:Global.SetupOnClient
   fullName: SetupOnClient
   nameWithType: SetupOnClient
-- uid: Global.ShowPuzzle
-  name: ShowPuzzle
-  href: api/Global.ShowPuzzle.html
-  commentId: T:Global.ShowPuzzle
-  fullName: ShowPuzzle
-  nameWithType: ShowPuzzle
-- uid: Global.ShowPuzzle.ClosePuzzles
-  name: ClosePuzzles()
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_ClosePuzzles
-  commentId: M:Global.ShowPuzzle.ClosePuzzles
-  fullName: ShowPuzzle.ClosePuzzles()
-  nameWithType: ShowPuzzle.ClosePuzzles()
-- uid: Global.ShowPuzzle.ClosePuzzles*
-  name: ClosePuzzles
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_ClosePuzzles_
-  commentId: Overload:Global.ShowPuzzle.ClosePuzzles
-  isSpec: "True"
-  fullName: ShowPuzzle.ClosePuzzles
-  nameWithType: ShowPuzzle.ClosePuzzles
-- uid: Global.ShowPuzzle.instance
-  name: instance
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_instance
-  commentId: F:Global.ShowPuzzle.instance
-  fullName: ShowPuzzle.instance
-  nameWithType: ShowPuzzle.instance
-- uid: Global.ShowPuzzle.OnStartClient
-  name: OnStartClient()
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartClient
-  commentId: M:Global.ShowPuzzle.OnStartClient
-  fullName: ShowPuzzle.OnStartClient()
-  nameWithType: ShowPuzzle.OnStartClient()
-- uid: Global.ShowPuzzle.OnStartClient*
-  name: OnStartClient
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartClient_
-  commentId: Overload:Global.ShowPuzzle.OnStartClient
-  isSpec: "True"
-  fullName: ShowPuzzle.OnStartClient
-  nameWithType: ShowPuzzle.OnStartClient
-- uid: Global.ShowPuzzle.OnStartServer
-  name: OnStartServer()
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartServer
-  commentId: M:Global.ShowPuzzle.OnStartServer
-  fullName: ShowPuzzle.OnStartServer()
-  nameWithType: ShowPuzzle.OnStartServer()
-- uid: Global.ShowPuzzle.OnStartServer*
-  name: OnStartServer
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStartServer_
-  commentId: Overload:Global.ShowPuzzle.OnStartServer
-  isSpec: "True"
-  fullName: ShowPuzzle.OnStartServer
-  nameWithType: ShowPuzzle.OnStartServer
-- uid: Global.ShowPuzzle.OnStopServer
-  name: OnStopServer()
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStopServer
-  commentId: M:Global.ShowPuzzle.OnStopServer
-  fullName: ShowPuzzle.OnStopServer()
-  nameWithType: ShowPuzzle.OnStopServer()
-- uid: Global.ShowPuzzle.OnStopServer*
-  name: OnStopServer
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OnStopServer_
-  commentId: Overload:Global.ShowPuzzle.OnStopServer
-  isSpec: "True"
-  fullName: ShowPuzzle.OnStopServer
-  nameWithType: ShowPuzzle.OnStopServer
-- uid: Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)
-  name: OpenPuzzles(PuzzleId, GameObject)
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OpenPuzzles_PuzzleId_GameObject_
-  commentId: M:Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)
-  fullName: ShowPuzzle.OpenPuzzles(PuzzleId, GameObject)
-  nameWithType: ShowPuzzle.OpenPuzzles(PuzzleId, GameObject)
-- uid: Global.ShowPuzzle.OpenPuzzles*
-  name: OpenPuzzles
-  href: api/Global.ShowPuzzle.html#Global_ShowPuzzle_OpenPuzzles_
-  commentId: Overload:Global.ShowPuzzle.OpenPuzzles
-  isSpec: "True"
-  fullName: ShowPuzzle.OpenPuzzles
-  nameWithType: ShowPuzzle.OpenPuzzles
 - uid: Global.ShowPuzzleRequest
   name: ShowPuzzleRequest
   href: api/Global.ShowPuzzleRequest.html

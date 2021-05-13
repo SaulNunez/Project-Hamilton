@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ShowPuzzle
+    <title>Class PuzzleUI
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ShowPuzzle
+    <meta name="title" content="Class PuzzleUI
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.57.2.0">
     
@@ -78,36 +78,41 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.ShowPuzzle">
+            <article class="content wrap" id="_content" data-uid="Global.PuzzleUI">
   
   
-  <h1 id="Global_ShowPuzzle" data-uid="Global.ShowPuzzle" class="text-break">Class ShowPuzzle
+  <h1 id="Global_PuzzleUI" data-uid="Global.PuzzleUI" class="text-break">Class PuzzleUI
   </h1>
-  <div class="markdown level0 summary"><p>Handles opening the puzzle UI with a simple interface for other code. Also handles closing UI when there&apos;s voting.</p>
+  <div class="markdown level0 summary"><p>Handles logic of puzzle UI with a simple interface for other code. </p>
+<ul>
+<li>Handles closing UI when there&apos;s voting.</li>
+<li>Handles opening puzzle.</li>
+<li>Handles closing puzzle when user presses <code>ESC</code></li>
+</ul>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><span class="xref">ShowPuzzle</span></div>
+    <div class="level2"><span class="xref">PuzzleUI</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_ShowPuzzle_syntax">Syntax</h5>
+  <h5 id="Global_PuzzleUI_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ShowPuzzle : NetworkBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class PuzzleUI : NetworkBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Global_ShowPuzzle_instance" data-uid="Global.ShowPuzzle.instance">instance</h4>
+  <h4 id="Global_PuzzleUI_instance" data-uid="Global.PuzzleUI.instance">instance</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ShowPuzzle instance</code></pre>
+    <pre><code class="lang-csharp hljs">public static PuzzleUI instance</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,7 +124,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Global.ShowPuzzle.html">ShowPuzzle</a></td>
+        <td><a class="xref" href="Global.PuzzleUI.html">PuzzleUI</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -128,8 +133,8 @@
   </h3>
   
   
-  <a id="Global_ShowPuzzle_ClosePuzzles_" data-uid="Global.ShowPuzzle.ClosePuzzles*"></a>
-  <h4 id="Global_ShowPuzzle_ClosePuzzles" data-uid="Global.ShowPuzzle.ClosePuzzles">ClosePuzzles()</h4>
+  <a id="Global_PuzzleUI_ClosePuzzles_" data-uid="Global.PuzzleUI.ClosePuzzles*"></a>
+  <h4 id="Global_PuzzleUI_ClosePuzzles" data-uid="Global.PuzzleUI.ClosePuzzles">ClosePuzzles()</h4>
   <div class="markdown level1 summary"><p>Usable in the client, closes any puzzle on screen</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -139,8 +144,8 @@
   </div>
   
   
-  <a id="Global_ShowPuzzle_OnStartClient_" data-uid="Global.ShowPuzzle.OnStartClient*"></a>
-  <h4 id="Global_ShowPuzzle_OnStartClient" data-uid="Global.ShowPuzzle.OnStartClient">OnStartClient()</h4>
+  <a id="Global_PuzzleUI_OnStartClient_" data-uid="Global.PuzzleUI.OnStartClient*"></a>
+  <h4 id="Global_PuzzleUI_OnStartClient" data-uid="Global.PuzzleUI.OnStartClient">OnStartClient()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,8 +156,8 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
   
   
-  <a id="Global_ShowPuzzle_OnStartServer_" data-uid="Global.ShowPuzzle.OnStartServer*"></a>
-  <h4 id="Global_ShowPuzzle_OnStartServer" data-uid="Global.ShowPuzzle.OnStartServer">OnStartServer()</h4>
+  <a id="Global_PuzzleUI_OnStartServer_" data-uid="Global.PuzzleUI.OnStartServer*"></a>
+  <h4 id="Global_PuzzleUI_OnStartServer" data-uid="Global.PuzzleUI.OnStartServer">OnStartServer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,8 +168,8 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartServer()</span></div>
   
   
-  <a id="Global_ShowPuzzle_OnStopServer_" data-uid="Global.ShowPuzzle.OnStopServer*"></a>
-  <h4 id="Global_ShowPuzzle_OnStopServer" data-uid="Global.ShowPuzzle.OnStopServer">OnStopServer()</h4>
+  <a id="Global_PuzzleUI_OnStopServer_" data-uid="Global.PuzzleUI.OnStopServer*"></a>
+  <h4 id="Global_PuzzleUI_OnStopServer" data-uid="Global.PuzzleUI.OnStopServer">OnStopServer()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -175,8 +180,8 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStopServer()</span></div>
   
   
-  <a id="Global_ShowPuzzle_OpenPuzzles_" data-uid="Global.ShowPuzzle.OpenPuzzles*"></a>
-  <h4 id="Global_ShowPuzzle_OpenPuzzles_PuzzleId_GameObject_" data-uid="Global.ShowPuzzle.OpenPuzzles(PuzzleId,GameObject)">OpenPuzzles(PuzzleId, GameObject)</h4>
+  <a id="Global_PuzzleUI_OpenPuzzles_" data-uid="Global.PuzzleUI.OpenPuzzles*"></a>
+  <h4 id="Global_PuzzleUI_OpenPuzzles_PuzzleId_GameObject_" data-uid="Global.PuzzleUI.OpenPuzzles(PuzzleId,GameObject)">OpenPuzzles(PuzzleId, GameObject)</h4>
   <div class="markdown level1 summary"><p>Opens puzzle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -208,6 +213,64 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Global_PuzzleUI_OnClosePuzzleInClient" data-uid="Global.PuzzleUI.OnClosePuzzleInClient">OnClosePuzzleInClient</h4>
+  <div class="markdown level1 summary"><p>Called when close puzzle is called, there might be a screen visible but it&apos;s not guaranteed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action OnClosePuzzleInClient</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Global_PuzzleUI_OnClosePuzzleInClient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only applicable on clients</p>
+</div>
+  
+  
+  <h4 id="Global_PuzzleUI_OnOpenPuzzleInClient" data-uid="Global.PuzzleUI.OnOpenPuzzleInClient">OnOpenPuzzleInClient</h4>
+  <div class="markdown level1 summary"><p>Called when a puzzle UI is to be shown on a specific client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action OnOpenPuzzleInClient</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Global_PuzzleUI_OnOpenPuzzleInClient_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only applicable on clients</p>
+</div>
 </article>
           </div>
           

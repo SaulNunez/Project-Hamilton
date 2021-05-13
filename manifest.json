@@ -640,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayerControls.html",
-          "hash": "+FaOxxjczk1TLZ1U5R25igH990rrMBhsU5w5PbxpvI8="
+          "hash": "b0Ph3J23tZJxNeM/KGqyu5eyxD9+MOLfOYmpuekDkyw="
         }
       },
       "is_incremental": false,
@@ -876,6 +876,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleUI.html",
+          "hash": "b2C28AOdC9Upqqs5VaXW11sJ9vN6iZLlgPSeHLdL6NE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzlesListUi.yml",
       "output": {
         ".html": {
@@ -1097,18 +1109,6 @@
         ".html": {
           "relative_path": "api/Global.SetupOnClient.html",
           "hash": "SMSVEJk1zvejdP8rNTvikCNxtm1VKkyM9xiZNlfd8yw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.ShowPuzzle.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.ShowPuzzle.html",
-          "hash": "GMwXr7anNfic+rYULVD/k5itYewqOxLynV/FCqEAl9o="
         }
       },
       "is_incremental": false,
@@ -1432,7 +1432,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "OYV8hUNdolo3eqNR0EAOePXrxbf9dofFuvSuBKjqQeM="
+          "hash": "isEjsc+Zi37AIq933am3dkbIfs8X73fHDorgHehweZM="
         }
       },
       "is_incremental": false,
@@ -1444,7 +1444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "f+gLtQXgO0Zs3DxOwzKscS2qlWMpZU8tx3u7iRweYg8="
+          "hash": "V2U7TzR+p8n0HbODfbei9o7eOjofvp9TJQU91nbduvc="
         }
       },
       "is_incremental": false,
