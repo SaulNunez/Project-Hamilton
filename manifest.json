@@ -400,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkRoomManager.html",
-          "hash": "H7UqG7U+mPWUb29irHwVJVoDfxcNZ1KhVCNTMZeApz0="
+          "hash": "+5wWPfltQfhJzuyx2kFc/Fx6/PT+TsuzuWEsgfwowtQ="
         }
       },
       "is_incremental": false,
@@ -689,6 +689,18 @@
         ".html": {
           "relative_path": "api/Global.PlayerSelectionInLobby.html",
           "hash": "R/mKilvk9J4sZBdCPPrYMEQgKOf1XO5tN81nWPg3wIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PlayerSkin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PlayerSkin.html",
+          "hash": "jOGPhghjtqzoGEaGPLipQze2Uu5UtTqzaz6uKFZOu0U="
         }
       },
       "is_incremental": false,
@@ -1432,7 +1444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "isEjsc+Zi37AIq933am3dkbIfs8X73fHDorgHehweZM="
+          "hash": "u1SfLEz/w+CMcue0q2AtKb2K2FihjPjqahzorWLBx7Q="
         }
       },
       "is_incremental": false,
@@ -1444,7 +1456,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "V2U7TzR+p8n0HbODfbei9o7eOjofvp9TJQU91nbduvc="
+          "hash": "mYegXxoK+eomF2adQ+okgyBG4cD4bzeVclguVRFBj0A="
         }
       },
       "is_incremental": false,
@@ -1553,7 +1565,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 118,
+          "total_file_count": 119,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -1089,12 +1089,6 @@ references:
   commentId: T:Global.HamiltonNetworkRoomManager
   fullName: HamiltonNetworkRoomManager
   nameWithType: HamiltonNetworkRoomManager
-- uid: Global.HamiltonNetworkRoomManager.charactersMapping
-  name: charactersMapping
-  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_charactersMapping
-  commentId: F:Global.HamiltonNetworkRoomManager.charactersMapping
-  fullName: HamiltonNetworkRoomManager.charactersMapping
-  nameWithType: HamiltonNetworkRoomManager.charactersMapping
 - uid: Global.HamiltonNetworkRoomManager.OnRoomClientSceneChanged(Mirror.NetworkConnection)
   name: OnRoomClientSceneChanged(NetworkConnection)
   href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomClientSceneChanged_Mirror_NetworkConnection_
@@ -2098,6 +2092,24 @@ references:
   isSpec: "True"
   fullName: PlayersForVoting.SkipVoting
   nameWithType: PlayersForVoting.SkipVoting
+- uid: Global.PlayerSkin
+  name: PlayerSkin
+  href: api/Global.PlayerSkin.html
+  commentId: T:Global.PlayerSkin
+  fullName: PlayerSkin
+  nameWithType: PlayerSkin
+- uid: Global.PlayerSkin.characterSelected
+  name: characterSelected
+  href: api/Global.PlayerSkin.html#Global_PlayerSkin_characterSelected
+  commentId: F:Global.PlayerSkin.characterSelected
+  fullName: PlayerSkin.characterSelected
+  nameWithType: PlayerSkin.characterSelected
+- uid: Global.PlayerSkin.charactersMapping
+  name: charactersMapping
+  href: api/Global.PlayerSkin.html#Global_PlayerSkin_charactersMapping
+  commentId: F:Global.PlayerSkin.charactersMapping
+  fullName: PlayerSkin.charactersMapping
+  nameWithType: PlayerSkin.charactersMapping
 - uid: Global.PlayerVotingButton
   name: PlayerVotingButton
   href: api/Global.PlayerVotingButton.html
