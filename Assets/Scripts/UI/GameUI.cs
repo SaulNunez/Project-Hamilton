@@ -12,18 +12,28 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     Button killButton;
 
+    [SerializeField]
+    Button sabotageButton;
+
     public bool InteractionEnabled {
         get => interactionButton.interactable;
 
         set => interactionButton.interactable = value;
     }
 
-    public bool EnableKillButton{
-        get => killButton.gameObject.activeSelf;
+    private bool enableAssasinExtras = false;
+    public bool EnableAssasinExtras
+    {
+        get => enableAssasinExtras;
 
-        set => killButton.gameObject.SetActive(value);
+        set
+        {
+            enableAssasinExtras = value;
+            killButton.gameObject.SetActive(value);
+            sabotageButton.gameObject.SetActive(value);
+        }
     }
-     
+
     public bool CanInteractWithKillButton {
         get => killButton.interactable;
 
