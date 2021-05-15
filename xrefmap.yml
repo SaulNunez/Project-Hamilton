@@ -1583,19 +1583,6 @@ references:
   commentId: F:Global.Messages.instance
   fullName: Messages.instance
   nameWithType: Messages.instance
-- uid: Global.Messages.OnStartServer
-  name: OnStartServer()
-  href: api/Global.Messages.html#Global_Messages_OnStartServer
-  commentId: M:Global.Messages.OnStartServer
-  fullName: Messages.OnStartServer()
-  nameWithType: Messages.OnStartServer()
-- uid: Global.Messages.OnStartServer*
-  name: OnStartServer
-  href: api/Global.Messages.html#Global_Messages_OnStartServer_
-  commentId: Overload:Global.Messages.OnStartServer
-  isSpec: "True"
-  fullName: Messages.OnStartServer
-  nameWithType: Messages.OnStartServer
 - uid: Global.Messages.ShowMessage(System.String)
   name: ShowMessage(String)
   href: api/Global.Messages.html#Global_Messages_ShowMessage_System_String_
