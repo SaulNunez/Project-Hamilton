@@ -9,6 +9,25 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.ActivateGameplayUI
+  name: ActivateGameplayUI
+  href: api/Global.ActivateGameplayUI.html
+  commentId: T:Global.ActivateGameplayUI
+  fullName: ActivateGameplayUI
+  nameWithType: ActivateGameplayUI
+- uid: Global.ActivateGameplayUI.OnStartAuthority
+  name: OnStartAuthority()
+  href: api/Global.ActivateGameplayUI.html#Global_ActivateGameplayUI_OnStartAuthority
+  commentId: M:Global.ActivateGameplayUI.OnStartAuthority
+  fullName: ActivateGameplayUI.OnStartAuthority()
+  nameWithType: ActivateGameplayUI.OnStartAuthority()
+- uid: Global.ActivateGameplayUI.OnStartAuthority*
+  name: OnStartAuthority
+  href: api/Global.ActivateGameplayUI.html#Global_ActivateGameplayUI_OnStartAuthority_
+  commentId: Overload:Global.ActivateGameplayUI.OnStartAuthority
+  isSpec: "True"
+  fullName: ActivateGameplayUI.OnStartAuthority
+  nameWithType: ActivateGameplayUI.OnStartAuthority
 - uid: Global.AvailableCharacters
   name: AvailableCharacters
   href: api/Global.AvailableCharacters.html
@@ -1008,19 +1027,19 @@ references:
   isSpec: "True"
   fullName: GameUI.CanInteractWithKillButton
   nameWithType: GameUI.CanInteractWithKillButton
-- uid: Global.GameUI.EnableKillButton
-  name: EnableKillButton
-  href: api/Global.GameUI.html#Global_GameUI_EnableKillButton
-  commentId: P:Global.GameUI.EnableKillButton
-  fullName: GameUI.EnableKillButton
-  nameWithType: GameUI.EnableKillButton
-- uid: Global.GameUI.EnableKillButton*
-  name: EnableKillButton
-  href: api/Global.GameUI.html#Global_GameUI_EnableKillButton_
-  commentId: Overload:Global.GameUI.EnableKillButton
+- uid: Global.GameUI.EnableAssasinExtras
+  name: EnableAssasinExtras
+  href: api/Global.GameUI.html#Global_GameUI_EnableAssasinExtras
+  commentId: P:Global.GameUI.EnableAssasinExtras
+  fullName: GameUI.EnableAssasinExtras
+  nameWithType: GameUI.EnableAssasinExtras
+- uid: Global.GameUI.EnableAssasinExtras*
+  name: EnableAssasinExtras
+  href: api/Global.GameUI.html#Global_GameUI_EnableAssasinExtras_
+  commentId: Overload:Global.GameUI.EnableAssasinExtras
   isSpec: "True"
-  fullName: GameUI.EnableKillButton
-  nameWithType: GameUI.EnableKillButton
+  fullName: GameUI.EnableAssasinExtras
+  nameWithType: GameUI.EnableAssasinExtras
 - uid: Global.GameUI.Instance
   name: Instance
   href: api/Global.GameUI.html#Global_GameUI_Instance
@@ -1577,6 +1596,19 @@ references:
   isSpec: "True"
   fullName: Messages.OnStartServer
   nameWithType: Messages.OnStartServer
+- uid: Global.Messages.ShowMessage(System.String)
+  name: ShowMessage(String)
+  href: api/Global.Messages.html#Global_Messages_ShowMessage_System_String_
+  commentId: M:Global.Messages.ShowMessage(System.String)
+  fullName: Messages.ShowMessage(System.String)
+  nameWithType: Messages.ShowMessage(String)
+- uid: Global.Messages.ShowMessage*
+  name: ShowMessage
+  href: api/Global.Messages.html#Global_Messages_ShowMessage_
+  commentId: Overload:Global.Messages.ShowMessage
+  isSpec: "True"
+  fullName: Messages.ShowMessage
+  nameWithType: Messages.ShowMessage
 - uid: Global.Messages.ShowMessageIndividual(Mirror.NetworkConnection,System.String)
   name: ShowMessageIndividual(NetworkConnection, String)
   href: api/Global.Messages.html#Global_Messages_ShowMessageIndividual_Mirror_NetworkConnection_System_String_
@@ -3359,6 +3391,25 @@ references:
   commentId: T:Global.SetupOnClient
   fullName: SetupOnClient
   nameWithType: SetupOnClient
+- uid: Global.ShowPlayerRoleOnStart
+  name: ShowPlayerRoleOnStart
+  href: api/Global.ShowPlayerRoleOnStart.html
+  commentId: T:Global.ShowPlayerRoleOnStart
+  fullName: ShowPlayerRoleOnStart
+  nameWithType: ShowPlayerRoleOnStart
+- uid: Global.ShowPlayerRoleOnStart.OnStartAuthority
+  name: OnStartAuthority()
+  href: api/Global.ShowPlayerRoleOnStart.html#Global_ShowPlayerRoleOnStart_OnStartAuthority
+  commentId: M:Global.ShowPlayerRoleOnStart.OnStartAuthority
+  fullName: ShowPlayerRoleOnStart.OnStartAuthority()
+  nameWithType: ShowPlayerRoleOnStart.OnStartAuthority()
+- uid: Global.ShowPlayerRoleOnStart.OnStartAuthority*
+  name: OnStartAuthority
+  href: api/Global.ShowPlayerRoleOnStart.html#Global_ShowPlayerRoleOnStart_OnStartAuthority_
+  commentId: Overload:Global.ShowPlayerRoleOnStart.OnStartAuthority
+  isSpec: "True"
+  fullName: ShowPlayerRoleOnStart.OnStartAuthority
+  nameWithType: ShowPlayerRoleOnStart.OnStartAuthority
 - uid: Global.ShowPuzzleRequest
   name: ShowPuzzleRequest
   href: api/Global.ShowPuzzleRequest.html

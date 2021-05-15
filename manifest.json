@@ -24,6 +24,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.ActivateGameplayUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.ActivateGameplayUI.html",
+          "hash": "jYZfzd0uVY+lOvPtXk4Q1M1KLbWfhgYi2BmZPpw3i20="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.AvailableCharacters.CharacterInfo.yml",
       "output": {
         ".html": {
@@ -376,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.GameUI.html",
-          "hash": "0ouMeNphbmw4y9Iv8F0DKCGXYvKiLe2WfkuwtL8BJ7U="
+          "hash": "9BoxCc2YWe9DPNeB0JLtXjawbOxZ0k7DlRIDzLsBulw="
         }
       },
       "is_incremental": false,
@@ -580,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Messages.html",
-          "hash": "tnAzTqeShSny7/JDRHTAOThyc0aRVLg+dTLR4u9vYjs="
+          "hash": "9+GrIzrFey8s3QG/wKY1ey3gFNE5+isMi+OPYsqTP6k="
         }
       },
       "is_incremental": false,
@@ -1128,6 +1140,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.ShowPlayerRoleOnStart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.ShowPlayerRoleOnStart.html",
+          "hash": "doitY9G1WMhGbAomozvWHWn2/em35IEsprYlZv/xqKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.ShowPuzzleRequest.yml",
       "output": {
         ".html": {
@@ -1444,7 +1468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "u1SfLEz/w+CMcue0q2AtKb2K2FihjPjqahzorWLBx7Q="
+          "hash": "Unrl8VWfDRwTTaBF9eknEXTCPYqg8CBhpv72+prqDFQ="
         }
       },
       "is_incremental": false,
@@ -1456,7 +1480,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mYegXxoK+eomF2adQ+okgyBG4cD4bzeVclguVRFBj0A="
+          "hash": "vO3jQIMVlFjTpX+3zwqtmwWp0kHxb1sd6CyUjO3NZew="
         }
       },
       "is_incremental": false,
@@ -1565,7 +1589,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 119,
+          "total_file_count": 121,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

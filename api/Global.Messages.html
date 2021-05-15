@@ -83,7 +83,8 @@
   
   <h1 id="Global_Messages" data-uid="Global.Messages" class="text-break">Class Messages
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Shows a quick message to the player</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,7 +103,8 @@
   
   
   <h4 id="Global_Messages_instance" data-uid="Global.Messages.instance">instance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Instance of messages, used around all game</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -163,9 +165,39 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartServer()</span></div>
   
   
+  <a id="Global_Messages_ShowMessage_" data-uid="Global.Messages.ShowMessage*"></a>
+  <h4 id="Global_Messages_ShowMessage_System_String_" data-uid="Global.Messages.ShowMessage(System.String)">ShowMessage(String)</h4>
+  <div class="markdown level1 summary"><p>Show a message locally in this client. Can be used to show something computed on client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShowMessage(string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to show</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Global_Messages_ShowMessageIndividual_" data-uid="Global.Messages.ShowMessageIndividual*"></a>
   <h4 id="Global_Messages_ShowMessageIndividual_Mirror_NetworkConnection_System_String_" data-uid="Global.Messages.ShowMessageIndividual(Mirror.NetworkConnection,System.String)">ShowMessageIndividual(NetworkConnection, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Show a message to a specific player, invoked from the server</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,20 +216,26 @@
       <tr>
         <td><span class="xref">Mirror.NetworkConnection</span></td>
         <td><span class="parametername">networkConnection</span></td>
-        <td></td>
+        <td><p>NetworkConnection to player</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>The message to show</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Global_Messages_ShowMessageIndividual_Mirror_NetworkConnection_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Only usable form the server</p>
+</div>
   
   
   <a id="Global_Messages_ShowMessageToAll_" data-uid="Global.Messages.ShowMessageToAll*"></a>
   <h4 id="Global_Messages_ShowMessageToAll_System_String_" data-uid="Global.Messages.ShowMessageToAll(System.String)">ShowMessageToAll(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Show a message globally to the whole game</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -216,7 +254,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>The message to show</p>
+</td>
       </tr>
     </tbody>
   </table>
