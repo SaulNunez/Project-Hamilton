@@ -15,7 +15,7 @@ public class Die : NetworkBehaviour
     GameObject deathPrefab;
     Animator anim;
 
-    public override void OnStartServer()
+    public override void OnStartAuthority()
     {
         anim = GetComponent<Animator>();
     }
@@ -39,7 +39,10 @@ public class Die : NetworkBehaviour
     [Server]
     public void SetSimpleDeath()
     {
-        anim.SetBool("Dead", true);
+        if (hasAuthority)
+        {
+            anim.SetBool("Dead", true);
+        }
         var ghostLayer = LayerMask.NameToLayer("Ghost");
         gameObject.layer = ghostLayer;
         TargetOnDeathConfig(netIdentity.connectionToClient);
@@ -51,5 +54,10 @@ public class Die : NetworkBehaviour
         //Mostrar capa de fantasmas
         Camera.main.cullingMask = Camera.main.cullingMask | LayerMask.NameToLayer(Layers.Ghost);
         PuzzleUI.instance.ClosePuzzles();
+
+        if (hasAuthority)
+        {
+            anim.SetBool("Dead", true);
+        }
     }
 }
