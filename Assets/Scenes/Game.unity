@@ -69748,7 +69748,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 542604655}
-        m_MethodName: OnStartAuthority
+        m_MethodName: OnChispitasClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
