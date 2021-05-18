@@ -5,7 +5,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-public class OpenPuzzle : InteractuableBehavior
+public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
 {
     [SyncVar(hook = nameof(UpdateVisuals))]
     public bool puzzleIsAvailable = true;
@@ -45,7 +45,7 @@ public class OpenPuzzle : InteractuableBehavior
     }
 
     [Server]
-    public override void OnApproach(GameObject approachedBy)
+    public void OnApproach(GameObject approachedBy)
     {
         if (puzzleIsAvailable)
         {

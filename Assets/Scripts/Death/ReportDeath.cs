@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReportDeath : InteractuableBehavior
+public class ReportDeath : NetworkBehaviour, IInteractuableBehaviour
 {
-    public override void OnApproach(GameObject approachedBy)
+    public void OnApproach(GameObject approachedBy)
     {
-        base.OnApproach(approachedBy);
+        var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
+        var votingManager = votingManagerGameObject.GetComponent<VotingManager>();
+
+        votingManager.StartVoting();
+
+        print("Button pressed");
     }
 }

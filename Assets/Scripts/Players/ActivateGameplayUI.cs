@@ -15,6 +15,6 @@ public class ActivateGameplayUI : NetworkBehaviour
 
         var killing = GetComponent<Killing>();
         //Enable assasin buttons when player is one
-        GameUI.Instance.EnableAssasinExtras = killing.canKill;
+        GameUI.Instance.EnableAssasinExtras = killing.IsAssasin;
     }
 }

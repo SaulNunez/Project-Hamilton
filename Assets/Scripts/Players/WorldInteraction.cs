@@ -78,7 +78,7 @@ public class WorldInteraction : NetworkBehaviour
     {
         Collider2D somethingNear = Physics2D.OverlapCircle(transform.position, hubConfig.actDistance, taskMask);
         if(somethingNear){
-            var interactuables = somethingNear.GetComponents<InteractuableBehavior>();
+            var interactuables = somethingNear.GetComponents<IInteractuableBehaviour>();
             foreach(var interactuable in interactuables){
                 interactuable.OnApproach(gameObject);
             }

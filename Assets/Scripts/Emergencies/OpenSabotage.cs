@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenSabotage : InteractuableBehavior
+public class OpenSabotage : NetworkBehaviour, IInteractuableBehaviour
 {
     [SyncVar(hook = nameof(UpdateVisuals))]
     bool sabotageIsAvailable = false;
@@ -36,10 +36,8 @@ public class OpenSabotage : InteractuableBehavior
         sabotageIsAvailable = true;
     }
 
-    public override void OnApproach(GameObject approachedBy)
+    public void OnApproach(GameObject approachedBy)
     {
-        base.OnApproach(approachedBy);
-
         if (sabotageIsAvailable)
         {
             var networkIdentity = approachedBy.GetComponent<NetworkIdentity>();

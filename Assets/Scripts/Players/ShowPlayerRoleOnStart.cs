@@ -14,7 +14,7 @@ public class ShowPlayerRoleOnStart : NetworkBehaviour
         base.OnStartAuthority();
 
         var killing = GetComponent<Killing>();
-        if (killing.canKill)
+        if (killing.canKillSomeone)
         {
             Messages.instance.ShowMessage("Eres un asesino, mata a los programadores para ganar");
         } else

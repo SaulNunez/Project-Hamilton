@@ -24,7 +24,7 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         var networkPlayer = roomPlayer.GetComponent<HamiltonNetworkPlayer>();
 
         var killingComponent = gamePlayer.GetComponent<Killing>();
-        killingComponent.canKill = networkPlayer.isImpostor;
+        killingComponent.IsAssasin = networkPlayer.isImpostor;
 
         var playerSelectionComponent = roomPlayer.GetComponent<PlayerSelectionInLobby>();
         var characterSelected = playerSelectionComponent.currentCharacterType;
@@ -40,7 +40,7 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
     /// </summary>
     public override void OnRoomServerPlayersReady()
     {
-        var networkPlayers = pendingPlayers.Select(p => p.roomPlayer.GetComponent<HamiltonNetworkPlayer>());
+        var networkPlayers = roomSlots.Select(p => p as HamiltonNetworkPlayer);
 
         // Reset flags for every player, I'm not sure if the network player is reused if on several games together
         foreach(var networkPlayer in networkPlayers)
@@ -52,7 +52,7 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         var hubConfig = hubConfigGO.GetComponent<HubConfig>();
 
         var selectedImpostors = networkPlayers.PickRandom(hubConfig.numberOfImpostors);
-
+ 
         foreach(var networkPlayer in selectedImpostors)
         {
             networkPlayer.isImpostor = true;

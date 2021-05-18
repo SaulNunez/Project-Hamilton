@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles teletransport behaviour once a player enters the vent.
+/// </summary>
 public class TeletransportManager : NetworkBehaviour
 {
-    SyncDictionary<NetworkIdentity, GameObject> onTeletrasportMode = new SyncDictionary<NetworkIdentity, GameObject>();
+    readonly SyncDictionary<NetworkIdentity, GameObject> onTeletrasportMode = new SyncDictionary<NetworkIdentity, GameObject>();
 
     public static TeletransportManager instance = null;
 
@@ -27,10 +30,11 @@ public class TeletransportManager : NetworkBehaviour
         TargetAskPermisionForTeletrasport(player.connectionToClient);
 
         //Move camera target
-        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
+        //var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
 
-        var cameraControl = camera.GetComponent<CameraControl>();
-        cameraControl.MoveCameraToTarget(currentVent.transform.position);
+        //var cameraControl = camera.GetComponent<CameraControl>();
+        //cameraControl.MoveCameraToTarget(currentVent.transform.position);
+        TargetMovePlayerCameraToVent(player.connectionToClient);
 
         //Move outside of world to not appear on screen - 200 IQ Move
         var netTransform = player.GetComponent<NetworkTransform>();
@@ -57,11 +61,11 @@ public class TeletransportManager : NetworkBehaviour
 
         onTeletrasportMode[sender.identity] = ventTechnology.teletransportTo.gameObject;
 
-        MovePlayerCameraToVent(sender);
+        TargetMovePlayerCameraToVent(sender);
     }
 
     [TargetRpc]
-    void MovePlayerCameraToVent(NetworkConnection target)
+    void TargetMovePlayerCameraToVent(NetworkConnection target)
     {
         //Move camera target
         var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
@@ -93,12 +97,6 @@ public class TeletransportManager : NetworkBehaviour
         RemoveToTeletransportList(sender.identity);
 
         TargetDisablePermisionForTeletransport(sender);
-
-        //Come out vent
-        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
-
-        var cameraControl = camera.GetComponent<CameraControl>();
-        cameraControl.FollowPlayer();
     }
 
     [TargetRpc]
@@ -107,5 +105,11 @@ public class TeletransportManager : NetworkBehaviour
         var helperGO = GameObject.FindGameObjectWithTag(Tags.TeletransportHelper);
         var helper = helperGO.GetComponent<TeletransportUiConnect>();
         helper.HideUi();
+
+        // Camera follows player again
+        var camera = GameObject.FindGameObjectWithTag(Tags.MainCamera);
+
+        var cameraControl = camera.GetComponent<CameraControl>();
+        cameraControl.FollowPlayer();
     }
 }

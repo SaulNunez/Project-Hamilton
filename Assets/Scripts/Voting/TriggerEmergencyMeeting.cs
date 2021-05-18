@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerEmergencyMeeting : InteractuableBehavior
+public class TriggerEmergencyMeeting : NetworkBehaviour, IInteractuableBehaviour
 {
-    public override void OnApproach(GameObject approachedBy) {
+    public void OnApproach(GameObject approachedBy) {
         var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
         var votingManager = votingManagerGameObject.GetComponent<VotingManager>();
 
