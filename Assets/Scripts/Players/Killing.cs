@@ -48,16 +48,27 @@ public class Killing : NetworkBehaviour
 
         var hubConfigGO = GameObject.FindGameObjectWithTag(Tags.HubConfig);
         config = hubConfigGO.GetComponent<HubConfig>();
+
+        VotingManager.OnVotingEnded += OnVotingEnded;
+    }
+
+    /// <summary>
+    /// Starts post voting cooldown 
+    /// </summary>
+    private void OnVotingEnded()
+    {
+        endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
+        canKillSomeone = false;
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
 
-        GameUI.onKillButtonClick += GameUI_onKillButtonClick;
+        GameUI.onKillButtonClick += AttemptToKill;
     }
 
-    private void GameUI_onKillButtonClick()
+    private void AttemptToKill()
     {
         CmdMurder();
     }
@@ -106,7 +117,14 @@ public class Killing : NetworkBehaviour
     {
         base.OnStopClient();
 
-        GameUI.onKillButtonClick -= GameUI_onKillButtonClick;
+        GameUI.onKillButtonClick -= AttemptToKill;
+    }
+
+    public override void OnStopServer()
+    {
+        base.OnStopServer();
+
+        VotingManager.OnVotingEnded -= OnVotingEnded;
     }
 
     public override bool Equals(object obj)
