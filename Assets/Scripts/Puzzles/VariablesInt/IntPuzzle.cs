@@ -58,6 +58,7 @@ using UnityEngine.UI;
             if(tempSlider != null)
             {
                 tempSlider.value = sliderDefTem;
+                tempSlider.onValueChanged.AddListener(OnInputUpdate);
             }
 
             if(temperatureInputField != null)
@@ -91,7 +92,8 @@ using UnityEngine.UI;
             }
             if (value == defTem)
             {
-                CmdCheckInput(value);
+            print("Sending input to server");
+            CmdCheckInput(value);
             }
         }
 
@@ -107,6 +109,7 @@ using UnityEngine.UI;
 
                 if (capturedValue == defTem)
                 {
+                    print("Sending input to server");
                     CmdCheckInput(capturedValue);
                 }
             }catch(Exception e)
