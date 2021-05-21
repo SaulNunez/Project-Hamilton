@@ -791,8 +791,8 @@ MonoBehaviour:
   clientMaxMessagesPerTick: 1000
   batchSend: 1
   waitBeforeSend: 0
-  clientUseWss: 1
-  sslEnabled: 1
+  clientUseWss: 0
+  sslEnabled: 0
   sslCertJson: ./cert.json
   sslProtocols: 3072
   _logLevels: 3
@@ -885,7 +885,7 @@ MonoBehaviour:
   - {fileID: 6717789502006183773, guid: b5a87296ef4923b43bdad153b2753339, type: 3}
   - {fileID: 4920821009805460555, guid: 5cea5a704f3757e459c3d9444b60b071, type: 3}
   showRoomGUI: 1
-  minPlayers: 3
+  minPlayers: 2
   roomPlayerPrefab: {fileID: 689386715880538707, guid: 7cd5d2983d983334e9287c6d2709ee91,
     type: 3}
   RoomScene: Assets/Scenes/Lobby.unity
@@ -893,7 +893,6 @@ MonoBehaviour:
   _allPlayersReady: 0
   roomSlots: []
   clientIndex: 0
-  charactersMapping: {fileID: 11400000, guid: b674fd8bb78d50e4db322d37b7f6ae4e, type: 2}
 --- !u!114 &654267511
 MonoBehaviour:
   m_ObjectHideFlags: 0

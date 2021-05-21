@@ -21,6 +21,9 @@ public class Killing : NetworkBehaviour
     [SyncVar]
     private bool isAssasin = false;
 
+    [SyncVar]
+    private double endOfCooldown;
+
     [SerializeField]
     private LayerMask playersLayerMask;
 
@@ -63,7 +66,8 @@ public class Killing : NetworkBehaviour
     {
         if (isServer && isAssasin)
         {
-            canKillSomeone = Physics2D.OverlapCircleNonAlloc(transform.position, config.actDistance, foundPlayerColliders, playersLayerMask) > 0;
+            canKillSomeone = endOfCooldown <= NetworkTime.time &&
+                Physics2D.OverlapCircleNonAlloc(transform.position, config.actDistance, foundPlayerColliders, playersLayerMask) > 0;
 
             foreach (var collider in foundPlayerColliders)
             {
@@ -92,6 +96,8 @@ public class Killing : NetworkBehaviour
             if (dieComponent != null)
             {
                 dieComponent.SetDed();
+                endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
+                canKillSomeone = false;
             }
         }
     }
