@@ -55,6 +55,29 @@ public class SetupDefaultFlowers: NetworkBehaviour {
                 defaultFlowerImage.sprite = daisySprite;
                 break;
         }
+
+        foreach (var flowerButton in flowerButtons)
+        {
+            var flowerType = FlowerTypes.Types.PickRandom();
+            switch (flowerType)
+            {
+                case FlowerTypes.Sunflower:
+                    flowerButton.ButtonSprite = sunflowerSprite;
+                    break;
+                case FlowerTypes.Tulip:
+                    flowerButton.ButtonSprite = tulipSprite;
+                    break;
+                case FlowerTypes.Roses:
+                    flowerButton.ButtonSprite = rosesSprite;
+                    break;
+                case FlowerTypes.Daisy:
+                    flowerButton.ButtonSprite = daisySprite;
+                    break;
+            }
+
+            //En click, mandar seleccion al servidor
+            flowerButton.button.onClick.AddListener(() => CmdOnButtonClick(flowerType));
+        }
     }
 
     public override void OnStartServer()
@@ -62,11 +85,6 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         base.OnStartServer();
 
         defaultFlowerType = FlowerTypes.Types.PickRandom();
-
-        var buttonFlower = FlowerTypes.Types.PickRandom(6).ToList();
-        RpcSetupOnClient(buttonFlower);
-
-        print("Puzzle started");
     }
 
     [Command(ignoreAuthority = true)]
@@ -76,34 +94,6 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking);
             TargetClosePuzzle(sender);
-        }
-    }
-
-    [ClientRpc]
-    void RpcSetupOnClient(List<string> flowerTypes)
-    {
-        print("Empezando configuracion");
-        for(int i = 0; i < flowerButtons.Count; i++)
-        {
-            print($"Configurando numero {i}");
-            switch (flowerTypes[i])
-            {
-                case FlowerTypes.Sunflower:
-                    flowerButtons[i].ButtonSprite = sunflowerSprite;
-                    break;
-                case FlowerTypes.Tulip:
-                    flowerButtons[i].ButtonSprite = tulipSprite;
-                    break;
-                case FlowerTypes.Roses:
-                    flowerButtons[i].ButtonSprite = rosesSprite;
-                    break;
-                case FlowerTypes.Daisy:
-                    flowerButtons[i].ButtonSprite = daisySprite;
-                    break;
-            }
-
-            //En click, mandar seleccion al servidor
-            flowerButtons[i].button.onClick.AddListener(() => CmdOnButtonClick(flowerTypes[i]));
         }
     }
 
