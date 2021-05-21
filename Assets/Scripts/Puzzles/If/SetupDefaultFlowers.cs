@@ -13,7 +13,7 @@ using UnityEngine.UI;
 /// On click, these send a message on client to check they are the correct type.
 /// </summary>
 public class SetupDefaultFlowers: NetworkBehaviour {
-    [SyncVar(hook = nameof(OnDefaultFlowerSet))]
+    [SyncVar]
     string defaultFlowerType;
 
     [SerializeField]
@@ -36,10 +36,11 @@ public class SetupDefaultFlowers: NetworkBehaviour {
     [SerializeField]
     List<FlowerButtonModel> flowerButtons;
 
-
-    void OnDefaultFlowerSet(string oldValue, string newValue)
+    public override void OnStartClient()
     {
-        switch (newValue)
+        base.OnStartClient();
+
+        switch (defaultFlowerType)
         {
             case FlowerTypes.Sunflower:
                 defaultFlowerImage.sprite = sunflowerSprite;

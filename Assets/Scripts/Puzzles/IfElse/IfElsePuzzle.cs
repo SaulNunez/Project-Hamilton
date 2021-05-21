@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class IfElsePuzzle : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(SetupSprite))]
+    [SyncVar]
     bool isCake;
 
     [Header("Puzzle setup")]
@@ -29,9 +29,16 @@ public class IfElsePuzzle : NetworkBehaviour
         isCake = Mathf.RoundToInt(Random.value) == 1;
     }
 
-    void SetupSprite(bool oldValue, bool newValue)
+    public override void OnStartClient()
     {
-        toDecoratedImage.sprite = newValue? cake: cupcake;
+        base.OnStartClient();
+        if (isCake)
+        {
+            toDecoratedImage.sprite = cake;
+        } else
+        {
+            toDecoratedImage.sprite = cupcake;
+        }
     }
 
     //Pastel se decora con cerezas, cupcake con chispitas
