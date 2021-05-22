@@ -112,7 +112,6 @@ GameObject:
   - component: {fileID: 6668339585277706587}
   - component: {fileID: 3284348325723743405}
   - component: {fileID: 8254940182801854903}
-  - component: {fileID: -5784323421603457193}
   - component: {fileID: 4314256330667214963}
   - component: {fileID: 1029578670153045496}
   - component: {fileID: 4544063956130321910}
@@ -365,23 +364,6 @@ MonoBehaviour:
   isDead: 0
   deathPrefab: {fileID: 9154673738827038458, guid: fb8d658676b169d4d9596427aacdf2b2,
     type: 3}
---- !u!114 &-5784323421603457193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205453721926670665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1731d8de2d0c84333b08ebe1e79f4118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  visRange: 10
-  visUpdateInterval: 1
-  forceHidden: 0
 --- !u!114 &4314256330667214963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  canKill: 0
+  canKillSomeone: 0
   playersLayerMask:
     serializedVersion: 2
     m_Bits: 256
