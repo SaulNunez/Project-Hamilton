@@ -83,7 +83,8 @@
   
   <h1 id="Global_Killing" data-uid="Global.Killing" class="text-break">Class Killing
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Attached to player, control player killing and if it can kill another players</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,14 +102,42 @@
   </h3>
   
   
-  <h4 id="Global_Killing_canKill" data-uid="Global.Killing.canKill">canKill</h4>
+  <h4 id="Global_Killing_canKillSomeone" data-uid="Global.Killing.canKillSomeone">canKillSomeone</h4>
+  <div class="markdown level1 summary"><p>Is player near someone that can be killed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool canKillSomeone</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_Killing_IsAssasin_" data-uid="Global.Killing.IsAssasin*"></a>
+  <h4 id="Global_Killing_IsAssasin" data-uid="Global.Killing.IsAssasin">IsAssasin</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool canKill</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsAssasin { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -129,12 +158,83 @@
   
   <a id="Global_Killing_CmdMurder_" data-uid="Global.Killing.CmdMurder*"></a>
   <h4 id="Global_Killing_CmdMurder" data-uid="Global.Killing.CmdMurder">CmdMurder()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Kill another player if they are in range</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CmdMurder()</code></pre>
   </div>
+  <h5 id="Global_Killing_CmdMurder_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called by client, executed in server</p>
+</div>
+  
+  
+  <a id="Global_Killing_Equals_" data-uid="Global.Killing.Equals*"></a>
+  <h4 id="Global_Killing_Equals_System_Object_" data-uid="Global.Killing.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Global_Killing_GetHashCode_" data-uid="Global.Killing.GetHashCode*"></a>
+  <h4 id="Global_Killing_GetHashCode" data-uid="Global.Killing.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Global_Killing_OnStartClient_" data-uid="Global.Killing.OnStartClient*"></a>
@@ -171,6 +271,18 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkBehaviour.OnStopClient()</span></div>
+  
+  
+  <a id="Global_Killing_OnStopServer_" data-uid="Global.Killing.OnStopServer*"></a>
+  <h4 id="Global_Killing_OnStopServer" data-uid="Global.Killing.OnStopServer">OnStopServer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnStopServer()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStopServer()</span></div>
 </article>
           </div>
           

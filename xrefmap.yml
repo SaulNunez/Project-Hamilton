@@ -408,19 +408,19 @@ references:
   commentId: F:Global.Die.isDead
   fullName: Die.isDead
   nameWithType: Die.isDead
-- uid: Global.Die.OnStartServer
-  name: OnStartServer()
-  href: api/Global.Die.html#Global_Die_OnStartServer
-  commentId: M:Global.Die.OnStartServer
-  fullName: Die.OnStartServer()
-  nameWithType: Die.OnStartServer()
-- uid: Global.Die.OnStartServer*
-  name: OnStartServer
-  href: api/Global.Die.html#Global_Die_OnStartServer_
-  commentId: Overload:Global.Die.OnStartServer
+- uid: Global.Die.OnStartAuthority
+  name: OnStartAuthority()
+  href: api/Global.Die.html#Global_Die_OnStartAuthority
+  commentId: M:Global.Die.OnStartAuthority
+  fullName: Die.OnStartAuthority()
+  nameWithType: Die.OnStartAuthority()
+- uid: Global.Die.OnStartAuthority*
+  name: OnStartAuthority
+  href: api/Global.Die.html#Global_Die_OnStartAuthority_
+  commentId: Overload:Global.Die.OnStartAuthority
   isSpec: "True"
-  fullName: Die.OnStartServer
-  nameWithType: Die.OnStartServer
+  fullName: Die.OnStartAuthority
+  nameWithType: Die.OnStartAuthority
 - uid: Global.Die.SetDed
   name: SetDed()
   href: api/Global.Die.html#Global_Die_SetDed
@@ -1289,6 +1289,19 @@ references:
   isSpec: "True"
   fullName: IfElsePuzzle.OnChispitasClick
   nameWithType: IfElsePuzzle.OnChispitasClick
+- uid: Global.IfElsePuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnStartClient
+  commentId: M:Global.IfElsePuzzle.OnStartClient
+  fullName: IfElsePuzzle.OnStartClient()
+  nameWithType: IfElsePuzzle.OnStartClient()
+- uid: Global.IfElsePuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnStartClient_
+  commentId: Overload:Global.IfElsePuzzle.OnStartClient
+  isSpec: "True"
+  fullName: IfElsePuzzle.OnStartClient
+  nameWithType: IfElsePuzzle.OnStartClient
 - uid: Global.IfElsePuzzle.OnStartServer
   name: OnStartServer()
   href: api/Global.IfElsePuzzle.html#Global_IfElsePuzzle_OnStartServer
@@ -1302,25 +1315,25 @@ references:
   isSpec: "True"
   fullName: IfElsePuzzle.OnStartServer
   nameWithType: IfElsePuzzle.OnStartServer
-- uid: Global.InteractuableBehavior
-  name: InteractuableBehavior
-  href: api/Global.InteractuableBehavior.html
-  commentId: T:Global.InteractuableBehavior
-  fullName: InteractuableBehavior
-  nameWithType: InteractuableBehavior
-- uid: Global.InteractuableBehavior.OnApproach(GameObject)
+- uid: Global.IInteractuableBehaviour
+  name: IInteractuableBehaviour
+  href: api/Global.IInteractuableBehaviour.html
+  commentId: T:Global.IInteractuableBehaviour
+  fullName: IInteractuableBehaviour
+  nameWithType: IInteractuableBehaviour
+- uid: Global.IInteractuableBehaviour.OnApproach(GameObject)
   name: OnApproach(GameObject)
-  href: api/Global.InteractuableBehavior.html#Global_InteractuableBehavior_OnApproach_GameObject_
-  commentId: M:Global.InteractuableBehavior.OnApproach(GameObject)
-  fullName: InteractuableBehavior.OnApproach(GameObject)
-  nameWithType: InteractuableBehavior.OnApproach(GameObject)
-- uid: Global.InteractuableBehavior.OnApproach*
+  href: api/Global.IInteractuableBehaviour.html#Global_IInteractuableBehaviour_OnApproach_GameObject_
+  commentId: M:Global.IInteractuableBehaviour.OnApproach(GameObject)
+  fullName: IInteractuableBehaviour.OnApproach(GameObject)
+  nameWithType: IInteractuableBehaviour.OnApproach(GameObject)
+- uid: Global.IInteractuableBehaviour.OnApproach*
   name: OnApproach
-  href: api/Global.InteractuableBehavior.html#Global_InteractuableBehavior_OnApproach_
-  commentId: Overload:Global.InteractuableBehavior.OnApproach
+  href: api/Global.IInteractuableBehaviour.html#Global_IInteractuableBehaviour_OnApproach_
+  commentId: Overload:Global.IInteractuableBehaviour.OnApproach
   isSpec: "True"
-  fullName: InteractuableBehavior.OnApproach
-  nameWithType: InteractuableBehavior.OnApproach
+  fullName: IInteractuableBehaviour.OnApproach
+  nameWithType: IInteractuableBehaviour.OnApproach
 - uid: Global.IntPuzzle
   name: IntPuzzle
   href: api/Global.IntPuzzle.html
@@ -1451,12 +1464,12 @@ references:
   commentId: T:Global.Killing
   fullName: Killing
   nameWithType: Killing
-- uid: Global.Killing.canKill
-  name: canKill
-  href: api/Global.Killing.html#Global_Killing_canKill
-  commentId: F:Global.Killing.canKill
-  fullName: Killing.canKill
-  nameWithType: Killing.canKill
+- uid: Global.Killing.canKillSomeone
+  name: canKillSomeone
+  href: api/Global.Killing.html#Global_Killing_canKillSomeone
+  commentId: F:Global.Killing.canKillSomeone
+  fullName: Killing.canKillSomeone
+  nameWithType: Killing.canKillSomeone
 - uid: Global.Killing.CmdMurder
   name: CmdMurder()
   href: api/Global.Killing.html#Global_Killing_CmdMurder
@@ -1470,6 +1483,45 @@ references:
   isSpec: "True"
   fullName: Killing.CmdMurder
   nameWithType: Killing.CmdMurder
+- uid: Global.Killing.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Global.Killing.html#Global_Killing_Equals_System_Object_
+  commentId: M:Global.Killing.Equals(System.Object)
+  fullName: Killing.Equals(System.Object)
+  nameWithType: Killing.Equals(Object)
+- uid: Global.Killing.Equals*
+  name: Equals
+  href: api/Global.Killing.html#Global_Killing_Equals_
+  commentId: Overload:Global.Killing.Equals
+  isSpec: "True"
+  fullName: Killing.Equals
+  nameWithType: Killing.Equals
+- uid: Global.Killing.GetHashCode
+  name: GetHashCode()
+  href: api/Global.Killing.html#Global_Killing_GetHashCode
+  commentId: M:Global.Killing.GetHashCode
+  fullName: Killing.GetHashCode()
+  nameWithType: Killing.GetHashCode()
+- uid: Global.Killing.GetHashCode*
+  name: GetHashCode
+  href: api/Global.Killing.html#Global_Killing_GetHashCode_
+  commentId: Overload:Global.Killing.GetHashCode
+  isSpec: "True"
+  fullName: Killing.GetHashCode
+  nameWithType: Killing.GetHashCode
+- uid: Global.Killing.IsAssasin
+  name: IsAssasin
+  href: api/Global.Killing.html#Global_Killing_IsAssasin
+  commentId: P:Global.Killing.IsAssasin
+  fullName: Killing.IsAssasin
+  nameWithType: Killing.IsAssasin
+- uid: Global.Killing.IsAssasin*
+  name: IsAssasin
+  href: api/Global.Killing.html#Global_Killing_IsAssasin_
+  commentId: Overload:Global.Killing.IsAssasin
+  isSpec: "True"
+  fullName: Killing.IsAssasin
+  nameWithType: Killing.IsAssasin
 - uid: Global.Killing.OnStartClient
   name: OnStartClient()
   href: api/Global.Killing.html#Global_Killing_OnStartClient
@@ -1509,6 +1561,19 @@ references:
   isSpec: "True"
   fullName: Killing.OnStopClient
   nameWithType: Killing.OnStopClient
+- uid: Global.Killing.OnStopServer
+  name: OnStopServer()
+  href: api/Global.Killing.html#Global_Killing_OnStopServer
+  commentId: M:Global.Killing.OnStopServer
+  fullName: Killing.OnStopServer()
+  nameWithType: Killing.OnStopServer()
+- uid: Global.Killing.OnStopServer*
+  name: OnStopServer
+  href: api/Global.Killing.html#Global_Killing_OnStopServer_
+  commentId: Overload:Global.Killing.OnStopServer
+  isSpec: "True"
+  fullName: Killing.OnStopServer
+  nameWithType: Killing.OnStopServer
 - uid: Global.Layers
   name: Layers
   href: api/Global.Layers.html
@@ -2383,12 +2448,12 @@ references:
   commentId: F:Global.PuzzleCompletion.instance
   fullName: PuzzleCompletion.instance
   nameWithType: PuzzleCompletion.instance
-- uid: Global.PuzzleCompletion.MarkCompleted(PuzzleId)
-  name: MarkCompleted(PuzzleId)
-  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_MarkCompleted_PuzzleId_
-  commentId: M:Global.PuzzleCompletion.MarkCompleted(PuzzleId)
-  fullName: PuzzleCompletion.MarkCompleted(PuzzleId)
-  nameWithType: PuzzleCompletion.MarkCompleted(PuzzleId)
+- uid: Global.PuzzleCompletion.MarkCompleted(PuzzleId,Mirror.NetworkIdentity)
+  name: MarkCompleted(PuzzleId, NetworkIdentity)
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_MarkCompleted_PuzzleId_Mirror_NetworkIdentity_
+  commentId: M:Global.PuzzleCompletion.MarkCompleted(PuzzleId,Mirror.NetworkIdentity)
+  fullName: PuzzleCompletion.MarkCompleted(PuzzleId, Mirror.NetworkIdentity)
+  nameWithType: PuzzleCompletion.MarkCompleted(PuzzleId, NetworkIdentity)
 - uid: Global.PuzzleCompletion.MarkCompleted*
   name: MarkCompleted
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_MarkCompleted_
@@ -2434,12 +2499,37 @@ references:
   isSpec: "True"
   fullName: PuzzleCompletion.OnStopServer
   nameWithType: PuzzleCompletion.OnStopServer
-- uid: Global.PuzzleCompletion.puzzlesAvailable
-  name: puzzlesAvailable
-  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_puzzlesAvailable
-  commentId: F:Global.PuzzleCompletion.puzzlesAvailable
-  fullName: PuzzleCompletion.puzzlesAvailable
-  nameWithType: PuzzleCompletion.puzzlesAvailable
+- uid: Global.PuzzleCompletion.PuzzleCompletionInfo
+  name: PuzzleCompletion.PuzzleCompletionInfo
+  href: api/Global.PuzzleCompletion.PuzzleCompletionInfo.html
+  commentId: T:Global.PuzzleCompletion.PuzzleCompletionInfo
+  fullName: PuzzleCompletion.PuzzleCompletionInfo
+  nameWithType: PuzzleCompletion.PuzzleCompletionInfo
+- uid: Global.PuzzleCompletion.PuzzleCompletionInfo.Id
+  name: Id
+  href: api/Global.PuzzleCompletion.PuzzleCompletionInfo.html#Global_PuzzleCompletion_PuzzleCompletionInfo_Id
+  commentId: F:Global.PuzzleCompletion.PuzzleCompletionInfo.Id
+  fullName: PuzzleCompletion.PuzzleCompletionInfo.Id
+  nameWithType: PuzzleCompletion.PuzzleCompletionInfo.Id
+- uid: Global.PuzzleCompletion.PuzzleCompletionInfo.netIdentity
+  name: netIdentity
+  href: api/Global.PuzzleCompletion.PuzzleCompletionInfo.html#Global_PuzzleCompletion_PuzzleCompletionInfo_netIdentity
+  commentId: F:Global.PuzzleCompletion.PuzzleCompletionInfo.netIdentity
+  fullName: PuzzleCompletion.PuzzleCompletionInfo.netIdentity
+  nameWithType: PuzzleCompletion.PuzzleCompletionInfo.netIdentity
+- uid: Global.PuzzleCompletion.PuzzlesAvailable
+  name: PuzzlesAvailable
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_PuzzlesAvailable
+  commentId: P:Global.PuzzleCompletion.PuzzlesAvailable
+  fullName: PuzzleCompletion.PuzzlesAvailable
+  nameWithType: PuzzleCompletion.PuzzlesAvailable
+- uid: Global.PuzzleCompletion.PuzzlesAvailable*
+  name: PuzzlesAvailable
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_PuzzlesAvailable_
+  commentId: Overload:Global.PuzzleCompletion.PuzzlesAvailable
+  isSpec: "True"
+  fullName: PuzzleCompletion.PuzzlesAvailable
+  nameWithType: PuzzleCompletion.PuzzlesAvailable
 - uid: Global.PuzzleCompletion.puzzlesCompleted
   name: puzzlesCompleted
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_puzzlesCompleted
@@ -2459,6 +2549,38 @@ references:
   isSpec: "True"
   fullName: PuzzleCompletion.PuzzlesDone
   nameWithType: PuzzleCompletion.PuzzlesDone
+- uid: Global.PuzzleCompletionInfoSerialization
+  name: PuzzleCompletionInfoSerialization
+  href: api/Global.PuzzleCompletionInfoSerialization.html
+  commentId: T:Global.PuzzleCompletionInfoSerialization
+  fullName: PuzzleCompletionInfoSerialization
+  nameWithType: PuzzleCompletionInfoSerialization
+- uid: Global.PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo(Mirror.NetworkReader)
+  name: ReadPuzzleCompletionInfo(NetworkReader)
+  href: api/Global.PuzzleCompletionInfoSerialization.html#Global_PuzzleCompletionInfoSerialization_ReadPuzzleCompletionInfo_Mirror_NetworkReader_
+  commentId: M:Global.PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo(Mirror.NetworkReader)
+  fullName: PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo(Mirror.NetworkReader)
+  nameWithType: PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo(NetworkReader)
+- uid: Global.PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo*
+  name: ReadPuzzleCompletionInfo
+  href: api/Global.PuzzleCompletionInfoSerialization.html#Global_PuzzleCompletionInfoSerialization_ReadPuzzleCompletionInfo_
+  commentId: Overload:Global.PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo
+  isSpec: "True"
+  fullName: PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo
+  nameWithType: PuzzleCompletionInfoSerialization.ReadPuzzleCompletionInfo
+- uid: Global.PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo(Mirror.NetworkWriter,PuzzleCompletion.PuzzleCompletionInfo)
+  name: WritePuzzleCompletionInfo(NetworkWriter, PuzzleCompletion.PuzzleCompletionInfo)
+  href: api/Global.PuzzleCompletionInfoSerialization.html#Global_PuzzleCompletionInfoSerialization_WritePuzzleCompletionInfo_Mirror_NetworkWriter_PuzzleCompletion_PuzzleCompletionInfo_
+  commentId: M:Global.PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo(Mirror.NetworkWriter,PuzzleCompletion.PuzzleCompletionInfo)
+  fullName: PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo(Mirror.NetworkWriter, PuzzleCompletion.PuzzleCompletionInfo)
+  nameWithType: PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo(NetworkWriter, PuzzleCompletion.PuzzleCompletionInfo)
+- uid: Global.PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo*
+  name: WritePuzzleCompletionInfo
+  href: api/Global.PuzzleCompletionInfoSerialization.html#Global_PuzzleCompletionInfoSerialization_WritePuzzleCompletionInfo_
+  commentId: Overload:Global.PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo
+  isSpec: "True"
+  fullName: PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo
+  nameWithType: PuzzleCompletionInfoSerialization.WritePuzzleCompletionInfo
 - uid: Global.PuzzleId
   name: PuzzleId
   href: api/Global.PuzzleId.html
@@ -2619,19 +2741,19 @@ references:
   commentId: T:Global.PuzzleInformationSerialization
   fullName: PuzzleInformationSerialization
   nameWithType: PuzzleInformationSerialization
-- uid: Global.PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
-  name: ReadPuzzleId(NetworkReader)
-  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleId_Mirror_NetworkReader_
-  commentId: M:Global.PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
-  fullName: PuzzleInformationSerialization.ReadPuzzleId(Mirror.NetworkReader)
-  nameWithType: PuzzleInformationSerialization.ReadPuzzleId(NetworkReader)
-- uid: Global.PuzzleInformationSerialization.ReadPuzzleId*
-  name: ReadPuzzleId
-  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleId_
-  commentId: Overload:Global.PuzzleInformationSerialization.ReadPuzzleId
+- uid: Global.PuzzleInformationSerialization.ReadPuzzleInformation(Mirror.NetworkReader)
+  name: ReadPuzzleInformation(NetworkReader)
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleInformation_Mirror_NetworkReader_
+  commentId: M:Global.PuzzleInformationSerialization.ReadPuzzleInformation(Mirror.NetworkReader)
+  fullName: PuzzleInformationSerialization.ReadPuzzleInformation(Mirror.NetworkReader)
+  nameWithType: PuzzleInformationSerialization.ReadPuzzleInformation(NetworkReader)
+- uid: Global.PuzzleInformationSerialization.ReadPuzzleInformation*
+  name: ReadPuzzleInformation
+  href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_ReadPuzzleInformation_
+  commentId: Overload:Global.PuzzleInformationSerialization.ReadPuzzleInformation
   isSpec: "True"
-  fullName: PuzzleInformationSerialization.ReadPuzzleId
-  nameWithType: PuzzleInformationSerialization.ReadPuzzleId
+  fullName: PuzzleInformationSerialization.ReadPuzzleInformation
+  nameWithType: PuzzleInformationSerialization.ReadPuzzleInformation
 - uid: Global.PuzzleInformationSerialization.WritePuzzleId(Mirror.NetworkWriter,PuzzleInformation)
   name: WritePuzzleId(NetworkWriter, PuzzleInformation)
   href: api/Global.PuzzleInformationSerialization.html#Global_PuzzleInformationSerialization_WritePuzzleId_Mirror_NetworkWriter_PuzzleInformation_
@@ -3359,6 +3481,19 @@ references:
   commentId: T:Global.SetupDefaultFlowers
   fullName: SetupDefaultFlowers
   nameWithType: SetupDefaultFlowers
+- uid: Global.SetupDefaultFlowers.OnStartClient
+  name: OnStartClient()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartClient
+  commentId: M:Global.SetupDefaultFlowers.OnStartClient
+  fullName: SetupDefaultFlowers.OnStartClient()
+  nameWithType: SetupDefaultFlowers.OnStartClient()
+- uid: Global.SetupDefaultFlowers.OnStartClient*
+  name: OnStartClient
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartClient_
+  commentId: Overload:Global.SetupDefaultFlowers.OnStartClient
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.OnStartClient
+  nameWithType: SetupDefaultFlowers.OnStartClient
 - uid: Global.SetupDefaultFlowers.OnStartServer
   name: OnStartServer()
   href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartServer

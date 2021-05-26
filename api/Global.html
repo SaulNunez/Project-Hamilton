@@ -192,8 +192,6 @@ if correct, it&apos;s registered as a done puzzle and closes puzzle for player.<
       <section></section>
       <h4><a class="xref" href="Global.IfElsePuzzle.html">IfElsePuzzle</a></h4>
       <section></section>
-      <h4><a class="xref" href="Global.InteractuableBehavior.html">InteractuableBehavior</a></h4>
-      <section></section>
       <h4><a class="xref" href="Global.IntPuzzle.html">IntPuzzle</a></h4>
       <section><p>Handles the logic of both float and int thermostat puzzle variants</p>
 </section>
@@ -202,7 +200,8 @@ if correct, it&apos;s registered as a done puzzle and closes puzzle for player.<
       <h4><a class="xref" href="Global.JoinLobby.html">JoinLobby</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.Killing.html">Killing</a></h4>
-      <section></section>
+      <section><p>Attached to player, control player killing and if it can kill another players</p>
+</section>
       <h4><a class="xref" href="Global.Layers.html">Layers</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.LobbyOptionsUiConnections.html">LobbyOptionsUiConnections</a></h4>
@@ -257,6 +256,11 @@ Has text floating on top of her head.</p>
       <h4><a class="xref" href="Global.PuzzleCheckResult.html">PuzzleCheckResult</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.PuzzleCompletion.html">PuzzleCompletion</a></h4>
+      <section><p>Keeps tabs on puzzle completion and handles events</p>
+</section>
+      <h4><a class="xref" href="Global.PuzzleCompletion.PuzzleCompletionInfo.html">PuzzleCompletion.PuzzleCompletionInfo</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PuzzleCompletionInfoSerialization.html">PuzzleCompletionInfoSerialization</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.PuzzleIdSerialization.html">PuzzleIdSerialization</a></h4>
       <section></section>
@@ -350,13 +354,14 @@ Starts alarm on emergency start. Ends when resolved or players lost.</p>
       <h4><a class="xref" href="Global.Tags.html">Tags</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.TaskProgress.html">TaskProgress</a></h4>
-      <section><p>Hears puzzle completion and updates task progress bar in client</p>
+      <section><p>Updates task progress bar in client</p>
 </section>
       <h4><a class="xref" href="Global.Teletransport.html">Teletransport</a></h4>
       <section><p>Acknowledges when player has interacted with teletransport vent, and adds player to teletransport manager to handle on teletransport options and such</p>
 </section>
       <h4><a class="xref" href="Global.TeletransportManager.html">TeletransportManager</a></h4>
-      <section></section>
+      <section><p>Handles teletransport behaviour once a player enters the vent.</p>
+</section>
       <h4><a class="xref" href="Global.TeletransportUiConnect.html">TeletransportUiConnect</a></h4>
       <section></section>
       <h4><a class="xref" href="Global.Test.html">Test</a></h4>
@@ -395,6 +400,11 @@ Spawnea una ventana de votación para el</p>
   </h3>
       <h4><a class="xref" href="Global.PuzzleInformation.html">PuzzleInformation</a></h4>
       <section></section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Global.IInteractuableBehaviour.html">IInteractuableBehaviour</a></h4>
+      <section><p>A simple interface to define actions to perform when this object is touched</p>
+</section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Global.CharacterTypes.html">CharacterTypes</a></h4>

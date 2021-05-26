@@ -89,14 +89,17 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><a class="xref" href="Global.InteractuableBehavior.html">InteractuableBehavior</a></div>
-    <div class="level3"><span class="xref">OpenPuzzle</span></div>
+    <div class="level2"><span class="xref">OpenPuzzle</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Global.IInteractuableBehaviour.html">IInteractuableBehaviour</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Global_OpenPuzzle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OpenPuzzle : InteractuableBehavior</code></pre>
+    <pre><code class="lang-csharp hljs">public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -134,7 +137,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnApproach(GameObject approachedBy)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnApproach(GameObject approachedBy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,8 +156,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Global.InteractuableBehavior.html#Global_InteractuableBehavior_OnApproach_GameObject_">InteractuableBehavior.OnApproach(GameObject)</a></div>
   
   
   <a id="Global_OpenPuzzle_OnStartServer_" data-uid="Global.OpenPuzzle.OnStartServer*"></a>
@@ -179,6 +180,10 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkBehaviour.OnStopServer()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Global.IInteractuableBehaviour.html">IInteractuableBehaviour</a>
+  </div>
 </article>
           </div>
           

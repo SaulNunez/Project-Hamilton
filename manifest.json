@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Die.html",
-          "hash": "/oyAslhRvx0vClCl0fmBfhYXOWPj6TDvU+M3zccW39s="
+          "hash": "wvzrJbDNnFzsrV6jJSmqN8imH4W1LNOZDaxg6SMVXuc="
         }
       },
       "is_incremental": false,
@@ -468,11 +468,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.IInteractuableBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.IInteractuableBehaviour.html",
+          "hash": "TK8pSPT/4rVEsyh+pnfTw21fnwootJ/bEdgyYbtTOcg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.IfElsePuzzle.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.IfElsePuzzle.html",
-          "hash": "yfyA4bBU/OBq/J18iWbDRAK/iFaKTDQpLJ+Rm1jAwg4="
+          "hash": "6ba2ZDw/S1E7baUDC0CWYiq9TZbRfcJLg5Alx5iZYEg="
         }
       },
       "is_incremental": false,
@@ -485,18 +497,6 @@
         ".html": {
           "relative_path": "api/Global.IntPuzzle.html",
           "hash": "TSQq8LZ+6KAHrENcg20yXv+9xmrR7k2J1cRmIEk2FF0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.InteractuableBehavior.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.InteractuableBehavior.html",
-          "hash": "mylK8lujXGhsGPOPiKdsyKxePnO7HZM0jNL/4gcZCNg="
         }
       },
       "is_incremental": false,
@@ -544,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Killing.html",
-          "hash": "GoptIxvRDyb0fYHyOCI663dZ08UkXOt1zuvvquP+zEQ="
+          "hash": "KVf7ZWiOJXPXO/1ClYJkZl84MpfBYr2d1+Zx/xoEBxk="
         }
       },
       "is_incremental": false,
@@ -628,7 +628,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.OpenPuzzle.html",
-          "hash": "+X8pTuEgw4T2U5WxNjoNcxp9axzg4/wDpU8+SQnjrTM="
+          "hash": "xwW1z0JYGn/Zm7hCb3TjAZQjDt2JvQ5NCZU8hLNv6kI="
         }
       },
       "is_incremental": false,
@@ -640,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.OpenSabotage.html",
-          "hash": "Sm49hZ4RCIiasamXv2JY7WREEXvq+dHh+OFGESd5GYs="
+          "hash": "trle6+N0BpjnayeLQIWQ8mMzyVTh2QlwC3kWWTM1954="
         }
       },
       "is_incremental": false,
@@ -840,11 +840,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleCompletion.PuzzleCompletionInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleCompletion.PuzzleCompletionInfo.html",
+          "hash": "oanmXA1ew8Xl13nIA3akjMk0H2gmmRf9Coq7RWF7m2M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzleCompletion.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleCompletion.html",
-          "hash": "ISaEaZLX9c4jhxE32TtZvW7rUIlSXenOZpd4EA46SP8="
+          "hash": "3Rv7U255M1K9iEzSDRiwnKakVD0DT8QmC3q2MAdH5hQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleCompletionInfoSerialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleCompletionInfoSerialization.html",
+          "hash": "VR5s7nm5VBDMc38Bi7lGb4B4qfE1IiU70Yr952qx8Hk="
         }
       },
       "is_incremental": false,
@@ -892,7 +916,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleInformationSerialization.html",
-          "hash": "EeQLVV2cbjKf2cRpSKCFOIYujC2z8Cs0nxvXs4ARv30="
+          "hash": "OnNZZAiA5b4C+c+wMzeaZDfnseJPoheei5yX0hKLfro="
         }
       },
       "is_incremental": false,
@@ -940,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ReportDeath.html",
-          "hash": "IyYaZ6kDBjBu4z9/h/pg2B6BKNf4+3ReUuUb2SMuU1c="
+          "hash": "5I/xfDdwotvRqceTpanFgTcFO7omFhKQ8Vh4EzJgXWA="
         }
       },
       "is_incremental": false,
@@ -1120,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SetupDefaultFlowers.html",
-          "hash": "zivxmCR5l+tQlWn0gq/kgB4aFKNQgjdw8ElXhJzZNIc="
+          "hash": "mAb1O9bS+U5Sla40kBKNJ9HrqywlUV0fJwAle99iAVI="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1252,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TaskProgress.html",
-          "hash": "0ZnVBqRhqov2p/E5gYD1y7azt0wrjKrASWjFULJHpPY="
+          "hash": "Vc9GetSD/R2d/YPwBoL+XjrTZN3rGluTUMeoEhGG3IU="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1276,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Teletransport.html",
-          "hash": "34Wx+ctpIA0K3ueg0mdOC5pNSzuFWrxW22oLQPhdUxE="
+          "hash": "Rqd5v/bxyDTYg9amSQdH1WHiqfhKBQaDfTzUP25Fkmk="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1288,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TeletransportManager.html",
-          "hash": "F8eWzp5IFHj0bPkriTLfoNN5b+Ot3xq57YvuqBD28GE="
+          "hash": "X5mfkPt5DOr6ktRI21IuIdgP0HYDVYqtmgZf2SrdbnU="
         }
       },
       "is_incremental": false,
@@ -1300,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.TriggerEmergencyMeeting.html",
-          "hash": "iPu0oOg9Q8quKiZfhlIo94jJv3rrROwM3afh14DuVYk="
+          "hash": "B5T12peowi8RO/tkwaGTRUkg+cNGwacCBiV4o2DgHxU="
         }
       },
       "is_incremental": false,
@@ -1468,7 +1492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "Unrl8VWfDRwTTaBF9eknEXTCPYqg8CBhpv72+prqDFQ="
+          "hash": "8LrPK2aoU+VPE+c/LkHavr7rfCfBruTKf0jjw4abg9M="
         }
       },
       "is_incremental": false,
@@ -1480,7 +1504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "vO3jQIMVlFjTpX+3zwqtmwWp0kHxb1sd6CyUjO3NZew="
+          "hash": "DvEPWX+LYW9pKHNyroF/LTgkXcUPPKxhI056IuvPFM0="
         }
       },
       "is_incremental": false,
@@ -1589,7 +1613,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 121,
+          "total_file_count": 123,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

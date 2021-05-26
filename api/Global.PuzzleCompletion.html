@@ -83,7 +83,8 @@
   
   <h1 id="Global_PuzzleCompletion" data-uid="Global.PuzzleCompletion" class="text-break">Class PuzzleCompletion
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Keeps tabs on puzzle completion and handles events</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -125,14 +126,41 @@
   </table>
   
   
-  <h4 id="Global_PuzzleCompletion_puzzlesAvailable" data-uid="Global.PuzzleCompletion.puzzlesAvailable">puzzlesAvailable</h4>
+  <h4 id="Global_PuzzleCompletion_puzzlesCompleted" data-uid="Global.PuzzleCompletion.puzzlesCompleted">puzzlesCompleted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int puzzlesAvailable</code></pre>
+    <pre><code class="lang-csharp hljs">public SyncList&lt;PuzzleCompletion.PuzzleCompletionInfo&gt; puzzlesCompleted</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mirror.SyncList</span>&lt;<a class="xref" href="Global.PuzzleCompletion.PuzzleCompletionInfo.html">PuzzleCompletion.PuzzleCompletionInfo</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_PuzzleCompletion_PuzzlesAvailable_" data-uid="Global.PuzzleCompletion.PuzzlesAvailable*"></a>
+  <h4 id="Global_PuzzleCompletion_PuzzlesAvailable" data-uid="Global.PuzzleCompletion.PuzzlesAvailable">PuzzlesAvailable</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PuzzlesAvailable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -147,32 +175,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <h4 id="Global_PuzzleCompletion_puzzlesCompleted" data-uid="Global.PuzzleCompletion.puzzlesCompleted">puzzlesCompleted</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SyncList&lt;PuzzleId&gt; puzzlesCompleted</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Mirror.SyncList</span>&lt;<a class="xref" href="Global.PuzzleId.html">PuzzleId</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
   <a id="Global_PuzzleCompletion_PuzzlesDone_" data-uid="Global.PuzzleCompletion.PuzzlesDone*"></a>
@@ -203,13 +205,13 @@
   
   
   <a id="Global_PuzzleCompletion_MarkCompleted_" data-uid="Global.PuzzleCompletion.MarkCompleted*"></a>
-  <h4 id="Global_PuzzleCompletion_MarkCompleted_PuzzleId_" data-uid="Global.PuzzleCompletion.MarkCompleted(PuzzleId)">MarkCompleted(PuzzleId)</h4>
+  <h4 id="Global_PuzzleCompletion_MarkCompleted_PuzzleId_Mirror_NetworkIdentity_" data-uid="Global.PuzzleCompletion.MarkCompleted(PuzzleId,Mirror.NetworkIdentity)">MarkCompleted(PuzzleId, NetworkIdentity)</h4>
   <div class="markdown level1 summary"><p>Register puzzle as completed</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void MarkCompleted(PuzzleId id)</code></pre>
+    <pre><code class="lang-csharp hljs">public void MarkCompleted(PuzzleId id, NetworkIdentity doneByPlayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,6 +226,11 @@
       <tr>
         <td><a class="xref" href="Global.PuzzleId.html">PuzzleId</a></td>
         <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Mirror.NetworkIdentity</span></td>
+        <td><span class="parametername">doneByPlayer</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -282,12 +289,12 @@
   
   
   <h4 id="Global_PuzzleCompletion_OnPuzzleCompleted" data-uid="Global.PuzzleCompletion.OnPuzzleCompleted">OnPuzzleCompleted</h4>
-  <div class="markdown level1 summary"><p>Called on puzzle completion.</p>
+  <div class="markdown level1 summary"><p>Called on puzzle completion. Called when anyone finishes, not just a specific player</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;PuzzleId&gt; OnPuzzleCompleted</code></pre>
+    <pre><code class="lang-csharp hljs">public static event Action&lt;PuzzleId, NetworkIdentity&gt; OnPuzzleCompleted</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,7 +306,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Global.PuzzleId.html">PuzzleId</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Global.PuzzleId.html">PuzzleId</a>, <span class="xref">Mirror.NetworkIdentity</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
