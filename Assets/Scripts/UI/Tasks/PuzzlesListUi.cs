@@ -42,7 +42,7 @@ public class PuzzlesListUi : NetworkBehaviour
         PuzzleCompletion.OnPuzzleCompleted -= OnPuzzleCompletionChanged;
     }
 
-    private void OnPuzzleCompletionChanged(PuzzleId _) => RpcRecreateText();
+    private void OnPuzzleCompletionChanged(PuzzleId id, NetworkIdentity doneBy) => RpcRecreateText();
 
     [ClientRpc]
     void RpcRecreateText()
@@ -50,6 +50,11 @@ public class PuzzlesListUi : NetworkBehaviour
         taskText.text = $"{CreateEmergencyList()}\n{CreateTasksList()}";
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    [Client]
     string CreateTasksList()
     {
         var taskList = "";
@@ -117,6 +122,7 @@ public class PuzzlesListUi : NetworkBehaviour
         return emergencyList;
     }
 
+    [Client]
     List<PuzzleId> AvailablePuzzles() => 
         new List<PuzzleId>((IEnumerable<PuzzleId>)Enum.GetValues(typeof(PuzzleId)))
             .Where(pId =>
@@ -126,7 +132,7 @@ public class PuzzlesListUi : NetworkBehaviour
                 {
                     return true;
                 }
-                return !PuzzleCompletion.instance.puzzlesCompleted.Contains(pId);
+                return !PuzzleCompletion.instance.puzzlesCompleted.Where(x => x.netIdentity == NetworkClient.connection.identity).Any(x => x.Id == pId);
             })
             .ToList();
 }

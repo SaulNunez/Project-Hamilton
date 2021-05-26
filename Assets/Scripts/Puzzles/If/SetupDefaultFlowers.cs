@@ -92,7 +92,7 @@ public class SetupDefaultFlowers: NetworkBehaviour {
     {
         if(clickFlowerType == defaultFlowerType)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking, sender.identity);
             TargetClosePuzzle(sender);
         }
     }

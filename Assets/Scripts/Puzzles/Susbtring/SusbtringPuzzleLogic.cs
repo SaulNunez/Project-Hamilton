@@ -126,7 +126,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
         print($"Check, start: {start}, end: {end}");
         if(start == setStartValue && end == expectedLenghtValue)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.Substring);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.Substring, sender.identity);
             TargetClosePuzzle(sender);
         }
     }

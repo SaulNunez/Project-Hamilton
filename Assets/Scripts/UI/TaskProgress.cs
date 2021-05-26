@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Hears puzzle completion and updates task progress bar in client
+/// Updates task progress bar in client
 /// </summary>
 public class TaskProgress : NetworkBehaviour
 {
@@ -35,10 +35,10 @@ public class TaskProgress : NetworkBehaviour
         base.OnStartServer();
 
         PuzzleCompletion.OnPuzzleCompleted += UpdatePuzzleCount;
-        allTasks = Enum.GetNames(typeof(PuzzleId)).Length;
+        allTasks = PuzzleCompletion.instance.PuzzlesAvailable;
     }
 
-    private void UpdatePuzzleCount(PuzzleId _)
+    private void UpdatePuzzleCount(PuzzleId id, NetworkIdentity doneBy)
     {
         doneTasks++;
     }

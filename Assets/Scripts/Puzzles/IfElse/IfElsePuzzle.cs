@@ -52,7 +52,7 @@ public class IfElsePuzzle : NetworkBehaviour
     {
         if (isCake)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse, sender.identity);
             TargetClosePuzzle(sender);
         }
     }
@@ -64,7 +64,7 @@ public class IfElsePuzzle : NetworkBehaviour
     {
         if (!isCake)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse, sender.identity);
             TargetClosePuzzle(sender);
         }
     }

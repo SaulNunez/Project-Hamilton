@@ -127,7 +127,7 @@ using UnityEngine.UI;
         {
             if (value == defTem)
             {
-                PuzzleCompletion.instance.MarkCompleted(useFloatDefaultTemperature ? PuzzleId.VariableFloat : PuzzleId.BoilersVariableInteger);
+                PuzzleCompletion.instance.MarkCompleted(useFloatDefaultTemperature ? PuzzleId.VariableFloat : PuzzleId.BoilersVariableInteger, sender.identity);
                 TargetClosePuzzle(sender);
             }
         }

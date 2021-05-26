@@ -31,7 +31,7 @@ public class CompleteBoolPuzzle : NetworkBehaviour
     {
         if (toggleState)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableBoolean);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableBoolean, sender.identity);
             TargetClosePuzzle(sender);
         }
     }

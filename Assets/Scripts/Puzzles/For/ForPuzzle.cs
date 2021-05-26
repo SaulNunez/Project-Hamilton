@@ -80,7 +80,7 @@ public class ForPuzzle : NetworkBehaviour
     {
         if(input == turnsToWash)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);
             RpcClosePuzzle(sender);
         }
     }

@@ -40,7 +40,7 @@ public class WhilePuzzle : NetworkBehaviour
     {
         if(input == defaultBucketValue)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket, sender.identity);
             RpcClosePuzzle(sender);
         }
     }

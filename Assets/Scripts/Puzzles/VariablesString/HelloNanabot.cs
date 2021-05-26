@@ -27,7 +27,7 @@ public class HelloNanabot : NetworkBehaviour
         // Ej. revisar que no tenga algun mensaje obsceno, aqui sucederia 
         var helloMessage = $"Hola {message}";
         SayOnClient(sender, helloMessage);
-        PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableString);
+        PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableString, sender.identity);
         TargetClosePuzzle(sender);
     }
 

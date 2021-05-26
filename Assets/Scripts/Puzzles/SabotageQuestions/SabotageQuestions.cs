@@ -199,7 +199,7 @@ public class SabotageQuestions : SabotagePuzzle
     void RpcOnQuestionsEnded()
     {
         gameObject.SetActive(false);
-        PuzzleCompletion.instance.MarkCompleted(PuzzleId.TheoryVariety);
+        //PuzzleCompletion.instance.MarkCompleted(PuzzleId.TheoryVariety, );
     }
 
     [Command]

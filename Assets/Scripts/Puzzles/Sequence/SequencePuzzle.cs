@@ -31,7 +31,7 @@ public class SequencePuzzle : NetworkBehaviour
     [Command(ignoreAuthority =true)]
     void CmdCompletePuzzle(NetworkConnectionToClient sender = null)
     {
-        PuzzleCompletion.instance.MarkCompleted(sequenceId);
+        PuzzleCompletion.instance.MarkCompleted(sequenceId, sender.identity);
         TargetClosePuzzle(sender);
     }
 

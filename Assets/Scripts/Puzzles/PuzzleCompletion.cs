@@ -4,22 +4,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Keeps tabs on puzzle completion and handles events
+/// </summary>
 public class PuzzleCompletion : NetworkBehaviour
 {
     /// <summary>
-    /// Called on puzzle completion.
+    /// Called on puzzle completion. Called when anyone finishes, not just a specific player
     /// </summary>
     /// <remarks>
     /// <strong>Only applicable on the server</strong>
     /// </remarks>
-    public static event Action<PuzzleId> OnPuzzleCompleted;
+    public static event Action<PuzzleId, NetworkIdentity> OnPuzzleCompleted;
 
     /// <summary>
     /// Called when all puzzles are solved
     /// </summary>
     public static event Action OnFinishedAllPuzzles;
 
-    public SyncList<PuzzleId> puzzlesCompleted = new SyncList<PuzzleId>();
+    public SyncList<PuzzleCompletionInfo> puzzlesCompleted = new SyncList<PuzzleCompletionInfo>();
+
+    [Serializable]
+    public class PuzzleCompletionInfo
+    {
+        public PuzzleId Id;
+        public NetworkIdentity netIdentity;
+    }
 
     //private void Start()
     //{
@@ -34,7 +44,12 @@ public class PuzzleCompletion : NetworkBehaviour
     //    }
     //}
 
-    public readonly int puzzlesAvailable = Enum.GetNames(typeof(PuzzleId)).Length;
+    /// <summary>
+    /// 
+    /// </summary>
+    public int PuzzlesAvailable { 
+        get => Enum.GetNames(typeof(PuzzleId)).Length * NetworkManager.singleton.numPlayers; 
+    }
 
     public static PuzzleCompletion instance = null;
 
@@ -62,12 +77,16 @@ public class PuzzleCompletion : NetworkBehaviour
     /// </summary>
     /// <param name="id"></param>
     [Server]
-    public void MarkCompleted(PuzzleId id)
+    public void MarkCompleted(PuzzleId id, NetworkIdentity doneByPlayer)
     {
-        OnPuzzleCompleted?.Invoke(id);
-        puzzlesCompleted.Add(id);
+        OnPuzzleCompleted?.Invoke(id, doneByPlayer);
+        puzzlesCompleted.Add(new PuzzleCompletionInfo
+        {
+            Id = id,
+            netIdentity = doneByPlayer
+        });
 
-        if(PuzzlesDone == puzzlesAvailable)
+        if(PuzzlesDone == PuzzlesAvailable)
         {
             OnFinishedAllPuzzles?.Invoke();
         }

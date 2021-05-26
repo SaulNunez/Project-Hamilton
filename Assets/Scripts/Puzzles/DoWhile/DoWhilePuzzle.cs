@@ -38,7 +38,7 @@ public class DoWhilePuzzle : NetworkBehaviour
 
         if (textClean == "verdadero" || textClean == "true")
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.DoWhileMotorStarter);
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.DoWhileMotorStarter, sender.identity);
             TargetClosePuzzle(sender);
         }
     }

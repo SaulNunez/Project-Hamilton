@@ -13,7 +13,7 @@ public static class PuzzleInformationSerialization
         writer.WriteBoolean(pi.completed);
     }
 
-    public static PuzzleInformation ReadPuzzleId(this NetworkReader reader)
+    public static PuzzleInformation ReadPuzzleInformation(this NetworkReader reader)
     {
         return new PuzzleInformation(reader.ReadBoolean());
     }

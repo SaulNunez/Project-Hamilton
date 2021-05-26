@@ -7,7 +7,6 @@ using System.Linq;
 
 public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
 {
-    [SyncVar(hook = nameof(UpdateVisuals))]
     public bool puzzleIsAvailable = true;
 
     [SerializeField]
@@ -23,11 +22,11 @@ public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
         PuzzleCompletion.OnPuzzleCompleted += OnPuzzleCompleted;
     }
 
-    private void OnPuzzleCompleted(PuzzleId obj)
+    private void OnPuzzleCompleted(PuzzleId obj, NetworkIdentity doneByPlayer)
     {
         if(obj == opens)
         {
-            puzzleIsAvailable = false;
+            TargetUpdatePuzzleStatus(doneByPlayer.connectionToClient, false);
         }
     }
 
@@ -38,10 +37,13 @@ public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
         PuzzleCompletion.OnPuzzleCompleted -= OnPuzzleCompleted;
     }
 
-    void UpdateVisuals(bool oldValue, bool newValue)
+    [TargetRpc]
+    void TargetUpdatePuzzleStatus(NetworkConnection target, bool enabled)
     {
+        puzzleIsAvailable = enabled;
+
         var materialSet = GetComponent<PuzzleActiveOutline>();
-        materialSet.IsActive = newValue;
+        materialSet.IsActive = enabled;
     }
 
     [Server]
