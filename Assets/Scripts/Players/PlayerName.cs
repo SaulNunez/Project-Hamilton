@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,13 @@ public class PlayerName : NetworkBehaviour
     {
         base.OnStartClient();
 
-        Name = (NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName;
+        var name = (NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName;
+        if (name != null && name.Length > 0)
+        {
+            Name = name;
+        } else
+        {
+            Name = $"Jugador {new Guid()}";
+        }
     }
 }
