@@ -6,7 +6,7 @@
 public class HamiltonNetworkPlayer : NetworkRoomPlayer
 {
     [SyncVar]
-    public CharacterTypes characterType;
+    public CharacterTypes characterType = CharacterTypes.AndreaLewis;
 
     [SyncVar]
     public bool isImpostor = false;

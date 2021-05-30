@@ -289,7 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22642421}
   - component: {fileID: 22642422}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LibraryShelf2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1505,7 +1505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 117924349}
   - component: {fileID: 117924348}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PlayerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6136,7 +6136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 293083175}
   - component: {fileID: 293083176}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TableKitchen2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6603,7 +6603,7 @@ GameObject:
   - component: {fileID: 328153921}
   - component: {fileID: 328153920}
   - component: {fileID: 328153919}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57411,7 +57411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339411067}
   - component: {fileID: 339411068}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TableKitchen1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59814,7 +59814,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 6967
+    m_Bits: 15159
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -60329,7 +60329,7 @@ GameObject:
   - component: {fileID: 564012979}
   - component: {fileID: 564012978}
   - component: {fileID: 564012977}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GardenLabrint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63351,7 +63351,7 @@ GameObject:
   - component: {fileID: 786615612}
   - component: {fileID: 786615611}
   - component: {fileID: 786615610}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GarageBoxesColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64156,7 +64156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810793574}
   - component: {fileID: 810793575}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70227,7 +70227,7 @@ GameObject:
   - component: {fileID: 1105187388}
   - component: {fileID: 1105187390}
   - component: {fileID: 1105187389}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80353,7 +80353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328601726}
   - component: {fileID: 1328601727}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LibraryShelf1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82873,7 +82873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494305433}
   - component: {fileID: 1494305434}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

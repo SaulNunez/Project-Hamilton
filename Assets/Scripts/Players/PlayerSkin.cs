@@ -13,6 +13,16 @@ public class PlayerSkin : NetworkBehaviour
     [SyncVar(hook = nameof(SetPlayerSkin))]
     public CharacterTypes characterSelected;
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        var mapping = charactersMapping.characters.Find(x => x.characterType == characterSelected);
+
+        var spriteComponent = GetComponent<SpriteRenderer>();
+        spriteComponent.sprite = mapping.playerCharacter;
+    }
+
     void SetPlayerSkin(CharacterTypes oldValue, CharacterTypes newValue)
     {
         var mapping = charactersMapping.characters.Find(x => x.characterType == newValue);

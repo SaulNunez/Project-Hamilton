@@ -26,8 +26,8 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         var killingComponent = gamePlayer.GetComponent<Killing>();
         killingComponent.IsAssasin = networkPlayer.isImpostor;
 
-        var playerSelectionComponent = roomPlayer.GetComponent<PlayerSelectionInLobby>();
-        var characterSelected = playerSelectionComponent.currentCharacterType;
+        var characterSelected = networkPlayer.characterType;
+        print($"{networkPlayer.characterType}");
 
         var playerSkinSetup = gamePlayer.GetComponent<PlayerSkin>();
         playerSkinSetup.characterSelected = characterSelected;

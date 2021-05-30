@@ -2,14 +2,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerName : NetworkBehaviour
 {
-    [SerializeField]
-    TextMesh playerNameLabel;
-
-    public string Name { get => playerNameLabel.text; set => playerNameLabel.text = value; }
+    public string Name { get; set; }
 
     public override void OnStartClient()
     {
@@ -21,7 +19,7 @@ public class PlayerName : NetworkBehaviour
             Name = name;
         } else
         {
-            Name = $"Jugador {new Guid()}";
+            Name = $"Jugador {Guid.NewGuid()}";
         }
     }
 }
