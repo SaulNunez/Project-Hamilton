@@ -35,7 +35,28 @@ public class SetResultOnGameEnd : NetworkBehaviour
 
     void OnEndGameResultSet(EndGameResult oldValue, EndGameResult newValue)
     {
-
+        if(newValue == EndGameResult.AssasinsWin)
+        {
+            var killing = ClientScene.localPlayer.GetComponent<Killing>();
+            if (killing != null && killing.IsAssasin)
+            {
+                winnerScreen.SetActive(true);
+            } else
+            {
+                looserScreen.SetActive(true);
+            }
+        } else if (newValue == EndGameResult.ProgrammersWin)
+        {
+            var killing = ClientScene.localPlayer.GetComponent<Killing>();
+            if (killing != null && killing.IsAssasin)
+            {
+                looserScreen.SetActive(true);
+            }
+            else
+            {
+                winnerScreen.SetActive(true);
+            }
+        }
     }
 
     public override void OnStartServer()
