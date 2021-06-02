@@ -91,7 +91,7 @@ public class SabotageQuestions : SabotagePuzzle
 
     //[SyncVar(hook = nameof(OnStateChanged))]
     //QuestionState currentSabotageState;
-    
+
     //private void OnStateChanged(QuestionState oldValue, QuestionState newValue)
     //{
     //    // Reseting before settings new value
@@ -108,6 +108,9 @@ public class SabotageQuestions : SabotagePuzzle
     //            break;
     //    }
     //}
+
+    protected override bool AreEmergencyConditionsEnough(Emergency.EmergencyType type) =>
+    type == Emergency.EmergencyType.QuestionSabotage;
 
     private void AnswerDoneSet(int oldValue, int newValue)
     {

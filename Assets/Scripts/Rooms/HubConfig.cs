@@ -12,9 +12,6 @@ public class HubConfig : NetworkBehaviour
     public int numberOfTasks = 4;
 
     [SyncVar]
-    public int secondsOfCooldownToEmergencies = 30;
-
-    [SyncVar]
     public int secondsOfCooldownsForKill = 20;
 
     [SyncVar]

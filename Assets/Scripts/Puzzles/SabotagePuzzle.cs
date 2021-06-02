@@ -18,7 +18,6 @@ public class SabotagePuzzle : NetworkBehaviour
     /// <summary>
     /// Is UI for puzzle currently active
     /// </summary>
-    [HideInInspector]
     [SyncVar]
     private bool isPuzzleEnabled = false;
 
@@ -39,12 +38,15 @@ public class SabotagePuzzle : NetworkBehaviour
     /// </remarks>
     private List<NetworkConnection> playersWhoSolved = new List<NetworkConnection>();
 
+    /// <summary>
+    /// Enables opening a UI for solving puzzle primaraly
+    /// </summary>
     protected bool IsPuzzleEnabled
     {
-        get => isPuzzleEnabled; 
+        get => isPuzzleEnabled;
         set
         {
-            if(value == true)
+            if (value == true)
             {
                 OnPuzzleActivated();
             }
@@ -53,11 +55,37 @@ public class SabotagePuzzle : NetworkBehaviour
         }
     }
 
+    private void TurnEmergencyIfNecessary(Emergency.EmergencyType type)
+    {
+        if (AreEmergencyConditionsEnough(type))
+        {
+            IsPuzzleEnabled = true;
+        }
+    }
+
+    /// <summary>
+    /// Called after an emergency ocurred. 
+    /// The returned bool is if all conditions to trigger emergency are ready. 
+    /// Regularly just checking for the emergency type is enough.
+    /// 
+    /// </summary>
+    protected virtual bool AreEmergencyConditionsEnough(Emergency.EmergencyType type)
+    {
+        return false;
+    }
+
+    private void TurnEmergencyOff()
+    {
+        IsPuzzleEnabled = false;
+    }
+
     public override void OnStartServer()
     {
         base.OnStartServer();
 
         VotingManager.OnVotingStarted += ClearOnVoting;
+        Emergency.OnEmergencyStarted += TurnEmergencyIfNecessary;
+        Emergency.OnEmergencyResolved += TurnEmergencyOff;
     }
 
     private void ClearOnVoting(int obj)
@@ -129,6 +157,8 @@ public class SabotagePuzzle : NetworkBehaviour
         base.OnStopServer();
 
         VotingManager.OnVotingStarted -= ClearOnVoting;
+        Emergency.OnEmergencyStarted -= TurnEmergencyIfNecessary;
+        Emergency.OnEmergencyResolved -= TurnEmergencyOff;
     }
 
     [TargetRpc]

@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class ElectricitySabotage : SabotagePuzzle
 {
     [SerializeField]
     int expectedVoltage = 120;
+
+    protected override bool AreEmergencyConditionsEnough(Emergency.EmergencyType type) => 
+        type == Emergency.EmergencyType.TurnDownGenerator;
 
     protected override void OnPuzzleCompleted()
     {

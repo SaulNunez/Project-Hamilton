@@ -37,6 +37,9 @@ public class SabotageBoilers : SabotagePuzzle
     [SyncVar(hook = nameof(OnSetupDefined))]
     int setupUsed;
 
+    protected override bool AreEmergencyConditionsEnough(Emergency.EmergencyType type) =>
+    type == Emergency.EmergencyType.ChangeBoilerPressure;
+
     public override void OnStartServer()
     {
         base.OnStartServer();

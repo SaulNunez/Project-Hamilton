@@ -58,5 +58,8 @@ public class OpenSabotage : NetworkBehaviour, IInteractuableBehaviour
     public override void OnStopServer()
     {
         base.OnStopServer();
+
+        Emergency.OnEmergencyStarted -= EnableButtonOnEmergency;
+        Emergency.OnEmergencyResolved -= TemporaryDisableButtonOnEmergencyStop;
     }
 }
