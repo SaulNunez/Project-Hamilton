@@ -135,6 +135,8 @@ public class SabotagePuzzle : NetworkBehaviour
 
         TargetClosePuzzle(player);
 
+        print("aaaa");
+
         if (playersWhoSolved.Count == requireNumberOfPlayersToSolve)
         {
             OnPuzzleCompleted();
