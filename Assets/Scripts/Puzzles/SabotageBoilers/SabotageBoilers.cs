@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -11,8 +12,15 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class SabotageBoilers : SabotagePuzzle
 {
+    [Header("UI elements")]
     [SerializeField]
     Image gaugeImage;
+
+    [SerializeField]
+    TMP_InputField minimumInput;
+
+    [SerializeField]
+    TMP_InputField maximumInput;
 
     [Header("Setups")]
     [SerializeField]
@@ -45,6 +53,14 @@ public class SabotageBoilers : SabotagePuzzle
         base.OnStartServer();
 
         SetNewSetup();
+    }
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        minimumInput.onEndEdit.AddListener(SetMinimum);
+        maximumInput.onEndEdit.AddListener(SetMaximum);
     }
 
 
