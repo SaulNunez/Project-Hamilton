@@ -22,24 +22,30 @@ public class PuzzlesListUi : NetworkBehaviour
         PuzzleCompletion.OnPuzzleCompleted += OnPuzzleCompletionChanged;
         Emergency.OnEmergencyStarted += OnEmergencyStarted;
         Emergency.OnEmergencyResolved += OnEmergencyResolved;
+        Emergency.OnTimeRemaingForEmergencyChanged += OnEmergencyTimeLeftChanged;
     }
 
     public override void OnStartClient()
     {
         base.OnStartClient();
 
-        taskText.text = $"{CreateEmergencyList()}\n{CreateTasksList()}";
+        taskText.text = $"{CreateTasksList()}";
     }
 
     private void OnEmergencyResolved() => RpcRecreateText();
 
     private void OnEmergencyStarted(Emergency.EmergencyType _) => RpcRecreateText();
 
+    private void OnEmergencyTimeLeftChanged(int _) => RpcRecreateText();
+
     public override void OnStopServer()
     {
         base.OnStopServer();
 
         PuzzleCompletion.OnPuzzleCompleted -= OnPuzzleCompletionChanged;
+        Emergency.OnEmergencyStarted -= OnEmergencyStarted;
+        Emergency.OnEmergencyResolved -= OnEmergencyResolved;
+        Emergency.OnTimeRemaingForEmergencyChanged -= OnEmergencyTimeLeftChanged;
     }
 
     private void OnPuzzleCompletionChanged(PuzzleId id, NetworkIdentity doneBy) => RpcRecreateText();
@@ -47,7 +53,27 @@ public class PuzzlesListUi : NetworkBehaviour
     [ClientRpc]
     void RpcRecreateText()
     {
-        taskText.text = $"{CreateEmergencyList()}\n{CreateTasksList()}";
+        print($"UI, emergency is null {Emergency.instance == null}");
+        if (Emergency.instance == null
+    ||  Emergency.instance.CurrentActiveSabotage == Emergency.EmergencyType.None)
+        {
+            taskText.text = $"{CreateTasksList()}";
+        } 
+        else
+        {
+            taskText.text = $"{CreateEmergencyCoundown()}\n{CreateEmergencyInformation()}";
+        }
+    }
+
+    private string CreateEmergencyCoundown()
+    {
+        if (Emergency.instance == null 
+            || Emergency.instance.CurrentActiveSabotage == Emergency.EmergencyType.None)
+        {
+            return string.Empty;
+        }
+
+        return $"Emergencia, {Emergency.instance.TimeRemainingEmergency} segundos restantes";
     }
 
     /// <summary>
@@ -100,7 +126,7 @@ public class PuzzlesListUi : NetworkBehaviour
         return taskList;
     }
 
-    string CreateEmergencyList()
+    string CreateEmergencyInformation()
     {
         var emergencyList = "";
         if(Emergency.instance != null)

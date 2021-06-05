@@ -47,6 +47,11 @@ public class Emergency : NetworkBehaviour
 
     public EmergencyType CurrentActiveSabotage { get => currentActiveSabotage;  }
 
+    /// <summary>
+    /// Time available to solve emergency
+    /// </summary>
+    public int TimeRemainingEmergency { get => timeRemainingOnEmergency; }
+
     [SyncVar]
     private EmergencyType currentActiveSabotage = EmergencyType.None;
 
@@ -121,7 +126,7 @@ public class Emergency : NetworkBehaviour
         var hubGo = GameObject.FindGameObjectWithTag(Tags.HubConfig);
         hubConfig = hubGo.GetComponent<HubConfig>();
 
-        if(instance != null)
+        if(instance == null)
         {
             instance = this;
         }
@@ -136,7 +141,7 @@ public class Emergency : NetworkBehaviour
     {
         base.OnStartClient();
 
-        if (instance != null)
+        if (instance == null)
         {
             instance = this;
         }
