@@ -15,6 +15,7 @@ TagManager:
   - VotingScreen
   - PuzzleManager
   - TeletransportHelper
+  - AvailablePlayerManager
   layers:
   - Default
   - TransparentFX

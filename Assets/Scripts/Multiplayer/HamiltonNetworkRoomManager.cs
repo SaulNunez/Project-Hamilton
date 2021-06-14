@@ -4,16 +4,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Extension to the network room manager, handles handling settings done by user from network player to player as well as providing several new events
 /// </summary>
 public class HamiltonNetworkRoomManager : NetworkRoomManager
 {
+    private string playerName;
+
     public event Action OnSceneChanged;
 
-    public string PlayerName {get; set;}
-    
+    public string PlayerName
+    {
+        get
+        {
+            if (playerName == null)
+            {
+                playerName = $"Jugador {Guid.NewGuid()}";
+            }
+
+            return playerName;
+        }
+        set => playerName = value;
+    }
+
     public override void OnRoomClientSceneChanged(NetworkConnection conn)
     {
         OnSceneChanged?.Invoke();
@@ -43,7 +58,7 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         var networkPlayers = roomSlots.Select(p => p as HamiltonNetworkPlayer);
 
         // Reset flags for every player, I'm not sure if the network player is reused if on several games together
-        foreach(var networkPlayer in networkPlayers)
+        foreach (var networkPlayer in networkPlayers)
         {
             networkPlayer.isImpostor = false;
         }
@@ -52,8 +67,8 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         var hubConfig = hubConfigGO.GetComponent<HubConfig>();
 
         var selectedImpostors = networkPlayers.PickRandom(hubConfig.numberOfImpostors);
- 
-        foreach(var networkPlayer in selectedImpostors)
+
+        foreach (var networkPlayer in selectedImpostors)
         {
             networkPlayer.isImpostor = true;
         }

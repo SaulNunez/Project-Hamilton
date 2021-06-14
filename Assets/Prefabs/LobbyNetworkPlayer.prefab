@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c73bdd30c7db0b40b9b9a7a219f8fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   player: {fileID: 689386715880538707}
   toggles:
   - characterType: 2
@@ -115,7 +117,6 @@ MonoBehaviour:
     toggle: {fileID: 436472652044533828}
   - characterType: 7
     toggle: {fileID: 5721996720900081921}
-  currentCharacterType: 2
 --- !u!1 &337839693670806698
 GameObject:
   m_ObjectHideFlags: 0
@@ -4939,7 +4940,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &4015620684193927879
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,12 +14,6 @@ public class PlayerName : NetworkBehaviour
         base.OnStartClient();
 
         var name = (NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName;
-        if (name != null && name.Length > 0)
-        {
-            Name = name;
-        } else
-        {
-            Name = $"Jugador {Guid.NewGuid()}";
-        }
+        Name = name;
     }
 }

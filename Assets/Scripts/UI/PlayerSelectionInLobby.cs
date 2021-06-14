@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 /// 
 /// Can be used anywhere in the hierarchy.
 /// </summary>
-public class PlayerSelectionInLobby : MonoBehaviour
+public class PlayerSelectionInLobby : NetworkBehaviour
 {
     /// <summary>
     /// Tiny container class that matches toggle with a character type
@@ -28,7 +29,42 @@ public class PlayerSelectionInLobby : MonoBehaviour
     [SerializeField]
     List<ToggleAndCharacter> toggles;
 
-    public CharacterTypes currentCharacterType = CharacterTypes.AndreaLewis;
+    Lazy<AvailableCharactersMemory> memory = new Lazy<AvailableCharactersMemory>(() =>
+    {
+        var gameObj = GameObject.FindGameObjectWithTag(Tags.AvailablePlayerManager);
+        return gameObj.GetComponent<AvailableCharactersMemory>();
+    });
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        AvailableCharactersMemory.OnCharacterAvailable += EnableCharacter;
+        AvailableCharactersMemory.OnCharacterOccupied += DisableCharacter;
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+
+        AvailableCharactersMemory.OnCharacterAvailable -= EnableCharacter;
+        AvailableCharactersMemory.OnCharacterOccupied -= DisableCharacter;
+    }
+
+    private void DisableCharacter(CharacterTypes typeOccupied)
+    {
+        if(typeOccupied != player.characterType)
+        {
+            toggles.Find(x => x.characterType == typeOccupied).toggle.interactable = false;
+            print("disabled char");
+        }
+    }
+
+    private void EnableCharacter(CharacterTypes typeAvailable)
+    {
+        toggles.Find(x => x.characterType == typeAvailable).toggle.interactable = true;
+        print("enabled char");
+    }
 
     void Start()
     {
@@ -38,17 +74,14 @@ public class PlayerSelectionInLobby : MonoBehaviour
             {
                 if (isOn)
                 {
-                    currentCharacterType = toggle.characterType;
+                    if (!memory.Value.CharacterUsed(toggle.characterType))
+                    {
+                        player.characterType = toggle.characterType;
+                        memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, toggle.characterType);
+
+                    }
                 }
             });
         }
-    }
-
-    /// <summary>
-    /// Called when "saving and close", updates variables in network player with updated values
-    /// </summary>
-    public void Commit()
-    {
-        player.characterType = currentCharacterType;
     }
 }

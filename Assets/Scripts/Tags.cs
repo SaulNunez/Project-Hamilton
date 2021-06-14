@@ -11,4 +11,5 @@ public static class Tags
     public const string UiManager = "UIManager";
     public const string Nanabot = "Nanabot";
     public const string TeletransportHelper = "TeletransportHelper";
+    public const string AvailablePlayerManager = "AvailablePlayerManager";
 }
