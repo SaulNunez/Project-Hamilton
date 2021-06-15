@@ -41,6 +41,21 @@ public class PlayerSelectionInLobby : NetworkBehaviour
 
         AvailableCharactersMemory.OnCharacterAvailable += EnableCharacter;
         AvailableCharactersMemory.OnCharacterOccupied += DisableCharacter;
+
+        var characterTypes = Enum.GetValues(typeof(CharacterTypes));
+        while (true)
+        {
+            var characterType = (CharacterTypes)characterTypes.GetValue(UnityEngine.Random.Range(0, characterTypes.Length));
+            if (!memory.Value.CharacterUsed(characterType))
+            {
+                player.characterType = characterType;
+                memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, characterType);
+
+                toggles.Find(x => x.characterType == characterType).toggle.isOn = true;
+
+                break;
+            }
+        }
     }
 
     public override void OnStopClient()
@@ -53,7 +68,7 @@ public class PlayerSelectionInLobby : NetworkBehaviour
 
     private void DisableCharacter(CharacterTypes typeOccupied)
     {
-        if(typeOccupied != player.characterType)
+        if (typeOccupied != player.characterType)
         {
             toggles.Find(x => x.characterType == typeOccupied).toggle.interactable = false;
             print("disabled char");
@@ -68,7 +83,7 @@ public class PlayerSelectionInLobby : NetworkBehaviour
 
     void Start()
     {
-        foreach(var toggle in toggles)
+        foreach (var toggle in toggles)
         {
             toggle.toggle.onValueChanged.AddListener((isOn) =>
             {
