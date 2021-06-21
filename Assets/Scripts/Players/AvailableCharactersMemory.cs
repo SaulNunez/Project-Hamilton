@@ -58,13 +58,15 @@ public class AvailableCharactersMemory : NetworkBehaviour
         if (op == SyncList<CharacterSelection>.Operation.OP_ADD || op == SyncList<CharacterSelection>.Operation.OP_INSERT)
         {
             OnCharacterOccupied?.Invoke(newItem.characterSelected);
-            print("Character occupied");
+            print($"Character occupied: {newItem.characterSelected}");
         }
         else if(op == SyncList<CharacterSelection>.Operation.OP_REMOVEAT)
         {
             OnCharacterAvailable?.Invoke(oldItem.characterSelected);
+            print($"Character unoccupied: {newItem.characterSelected}");
         } else if(op == SyncList<CharacterSelection>.Operation.OP_SET)
         {
+            print($"Character changed: {newItem.characterSelected}");
             OnCharacterAvailable?.Invoke(oldItem.characterSelected);
             OnCharacterOccupied?.Invoke(newItem.characterSelected);
         }

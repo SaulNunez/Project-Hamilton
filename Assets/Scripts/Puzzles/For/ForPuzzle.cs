@@ -14,30 +14,12 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class ForPuzzle : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(OnTurnsToWashSet))]
+    [SyncVar]
     int turnsToWash;
-
-    [SerializeField]
-    TextMeshProUGUI instructionTextbox;
-
-    [Tooltip("Instructions to solve puzzle. Will be passed to string.format for setting variable turns. Use {0} to interpolate turnsToWash.")]
-    [TextArea]
-    [SerializeField]
-    public string instructionText;
 
     [Tooltip("Input field to input the expected amount needed to wash")]
     [SerializeField]
     TMP_InputField input;
-
-    /// <summary>
-    /// Called on turnsToWash updated on client (called when screen is started). Updates instruction box to on server decided turnsToWash.
-    /// </summary>
-    /// <param name="_"></param>
-    /// <param name="newValue"></param>
-    void OnTurnsToWashSet(int _, int newValue)
-    {
-        instructionTextbox.text = string.Format(instructionText, newValue);
-    }
 
     public override void OnStartServer()
     {
@@ -50,7 +32,7 @@ public class ForPuzzle : NetworkBehaviour
     {
         base.OnStartClient();
 
-        input.onEndEdit.AddListener(CheckResultIsCorrect);
+        input.text = turnsToWash.ToString();
     }
 
     /// <summary>
