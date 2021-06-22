@@ -21,6 +21,18 @@ public class ForPuzzle : NetworkBehaviour
     [SerializeField]
     TMP_InputField input;
 
+    int turnsInClient;
+
+    public void CountOneMoreTurn()
+    {
+        turnsInClient++;
+
+        if (turnsInClient == turnsToWash)
+        {
+            CmdFinishPuzzle();
+        }
+    }
+
     public override void OnStartServer()
     {
         base.OnStartServer();
@@ -35,36 +47,16 @@ public class ForPuzzle : NetworkBehaviour
         input.text = turnsToWash.ToString();
     }
 
-    /// <summary>
-    /// Exposed to be added on editor to OnEndEdit on the InputField. Takes input and sends it to the server to be checked to be correct.
-    /// </summary>
-    /// <param name="result">Textbox content</param>
-    [Client]
-    public void CheckResultIsCorrect(string result)
-    {
-        try
-        {
-            var turnsInput = int.Parse(result);
-            CmdCheckInputMatchesTurns(turnsInput);
-        }
-        catch (Exception e)
-        {
-            Debug.LogError(e);
-        }
-    }
 
     /// <summary>
     /// Checks client input to match turnsToWash.
     /// </summary>
     /// <param name="input"></param>
     [Command(ignoreAuthority = true)]
-    void CmdCheckInputMatchesTurns(int input, NetworkConnectionToClient sender = null)
+    void CmdFinishPuzzle(NetworkConnectionToClient sender = null)
     {
-        if(input == turnsToWash)
-        {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);
-            RpcClosePuzzle(sender);
-        }
+        PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);
+        RpcClosePuzzle(sender);
     }
 
     [TargetRpc]
