@@ -21,11 +21,20 @@ public class ForPuzzle : NetworkBehaviour
     [SerializeField]
     TMP_InputField input;
 
+    [SerializeField]
+    TextMeshProUGUI turnsText;
+
+    [TextArea]
+    [SerializeField]
+    string textToShowTurnsAvailable;
+
     int turnsInClient;
 
     public void CountOneMoreTurn()
     {
         turnsInClient++;
+
+        turnsText.text = string.Format(textToShowTurnsAvailable, turnsInClient);
 
         if (turnsInClient == turnsToWash)
         {
@@ -45,6 +54,8 @@ public class ForPuzzle : NetworkBehaviour
         base.OnStartClient();
 
         input.text = turnsToWash.ToString();
+
+        turnsText.text = string.Format(textToShowTurnsAvailable, turnsInClient);
     }
 
 
