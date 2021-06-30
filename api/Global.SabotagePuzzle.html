@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SabotagePuzzle
    | A night in the house of Hunt ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -134,7 +134,8 @@
   
   <a id="Global_SabotagePuzzle_IsPuzzleEnabled_" data-uid="Global.SabotagePuzzle.IsPuzzleEnabled*"></a>
   <h4 id="Global_SabotagePuzzle_IsPuzzleEnabled" data-uid="Global.SabotagePuzzle.IsPuzzleEnabled">IsPuzzleEnabled</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Enables opening a UI for solving puzzle primaraly</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -157,6 +158,51 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Global_SabotagePuzzle_AreEmergencyConditionsEnough_" data-uid="Global.SabotagePuzzle.AreEmergencyConditionsEnough*"></a>
+  <h4 id="Global_SabotagePuzzle_AreEmergencyConditionsEnough_Emergency_EmergencyType_" data-uid="Global.SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)">AreEmergencyConditionsEnough(Emergency.EmergencyType)</h4>
+  <div class="markdown level1 summary"><p>Called after an emergency ocurred. 
+The returned bool is if all conditions to trigger emergency are ready. 
+Regularly just checking for the emergency type is enough.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool AreEmergencyConditionsEnough(Emergency.EmergencyType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Global.Emergency.EmergencyType.html">Emergency.EmergencyType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Global_SabotagePuzzle_CloseAllPuzzle_" data-uid="Global.SabotagePuzzle.CloseAllPuzzle*"></a>

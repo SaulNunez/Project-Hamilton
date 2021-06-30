@@ -58,6 +58,94 @@ references:
   commentId: F:Global.AvailableCharacters.characters
   fullName: AvailableCharacters.characters
   nameWithType: AvailableCharacters.characters
+- uid: Global.AvailableCharactersMemory
+  name: AvailableCharactersMemory
+  href: api/Global.AvailableCharactersMemory.html
+  commentId: T:Global.AvailableCharactersMemory
+  fullName: AvailableCharactersMemory
+  nameWithType: AvailableCharactersMemory
+- uid: Global.AvailableCharactersMemory.CharacterSelection
+  name: AvailableCharactersMemory.CharacterSelection
+  href: api/Global.AvailableCharactersMemory.CharacterSelection.html
+  commentId: T:Global.AvailableCharactersMemory.CharacterSelection
+  fullName: AvailableCharactersMemory.CharacterSelection
+  nameWithType: AvailableCharactersMemory.CharacterSelection
+- uid: Global.AvailableCharactersMemory.CharacterSelection.#ctor(CharacterTypes,System.String)
+  name: CharacterSelection(CharacterTypes, String)
+  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection__ctor_CharacterTypes_System_String_
+  commentId: M:Global.AvailableCharactersMemory.CharacterSelection.#ctor(CharacterTypes,System.String)
+  fullName: AvailableCharactersMemory.CharacterSelection.CharacterSelection(CharacterTypes, System.String)
+  nameWithType: AvailableCharactersMemory.CharacterSelection.CharacterSelection(CharacterTypes, String)
+- uid: Global.AvailableCharactersMemory.CharacterSelection.#ctor*
+  name: CharacterSelection
+  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection__ctor_
+  commentId: Overload:Global.AvailableCharactersMemory.CharacterSelection.#ctor
+  isSpec: "True"
+  fullName: AvailableCharactersMemory.CharacterSelection.CharacterSelection
+  nameWithType: AvailableCharactersMemory.CharacterSelection.CharacterSelection
+- uid: Global.AvailableCharactersMemory.CharacterSelection.characterName
+  name: characterName
+  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection_characterName
+  commentId: F:Global.AvailableCharactersMemory.CharacterSelection.characterName
+  fullName: AvailableCharactersMemory.CharacterSelection.characterName
+  nameWithType: AvailableCharactersMemory.CharacterSelection.characterName
+- uid: Global.AvailableCharactersMemory.CharacterSelection.characterSelected
+  name: characterSelected
+  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection_characterSelected
+  commentId: F:Global.AvailableCharactersMemory.CharacterSelection.characterSelected
+  fullName: AvailableCharactersMemory.CharacterSelection.characterSelected
+  nameWithType: AvailableCharactersMemory.CharacterSelection.characterSelected
+- uid: Global.AvailableCharactersMemory.CharacterUsed(CharacterTypes)
+  name: CharacterUsed(CharacterTypes)
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CharacterUsed_CharacterTypes_
+  commentId: M:Global.AvailableCharactersMemory.CharacterUsed(CharacterTypes)
+  fullName: AvailableCharactersMemory.CharacterUsed(CharacterTypes)
+  nameWithType: AvailableCharactersMemory.CharacterUsed(CharacterTypes)
+- uid: Global.AvailableCharactersMemory.CharacterUsed*
+  name: CharacterUsed
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CharacterUsed_
+  commentId: Overload:Global.AvailableCharactersMemory.CharacterUsed
+  isSpec: "True"
+  fullName: AvailableCharactersMemory.CharacterUsed
+  nameWithType: AvailableCharactersMemory.CharacterUsed
+- uid: Global.AvailableCharactersMemory.CmdSetPlayerSelection(System.String,CharacterTypes)
+  name: CmdSetPlayerSelection(String, CharacterTypes)
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CmdSetPlayerSelection_System_String_CharacterTypes_
+  commentId: M:Global.AvailableCharactersMemory.CmdSetPlayerSelection(System.String,CharacterTypes)
+  fullName: AvailableCharactersMemory.CmdSetPlayerSelection(System.String, CharacterTypes)
+  nameWithType: AvailableCharactersMemory.CmdSetPlayerSelection(String, CharacterTypes)
+- uid: Global.AvailableCharactersMemory.CmdSetPlayerSelection*
+  name: CmdSetPlayerSelection
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CmdSetPlayerSelection_
+  commentId: Overload:Global.AvailableCharactersMemory.CmdSetPlayerSelection
+  isSpec: "True"
+  fullName: AvailableCharactersMemory.CmdSetPlayerSelection
+  nameWithType: AvailableCharactersMemory.CmdSetPlayerSelection
+- uid: Global.AvailableCharactersMemory.OnCharacterAvailable
+  name: OnCharacterAvailable
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnCharacterAvailable
+  commentId: E:Global.AvailableCharactersMemory.OnCharacterAvailable
+  fullName: AvailableCharactersMemory.OnCharacterAvailable
+  nameWithType: AvailableCharactersMemory.OnCharacterAvailable
+- uid: Global.AvailableCharactersMemory.OnCharacterOccupied
+  name: OnCharacterOccupied
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnCharacterOccupied
+  commentId: E:Global.AvailableCharactersMemory.OnCharacterOccupied
+  fullName: AvailableCharactersMemory.OnCharacterOccupied
+  nameWithType: AvailableCharactersMemory.OnCharacterOccupied
+- uid: Global.AvailableCharactersMemory.OnStartClient
+  name: OnStartClient()
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnStartClient
+  commentId: M:Global.AvailableCharactersMemory.OnStartClient
+  fullName: AvailableCharactersMemory.OnStartClient()
+  nameWithType: AvailableCharactersMemory.OnStartClient()
+- uid: Global.AvailableCharactersMemory.OnStartClient*
+  name: OnStartClient
+  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnStartClient_
+  commentId: Overload:Global.AvailableCharactersMemory.OnStartClient
+  isSpec: "True"
+  fullName: AvailableCharactersMemory.OnStartClient
+  nameWithType: AvailableCharactersMemory.OnStartClient
 - uid: Global.BoilerSabotageOptions
   name: BoilerSabotageOptions
   href: api/Global.BoilerSabotageOptions.html
@@ -197,6 +285,38 @@ references:
   isSpec: "True"
   fullName: CharacterRadioButton.Toggle
   nameWithType: CharacterRadioButton.Toggle
+- uid: Global.CharacterSelectionSerialization
+  name: CharacterSelectionSerialization
+  href: api/Global.CharacterSelectionSerialization.html
+  commentId: T:Global.CharacterSelectionSerialization
+  fullName: CharacterSelectionSerialization
+  nameWithType: CharacterSelectionSerialization
+- uid: Global.CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
+  name: ReadPCharacterSelection(NetworkReader)
+  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_ReadPCharacterSelection_Mirror_NetworkReader_
+  commentId: M:Global.CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
+  fullName: CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
+  nameWithType: CharacterSelectionSerialization.ReadPCharacterSelection(NetworkReader)
+- uid: Global.CharacterSelectionSerialization.ReadPCharacterSelection*
+  name: ReadPCharacterSelection
+  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_ReadPCharacterSelection_
+  commentId: Overload:Global.CharacterSelectionSerialization.ReadPCharacterSelection
+  isSpec: "True"
+  fullName: CharacterSelectionSerialization.ReadPCharacterSelection
+  nameWithType: CharacterSelectionSerialization.ReadPCharacterSelection
+- uid: Global.CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter,AvailableCharactersMemory.CharacterSelection)
+  name: WriteCharacterSelection(NetworkWriter, AvailableCharactersMemory.CharacterSelection)
+  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_WriteCharacterSelection_Mirror_NetworkWriter_AvailableCharactersMemory_CharacterSelection_
+  commentId: M:Global.CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter,AvailableCharactersMemory.CharacterSelection)
+  fullName: CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter, AvailableCharactersMemory.CharacterSelection)
+  nameWithType: CharacterSelectionSerialization.WriteCharacterSelection(NetworkWriter, AvailableCharactersMemory.CharacterSelection)
+- uid: Global.CharacterSelectionSerialization.WriteCharacterSelection*
+  name: WriteCharacterSelection
+  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_WriteCharacterSelection_
+  commentId: Overload:Global.CharacterSelectionSerialization.WriteCharacterSelection
+  isSpec: "True"
+  fullName: CharacterSelectionSerialization.WriteCharacterSelection
+  nameWithType: CharacterSelectionSerialization.WriteCharacterSelection
 - uid: Global.CharacterTypes
   name: CharacterTypes
   href: api/Global.CharacterTypes.html
@@ -251,6 +371,38 @@ references:
   commentId: F:Global.CharacterTypes.WernerLaffayette
   fullName: CharacterTypes.WernerLaffayette
   nameWithType: CharacterTypes.WernerLaffayette
+- uid: Global.CharacterTypesSerialization
+  name: CharacterTypesSerialization
+  href: api/Global.CharacterTypesSerialization.html
+  commentId: T:Global.CharacterTypesSerialization
+  fullName: CharacterTypesSerialization
+  nameWithType: CharacterTypesSerialization
+- uid: Global.CharacterTypesSerialization.ReadCharacterTypes(Mirror.NetworkReader)
+  name: ReadCharacterTypes(NetworkReader)
+  href: api/Global.CharacterTypesSerialization.html#Global_CharacterTypesSerialization_ReadCharacterTypes_Mirror_NetworkReader_
+  commentId: M:Global.CharacterTypesSerialization.ReadCharacterTypes(Mirror.NetworkReader)
+  fullName: CharacterTypesSerialization.ReadCharacterTypes(Mirror.NetworkReader)
+  nameWithType: CharacterTypesSerialization.ReadCharacterTypes(NetworkReader)
+- uid: Global.CharacterTypesSerialization.ReadCharacterTypes*
+  name: ReadCharacterTypes
+  href: api/Global.CharacterTypesSerialization.html#Global_CharacterTypesSerialization_ReadCharacterTypes_
+  commentId: Overload:Global.CharacterTypesSerialization.ReadCharacterTypes
+  isSpec: "True"
+  fullName: CharacterTypesSerialization.ReadCharacterTypes
+  nameWithType: CharacterTypesSerialization.ReadCharacterTypes
+- uid: Global.CharacterTypesSerialization.WriteCharacterTypes(Mirror.NetworkWriter,CharacterTypes)
+  name: WriteCharacterTypes(NetworkWriter, CharacterTypes)
+  href: api/Global.CharacterTypesSerialization.html#Global_CharacterTypesSerialization_WriteCharacterTypes_Mirror_NetworkWriter_CharacterTypes_
+  commentId: M:Global.CharacterTypesSerialization.WriteCharacterTypes(Mirror.NetworkWriter,CharacterTypes)
+  fullName: CharacterTypesSerialization.WriteCharacterTypes(Mirror.NetworkWriter, CharacterTypes)
+  nameWithType: CharacterTypesSerialization.WriteCharacterTypes(NetworkWriter, CharacterTypes)
+- uid: Global.CharacterTypesSerialization.WriteCharacterTypes*
+  name: WriteCharacterTypes
+  href: api/Global.CharacterTypesSerialization.html#Global_CharacterTypesSerialization_WriteCharacterTypes_
+  commentId: Overload:Global.CharacterTypesSerialization.WriteCharacterTypes
+  isSpec: "True"
+  fullName: CharacterTypesSerialization.WriteCharacterTypes
+  nameWithType: CharacterTypesSerialization.WriteCharacterTypes
 - uid: Global.CompleteBoolPuzzle
   name: CompleteBoolPuzzle
   href: api/Global.CompleteBoolPuzzle.html
@@ -542,6 +694,19 @@ references:
   commentId: T:Global.ElectricitySabotage
   fullName: ElectricitySabotage
   nameWithType: ElectricitySabotage
+- uid: Global.ElectricitySabotage.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  name: AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_AreEmergencyConditionsEnough_Emergency_EmergencyType_
+  commentId: M:Global.ElectricitySabotage.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  fullName: ElectricitySabotage.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  nameWithType: ElectricitySabotage.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+- uid: Global.ElectricitySabotage.AreEmergencyConditionsEnough*
+  name: AreEmergencyConditionsEnough
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_AreEmergencyConditionsEnough_
+  commentId: Overload:Global.ElectricitySabotage.AreEmergencyConditionsEnough
+  isSpec: "True"
+  fullName: ElectricitySabotage.AreEmergencyConditionsEnough
+  nameWithType: ElectricitySabotage.AreEmergencyConditionsEnough
 - uid: Global.ElectricitySabotage.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnPuzzleCompleted
@@ -555,12 +720,25 @@ references:
   isSpec: "True"
   fullName: ElectricitySabotage.OnPuzzleCompleted
   nameWithType: ElectricitySabotage.OnPuzzleCompleted
-- uid: Global.ElectricitySabotage.SendNewGeneratorValue(System.Int32)
-  name: SendNewGeneratorValue(Int32)
-  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_SendNewGeneratorValue_System_Int32_
-  commentId: M:Global.ElectricitySabotage.SendNewGeneratorValue(System.Int32)
-  fullName: ElectricitySabotage.SendNewGeneratorValue(System.Int32)
-  nameWithType: ElectricitySabotage.SendNewGeneratorValue(Int32)
+- uid: Global.ElectricitySabotage.OnStartClient
+  name: OnStartClient()
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnStartClient
+  commentId: M:Global.ElectricitySabotage.OnStartClient
+  fullName: ElectricitySabotage.OnStartClient()
+  nameWithType: ElectricitySabotage.OnStartClient()
+- uid: Global.ElectricitySabotage.OnStartClient*
+  name: OnStartClient
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnStartClient_
+  commentId: Overload:Global.ElectricitySabotage.OnStartClient
+  isSpec: "True"
+  fullName: ElectricitySabotage.OnStartClient
+  nameWithType: ElectricitySabotage.OnStartClient
+- uid: Global.ElectricitySabotage.SendNewGeneratorValue(System.Single)
+  name: SendNewGeneratorValue(Single)
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_SendNewGeneratorValue_System_Single_
+  commentId: M:Global.ElectricitySabotage.SendNewGeneratorValue(System.Single)
+  fullName: ElectricitySabotage.SendNewGeneratorValue(System.Single)
+  nameWithType: ElectricitySabotage.SendNewGeneratorValue(Single)
 - uid: Global.ElectricitySabotage.SendNewGeneratorValue*
   name: SendNewGeneratorValue
   href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_SendNewGeneratorValue_
@@ -751,6 +929,19 @@ references:
   isSpec: "True"
   fullName: Emergency.StopEmergency
   nameWithType: Emergency.StopEmergency
+- uid: Global.Emergency.TimeRemainingEmergency
+  name: TimeRemainingEmergency
+  href: api/Global.Emergency.html#Global_Emergency_TimeRemainingEmergency
+  commentId: P:Global.Emergency.TimeRemainingEmergency
+  fullName: Emergency.TimeRemainingEmergency
+  nameWithType: Emergency.TimeRemainingEmergency
+- uid: Global.Emergency.TimeRemainingEmergency*
+  name: TimeRemainingEmergency
+  href: api/Global.Emergency.html#Global_Emergency_TimeRemainingEmergency_
+  commentId: Overload:Global.Emergency.TimeRemainingEmergency
+  isSpec: "True"
+  fullName: Emergency.TimeRemainingEmergency
+  nameWithType: Emergency.TimeRemainingEmergency
 - uid: Global.EnumerableExtension
   name: EnumerableExtension
   href: api/Global.EnumerableExtension.html
@@ -884,25 +1075,19 @@ references:
   commentId: T:Global.ForPuzzle
   fullName: ForPuzzle
   nameWithType: ForPuzzle
-- uid: Global.ForPuzzle.CheckResultIsCorrect(System.String)
-  name: CheckResultIsCorrect(String)
-  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CheckResultIsCorrect_System_String_
-  commentId: M:Global.ForPuzzle.CheckResultIsCorrect(System.String)
-  fullName: ForPuzzle.CheckResultIsCorrect(System.String)
-  nameWithType: ForPuzzle.CheckResultIsCorrect(String)
-- uid: Global.ForPuzzle.CheckResultIsCorrect*
-  name: CheckResultIsCorrect
-  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CheckResultIsCorrect_
-  commentId: Overload:Global.ForPuzzle.CheckResultIsCorrect
+- uid: Global.ForPuzzle.CountOneMoreTurn
+  name: CountOneMoreTurn()
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CountOneMoreTurn
+  commentId: M:Global.ForPuzzle.CountOneMoreTurn
+  fullName: ForPuzzle.CountOneMoreTurn()
+  nameWithType: ForPuzzle.CountOneMoreTurn()
+- uid: Global.ForPuzzle.CountOneMoreTurn*
+  name: CountOneMoreTurn
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CountOneMoreTurn_
+  commentId: Overload:Global.ForPuzzle.CountOneMoreTurn
   isSpec: "True"
-  fullName: ForPuzzle.CheckResultIsCorrect
-  nameWithType: ForPuzzle.CheckResultIsCorrect
-- uid: Global.ForPuzzle.instructionText
-  name: instructionText
-  href: api/Global.ForPuzzle.html#Global_ForPuzzle_instructionText
-  commentId: F:Global.ForPuzzle.instructionText
-  fullName: ForPuzzle.instructionText
-  nameWithType: ForPuzzle.instructionText
+  fullName: ForPuzzle.CountOneMoreTurn
+  nameWithType: ForPuzzle.CountOneMoreTurn
 - uid: Global.ForPuzzle.OnStartClient
   name: OnStartClient()
   href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartClient
@@ -1251,12 +1436,6 @@ references:
   commentId: F:Global.HubConfig.secondsOfCooldownsForKill
   fullName: HubConfig.secondsOfCooldownsForKill
   nameWithType: HubConfig.secondsOfCooldownsForKill
-- uid: Global.HubConfig.secondsOfCooldownToEmergencies
-  name: secondsOfCooldownToEmergencies
-  href: api/Global.HubConfig.html#Global_HubConfig_secondsOfCooldownToEmergencies
-  commentId: F:Global.HubConfig.secondsOfCooldownToEmergencies
-  fullName: HubConfig.secondsOfCooldownToEmergencies
-  nameWithType: HubConfig.secondsOfCooldownToEmergencies
 - uid: Global.IfElsePuzzle
   name: IfElsePuzzle
   href: api/Global.IfElsePuzzle.html
@@ -2120,25 +2299,32 @@ references:
   commentId: T:Global.PlayerSelectionInLobby
   fullName: PlayerSelectionInLobby
   nameWithType: PlayerSelectionInLobby
-- uid: Global.PlayerSelectionInLobby.Commit
-  name: Commit()
-  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_Commit
-  commentId: M:Global.PlayerSelectionInLobby.Commit
-  fullName: PlayerSelectionInLobby.Commit()
-  nameWithType: PlayerSelectionInLobby.Commit()
-- uid: Global.PlayerSelectionInLobby.Commit*
-  name: Commit
-  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_Commit_
-  commentId: Overload:Global.PlayerSelectionInLobby.Commit
+- uid: Global.PlayerSelectionInLobby.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStartClient
+  commentId: M:Global.PlayerSelectionInLobby.OnStartClient
+  fullName: PlayerSelectionInLobby.OnStartClient()
+  nameWithType: PlayerSelectionInLobby.OnStartClient()
+- uid: Global.PlayerSelectionInLobby.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStartClient_
+  commentId: Overload:Global.PlayerSelectionInLobby.OnStartClient
   isSpec: "True"
-  fullName: PlayerSelectionInLobby.Commit
-  nameWithType: PlayerSelectionInLobby.Commit
-- uid: Global.PlayerSelectionInLobby.currentCharacterType
-  name: currentCharacterType
-  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_currentCharacterType
-  commentId: F:Global.PlayerSelectionInLobby.currentCharacterType
-  fullName: PlayerSelectionInLobby.currentCharacterType
-  nameWithType: PlayerSelectionInLobby.currentCharacterType
+  fullName: PlayerSelectionInLobby.OnStartClient
+  nameWithType: PlayerSelectionInLobby.OnStartClient
+- uid: Global.PlayerSelectionInLobby.OnStopClient
+  name: OnStopClient()
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStopClient
+  commentId: M:Global.PlayerSelectionInLobby.OnStopClient
+  fullName: PlayerSelectionInLobby.OnStopClient()
+  nameWithType: PlayerSelectionInLobby.OnStopClient()
+- uid: Global.PlayerSelectionInLobby.OnStopClient*
+  name: OnStopClient
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStopClient_
+  commentId: Overload:Global.PlayerSelectionInLobby.OnStopClient
+  isSpec: "True"
+  fullName: PlayerSelectionInLobby.OnStopClient
+  nameWithType: PlayerSelectionInLobby.OnStopClient
 - uid: Global.PlayerSelectionInLobby.ToggleAndCharacter
   name: PlayerSelectionInLobby.ToggleAndCharacter
   href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html
@@ -2194,6 +2380,19 @@ references:
   commentId: F:Global.PlayerSkin.charactersMapping
   fullName: PlayerSkin.charactersMapping
   nameWithType: PlayerSkin.charactersMapping
+- uid: Global.PlayerSkin.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PlayerSkin.html#Global_PlayerSkin_OnStartClient
+  commentId: M:Global.PlayerSkin.OnStartClient
+  fullName: PlayerSkin.OnStartClient()
+  nameWithType: PlayerSkin.OnStartClient()
+- uid: Global.PlayerSkin.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PlayerSkin.html#Global_PlayerSkin_OnStartClient_
+  commentId: Overload:Global.PlayerSkin.OnStartClient
+  isSpec: "True"
+  fullName: PlayerSkin.OnStartClient
+  nameWithType: PlayerSkin.OnStartClient
 - uid: Global.PlayerVotingButton
   name: PlayerVotingButton
   href: api/Global.PlayerVotingButton.html
@@ -2951,6 +3150,19 @@ references:
   commentId: T:Global.SabotageBoilers
   fullName: SabotageBoilers
   nameWithType: SabotageBoilers
+- uid: Global.SabotageBoilers.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  name: AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_AreEmergencyConditionsEnough_Emergency_EmergencyType_
+  commentId: M:Global.SabotageBoilers.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  fullName: SabotageBoilers.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  nameWithType: SabotageBoilers.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+- uid: Global.SabotageBoilers.AreEmergencyConditionsEnough*
+  name: AreEmergencyConditionsEnough
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_AreEmergencyConditionsEnough_
+  commentId: Overload:Global.SabotageBoilers.AreEmergencyConditionsEnough
+  isSpec: "True"
+  fullName: SabotageBoilers.AreEmergencyConditionsEnough
+  nameWithType: SabotageBoilers.AreEmergencyConditionsEnough
 - uid: Global.SabotageBoilers.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleCompleted
@@ -2964,6 +3176,19 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.OnPuzzleCompleted
   nameWithType: SabotageBoilers.OnPuzzleCompleted
+- uid: Global.SabotageBoilers.OnStartClient
+  name: OnStartClient()
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartClient
+  commentId: M:Global.SabotageBoilers.OnStartClient
+  fullName: SabotageBoilers.OnStartClient()
+  nameWithType: SabotageBoilers.OnStartClient()
+- uid: Global.SabotageBoilers.OnStartClient*
+  name: OnStartClient
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartClient_
+  commentId: Overload:Global.SabotageBoilers.OnStartClient
+  isSpec: "True"
+  fullName: SabotageBoilers.OnStartClient
+  nameWithType: SabotageBoilers.OnStartClient
 - uid: Global.SabotageBoilers.OnStartServer
   name: OnStartServer()
   href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartServer
@@ -3022,6 +3247,19 @@ references:
   commentId: T:Global.SabotagePuzzle
   fullName: SabotagePuzzle
   nameWithType: SabotagePuzzle
+- uid: Global.SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  name: AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_AreEmergencyConditionsEnough_Emergency_EmergencyType_
+  commentId: M:Global.SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  fullName: SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  nameWithType: SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+- uid: Global.SabotagePuzzle.AreEmergencyConditionsEnough*
+  name: AreEmergencyConditionsEnough
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_AreEmergencyConditionsEnough_
+  commentId: Overload:Global.SabotagePuzzle.AreEmergencyConditionsEnough
+  isSpec: "True"
+  fullName: SabotagePuzzle.AreEmergencyConditionsEnough
+  nameWithType: SabotagePuzzle.AreEmergencyConditionsEnough
 - uid: Global.SabotagePuzzle.CloseAllPuzzle
   name: CloseAllPuzzle()
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_CloseAllPuzzle
@@ -3187,6 +3425,19 @@ references:
   commentId: T:Global.SabotageQuestions
   fullName: SabotageQuestions
   nameWithType: SabotageQuestions
+- uid: Global.SabotageQuestions.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  name: AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_AreEmergencyConditionsEnough_Emergency_EmergencyType_
+  commentId: M:Global.SabotageQuestions.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  fullName: SabotageQuestions.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+  nameWithType: SabotageQuestions.AreEmergencyConditionsEnough(Emergency.EmergencyType)
+- uid: Global.SabotageQuestions.AreEmergencyConditionsEnough*
+  name: AreEmergencyConditionsEnough
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_AreEmergencyConditionsEnough_
+  commentId: Overload:Global.SabotageQuestions.AreEmergencyConditionsEnough
+  isSpec: "True"
+  fullName: SabotageQuestions.AreEmergencyConditionsEnough
+  nameWithType: SabotageQuestions.AreEmergencyConditionsEnough
 - uid: Global.SabotageQuestions.OnPuzzleActivated
   name: OnPuzzleActivated()
   href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_OnPuzzleActivated
@@ -3594,6 +3845,31 @@ references:
   isSpec: "True"
   fullName: SoundAlarmDuringEmergency.OnStopServer
   nameWithType: SoundAlarmDuringEmergency.OnStopServer
+- uid: Global.SpinUIOnDrag
+  name: SpinUIOnDrag
+  href: api/Global.SpinUIOnDrag.html
+  commentId: T:Global.SpinUIOnDrag
+  fullName: SpinUIOnDrag
+  nameWithType: SpinUIOnDrag
+- uid: Global.SpinUIOnDrag.onCycle
+  name: onCycle
+  href: api/Global.SpinUIOnDrag.html#Global_SpinUIOnDrag_onCycle
+  commentId: F:Global.SpinUIOnDrag.onCycle
+  fullName: SpinUIOnDrag.onCycle
+  nameWithType: SpinUIOnDrag.onCycle
+- uid: Global.SpinUIOnDrag.OnDrag
+  name: OnDrag()
+  href: api/Global.SpinUIOnDrag.html#Global_SpinUIOnDrag_OnDrag
+  commentId: M:Global.SpinUIOnDrag.OnDrag
+  fullName: SpinUIOnDrag.OnDrag()
+  nameWithType: SpinUIOnDrag.OnDrag()
+- uid: Global.SpinUIOnDrag.OnDrag*
+  name: OnDrag
+  href: api/Global.SpinUIOnDrag.html#Global_SpinUIOnDrag_OnDrag_
+  commentId: Overload:Global.SpinUIOnDrag.OnDrag
+  isSpec: "True"
+  fullName: SpinUIOnDrag.OnDrag
+  nameWithType: SpinUIOnDrag.OnDrag
 - uid: Global.SpriteFlipOnVelocity
   name: SpriteFlipOnVelocity
   href: api/Global.SpriteFlipOnVelocity.html
@@ -3644,6 +3920,12 @@ references:
   commentId: T:Global.Tags
   fullName: Tags
   nameWithType: Tags
+- uid: Global.Tags.AvailablePlayerManager
+  name: AvailablePlayerManager
+  href: api/Global.Tags.html#Global_Tags_AvailablePlayerManager
+  commentId: F:Global.Tags.AvailablePlayerManager
+  fullName: Tags.AvailablePlayerManager
+  nameWithType: Tags.AvailablePlayerManager
 - uid: Global.Tags.HubConfig
   name: HubConfig
   href: api/Global.Tags.html#Global_Tags_HubConfig
@@ -3977,12 +4259,6 @@ references:
   isSpec: "True"
   fullName: UILobbyConnect.LookForGameOnServer
   nameWithType: UILobbyConnect.LookForGameOnServer
-- uid: Global.UpdateTaskList
-  name: UpdateTaskList
-  href: api/Global.UpdateTaskList.html
-  commentId: T:Global.UpdateTaskList
-  fullName: UpdateTaskList
-  nameWithType: UpdateTaskList
 - uid: Global.UpdateTimeRemaining
   name: UpdateTimeRemaining
   href: api/Global.UpdateTimeRemaining.html

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PlayerSelectionInLobby
    | A night in the house of Hunt ">
-    <meta name="generator" content="docfx 2.57.2.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -90,53 +90,41 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">PlayerSelectionInLobby</span></div>
+    <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
+    <div class="level2"><span class="xref">PlayerSelectionInLobby</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Global_PlayerSelectionInLobby_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlayerSelectionInLobby : MonoBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlayerSelectionInLobby : NetworkBehaviour</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Global_PlayerSelectionInLobby_currentCharacterType" data-uid="Global.PlayerSelectionInLobby.currentCharacterType">currentCharacterType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CharacterTypes currentCharacterType</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Global.CharacterTypes.html">CharacterTypes</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Global_PlayerSelectionInLobby_Commit_" data-uid="Global.PlayerSelectionInLobby.Commit*"></a>
-  <h4 id="Global_PlayerSelectionInLobby_Commit" data-uid="Global.PlayerSelectionInLobby.Commit">Commit()</h4>
-  <div class="markdown level1 summary"><p>Called when &quot;saving and close&quot;, updates variables in network player with updated values</p>
-</div>
+  <a id="Global_PlayerSelectionInLobby_OnStartClient_" data-uid="Global.PlayerSelectionInLobby.OnStartClient*"></a>
+  <h4 id="Global_PlayerSelectionInLobby_OnStartClient" data-uid="Global.PlayerSelectionInLobby.OnStartClient">OnStartClient()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Commit()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
+  
+  
+  <a id="Global_PlayerSelectionInLobby_OnStopClient_" data-uid="Global.PlayerSelectionInLobby.OnStopClient*"></a>
+  <h4 id="Global_PlayerSelectionInLobby_OnStopClient" data-uid="Global.PlayerSelectionInLobby.OnStopClient">OnStopClient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnStopClient()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStopClient()</span></div>
 </article>
           </div>
           
