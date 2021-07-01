@@ -51,6 +51,11 @@ jobs:
         with:
           name: Build
           path: build
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
       - uses: actions/cache@v2
         with:
           path: /tmp/.buildx-cache-server
@@ -63,8 +68,6 @@ jobs:
           push: true
           file: server.dockerfile
           context: .
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           cache-from: type=local,src=/tmp/.buildx-cache-server
           cache-to: type=local,dest=/tmp/.buildx-cache-server-new
           
