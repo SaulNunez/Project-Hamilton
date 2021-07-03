@@ -74,7 +74,7 @@ jobs:
         with:
           push: true
           file: server.dockerfile
-          context: .
+          context: ./
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=local,src=/tmp/.buildx-cache-server
           cache-to: type=local,dest=/tmp/.buildx-cache-server-new
