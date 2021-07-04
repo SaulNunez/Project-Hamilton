@@ -51,6 +51,8 @@ jobs:
         with:
           name: Build
           path: build
+      - name: Get information in filesystem
+        run: ls -l -R
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Log in to Docker Hub
