@@ -133,21 +133,26 @@ public class SequenceGrid : MonoBehaviour
         var updated = false;
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
+            print("Go up");
+            updated = true;
+            // No idea why down goes up
+            currentPosition += Vector2Int.down;
+        } 
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        {
+            print("Go down");
             updated = true;
             currentPosition += Vector2Int.up;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            updated = true;
-            currentPosition += Vector2Int.down;
-        }
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
+            print("Go left");
             updated = true;
             currentPosition += Vector2Int.left;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
+            print("Go right");
             updated = true;
             currentPosition += Vector2Int.right;
         }
