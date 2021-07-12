@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Sequence
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 3}
+  endPosition: {x: 6, y: 1}
   horizontalSize: 7
   verticalSize: 5
   floor: 0000000000000000000101010101000001000000000101010000000000000000000000

@@ -13,6 +13,7 @@ public class SequenceEditor : Editor
     SerializedProperty horizontal;
     SerializedProperty vertical;
     SerializedProperty startPosition;
+    SerializedProperty endPosition;
 
     private void OnEnable()
     {
@@ -20,6 +21,7 @@ public class SequenceEditor : Editor
         horizontal = serializedObject.FindProperty("horizontalSize");
         vertical = serializedObject.FindProperty("verticalSize");
         startPosition = serializedObject.FindProperty("startPosition");
+        endPosition = serializedObject.FindProperty("endPosition");
     }
 
     public override void OnInspectorGUI()
@@ -27,6 +29,7 @@ public class SequenceEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(startPosition);
+        EditorGUILayout.PropertyField(endPosition);
 
         EditorGUILayout.PropertyField(horizontal);
         EditorGUILayout.PropertyField(vertical);
