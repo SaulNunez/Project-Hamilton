@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,11 @@ public class SetupDefaultFlowers: NetworkBehaviour {
     [SerializeField]
     List<FlowerButtonModel> flowerButtons;
 
+    //private void Start()
+    //{
+    //    print($"Flowers: {string.Join(", ", FlowerTypes.Types.Shuffle())}");
+    //}
+
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -56,9 +62,11 @@ public class SetupDefaultFlowers: NetworkBehaviour {
                 break;
         }
 
-        foreach (var flowerButton in flowerButtons)
+        var flowerTypes = FlowerTypes.Types.Shuffle();
+        for (int i = 0; i < flowerButtons.Count; i++)
         {
-            var flowerType = FlowerTypes.Types.PickRandom();
+            FlowerButtonModel flowerButton = flowerButtons[i];
+            string flowerType = flowerTypes.ElementAt(i);
             switch (flowerType)
             {
                 case FlowerTypes.Sunflower:
