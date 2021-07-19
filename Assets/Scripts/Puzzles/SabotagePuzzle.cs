@@ -133,6 +133,8 @@ public class SabotagePuzzle : NetworkBehaviour
 
         playersWhoSolved.Add(player);
 
+        print($"Puzzle solved by player count: {playersWhoSolved.Count}");
+
         TargetClosePuzzle(player);
 
         print("aaaa");
@@ -150,8 +152,11 @@ public class SabotagePuzzle : NetworkBehaviour
     /// 
     /// Allways call base implementation via `base.OnPuzzleCompleted()` or some default behaviour will be missing!
     /// </summary>
+    [Server]
     protected virtual void OnPuzzleCompleted() {
         CloseAllPuzzle();
+
+        Emergency.instance.StopEmergency();
     }
 
     public override void OnStopServer()
