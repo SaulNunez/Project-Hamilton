@@ -239,7 +239,7 @@ public class Emergency : NetworkBehaviour
     public void StopEmergency()
     {
         CancelInvoke(nameof(OnTimeEnded));
-        CancelInvoke(nameof(CountdownToAvailability));
+        CancelInvoke(nameof(CountdownTimeRemaining));
         onSabotage = false;
         currentActiveSabotage = EmergencyType.None;
         StartCooldown();
