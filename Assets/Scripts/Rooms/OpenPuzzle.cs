@@ -43,13 +43,18 @@ public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
         puzzleIsAvailable = enabled;
 
         var materialSet = GetComponent<PuzzleActiveOutline>();
-        materialSet.IsActive = enabled;
+        
+        if(materialSet != null)
+        {
+            materialSet.IsActive = enabled;
+        }
     }
 
     [Server]
     public void OnApproach(GameObject approachedBy)
     {
-        if (puzzleIsAvailable)
+        //TODO: Hacer verificacion mas poderosa sobre si podemos resolver este puzzle en el cliente
+        if (/*puzzleIsAvailable*/ true)
         {
             print("Show puzzle");
             //TODO: Crear id de puzzle en el servidor para mantener el estado
