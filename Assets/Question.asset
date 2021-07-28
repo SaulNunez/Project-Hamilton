@@ -13,18 +13,161 @@ MonoBehaviour:
   m_Name: Question
   m_EditorClassIdentifier: 
   questions:
-  - question: 
-    answers: []
+  - question: "\xBFCu\xE1ntas pel\xEDculas y libros de Harry Potter hay?"
+    answers:
+    - "8 libros y 7 pel\xEDculas"
+    - "7 libros y no hay pel\xEDculas"
+    - "5 libros y 6 pel\xEDculas "
+    - "7 libros and 8 pel\xEDculas"
+    correctAnswerIndex: 3
+  - question: "\xBFQu\xE9 otro Vengador aparte de Capit\xE1n Am\xE9rica fue capaz
+      de recoger el Mjolnir de Thor en las pel\xEDculas de Marvel? "
+    answers:
+    - Vision
+    - Doctor Strange
+    - Luke Cage
+    - Spiderman
     correctAnswerIndex: 0
-  - question: 
-    answers: []
+  - question: "\xBFQu\xE9 d\xEDa es el D\xEDa de Star Wars?"
+    answers:
+    - 4 de Mayo
+    - 4 de Octubre
+    - 25 de Diciembre
+    - 12 de Marzo
     correctAnswerIndex: 0
-  - question: 
-    answers: []
+  - question: "\xBFC\xF3mo llamaron los fans de Mandalorian a \"The Child\" en la
+      serie de Disney+?"
+    answers:
+    - Baby Yoda
+    - Grogu
+    - Yaddle
+    - Yoda
     correctAnswerIndex: 0
-  - question: 
-    answers: []
+  - question: "\xBFQu\xE9 empresario nombr\xF3 a su hijo X \xC6 A-12?"
+    answers:
+    - Kayne West
+    - Bill Gates
+    - Elon Musk
+    - Steve Jobs
+    correctAnswerIndex: 2
+  - question: "\xBFQui\xE9n fue el baterista de The Beatles?"
+    answers:
+    - John Lennon
+    - Ringo Starr
+    - Ed Sheeran
+    - Elton John
+    correctAnswerIndex: 1
+  - question: "\xBFQui\xE9n es el mejor amigo famoso de Snoop Dogg?"
+    answers:
+    - Martha Stewart
+    - Oprah
+    - "Sergio Liz\xE1rraga"
+    - Justin Timberlake
     correctAnswerIndex: 0
-  - question: 
-    answers: []
+  - question: "\xBFD\xF3nde se film\xF3 el video musical de Daddy Yankee para \"Gasolina\"?"
+    answers:
+    - "T\xFAnez"
+    - Francia
+    - Egipto
+    - "Espa\xF1a"
     correctAnswerIndex: 0
+  - question: "\xBFQu\xE9 a\xF1o fue lanzado la canci\xF3n \"Smells Like Teen Spirit\"
+      de la banda Nirvana?"
+    answers:
+    - 1994
+    - 1991
+    - 1989
+    - 1992
+    correctAnswerIndex: 1
+  - question: "\xBFEn qu\xE9 ciudad ficticia vive Bob Esponja?"
+    answers:
+    - Danville
+    - Fondo de Bikini
+    - Gotham
+    - Townsville
+    correctAnswerIndex: 1
+  - question: "\xBFEn qu\xE9 ciudad tiene lugar el programa de televisi\xF3n Mad
+      Men?"
+    answers:
+    - Nueva York
+    - Roma
+    - Chicago
+    - Los Angeles
+    correctAnswerIndex: 0
+  - question: "\xBFD\xF3nde tiene lugar la pel\xEDcula Mi Peque\xF1o Angelito 2?"
+    answers:
+    - Nueva York y Chicago
+    - Nueva York y Miami
+    - Los Angeles y Chicago
+    - Memphis y Chicago
+    correctAnswerIndex: 0
+  - question: "\xBFQu\xE9 famosa canci\xF3n navide\xF1a es Mariah Carey conocida
+      por?"
+    answers:
+    - "\u201CI\u2019ll Be Home for Christmas\u201D"
+    - "\u201CLast Christmas\u201D"
+    - "\u201CFeliz Navidad\u201D"
+    - "\u201CAll I Want for Christmas Is You\u201D"
+    correctAnswerIndex: 3
+  - question: "\xBFQu\xE9 famosa canci\xF3n navide\xF1a es Mariah Carey conocida
+      por?"
+    answers:
+    - Kayne West
+    - Bill Gates
+    - Elon Musk
+    - Steve Jobs
+    correctAnswerIndex: 3
+  - question: "Black Panther protagoniz\xF3 qu\xE9 famoso actor"
+    answers:
+    - Michael B. Jordan
+    - Chadwick Boseman
+    - Danai Gurira
+    - Samuel L. Jackson
+    correctAnswerIndex: 1
+  - question: "Este personaje femenino ficticio es la estrella de la serie de videojuegos
+      \u201CTomb Raider\u201D, que debut\xF3 en 1996."
+    answers:
+    - Samus Aran
+    - Chun-Li
+    - Lara Croft
+    - Tifa Lockhart
+    correctAnswerIndex: 2
+  - question: "\xBFDe qu\xE9 idioma proviene el nombre \"Simba\"?"
+    answers:
+    - Swahili
+    - Frances
+    - Xulu
+    - Ingles
+    correctAnswerIndex: 0
+  - question: "Si necesito realizar una lista de acciones al cumplirse una condici\xF3n,
+      que utilizar\xEDa"
+    answers:
+    - Bloque do while
+    - Bloque for
+    - Bloque mientras (While)
+    - Bloque si (if)
+    correctAnswerIndex: 3
+  - question: "Quiero guardar un numero entero, \xBFque utilizar\xEDa?"
+    answers:
+    - Una cadena de texto
+    - Variables
+    - Bloque si/entonces (if/else)
+    - Bloque mientras (While)
+    correctAnswerIndex: 1
+  - question: "\xBFQu\xE9 pel\xEDcula de 2013 se basa en una futura Am\xE9rica dist\xF3pica,
+      donde todo crimen se hace legal una noche al a\xF1o?"
+    answers:
+    - The purge
+    - Gravity
+    - "12 a\xF1os esclavo"
+    - Prisioneros
+    correctAnswerIndex: 0
+  - question: "Si necesito revisar una calificaci\xF3n y si pasa de 7 quiero imprimir
+      un peque\xF1o diploma con el nombre del usuario, \xBFy si es menor de 7 quiero
+      mandarlo a una pantalla donde puede tomar de nuevo el examen, que utilizar\xEDa? "
+    answers:
+    - Bloque for
+    - Bloque mientras (While)
+    - Bloque si/entonces (if/else)
+    - Bloque do While
+    correctAnswerIndex: 2
