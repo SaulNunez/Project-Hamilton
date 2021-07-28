@@ -1701,6 +1701,12 @@ references:
   isSpec: "True"
   fullName: Killing.IsAssasin
   nameWithType: Killing.IsAssasin
+- uid: Global.Killing.OnKilledMostPlayers
+  name: OnKilledMostPlayers
+  href: api/Global.Killing.html#Global_Killing_OnKilledMostPlayers
+  commentId: E:Global.Killing.OnKilledMostPlayers
+  fullName: Killing.OnKilledMostPlayers
+  nameWithType: Killing.OnKilledMostPlayers
 - uid: Global.Killing.OnStartClient
   name: OnStartClient()
   href: api/Global.Killing.html#Global_Killing_OnStartClient
@@ -2060,6 +2066,31 @@ references:
   isSpec: "True"
   fullName: OpenSabotage.OnStopServer
   nameWithType: OpenSabotage.OnStopServer
+- uid: Global.OpenUrl
+  name: OpenUrl
+  href: api/Global.OpenUrl.html
+  commentId: T:Global.OpenUrl
+  fullName: OpenUrl
+  nameWithType: OpenUrl
+- uid: Global.OpenUrl.RedirectToUrl
+  name: RedirectToUrl()
+  href: api/Global.OpenUrl.html#Global_OpenUrl_RedirectToUrl
+  commentId: M:Global.OpenUrl.RedirectToUrl
+  fullName: OpenUrl.RedirectToUrl()
+  nameWithType: OpenUrl.RedirectToUrl()
+- uid: Global.OpenUrl.RedirectToUrl*
+  name: RedirectToUrl
+  href: api/Global.OpenUrl.html#Global_OpenUrl_RedirectToUrl_
+  commentId: Overload:Global.OpenUrl.RedirectToUrl
+  isSpec: "True"
+  fullName: OpenUrl.RedirectToUrl
+  nameWithType: OpenUrl.RedirectToUrl
+- uid: Global.OpenUrl.url
+  name: url
+  href: api/Global.OpenUrl.html#Global_OpenUrl_url
+  commentId: F:Global.OpenUrl.url
+  fullName: OpenUrl.url
+  nameWithType: OpenUrl.url
 - uid: Global.PlayerControls
   name: PlayerControls
   href: api/Global.PlayerControls.html

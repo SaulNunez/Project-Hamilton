@@ -592,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Killing.html",
-          "hash": "+Rm5sIgbyAnUg3ZtWmuKltAmuwV0hEvUf9Ap26ZPwwE="
+          "hash": "stAkT3AAZ+G+z3sRyYEyaxLoVZ3v6OCUZuIIkq1Ybxg="
         }
       },
       "is_incremental": false,
@@ -689,6 +689,18 @@
         ".html": {
           "relative_path": "api/Global.OpenSabotage.html",
           "hash": "DospIwEKAcUWCI2AjvfHbxmN9/j2ui0/vaIXqocZ+NA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.OpenUrl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.OpenUrl.html",
+          "hash": "LPuYJOLQ7hC5vdlLZQ/MeQm/YqYN39T7/mtzmDMuUMU="
         }
       },
       "is_incremental": false,
@@ -952,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleInformation.html",
-          "hash": "u0RxB5BzfiSqC5Y7IZ5kqkpxEHnWiM+8zmRLFr89tK0="
+          "hash": "LUxXOZ4WM+/kEvh6ItyYCzdpHQm3CMB8tI/xNpDHq5g="
         }
       },
       "is_incremental": false,
@@ -1540,7 +1552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "wDi0Rk2kRvgI3252ET3wuIz1gVINTPyveaHBTf1g6Qk="
+          "hash": "UWRJBMZObDn+aeFKD1WZ2Xgb/QtyRvMsH16dNP720hs="
         }
       },
       "is_incremental": false,
@@ -1552,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HVe8s2fp7xyC05+n8xkB5UP3IiQXZJFP9f/47VKYF2c="
+          "hash": "sFCQEOWxyl1eKou3VYHzeEnhVVXde9vlpt1gCc+S8pM="
         }
       },
       "is_incremental": false,
@@ -1661,7 +1673,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 127,
+          "total_file_count": 128,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
