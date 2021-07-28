@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -34,6 +35,11 @@ public class Killing : NetworkBehaviour
 
     public bool IsAssasin { get => isAssasin; set => isAssasin = value; }
 
+    /// <summary>
+    /// Called on assasin types, when player can kill. Enables kill button.
+    /// </summary>
+    /// <param name="oldValue">Last value of kill state</param>
+    /// <param name="newValue">New value of kill state</param>
     private void OnKillStateChanged(bool oldValue, bool newValue)
     {
         if (hasAuthority)
@@ -68,6 +74,9 @@ public class Killing : NetworkBehaviour
         GameUI.onKillButtonClick += AttemptToKill;
     }
 
+    /// <summary>
+    /// To be called on client when kill button is clicked
+    /// </summary>
     private void AttemptToKill()
     {
         CmdMurder();
@@ -109,7 +118,46 @@ public class Killing : NetworkBehaviour
                 dieComponent.SetDed();
                 endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
                 canKillSomeone = false;
+
+                CheckIfNumberOfAssasinsIsEqualOrMoreToProgrammers();
             }
+        }
+    }
+
+    /// <summary>
+    /// Called on server when there's the same number of programmers as of assasins
+    /// </summary>
+    public static event Action OnKilledMostPlayers;
+
+    [Server]
+    private void CheckIfNumberOfAssasinsIsEqualOrMoreToProgrammers()
+    {
+        var players = GameObject.FindGameObjectsWithTag(Tags.Player);
+        var playersNotKilled = players.ToList().FindAll(x =>
+        {
+            var diedComponent = x.GetComponent<Die>();
+            return diedComponent && !diedComponent.isDead;
+        });
+
+        int aliveProgrammers = 0;
+        int assassins = 0;
+
+        foreach (var p in playersNotKilled)
+        {
+            var killingComponent = p.GetComponent<Killing>();
+
+            if(killingComponent && killingComponent.isAssasin)
+            {
+                assassins++;
+            } else
+            {
+                aliveProgrammers++;
+            }
+        }
+
+        if(assassins >= aliveProgrammers)
+        {
+            OnKilledMostPlayers?.Invoke();
         }
     }
 

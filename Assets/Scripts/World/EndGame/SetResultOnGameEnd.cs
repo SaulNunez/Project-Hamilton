@@ -65,6 +65,7 @@ public class SetResultOnGameEnd : NetworkBehaviour
 
         Emergency.OnPlayersCouldntStopEmergency += OnPlayersCouldntStopEmergency;
         PuzzleCompletion.OnFinishedAllPuzzles += OnPuzzlesFinished;
+        Killing.OnKilledMostPlayers += OnAssasinsKilledMostPlayers;
     }
 
     private void OnPuzzlesFinished()
@@ -77,8 +78,17 @@ public class SetResultOnGameEnd : NetworkBehaviour
         result = EndGameResult.AssasinsWin;   
     }
 
+    private void OnAssasinsKilledMostPlayers()
+    {
+        result = EndGameResult.AssasinsWin;
+    }
+
     public override void OnStopServer()
     {
         base.OnStopServer();
+
+        Emergency.OnPlayersCouldntStopEmergency -= OnPlayersCouldntStopEmergency;
+        PuzzleCompletion.OnFinishedAllPuzzles -= OnPuzzlesFinished;
+        Killing.OnKilledMostPlayers -= OnAssasinsKilledMostPlayers;
     }
 }
