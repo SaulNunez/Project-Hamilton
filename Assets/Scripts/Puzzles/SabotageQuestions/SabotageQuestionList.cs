@@ -8,6 +8,7 @@ public class SabotageQuestionList : ScriptableObject
     [System.Serializable]
     public class Question
     {
+        [TextArea]
         public string question;
         public List<string> answers;
         public int correctAnswerIndex;
