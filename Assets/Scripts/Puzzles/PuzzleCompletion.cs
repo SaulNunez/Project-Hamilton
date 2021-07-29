@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -47,8 +48,19 @@ public class PuzzleCompletion : NetworkBehaviour
     /// <summary>
     /// 
     /// </summary>
-    public int PuzzlesAvailable { 
-        get => Enum.GetNames(typeof(PuzzleId)).Length * NetworkManager.singleton.numPlayers; 
+    public int PuzzlesAvailable
+    {
+        get
+        {
+            var players = GameObject.FindGameObjectsWithTag(Tags.Player);
+            var programmersInGame = players.ToList().Count(x =>
+            {
+                var killingComponent = x.GetComponent<Killing>();
+                return killingComponent && !killingComponent.IsAssasin;
+            });
+
+            return Enum.GetNames(typeof(PuzzleId)).Length * programmersInGame;
+        }
     }
 
     public static PuzzleCompletion instance = null;
