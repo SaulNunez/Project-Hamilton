@@ -1,6 +1,7 @@
 ﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -79,13 +80,17 @@ public class SabotageQuestions : SabotagePuzzle
     readonly Dictionary<NetworkConnection,int> playerProgress = new Dictionary<NetworkConnection, int>();
 
     /// <summary>
+    /// Current question for players in sabotage
+    /// </summary>
+    readonly Dictionary<NetworkIdentity, int> currentQuestion = new Dictionary<NetworkIdentity, int>();
+
+    /// <summary>
     /// Amount of questions that all players have answered
     /// </summary>
     [SyncVar(hook = nameof(AnswerDoneSet))]
     int questionsSolved;
 
-    [SyncVar]
-    int onQuestionIndex;
+   
 
     // We are going to ignore states on this moment, only show questions 
 
@@ -123,6 +128,7 @@ public class SabotageQuestions : SabotagePuzzle
         questionsSolved = 0;
 
         playerProgress.Clear();
+        currentQuestion.Clear();
 
         //currentSabotageState = QuestionState.WaitingPlayers;
 
@@ -133,21 +139,45 @@ public class SabotageQuestions : SabotagePuzzle
     /// Gets a random question and sends the question and multiple answer options to show to the user
     /// </summary>
     [Server]
-    private void SetNewQuestion()
+    private void SetNewQuestion(NetworkConnection target = null)
     {
-        var question = questions.questions.PickRandom();
+        var index = Random.Range(0, questions.questions.Count);
 
-        RpcSetQuestion(question.question, question.answers);
+        var question = questions.questions[index];
+
+        if(target != null)
+        {
+            if (currentQuestion.ContainsKey(target.identity))
+            {
+                currentQuestion[target.identity] = index;
+            }
+            else
+            {
+                currentQuestion.Add(target.identity, index);
+            }
+
+            TargetRpcSetQuestion(target, question.question, question.answers);
+        }
+        else
+        {
+            var players = GameObject.FindGameObjectsWithTag(Tags.Player);
+            foreach(var player in players)
+            {
+                var identity = player.GetComponent<NetworkIdentity>();
+                if(identity != null)
+                {
+                    currentQuestion.Add(identity, index);
+                }
+            }
+            RpcSetQuestion(question.question, question.answers);
+        }
     }
 
     /// <summary>
     /// Used by UI. Sets on server as one of the players to solve questions
     /// </summary>
     [Client]
-    public void SetAsResponder()
-    {
-        CmdSetAsResponder();
-    }
+    public void SetAsResponder() => CmdSetAsResponder();
 
     [Command]
     void CmdSetAsResponder(NetworkConnectionToClient sender = null)
@@ -158,7 +188,7 @@ public class SabotageQuestions : SabotagePuzzle
 
         if (areEnoughPlayers)
         {
-            SetNewQuestion();
+            SetNewQuestion(sender);
         }
     }
 
@@ -167,12 +197,20 @@ public class SabotageQuestions : SabotagePuzzle
     /// </summary>
     /// <param name="question">Question instructions</param>
     /// <param name="answers">List of available answers</param>
+    [TargetRpc]
+    void TargetRpcSetQuestion(NetworkConnection target, string question, List<string> answers) => 
+        SetQuestion(question, answers);
+
     [ClientRpc]
-    void RpcSetQuestion(string question, List<string> answers)
+    void RpcSetQuestion(string question, List<string> answers) => SetQuestion(question, answers);
+
+    [Client]
+    void SetQuestion(string question, List<string> answers)
     {
-        foreach(Transform obj in answersParent.transform)
+        print($"Setting question, {question}");
+        foreach (Transform obj in answersParent.transform)
         {
-            if(obj != answersParent.transform)
+            if (obj != answersParent.transform)
             {
                 Destroy(obj.gameObject);
             }
@@ -180,17 +218,20 @@ public class SabotageQuestions : SabotagePuzzle
 
         this.question.text = question;
 
-        for(var i = 0; i < answers.Count; i++)
+        for (int i = 0; i < answers.Count; i++)
         {
+            int iCopy = i;
             var button = Instantiate(answerButtonPrefab, answersParent.transform);
 
             var text = button.GetComponentInChildren<TextMeshProUGUI>();
             text.text = answers[i];
 
             var buttonItem = button.GetComponent<Button>();
-            buttonItem.onClick.AddListener(() => CmdSendAnswer(i));
+            buttonItem.onClick.AddListener(() => SendAnswer(iCopy));
         }
     }
+
+    void SendAnswer(int answerIndex) => CmdSendAnswer(answerIndex);
 
     [ClientRpc]
     void RpcSetProgress()
@@ -202,16 +243,17 @@ public class SabotageQuestions : SabotagePuzzle
     void RpcOnQuestionsEnded()
     {
         gameObject.SetActive(false);
-        //PuzzleCompletion.instance.MarkCompleted(PuzzleId.TheoryVariety, );
+        
     }
 
-    [Command]
+    [Command(ignoreAuthority = true)]
     void CmdSendAnswer(int answerIndex, NetworkConnectionToClient sender = null)
     {
-        var isCorrectAnswer = questions.questions[onQuestionIndex].correctAnswerIndex == answerIndex;
-
+        var isCorrectAnswer = questions.questions[currentQuestion[sender.identity]].correctAnswerIndex == answerIndex;
+        print($"Given answer index {questions.questions[currentQuestion[sender.identity]].correctAnswerIndex}, result: {answerIndex}, question index: {currentQuestion[sender.identity]}");
         if (isCorrectAnswer)
         {
+            print("Correct answer");
             if (playerProgress.ContainsKey(sender))
             {
                 playerProgress[sender] = playerProgress[sender] + 1;
@@ -219,8 +261,14 @@ public class SabotageQuestions : SabotagePuzzle
             {
                 playerProgress.Add(sender, 1);
             }
+            questionsSolved++;
+
+            if(questionsSolved >= questionsNeededToSolve)
+            {
+                OnPuzzleCompleted();
+            }
         }
-        SetNewQuestion();
+        SetNewQuestion(sender);
         RpcSetProgress();
     }
 }
