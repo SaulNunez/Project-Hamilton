@@ -1,0 +1,29 @@
+version: "3.9"
+
+services: 
+    web-client:
+        image: snuez99/night_in_the_house_of_hunt:master
+        networks:
+            - interconnect
+        ports:
+            - 80
+            - 443
+    server:
+        image: snuez99/night_in_the_house_of_hunt_server:master
+        networks:
+            - interconnect
+        ports:
+            - 7778
+    apache:
+        image: httpd:2.4
+        networks: 
+            - interconnect
+        ports:
+            - 80:80
+            - 443:443
+        volumes:
+            - ./LocalServerSetup/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+
+networks: 
+    interconnect:
+        driver: bridge
