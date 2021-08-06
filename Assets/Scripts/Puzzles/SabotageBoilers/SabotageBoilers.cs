@@ -1,135 +1,98 @@
 ﻿using Mirror;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 /// <summary>
 /// 
 /// </summary>
 public class SabotageBoilers : SabotagePuzzle
 {
-    [Header("UI elements")]
     [SerializeField]
-    Image gaugeImage;
+    SpecialButton buttonToClick;
 
-    [SerializeField]
-    TMP_InputField minimumInput;
+    TextMeshProUGUI text;
 
-    [SerializeField]
-    TMP_InputField maximumInput;
+    public string waitingOnPlayerPress;
+    public string waitingOnOtherPlayers;
 
-    [Header("Setups")]
-    [SerializeField]
-    List<BoilerSabotageOptions> gaugesSetups;
+    public struct PlayerStatus
+    {
+        public NetworkIdentity playerOnButton;
+        public DateTime startClick;
+    }
 
-    /// <summary>
-    /// Minimum set in the UI
-    /// </summary>
-    /// <remarks>
-    /// Only usable on client
-    /// </remarks>
-    int minimum;
-    
-    /// <summary>
-    /// Maximum set in the UI
-    /// </summary>
-    /// <remarks>
-    /// Only usable on client
-    /// </remarks>
-    int maximum;
-
-    [SyncVar(hook = nameof(OnSetupDefined))]
-    int setupUsed;
+    readonly SyncList<PlayerStatus> playersOnButton = new SyncList<PlayerStatus>();
 
     protected override bool AreEmergencyConditionsEnough(Emergency.EmergencyType type) =>
     type == Emergency.EmergencyType.ChangeBoilerPressure;
 
-    public override void OnStartServer()
-    {
-        base.OnStartServer();
-
-        SetNewSetup();
-    }
-
     public override void OnStartClient()
     {
         base.OnStartClient();
+        buttonToClick.onPressedStarted.AddListener(StartPress);
+        buttonToClick.onPressedStarted.AddListener(ClientStartPress);
+        buttonToClick.onPressedEnded.AddListener(EndPress);
+        buttonToClick.onPressedEnded.AddListener(ClientOnEndPress);
 
-        minimumInput.onEndEdit.AddListener(SetMinimum);
-        maximumInput.onEndEdit.AddListener(SetMaximum);
+        text = buttonToClick.GetComponentInChildren<TextMeshProUGUI>();
+        text.text = waitingOnPlayerPress;
     }
 
-
-    /// <summary>
-    /// To be used to select a new setup. 
-    /// Main usage is to set a different gauge setup when it's new sabotage to the boilers.
-    /// </summary>
-    /// <remarks>
-    /// Only to be called on the server
-    /// </remarks>
-    [Server]
-    public void SetNewSetup()
+    public override void OnStopClient()
     {
-        setupUsed = Random.Range(0, gaugesSetups.Count);
+        base.OnStopClient();
+        buttonToClick.onPressedStarted.RemoveListener(StartPress);
+        buttonToClick.onPressedStarted.RemoveListener(ClientStartPress);
+        buttonToClick.onPressedEnded.RemoveListener(EndPress);
+        buttonToClick.onPressedEnded.RemoveListener(ClientOnEndPress);
     }
 
-    void OnSetupDefined(int oldValue, int newValue)
+    void StartPress() => CmdSetAsPressedButton();
+    void EndPress() => CmdSetDepressedButton();
+
+    void ClientStartPress()
     {
-        gaugeImage.sprite = gaugesSetups[newValue].gauge;
+        text.text = waitingOnOtherPlayers;
     }
 
-    /// <summary>
-    /// To be used on the client UI to update internal state of the minimum
-    /// </summary>
-    /// <param name="input">Current text of the UI element that handles minimum</param>
-    [Client]
-    public void SetMinimum(string input)
+    void ClientOnEndPress()
     {
-        try
-        {
-            var processedInput = int.Parse(input);
-            minimum = processedInput;
-
-            CmdCheckCorrect(minimum, maximum);
-        }
-        catch(Exception e)
-        {
-            Debug.LogError(e);
-        }
+        text.text = waitingOnPlayerPress;
     }
 
-    [Client]
-    public void SetMaximum(string input)
+    [Command(ignoreAuthority = true)]
+    void CmdSetAsPressedButton(NetworkConnectionToClient sender = null)
     {
-        try
+        playersOnButton.Add(new PlayerStatus
         {
-            var processedInput = int.Parse(input);
-            maximum = processedInput;
+            playerOnButton = sender.identity,
+            startClick = DateTime.Now,
+        });
 
-            CmdCheckCorrect(minimum, maximum);
-        }
-        catch (Exception e)
+        if(playersOnButton.Count >= 2)
         {
-            Debug.LogError(e);
+            OnPuzzleCompleted();
         }
     }
 
     [Command(ignoreAuthority = true)]
-    void CmdCheckCorrect(int min, int max, NetworkConnectionToClient sender = null)
+    void CmdSetDepressedButton(NetworkConnectionToClient sender = null)
     {
-        if(max <= gaugesSetups[setupUsed].maximum && min >= gaugesSetups[setupUsed].minimum)
-        {
-            SetPuzzleAsCompleted(sender);
-        }
+        playersOnButton.RemoveAll(p => p.playerOnButton == sender.identity);
     }
 
     protected override void OnPuzzleCompleted()
     {
         base.OnPuzzleCompleted();
+        playersOnButton.Clear();
+    }
 
+    protected override void OnPuzzleActivated()
+    {
+        base.OnPuzzleActivated();
+
+        text.text = waitingOnOtherPlayers;
     }
 }
