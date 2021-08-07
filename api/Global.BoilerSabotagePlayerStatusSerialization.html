@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class BoilerSabotageOptions
+    <title>Class BoilerSabotagePlayerStatusSerialization
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class BoilerSabotageOptions
+    <meta name="title" content="Class BoilerSabotagePlayerStatusSerialization
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,39 +78,54 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.BoilerSabotageOptions">
+            <article class="content wrap" id="_content" data-uid="Global.BoilerSabotagePlayerStatusSerialization">
   
   
-  <h1 id="Global_BoilerSabotageOptions" data-uid="Global.BoilerSabotageOptions" class="text-break">Class BoilerSabotageOptions
+  <h1 id="Global_BoilerSabotagePlayerStatusSerialization" data-uid="Global.BoilerSabotagePlayerStatusSerialization" class="text-break">Class BoilerSabotagePlayerStatusSerialization
   </h1>
-  <div class="markdown level0 summary"><p>Used by boiler sabotage component.</p>
-<p>There&apos;s a variety of gauges. This is used to provided several gauges configurations.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">BoilerSabotageOptions</span></div>
+    <div class="level1"><span class="xref">BoilerSabotagePlayerStatusSerialization</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_BoilerSabotageOptions_syntax">Syntax</h5>
+  <h5 id="Global_BoilerSabotagePlayerStatusSerialization_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BoilerSabotageOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class BoilerSabotagePlayerStatusSerialization</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Global_BoilerSabotageOptions_gauge" data-uid="Global.BoilerSabotageOptions.gauge">gauge</h4>
-  <div class="markdown level1 summary"><p>Image to use for gauge representation</p>
-</div>
+  <a id="Global_BoilerSabotagePlayerStatusSerialization_ReadBoilerSabotagePlayerStatusSelection_" data-uid="Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection*"></a>
+  <h4 id="Global_BoilerSabotagePlayerStatusSerialization_ReadBoilerSabotagePlayerStatusSelection_Mirror_NetworkReader_" data-uid="Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection(Mirror.NetworkReader)">ReadBoilerSabotagePlayerStatusSelection(NetworkReader)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sprite gauge</code></pre>
+    <pre><code class="lang-csharp hljs">public static SabotageBoilers.PlayerStatus ReadBoilerSabotagePlayerStatusSelection(this NetworkReader reader)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Mirror.NetworkReader</span></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -120,57 +135,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Sprite</span></td>
+        <td><a class="xref" href="Global.SabotageBoilers.PlayerStatus.html">SabotageBoilers.PlayerStatus</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Global_BoilerSabotageOptions_maximum" data-uid="Global.BoilerSabotageOptions.maximum">maximum</h4>
-  <div class="markdown level1 summary"><p>Maximum pressure of this valve</p>
-</div>
+  <a id="Global_BoilerSabotagePlayerStatusSerialization_WriteBoilerSabotagePlayerStatusSelection_" data-uid="Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection*"></a>
+  <h4 id="Global_BoilerSabotagePlayerStatusSerialization_WriteBoilerSabotagePlayerStatusSelection_Mirror_NetworkWriter_SabotageBoilers_PlayerStatus_" data-uid="Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection(Mirror.NetworkWriter,SabotageBoilers.PlayerStatus)">WriteBoilerSabotagePlayerStatusSelection(NetworkWriter, SabotageBoilers.PlayerStatus)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int maximum</code></pre>
+    <pre><code class="lang-csharp hljs">public static void WriteBoilerSabotagePlayerStatusSelection(this NetworkWriter writer, SabotageBoilers.PlayerStatus playerStatus)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">Mirror.NetworkWriter</span></td>
+        <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Global_BoilerSabotageOptions_minimum" data-uid="Global.BoilerSabotageOptions.minimum">minimum</h4>
-  <div class="markdown level1 summary"><p>Minimum pressure of this valve</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int minimum</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="Global.SabotageBoilers.PlayerStatus.html">SabotageBoilers.PlayerStatus</a></td>
+        <td><span class="parametername">playerStatus</span></td>
         <td></td>
       </tr>
     </tbody>

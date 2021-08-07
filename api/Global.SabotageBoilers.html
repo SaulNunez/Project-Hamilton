@@ -101,10 +101,10 @@
       <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_IsPuzzleEnabled">SabotagePuzzle.IsPuzzleEnabled</a>
     </div>
     <div>
-      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ShowPuzzle">SabotagePuzzle.ShowPuzzle()</a>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnStartServer">SabotagePuzzle.OnStartServer()</a>
     </div>
     <div>
-      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleActivated">SabotagePuzzle.OnPuzzleActivated()</a>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ShowPuzzle">SabotagePuzzle.ShowPuzzle()</a>
     </div>
     <div>
       <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_SetPuzzleAsCompleted_Mirror_NetworkConnection_">SabotagePuzzle.SetPuzzleAsCompleted(NetworkConnection)</a>
@@ -125,6 +125,56 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SabotageBoilers : SabotagePuzzle</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Global_SabotageBoilers_waitingOnOtherPlayers" data-uid="Global.SabotageBoilers.waitingOnOtherPlayers">waitingOnOtherPlayers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string waitingOnOtherPlayers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Global_SabotageBoilers_waitingOnPlayerPress" data-uid="Global.SabotageBoilers.waitingOnPlayerPress">waitingOnPlayerPress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string waitingOnPlayerPress</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -173,6 +223,18 @@
   <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_AreEmergencyConditionsEnough_Emergency_EmergencyType_">SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)</a></div>
   
   
+  <a id="Global_SabotageBoilers_OnPuzzleActivated_" data-uid="Global.SabotageBoilers.OnPuzzleActivated*"></a>
+  <h4 id="Global_SabotageBoilers_OnPuzzleActivated" data-uid="Global.SabotageBoilers.OnPuzzleActivated">OnPuzzleActivated()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnPuzzleActivated()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleActivated">SabotagePuzzle.OnPuzzleActivated()</a></div>
+  
+  
   <a id="Global_SabotageBoilers_OnPuzzleCompleted_" data-uid="Global.SabotageBoilers.OnPuzzleCompleted*"></a>
   <h4 id="Global_SabotageBoilers_OnPuzzleCompleted" data-uid="Global.SabotageBoilers.OnPuzzleCompleted">OnPuzzleCompleted()</h4>
   <div class="markdown level1 summary"></div>
@@ -197,87 +259,16 @@
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
   
   
-  <a id="Global_SabotageBoilers_OnStartServer_" data-uid="Global.SabotageBoilers.OnStartServer*"></a>
-  <h4 id="Global_SabotageBoilers_OnStartServer" data-uid="Global.SabotageBoilers.OnStartServer">OnStartServer()</h4>
+  <a id="Global_SabotageBoilers_OnStopClient_" data-uid="Global.SabotageBoilers.OnStopClient*"></a>
+  <h4 id="Global_SabotageBoilers_OnStopClient" data-uid="Global.SabotageBoilers.OnStopClient">OnStopClient()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void OnStartServer()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnStopClient()</code></pre>
   </div>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnStartServer">SabotagePuzzle.OnStartServer()</a></div>
-  
-  
-  <a id="Global_SabotageBoilers_SetMaximum_" data-uid="Global.SabotageBoilers.SetMaximum*"></a>
-  <h4 id="Global_SabotageBoilers_SetMaximum_System_String_" data-uid="Global.SabotageBoilers.SetMaximum(System.String)">SetMaximum(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetMaximum(string input)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">input</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Global_SabotageBoilers_SetMinimum_" data-uid="Global.SabotageBoilers.SetMinimum*"></a>
-  <h4 id="Global_SabotageBoilers_SetMinimum_System_String_" data-uid="Global.SabotageBoilers.SetMinimum(System.String)">SetMinimum(String)</h4>
-  <div class="markdown level1 summary"><p>To be used on the client UI to update internal state of the minimum</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetMinimum(string input)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">input</span></td>
-        <td><p>Current text of the UI element that handles minimum</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Global_SabotageBoilers_SetNewSetup_" data-uid="Global.SabotageBoilers.SetNewSetup*"></a>
-  <h4 id="Global_SabotageBoilers_SetNewSetup" data-uid="Global.SabotageBoilers.SetNewSetup">SetNewSetup()</h4>
-  <div class="markdown level1 summary"><p>To be used to select a new setup. 
-Main usage is to set a different gauge setup when it&apos;s new sabotage to the boilers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetNewSetup()</code></pre>
-  </div>
-  <h5 id="Global_SabotageBoilers_SetNewSetup_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Only to be called on the server</p>
-</div>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStopClient()</span></div>
 </article>
           </div>
           

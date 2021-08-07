@@ -146,30 +146,38 @@ references:
   isSpec: "True"
   fullName: AvailableCharactersMemory.OnStartClient
   nameWithType: AvailableCharactersMemory.OnStartClient
-- uid: Global.BoilerSabotageOptions
-  name: BoilerSabotageOptions
-  href: api/Global.BoilerSabotageOptions.html
-  commentId: T:Global.BoilerSabotageOptions
-  fullName: BoilerSabotageOptions
-  nameWithType: BoilerSabotageOptions
-- uid: Global.BoilerSabotageOptions.gauge
-  name: gauge
-  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_gauge
-  commentId: F:Global.BoilerSabotageOptions.gauge
-  fullName: BoilerSabotageOptions.gauge
-  nameWithType: BoilerSabotageOptions.gauge
-- uid: Global.BoilerSabotageOptions.maximum
-  name: maximum
-  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_maximum
-  commentId: F:Global.BoilerSabotageOptions.maximum
-  fullName: BoilerSabotageOptions.maximum
-  nameWithType: BoilerSabotageOptions.maximum
-- uid: Global.BoilerSabotageOptions.minimum
-  name: minimum
-  href: api/Global.BoilerSabotageOptions.html#Global_BoilerSabotageOptions_minimum
-  commentId: F:Global.BoilerSabotageOptions.minimum
-  fullName: BoilerSabotageOptions.minimum
-  nameWithType: BoilerSabotageOptions.minimum
+- uid: Global.BoilerSabotagePlayerStatusSerialization
+  name: BoilerSabotagePlayerStatusSerialization
+  href: api/Global.BoilerSabotagePlayerStatusSerialization.html
+  commentId: T:Global.BoilerSabotagePlayerStatusSerialization
+  fullName: BoilerSabotagePlayerStatusSerialization
+  nameWithType: BoilerSabotagePlayerStatusSerialization
+- uid: Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection(Mirror.NetworkReader)
+  name: ReadBoilerSabotagePlayerStatusSelection(NetworkReader)
+  href: api/Global.BoilerSabotagePlayerStatusSerialization.html#Global_BoilerSabotagePlayerStatusSerialization_ReadBoilerSabotagePlayerStatusSelection_Mirror_NetworkReader_
+  commentId: M:Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection(Mirror.NetworkReader)
+  fullName: BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection(Mirror.NetworkReader)
+  nameWithType: BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection(NetworkReader)
+- uid: Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection*
+  name: ReadBoilerSabotagePlayerStatusSelection
+  href: api/Global.BoilerSabotagePlayerStatusSerialization.html#Global_BoilerSabotagePlayerStatusSerialization_ReadBoilerSabotagePlayerStatusSelection_
+  commentId: Overload:Global.BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection
+  isSpec: "True"
+  fullName: BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection
+  nameWithType: BoilerSabotagePlayerStatusSerialization.ReadBoilerSabotagePlayerStatusSelection
+- uid: Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection(Mirror.NetworkWriter,SabotageBoilers.PlayerStatus)
+  name: WriteBoilerSabotagePlayerStatusSelection(NetworkWriter, SabotageBoilers.PlayerStatus)
+  href: api/Global.BoilerSabotagePlayerStatusSerialization.html#Global_BoilerSabotagePlayerStatusSerialization_WriteBoilerSabotagePlayerStatusSelection_Mirror_NetworkWriter_SabotageBoilers_PlayerStatus_
+  commentId: M:Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection(Mirror.NetworkWriter,SabotageBoilers.PlayerStatus)
+  fullName: BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection(Mirror.NetworkWriter, SabotageBoilers.PlayerStatus)
+  nameWithType: BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection(NetworkWriter, SabotageBoilers.PlayerStatus)
+- uid: Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection*
+  name: WriteBoilerSabotagePlayerStatusSelection
+  href: api/Global.BoilerSabotagePlayerStatusSerialization.html#Global_BoilerSabotagePlayerStatusSerialization_WriteBoilerSabotagePlayerStatusSelection_
+  commentId: Overload:Global.BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection
+  isSpec: "True"
+  fullName: BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection
+  nameWithType: BoilerSabotagePlayerStatusSerialization.WriteBoilerSabotagePlayerStatusSelection
 - uid: Global.CameraControl
   name: CameraControl
   href: api/Global.CameraControl.html
@@ -3194,6 +3202,19 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.AreEmergencyConditionsEnough
   nameWithType: SabotageBoilers.AreEmergencyConditionsEnough
+- uid: Global.SabotageBoilers.OnPuzzleActivated
+  name: OnPuzzleActivated()
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleActivated
+  commentId: M:Global.SabotageBoilers.OnPuzzleActivated
+  fullName: SabotageBoilers.OnPuzzleActivated()
+  nameWithType: SabotageBoilers.OnPuzzleActivated()
+- uid: Global.SabotageBoilers.OnPuzzleActivated*
+  name: OnPuzzleActivated
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleActivated_
+  commentId: Overload:Global.SabotageBoilers.OnPuzzleActivated
+  isSpec: "True"
+  fullName: SabotageBoilers.OnPuzzleActivated
+  nameWithType: SabotageBoilers.OnPuzzleActivated
 - uid: Global.SabotageBoilers.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleCompleted
@@ -3220,58 +3241,49 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.OnStartClient
   nameWithType: SabotageBoilers.OnStartClient
-- uid: Global.SabotageBoilers.OnStartServer
-  name: OnStartServer()
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartServer
-  commentId: M:Global.SabotageBoilers.OnStartServer
-  fullName: SabotageBoilers.OnStartServer()
-  nameWithType: SabotageBoilers.OnStartServer()
-- uid: Global.SabotageBoilers.OnStartServer*
-  name: OnStartServer
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStartServer_
-  commentId: Overload:Global.SabotageBoilers.OnStartServer
+- uid: Global.SabotageBoilers.OnStopClient
+  name: OnStopClient()
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStopClient
+  commentId: M:Global.SabotageBoilers.OnStopClient
+  fullName: SabotageBoilers.OnStopClient()
+  nameWithType: SabotageBoilers.OnStopClient()
+- uid: Global.SabotageBoilers.OnStopClient*
+  name: OnStopClient
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnStopClient_
+  commentId: Overload:Global.SabotageBoilers.OnStopClient
   isSpec: "True"
-  fullName: SabotageBoilers.OnStartServer
-  nameWithType: SabotageBoilers.OnStartServer
-- uid: Global.SabotageBoilers.SetMaximum(System.String)
-  name: SetMaximum(String)
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMaximum_System_String_
-  commentId: M:Global.SabotageBoilers.SetMaximum(System.String)
-  fullName: SabotageBoilers.SetMaximum(System.String)
-  nameWithType: SabotageBoilers.SetMaximum(String)
-- uid: Global.SabotageBoilers.SetMaximum*
-  name: SetMaximum
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMaximum_
-  commentId: Overload:Global.SabotageBoilers.SetMaximum
-  isSpec: "True"
-  fullName: SabotageBoilers.SetMaximum
-  nameWithType: SabotageBoilers.SetMaximum
-- uid: Global.SabotageBoilers.SetMinimum(System.String)
-  name: SetMinimum(String)
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMinimum_System_String_
-  commentId: M:Global.SabotageBoilers.SetMinimum(System.String)
-  fullName: SabotageBoilers.SetMinimum(System.String)
-  nameWithType: SabotageBoilers.SetMinimum(String)
-- uid: Global.SabotageBoilers.SetMinimum*
-  name: SetMinimum
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetMinimum_
-  commentId: Overload:Global.SabotageBoilers.SetMinimum
-  isSpec: "True"
-  fullName: SabotageBoilers.SetMinimum
-  nameWithType: SabotageBoilers.SetMinimum
-- uid: Global.SabotageBoilers.SetNewSetup
-  name: SetNewSetup()
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetNewSetup
-  commentId: M:Global.SabotageBoilers.SetNewSetup
-  fullName: SabotageBoilers.SetNewSetup()
-  nameWithType: SabotageBoilers.SetNewSetup()
-- uid: Global.SabotageBoilers.SetNewSetup*
-  name: SetNewSetup
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_SetNewSetup_
-  commentId: Overload:Global.SabotageBoilers.SetNewSetup
-  isSpec: "True"
-  fullName: SabotageBoilers.SetNewSetup
-  nameWithType: SabotageBoilers.SetNewSetup
+  fullName: SabotageBoilers.OnStopClient
+  nameWithType: SabotageBoilers.OnStopClient
+- uid: Global.SabotageBoilers.PlayerStatus
+  name: SabotageBoilers.PlayerStatus
+  href: api/Global.SabotageBoilers.PlayerStatus.html
+  commentId: T:Global.SabotageBoilers.PlayerStatus
+  fullName: SabotageBoilers.PlayerStatus
+  nameWithType: SabotageBoilers.PlayerStatus
+- uid: Global.SabotageBoilers.PlayerStatus.playerOnButton
+  name: playerOnButton
+  href: api/Global.SabotageBoilers.PlayerStatus.html#Global_SabotageBoilers_PlayerStatus_playerOnButton
+  commentId: F:Global.SabotageBoilers.PlayerStatus.playerOnButton
+  fullName: SabotageBoilers.PlayerStatus.playerOnButton
+  nameWithType: SabotageBoilers.PlayerStatus.playerOnButton
+- uid: Global.SabotageBoilers.PlayerStatus.startClick
+  name: startClick
+  href: api/Global.SabotageBoilers.PlayerStatus.html#Global_SabotageBoilers_PlayerStatus_startClick
+  commentId: F:Global.SabotageBoilers.PlayerStatus.startClick
+  fullName: SabotageBoilers.PlayerStatus.startClick
+  nameWithType: SabotageBoilers.PlayerStatus.startClick
+- uid: Global.SabotageBoilers.waitingOnOtherPlayers
+  name: waitingOnOtherPlayers
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_waitingOnOtherPlayers
+  commentId: F:Global.SabotageBoilers.waitingOnOtherPlayers
+  fullName: SabotageBoilers.waitingOnOtherPlayers
+  nameWithType: SabotageBoilers.waitingOnOtherPlayers
+- uid: Global.SabotageBoilers.waitingOnPlayerPress
+  name: waitingOnPlayerPress
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_waitingOnPlayerPress
+  commentId: F:Global.SabotageBoilers.waitingOnPlayerPress
+  fullName: SabotageBoilers.waitingOnPlayerPress
+  nameWithType: SabotageBoilers.waitingOnPlayerPress
 - uid: Global.SabotagePuzzle
   name: SabotagePuzzle
   href: api/Global.SabotagePuzzle.html
@@ -3876,6 +3888,37 @@ references:
   isSpec: "True"
   fullName: SoundAlarmDuringEmergency.OnStopServer
   nameWithType: SoundAlarmDuringEmergency.OnStopServer
+- uid: Global.SpecialButton
+  name: SpecialButton
+  href: api/Global.SpecialButton.html
+  commentId: T:Global.SpecialButton
+  fullName: SpecialButton
+  nameWithType: SpecialButton
+- uid: Global.SpecialButton.IsCurrentlyPressed
+  name: IsCurrentlyPressed
+  href: api/Global.SpecialButton.html#Global_SpecialButton_IsCurrentlyPressed
+  commentId: P:Global.SpecialButton.IsCurrentlyPressed
+  fullName: SpecialButton.IsCurrentlyPressed
+  nameWithType: SpecialButton.IsCurrentlyPressed
+- uid: Global.SpecialButton.IsCurrentlyPressed*
+  name: IsCurrentlyPressed
+  href: api/Global.SpecialButton.html#Global_SpecialButton_IsCurrentlyPressed_
+  commentId: Overload:Global.SpecialButton.IsCurrentlyPressed
+  isSpec: "True"
+  fullName: SpecialButton.IsCurrentlyPressed
+  nameWithType: SpecialButton.IsCurrentlyPressed
+- uid: Global.SpecialButton.onPressedEnded
+  name: onPressedEnded
+  href: api/Global.SpecialButton.html#Global_SpecialButton_onPressedEnded
+  commentId: F:Global.SpecialButton.onPressedEnded
+  fullName: SpecialButton.onPressedEnded
+  nameWithType: SpecialButton.onPressedEnded
+- uid: Global.SpecialButton.onPressedStarted
+  name: onPressedStarted
+  href: api/Global.SpecialButton.html#Global_SpecialButton_onPressedStarted
+  commentId: F:Global.SpecialButton.onPressedStarted
+  fullName: SpecialButton.onPressedStarted
+  nameWithType: SpecialButton.onPressedStarted
 - uid: Global.SpinUIOnDrag
   name: SpinUIOnDrag
   href: api/Global.SpinUIOnDrag.html
