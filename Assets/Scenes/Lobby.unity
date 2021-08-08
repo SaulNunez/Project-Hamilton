@@ -255,6 +255,11 @@ PrefabInstance:
       propertyPath: secondsEmergencyDuration
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 6715743773948690595, guid: e9274ac7a9fb6a844b93a6d68c5eb8b5,
+        type: 3}
+      propertyPath: secondsOfCooldownForSabotage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6715743773948690620, guid: e9274ac7a9fb6a844b93a6d68c5eb8b5,
         type: 3}
       propertyPath: m_Name
