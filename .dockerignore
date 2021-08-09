@@ -1,0 +1,8 @@
+#Ignoring git and cache folders
+.git
+.cache
+.vscode
+.github
+.gitignore
+Assets
+**/*.csproj
