@@ -1,5 +1,6 @@
 ﻿using Mirror;
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,11 @@ public class SabotageBoilers : SabotagePuzzle
 {
     [SerializeField]
     SpecialButton buttonToClick;
+
+    [Range(0.01f, 10f)]
+    [Tooltip("Delay between a button release and when we will remove it from the button pressing players list")]
+    [SerializeField]
+    float stickynessInServer = 2f;
 
     TextMeshProUGUI text;
 
@@ -80,6 +86,14 @@ public class SabotageBoilers : SabotagePuzzle
     [Command(ignoreAuthority = true)]
     void CmdSetDepressedButton(NetworkConnectionToClient sender = null)
     {
+        var coroutine = OnButtonDepressedServer(sender);
+        StartCoroutine(coroutine);
+    }
+
+    [Server]
+    IEnumerator OnButtonDepressedServer(NetworkConnectionToClient sender)
+    {
+        yield return new WaitForSecondsRealtime(stickynessInServer);
         playersOnButton.RemoveAll(p => p.playerOnButton == sender.identity);
     }
 
