@@ -300,6 +300,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.EditServerLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.EditServerLocation.html",
+          "hash": "9m67dq4LyymB8iULG1WJ0iQrrgCU8oseXG9IFYuK6mg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.ElectricitySabotage.yml",
       "output": {
         ".html": {
@@ -1176,6 +1188,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.SetPortOnWebGl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.SetPortOnWebGl.html",
+          "hash": "z9r2MeROAVjnfsD68YBfOlFBNougZRTnpkDv3L5p+2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.SetResultOnGameEnd.EndGameResult.yml",
       "output": {
         ".html": {
@@ -1576,7 +1600,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "wYI4+67Qyxoe2Z6DiWh/kouNvOECThWITl16z8U4foY="
+          "hash": "+16t1gPIA8bbycxhrUUe/DyhNMq8GdM3j/kapEftuMc="
         }
       },
       "is_incremental": false,
@@ -1588,7 +1612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "CH/eSRYzVdCfCIrMO+kMFdUjBs/C/iAKmOWWjL738S4="
+          "hash": "opVF3Kvp5JYkHqwXH0sW5Q2sz2On6kfiN+xQvLcYPRk="
         }
       },
       "is_incremental": false,
@@ -1697,7 +1721,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 130,
+          "total_file_count": 132,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

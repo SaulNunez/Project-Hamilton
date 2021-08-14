@@ -696,6 +696,12 @@ references:
   isSpec: "True"
   fullName: DoWhilePuzzle.OnStartClient
   nameWithType: DoWhilePuzzle.OnStartClient
+- uid: Global.EditServerLocation
+  name: EditServerLocation
+  href: api/Global.EditServerLocation.html
+  commentId: T:Global.EditServerLocation
+  fullName: EditServerLocation
+  nameWithType: EditServerLocation
 - uid: Global.ElectricitySabotage
   name: ElectricitySabotage
   href: api/Global.ElectricitySabotage.html
@@ -3707,6 +3713,12 @@ references:
   isSpec: "True"
   fullName: SequencePuzzleTileModel.ForegroundSprite
   nameWithType: SequencePuzzleTileModel.ForegroundSprite
+- uid: Global.SetPortOnWebGl
+  name: SetPortOnWebGl
+  href: api/Global.SetPortOnWebGl.html
+  commentId: T:Global.SetPortOnWebGl
+  fullName: SetPortOnWebGl
+  nameWithType: SetPortOnWebGl
 - uid: Global.SetResultOnGameEnd
   name: SetResultOnGameEnd
   href: api/Global.SetResultOnGameEnd.html
