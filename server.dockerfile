@@ -4,4 +4,5 @@ EXPOSE 7778
 
 COPY ./build/StandaloneLinux64 /game
 RUN chmod +x /game
-ENTRYPOINT [ "/game/StandaloneLinux64", "-logfile ~/server.log" ]
+RUN mkdir /tmp/logs
+ENTRYPOINT /game/StandaloneLinux64 -batchmode -logfile /tmp/logs/server.log
