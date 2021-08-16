@@ -4351,6 +4351,12 @@ references:
   commentId: T:Global.UpdateTimeRemaining
   fullName: UpdateTimeRemaining
   nameWithType: UpdateTimeRemaining
+- uid: Global.UseWSSInHttps
+  name: UseWSSInHttps
+  href: api/Global.UseWSSInHttps.html
+  commentId: T:Global.UseWSSInHttps
+  fullName: UseWSSInHttps
+  nameWithType: UseWSSInHttps
 - uid: Global.VoteAdmin
   name: VoteAdmin
   href: api/Global.VoteAdmin.html

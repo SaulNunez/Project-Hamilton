@@ -1500,6 +1500,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.UseWSSInHttps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.UseWSSInHttps.html",
+          "hash": "Czvq3phbZWXIRY4CIFRigB64OOvrzk4RKyX/C4KMLDw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.VoteAdmin.yml",
       "output": {
         ".html": {
@@ -1600,7 +1612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "+16t1gPIA8bbycxhrUUe/DyhNMq8GdM3j/kapEftuMc="
+          "hash": "9N/QuX+Ms1/Fm0KkEhvZRqjPgZb7/i/JubzwUkPnvHY="
         }
       },
       "is_incremental": false,
@@ -1612,7 +1624,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "opVF3Kvp5JYkHqwXH0sW5Q2sz2On6kfiN+xQvLcYPRk="
+          "hash": "002eC0GI6YGpwI/KFrToXvTMdVtA5WoCDC6UYcOEpSM="
         }
       },
       "is_incremental": false,
@@ -1721,7 +1733,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 132,
+          "total_file_count": 133,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
