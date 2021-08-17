@@ -11,10 +11,10 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     [SyncVar]
     public bool isImpostor = false;
 
-
-    public override void OnStartServer()
+    [Server]
+    public void SetCharacter(CharacterTypes characterType)
     {
-        base.OnStartServer();
+        this.characterType = characterType;
     }
 
 }

@@ -42,13 +42,14 @@ public class PlayerSelectionInLobby : NetworkBehaviour
         AvailableCharactersMemory.OnCharacterAvailable += EnableCharacter;
         AvailableCharactersMemory.OnCharacterOccupied += DisableCharacter;
 
+        // Por default se elige un personaje aleatorio
         var characterTypes = Enum.GetValues(typeof(CharacterTypes));
         while (true)
         {
             var characterType = (CharacterTypes)characterTypes.GetValue(UnityEngine.Random.Range(0, characterTypes.Length));
             if (!memory.Value.CharacterUsed(characterType))
             {
-                player.characterType = characterType;
+                CmdSetCharacterOnServer(characterType);
                 memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, characterType);
 
                 toggles.Find(x => x.characterType == characterType).toggle.isOn = true;
@@ -56,6 +57,28 @@ public class PlayerSelectionInLobby : NetworkBehaviour
                 break;
             }
         }
+
+        foreach (var toggle in toggles)
+        {
+            toggle.toggle.onValueChanged.AddListener((isOn) =>
+            {
+                if (isOn)
+                {
+                    if (!memory.Value.CharacterUsed(toggle.characterType))
+                    {
+                        CmdSetCharacterOnServer(toggle.characterType);
+                        memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, toggle.characterType);
+
+                    }
+                }
+            });
+        }
+    }
+
+    [Command]
+    public void CmdSetCharacterOnServer(CharacterTypes characterType)
+    {
+        player.SetCharacter(characterType);
     }
 
     public override void OnStopClient()
@@ -79,24 +102,5 @@ public class PlayerSelectionInLobby : NetworkBehaviour
     {
         toggles.Find(x => x.characterType == typeAvailable).toggle.interactable = true;
         print("enabled char");
-    }
-
-    void Start()
-    {
-        foreach (var toggle in toggles)
-        {
-            toggle.toggle.onValueChanged.AddListener((isOn) =>
-            {
-                if (isOn)
-                {
-                    if (!memory.Value.CharacterUsed(toggle.characterType))
-                    {
-                        player.characterType = toggle.characterType;
-                        memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, toggle.characterType);
-
-                    }
-                }
-            });
-        }
     }
 }
