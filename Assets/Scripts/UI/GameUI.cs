@@ -15,6 +15,9 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     Button sabotageButton;
 
+    [SerializeField]
+    Button reportButton;
+
     public bool InteractionEnabled {
         get => interactionButton.interactable;
 
@@ -40,11 +43,20 @@ public class GameUI : MonoBehaviour
         set => killButton.interactable = value;
     }
 
+    public bool CanInteractWithReportButton
+    {
+        get => reportButton.interactable;
+
+        set => reportButton.interactable = value;
+    }
+
     public static GameUI Instance = null;
 
     public static event Action onGeneralClick;
 
     public static event Action onKillButtonClick;
+
+    public static event Action OnReportClick;
 
     void Start() {
         if(Instance == null){
@@ -53,6 +65,7 @@ public class GameUI : MonoBehaviour
 
         interactionButton.onClick.AddListener(GeneralClick);
         killButton.onClick.AddListener(KillClick);
+        reportButton.onClick.AddListener(ReportClick);
     }
 
     void GeneralClick(){
@@ -63,10 +76,13 @@ public class GameUI : MonoBehaviour
         onKillButtonClick?.Invoke();
     }
 
+    void ReportClick() => OnReportClick?.Invoke();
+
     void OnDestroy(){
         Instance = null;
 
         interactionButton.onClick.RemoveListener(GeneralClick);
         killButton.onClick.RemoveListener(KillClick);
+        reportButton.onClick.RemoveListener(ReportClick);
     }
 }

@@ -6,13 +6,7 @@ using UnityEngine;
 
 public class DetectDead : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(DetectedDeadPlayerChanged))]
     private bool detected;
-
-    private void DetectedDeadPlayerChanged(bool oldValue, bool newValue)
-    {
-        
-    }
 
     [SerializeField]
     private LayerMask deadPlayersLayers;
@@ -29,9 +23,26 @@ public class DetectDead : NetworkBehaviour
         config = hubConfigGO.GetComponent<HubConfig>();
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        var hubConfigGO = GameObject.FindGameObjectWithTag(Tags.HubConfig);
+        config = hubConfigGO.GetComponent<HubConfig>();
+
+        GameUI.OnReportClick += CmdReport;
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+
+        GameUI.OnReportClick -= CmdReport;
+    }
+
     void Update()
     {
-        if (isServer)
+        if (isClient)
         {
             var found = Physics2D.OverlapCircle(transform.position, config.actDistance, deadPlayersLayers);
             if (found)
@@ -46,9 +57,10 @@ public class DetectDead : NetworkBehaviour
     }
 
     [Command]
-    public void CmdReport()
+    private void CmdReport()
     {
-        if (detected)
+        var found = Physics2D.OverlapCircle(transform.position, config.actDistance, deadPlayersLayers);
+        if (found)
         {
             var votingManagerGameObject = GameObject.FindGameObjectWithTag(Tags.VotingManager);
             var votingManager = votingManagerGameObject.GetComponent<VotingManager>();

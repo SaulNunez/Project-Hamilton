@@ -63633,6 +63633,7 @@ MonoBehaviour:
   interactionButton: {fileID: 384378435}
   killButton: {fileID: 218853118}
   sabotageButton: {fileID: 1359496017}
+  reportButton: {fileID: 1414484223}
 --- !u!1 &765032346
 GameObject:
   m_ObjectHideFlags: 0
