@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Extensions;
 
 /// <summary>
 /// Handles emergency logic, like activating buttons to turn emergency types. 
@@ -160,6 +161,8 @@ public class Emergency : NetworkBehaviour
         areEmergenciesAvailable = false;
         onSabotage = false;
 
+        this.SuperPrint("Stopped sabotage on voting started. Body was reported.");
+
         OnEmergencyResolved?.Invoke();
     }
 
@@ -238,6 +241,7 @@ public class Emergency : NetworkBehaviour
     [Server]
     public void StopEmergency()
     {
+        this.SuperPrint("Stopped sabotage on sabotage puzzle was completed.");
         CancelInvoke(nameof(OnTimeEnded));
         CancelInvoke(nameof(CountdownTimeRemaining));
         onSabotage = false;

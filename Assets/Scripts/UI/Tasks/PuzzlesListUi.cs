@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Mirror;
+using Extensions;
 
 /// <summary>
 /// Shows in UI location of not yet solved puzzles and ocurring emergencies. Listens to puzzle completion and emergencies started to update list.  
@@ -32,7 +33,22 @@ public class PuzzlesListUi : NetworkBehaviour
         taskText.text = $"{CreateTasksList()}";
     }
 
-    private void OnEmergencyResolved() => RpcRecreateText();
+    /**
+     * PORQUE EL DELAY?
+     * 
+     * Para hacer que synvar espere lo suficiente para actualizar las variables del cliente
+     * Porque eso hace que no se actualice a la lista de tareas al acabarse la emergencia
+     */
+    private void OnEmergencyResolved()
+    {
+        this.SuperPrint("Waiting to update list of puzzles");
+        Invoke(nameof(OnEmergencyResolvedDelayed), 1f);
+    }
+
+    private void OnEmergencyResolvedDelayed()
+    {
+        RpcRecreateText();
+    }
 
     private void OnEmergencyStarted(Emergency.EmergencyType _) => RpcRecreateText();
 
@@ -53,7 +69,6 @@ public class PuzzlesListUi : NetworkBehaviour
     [ClientRpc]
     void RpcRecreateText()
     {
-        print($"UI, emergency is null {Emergency.instance == null}");
         if (Emergency.instance == null
     ||  Emergency.instance.CurrentActiveSabotage == Emergency.EmergencyType.None)
         {
