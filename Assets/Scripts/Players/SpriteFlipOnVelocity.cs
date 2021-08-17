@@ -18,7 +18,7 @@ public class SpriteFlipOnVelocity : MonoBehaviour
         if(rigidbody2D.velocity.x > 0)
         {
             spriteRenderer.flipX = false;
-        } else if(rigidbody2D.velocity.x < 0)
+        } else
         {
             spriteRenderer.flipX = true;
         }
