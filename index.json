@@ -72,7 +72,7 @@
   "api/Global.DetectDead.html": {
     "href": "api/Global.DetectDead.html",
     "title": "Class DetectDead | A night in the house of Hunt",
-    "keywords": "Class DetectDead Inheritance Object Mirror.NetworkBehaviour DetectDead Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DetectDead : NetworkBehaviour Methods CmdReport() Declaration public void CmdReport() OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
+    "keywords": "Class DetectDead Inheritance Object Mirror.NetworkBehaviour DetectDead Namespace : Global Assembly : cs.temp.dll.dll Syntax public class DetectDead : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer() OnStopClient() Declaration public override void OnStopClient() Overrides Mirror.NetworkBehaviour.OnStopClient()"
   },
   "api/Global.Dialog.html": {
     "href": "api/Global.Dialog.html",
@@ -177,7 +177,7 @@
   "api/Global.GameUI.html": {
     "href": "api/Global.GameUI.html",
     "title": "Class GameUI | A night in the house of Hunt",
-    "keywords": "Class GameUI Inheritance Object GameUI Namespace : Global Assembly : cs.temp.dll.dll Syntax public class GameUI : MonoBehaviour Fields Instance Declaration public static GameUI Instance Field Value Type Description GameUI Properties CanInteractWithKillButton Declaration public bool CanInteractWithKillButton { get; set; } Property Value Type Description Boolean EnableAssasinExtras Declaration public bool EnableAssasinExtras { get; set; } Property Value Type Description Boolean InteractionEnabled Declaration public bool InteractionEnabled { get; set; } Property Value Type Description Boolean Events onGeneralClick Declaration public static event Action onGeneralClick Event Type Type Description Action onKillButtonClick Declaration public static event Action onKillButtonClick Event Type Type Description Action"
+    "keywords": "Class GameUI Inheritance Object GameUI Namespace : Global Assembly : cs.temp.dll.dll Syntax public class GameUI : MonoBehaviour Fields Instance Declaration public static GameUI Instance Field Value Type Description GameUI Properties CanInteractWithKillButton Declaration public bool CanInteractWithKillButton { get; set; } Property Value Type Description Boolean CanInteractWithReportButton Declaration public bool CanInteractWithReportButton { get; set; } Property Value Type Description Boolean EnableAssasinExtras Declaration public bool EnableAssasinExtras { get; set; } Property Value Type Description Boolean InteractionEnabled Declaration public bool InteractionEnabled { get; set; } Property Value Type Description Boolean Events onGeneralClick Declaration public static event Action onGeneralClick Event Type Type Description Action onKillButtonClick Declaration public static event Action onKillButtonClick Event Type Type Description Action OnReportClick Declaration public static event Action OnReportClick Event Type Type Description Action"
   },
   "api/Global.HamiltonNetworkPlayer.html": {
     "href": "api/Global.HamiltonNetworkPlayer.html",

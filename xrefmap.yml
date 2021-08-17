@@ -468,19 +468,19 @@ references:
   commentId: T:Global.DetectDead
   fullName: DetectDead
   nameWithType: DetectDead
-- uid: Global.DetectDead.CmdReport
-  name: CmdReport()
-  href: api/Global.DetectDead.html#Global_DetectDead_CmdReport
-  commentId: M:Global.DetectDead.CmdReport
-  fullName: DetectDead.CmdReport()
-  nameWithType: DetectDead.CmdReport()
-- uid: Global.DetectDead.CmdReport*
-  name: CmdReport
-  href: api/Global.DetectDead.html#Global_DetectDead_CmdReport_
-  commentId: Overload:Global.DetectDead.CmdReport
+- uid: Global.DetectDead.OnStartClient
+  name: OnStartClient()
+  href: api/Global.DetectDead.html#Global_DetectDead_OnStartClient
+  commentId: M:Global.DetectDead.OnStartClient
+  fullName: DetectDead.OnStartClient()
+  nameWithType: DetectDead.OnStartClient()
+- uid: Global.DetectDead.OnStartClient*
+  name: OnStartClient
+  href: api/Global.DetectDead.html#Global_DetectDead_OnStartClient_
+  commentId: Overload:Global.DetectDead.OnStartClient
   isSpec: "True"
-  fullName: DetectDead.CmdReport
-  nameWithType: DetectDead.CmdReport
+  fullName: DetectDead.OnStartClient
+  nameWithType: DetectDead.OnStartClient
 - uid: Global.DetectDead.OnStartServer
   name: OnStartServer()
   href: api/Global.DetectDead.html#Global_DetectDead_OnStartServer
@@ -494,6 +494,19 @@ references:
   isSpec: "True"
   fullName: DetectDead.OnStartServer
   nameWithType: DetectDead.OnStartServer
+- uid: Global.DetectDead.OnStopClient
+  name: OnStopClient()
+  href: api/Global.DetectDead.html#Global_DetectDead_OnStopClient
+  commentId: M:Global.DetectDead.OnStopClient
+  fullName: DetectDead.OnStopClient()
+  nameWithType: DetectDead.OnStopClient()
+- uid: Global.DetectDead.OnStopClient*
+  name: OnStopClient
+  href: api/Global.DetectDead.html#Global_DetectDead_OnStopClient_
+  commentId: Overload:Global.DetectDead.OnStopClient
+  isSpec: "True"
+  fullName: DetectDead.OnStopClient
+  nameWithType: DetectDead.OnStopClient
 - uid: Global.Dialog
   name: Dialog
   href: api/Global.Dialog.html
@@ -1226,6 +1239,19 @@ references:
   isSpec: "True"
   fullName: GameUI.CanInteractWithKillButton
   nameWithType: GameUI.CanInteractWithKillButton
+- uid: Global.GameUI.CanInteractWithReportButton
+  name: CanInteractWithReportButton
+  href: api/Global.GameUI.html#Global_GameUI_CanInteractWithReportButton
+  commentId: P:Global.GameUI.CanInteractWithReportButton
+  fullName: GameUI.CanInteractWithReportButton
+  nameWithType: GameUI.CanInteractWithReportButton
+- uid: Global.GameUI.CanInteractWithReportButton*
+  name: CanInteractWithReportButton
+  href: api/Global.GameUI.html#Global_GameUI_CanInteractWithReportButton_
+  commentId: Overload:Global.GameUI.CanInteractWithReportButton
+  isSpec: "True"
+  fullName: GameUI.CanInteractWithReportButton
+  nameWithType: GameUI.CanInteractWithReportButton
 - uid: Global.GameUI.EnableAssasinExtras
   name: EnableAssasinExtras
   href: api/Global.GameUI.html#Global_GameUI_EnableAssasinExtras
@@ -1270,6 +1296,12 @@ references:
   commentId: E:Global.GameUI.onKillButtonClick
   fullName: GameUI.onKillButtonClick
   nameWithType: GameUI.onKillButtonClick
+- uid: Global.GameUI.OnReportClick
+  name: OnReportClick
+  href: api/Global.GameUI.html#Global_GameUI_OnReportClick
+  commentId: E:Global.GameUI.OnReportClick
+  fullName: GameUI.OnReportClick
+  nameWithType: GameUI.OnReportClick
 - uid: Global.HamiltonNetworkPlayer
   name: HamiltonNetworkPlayer
   href: api/Global.HamiltonNetworkPlayer.html
