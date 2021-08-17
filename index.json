@@ -182,7 +182,7 @@
   "api/Global.HamiltonNetworkPlayer.html": {
     "href": "api/Global.HamiltonNetworkPlayer.html",
     "title": "Class HamiltonNetworkPlayer | A night in the house of Hunt",
-    "keywords": "Class HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. Inheritance Object Mirror.NetworkBehaviour Mirror.NetworkRoomPlayer HamiltonNetworkPlayer Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HamiltonNetworkPlayer : NetworkRoomPlayer Fields characterType Declaration public CharacterTypes characterType Field Value Type Description CharacterTypes isImpostor Declaration public bool isImpostor Field Value Type Description Boolean Methods OnStartServer() Declaration public override void OnStartServer() Overrides Mirror.NetworkBehaviour.OnStartServer()"
+    "keywords": "Class HamiltonNetworkPlayer Custom network player, has some player information that persists between sessions. Inheritance Object Mirror.NetworkBehaviour Mirror.NetworkRoomPlayer HamiltonNetworkPlayer Namespace : Global Assembly : cs.temp.dll.dll Syntax public class HamiltonNetworkPlayer : NetworkRoomPlayer Fields characterType Declaration public CharacterTypes characterType Field Value Type Description CharacterTypes isImpostor Declaration public bool isImpostor Field Value Type Description Boolean Methods SetCharacter(CharacterTypes) Declaration public void SetCharacter(CharacterTypes characterType) Parameters Type Name Description CharacterTypes characterType"
   },
   "api/Global.HamiltonNetworkRoomManager.html": {
     "href": "api/Global.HamiltonNetworkRoomManager.html",
@@ -317,7 +317,7 @@
   "api/Global.PlayerSelectionInLobby.html": {
     "href": "api/Global.PlayerSelectionInLobby.html",
     "title": "Class PlayerSelectionInLobby | A night in the house of Hunt",
-    "keywords": "Class PlayerSelectionInLobby Handles setting a character type for current player, to be connected with lobby UI, before game starts. Can be used anywhere in the hierarchy. Inheritance Object Mirror.NetworkBehaviour PlayerSelectionInLobby Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayerSelectionInLobby : NetworkBehaviour Methods OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() OnStopClient() Declaration public override void OnStopClient() Overrides Mirror.NetworkBehaviour.OnStopClient()"
+    "keywords": "Class PlayerSelectionInLobby Handles setting a character type for current player, to be connected with lobby UI, before game starts. Can be used anywhere in the hierarchy. Inheritance Object Mirror.NetworkBehaviour PlayerSelectionInLobby Namespace : Global Assembly : cs.temp.dll.dll Syntax public class PlayerSelectionInLobby : NetworkBehaviour Methods CmdSetCharacterOnServer(CharacterTypes) Declaration public void CmdSetCharacterOnServer(CharacterTypes characterType) Parameters Type Name Description CharacterTypes characterType OnStartClient() Declaration public override void OnStartClient() Overrides Mirror.NetworkBehaviour.OnStartClient() OnStopClient() Declaration public override void OnStopClient() Overrides Mirror.NetworkBehaviour.OnStopClient()"
   },
   "api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html": {
     "href": "api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html",

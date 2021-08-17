@@ -1320,19 +1320,19 @@ references:
   commentId: F:Global.HamiltonNetworkPlayer.isImpostor
   fullName: HamiltonNetworkPlayer.isImpostor
   nameWithType: HamiltonNetworkPlayer.isImpostor
-- uid: Global.HamiltonNetworkPlayer.OnStartServer
-  name: OnStartServer()
-  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer
-  commentId: M:Global.HamiltonNetworkPlayer.OnStartServer
-  fullName: HamiltonNetworkPlayer.OnStartServer()
-  nameWithType: HamiltonNetworkPlayer.OnStartServer()
-- uid: Global.HamiltonNetworkPlayer.OnStartServer*
-  name: OnStartServer
-  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer_
-  commentId: Overload:Global.HamiltonNetworkPlayer.OnStartServer
+- uid: Global.HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
+  name: SetCharacter(CharacterTypes)
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetCharacter_CharacterTypes_
+  commentId: M:Global.HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
+  fullName: HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
+  nameWithType: HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
+- uid: Global.HamiltonNetworkPlayer.SetCharacter*
+  name: SetCharacter
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetCharacter_
+  commentId: Overload:Global.HamiltonNetworkPlayer.SetCharacter
   isSpec: "True"
-  fullName: HamiltonNetworkPlayer.OnStartServer
-  nameWithType: HamiltonNetworkPlayer.OnStartServer
+  fullName: HamiltonNetworkPlayer.SetCharacter
+  nameWithType: HamiltonNetworkPlayer.SetCharacter
 - uid: Global.HamiltonNetworkRoomManager
   name: HamiltonNetworkRoomManager
   href: api/Global.HamiltonNetworkRoomManager.html
@@ -2376,6 +2376,19 @@ references:
   commentId: T:Global.PlayerSelectionInLobby
   fullName: PlayerSelectionInLobby
   nameWithType: PlayerSelectionInLobby
+- uid: Global.PlayerSelectionInLobby.CmdSetCharacterOnServer(CharacterTypes)
+  name: CmdSetCharacterOnServer(CharacterTypes)
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_CmdSetCharacterOnServer_CharacterTypes_
+  commentId: M:Global.PlayerSelectionInLobby.CmdSetCharacterOnServer(CharacterTypes)
+  fullName: PlayerSelectionInLobby.CmdSetCharacterOnServer(CharacterTypes)
+  nameWithType: PlayerSelectionInLobby.CmdSetCharacterOnServer(CharacterTypes)
+- uid: Global.PlayerSelectionInLobby.CmdSetCharacterOnServer*
+  name: CmdSetCharacterOnServer
+  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_CmdSetCharacterOnServer_
+  commentId: Overload:Global.PlayerSelectionInLobby.CmdSetCharacterOnServer
+  isSpec: "True"
+  fullName: PlayerSelectionInLobby.CmdSetCharacterOnServer
+  nameWithType: PlayerSelectionInLobby.CmdSetCharacterOnServer
 - uid: Global.PlayerSelectionInLobby.OnStartClient
   name: OnStartClient()
   href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStartClient
