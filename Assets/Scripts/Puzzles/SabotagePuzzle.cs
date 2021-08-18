@@ -1,4 +1,5 @@
-﻿using Mirror;
+﻿using Extensions;
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,14 +32,6 @@ public class SabotagePuzzle : NetworkBehaviour
     float timeoutSecondsBeforeClearing = 20f;
 
     /// <summary>
-    /// Connections of those who have solved the puzzle
-    /// </summary>
-    /// <remarks>
-    /// Only available on the server
-    /// </remarks>
-    private List<NetworkConnection> playersWhoSolved = new List<NetworkConnection>();
-
-    /// <summary>
     /// Enables opening a UI for solving puzzle primaraly
     /// </summary>
     protected bool IsPuzzleEnabled
@@ -55,6 +48,10 @@ public class SabotagePuzzle : NetworkBehaviour
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="type"></param>
     private void TurnEmergencyIfNecessary(Emergency.EmergencyType type)
     {
         if (AreEmergencyConditionsEnough(type))
@@ -83,20 +80,14 @@ public class SabotagePuzzle : NetworkBehaviour
     {
         base.OnStartServer();
 
-        VotingManager.OnVotingStarted += ClearOnVoting;
+        VotingManager.OnVotingStarted += ResetOnVoting;
         Emergency.OnEmergencyStarted += TurnEmergencyIfNecessary;
         Emergency.OnEmergencyResolved += TurnEmergencyOff;
     }
 
-    private void ClearOnVoting(int obj)
+    protected virtual void ResetOnVoting(int _)
     {
-        CancelInvoke(nameof(ClearSolvedOnTimeout));
-        ClearSolvedOnTimeout();
-    }
-
-    void ClearSolvedOnTimeout()
-    {
-        playersWhoSolved.Clear();
+         
     }
 
     /// <summary>
@@ -122,29 +113,23 @@ public class SabotagePuzzle : NetworkBehaviour
     [Server]
     protected virtual void OnPuzzleActivated() { }
 
+    [Server]
+    protected virtual bool ArePuzzleCompletionConditionsReached() => false;
+
     /// <summary>
     /// Call on the server when the puzzle has been finished by the user.
     /// </summary>
     [Server]
     protected void SetPuzzleAsCompleted(NetworkConnection player)
     {
-        //Reset timeout, check enough users have completed
-        CancelInvoke(nameof(ClearSolvedOnTimeout));
-
-        playersWhoSolved.Add(player);
-
-        print($"Puzzle solved by player count: {playersWhoSolved.Count}");
 
         TargetClosePuzzle(player);
 
-        print("aaaa");
-
-        if (playersWhoSolved.Count == requireNumberOfPlayersToSolve)
+        if (ArePuzzleCompletionConditionsReached())
         {
+            this.SuperPrint("Sabotage completed!");
             OnPuzzleCompleted();
         }
-
-        Invoke(nameof(ClearSolvedOnTimeout), timeoutSecondsBeforeClearing);
     }
 
     /// <summary>
@@ -152,6 +137,9 @@ public class SabotagePuzzle : NetworkBehaviour
     /// 
     /// Allways call base implementation via `base.OnPuzzleCompleted()` or some default behaviour will be missing!
     /// </summary>
+    /// <remarks>
+    /// Dont' call directly
+    /// </remarks>
     [Server]
     protected virtual void OnPuzzleCompleted() {
         CloseAllPuzzle();
@@ -163,7 +151,7 @@ public class SabotagePuzzle : NetworkBehaviour
     {
         base.OnStopServer();
 
-        VotingManager.OnVotingStarted -= ClearOnVoting;
+        VotingManager.OnVotingStarted -= ResetOnVoting;
         Emergency.OnEmergencyStarted -= TurnEmergencyIfNecessary;
         Emergency.OnEmergencyResolved -= TurnEmergencyOff;
     }

@@ -79,7 +79,10 @@ public class SabotageBoilers : SabotagePuzzle
 
         if(playersOnButton.Count >= 2)
         {
-            OnPuzzleCompleted();
+            foreach(var player in playersOnButton)
+            {
+                SetPuzzleAsCompleted(player.playerOnButton.connectionToClient);
+            }
         }
     }
 
@@ -95,6 +98,11 @@ public class SabotageBoilers : SabotagePuzzle
     {
         yield return new WaitForSecondsRealtime(stickynessInServer);
         playersOnButton.RemoveAll(p => p.playerOnButton == sender.identity);
+    }
+
+    protected override bool ArePuzzleCompletionConditionsReached()
+    {
+        return playersOnButton.Count >= 2;
     }
 
     protected override void OnPuzzleCompleted()
