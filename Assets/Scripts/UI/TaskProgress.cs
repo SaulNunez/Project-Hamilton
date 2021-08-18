@@ -18,17 +18,15 @@ public class TaskProgress : NetworkBehaviour
     [SyncVar(hook = nameof(DoneTasksUpdated))]
     int doneTasks;
 
-    [SyncVar(hook = nameof(AllTasksUpdated))]
-    int allTasks;
 
     private void DoneTasksUpdated(int _, int newValue)
     {
-        taskText.text = $"{doneTasks}/{allTasks}";
+        taskText.text = $"{doneTasks}/{PuzzleCompletion.instance.PuzzlesAvailable}";
     }
 
     private void AllTasksUpdated(int _, int newValue)
     {
-        taskText.text = $"{doneTasks}/{allTasks}";
+        taskText.text = $"{doneTasks}/{PuzzleCompletion.instance.PuzzlesAvailable}";
     }
 
     public override void OnStartServer()
@@ -36,7 +34,6 @@ public class TaskProgress : NetworkBehaviour
         base.OnStartServer();
 
         PuzzleCompletion.OnPuzzleCompleted += UpdatePuzzleCount;
-        allTasks = PuzzleCompletion.instance.PuzzlesAvailable;
     }
 
     private void UpdatePuzzleCount(PuzzleId id, NetworkIdentity doneBy)
