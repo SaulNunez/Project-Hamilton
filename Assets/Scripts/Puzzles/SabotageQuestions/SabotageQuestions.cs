@@ -1,4 +1,5 @@
-﻿using Mirror;
+﻿using Extensions;
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -250,10 +251,9 @@ public class SabotageQuestions : SabotagePuzzle
     void CmdSendAnswer(int answerIndex, NetworkConnectionToClient sender = null)
     {
         var isCorrectAnswer = questions.questions[currentQuestion[sender.identity]].correctAnswerIndex == answerIndex;
-        print($"Given answer index {questions.questions[currentQuestion[sender.identity]].correctAnswerIndex}, result: {answerIndex}, question index: {currentQuestion[sender.identity]}");
         if (isCorrectAnswer)
         {
-            print("Correct answer");
+            this.SuperPrint($"Correct answer by {sender.connectionId}");
             if (playerProgress.ContainsKey(sender))
             {
                 playerProgress[sender] = playerProgress[sender] + 1;
@@ -265,10 +265,18 @@ public class SabotageQuestions : SabotagePuzzle
 
             if(questionsSolved >= questionsNeededToSolve)
             {
-                OnPuzzleCompleted();
+                foreach(var player in playerProgress.Keys)
+                {
+                    SetPuzzleAsCompleted(player);
+                }
             }
         }
         SetNewQuestion(sender);
         RpcSetProgress();
+    }
+
+    protected override bool ArePuzzleCompletionConditionsReached()
+    {
+        return questionsSolved >= questionsNeededToSolve;
     }
 }
