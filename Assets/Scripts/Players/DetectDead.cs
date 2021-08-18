@@ -6,14 +6,10 @@ using UnityEngine;
 
 public class DetectDead : NetworkBehaviour
 {
-    private bool detected;
-
     [SerializeField]
     private LayerMask deadPlayersLayers;
 
     HubConfig config;
-
-    Collider2D other;
 
     public override void OnStartServer()
     {
@@ -45,14 +41,8 @@ public class DetectDead : NetworkBehaviour
         if (isClient)
         {
             var found = Physics2D.OverlapCircle(transform.position, config.actDistance, deadPlayersLayers);
-            if (found)
-            {
-                other = found;
-                detected = true;
-            } else
-            {
-                detected = false;
-            }
+
+            GameUI.Instance.CanInteractWithReportButton = found;
         }
     }
 
