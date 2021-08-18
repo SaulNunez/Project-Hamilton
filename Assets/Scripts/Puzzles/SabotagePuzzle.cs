@@ -80,12 +80,12 @@ public class SabotagePuzzle : NetworkBehaviour
     {
         base.OnStartServer();
 
-        VotingManager.OnVotingStarted += ResetOnVoting;
+        VotingManager.OnVotingStarted += ResetSabotage;
         Emergency.OnEmergencyStarted += TurnEmergencyIfNecessary;
         Emergency.OnEmergencyResolved += TurnEmergencyOff;
     }
 
-    protected virtual void ResetOnVoting(int _)
+    protected virtual void ResetSabotage(int _)
     {
          
     }
@@ -142,7 +142,9 @@ public class SabotagePuzzle : NetworkBehaviour
     /// </remarks>
     [Server]
     protected virtual void OnPuzzleCompleted() {
+        TurnEmergencyOff();
         CloseAllPuzzle();
+        ResetSabotage(0);
 
         Emergency.instance.StopEmergency();
     }
@@ -151,7 +153,7 @@ public class SabotagePuzzle : NetworkBehaviour
     {
         base.OnStopServer();
 
-        VotingManager.OnVotingStarted -= ResetOnVoting;
+        VotingManager.OnVotingStarted -= ResetSabotage;
         Emergency.OnEmergencyStarted -= TurnEmergencyIfNecessary;
         Emergency.OnEmergencyResolved -= TurnEmergencyOff;
     }
