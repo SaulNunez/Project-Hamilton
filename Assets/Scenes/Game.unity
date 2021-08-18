@@ -63828,10 +63828,10 @@ RectTransform:
   m_Father: {fileID: 764661022}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -348.49973, y: 228.25}
-  m_SizeDelta: {x: -719.0006, y: -478.47516}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 111.000275, y: -30.25}
+  m_SizeDelta: {x: 199.99939, y: 38.52484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728499576
 MonoBehaviour:
@@ -85629,6 +85629,7 @@ MonoBehaviour:
   ui: {fileID: 347596554}
   requireNumberOfPlayersToSolve: 2
   timeoutSecondsBeforeClearing: 20
+  expectedPlayers: 0
   expectedVoltage: 128
   voltageSlider: {fileID: 999767412}
 --- !u!114 &1630759340
