@@ -22,11 +22,6 @@ public class SabotagePuzzle : NetworkBehaviour
     [SyncVar]
     private bool isPuzzleEnabled = false;
 
-    [Header("Multiple users")]
-    [Range(1, 6)]
-    [SerializeField]
-    int requireNumberOfPlayersToSolve = 2;
-
     [Range(1f, 90f)]
     [SerializeField]
     float timeoutSecondsBeforeClearing = 20f;

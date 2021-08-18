@@ -52,6 +52,7 @@ public class ElectricitySabotage : SabotagePuzzle
     {
         if(value == expectedVoltage)
         {
+            usersSolvedPuzzle++;
             this.SuperPrint($"{sender.address}: Player has finished electricity puzzle");
             SetPuzzleAsCompleted(sender);
         }

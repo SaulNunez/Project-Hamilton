@@ -71114,7 +71114,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ui: {fileID: 746553757}
-  requireNumberOfPlayersToSolve: 2
   timeoutSecondsBeforeClearing: 20
   waitingPlayersUi: {fileID: 665919636}
   waitingOnUsersToSolveUi: {fileID: 1564334102}
@@ -81157,7 +81156,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ui: {fileID: 929814941}
-  requireNumberOfPlayersToSolve: 2
   timeoutSecondsBeforeClearing: 20
   buttonToClick: {fileID: 213490576}
   stickynessInServer: 2
@@ -85627,9 +85625,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ui: {fileID: 347596554}
-  requireNumberOfPlayersToSolve: 2
   timeoutSecondsBeforeClearing: 20
-  expectedPlayers: 0
+  expectedPlayers: 2
   expectedVoltage: 128
   voltageSlider: {fileID: 999767412}
 --- !u!114 &1630759340
