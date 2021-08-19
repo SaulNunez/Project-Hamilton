@@ -316,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ElectricitySabotage.html",
-          "hash": "4hBLScF5/5mBA6xBjl4UvVgb4jGT35k3GdygwqiuU0A="
+          "hash": "1h3x9J8jtd6UTOK6bUtGhUAmk2I1fe744t+a14wp7ZM="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageBoilers.html",
-          "hash": "+Kpx+l/JfaEyNE4HrGht70yqsi3uf7jA06FHFwFE4wg="
+          "hash": "YTatbLn9PAd1Qz6/wNBw3D2k6LEvsiy0J6/O6I3Q7Bk="
         }
       },
       "is_incremental": false,
@@ -1072,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotagePuzzle.html",
-          "hash": "VufhGErYYi/+af9do06udoFyOFAhPObbnsKAtwOZF0Q="
+          "hash": "qY3I0p6v0d1n85ziR33sGmOHzEee2Rxtm3IkJSszF0U="
         }
       },
       "is_incremental": false,
@@ -1120,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SabotageQuestions.html",
-          "hash": "K3fOkSOZ1i45HyjnbLT/G2gZ66kCVrtHV6cNrq8QXoA="
+          "hash": "uQ3PtnDDaC21JlpxC2DvB6HuKPkjQuhB/uKW3y/TxXY="
         }
       },
       "is_incremental": false,

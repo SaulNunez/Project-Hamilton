@@ -734,19 +734,19 @@ references:
   isSpec: "True"
   fullName: ElectricitySabotage.AreEmergencyConditionsEnough
   nameWithType: ElectricitySabotage.AreEmergencyConditionsEnough
-- uid: Global.ElectricitySabotage.OnPuzzleCompleted
-  name: OnPuzzleCompleted()
-  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnPuzzleCompleted
-  commentId: M:Global.ElectricitySabotage.OnPuzzleCompleted
-  fullName: ElectricitySabotage.OnPuzzleCompleted()
-  nameWithType: ElectricitySabotage.OnPuzzleCompleted()
-- uid: Global.ElectricitySabotage.OnPuzzleCompleted*
-  name: OnPuzzleCompleted
-  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnPuzzleCompleted_
-  commentId: Overload:Global.ElectricitySabotage.OnPuzzleCompleted
+- uid: Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached
+  name: ArePuzzleCompletionConditionsReached()
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_ArePuzzleCompletionConditionsReached
+  commentId: M:Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached
+  fullName: ElectricitySabotage.ArePuzzleCompletionConditionsReached()
+  nameWithType: ElectricitySabotage.ArePuzzleCompletionConditionsReached()
+- uid: Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached*
+  name: ArePuzzleCompletionConditionsReached
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_ArePuzzleCompletionConditionsReached_
+  commentId: Overload:Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached
   isSpec: "True"
-  fullName: ElectricitySabotage.OnPuzzleCompleted
-  nameWithType: ElectricitySabotage.OnPuzzleCompleted
+  fullName: ElectricitySabotage.ArePuzzleCompletionConditionsReached
+  nameWithType: ElectricitySabotage.ArePuzzleCompletionConditionsReached
 - uid: Global.ElectricitySabotage.OnStartClient
   name: OnStartClient()
   href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_OnStartClient
@@ -760,6 +760,19 @@ references:
   isSpec: "True"
   fullName: ElectricitySabotage.OnStartClient
   nameWithType: ElectricitySabotage.OnStartClient
+- uid: Global.ElectricitySabotage.ResetSabotage(System.Int32)
+  name: ResetSabotage(Int32)
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_ResetSabotage_System_Int32_
+  commentId: M:Global.ElectricitySabotage.ResetSabotage(System.Int32)
+  fullName: ElectricitySabotage.ResetSabotage(System.Int32)
+  nameWithType: ElectricitySabotage.ResetSabotage(Int32)
+- uid: Global.ElectricitySabotage.ResetSabotage*
+  name: ResetSabotage
+  href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_ResetSabotage_
+  commentId: Overload:Global.ElectricitySabotage.ResetSabotage
+  isSpec: "True"
+  fullName: ElectricitySabotage.ResetSabotage
+  nameWithType: ElectricitySabotage.ResetSabotage
 - uid: Global.ElectricitySabotage.SendNewGeneratorValue(System.Single)
   name: SendNewGeneratorValue(Single)
   href: api/Global.ElectricitySabotage.html#Global_ElectricitySabotage_SendNewGeneratorValue_System_Single_
@@ -3253,6 +3266,19 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.AreEmergencyConditionsEnough
   nameWithType: SabotageBoilers.AreEmergencyConditionsEnough
+- uid: Global.SabotageBoilers.ArePuzzleCompletionConditionsReached
+  name: ArePuzzleCompletionConditionsReached()
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_ArePuzzleCompletionConditionsReached
+  commentId: M:Global.SabotageBoilers.ArePuzzleCompletionConditionsReached
+  fullName: SabotageBoilers.ArePuzzleCompletionConditionsReached()
+  nameWithType: SabotageBoilers.ArePuzzleCompletionConditionsReached()
+- uid: Global.SabotageBoilers.ArePuzzleCompletionConditionsReached*
+  name: ArePuzzleCompletionConditionsReached
+  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_ArePuzzleCompletionConditionsReached_
+  commentId: Overload:Global.SabotageBoilers.ArePuzzleCompletionConditionsReached
+  isSpec: "True"
+  fullName: SabotageBoilers.ArePuzzleCompletionConditionsReached
+  nameWithType: SabotageBoilers.ArePuzzleCompletionConditionsReached
 - uid: Global.SabotageBoilers.OnPuzzleActivated
   name: OnPuzzleActivated()
   href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleActivated
@@ -3354,6 +3380,19 @@ references:
   isSpec: "True"
   fullName: SabotagePuzzle.AreEmergencyConditionsEnough
   nameWithType: SabotagePuzzle.AreEmergencyConditionsEnough
+- uid: Global.SabotagePuzzle.ArePuzzleCompletionConditionsReached
+  name: ArePuzzleCompletionConditionsReached()
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ArePuzzleCompletionConditionsReached
+  commentId: M:Global.SabotagePuzzle.ArePuzzleCompletionConditionsReached
+  fullName: SabotagePuzzle.ArePuzzleCompletionConditionsReached()
+  nameWithType: SabotagePuzzle.ArePuzzleCompletionConditionsReached()
+- uid: Global.SabotagePuzzle.ArePuzzleCompletionConditionsReached*
+  name: ArePuzzleCompletionConditionsReached
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ArePuzzleCompletionConditionsReached_
+  commentId: Overload:Global.SabotagePuzzle.ArePuzzleCompletionConditionsReached
+  isSpec: "True"
+  fullName: SabotagePuzzle.ArePuzzleCompletionConditionsReached
+  nameWithType: SabotagePuzzle.ArePuzzleCompletionConditionsReached
 - uid: Global.SabotagePuzzle.CloseAllPuzzle
   name: CloseAllPuzzle()
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_CloseAllPuzzle
@@ -3432,6 +3471,19 @@ references:
   isSpec: "True"
   fullName: SabotagePuzzle.OnStopServer
   nameWithType: SabotagePuzzle.OnStopServer
+- uid: Global.SabotagePuzzle.ResetSabotage(System.Int32)
+  name: ResetSabotage(Int32)
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ResetSabotage_System_Int32_
+  commentId: M:Global.SabotagePuzzle.ResetSabotage(System.Int32)
+  fullName: SabotagePuzzle.ResetSabotage(System.Int32)
+  nameWithType: SabotagePuzzle.ResetSabotage(Int32)
+- uid: Global.SabotagePuzzle.ResetSabotage*
+  name: ResetSabotage
+  href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_ResetSabotage_
+  commentId: Overload:Global.SabotagePuzzle.ResetSabotage
+  isSpec: "True"
+  fullName: SabotagePuzzle.ResetSabotage
+  nameWithType: SabotagePuzzle.ResetSabotage
 - uid: Global.SabotagePuzzle.SetPuzzleAsCompleted(Mirror.NetworkConnection)
   name: SetPuzzleAsCompleted(NetworkConnection)
   href: api/Global.SabotagePuzzle.html#Global_SabotagePuzzle_SetPuzzleAsCompleted_Mirror_NetworkConnection_
@@ -3532,6 +3584,19 @@ references:
   isSpec: "True"
   fullName: SabotageQuestions.AreEmergencyConditionsEnough
   nameWithType: SabotageQuestions.AreEmergencyConditionsEnough
+- uid: Global.SabotageQuestions.ArePuzzleCompletionConditionsReached
+  name: ArePuzzleCompletionConditionsReached()
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_ArePuzzleCompletionConditionsReached
+  commentId: M:Global.SabotageQuestions.ArePuzzleCompletionConditionsReached
+  fullName: SabotageQuestions.ArePuzzleCompletionConditionsReached()
+  nameWithType: SabotageQuestions.ArePuzzleCompletionConditionsReached()
+- uid: Global.SabotageQuestions.ArePuzzleCompletionConditionsReached*
+  name: ArePuzzleCompletionConditionsReached
+  href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_ArePuzzleCompletionConditionsReached_
+  commentId: Overload:Global.SabotageQuestions.ArePuzzleCompletionConditionsReached
+  isSpec: "True"
+  fullName: SabotageQuestions.ArePuzzleCompletionConditionsReached
+  nameWithType: SabotageQuestions.ArePuzzleCompletionConditionsReached
 - uid: Global.SabotageQuestions.OnPuzzleActivated
   name: OnPuzzleActivated()
   href: api/Global.SabotageQuestions.html#Global_SabotageQuestions_OnPuzzleActivated

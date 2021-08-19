@@ -114,6 +114,9 @@
       <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_SetPuzzleAsCompleted_Mirror_NetworkConnection_">SabotagePuzzle.SetPuzzleAsCompleted(NetworkConnection)</a>
     </div>
     <div>
+      <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleCompleted">SabotagePuzzle.OnPuzzleCompleted()</a>
+    </div>
+    <div>
       <a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnStopServer">SabotagePuzzle.OnStopServer()</a>
     </div>
     <div>
@@ -177,16 +180,31 @@
   <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_AreEmergencyConditionsEnough_Emergency_EmergencyType_">SabotagePuzzle.AreEmergencyConditionsEnough(Emergency.EmergencyType)</a></div>
   
   
-  <a id="Global_ElectricitySabotage_OnPuzzleCompleted_" data-uid="Global.ElectricitySabotage.OnPuzzleCompleted*"></a>
-  <h4 id="Global_ElectricitySabotage_OnPuzzleCompleted" data-uid="Global.ElectricitySabotage.OnPuzzleCompleted">OnPuzzleCompleted()</h4>
+  <a id="Global_ElectricitySabotage_ArePuzzleCompletionConditionsReached_" data-uid="Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached*"></a>
+  <h4 id="Global_ElectricitySabotage_ArePuzzleCompletionConditionsReached" data-uid="Global.ElectricitySabotage.ArePuzzleCompletionConditionsReached">ArePuzzleCompletionConditionsReached()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnPuzzleCompleted()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override bool ArePuzzleCompletionConditionsReached()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_OnPuzzleCompleted">SabotagePuzzle.OnPuzzleCompleted()</a></div>
+  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ArePuzzleCompletionConditionsReached">SabotagePuzzle.ArePuzzleCompletionConditionsReached()</a></div>
   
   
   <a id="Global_ElectricitySabotage_OnStartClient_" data-uid="Global.ElectricitySabotage.OnStartClient*"></a>
@@ -199,6 +217,35 @@
   </div>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
+  
+  
+  <a id="Global_ElectricitySabotage_ResetSabotage_" data-uid="Global.ElectricitySabotage.ResetSabotage*"></a>
+  <h4 id="Global_ElectricitySabotage_ResetSabotage_System_Int32_" data-uid="Global.ElectricitySabotage.ResetSabotage(System.Int32)">ResetSabotage(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void ResetSabotage(int _)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">_</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Global.SabotagePuzzle.html#Global_SabotagePuzzle_ResetSabotage_System_Int32_">SabotagePuzzle.ResetSabotage(Int32)</a></div>
   
   
   <a id="Global_ElectricitySabotage_SendNewGeneratorValue_" data-uid="Global.ElectricitySabotage.SendNewGeneratorValue*"></a>
