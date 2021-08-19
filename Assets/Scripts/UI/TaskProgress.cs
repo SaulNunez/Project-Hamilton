@@ -19,12 +19,12 @@ public class TaskProgress : NetworkBehaviour
     int doneTasks;
 
 
-    private void DoneTasksUpdated(int _, int newValue)
+    private void DoneTasksUpdated(int oldValue, int newValue)
     {
         taskText.text = $"{doneTasks}/{PuzzleCompletion.instance.PuzzlesAvailable}";
     }
 
-    private void AllTasksUpdated(int _, int newValue)
+    private void AllTasksUpdated(int oldValue, int newValue)
     {
         taskText.text = $"{doneTasks}/{PuzzleCompletion.instance.PuzzlesAvailable}";
     }

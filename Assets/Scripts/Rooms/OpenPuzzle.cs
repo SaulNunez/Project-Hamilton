@@ -4,6 +4,7 @@ using Mirror;
 using UnityEngine;
 using System;
 using System.Linq;
+using Extensions;
 
 public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
 {
@@ -47,6 +48,9 @@ public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
         if(materialSet != null)
         {
             materialSet.IsActive = enabled;
+        } else
+        {
+            Debug.LogError($"Someone forgot to add a PuzzleActiveOutline component at {gameObject.name}");
         }
     }
 

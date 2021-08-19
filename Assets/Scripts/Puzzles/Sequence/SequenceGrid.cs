@@ -171,10 +171,7 @@ public class SequenceGrid : MonoBehaviour
 
         if(currentPosition == sequence.endPosition)
         {
-            if(sequencePuzzle != null)
-            {
-                sequencePuzzle.SetPuzzleComplete();
-            }
+            sequencePuzzle.SetPuzzleComplete();
         }
 
         OnPositionUpdate?.Invoke(currentPosition);

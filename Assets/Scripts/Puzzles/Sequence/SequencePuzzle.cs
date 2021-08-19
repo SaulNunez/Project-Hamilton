@@ -1,4 +1,5 @@
-﻿using Mirror;
+﻿using Extensions;
+using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ public class SequencePuzzle : NetworkBehaviour
     [Command(ignoreAuthority =true)]
     void CmdCompletePuzzle(NetworkConnectionToClient sender = null)
     {
+        this.SuperPrint("Sequence puzzle completed");
         PuzzleCompletion.instance.MarkCompleted(sequenceId, sender.identity);
         TargetClosePuzzle(sender);
     }
