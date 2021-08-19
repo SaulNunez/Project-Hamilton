@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1553100915838015388}
   - component: {fileID: 6685012321871017757}
   - component: {fileID: 1897594075319166202}
+  - component: {fileID: -6897273999222841346}
   m_Layer: 11
   m_Name: Skull
   m_TagString: Untagged
@@ -178,3 +179,17 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 0
   animator: {fileID: 6685012321871017757}
+--- !u!114 &-6897273999222841346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9154673738827038458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bc563e8500d5b42ad81e7068f1270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
