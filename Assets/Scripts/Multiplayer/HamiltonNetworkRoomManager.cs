@@ -1,10 +1,7 @@
 ﻿using Mirror;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Extension to the network room manager, handles handling settings done by user from network player to player as well as providing several new events
@@ -14,20 +11,6 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
     private string playerName;
 
     public event Action OnSceneChanged;
-
-    public string PlayerName
-    {
-        get
-        {
-            if (playerName == null)
-            {
-                playerName = $"Jugador {Guid.NewGuid()}";
-            }
-
-            return playerName;
-        }
-        set => playerName = value;
-    }
 
     public override void OnRoomClientSceneChanged(NetworkConnection conn)
     {
@@ -46,6 +29,9 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
 
         var playerSkinSetup = gamePlayer.GetComponent<PlayerSkin>();
         playerSkinSetup.characterSelected = characterSelected;
+
+        var playerName = gamePlayer.GetComponent<PlayerName>();
+        playerName.Name = networkPlayer.name;
 
         return base.OnRoomServerSceneLoadedForPlayer(conn, roomPlayer, gamePlayer);
     }

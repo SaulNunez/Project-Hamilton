@@ -9,6 +9,18 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     public CharacterTypes characterType = CharacterTypes.AndreaLewis;
 
     [SyncVar]
+    public string name;
+
+    [Client]
+    public void SetPlayerName(string name) => CmdSetPlayerName(name);
+
+    [Command]
+    void CmdSetPlayerName(string newName)
+    {
+        name = newName;
+    }
+
+    [SyncVar]
     public bool isImpostor = false;
 
     [Server]

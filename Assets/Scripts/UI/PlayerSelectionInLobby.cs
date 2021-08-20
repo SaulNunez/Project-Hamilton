@@ -50,7 +50,7 @@ public class PlayerSelectionInLobby : NetworkBehaviour
             if (!memory.Value.CharacterUsed(characterType))
             {
                 CmdSetCharacterOnServer(characterType);
-                memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, characterType);
+                //memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, characterType);
 
                 toggles.Find(x => x.characterType == characterType).toggle.isOn = true;
 
@@ -67,7 +67,7 @@ public class PlayerSelectionInLobby : NetworkBehaviour
                     if (!memory.Value.CharacterUsed(toggle.characterType))
                     {
                         CmdSetCharacterOnServer(toggle.characterType);
-                        memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, toggle.characterType);
+                        //memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).PlayerName, toggle.characterType);
 
                     }
                 }
