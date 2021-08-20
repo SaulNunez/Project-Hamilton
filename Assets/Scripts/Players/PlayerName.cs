@@ -8,4 +8,14 @@ using UnityEngine;
 public class PlayerName : NetworkBehaviour
 {
     public string Name { get; set; }
+
+    [SerializeField]
+    TextMeshPro playerNameTag;
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+
+        playerNameTag.text = Name;
+    }
 }
