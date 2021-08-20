@@ -26,7 +26,7 @@ public class AvailableCharactersMemory : NetworkBehaviour
     public static event Action<CharacterTypes> OnCharacterAvailable;
     public static event Action<CharacterTypes> OnCharacterOccupied;
 
-    public override void OnStartClient()
+    public override void OnStartClient()                                       
     {
         base.OnStartClient();
 

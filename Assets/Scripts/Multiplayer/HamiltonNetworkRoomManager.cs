@@ -8,15 +8,43 @@ using UnityEngine;
 /// </summary>
 public class HamiltonNetworkRoomManager : NetworkRoomManager
 {
-    private string playerName;
+    /// <summary>
+    /// When we changed were we set player name
+    /// Network room player used this name to keep tabs on who is currently using a character
+    /// So to fix breakage rapidly,  I added a uniquenessId.
+    /// That it's not more than a Guid casted to string
+    /// Collision is pretty much impossible
+    /// </summary>
+    private string uniquenessId;
 
+    public string UniquenessId { get => uniquenessId; }
+
+    /// <summary>
+    /// Called when scene changes to between lobby to game. 
+    /// Should work also if leaving lobby to main screen.
+    /// Or on end game to main screen.
+    /// </summary>
     public event Action OnSceneChanged;
+
+    public override void OnRoomStartClient()
+    {
+        base.OnRoomStartClient();
+
+        uniquenessId = Guid.NewGuid().ToString();
+    }
 
     public override void OnRoomClientSceneChanged(NetworkConnection conn)
     {
         OnSceneChanged?.Invoke();
     }
 
+    /// <summary>
+    /// Passing information between room player to game player
+    /// </summary>
+    /// <param name="conn"></param>
+    /// <param name="roomPlayer"></param>
+    /// <param name="gamePlayer"></param>
+    /// <returns></returns>
     public override bool OnRoomServerSceneLoadedForPlayer(NetworkConnection conn, GameObject roomPlayer, GameObject gamePlayer)
     {
         var networkPlayer = roomPlayer.GetComponent<HamiltonNetworkPlayer>();
