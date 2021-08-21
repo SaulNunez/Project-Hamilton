@@ -59,7 +59,7 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         playerSkinSetup.characterSelected = characterSelected;
 
         var playerName = gamePlayer.GetComponent<PlayerName>();
-        playerName.Name = networkPlayer.name;
+        playerName.SetName(networkPlayer.name);
 
         return base.OnRoomServerSceneLoadedForPlayer(conn, roomPlayer, gamePlayer);
     }

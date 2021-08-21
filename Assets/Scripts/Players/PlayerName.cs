@@ -7,15 +7,22 @@ using UnityEngine;
 
 public class PlayerName : NetworkBehaviour
 {
-    public string Name { get; set; }
+    public string Name { get => playerName; }
 
     [SerializeField]
     TextMeshPro playerNameTag;
 
-    public override void OnStartClient()
-    {
-        base.OnStartClient();
+    [SyncVar(hook = nameof(ChangeNameOnScreen))]
+    private string playerName;
 
-        playerNameTag.text = Name;
+    [Server]
+    public void SetName(string name)
+    {
+        this.playerName = name;
+    }
+
+    void ChangeNameOnScreen(string oldValue, string newValue)
+    {
+        playerNameTag.text = newValue;
     }
 }

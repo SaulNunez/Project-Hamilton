@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using System.Collections.Generic;
 
 /// <summary>
 /// Custom network player, has some player information that persists between sessions.
@@ -29,4 +30,15 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
         this.characterType = characterType;
     }
 
+    readonly static List<string> verbos = 
+        new List<string> { "Saltarín", "Jugueton", "Comelon", "Correlon", "Sonriente", "Preocupado", "Hablador" };
+    readonly static List<string> sustantivos = 
+        new List<string> { "Jaguar", "Ocelote", "Guacamaya", "Correcaminos", "Aguila", "Ajolote", "Gato", "Perro", "Oso", "Ganso" };
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+
+        name = $"{sustantivos.PickRandom()} {verbos.PickRandom()}";
+    }
 }
