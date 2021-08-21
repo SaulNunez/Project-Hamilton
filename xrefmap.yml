@@ -462,6 +462,38 @@ references:
   isSpec: "True"
   fullName: CreateLocalPuzzleUI.OnStartClient
   nameWithType: CreateLocalPuzzleUI.OnStartClient
+- uid: Global.DespawnAfterVoting
+  name: DespawnAfterVoting
+  href: api/Global.DespawnAfterVoting.html
+  commentId: T:Global.DespawnAfterVoting
+  fullName: DespawnAfterVoting
+  nameWithType: DespawnAfterVoting
+- uid: Global.DespawnAfterVoting.OnStartServer
+  name: OnStartServer()
+  href: api/Global.DespawnAfterVoting.html#Global_DespawnAfterVoting_OnStartServer
+  commentId: M:Global.DespawnAfterVoting.OnStartServer
+  fullName: DespawnAfterVoting.OnStartServer()
+  nameWithType: DespawnAfterVoting.OnStartServer()
+- uid: Global.DespawnAfterVoting.OnStartServer*
+  name: OnStartServer
+  href: api/Global.DespawnAfterVoting.html#Global_DespawnAfterVoting_OnStartServer_
+  commentId: Overload:Global.DespawnAfterVoting.OnStartServer
+  isSpec: "True"
+  fullName: DespawnAfterVoting.OnStartServer
+  nameWithType: DespawnAfterVoting.OnStartServer
+- uid: Global.DespawnAfterVoting.OnStopServer
+  name: OnStopServer()
+  href: api/Global.DespawnAfterVoting.html#Global_DespawnAfterVoting_OnStopServer
+  commentId: M:Global.DespawnAfterVoting.OnStopServer
+  fullName: DespawnAfterVoting.OnStopServer()
+  nameWithType: DespawnAfterVoting.OnStopServer()
+- uid: Global.DespawnAfterVoting.OnStopServer*
+  name: OnStopServer
+  href: api/Global.DespawnAfterVoting.html#Global_DespawnAfterVoting_OnStopServer_
+  commentId: Overload:Global.DespawnAfterVoting.OnStopServer
+  isSpec: "True"
+  fullName: DespawnAfterVoting.OnStopServer
+  nameWithType: DespawnAfterVoting.OnStopServer
 - uid: Global.DetectDead
   name: DetectDead
   href: api/Global.DetectDead.html
@@ -1333,6 +1365,25 @@ references:
   commentId: F:Global.HamiltonNetworkPlayer.isImpostor
   fullName: HamiltonNetworkPlayer.isImpostor
   nameWithType: HamiltonNetworkPlayer.isImpostor
+- uid: Global.HamiltonNetworkPlayer.name
+  name: name
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_name
+  commentId: F:Global.HamiltonNetworkPlayer.name
+  fullName: HamiltonNetworkPlayer.name
+  nameWithType: HamiltonNetworkPlayer.name
+- uid: Global.HamiltonNetworkPlayer.OnStartServer
+  name: OnStartServer()
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer
+  commentId: M:Global.HamiltonNetworkPlayer.OnStartServer
+  fullName: HamiltonNetworkPlayer.OnStartServer()
+  nameWithType: HamiltonNetworkPlayer.OnStartServer()
+- uid: Global.HamiltonNetworkPlayer.OnStartServer*
+  name: OnStartServer
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer_
+  commentId: Overload:Global.HamiltonNetworkPlayer.OnStartServer
+  isSpec: "True"
+  fullName: HamiltonNetworkPlayer.OnStartServer
+  nameWithType: HamiltonNetworkPlayer.OnStartServer
 - uid: Global.HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
   name: SetCharacter(CharacterTypes)
   href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetCharacter_CharacterTypes_
@@ -1346,6 +1397,19 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkPlayer.SetCharacter
   nameWithType: HamiltonNetworkPlayer.SetCharacter
+- uid: Global.HamiltonNetworkPlayer.SetPlayerName(System.String)
+  name: SetPlayerName(String)
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetPlayerName_System_String_
+  commentId: M:Global.HamiltonNetworkPlayer.SetPlayerName(System.String)
+  fullName: HamiltonNetworkPlayer.SetPlayerName(System.String)
+  nameWithType: HamiltonNetworkPlayer.SetPlayerName(String)
+- uid: Global.HamiltonNetworkPlayer.SetPlayerName*
+  name: SetPlayerName
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetPlayerName_
+  commentId: Overload:Global.HamiltonNetworkPlayer.SetPlayerName
+  isSpec: "True"
+  fullName: HamiltonNetworkPlayer.SetPlayerName
+  nameWithType: HamiltonNetworkPlayer.SetPlayerName
 - uid: Global.HamiltonNetworkRoomManager
   name: HamiltonNetworkRoomManager
   href: api/Global.HamiltonNetworkRoomManager.html
@@ -1391,25 +1455,38 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer
   nameWithType: HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer
+- uid: Global.HamiltonNetworkRoomManager.OnRoomStartClient
+  name: OnRoomStartClient()
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomStartClient
+  commentId: M:Global.HamiltonNetworkRoomManager.OnRoomStartClient
+  fullName: HamiltonNetworkRoomManager.OnRoomStartClient()
+  nameWithType: HamiltonNetworkRoomManager.OnRoomStartClient()
+- uid: Global.HamiltonNetworkRoomManager.OnRoomStartClient*
+  name: OnRoomStartClient
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnRoomStartClient_
+  commentId: Overload:Global.HamiltonNetworkRoomManager.OnRoomStartClient
+  isSpec: "True"
+  fullName: HamiltonNetworkRoomManager.OnRoomStartClient
+  nameWithType: HamiltonNetworkRoomManager.OnRoomStartClient
 - uid: Global.HamiltonNetworkRoomManager.OnSceneChanged
   name: OnSceneChanged
   href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_OnSceneChanged
   commentId: E:Global.HamiltonNetworkRoomManager.OnSceneChanged
   fullName: HamiltonNetworkRoomManager.OnSceneChanged
   nameWithType: HamiltonNetworkRoomManager.OnSceneChanged
-- uid: Global.HamiltonNetworkRoomManager.PlayerName
-  name: PlayerName
-  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_PlayerName
-  commentId: P:Global.HamiltonNetworkRoomManager.PlayerName
-  fullName: HamiltonNetworkRoomManager.PlayerName
-  nameWithType: HamiltonNetworkRoomManager.PlayerName
-- uid: Global.HamiltonNetworkRoomManager.PlayerName*
-  name: PlayerName
-  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_PlayerName_
-  commentId: Overload:Global.HamiltonNetworkRoomManager.PlayerName
+- uid: Global.HamiltonNetworkRoomManager.UniquenessId
+  name: UniquenessId
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_UniquenessId
+  commentId: P:Global.HamiltonNetworkRoomManager.UniquenessId
+  fullName: HamiltonNetworkRoomManager.UniquenessId
+  nameWithType: HamiltonNetworkRoomManager.UniquenessId
+- uid: Global.HamiltonNetworkRoomManager.UniquenessId*
+  name: UniquenessId
+  href: api/Global.HamiltonNetworkRoomManager.html#Global_HamiltonNetworkRoomManager_UniquenessId_
+  commentId: Overload:Global.HamiltonNetworkRoomManager.UniquenessId
   isSpec: "True"
-  fullName: HamiltonNetworkRoomManager.PlayerName
-  nameWithType: HamiltonNetworkRoomManager.PlayerName
+  fullName: HamiltonNetworkRoomManager.UniquenessId
+  nameWithType: HamiltonNetworkRoomManager.UniquenessId
 - uid: Global.HelloNanabot
   name: HelloNanabot
   href: api/Global.HelloNanabot.html
@@ -2219,19 +2296,19 @@ references:
   isSpec: "True"
   fullName: PlayerName.Name
   nameWithType: PlayerName.Name
-- uid: Global.PlayerName.OnStartClient
-  name: OnStartClient()
-  href: api/Global.PlayerName.html#Global_PlayerName_OnStartClient
-  commentId: M:Global.PlayerName.OnStartClient
-  fullName: PlayerName.OnStartClient()
-  nameWithType: PlayerName.OnStartClient()
-- uid: Global.PlayerName.OnStartClient*
-  name: OnStartClient
-  href: api/Global.PlayerName.html#Global_PlayerName_OnStartClient_
-  commentId: Overload:Global.PlayerName.OnStartClient
+- uid: Global.PlayerName.SetName(System.String)
+  name: SetName(String)
+  href: api/Global.PlayerName.html#Global_PlayerName_SetName_System_String_
+  commentId: M:Global.PlayerName.SetName(System.String)
+  fullName: PlayerName.SetName(System.String)
+  nameWithType: PlayerName.SetName(String)
+- uid: Global.PlayerName.SetName*
+  name: SetName
+  href: api/Global.PlayerName.html#Global_PlayerName_SetName_
+  commentId: Overload:Global.PlayerName.SetName
   isSpec: "True"
-  fullName: PlayerName.OnStartClient
-  nameWithType: PlayerName.OnStartClient
+  fullName: PlayerName.SetName
+  nameWithType: PlayerName.SetName
 - uid: Global.PlayersChat
   name: PlayersChat
   href: api/Global.PlayersChat.html

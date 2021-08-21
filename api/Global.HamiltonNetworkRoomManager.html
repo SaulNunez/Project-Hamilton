@@ -103,13 +103,13 @@
   </h3>
   
   
-  <a id="Global_HamiltonNetworkRoomManager_PlayerName_" data-uid="Global.HamiltonNetworkRoomManager.PlayerName*"></a>
-  <h4 id="Global_HamiltonNetworkRoomManager_PlayerName" data-uid="Global.HamiltonNetworkRoomManager.PlayerName">PlayerName</h4>
+  <a id="Global_HamiltonNetworkRoomManager_UniquenessId_" data-uid="Global.HamiltonNetworkRoomManager.UniquenessId*"></a>
+  <h4 id="Global_HamiltonNetworkRoomManager_UniquenessId" data-uid="Global.HamiltonNetworkRoomManager.UniquenessId">UniquenessId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PlayerName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string UniquenessId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +174,8 @@
   
   <a id="Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer*"></a>
   <h4 id="Global_HamiltonNetworkRoomManager_OnRoomServerSceneLoadedForPlayer_Mirror_NetworkConnection_GameObject_GameObject_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection,GameObject,GameObject)">OnRoomServerSceneLoadedForPlayer(NetworkConnection, GameObject, GameObject)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Passing information between room player to game player</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,12 +225,27 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Mirror.NetworkRoomManager.OnRoomServerSceneLoadedForPlayer(Mirror.NetworkConnection, GameObject, GameObject)</span></div>
+  
+  
+  <a id="Global_HamiltonNetworkRoomManager_OnRoomStartClient_" data-uid="Global.HamiltonNetworkRoomManager.OnRoomStartClient*"></a>
+  <h4 id="Global_HamiltonNetworkRoomManager_OnRoomStartClient" data-uid="Global.HamiltonNetworkRoomManager.OnRoomStartClient">OnRoomStartClient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnRoomStartClient()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkRoomManager.OnRoomStartClient()</span></div>
   <h3 id="events">Events
   </h3>
   
   
   <h4 id="Global_HamiltonNetworkRoomManager_OnSceneChanged" data-uid="Global.HamiltonNetworkRoomManager.OnSceneChanged">OnSceneChanged</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when scene changes to between lobby to game. 
+Should work also if leaving lobby to main screen.
+Or on end game to main screen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

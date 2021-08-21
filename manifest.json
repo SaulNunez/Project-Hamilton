@@ -192,6 +192,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.DespawnAfterVoting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.DespawnAfterVoting.html",
+          "hash": "BYQYg54ON87X3cyCBnvgz8bXscZoy7oR7Blo8KCBWWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.DetectDead.yml",
       "output": {
         ".html": {
@@ -460,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkPlayer.html",
-          "hash": "j56LZswvFoMwFY69CS+B5R1NY6mFL+EdLJz8jkNcIBQ="
+          "hash": "BuKJyl7idpCYOKo/Mozgn/X9N6M1TTXaUi8sfdNaxn4="
         }
       },
       "is_incremental": false,
@@ -472,7 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkRoomManager.html",
-          "hash": "Z0Ru7DycQjN3UsZyYtwwpV6r31qb9NWcca2aducN4YI="
+          "hash": "tGSOmqaX3cWw5N1PJ3+fSMNbcmxAca1uTAvwwEjqN5o="
         }
       },
       "is_incremental": false,
@@ -736,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayerName.html",
-          "hash": "5l/XiCVarz/qC24zS01f613Ul6Yr9NxJxc0l7IyFJ5E="
+          "hash": "svQM9Mux9BvHdOVAtqPUDlajPHW2eg7PAOmK6dpkl5s="
         }
       },
       "is_incremental": false,
@@ -1612,7 +1624,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "9N/QuX+Ms1/Fm0KkEhvZRqjPgZb7/i/JubzwUkPnvHY="
+          "hash": "cuKVSRj2EDASqor+DtxcRlW0ntVWzlwKiVzkRUxF7rU="
         }
       },
       "is_incremental": false,
@@ -1624,7 +1636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "002eC0GI6YGpwI/KFrToXvTMdVtA5WoCDC6UYcOEpSM="
+          "hash": "oHuUFUq49rW65lcBLuzAP4eOE+LlSVitaFXVFMJ2WKo="
         }
       },
       "is_incremental": false,
@@ -1733,7 +1745,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 133,
+          "total_file_count": 134,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
