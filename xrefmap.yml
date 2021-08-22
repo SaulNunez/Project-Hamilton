@@ -3356,19 +3356,6 @@ references:
   isSpec: "True"
   fullName: SabotageBoilers.ArePuzzleCompletionConditionsReached
   nameWithType: SabotageBoilers.ArePuzzleCompletionConditionsReached
-- uid: Global.SabotageBoilers.OnPuzzleActivated
-  name: OnPuzzleActivated()
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleActivated
-  commentId: M:Global.SabotageBoilers.OnPuzzleActivated
-  fullName: SabotageBoilers.OnPuzzleActivated()
-  nameWithType: SabotageBoilers.OnPuzzleActivated()
-- uid: Global.SabotageBoilers.OnPuzzleActivated*
-  name: OnPuzzleActivated
-  href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleActivated_
-  commentId: Overload:Global.SabotageBoilers.OnPuzzleActivated
-  isSpec: "True"
-  fullName: SabotageBoilers.OnPuzzleActivated
-  nameWithType: SabotageBoilers.OnPuzzleActivated
 - uid: Global.SabotageBoilers.OnPuzzleCompleted
   name: OnPuzzleCompleted()
   href: api/Global.SabotageBoilers.html#Global_SabotageBoilers_OnPuzzleCompleted
