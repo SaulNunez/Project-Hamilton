@@ -76,7 +76,7 @@ public class Emergency : NetworkBehaviour
     /// Single instance of the class.
     /// </summary>
     /// <remarks>
-    /// Only available on server and client
+    /// Available on server and client
     /// </remarks>
     public static Emergency instance = null;
 
@@ -201,7 +201,7 @@ public class Emergency : NetworkBehaviour
     [Client]
     public void StartTelegraphSabotage() => CmdStartEmergency(EmergencyType.QuestionSabotage);
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdStartEmergency(EmergencyType sabotageType)
     {
         if (!areEmergenciesAvailable)
