@@ -95,7 +95,7 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         defaultFlowerType = FlowerTypes.Types.PickRandom();
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdOnButtonClick(string clickFlowerType, NetworkConnectionToClient sender = null)
     {
         if(clickFlowerType == defaultFlowerType)

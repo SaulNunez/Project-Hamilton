@@ -40,7 +40,8 @@ public class TeletransportManager : NetworkBehaviour
         var netTransform = player.GetComponent<NetworkTransform>();
         if(netTransform != null)
         {
-            netTransform.ServerTeleport(new Vector2(200, 200));
+            //TODO: Check options
+            //netTransform.ServerTeleport(new Vector2(200, 200));
         }
     }
 
@@ -53,7 +54,7 @@ public class TeletransportManager : NetworkBehaviour
     [Client]
     public void MoveToNextVent() => CmdMoveToNextVent();
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdMoveToNextVent(NetworkConnectionToClient sender = null)
     {
         var vent = onTeletrasportMode[sender.identity];
@@ -86,13 +87,13 @@ public class TeletransportManager : NetworkBehaviour
     [Client]
     public void ComeOut() => CmdComeOut();
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdComeOut(NetworkConnectionToClient sender = null)
     {
         //Teletransport is done server side, and server doesn't have authority in gameobject
         var networkTransform = sender.identity.gameObject.GetComponent<NetworkTransform>();
         var ventPosition = onTeletrasportMode[sender.identity].transform.position;
-        networkTransform.ServerTeleport(ventPosition);
+        //networkTransform.ServerTeleport(ventPosition);
 
         RemoveToTeletransportList(sender.identity);
 

@@ -15,7 +15,7 @@ public class CreateLocalPuzzleUI : NetworkBehaviour
         CmdSpawnPuzzleIdOnServer();
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdSpawnPuzzleIdOnServer(NetworkConnectionToClient sender = null)
     {
         var uiCanvas = GameObject.FindGameObjectWithTag(Tags.UiManager);

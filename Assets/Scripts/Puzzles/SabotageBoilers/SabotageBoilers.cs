@@ -68,7 +68,7 @@ public class SabotageBoilers : SabotagePuzzle
         text.text = waitingOnPlayerPress;
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdSetAsPressedButton(NetworkConnectionToClient sender = null)
     {
         playersOnButton.Add(new PlayerStatus
@@ -86,7 +86,7 @@ public class SabotageBoilers : SabotagePuzzle
         }
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdSetDepressedButton(NetworkConnectionToClient sender = null)
     {
         var coroutine = OnButtonDepressedServer(sender);

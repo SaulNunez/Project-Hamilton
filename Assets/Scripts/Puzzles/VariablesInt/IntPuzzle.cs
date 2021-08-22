@@ -122,7 +122,7 @@ using UnityEngine.UI;
         /// Check input on server
         /// </summary>
         /// <param name="value"></param>
-        [Command(ignoreAuthority = true)]
+        [Command(requiresAuthority = false)]
         void CmdCheckInput(float value, NetworkConnectionToClient sender = null)
         {
             if (value == defTem)

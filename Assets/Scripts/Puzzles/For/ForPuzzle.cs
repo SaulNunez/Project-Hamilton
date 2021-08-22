@@ -63,7 +63,7 @@ public class ForPuzzle : NetworkBehaviour
     /// Checks client input to match turnsToWash.
     /// </summary>
     /// <param name="input"></param>
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdFinishPuzzle(NetworkConnectionToClient sender = null)
     {
         PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);

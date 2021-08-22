@@ -120,7 +120,7 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
         CmdCheckIsCorrect(currentStartValue, currentLenght);
     }
     
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdCheckIsCorrect(int start, int end, NetworkConnectionToClient sender = null)
     {
         print($"Check, start: {start}, end: {end}");

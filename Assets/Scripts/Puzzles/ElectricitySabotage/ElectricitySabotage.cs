@@ -47,7 +47,7 @@ public class ElectricitySabotage : SabotagePuzzle
         return usersSolvedPuzzle >= expectedPlayers;
     }
 
-    [Command(ignoreAuthority =true)]
+    [Command(requiresAuthority = false)]
     void CmdSendVoltage(int value, NetworkConnectionToClient sender = null)
     {
         if(value == expectedVoltage)

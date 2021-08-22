@@ -29,7 +29,7 @@ public class SequencePuzzle : NetworkBehaviour
         CmdCompletePuzzle();
     }
 
-    [Command(ignoreAuthority =true)]
+    [Command(requiresAuthority = false)]
     void CmdCompletePuzzle(NetworkConnectionToClient sender = null)
     {
         this.SuperPrint("Sequence puzzle completed");

@@ -71,7 +71,7 @@ public class VotingManager : NetworkBehaviour
     /// </remarks>
     /// <param name="playerVoted">Gameobject of player voted as killer</param>
     /// <param name="sender"></param>
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdCastVote(GameObject playerVoted, NetworkConnectionToClient sender = null)
     {
         if (!canVote)

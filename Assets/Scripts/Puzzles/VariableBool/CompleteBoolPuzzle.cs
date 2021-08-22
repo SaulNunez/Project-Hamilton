@@ -26,7 +26,7 @@ public class CompleteBoolPuzzle : NetworkBehaviour
         leverElement.sprite = onLever;
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdSendPuzzleState(bool toggleState, NetworkConnectionToClient sender = null)
     {
         if (toggleState)

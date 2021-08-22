@@ -247,7 +247,7 @@ public class SabotageQuestions : SabotagePuzzle
         
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdSendAnswer(int answerIndex, NetworkConnectionToClient sender = null)
     {
         var isCorrectAnswer = questions.questions[currentQuestion[sender.identity]].correctAnswerIndex == answerIndex;

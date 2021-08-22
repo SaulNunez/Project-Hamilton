@@ -35,7 +35,7 @@ public class WhilePuzzle : NetworkBehaviour
         }
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdCheckInput(int input, NetworkConnectionToClient sender = null)
     {
         if(input == defaultBucketValue)

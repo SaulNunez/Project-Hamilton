@@ -38,7 +38,7 @@ public class AvailableCharactersMemory : NetworkBehaviour
         return selections.Any(x => x.characterSelected == selectedCharacter);
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     public void CmdSetPlayerSelection(string playerName, CharacterTypes selectedCharacter)
     {
         var previousCharacterSelection = selections.Find(x => x.characterName == playerName);

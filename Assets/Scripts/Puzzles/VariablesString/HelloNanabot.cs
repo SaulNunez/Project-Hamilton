@@ -20,7 +20,7 @@ public class HelloNanabot : NetworkBehaviour
         CheckMessage(textbox.text);
     }
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CheckMessage(string message, NetworkConnectionToClient sender = null)
     {
         // Si quisieramos hacer mayor verificacion.

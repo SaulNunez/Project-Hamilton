@@ -47,7 +47,7 @@ public class IfElsePuzzle : NetworkBehaviour
 
     //TODO: Future work, do check in only one function
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdCerezasClick(NetworkConnectionToClient sender = null)
     {
         if (isCake)
@@ -59,7 +59,7 @@ public class IfElsePuzzle : NetworkBehaviour
 
     public void OnChispitasClick() => CmdChispitasClick();
 
-    [Command(ignoreAuthority = true)]
+    [Command(requiresAuthority = false)]
     void CmdChispitasClick(NetworkConnectionToClient sender = null)
     {
         if (!isCake)

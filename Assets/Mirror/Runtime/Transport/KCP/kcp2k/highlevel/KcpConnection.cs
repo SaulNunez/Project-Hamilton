@@ -10,7 +10,7 @@ namespace kcp2k
     public abstract class KcpConnection
     {
         protected Socket socket;
-        protected EndPoint remoteEndpoint;
+        protected EndPoint remoteEndPoint;
         internal Kcp kcp;
 
         // kcp can have several different states, let's use a state machine
@@ -28,7 +28,8 @@ namespace kcp2k
 
         // If we don't receive anything these many milliseconds
         // then consider us disconnected
-        public const int TIMEOUT = 10000;
+        public const int DEFAULT_TIMEOUT = 10000;
+        public int timeout = DEFAULT_TIMEOUT;
         uint lastReceiveTime;
 
         // internal time.
@@ -53,6 +54,15 @@ namespace kcp2k
         //    may not be a bug in original kcp. but since it uses the define, we
         //    can use that here too.
         // -> we add 1 byte KcpHeader enum to each message, so -1
+        //
+        // IMPORTANT: max message is MTU * WND_RCV, in other words it completely
+        //            fills the receive window! due to head of line blocking,
+        //            all other messages have to wait while a maxed size message
+        //            is being delivered.
+        //            => in other words, DO NOT use max size all the time like
+        //               for batching.
+        //            => sending UNRELIABLE max message size most of the time is
+        //               best for performance (use that one for batching!)
         public const int ReliableMaxMessageSize = (Kcp.MTU_DEF - Kcp.OVERHEAD - CHANNEL_HEADER_SIZE) * (Kcp.WND_RCV - 1) - 1;
 
         // unreliable max message size is simply MTU - channel header size
@@ -114,9 +124,11 @@ namespace kcp2k
         public uint MaxReceiveRate =>
             kcp.rcv_wnd * kcp.mtu * 1000 / kcp.interval;
 
-        // NoDelay, interval, window size are the most important configurations.
-        // let's force require the parameters so we don't forget it anywhere.
-        protected void SetupKcp(bool noDelay, uint interval = Kcp.INTERVAL, int fastResend = 0, bool congestionWindow = true, uint sendWindowSize = Kcp.WND_SND, uint receiveWindowSize = Kcp.WND_RCV)
+        // SetupKcp creates and configures a new KCP instance.
+        // => useful to start from a fresh state every time the client connects
+        // => NoDelay, interval, wnd size are the most important configurations.
+        //    let's force require the parameters so we don't forget it anywhere.
+        protected void SetupKcp(bool noDelay, uint interval = Kcp.INTERVAL, int fastResend = 0, bool congestionWindow = true, uint sendWindowSize = Kcp.WND_SND, uint receiveWindowSize = Kcp.WND_RCV, int timeout = DEFAULT_TIMEOUT)
         {
             // set up kcp over reliable channel (that's what kcp is for)
             kcp = new Kcp(0, RawSendReliable);
@@ -131,19 +143,19 @@ namespace kcp2k
             // message afterwards.
             kcp.SetMtu(Kcp.MTU_DEF - CHANNEL_HEADER_SIZE);
 
+            this.timeout = timeout;
             state = KcpState.Connected;
 
             refTime.Start();
-            Tick();
         }
 
         void HandleTimeout(uint time)
         {
             // note: we are also sending a ping regularly, so timeout should
             //       only ever happen if the connection is truly gone.
-            if (time >= lastReceiveTime + TIMEOUT)
+            if (time >= lastReceiveTime + timeout)
             {
-                Log.Warning($"KCP: Connection timed out after not receiving any message for {TIMEOUT}ms. Disconnecting.");
+                Log.Warning($"KCP: Connection timed out after not receiving any message for {timeout}ms. Disconnecting.");
                 Disconnect();
             }
         }
@@ -232,19 +244,18 @@ namespace kcp2k
                 }
             }
 
+            message = default;
             header = KcpHeader.Disconnect;
             return false;
         }
 
-        void TickConnected(uint time)
+        void TickIncoming_Connected(uint time)
         {
             // detect common events & ping
             HandleTimeout(time);
             HandleDeadLink();
             HandlePing(time);
             HandleChoked();
-
-            kcp.Update(time);
 
             // any reliable kcp message received?
             if (ReceiveNextReliable(out KcpHeader header, out ArraySegment<byte> message))
@@ -278,15 +289,13 @@ namespace kcp2k
             }
         }
 
-        void TickAuthenticated(uint time)
+        void TickIncoming_Authenticated(uint time)
         {
             // detect common events & ping
             HandleTimeout(time);
             HandleDeadLink();
             HandlePing(time);
             HandleChoked();
-
-            kcp.Update(time);
 
             // process all received messages
             //
@@ -315,8 +324,18 @@ namespace kcp2k
                     }
                     case KcpHeader.Data:
                     {
-                        //Log.Warning($"Kcp recv msg: {BitConverter.ToString(message.Array, message.Offset, message.Count)}");
-                        OnData?.Invoke(message);
+                        // call OnData IF the message contained actual data
+                        if (message.Count > 0)
+                        {
+                            //Log.Warning($"Kcp recv msg: {BitConverter.ToString(message.Array, message.Offset, message.Count)}");
+                            OnData?.Invoke(message);
+                        }
+                        // empty data = attacker, or something went wrong
+                        else
+                        {
+                            Log.Warning("KCP: received empty Data message while Authenticated. Disconnecting the connection.");
+                            Disconnect();
+                        }
                         break;
                     }
                     case KcpHeader.Ping:
@@ -335,7 +354,7 @@ namespace kcp2k
             }
         }
 
-        public void Tick()
+        public void TickIncoming()
         {
             uint time = (uint)refTime.ElapsedMilliseconds;
 
@@ -345,12 +364,54 @@ namespace kcp2k
                 {
                     case KcpState.Connected:
                     {
-                        TickConnected(time);
+                        TickIncoming_Connected(time);
                         break;
                     }
                     case KcpState.Authenticated:
                     {
-                        TickAuthenticated(time);
+                        TickIncoming_Authenticated(time);
+                        break;
+                    }
+                    case KcpState.Disconnected:
+                    {
+                        // do nothing while disconnected
+                        break;
+                    }
+                }
+            }
+            catch (SocketException exception)
+            {
+                // this is ok, the connection was closed
+                Log.Info($"KCP Connection: Disconnecting because {exception}. This is fine.");
+                Disconnect();
+            }
+            catch (ObjectDisposedException exception)
+            {
+                // fine, socket was closed
+                Log.Info($"KCP Connection: Disconnecting because {exception}. This is fine.");
+                Disconnect();
+            }
+            catch (Exception ex)
+            {
+                // unexpected
+                Log.Error(ex.ToString());
+                Disconnect();
+            }
+        }
+
+        public void TickOutgoing()
+        {
+            uint time = (uint)refTime.ElapsedMilliseconds;
+
+            try
+            {
+                switch (state)
+                {
+                    case KcpState.Connected:
+                    case KcpState.Authenticated:
+                    {
+                        // update flushes out messages
+                        kcp.Update(time);
                         break;
                     }
                     case KcpState.Disconnected:
@@ -521,6 +582,17 @@ namespace kcp2k
 
         public void SendData(ArraySegment<byte> data, KcpChannel channel)
         {
+            // sending empty segments is not allowed.
+            // nobody should ever try to send empty data.
+            // it means that something went wrong, e.g. in Mirror/DOTSNET.
+            // let's make it obvious so it's easy to debug.
+            if (data.Count == 0)
+            {
+                Log.Warning("KcpConnection: tried sending empty message. This should never happen. Disconnecting.");
+                Disconnect();
+                return;
+            }
+
             switch (channel)
             {
                 case KcpChannel.Reliable:
@@ -539,9 +611,7 @@ namespace kcp2k
         // disconnect info needs to be delivered, so it goes over reliable
         void SendDisconnect() => SendReliable(KcpHeader.Disconnect, default);
 
-        protected virtual void Dispose()
-        {
-        }
+        protected virtual void Dispose() {}
 
         // disconnect this connection
         public void Disconnect()
@@ -580,7 +650,7 @@ namespace kcp2k
         }
 
         // get remote endpoint
-        public EndPoint GetRemoteEndPoint() => remoteEndpoint;
+        public EndPoint GetRemoteEndPoint() => remoteEndPoint;
 
         // pause/unpause to safely support mirror scene handling and to
         // immediately pause the receive while loop if needed.
