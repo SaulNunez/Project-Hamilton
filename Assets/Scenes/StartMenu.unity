@@ -944,12 +944,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
+  PersistNetworkManagerToOfflineScene: 0
   runInBackground: 1
   autoStartServerBuild: 1
-  showDebugMessages: 1
   serverTickRate: 30
-  serverBatching: 0
-  serverBatchInterval: 0
   offlineScene: Assets/Scenes/StartMenu.unity
   onlineScene: Assets/Scenes/Lobby.unity
   transport: {fileID: 654267506}
@@ -1011,12 +1009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc654f29862fc2643b948f772ebb9e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showPing: 1
-  showRoundTripTime: 1
-  position: {x: 200, y: 0}
-  fontSize: 24
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  format: '{0}ms'
+  color: {r: 1, g: 1, b: 1, a: 1}
+  padding: 2
 --- !u!114 &654267513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,8 +1354,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Puerto...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 579bc9936a8cfac44b36e2df846cb8d5, type: 2}
+  m_sharedMaterial: {fileID: -6434557386601724864, guid: 579bc9936a8cfac44b36e2df846cb8d5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2084,8 +2079,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Direccion del servidor...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 579bc9936a8cfac44b36e2df846cb8d5, type: 2}
+  m_sharedMaterial: {fileID: -6434557386601724864, guid: 579bc9936a8cfac44b36e2df846cb8d5,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

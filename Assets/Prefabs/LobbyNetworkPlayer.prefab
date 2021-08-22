@@ -351,7 +351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   serverOnly: 0
-  m_AssetId: 
+  visible: 0
+  m_AssetId: 7cd5d2983d983334e9287c6d2709ee91
   hasSpawned: 0
 --- !u!114 &689386715880538707
 MonoBehaviour:
@@ -4388,8 +4389,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 165615782171702700}
   m_HandleRect: {fileID: 3435340094724700834}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.46681097
+  m_Value: 0.99999976
+  m_Size: 0.5234776
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
