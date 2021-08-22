@@ -18,7 +18,13 @@ public class SabotageBoilers : SabotagePuzzle
     [SerializeField]
     float stickynessInServer = 2f;
 
-    TextMeshProUGUI text;
+    /// <summary>
+    /// Text in button
+    /// </summary>
+    /// <remarks>
+    /// Only available on server
+    /// </remarks>
+    TextMeshProUGUI buttonToClickText;
 
     public string waitingOnPlayerPress;
     public string waitingOnOtherPlayers;
@@ -42,8 +48,8 @@ public class SabotageBoilers : SabotagePuzzle
         buttonToClick.onPressedEnded.AddListener(EndPress);
         buttonToClick.onPressedEnded.AddListener(ClientOnEndPress);
 
-        text = buttonToClick.GetComponentInChildren<TextMeshProUGUI>();
-        text.text = waitingOnPlayerPress;
+        buttonToClickText = buttonToClick.GetComponentInChildren<TextMeshProUGUI>();
+        buttonToClickText.text = waitingOnPlayerPress;
     }
 
     public override void OnStopClient()
@@ -60,12 +66,12 @@ public class SabotageBoilers : SabotagePuzzle
 
     void ClientStartPress()
     {
-        text.text = waitingOnOtherPlayers;
+        buttonToClickText.text = waitingOnOtherPlayers;
     }
 
     void ClientOnEndPress()
     {
-        text.text = waitingOnPlayerPress;
+        buttonToClickText.text = waitingOnPlayerPress;
     }
 
     [Command(requiresAuthority = false)]
@@ -109,12 +115,5 @@ public class SabotageBoilers : SabotagePuzzle
     {
         base.OnPuzzleCompleted();
         playersOnButton.Clear();
-    }
-
-    protected override void OnPuzzleActivated()
-    {
-        base.OnPuzzleActivated();
-
-        text.text = waitingOnOtherPlayers;
     }
 }
