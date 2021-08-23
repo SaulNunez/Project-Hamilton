@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -17,17 +18,11 @@ public class Messages : NetworkBehaviour
     [Range(1, 100)]
     public int timeOnScreen;
 
-    /// <summary>
-    /// Instance of messages, used around all game
-    /// </summary>
-    public static Messages instance;
+    public static Messages Instance { get; private set; } = null;
 
-    private void Start()
+    void Start()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
+        Instance = this;
     }
 
     /// <summary>

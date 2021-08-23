@@ -1,4 +1,5 @@
-﻿using Mirror;
+﻿using Extensions;
+using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -93,7 +94,7 @@ public class VotingManager : NetworkBehaviour
         }
 
         voting.Add(sender, playerVoted);
-        print("Casted vote");
+        print($"{sender.identity.GetComponent<PlayerName>().Name} casted vote for {playerVoted.GetComponent<PlayerName>().Name}");
     }
 
     [Server]
@@ -116,15 +117,21 @@ public class VotingManager : NetworkBehaviour
 
         OnVotingEnded?.Invoke();
 
-        var votedPlayers = voting.Values.Distinct();
         var votesForPlayer = new Dictionary<GameObject, int>();
 
-        foreach (var player in votedPlayers)
+        foreach (var player in voting.Values)
         {
-            votesForPlayer.Add(player, voting.Values.Count(p => p == player));
+            if (votesForPlayer.ContainsKey(player))
+            {
+                votesForPlayer[player]++;
+            }
+            else
+            {
+                votesForPlayer.Add(player, 1);
+            }
         }
 
-        print($"Voting results: {votesForPlayer.Count}, {voting.Count}");
+        this.SuperPrint($"Voting results:\n{JsonUtility.ToJson(votesForPlayer)}");
 
         int skipVotes = 0;
         //Hay jugadores que no votaron porque no eligieron nada a tiempo, estos por default votan por pasar votacion
@@ -133,25 +140,43 @@ public class VotingManager : NetworkBehaviour
             skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
 
         }
-        var mostVotedKV = votesForPlayer.OrderByDescending(x => x.Value).First();
+
+        if(votesForPlayer.Count == 0)
+        {
+            Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
+            this.SuperPrint("No player has been voted out.");
+            return;
+        }
+
+        var votesByOrder = votesForPlayer.OrderByDescending(x => x.Value);
+        var mostVotedKV = votesByOrder.First();
 
         if (skipVotes >= mostVotedKV.Value)
         {
             //Most players skipped or not voted
 
-            Messages.instance.ShowMessageToAll("No player has been voted out.");
-
+            Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
+            this.SuperPrint("No player has been voted out.");
             return;
         }
 
-        var getMostVotedPlayerGameObject = mostVotedKV.Key;
-
-        if (getMostVotedPlayerGameObject != null)
+        if (votesByOrder.Count() >= 2 && votesByOrder.ElementAt(0).Value == votesByOrder.ElementAt(1).Value)
         {
-            var dedPlayerName = getMostVotedPlayerGameObject.GetComponent<PlayerName>();
-            Messages.instance.ShowMessageToAll($"{dedPlayerName.Name} has been voted out.");
+            Messages.Instance.ShowMessageToAll($"Empate, ningun jugador es votado para ser expulsado");
+            this.SuperPrint($"Tie, no player has been voted out.");
+        }
 
-            var dedPlayerDie = getMostVotedPlayerGameObject.GetComponent<Die>();
+        var mostVotedPlayerGameObject = mostVotedKV.Key;
+
+        if (mostVotedPlayerGameObject != null)
+        {
+            var dedPlayerName = mostVotedPlayerGameObject.GetComponent<PlayerName>();
+            var killing = mostVotedPlayerGameObject.GetComponent<Killing>();
+            var assasinMessage = killing.canKillSomeone ? "Un asesino fuera." : "No era asesino.";
+            Messages.Instance.ShowMessageToAll($"{dedPlayerName.Name} fue votado para ser expulsado. {assasinMessage}");
+            this.SuperPrint($"{dedPlayerName.Name} has been voted out.");
+
+            var dedPlayerDie = mostVotedPlayerGameObject.GetComponent<Die>();
             dedPlayerDie.SetSimpleDeath();
         }
     }
