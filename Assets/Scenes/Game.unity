@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 67425551
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &20476502
@@ -507,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 4090647629
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &36365110
@@ -1562,6 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 974474383
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &108920889
@@ -3865,6 +3868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2519257838
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &184728371
@@ -4023,6 +4027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 331976328
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &194112396
@@ -5666,6 +5671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1190905494
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &259835596
@@ -6409,6 +6415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 452436170
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &286632350
@@ -62469,6 +62476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3458955508
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &330983000
@@ -65334,6 +65342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3832601
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &543497471
@@ -69133,6 +69142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3845423684
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &765032350
@@ -69689,6 +69699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3216874228
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &807263363
@@ -70572,6 +70583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 166115911
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &845817777
@@ -70699,6 +70711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1590372659
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &851428706
@@ -70763,6 +70776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2239596145
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &874981843
@@ -73141,6 +73155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1694770378
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &982743972
@@ -73311,6 +73326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2510792920
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &989262817
@@ -74843,6 +74859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1848400763
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1039443603
@@ -75922,6 +75939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3516333209
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &1085483723
@@ -84498,6 +84516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1363359743
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1214601788
@@ -85412,6 +85431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 54636129
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1291691375
@@ -85918,6 +85938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 565041475
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &1311993997
@@ -86639,7 +86660,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   defaultText: Hola mundo
-  instructionText: Configura la funcion de subcadena para obtener la cadena {0}.
+  instructionText: Configura la funcion de subcadena para obtener la cadena "{0}".
   substringColorInUi: {r: 1, g: 0.7812412, b: 0, a: 0}
   startSlider: {fileID: 290182580}
   endSlider: {fileID: 1101464279}
@@ -86659,6 +86680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2222479854
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &1358410106
@@ -87037,6 +87059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 403394250
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1386116404
@@ -87272,6 +87295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 723763993
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1402563994
@@ -87892,6 +87916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2008420615
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1439938443
@@ -88495,6 +88520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2810173938
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1482636210
@@ -89002,6 +89028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2812081734
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1540096531
@@ -89721,6 +89748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 442480234
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1593365703
@@ -89899,6 +89927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1771625986
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1595118259
@@ -90386,6 +90415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1254581648
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!4 &1630759341
@@ -90529,6 +90559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2203875741
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1637586814
@@ -90917,6 +90948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2886130163
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1676597986
@@ -91178,6 +91210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2214744285
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &1734521584
@@ -91575,6 +91608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 909731606
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1757966067
@@ -93134,6 +93168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2538953224
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &1878426833
@@ -93225,6 +93260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 200346443
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1878426838
@@ -93372,6 +93408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3602507747
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1905294671
@@ -93762,6 +93799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 3365076980
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1922448418
@@ -93969,6 +94007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1437254455
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &1925255976
@@ -95372,6 +95411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 615659212
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &1988507140
@@ -95908,6 +95948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1243171804
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &2024700094
@@ -96469,6 +96510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 2717367593
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!1 &2077791370
@@ -96723,6 +96765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 961479252
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!212 &2082783664
@@ -97076,6 +97119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 1647932371
   serverOnly: 0
+  visible: 0
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &2102020983
