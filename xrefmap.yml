@@ -613,19 +613,6 @@ references:
   commentId: F:Global.Die.isDead
   fullName: Die.isDead
   nameWithType: Die.isDead
-- uid: Global.Die.OnStartAuthority
-  name: OnStartAuthority()
-  href: api/Global.Die.html#Global_Die_OnStartAuthority
-  commentId: M:Global.Die.OnStartAuthority
-  fullName: Die.OnStartAuthority()
-  nameWithType: Die.OnStartAuthority()
-- uid: Global.Die.OnStartAuthority*
-  name: OnStartAuthority
-  href: api/Global.Die.html#Global_Die_OnStartAuthority_
-  commentId: Overload:Global.Die.OnStartAuthority
-  isSpec: "True"
-  fullName: Die.OnStartAuthority
-  nameWithType: Die.OnStartAuthority
 - uid: Global.Die.SetDed
   name: SetDed()
   href: api/Global.Die.html#Global_Die_SetDed
@@ -1963,12 +1950,19 @@ references:
   commentId: T:Global.Messages
   fullName: Messages
   nameWithType: Messages
-- uid: Global.Messages.instance
-  name: instance
-  href: api/Global.Messages.html#Global_Messages_instance
-  commentId: F:Global.Messages.instance
-  fullName: Messages.instance
-  nameWithType: Messages.instance
+- uid: Global.Messages.Instance
+  name: Instance
+  href: api/Global.Messages.html#Global_Messages_Instance
+  commentId: P:Global.Messages.Instance
+  fullName: Messages.Instance
+  nameWithType: Messages.Instance
+- uid: Global.Messages.Instance*
+  name: Instance
+  href: api/Global.Messages.html#Global_Messages_Instance_
+  commentId: Overload:Global.Messages.Instance
+  isSpec: "True"
+  fullName: Messages.Instance
+  nameWithType: Messages.Instance
 - uid: Global.Messages.ShowMessage(System.String)
   name: ShowMessage(String)
   href: api/Global.Messages.html#Global_Messages_ShowMessage_System_String_
