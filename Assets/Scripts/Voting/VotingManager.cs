@@ -131,44 +131,26 @@ public class VotingManager : NetworkBehaviour
             }
         }
 
-        this.SuperPrint($"Voting results:\n{JsonUtility.ToJson(votesForPlayer)}");
+        this.SuperPrint($"Voting results, {voting.Count()} voted for: {JsonUtility.ToJson(voting.Values.Select(x=> x.GetComponent<PlayerName>().Name))}");
 
-        int skipVotes = 0;
-        //Hay jugadores que no votaron porque no eligieron nada a tiempo, estos por default votan por pasar votacion
-        if (voting.Count < NetworkManager.singleton.numPlayers)
-        {
-            skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
-
-        }
-
-        if(votesForPlayer.Count == 0)
-        {
-            Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
-            this.SuperPrint("No player has been voted out.");
-            return;
-        }
+        int skipVotes = skipVotes = NetworkManager.singleton.numPlayers - voting.Count();
 
         var votesByOrder = votesForPlayer.OrderByDescending(x => x.Value);
-        var mostVotedKV = votesByOrder.First();
+        // this.SuperPrint($"Votes tally: first {votesByOrder.ElementAt(0).Value}, second {votesByOrder.ElementAt(1).Value}");
+        var mostVotedKV = votesByOrder.FirstOrDefault();
+        var mostVotedPlayerGameObject = mostVotedKV.Key;
 
-        if (skipVotes >= mostVotedKV.Value)
+        if (votesForPlayer.Count == 0 || skipVotes >= mostVotedKV.Value)
         {
-            //Most players skipped or not voted
-
             Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
             this.SuperPrint("No player has been voted out.");
-            return;
         }
-
-        if (votesByOrder.Count() >= 2 && votesByOrder.ElementAt(0).Value == votesByOrder.ElementAt(1).Value)
+        else if (votesByOrder.Count() >= 2 && votesByOrder.ElementAt(0).Value == votesByOrder.ElementAt(1).Value)
         {
             Messages.Instance.ShowMessageToAll($"Empate, ningun jugador es votado para ser expulsado");
             this.SuperPrint($"Tie, no player has been voted out.");
         }
-
-        var mostVotedPlayerGameObject = mostVotedKV.Key;
-
-        if (mostVotedPlayerGameObject != null)
+        else if (mostVotedPlayerGameObject != null)
         {
             var dedPlayerName = mostVotedPlayerGameObject.GetComponent<PlayerName>();
             var killing = mostVotedPlayerGameObject.GetComponent<Killing>();
