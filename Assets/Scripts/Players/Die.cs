@@ -15,9 +15,11 @@ public class Die : NetworkBehaviour
     GameObject deathPrefab;
     Animator anim;
 
-    public override void OnStartAuthority()
+    void Start()
     {
         anim = GetComponent<Animator>();
+
+        /// print($"Current culling mask {Camera.main.cullingMask}, ghost layer: {(1 << LayerMask.NameToLayer(Layers.Ghost))}");
     }
 
     /// <summary>
@@ -43,16 +45,23 @@ public class Die : NetworkBehaviour
         {
             anim.SetBool("Dead", true);
         }
+        RpcConvertDeadPlayerToGhost();
+        TargetOnDeathConfig(netIdentity.connectionToClient);
+    }
+
+    [ClientRpc]
+    void RpcConvertDeadPlayerToGhost()
+    {
         var ghostLayer = LayerMask.NameToLayer("Ghost");
         gameObject.layer = ghostLayer;
-        TargetOnDeathConfig(netIdentity.connectionToClient);
     }
 
     [TargetRpc]
     void TargetOnDeathConfig(NetworkConnection target)
     {
+        print("Show ghosts");
         //Mostrar capa de fantasmas
-        Camera.main.cullingMask = Camera.main.cullingMask | LayerMask.NameToLayer(Layers.Ghost);
+        Camera.main.cullingMask = Camera.main.cullingMask | (1 << LayerMask.NameToLayer(Layers.Ghost));
         PuzzleUI.instance.ClosePuzzles();
 
         if (hasAuthority)
