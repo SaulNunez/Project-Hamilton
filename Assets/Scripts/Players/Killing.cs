@@ -65,6 +65,8 @@ public class Killing : NetworkBehaviour
     {
         endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
         canKillSomeone = false;
+
+        CheckIfNumberOfAssasinsIsEqualOrMoreToProgrammers();
     }
 
     public override void OnStartClient()
