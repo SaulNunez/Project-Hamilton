@@ -143,12 +143,7 @@ public class VotingManager : NetworkBehaviour
         var mostVotedKV = votesByOrder.FirstOrDefault();
         var mostVotedPlayerGameObject = mostVotedKV.Key;
 
-        if (votesForPlayer.Count == 0 || skipVotes >= mostVotedKV.Value)
-        {
-            Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
-            this.SuperPrint("No player has been voted out.");
-        }
-        else if (votesByOrder.Count() >= 2 && votesByOrder.ElementAt(0).Value == votesByOrder.ElementAt(1).Value)
+        if (votesByOrder.Count() >= 2 && votesByOrder.ElementAt(0).Value == votesByOrder.ElementAt(1).Value)
         {
             Messages.Instance.ShowMessageToAll($"Empate, ningun jugador es votado para ser expulsado");
             this.SuperPrint($"Tie, no player has been voted out.");
@@ -163,6 +158,12 @@ public class VotingManager : NetworkBehaviour
 
             var dedPlayerDie = mostVotedPlayerGameObject.GetComponent<Die>();
             dedPlayerDie.SetSimpleDeath();
+        }
+        //Hasta el ultimo para que si solo alguien vota por un jugador, se expulse
+        else if (votesForPlayer.Count == 0 || skipVotes >= mostVotedKV.Value)
+        {
+            Messages.Instance.ShowMessageToAll("Ningun jugador se ha expulsado");
+            this.SuperPrint("No player has been voted out.");
         }
     }
 }
