@@ -4663,6 +4663,51 @@ references:
   isSpec: "True"
   fullName: VotingScreenLink.OnStopServer
   nameWithType: VotingScreenLink.OnStopServer
+- uid: Global.VotingScreenManager
+  name: VotingScreenManager
+  href: api/Global.VotingScreenManager.html
+  commentId: T:Global.VotingScreenManager
+  fullName: VotingScreenManager
+  nameWithType: VotingScreenManager
+- uid: Global.VotingScreenManager.OnStartServer
+  name: OnStartServer()
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_OnStartServer
+  commentId: M:Global.VotingScreenManager.OnStartServer
+  fullName: VotingScreenManager.OnStartServer()
+  nameWithType: VotingScreenManager.OnStartServer()
+- uid: Global.VotingScreenManager.OnStartServer*
+  name: OnStartServer
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_OnStartServer_
+  commentId: Overload:Global.VotingScreenManager.OnStartServer
+  isSpec: "True"
+  fullName: VotingScreenManager.OnStartServer
+  nameWithType: VotingScreenManager.OnStartServer
+- uid: Global.VotingScreenManager.OnStopServer
+  name: OnStopServer()
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_OnStopServer
+  commentId: M:Global.VotingScreenManager.OnStopServer
+  fullName: VotingScreenManager.OnStopServer()
+  nameWithType: VotingScreenManager.OnStopServer()
+- uid: Global.VotingScreenManager.OnStopServer*
+  name: OnStopServer
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_OnStopServer_
+  commentId: Overload:Global.VotingScreenManager.OnStopServer
+  isSpec: "True"
+  fullName: VotingScreenManager.OnStopServer
+  nameWithType: VotingScreenManager.OnStopServer
+- uid: Global.VotingScreenManager.SkipVoting
+  name: SkipVoting()
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_SkipVoting
+  commentId: M:Global.VotingScreenManager.SkipVoting
+  fullName: VotingScreenManager.SkipVoting()
+  nameWithType: VotingScreenManager.SkipVoting()
+- uid: Global.VotingScreenManager.SkipVoting*
+  name: SkipVoting
+  href: api/Global.VotingScreenManager.html#Global_VotingScreenManager_SkipVoting_
+  commentId: Overload:Global.VotingScreenManager.SkipVoting
+  isSpec: "True"
+  fullName: VotingScreenManager.SkipVoting
+  nameWithType: VotingScreenManager.SkipVoting
 - uid: Global.WebGLInputTacticalIgnore
   name: WebGLInputTacticalIgnore
   href: api/Global.WebGLInputTacticalIgnore.html
