@@ -94,7 +94,7 @@ public class VotingManager : NetworkBehaviour
         }
 
         voting.Add(sender, playerVoted);
-        print($"{sender.identity.GetComponent<PlayerName>().Name} casted vote for {playerVoted.GetComponent<PlayerName>().Name}");
+        print($"{sender.identity.GetComponent<PlayerName>().Name} casted vote for {(playerVoted == null? "skip": playerVoted.GetComponent<PlayerName>().Name)}");
     }
 
     [Server]
@@ -121,13 +121,16 @@ public class VotingManager : NetworkBehaviour
 
         foreach (var player in voting.Values)
         {
-            if (votesForPlayer.ContainsKey(player))
+            if(player != null)
             {
-                votesForPlayer[player]++;
-            }
-            else
-            {
-                votesForPlayer.Add(player, 1);
+                if (votesForPlayer.ContainsKey(player))
+                {
+                    votesForPlayer[player]++;
+                }
+                else
+                {
+                    votesForPlayer.Add(player, 1);
+                }
             }
         }
 
