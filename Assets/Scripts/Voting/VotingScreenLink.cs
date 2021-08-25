@@ -3,8 +3,8 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// <strong>Se debe agregar al jugador</strong>
-/// Spawnea una ventana de votación para el
+/// <strong>To be used from the player</strong>
+/// Handles opening the voting screen
 /// </summary>
 public class VotingScreenLink : NetworkBehaviour
 {
@@ -22,6 +22,10 @@ public class VotingScreenLink : NetworkBehaviour
     [ClientRpc]
     private void RpcOpenVotingScreen(int _)
     {
+        var isDeadComponent = GetComponent<Die>();
+        var isDead = isDeadComponent != null || isDeadComponent.isDead;
+
+        // To be appended to user
         if (hasAuthority)
         {
             print("Show voting screen");

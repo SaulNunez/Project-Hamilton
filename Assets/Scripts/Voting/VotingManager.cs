@@ -77,19 +77,26 @@ public class VotingManager : NetworkBehaviour
     {
         if (!canVote)
         {
-            print("Can't vote because no voting has been invoked.");
+            this.SuperPrint("Can't vote because no voting has been invoked.");
+            return;
+        }
+
+        var isDeadComponent = sender.identity.GetComponent<Die>();
+        if (isDeadComponent != null && isDeadComponent.isDead)
+        {
+            this.SuperPrint("Dead men tell no tales");
             return;
         }
 
         if (playerVoted != null && playerVoted.GetComponent<Die>().isDead)
         {
-            print("Player is dead");
+            this.SuperPrint("Player is dead");
             return;
         }
 
         if (voting.ContainsKey(sender))
         {
-            print("Player has already voted");
+            this.SuperPrint("Player has already voted");
             return;
         }
 
