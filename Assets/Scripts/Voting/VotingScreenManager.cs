@@ -76,6 +76,7 @@ public class VotingScreenManager : NetworkBehaviour
             }
         }
 
+        this.SuperPrint($"Player local: ${NetworkClient.localPlayer.GetComponent<PlayerName>().Name} is dead: {NetworkClient.localPlayer.GetComponent<Die>().isDead}");
         var weDed = NetworkClient.localPlayer.GetComponent<Die>().isDead;
 
         foreach (var player in players)
@@ -90,6 +91,7 @@ public class VotingScreenManager : NetworkBehaviour
 
             //Get dead status
             var isDead = player.GetComponent<Die>().isDead;
+            this.SuperPrint($"Player: ${player.GetComponent<PlayerName>().Name} is dead: {isDead}");
 
             var playerButton = button.GetComponent<PlayerVotingButton>();
 
@@ -98,6 +100,7 @@ public class VotingScreenManager : NetworkBehaviour
             playerButton.Name = playerName;
             playerButton.onSelect.AddListener(() => VoteForPlayer(player));
             button.GetComponent<Button>().interactable = !isDead && !weDed;
+            this.SuperPrint($"Player button: ${player.GetComponent<PlayerName>().Name} is interactable: {!isDead && !weDed}");
         }
 
     }
