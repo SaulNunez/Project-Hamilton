@@ -43,7 +43,7 @@ public class VotingScreenManager : NetworkBehaviour
         votingScreen.SetActive(true);
         OnScreenEnabled();
 
-        var weDed = NetworkClient.localPlayer.GetComponent<Die>().isDead;
+        var weDed = NetworkClient.localPlayer.GetComponent<Die>().IsDead;
         skipButton.interactable = !weDed;
     }
 
@@ -76,8 +76,8 @@ public class VotingScreenManager : NetworkBehaviour
             }
         }
 
-        this.SuperPrint($"Player local: ${NetworkClient.localPlayer.GetComponent<PlayerName>().Name} is dead: {NetworkClient.localPlayer.GetComponent<Die>().isDead}");
-        var weDed = NetworkClient.localPlayer.GetComponent<Die>().isDead;
+        this.SuperPrint($"Player local: ${NetworkClient.localPlayer.GetComponent<PlayerName>().Name} is dead: {NetworkClient.localPlayer.GetComponent<Die>().IsDead}");
+        var weDed = NetworkClient.localPlayer.GetComponent<Die>().IsDead;
 
         foreach (var player in players)
         {
@@ -90,7 +90,7 @@ public class VotingScreenManager : NetworkBehaviour
             var playerName = player.GetComponentInChildren<PlayerName>().Name;
 
             //Get dead status
-            var isDead = player.GetComponent<Die>().isDead;
+            var isDead = player.GetComponent<Die>().IsDead;
             this.SuperPrint($"Player: ${player.GetComponent<PlayerName>().Name} is dead: {isDead}");
 
             var playerButton = button.GetComponent<PlayerVotingButton>();

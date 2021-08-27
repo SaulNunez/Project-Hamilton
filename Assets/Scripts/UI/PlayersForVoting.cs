@@ -51,7 +51,7 @@ public class PlayersForVoting : MonoBehaviour
             var playerName = player.GetComponentInChildren<PlayerName>().Name;
 
             //Get dead status
-            var isDead = player.GetComponent<Die>().isDead;
+            var isDead = player.GetComponent<Die>().IsDead;
 
             var playerButton = button.GetComponent<PlayerVotingButton>();
 

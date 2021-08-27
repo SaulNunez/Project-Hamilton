@@ -9,11 +9,14 @@ using UnityEngine;
 /// </summary>
 public class Die : NetworkBehaviour
 {
-    public bool isDead = false;
+    [SyncVar]
+    private bool isDead = false;
 
     [SerializeField]
     GameObject deathPrefab;
     Animator anim;
+
+    public bool IsDead { get => isDead;}
 
     void Start()
     {
@@ -41,6 +44,7 @@ public class Die : NetworkBehaviour
     [Server]
     public void SetSimpleDeath()
     {
+        isDead = true;
         if (hasAuthority)
         {
             anim.SetBool("Dead", true);

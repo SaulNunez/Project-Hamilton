@@ -138,7 +138,7 @@ public class Killing : NetworkBehaviour
         var playersNotKilled = players.ToList().FindAll(x =>
         {
             var diedComponent = x.GetComponent<Die>();
-            return diedComponent && !diedComponent.isDead;
+            return diedComponent && !diedComponent.IsDead;
         });
 
         int aliveProgrammers = 0;

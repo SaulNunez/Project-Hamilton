@@ -82,17 +82,17 @@ public class VotingManager : NetworkBehaviour
         }
 
         var isDeadComponent = sender.identity.GetComponent<Die>();
-        this.SuperPrint($"Player: ${isDeadComponent.GetComponent<PlayerName>().Name} is dead: {isDeadComponent.isDead}");
-        if (isDeadComponent != null && isDeadComponent.isDead)
+        this.SuperPrint($"Player: ${isDeadComponent.GetComponent<PlayerName>().Name} is dead: {isDeadComponent.IsDead}");
+        if (isDeadComponent != null && isDeadComponent.IsDead)
         {
             this.SuperPrint("Dead men tell no tales");
             return;
         }
         if(playerVoted != null)
         {
-            this.SuperPrint($"Player: ${playerVoted.GetComponent<PlayerName>().Name} is dead: {playerVoted.GetComponent<Die>().isDead}");
+            this.SuperPrint($"Player: ${playerVoted.GetComponent<PlayerName>().Name} is dead: {playerVoted.GetComponent<Die>().IsDead}");
         }
-        if (playerVoted != null && playerVoted.GetComponent<Die>().isDead)
+        if (playerVoted != null && playerVoted.GetComponent<Die>().IsDead)
         {
             this.SuperPrint("Player is dead");
             return;

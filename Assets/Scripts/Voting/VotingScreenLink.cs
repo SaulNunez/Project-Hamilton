@@ -23,7 +23,7 @@ public class VotingScreenLink : NetworkBehaviour
     private void RpcOpenVotingScreen(int _)
     {
         var isDeadComponent = GetComponent<Die>();
-        var isDead = isDeadComponent != null || isDeadComponent.isDead;
+        var isDead = isDeadComponent != null || isDeadComponent.IsDead;
 
         // To be appended to user
         if (hasAuthority)
