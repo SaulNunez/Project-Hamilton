@@ -607,12 +607,19 @@ references:
   commentId: T:Global.Die
   fullName: Die
   nameWithType: Die
-- uid: Global.Die.isDead
-  name: isDead
-  href: api/Global.Die.html#Global_Die_isDead
-  commentId: F:Global.Die.isDead
-  fullName: Die.isDead
-  nameWithType: Die.isDead
+- uid: Global.Die.IsDead
+  name: IsDead
+  href: api/Global.Die.html#Global_Die_IsDead
+  commentId: P:Global.Die.IsDead
+  fullName: Die.IsDead
+  nameWithType: Die.IsDead
+- uid: Global.Die.IsDead*
+  name: IsDead
+  href: api/Global.Die.html#Global_Die_IsDead_
+  commentId: Overload:Global.Die.IsDead
+  isSpec: "True"
+  fullName: Die.IsDead
+  nameWithType: Die.IsDead
 - uid: Global.Die.SetDed
   name: SetDed()
   href: api/Global.Die.html#Global_Die_SetDed

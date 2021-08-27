@@ -97,7 +97,7 @@
   "api/Global.Die.html": {
     "href": "api/Global.Die.html",
     "title": "Class Die | A night in the house of Hunt",
-    "keywords": "Class Die Controls alive status on client and what to do when player dies. Inheritance Object Mirror.NetworkBehaviour Die Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Die : NetworkBehaviour Fields isDead Declaration public bool isDead Field Value Type Description Boolean Methods SetDed() Handles death when killed and a tomb is spawned Declaration public void SetDed() SetSimpleDeath() Handles death when killed by votes Declaration public void SetSimpleDeath()"
+    "keywords": "Class Die Controls alive status on client and what to do when player dies. Inheritance Object Mirror.NetworkBehaviour Die Namespace : Global Assembly : cs.temp.dll.dll Syntax public class Die : NetworkBehaviour Properties IsDead Declaration public bool IsDead { get; } Property Value Type Description Boolean Methods SetDed() Handles death when killed and a tomb is spawned Declaration public void SetDed() SetSimpleDeath() Handles death when killed by votes Declaration public void SetSimpleDeath()"
   },
   "api/Global.DisableOnLackOfAuthority.html": {
     "href": "api/Global.DisableOnLackOfAuthority.html",
