@@ -889,7 +889,7 @@ MonoBehaviour:
   sslEnabled: 0
   sslCertJson: ./cert.json
   sslProtocols: 3072
-  _logLevels: 0
+  _logLevels: 2
 --- !u!114 &654267507
 MonoBehaviour:
   m_ObjectHideFlags: 0
