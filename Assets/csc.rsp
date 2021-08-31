@@ -1,1 +1,2 @@
 -define:DEBUG
+-define:SIMPLEWEB_LOG_ENABLED
