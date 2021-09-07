@@ -10,6 +10,15 @@ public class OpenUrl : MonoBehaviour
 
     public void RedirectToUrl()
     {
-        Application.OpenURL(url);
+        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            string script = $"window.open(\"{url}\")";
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            Application.ExternalEval(script);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+        } else
+        {
+            Application.OpenURL(url);
+        }
     }
 }
