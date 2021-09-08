@@ -52,6 +52,9 @@ public class OpenPuzzle : NetworkBehaviour, IInteractuableBehaviour
         {
             Debug.LogError($"Someone forgot to add a PuzzleActiveOutline component at {gameObject.name}");
         }
+
+        // Mover gameobject a una capa donde el jugador no pueda interactuar con
+        this.gameObject.layer = LayerMask.NameToLayer(Layers.FinishedPuzzle);
     }
 
     [Server]
