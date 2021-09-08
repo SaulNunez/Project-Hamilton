@@ -1895,6 +1895,12 @@ references:
   commentId: T:Global.Layers
   fullName: Layers
   nameWithType: Layers
+- uid: Global.Layers.FinishedPuzzle
+  name: FinishedPuzzle
+  href: api/Global.Layers.html#Global_Layers_FinishedPuzzle
+  commentId: F:Global.Layers.FinishedPuzzle
+  fullName: Layers.FinishedPuzzle
+  nameWithType: Layers.FinishedPuzzle
 - uid: Global.Layers.Ghost
   name: Ghost
   href: api/Global.Layers.html#Global_Layers_Ghost

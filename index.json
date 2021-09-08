@@ -257,7 +257,7 @@
   "api/Global.Layers.html": {
     "href": "api/Global.Layers.html",
     "title": "Class Layers | A night in the house of Hunt",
-    "keywords": "Class Layers Inheritance Object Layers Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class Layers Fields Ghost Declaration public const string Ghost = \"Ghost\" Field Value Type Description String Interactuable Declaration public const string Interactuable = \"Interactuable\" Field Value Type Description String Players Declaration public const string Players = \"Player\" Field Value Type Description String"
+    "keywords": "Class Layers Inheritance Object Layers Namespace : Global Assembly : cs.temp.dll.dll Syntax public static class Layers Fields FinishedPuzzle Declaration public const string FinishedPuzzle = \"FinishedPuzzle\" Field Value Type Description String Ghost Declaration public const string Ghost = \"Ghost\" Field Value Type Description String Interactuable Declaration public const string Interactuable = \"Interactuable\" Field Value Type Description String Players Declaration public const string Players = \"Player\" Field Value Type Description String"
   },
   "api/Global.LobbyOptionsUiConnections.html": {
     "href": "api/Global.LobbyOptionsUiConnections.html",
