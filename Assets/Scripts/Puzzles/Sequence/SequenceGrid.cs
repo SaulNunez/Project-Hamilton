@@ -167,11 +167,13 @@ public class SequenceGrid : MonoBehaviour
         if (!sequence.floor[(currentPosition.y * sequence.horizontalSize) + currentPosition.x])
         {
             currentPosition = sequence.startPosition;
+            PuzzleSoundFeedback.instance.WrongAnswer();
         }
 
         if(currentPosition == sequence.endPosition)
         {
             sequencePuzzle.SetPuzzleComplete();
+            PuzzleSoundFeedback.instance.CorrectAnswer();
         }
 
         OnPositionUpdate?.Invoke(currentPosition);
