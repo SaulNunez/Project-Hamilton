@@ -7,7 +7,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Used for puzzle regarding booleans. Uses a lever as a way to teach concept of booleans.
 /// </summary>
-public class CompleteBoolPuzzle : NetworkBehaviour
+public class CompleteBoolPuzzle : PuzzleBase
 {
     [Tooltip("Sprite to use for on state")]
     [SerializeField]
@@ -33,12 +33,7 @@ public class CompleteBoolPuzzle : NetworkBehaviour
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableBoolean, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
         }
-    }
-
-    [TargetRpc]
-    void TargetClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
     }
 }
