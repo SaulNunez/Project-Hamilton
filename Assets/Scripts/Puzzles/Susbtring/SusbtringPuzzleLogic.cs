@@ -83,6 +83,9 @@ public class SusbtringPuzzleLogic : PuzzleBase
         endSlider.minValue = 1;
         endSlider.maxValue = defaultText.Length;
         endSlider.value = 1;
+        currentLenght = 1;
+
+        UpdateScreen();
     }
 
     [Client]
@@ -139,9 +142,9 @@ public class SusbtringPuzzleLogic : PuzzleBase
     {
         base.OnStartServer();
 
-        setStartValue = Random.Range(0, defaultText.Length - 1);
+        setStartValue = Random.Range(0, defaultText.Length - 2);
 
-        expectedLenghtValue = Random.Range(0, defaultText.Length-setStartValue);
+        expectedLenghtValue = Random.Range(1, defaultText.Length-setStartValue);
 
         selectValue = defaultText.Substring(setStartValue, expectedLenghtValue);
 
