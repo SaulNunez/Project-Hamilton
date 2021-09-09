@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WhilePuzzle : NetworkBehaviour
+public class WhilePuzzle : PuzzleBase
 {
     [Tooltip("Default value to ask users to input")]
     [SerializeField]
@@ -41,13 +41,13 @@ public class WhilePuzzle : NetworkBehaviour
         if(input == defaultBucketValue)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.WhileFillingBucket, sender.identity);
-            RpcClosePuzzle(sender);
+            TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
     }
 
-    [TargetRpc]
-    void RpcClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
-    }
+
 }

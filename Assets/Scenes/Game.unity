@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 75089945}
   - component: {fileID: 75089946}
   m_Layer: 0
-  m_Name: PederAudioSource
+  m_Name: BadAnswerAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92807,7 +92807,7 @@ GameObject:
   - component: {fileID: 1708331891}
   - component: {fileID: 1708331892}
   m_Layer: 0
-  m_Name: GanarAudioSource
+  m_Name: GoodAnswerAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99887,8 +99887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f4cb48635ec1546b2bfec028f0391a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongAnswerAudioSource: {fileID: 0}
-  correctAnswerAudioSource: {fileID: 0}
+  wrongAnswerAudioSource: {fileID: 75089946}
+  correctAnswerAudioSource: {fileID: 1708331892}
 --- !u!114 &2102020986
 MonoBehaviour:
   m_ObjectHideFlags: 0
