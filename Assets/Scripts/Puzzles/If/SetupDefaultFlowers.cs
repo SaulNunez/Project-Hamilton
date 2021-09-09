@@ -13,7 +13,7 @@ using UnityEngine.UI;
 /// Also a random selection of six flowers is created and send to client to create buttons for user.
 /// On click, these send a message on client to check they are the correct type.
 /// </summary>
-public class SetupDefaultFlowers: NetworkBehaviour {
+public class SetupDefaultFlowers: PuzzleBase {
     [SyncVar]
     string defaultFlowerType;
 
@@ -102,12 +102,10 @@ public class SetupDefaultFlowers: NetworkBehaviour {
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
-    }
-
-    [TargetRpc]
-    void TargetClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
     }
 }
