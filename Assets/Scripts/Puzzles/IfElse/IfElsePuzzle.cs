@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IfElsePuzzle : NetworkBehaviour
+public class IfElsePuzzle : PuzzleBase
 {
     [SyncVar]
     bool isCake;
@@ -54,6 +54,10 @@ public class IfElsePuzzle : NetworkBehaviour
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
     }
 
@@ -66,12 +70,11 @@ public class IfElsePuzzle : NetworkBehaviour
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfElse, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
         }
-    }
-
-    [TargetRpc]
-    void TargetClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
+        else
+        {
+            TargetRunWrongFeedback(sender);
+        }
     }
 }
