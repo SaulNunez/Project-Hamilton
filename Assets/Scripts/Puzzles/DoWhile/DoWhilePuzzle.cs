@@ -7,7 +7,7 @@ using UnityEngine;
 /// <summary>
 /// Logic for do while puzzle
 /// </summary>
-public class DoWhilePuzzle : NetworkBehaviour
+public class DoWhilePuzzle : PuzzleBase
 {
     [SerializeField]
     [Tooltip("The input field used to input the boolean that solves this question")]
@@ -40,12 +40,10 @@ public class DoWhilePuzzle : NetworkBehaviour
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.DoWhileMotorStarter, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
-    }
-
-    [TargetRpc]
-    void TargetClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
     }
 }
