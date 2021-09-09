@@ -7717,6 +7717,7 @@ GameObject:
   - component: {fileID: 328153934}
   - component: {fileID: 328153933}
   - component: {fileID: 328153936}
+  - component: {fileID: 328153937}
   m_Layer: 13
   m_Name: Base
   m_TagString: Untagged
@@ -61382,6 +61383,16 @@ CompositeCollider2D:
         Y: -132449173
       - X: 50633637
         Y: -159569552
+  - m_Collider: {fileID: 328153937}
+    m_ColliderPaths:
+    - - X: -200343429
+        Y: 80536712
+      - X: -200343429
+        Y: 119947928
+      - X: -239999968
+        Y: 119947635
+      - X: -239999675
+        Y: 80536712
   m_CompositePaths:
     m_Paths:
     - - {x: 29.887169, y: -21}
@@ -61469,6 +61480,10 @@ CompositeCollider2D:
       - {x: 0.9160016, y: -13.24486}
       - {x: 0.9159723, y: -13.240885}
       - {x: -21.99108, y: -13.240884}
+      - {x: -21.99105, y: 8.053671}
+      - {x: -20.034342, y: 8.0537}
+      - {x: -20.034372, y: 11.994793}
+      - {x: -21.99108, y: 11.994808}
       - {x: -21.99105, y: 22.809547}
       - {x: -11.947047, y: 22.809576}
       - {x: -11.947076, y: 25.90078}
@@ -61485,6 +61500,10 @@ CompositeCollider2D:
       - {x: -23.98436, y: 55.999943}
       - {x: -23.98436, y: 39.860054}
       - {x: -23.997416, y: 39.860027}
+      - {x: -23.997429, y: 11.994763}
+      - {x: -23.999996, y: 11.994735}
+      - {x: -23.999937, y: 8.053671}
+      - {x: -23.997396, y: 8.053641}
       - {x: -23.997356, y: -13.862805}
       - {x: -21.99108, y: -13.862776}
       - {x: -21.99105, y: -13.811653}
@@ -62982,6 +63001,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.8984852, y: 9.830172}
+  m_EdgeRadius: 0
+--- !u!61 &328153937
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328153872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: -22.017155, y: 10.024232}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.965683, y: 3.941122}
   m_EdgeRadius: 0
 --- !u!1 &330982994
 GameObject:
