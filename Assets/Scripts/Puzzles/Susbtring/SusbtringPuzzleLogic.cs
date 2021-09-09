@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class SusbtringPuzzleLogic : NetworkBehaviour
+public class SusbtringPuzzleLogic : PuzzleBase
 {
     /// <summary>
     /// Set on server, value expected for start slider
@@ -128,13 +128,11 @@ public class SusbtringPuzzleLogic : NetworkBehaviour
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.Substring, sender.identity);
             TargetClosePuzzle(sender);
+            TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
-    }
-
-    [TargetRpc]
-    void TargetClosePuzzle(NetworkConnection target)
-    {
-        PuzzleUI.instance.ClosePuzzles();
     }
 
     public override void OnStartServer()
