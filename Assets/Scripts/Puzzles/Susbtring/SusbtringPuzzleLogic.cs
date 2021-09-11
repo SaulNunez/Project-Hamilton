@@ -113,7 +113,7 @@ public class SusbtringPuzzleLogic : PuzzleBase
         var substring = defaultText.Substring(currentStartValue, Mathf.Clamp(currentLenght, 0, defaultText.Length - currentStartValue));
         var postSubstring = defaultText.Substring(currentStartValue+currentLenght);
 
-        substringPlaygroundText.text = $"{preSusbtring}<b>{substring}</b>{postSubstring}";
+        substringPlaygroundText.text = $"{preSusbtring}<b><color=yellow>{substring}</color></b>{postSubstring}";
     }
 
     [Client]
