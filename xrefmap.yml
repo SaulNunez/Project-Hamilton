@@ -28,6 +28,24 @@ references:
   isSpec: "True"
   fullName: ActivateGameplayUI.OnStartAuthority
   nameWithType: ActivateGameplayUI.OnStartAuthority
+- uid: Global.AnswersForPuzzle
+  name: AnswersForPuzzle
+  href: api/Global.AnswersForPuzzle.html
+  commentId: T:Global.AnswersForPuzzle
+  fullName: AnswersForPuzzle
+  nameWithType: AnswersForPuzzle
+- uid: Global.AnswersForPuzzle.buttonForSelectingAnswer
+  name: buttonForSelectingAnswer
+  href: api/Global.AnswersForPuzzle.html#Global_AnswersForPuzzle_buttonForSelectingAnswer
+  commentId: F:Global.AnswersForPuzzle.buttonForSelectingAnswer
+  fullName: AnswersForPuzzle.buttonForSelectingAnswer
+  nameWithType: AnswersForPuzzle.buttonForSelectingAnswer
+- uid: Global.AnswersForPuzzle.isACorrectAnswer
+  name: isACorrectAnswer
+  href: api/Global.AnswersForPuzzle.html#Global_AnswersForPuzzle_isACorrectAnswer
+  commentId: F:Global.AnswersForPuzzle.isACorrectAnswer
+  fullName: AnswersForPuzzle.isACorrectAnswer
+  nameWithType: AnswersForPuzzle.isACorrectAnswer
 - uid: Global.AvailableCharacters
   name: AvailableCharacters
   href: api/Global.AvailableCharacters.html
@@ -1265,6 +1283,19 @@ references:
   commentId: T:Global.GameUI
   fullName: GameUI
   nameWithType: GameUI
+- uid: Global.GameUI.CanInteractWithGhostingButton
+  name: CanInteractWithGhostingButton
+  href: api/Global.GameUI.html#Global_GameUI_CanInteractWithGhostingButton
+  commentId: P:Global.GameUI.CanInteractWithGhostingButton
+  fullName: GameUI.CanInteractWithGhostingButton
+  nameWithType: GameUI.CanInteractWithGhostingButton
+- uid: Global.GameUI.CanInteractWithGhostingButton*
+  name: CanInteractWithGhostingButton
+  href: api/Global.GameUI.html#Global_GameUI_CanInteractWithGhostingButton_
+  commentId: Overload:Global.GameUI.CanInteractWithGhostingButton
+  isSpec: "True"
+  fullName: GameUI.CanInteractWithGhostingButton
+  nameWithType: GameUI.CanInteractWithGhostingButton
 - uid: Global.GameUI.CanInteractWithKillButton
   name: CanInteractWithKillButton
   href: api/Global.GameUI.html#Global_GameUI_CanInteractWithKillButton
@@ -1329,6 +1360,12 @@ references:
   commentId: E:Global.GameUI.onGeneralClick
   fullName: GameUI.onGeneralClick
   nameWithType: GameUI.onGeneralClick
+- uid: Global.GameUI.OnGhostingInvoked
+  name: OnGhostingInvoked
+  href: api/Global.GameUI.html#Global_GameUI_OnGhostingInvoked
+  commentId: E:Global.GameUI.OnGhostingInvoked
+  fullName: GameUI.OnGhostingInvoked
+  nameWithType: GameUI.OnGhostingInvoked
 - uid: Global.GameUI.onKillButtonClick
   name: onKillButtonClick
   href: api/Global.GameUI.html#Global_GameUI_onKillButtonClick
@@ -1341,6 +1378,70 @@ references:
   commentId: E:Global.GameUI.OnReportClick
   fullName: GameUI.OnReportClick
   nameWithType: GameUI.OnReportClick
+- uid: Global.Ghosting
+  name: Ghosting
+  href: api/Global.Ghosting.html
+  commentId: T:Global.Ghosting
+  fullName: Ghosting
+  nameWithType: Ghosting
+- uid: Global.Ghosting.ghostingDurationInSeconds
+  name: ghostingDurationInSeconds
+  href: api/Global.Ghosting.html#Global_Ghosting_ghostingDurationInSeconds
+  commentId: F:Global.Ghosting.ghostingDurationInSeconds
+  fullName: Ghosting.ghostingDurationInSeconds
+  nameWithType: Ghosting.ghostingDurationInSeconds
+- uid: Global.Ghosting.OnStartClient
+  name: OnStartClient()
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStartClient
+  commentId: M:Global.Ghosting.OnStartClient
+  fullName: Ghosting.OnStartClient()
+  nameWithType: Ghosting.OnStartClient()
+- uid: Global.Ghosting.OnStartClient*
+  name: OnStartClient
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStartClient_
+  commentId: Overload:Global.Ghosting.OnStartClient
+  isSpec: "True"
+  fullName: Ghosting.OnStartClient
+  nameWithType: Ghosting.OnStartClient
+- uid: Global.Ghosting.OnStartServer
+  name: OnStartServer()
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStartServer
+  commentId: M:Global.Ghosting.OnStartServer
+  fullName: Ghosting.OnStartServer()
+  nameWithType: Ghosting.OnStartServer()
+- uid: Global.Ghosting.OnStartServer*
+  name: OnStartServer
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStartServer_
+  commentId: Overload:Global.Ghosting.OnStartServer
+  isSpec: "True"
+  fullName: Ghosting.OnStartServer
+  nameWithType: Ghosting.OnStartServer
+- uid: Global.Ghosting.OnStopClient
+  name: OnStopClient()
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStopClient
+  commentId: M:Global.Ghosting.OnStopClient
+  fullName: Ghosting.OnStopClient()
+  nameWithType: Ghosting.OnStopClient()
+- uid: Global.Ghosting.OnStopClient*
+  name: OnStopClient
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStopClient_
+  commentId: Overload:Global.Ghosting.OnStopClient
+  isSpec: "True"
+  fullName: Ghosting.OnStopClient
+  nameWithType: Ghosting.OnStopClient
+- uid: Global.Ghosting.OnStopServer
+  name: OnStopServer()
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStopServer
+  commentId: M:Global.Ghosting.OnStopServer
+  fullName: Ghosting.OnStopServer()
+  nameWithType: Ghosting.OnStopServer()
+- uid: Global.Ghosting.OnStopServer*
+  name: OnStopServer
+  href: api/Global.Ghosting.html#Global_Ghosting_OnStopServer_
+  commentId: Overload:Global.Ghosting.OnStopServer
+  isSpec: "True"
+  fullName: Ghosting.OnStopServer
+  nameWithType: Ghosting.OnStopServer
 - uid: Global.HamiltonNetworkPlayer
   name: HamiltonNetworkPlayer
   href: api/Global.HamiltonNetworkPlayer.html
@@ -2752,6 +2853,51 @@ references:
   isSpec: "True"
   fullName: PuzzleActiveOutline.IsActive
   nameWithType: PuzzleActiveOutline.IsActive
+- uid: Global.PuzzleBase
+  name: PuzzleBase
+  href: api/Global.PuzzleBase.html
+  commentId: T:Global.PuzzleBase
+  fullName: PuzzleBase
+  nameWithType: PuzzleBase
+- uid: Global.PuzzleBase.TargetClosePuzzle(Mirror.NetworkConnection)
+  name: TargetClosePuzzle(NetworkConnection)
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetClosePuzzle_Mirror_NetworkConnection_
+  commentId: M:Global.PuzzleBase.TargetClosePuzzle(Mirror.NetworkConnection)
+  fullName: PuzzleBase.TargetClosePuzzle(Mirror.NetworkConnection)
+  nameWithType: PuzzleBase.TargetClosePuzzle(NetworkConnection)
+- uid: Global.PuzzleBase.TargetClosePuzzle*
+  name: TargetClosePuzzle
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetClosePuzzle_
+  commentId: Overload:Global.PuzzleBase.TargetClosePuzzle
+  isSpec: "True"
+  fullName: PuzzleBase.TargetClosePuzzle
+  nameWithType: PuzzleBase.TargetClosePuzzle
+- uid: Global.PuzzleBase.TargetRunCorrectFeedback(Mirror.NetworkConnection)
+  name: TargetRunCorrectFeedback(NetworkConnection)
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetRunCorrectFeedback_Mirror_NetworkConnection_
+  commentId: M:Global.PuzzleBase.TargetRunCorrectFeedback(Mirror.NetworkConnection)
+  fullName: PuzzleBase.TargetRunCorrectFeedback(Mirror.NetworkConnection)
+  nameWithType: PuzzleBase.TargetRunCorrectFeedback(NetworkConnection)
+- uid: Global.PuzzleBase.TargetRunCorrectFeedback*
+  name: TargetRunCorrectFeedback
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetRunCorrectFeedback_
+  commentId: Overload:Global.PuzzleBase.TargetRunCorrectFeedback
+  isSpec: "True"
+  fullName: PuzzleBase.TargetRunCorrectFeedback
+  nameWithType: PuzzleBase.TargetRunCorrectFeedback
+- uid: Global.PuzzleBase.TargetRunWrongFeedback(Mirror.NetworkConnection)
+  name: TargetRunWrongFeedback(NetworkConnection)
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetRunWrongFeedback_Mirror_NetworkConnection_
+  commentId: M:Global.PuzzleBase.TargetRunWrongFeedback(Mirror.NetworkConnection)
+  fullName: PuzzleBase.TargetRunWrongFeedback(Mirror.NetworkConnection)
+  nameWithType: PuzzleBase.TargetRunWrongFeedback(NetworkConnection)
+- uid: Global.PuzzleBase.TargetRunWrongFeedback*
+  name: TargetRunWrongFeedback
+  href: api/Global.PuzzleBase.html#Global_PuzzleBase_TargetRunWrongFeedback_
+  commentId: Overload:Global.PuzzleBase.TargetRunWrongFeedback
+  isSpec: "True"
+  fullName: PuzzleBase.TargetRunWrongFeedback
+  nameWithType: PuzzleBase.TargetRunWrongFeedback
 - uid: Global.PuzzleCache
   name: PuzzleCache
   href: api/Global.PuzzleCache.html
@@ -3198,6 +3344,44 @@ references:
   isSpec: "True"
   fullName: PuzzlesListUi.OnStopServer
   nameWithType: PuzzlesListUi.OnStopServer
+- uid: Global.PuzzleSoundFeedback
+  name: PuzzleSoundFeedback
+  href: api/Global.PuzzleSoundFeedback.html
+  commentId: T:Global.PuzzleSoundFeedback
+  fullName: PuzzleSoundFeedback
+  nameWithType: PuzzleSoundFeedback
+- uid: Global.PuzzleSoundFeedback.CorrectAnswer
+  name: CorrectAnswer()
+  href: api/Global.PuzzleSoundFeedback.html#Global_PuzzleSoundFeedback_CorrectAnswer
+  commentId: M:Global.PuzzleSoundFeedback.CorrectAnswer
+  fullName: PuzzleSoundFeedback.CorrectAnswer()
+  nameWithType: PuzzleSoundFeedback.CorrectAnswer()
+- uid: Global.PuzzleSoundFeedback.CorrectAnswer*
+  name: CorrectAnswer
+  href: api/Global.PuzzleSoundFeedback.html#Global_PuzzleSoundFeedback_CorrectAnswer_
+  commentId: Overload:Global.PuzzleSoundFeedback.CorrectAnswer
+  isSpec: "True"
+  fullName: PuzzleSoundFeedback.CorrectAnswer
+  nameWithType: PuzzleSoundFeedback.CorrectAnswer
+- uid: Global.PuzzleSoundFeedback.instance
+  name: instance
+  href: api/Global.PuzzleSoundFeedback.html#Global_PuzzleSoundFeedback_instance
+  commentId: F:Global.PuzzleSoundFeedback.instance
+  fullName: PuzzleSoundFeedback.instance
+  nameWithType: PuzzleSoundFeedback.instance
+- uid: Global.PuzzleSoundFeedback.WrongAnswer
+  name: WrongAnswer()
+  href: api/Global.PuzzleSoundFeedback.html#Global_PuzzleSoundFeedback_WrongAnswer
+  commentId: M:Global.PuzzleSoundFeedback.WrongAnswer
+  fullName: PuzzleSoundFeedback.WrongAnswer()
+  nameWithType: PuzzleSoundFeedback.WrongAnswer()
+- uid: Global.PuzzleSoundFeedback.WrongAnswer*
+  name: WrongAnswer
+  href: api/Global.PuzzleSoundFeedback.html#Global_PuzzleSoundFeedback_WrongAnswer_
+  commentId: Overload:Global.PuzzleSoundFeedback.WrongAnswer
+  isSpec: "True"
+  fullName: PuzzleSoundFeedback.WrongAnswer
+  nameWithType: PuzzleSoundFeedback.WrongAnswer
 - uid: Global.PuzzlesToDo
   name: PuzzlesToDo
   href: api/Global.PuzzlesToDo.html
@@ -3312,6 +3496,25 @@ references:
   isSpec: "True"
   fullName: PuzzleUI.OpenPuzzles
   nameWithType: PuzzleUI.OpenPuzzles
+- uid: Global.QuestionPuzzle
+  name: QuestionPuzzle
+  href: api/Global.QuestionPuzzle.html
+  commentId: T:Global.QuestionPuzzle
+  fullName: QuestionPuzzle
+  nameWithType: QuestionPuzzle
+- uid: Global.QuestionPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.QuestionPuzzle.html#Global_QuestionPuzzle_OnStartClient
+  commentId: M:Global.QuestionPuzzle.OnStartClient
+  fullName: QuestionPuzzle.OnStartClient()
+  nameWithType: QuestionPuzzle.OnStartClient()
+- uid: Global.QuestionPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.QuestionPuzzle.html#Global_QuestionPuzzle_OnStartClient_
+  commentId: Overload:Global.QuestionPuzzle.OnStartClient
+  isSpec: "True"
+  fullName: QuestionPuzzle.OnStartClient
+  nameWithType: QuestionPuzzle.OnStartClient
 - uid: Global.ReportDeath
   name: ReportDeath
   href: api/Global.ReportDeath.html

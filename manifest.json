@@ -36,6 +36,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.AnswersForPuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.AnswersForPuzzle.html",
+          "hash": "Ow47R5iGEsXx1RbDDqMNlQSlO+yuiny4soUIvLGde6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.AvailableCharacters.CharacterInfo.yml",
       "output": {
         ".html": {
@@ -172,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.CompleteBoolPuzzle.html",
-          "hash": "tApzKP9woKx+qbaz8xuzMtxYYnVNoIw2nan+/m+PthE="
+          "hash": "fE3aijI9g3+XwHM6mYyb30jOV4T+Y8W8jcVRfCIQAUM="
         }
       },
       "is_incremental": false,
@@ -292,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.DoWhilePuzzle.html",
-          "hash": "tq/FYd+xCqahRLULf5BvO5VngPkkNNSRy0Qw9DeQxFc="
+          "hash": "yJI2afq/LM2yAxxbb+jzjwuwu79I9Wqw7pM/6pXPbO4="
         }
       },
       "is_incremental": false,
@@ -460,7 +472,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.GameUI.html",
-          "hash": "dVfzdXfqwYIv5fwxl1OayZjeDwnBasUvykHat3/nklE="
+          "hash": "VixfgGHiCrURcgUZkgTEsSWIpI1iCR0wwyOcj/3CCYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.Ghosting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Ghosting.html",
+          "hash": "q1jxhYwJn2rznh4qr0NMtg3Ls+hiSqZla+g9jnwQ4+E="
         }
       },
       "is_incremental": false,
@@ -496,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HelloNanabot.html",
-          "hash": "+Ows83bEQwtApjyFtcs8qltRDqBjRuE9y4LXe0HeqHI="
+          "hash": "0nEJwJQWxZSSScqZhZduLSg9VqL7KLjMHrZmBjfSJuU="
         }
       },
       "is_incremental": false,
@@ -556,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.IfElsePuzzle.html",
-          "hash": "TABDtceHtjfvPcuO5eD2BcDCG9uFFPyfb1zX7yaMQmw="
+          "hash": "yekRx3sgy3SnfYMOG4tX+xOIJdR6LBT3uW0AtYyAgxI="
         }
       },
       "is_incremental": false,
@@ -888,6 +912,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleBase.html",
+          "hash": "wFR+KROfGmjjj127vdiWogQKWqRbJF30khjFMtd6rFA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzleCache.yml",
       "output": {
         ".html": {
@@ -1008,6 +1044,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.PuzzleSoundFeedback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.PuzzleSoundFeedback.html",
+          "hash": "XYImPuQwbszxCRH8R/JlCLATFndoPsGHP45RmBzv7Ow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.PuzzleUI.yml",
       "output": {
         ".html": {
@@ -1037,6 +1085,18 @@
         ".html": {
           "relative_path": "api/Global.PuzzlesToDo.html",
           "hash": "CF41ULO5r2Do0/bEY73UAu2kWsYcDnalJqkGuIrZKPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.QuestionPuzzle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.QuestionPuzzle.html",
+          "hash": "w73ncL0c2a9EhFGJY9xhnwr3JGRfQxFa7javhLt9+qM="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SetupDefaultFlowers.html",
-          "hash": "mjQamGE3sC+qrt4AgesixbBsxjrUksNV6lxX5lFTlIY="
+          "hash": "WgTF0STeULac/w/7shpnJuXOqqMI6fck/K64LgZDL24="
         }
       },
       "is_incremental": false,
@@ -1360,7 +1420,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SusbtringPuzzleLogic.html",
-          "hash": "rfyEsaJOpYOiQFsQdCcWoFuuQBVCugaPL2Abm8D4528="
+          "hash": "V5LNLbKhnVV3whPme4AurrdFi3+nXP0xaVzLSrklVOg="
         }
       },
       "is_incremental": false,
@@ -1588,7 +1648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WhilePuzzle.html",
-          "hash": "N3EK9hSL+fmN0ekT4pcF3icXGseMUxVXe1fz6kPMtYk="
+          "hash": "fBMnryM/WaKXHQyhYBK+TO5y4PLDDTYqz1EBM6zT6e4="
         }
       },
       "is_incremental": false,
@@ -1636,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "Pt/pwLXUDjDa7TZgI3oPFeFxMf9V0tN+ty92EIqIj2g="
+          "hash": "lBfwOu7VZRl/WCiOXmVfnTQOmXzNsOLb4vKSjZGna7E="
         }
       },
       "is_incremental": false,
@@ -1648,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "GY+G4xYCpSmHdO7DJgeW6XuT+k44AxbR2XVXCEtfSRY="
+          "hash": "+HFoexjYXoLeqiX2U8psj2KvEOEGXAgx8OiNxA6aBUA="
         }
       },
       "is_incremental": false,
@@ -1757,7 +1817,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 135,
+          "total_file_count": 140,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
