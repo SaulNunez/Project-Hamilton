@@ -18,6 +18,9 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     Button reportButton;
 
+    [SerializeField]
+    Button ghostButton;
+
     public bool InteractionEnabled {
         get => interactionButton.interactable;
 
@@ -34,6 +37,7 @@ public class GameUI : MonoBehaviour
             enableAssasinExtras = value;
             killButton.gameObject.SetActive(value);
             sabotageButton.gameObject.SetActive(value);
+            ghostButton.gameObject.SetActive(value);
         }
     }
 
@@ -41,6 +45,13 @@ public class GameUI : MonoBehaviour
         get => killButton.interactable;
 
         set => killButton.interactable = value;
+    }
+
+    public bool CanInteractWithGhostingButton
+    {
+        get => ghostButton.interactable;
+
+        set => ghostButton.interactable = value;
     }
 
     public bool CanInteractWithReportButton
@@ -58,6 +69,11 @@ public class GameUI : MonoBehaviour
 
     public static event Action OnReportClick;
 
+    /// <summary>
+    /// Invoked when player clicks button to start ghost mode
+    /// </summary>
+    public static event Action OnGhostingInvoked;
+
     void Start() {
         if(Instance == null){
             Instance = this;
@@ -66,6 +82,7 @@ public class GameUI : MonoBehaviour
         interactionButton.onClick.AddListener(GeneralClick);
         killButton.onClick.AddListener(KillClick);
         reportButton.onClick.AddListener(ReportClick);
+        ghostButton.onClick.AddListener(GhostModeActivationClick);
     }
 
     void GeneralClick(){
@@ -78,11 +95,14 @@ public class GameUI : MonoBehaviour
 
     void ReportClick() => OnReportClick?.Invoke();
 
+    void GhostModeActivationClick() => OnGhostingInvoked?.Invoke();
+
     void OnDestroy(){
         Instance = null;
 
         interactionButton.onClick.RemoveListener(GeneralClick);
         killButton.onClick.RemoveListener(KillClick);
         reportButton.onClick.RemoveListener(ReportClick);
+        ghostButton.onClick.RemoveListener(GhostModeActivationClick);
     }
 }

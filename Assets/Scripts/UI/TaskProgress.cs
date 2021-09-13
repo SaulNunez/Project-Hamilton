@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Extensions;
 
 /// <summary>
 /// Updates task progress bar in client
@@ -38,7 +39,13 @@ public class TaskProgress : NetworkBehaviour
 
     private void UpdatePuzzleCount(PuzzleId id, NetworkIdentity doneBy)
     {
-        doneTasks++;
+        var assasinComponent = doneBy.GetComponent<Killing>();
+        bool isAssasin = assasinComponent != null && assasinComponent.IsAssasin;
+        this.SuperPrint($"Puzzle {id} set as completed. Solved by assasin: {isAssasin}");
+        if (!isAssasin)
+        {
+            doneTasks++;
+        }
     }
 
     public override void OnStopServer()
