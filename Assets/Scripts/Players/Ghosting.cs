@@ -19,7 +19,8 @@ public class Ghosting : NetworkBehaviour
     bool isOnGhostMode = false;
 
     new SpriteRenderer renderer;
-    readonly Color transparent = new Color(1, 1, 1, 0);
+    readonly Color transparent = new Color(0, 0, 0, 0.1f);
+    readonly Color ghostVisibleColor = new Color(1, 1, 1, 0.75f);
 
     Killing assasinInformationComponent;
 
@@ -71,7 +72,13 @@ public class Ghosting : NetworkBehaviour
         var isOnGhostMode = newValue == true;
         if (isOnGhostMode)
         {
-            renderer.color = transparent;
+            if (hasAuthority)
+            {
+                renderer.color = ghostVisibleColor;
+            } else
+            {
+                renderer.color = transparent;
+            }
         } else
         {
             renderer.color = Color.white;
