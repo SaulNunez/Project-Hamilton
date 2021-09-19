@@ -18,6 +18,8 @@ public class PuzzleUI : NetworkBehaviour
     [SerializeField]
     GameObject sequence;
     [SerializeField]
+    GameObject sequence2;
+    [SerializeField]
     GameObject variablesString;
     [SerializeField]
     GameObject variablesBool;
@@ -104,6 +106,7 @@ public class PuzzleUI : NetworkBehaviour
     {
         boilerInt.SetActive(false);
         sequence.SetActive(false);
+        sequence2.SetActive(false);
         variablesString.SetActive(false);
         variablesBool.SetActive(false);
         doWhileCarStarter.SetActive(false);
@@ -157,6 +160,9 @@ public class PuzzleUI : NetworkBehaviour
                 break;
             case PuzzleId.Sequence1:
                 sequence.SetActive(true);
+                break;
+            case PuzzleId.Sequence2:
+                sequence2.SetActive(true);
                 break;
             case PuzzleId.VariableString:
                 variablesString.SetActive(true);
