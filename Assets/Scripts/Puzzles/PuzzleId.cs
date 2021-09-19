@@ -7,6 +7,7 @@ public enum PuzzleId
     BoilersVariableInteger,
     Sequence1,
     Sequence2,
+    Sequence3,
     VariableString,
     VariableBoolean,
     DoWhileMotorStarter,
