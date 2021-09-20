@@ -3155,6 +3155,18 @@ references:
   commentId: F:Global.PuzzleId.Sequence1
   fullName: PuzzleId.Sequence1
   nameWithType: PuzzleId.Sequence1
+- uid: Global.PuzzleId.Sequence2
+  name: Sequence2
+  href: api/Global.PuzzleId.html#Global_PuzzleId_Sequence2
+  commentId: F:Global.PuzzleId.Sequence2
+  fullName: PuzzleId.Sequence2
+  nameWithType: PuzzleId.Sequence2
+- uid: Global.PuzzleId.Sequence3
+  name: Sequence3
+  href: api/Global.PuzzleId.html#Global_PuzzleId_Sequence3
+  commentId: F:Global.PuzzleId.Sequence3
+  fullName: PuzzleId.Sequence3
+  nameWithType: PuzzleId.Sequence3
 - uid: Global.PuzzleId.Substring
   name: Substring
   href: api/Global.PuzzleId.html#Global_PuzzleId_Substring

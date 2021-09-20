@@ -412,7 +412,7 @@
   "api/Global.PuzzleId.html": {
     "href": "api/Global.PuzzleId.html",
     "title": "Enum PuzzleId | A night in the house of Hunt",
-    "keywords": "Enum PuzzleId Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum PuzzleId Fields Name Description BoilersVariableInteger DoWhileMotorStarter ForWashingBucket IfElse IfFlowerPicking Sequence1 Substring TheoryVariety VariableBoolean VariableFloat VariableString WhileFillingBucket"
+    "keywords": "Enum PuzzleId Namespace : Global Assembly : cs.temp.dll.dll Syntax public enum PuzzleId Fields Name Description BoilersVariableInteger DoWhileMotorStarter ForWashingBucket IfElse IfFlowerPicking Sequence1 Sequence2 Sequence3 Substring TheoryVariety VariableBoolean VariableFloat VariableString WhileFillingBucket"
   },
   "api/Global.PuzzleIdSerialization.html": {
     "href": "api/Global.PuzzleIdSerialization.html",
