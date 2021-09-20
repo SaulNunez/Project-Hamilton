@@ -20,6 +20,8 @@ public class PuzzleUI : NetworkBehaviour
     [SerializeField]
     GameObject sequence2;
     [SerializeField]
+    GameObject sequence3;
+    [SerializeField]
     GameObject variablesString;
     [SerializeField]
     GameObject variablesBool;

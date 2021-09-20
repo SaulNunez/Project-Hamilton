@@ -103317,7 +103317,8 @@ MonoBehaviour:
   syncInterval: 0.1
   boilerInt: {fileID: 1537550252}
   sequence: {fileID: 508249964}
-  sequence2: {fileID: 0}
+  sequence2: {fileID: 2019914522}
+  sequence3: {fileID: 815990911}
   variablesString: {fileID: 228107559}
   variablesBool: {fileID: 235902239}
   doWhileCarStarter: {fileID: 1144318718}
