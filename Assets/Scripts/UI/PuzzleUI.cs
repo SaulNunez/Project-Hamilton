@@ -109,6 +109,7 @@ public class PuzzleUI : NetworkBehaviour
         boilerInt.SetActive(false);
         sequence.SetActive(false);
         sequence2.SetActive(false);
+        sequence3.SetActive(false);
         variablesString.SetActive(false);
         variablesBool.SetActive(false);
         doWhileCarStarter.SetActive(false);
@@ -166,6 +167,9 @@ public class PuzzleUI : NetworkBehaviour
             case PuzzleId.Sequence2:
                 sequence2.SetActive(true);
                 break;
+            case PuzzleId.Sequence3:
+                sequence3.SetActive(true);
+                break;
             case PuzzleId.VariableString:
                 variablesString.SetActive(true);
                 break;
@@ -192,6 +196,9 @@ public class PuzzleUI : NetworkBehaviour
                 break;
             case PuzzleId.IfElse:
                 ifelseCake.SetActive(true);
+                break;
+            default:
+                Debug.LogError("Puzzle type not defined, not opening puzzle screen");
                 break;
         }
 
