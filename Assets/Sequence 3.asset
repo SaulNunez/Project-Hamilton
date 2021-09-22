@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc76850c1245c424e9835ff26c6f631a, type: 3}
   m_Name: Sequence 3
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 2}
+  startPosition: {x: 0, y: 1}
   endPosition: {x: 8, y: 2}
   horizontalSize: 9
   verticalSize: 7
