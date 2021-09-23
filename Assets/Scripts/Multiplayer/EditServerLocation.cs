@@ -20,11 +20,16 @@ public class EditServerLocation : MonoBehaviour
 
     void Start()
     {
-        serverAddressInput.text = networkManager.networkAddress;
         serverAddressInput.onEndEdit.AddListener(UpdateServerAddress);
-
-        portInput.text = transport.port.ToString();
         portInput.onEndEdit.AddListener(UpdatePort);
+
+        Invoke(nameof(LoadInfoToUIAfterStart), 0.5f);
+    }
+
+    void LoadInfoToUIAfterStart()
+    {
+        serverAddressInput.text = networkManager.networkAddress;
+        portInput.text = transport.port.ToString();
     }
 
     void UpdateServerAddress(string newValue)
