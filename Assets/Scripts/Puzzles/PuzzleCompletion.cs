@@ -82,6 +82,21 @@ public class PuzzleCompletion : NetworkBehaviour
         instance = null;
     }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public override void OnStopClient()
+    {
+        base.OnStopClient();
+        instance = null;
+    }
+
     public int PuzzlesDone { get => puzzlesCompleted.Count; }
 
     /// <summary>

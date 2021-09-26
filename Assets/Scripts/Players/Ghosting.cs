@@ -12,15 +12,20 @@ public class Ghosting : NetworkBehaviour
     /// <summary>
     /// Use int so they don't loose a ghost mode invocation because they did two puzzles before using them
     /// </summary>
-    [SyncVar]
+    [SyncVar(hook = nameof(GhostModesAvailableChanged))]
     int ghostModeUsesAvailable = 0;
 
     [SyncVar(hook = nameof(SetGhostModeOnPlayer))]
     bool isOnGhostMode = false;
 
     new SpriteRenderer renderer;
-    readonly Color transparent = new Color(0, 0, 0, 0.1f);
-    readonly Color ghostVisibleColor = new Color(1, 1, 1, 0.75f);
+    [Header("Transparency and tint during ghosting")]
+    [SerializeField]
+    Color ghostInOtherPlayersClient = new Color(0, 0, 0, 0.1f);
+    [SerializeField]
+    Color ghostOnOwnClient = new Color(1, 1, 1, 0.75f);
+    [SerializeField]
+    Color normal = Color.white;
 
     Killing assasinInformationComponent;
 
@@ -30,14 +35,20 @@ public class Ghosting : NetworkBehaviour
 
         renderer = GetComponent<SpriteRenderer>();
 
-        GameUI.OnGhostingInvoked += CmdTryToBeGhost;
+        if (hasAuthority)
+        {
+            GameUI.OnGhostingInvoked += CmdTryToBeGhost;
+        }
     }
 
     public override void OnStopClient()
     {
         base.OnStopClient();
 
-        GameUI.OnGhostingInvoked -= CmdTryToBeGhost;
+        if (hasAuthority)
+        {
+            GameUI.OnGhostingInvoked -= CmdTryToBeGhost;
+        }
     }
 
     public override void OnStartServer()
@@ -69,19 +80,21 @@ public class Ghosting : NetworkBehaviour
 
     void SetGhostModeOnPlayer(bool oldValue, bool newValue)
     {
-        var isOnGhostMode = newValue == true;
+        var isOnGhostMode = newValue;
+
+        this.SuperPrint($"Ghosting changed, is ghost mode: {isOnGhostMode}");
         if (isOnGhostMode)
         {
             if (hasAuthority)
             {
-                renderer.color = ghostVisibleColor;
+                renderer.material.color = ghostOnOwnClient;
             } else
             {
-                renderer.color = transparent;
+                renderer.material.color = ghostInOtherPlayersClient;
             }
         } else
         {
-            renderer.color = Color.white;
+            renderer.material.color = normal;
         }
     }
 
