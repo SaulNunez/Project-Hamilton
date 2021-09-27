@@ -3005,6 +3005,19 @@ references:
   commentId: E:Global.PuzzleCompletion.OnPuzzleCompleted
   fullName: PuzzleCompletion.OnPuzzleCompleted
   nameWithType: PuzzleCompletion.OnPuzzleCompleted
+- uid: Global.PuzzleCompletion.OnStartClient
+  name: OnStartClient()
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStartClient
+  commentId: M:Global.PuzzleCompletion.OnStartClient
+  fullName: PuzzleCompletion.OnStartClient()
+  nameWithType: PuzzleCompletion.OnStartClient()
+- uid: Global.PuzzleCompletion.OnStartClient*
+  name: OnStartClient
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStartClient_
+  commentId: Overload:Global.PuzzleCompletion.OnStartClient
+  isSpec: "True"
+  fullName: PuzzleCompletion.OnStartClient
+  nameWithType: PuzzleCompletion.OnStartClient
 - uid: Global.PuzzleCompletion.OnStartServer
   name: OnStartServer()
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStartServer
@@ -3018,6 +3031,19 @@ references:
   isSpec: "True"
   fullName: PuzzleCompletion.OnStartServer
   nameWithType: PuzzleCompletion.OnStartServer
+- uid: Global.PuzzleCompletion.OnStopClient
+  name: OnStopClient()
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStopClient
+  commentId: M:Global.PuzzleCompletion.OnStopClient
+  fullName: PuzzleCompletion.OnStopClient()
+  nameWithType: PuzzleCompletion.OnStopClient()
+- uid: Global.PuzzleCompletion.OnStopClient*
+  name: OnStopClient
+  href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStopClient_
+  commentId: Overload:Global.PuzzleCompletion.OnStopClient
+  isSpec: "True"
+  fullName: PuzzleCompletion.OnStopClient
+  nameWithType: PuzzleCompletion.OnStopClient
 - uid: Global.PuzzleCompletion.OnStopServer
   name: OnStopServer()
   href: api/Global.PuzzleCompletion.html#Global_PuzzleCompletion_OnStopServer
@@ -4183,6 +4209,58 @@ references:
   commentId: T:Global.SetupDefaultFlowers
   fullName: SetupDefaultFlowers
   nameWithType: SetupDefaultFlowers
+- uid: Global.SetupDefaultFlowers.ClickDaisyButton
+  name: ClickDaisyButton()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickDaisyButton
+  commentId: M:Global.SetupDefaultFlowers.ClickDaisyButton
+  fullName: SetupDefaultFlowers.ClickDaisyButton()
+  nameWithType: SetupDefaultFlowers.ClickDaisyButton()
+- uid: Global.SetupDefaultFlowers.ClickDaisyButton*
+  name: ClickDaisyButton
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickDaisyButton_
+  commentId: Overload:Global.SetupDefaultFlowers.ClickDaisyButton
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.ClickDaisyButton
+  nameWithType: SetupDefaultFlowers.ClickDaisyButton
+- uid: Global.SetupDefaultFlowers.ClickRosesButton
+  name: ClickRosesButton()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickRosesButton
+  commentId: M:Global.SetupDefaultFlowers.ClickRosesButton
+  fullName: SetupDefaultFlowers.ClickRosesButton()
+  nameWithType: SetupDefaultFlowers.ClickRosesButton()
+- uid: Global.SetupDefaultFlowers.ClickRosesButton*
+  name: ClickRosesButton
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickRosesButton_
+  commentId: Overload:Global.SetupDefaultFlowers.ClickRosesButton
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.ClickRosesButton
+  nameWithType: SetupDefaultFlowers.ClickRosesButton
+- uid: Global.SetupDefaultFlowers.ClickSunflowerButton
+  name: ClickSunflowerButton()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickSunflowerButton
+  commentId: M:Global.SetupDefaultFlowers.ClickSunflowerButton
+  fullName: SetupDefaultFlowers.ClickSunflowerButton()
+  nameWithType: SetupDefaultFlowers.ClickSunflowerButton()
+- uid: Global.SetupDefaultFlowers.ClickSunflowerButton*
+  name: ClickSunflowerButton
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickSunflowerButton_
+  commentId: Overload:Global.SetupDefaultFlowers.ClickSunflowerButton
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.ClickSunflowerButton
+  nameWithType: SetupDefaultFlowers.ClickSunflowerButton
+- uid: Global.SetupDefaultFlowers.ClickTulipButton
+  name: ClickTulipButton()
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickTulipButton
+  commentId: M:Global.SetupDefaultFlowers.ClickTulipButton
+  fullName: SetupDefaultFlowers.ClickTulipButton()
+  nameWithType: SetupDefaultFlowers.ClickTulipButton()
+- uid: Global.SetupDefaultFlowers.ClickTulipButton*
+  name: ClickTulipButton
+  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickTulipButton_
+  commentId: Overload:Global.SetupDefaultFlowers.ClickTulipButton
+  isSpec: "True"
+  fullName: SetupDefaultFlowers.ClickTulipButton
+  nameWithType: SetupDefaultFlowers.ClickTulipButton
 - uid: Global.SetupDefaultFlowers.OnStartClient
   name: OnStartClient()
   href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartClient
