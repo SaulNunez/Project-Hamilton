@@ -33,15 +33,6 @@ public class SetupDefaultFlowers: PuzzleBase {
     [SerializeField]
     Sprite rosesSprite;
 
-    [Header("Buttons")]
-    [SerializeField]
-    List<FlowerButtonModel> flowerButtons;
-
-    //private void Start()
-    //{
-    //    print($"Flowers: {string.Join(", ", FlowerTypes.Types.Shuffle())}");
-    //}
-
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -61,31 +52,6 @@ public class SetupDefaultFlowers: PuzzleBase {
                 defaultFlowerImage.sprite = daisySprite;
                 break;
         }
-
-        var flowerTypes = FlowerTypes.Types.Shuffle();
-        for (int i = 0; i < flowerButtons.Count; i++)
-        {
-            FlowerButtonModel flowerButton = flowerButtons[i];
-            string flowerType = flowerTypes.ElementAt(i);
-            switch (flowerType)
-            {
-                case FlowerTypes.Sunflower:
-                    flowerButton.ButtonSprite = sunflowerSprite;
-                    break;
-                case FlowerTypes.Tulip:
-                    flowerButton.ButtonSprite = tulipSprite;
-                    break;
-                case FlowerTypes.Roses:
-                    flowerButton.ButtonSprite = rosesSprite;
-                    break;
-                case FlowerTypes.Daisy:
-                    flowerButton.ButtonSprite = daisySprite;
-                    break;
-            }
-
-            //En click, mandar seleccion al servidor
-            flowerButton.button.onClick.AddListener(() => CmdOnButtonClick(flowerType));
-        }
     }
 
     public override void OnStartServer()
@@ -94,6 +60,12 @@ public class SetupDefaultFlowers: PuzzleBase {
 
         defaultFlowerType = FlowerTypes.Types.PickRandom();
     }
+
+    public void ClickSunflowerButton() => CmdOnButtonClick(FlowerTypes.Sunflower);
+    public void ClickTulipButton() => CmdOnButtonClick(FlowerTypes.Tulip);
+    public void ClickRosesButton() => CmdOnButtonClick(FlowerTypes.Roses);
+    public void ClickDaisyButton() => CmdOnButtonClick(FlowerTypes.Daisy);
+
 
     [Command(requiresAuthority = false)]
     void CmdOnButtonClick(string clickFlowerType, NetworkConnectionToClient sender = null)
