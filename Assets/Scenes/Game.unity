@@ -214,7 +214,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 3
+  opens: 2
 --- !u!61 &12201768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 13
+  opens: 12
 --- !u!114 &36365109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64730,7 +64730,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 6
+  opens: 4
 --- !u!114 &330982999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73183,7 +73183,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 2
+  opens: 1
 --- !u!61 &684634658
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76460,7 +76460,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 5
+  opens: 3
 --- !u!114 &845817776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80308,7 +80308,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 1
+  opens: 0
 --- !u!114 &982743971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99118,7 +99118,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 10
+  opens: 9
 --- !u!114 &1402563993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102574,7 +102574,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 8
+  opens: 5
 --- !u!114 &1593365702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108072,7 +108072,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 10
+  opens: 7
 --- !u!114 &1905294670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110765,7 +110765,7 @@ GameObject:
   - component: {fileID: 1982578737}
   - component: {fileID: 1982578736}
   m_Layer: 9
-  m_Name: VariableString (1)
+  m_Name: WhileFillCows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110830,7 +110830,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 14
+  opens: 13
 --- !u!114 &1982578739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111150,7 +111150,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 9
+  opens: 6
 --- !u!114 &1988507139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112348,7 +112348,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 12
+  opens: 11
 --- !u!114 &2024700093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113399,7 +113399,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 11
+  opens: 8
 --- !u!114 &2082783663
 MonoBehaviour:
   m_ObjectHideFlags: 0
