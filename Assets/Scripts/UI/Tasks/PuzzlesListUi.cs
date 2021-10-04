@@ -102,9 +102,6 @@ public class PuzzlesListUi : NetworkBehaviour
         foreach(var task in AvailablePuzzles())
         {
             switch (task) {
-                case PuzzleId.BoilersVariableInteger:
-                    taskList += "Boilers: Registra temperatura del termometro \n";
-                    break;
                 case PuzzleId.Sequence1:
                     taskList += "Garage: Pasa un laberinto de cajas \n";
                     break;
@@ -116,9 +113,6 @@ public class PuzzlesListUi : NetworkBehaviour
                     break;
                 case PuzzleId.DoWhileMotorStarter:
                     taskList += "Garage: Enciende el automovil \n";
-                    break;
-                case PuzzleId.VariableFloat:
-                    taskList += "Boilers: Registra temperatura del termometro(2) \n";
                     break;
                 case PuzzleId.ForWashingBucket:
                     taskList += "Lavandería: Lava la ropa \n";

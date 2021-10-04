@@ -4,18 +4,19 @@ using UnityEngine;
 
 public enum PuzzleId
 {
-    BoilersVariableInteger,
     Sequence1,
     Sequence2,
     Sequence3,
     VariableString,
     VariableBoolean,
     DoWhileMotorStarter,
-    VariableFloat,
     ForWashingBucket,
     WhileFillingBucket,
     IfFlowerPicking,
     Substring,
     IfElse,
-    TheoryVariety
+    TheoryVariety,
+    TemperatureCompareInt,
+    ForMixing,
+    WhileFillCows
 }

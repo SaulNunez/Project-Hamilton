@@ -14,8 +14,6 @@ using UnityEngine;
 public class PuzzleUI : NetworkBehaviour
 {
     [SerializeField]
-    GameObject boilerInt;
-    [SerializeField]
     GameObject sequence;
     [SerializeField]
     GameObject sequence2;
@@ -28,8 +26,6 @@ public class PuzzleUI : NetworkBehaviour
     [SerializeField]
     GameObject doWhileCarStarter;
     [SerializeField]
-    GameObject floatThermostat;
-    [SerializeField]
     GameObject forWashing;
     [SerializeField]
     GameObject whileFillWaterBucket;
@@ -39,6 +35,8 @@ public class PuzzleUI : NetworkBehaviour
     GameObject substring;
     [SerializeField]
     GameObject ifelseCake;
+    [SerializeField]
+    GameObject forCakeMixing;
 
     /// <summary>
     /// Called when a puzzle UI is to be shown on a specific client.
@@ -106,14 +104,12 @@ public class PuzzleUI : NetworkBehaviour
     [Client]
     public void ClosePuzzles()
     {
-        boilerInt.SetActive(false);
         sequence.SetActive(false);
         sequence2.SetActive(false);
         sequence3.SetActive(false);
         variablesString.SetActive(false);
         variablesBool.SetActive(false);
         doWhileCarStarter.SetActive(false);
-        floatThermostat.SetActive(false);
         forWashing.SetActive(false);
         whileFillWaterBucket.SetActive(false);
         ifPickFlower.SetActive(false);
@@ -158,9 +154,6 @@ public class PuzzleUI : NetworkBehaviour
     {
         switch (puzzle)
         {
-            case PuzzleId.BoilersVariableInteger:
-                boilerInt.SetActive(true);
-                break;
             case PuzzleId.Sequence1:
                 sequence.SetActive(true);
                 break;
@@ -178,9 +171,6 @@ public class PuzzleUI : NetworkBehaviour
                 break;
             case PuzzleId.DoWhileMotorStarter:
                 doWhileCarStarter.SetActive(true);
-                break;
-            case PuzzleId.VariableFloat:
-                floatThermostat.SetActive(true);
                 break;
             case PuzzleId.ForWashingBucket:
                 forWashing.SetActive(true);
