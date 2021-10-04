@@ -105,9 +105,6 @@ public class PuzzlesListUi : NetworkBehaviour
                 case PuzzleId.Sequence1:
                     taskList += "Garage: Pasa un laberinto de cajas \n";
                     break;
-                case PuzzleId.VariableString:
-                    taskList += "Cocina: Hablar con nanabot \n";
-                    break;
                 case PuzzleId.VariableBoolean:
                     taskList += "Electricidad: Encender generador \n";
                     break;

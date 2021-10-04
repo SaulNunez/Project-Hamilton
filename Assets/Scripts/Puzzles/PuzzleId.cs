@@ -7,7 +7,6 @@ public enum PuzzleId
     Sequence1,
     Sequence2,
     Sequence3,
-    VariableString,
     VariableBoolean,
     DoWhileMotorStarter,
     ForWashingBucket,
