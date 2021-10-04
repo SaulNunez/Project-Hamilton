@@ -14,7 +14,6 @@ public enum PuzzleId
     IfFlowerPicking,
     Substring,
     IfElse,
-    TheoryVariety,
     TemperatureCompareInt,
     ForMixing,
     WhileFillCows
