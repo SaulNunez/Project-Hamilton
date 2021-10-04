@@ -115,6 +115,7 @@ public class PuzzleUI : NetworkBehaviour
         ifPickFlower.SetActive(false);
         substring.SetActive(false);
         ifelseCake.SetActive(false);
+        forCakeMixing.SetActive(false);
 
         OnClosePuzzleInClient?.Invoke();
     }
@@ -186,6 +187,9 @@ public class PuzzleUI : NetworkBehaviour
                 break;
             case PuzzleId.IfElse:
                 ifelseCake.SetActive(true);
+                break;
+            case PuzzleId.ForMixing:
+                forCakeMixing.SetActive(true);
                 break;
             default:
                 Debug.LogError("Puzzle type not defined, not opening puzzle screen");
