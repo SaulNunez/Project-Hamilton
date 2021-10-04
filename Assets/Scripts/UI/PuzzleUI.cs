@@ -37,6 +37,8 @@ public class PuzzleUI : NetworkBehaviour
     GameObject forCakeMixing;
     [SerializeField]
     GameObject temperatureCompare;
+    [SerializeField]
+    GameObject whileFillCows;
 
     /// <summary>
     /// Called when a puzzle UI is to be shown on a specific client.
@@ -116,6 +118,7 @@ public class PuzzleUI : NetworkBehaviour
         ifelseCake.SetActive(false);
         forCakeMixing.SetActive(false);
         temperatureCompare.SetActive(false);
+        whileFillCows.SetActive(false);
 
         OnClosePuzzleInClient?.Invoke();
     }
@@ -190,6 +193,9 @@ public class PuzzleUI : NetworkBehaviour
                 break;
             case PuzzleId.TemperatureCompareInt:
                 temperatureCompare.SetActive(true);
+                break;
+            case PuzzleId.WhileFillCows:
+                whileFillCows.SetActive(true);
                 break;
             default:
                 Debug.LogError("Puzzle type not defined, not opening puzzle screen");
