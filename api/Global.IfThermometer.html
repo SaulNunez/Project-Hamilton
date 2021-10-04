@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class HelloNanabot
+    <title>Class IfThermometer
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class HelloNanabot
+    <meta name="title" content="Class IfThermometer
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.58.4.0">
     
@@ -78,20 +78,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.HelloNanabot">
+            <article class="content wrap" id="_content" data-uid="Global.IfThermometer">
   
   
-  <h1 id="Global_HelloNanabot" data-uid="Global.HelloNanabot" class="text-break">Class HelloNanabot
+  <h1 id="Global_IfThermometer" data-uid="Global.IfThermometer" class="text-break">Class IfThermometer
   </h1>
-  <div class="markdown level0 summary"><p>String puzzle logic</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
     <div class="level2"><a class="xref" href="Global.PuzzleBase.html">PuzzleBase</a></div>
-    <div class="level3"><span class="xref">HelloNanabot</span></div>
+    <div class="level3"><span class="xref">IfThermometer</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -107,48 +106,87 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_HelloNanabot_syntax">Syntax</h5>
+  <h5 id="Global_IfThermometer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HelloNanabot : PuzzleBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class IfThermometer : PuzzleBase</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="methods">Methods
   </h3>
   
   
-  <h4 id="Global_HelloNanabot_textbox" data-uid="Global.HelloNanabot.textbox">textbox</h4>
+  <a id="Global_IfThermometer_CmdVerify_" data-uid="Global.IfThermometer.CmdVerify*"></a>
+  <h4 id="Global_IfThermometer_CmdVerify_System_Int32_Mirror_NetworkConnectionToClient_" data-uid="Global.IfThermometer.CmdVerify(System.Int32,Mirror.NetworkConnectionToClient)">CmdVerify(Int32, NetworkConnectionToClient)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TMP_InputField textbox</code></pre>
+    <pre><code class="lang-csharp hljs">public void CmdVerify(int selection, NetworkConnectionToClient sender = null)</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TMP_InputField</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">selection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Mirror.NetworkConnectionToClient</span></td>
+        <td><span class="parametername">sender</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Global_HelloNanabot_CommitPuzzle_" data-uid="Global.HelloNanabot.CommitPuzzle*"></a>
-  <h4 id="Global_HelloNanabot_CommitPuzzle" data-uid="Global.HelloNanabot.CommitPuzzle">CommitPuzzle()</h4>
-  <div class="markdown level1 summary"><p>Gets value of textbox and sends it to the server</p>
-</div>
+  <a id="Global_IfThermometer_OnStartClient_" data-uid="Global.IfThermometer.OnStartClient*"></a>
+  <h4 id="Global_IfThermometer_OnStartClient" data-uid="Global.IfThermometer.OnStartClient">OnStartClient()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CommitPuzzle()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
+  
+  
+  <a id="Global_IfThermometer_OnStartServer_" data-uid="Global.IfThermometer.OnStartServer*"></a>
+  <h4 id="Global_IfThermometer_OnStartServer" data-uid="Global.IfThermometer.OnStartServer">OnStartServer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnStartServer()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartServer()</span></div>
+  
+  
+  <a id="Global_IfThermometer_SelectedPrint_" data-uid="Global.IfThermometer.SelectedPrint*"></a>
+  <h4 id="Global_IfThermometer_SelectedPrint" data-uid="Global.IfThermometer.SelectedPrint">SelectedPrint()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SelectedPrint()</code></pre>
+  </div>
+  
+  
+  <a id="Global_IfThermometer_SelectNothing_" data-uid="Global.IfThermometer.SelectNothing*"></a>
+  <h4 id="Global_IfThermometer_SelectNothing" data-uid="Global.IfThermometer.SelectNothing">SelectNothing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SelectNothing()</code></pre>
   </div>
 </article>
           </div>

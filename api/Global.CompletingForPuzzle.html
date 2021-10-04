@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class PuzzleBase
+    <title>Class CompletingForPuzzle
    | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class PuzzleBase
+    <meta name="title" content="Class CompletingForPuzzle
    | A night in the house of Hunt ">
     <meta name="generator" content="docfx 2.58.4.0">
     
@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Global.PuzzleBase">
+            <article class="content wrap" id="_content" data-uid="Global.CompletingForPuzzle">
   
   
-  <h1 id="Global_PuzzleBase" data-uid="Global.PuzzleBase" class="text-break">Class PuzzleBase
+  <h1 id="Global_CompletingForPuzzle" data-uid="Global.CompletingForPuzzle" class="text-break">Class CompletingForPuzzle
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -89,107 +89,51 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Mirror.NetworkBehaviour</span></div>
-    <div class="level2"><span class="xref">PuzzleBase</span></div>
-      <div class="level3"><a class="xref" href="Global.CompleteBoolPuzzle.html">CompleteBoolPuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.CompletingForPuzzle.html">CompletingForPuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.CompletingWhilePuzzle.html">CompletingWhilePuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.DoWhilePuzzle.html">DoWhilePuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.IfElsePuzzle.html">IfElsePuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.IfThermometer.html">IfThermometer</a></div>
-      <div class="level3"><a class="xref" href="Global.QuestionPuzzle.html">QuestionPuzzle</a></div>
-      <div class="level3"><a class="xref" href="Global.SetupDefaultFlowers.html">SetupDefaultFlowers</a></div>
-      <div class="level3"><a class="xref" href="Global.SusbtringPuzzleLogic.html">SusbtringPuzzleLogic</a></div>
-      <div class="level3"><a class="xref" href="Global.WhilePuzzle.html">WhilePuzzle</a></div>
+    <div class="level2"><a class="xref" href="Global.PuzzleBase.html">PuzzleBase</a></div>
+    <div class="level3"><span class="xref">CompletingForPuzzle</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Global.PuzzleBase.html#Global_PuzzleBase_TargetRunWrongFeedback_Mirror_NetworkConnection_">PuzzleBase.TargetRunWrongFeedback(NetworkConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.PuzzleBase.html#Global_PuzzleBase_TargetRunCorrectFeedback_Mirror_NetworkConnection_">PuzzleBase.TargetRunCorrectFeedback(NetworkConnection)</a>
+    </div>
+    <div>
+      <a class="xref" href="Global.PuzzleBase.html#Global_PuzzleBase_TargetClosePuzzle_Mirror_NetworkConnection_">PuzzleBase.TargetClosePuzzle(NetworkConnection)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Global.html">Global</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Global_PuzzleBase_syntax">Syntax</h5>
+  <h5 id="Global_CompletingForPuzzle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PuzzleBase : NetworkBehaviour</code></pre>
+    <pre><code class="lang-csharp hljs">public class CompletingForPuzzle : PuzzleBase</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Global_PuzzleBase_TargetClosePuzzle_" data-uid="Global.PuzzleBase.TargetClosePuzzle*"></a>
-  <h4 id="Global_PuzzleBase_TargetClosePuzzle_Mirror_NetworkConnection_" data-uid="Global.PuzzleBase.TargetClosePuzzle(Mirror.NetworkConnection)">TargetClosePuzzle(NetworkConnection)</h4>
+  <a id="Global_CompletingForPuzzle_OnStartClient_" data-uid="Global.CompletingForPuzzle.OnStartClient*"></a>
+  <h4 id="Global_CompletingForPuzzle_OnStartClient" data-uid="Global.CompletingForPuzzle.OnStartClient">OnStartClient()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void TargetClosePuzzle(NetworkConnection target)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnStartClient()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Mirror.NetworkConnection</span></td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Mirror.NetworkBehaviour.OnStartClient()</span></div>
   
   
-  <a id="Global_PuzzleBase_TargetRunCorrectFeedback_" data-uid="Global.PuzzleBase.TargetRunCorrectFeedback*"></a>
-  <h4 id="Global_PuzzleBase_TargetRunCorrectFeedback_Mirror_NetworkConnection_" data-uid="Global.PuzzleBase.TargetRunCorrectFeedback(Mirror.NetworkConnection)">TargetRunCorrectFeedback(NetworkConnection)</h4>
+  <a id="Global_CompletingForPuzzle_Verify_" data-uid="Global.CompletingForPuzzle.Verify*"></a>
+  <h4 id="Global_CompletingForPuzzle_Verify" data-uid="Global.CompletingForPuzzle.Verify">Verify()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void TargetRunCorrectFeedback(NetworkConnection target)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Verify()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Mirror.NetworkConnection</span></td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Global_PuzzleBase_TargetRunWrongFeedback_" data-uid="Global.PuzzleBase.TargetRunWrongFeedback*"></a>
-  <h4 id="Global_PuzzleBase_TargetRunWrongFeedback_Mirror_NetworkConnection_" data-uid="Global.PuzzleBase.TargetRunWrongFeedback(Mirror.NetworkConnection)">TargetRunWrongFeedback(NetworkConnection)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void TargetRunWrongFeedback(NetworkConnection target)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Mirror.NetworkConnection</span></td>
-        <td><span class="parametername">target</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           

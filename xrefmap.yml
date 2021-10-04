@@ -448,6 +448,70 @@ references:
   isSpec: "True"
   fullName: CompleteBoolPuzzle.CompletePuzzle
   nameWithType: CompleteBoolPuzzle.CompletePuzzle
+- uid: Global.CompletingForPuzzle
+  name: CompletingForPuzzle
+  href: api/Global.CompletingForPuzzle.html
+  commentId: T:Global.CompletingForPuzzle
+  fullName: CompletingForPuzzle
+  nameWithType: CompletingForPuzzle
+- uid: Global.CompletingForPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.CompletingForPuzzle.html#Global_CompletingForPuzzle_OnStartClient
+  commentId: M:Global.CompletingForPuzzle.OnStartClient
+  fullName: CompletingForPuzzle.OnStartClient()
+  nameWithType: CompletingForPuzzle.OnStartClient()
+- uid: Global.CompletingForPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.CompletingForPuzzle.html#Global_CompletingForPuzzle_OnStartClient_
+  commentId: Overload:Global.CompletingForPuzzle.OnStartClient
+  isSpec: "True"
+  fullName: CompletingForPuzzle.OnStartClient
+  nameWithType: CompletingForPuzzle.OnStartClient
+- uid: Global.CompletingForPuzzle.Verify
+  name: Verify()
+  href: api/Global.CompletingForPuzzle.html#Global_CompletingForPuzzle_Verify
+  commentId: M:Global.CompletingForPuzzle.Verify
+  fullName: CompletingForPuzzle.Verify()
+  nameWithType: CompletingForPuzzle.Verify()
+- uid: Global.CompletingForPuzzle.Verify*
+  name: Verify
+  href: api/Global.CompletingForPuzzle.html#Global_CompletingForPuzzle_Verify_
+  commentId: Overload:Global.CompletingForPuzzle.Verify
+  isSpec: "True"
+  fullName: CompletingForPuzzle.Verify
+  nameWithType: CompletingForPuzzle.Verify
+- uid: Global.CompletingWhilePuzzle
+  name: CompletingWhilePuzzle
+  href: api/Global.CompletingWhilePuzzle.html
+  commentId: T:Global.CompletingWhilePuzzle
+  fullName: CompletingWhilePuzzle
+  nameWithType: CompletingWhilePuzzle
+- uid: Global.CompletingWhilePuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.CompletingWhilePuzzle.html#Global_CompletingWhilePuzzle_OnStartClient
+  commentId: M:Global.CompletingWhilePuzzle.OnStartClient
+  fullName: CompletingWhilePuzzle.OnStartClient()
+  nameWithType: CompletingWhilePuzzle.OnStartClient()
+- uid: Global.CompletingWhilePuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.CompletingWhilePuzzle.html#Global_CompletingWhilePuzzle_OnStartClient_
+  commentId: Overload:Global.CompletingWhilePuzzle.OnStartClient
+  isSpec: "True"
+  fullName: CompletingWhilePuzzle.OnStartClient
+  nameWithType: CompletingWhilePuzzle.OnStartClient
+- uid: Global.CompletingWhilePuzzle.Verify
+  name: Verify()
+  href: api/Global.CompletingWhilePuzzle.html#Global_CompletingWhilePuzzle_Verify
+  commentId: M:Global.CompletingWhilePuzzle.Verify
+  fullName: CompletingWhilePuzzle.Verify()
+  nameWithType: CompletingWhilePuzzle.Verify()
+- uid: Global.CompletingWhilePuzzle.Verify*
+  name: Verify
+  href: api/Global.CompletingWhilePuzzle.html#Global_CompletingWhilePuzzle_Verify_
+  commentId: Overload:Global.CompletingWhilePuzzle.Verify
+  isSpec: "True"
+  fullName: CompletingWhilePuzzle.Verify
+  nameWithType: CompletingWhilePuzzle.Verify
 - uid: Global.CreateLocalPuzzleUI
   name: CreateLocalPuzzleUI
   href: api/Global.CreateLocalPuzzleUI.html
@@ -1582,31 +1646,6 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkRoomManager.UniquenessId
   nameWithType: HamiltonNetworkRoomManager.UniquenessId
-- uid: Global.HelloNanabot
-  name: HelloNanabot
-  href: api/Global.HelloNanabot.html
-  commentId: T:Global.HelloNanabot
-  fullName: HelloNanabot
-  nameWithType: HelloNanabot
-- uid: Global.HelloNanabot.CommitPuzzle
-  name: CommitPuzzle()
-  href: api/Global.HelloNanabot.html#Global_HelloNanabot_CommitPuzzle
-  commentId: M:Global.HelloNanabot.CommitPuzzle
-  fullName: HelloNanabot.CommitPuzzle()
-  nameWithType: HelloNanabot.CommitPuzzle()
-- uid: Global.HelloNanabot.CommitPuzzle*
-  name: CommitPuzzle
-  href: api/Global.HelloNanabot.html#Global_HelloNanabot_CommitPuzzle_
-  commentId: Overload:Global.HelloNanabot.CommitPuzzle
-  isSpec: "True"
-  fullName: HelloNanabot.CommitPuzzle
-  nameWithType: HelloNanabot.CommitPuzzle
-- uid: Global.HelloNanabot.textbox
-  name: textbox
-  href: api/Global.HelloNanabot.html#Global_HelloNanabot_textbox
-  commentId: F:Global.HelloNanabot.textbox
-  fullName: HelloNanabot.textbox
-  nameWithType: HelloNanabot.textbox
 - uid: Global.HideGuiIfNotEditor
   name: HideGuiIfNotEditor
   href: api/Global.HideGuiIfNotEditor.html
@@ -1725,6 +1764,77 @@ references:
   isSpec: "True"
   fullName: IfElsePuzzle.OnStartServer
   nameWithType: IfElsePuzzle.OnStartServer
+- uid: Global.IfThermometer
+  name: IfThermometer
+  href: api/Global.IfThermometer.html
+  commentId: T:Global.IfThermometer
+  fullName: IfThermometer
+  nameWithType: IfThermometer
+- uid: Global.IfThermometer.CmdVerify(System.Int32,Mirror.NetworkConnectionToClient)
+  name: CmdVerify(Int32, NetworkConnectionToClient)
+  href: api/Global.IfThermometer.html#Global_IfThermometer_CmdVerify_System_Int32_Mirror_NetworkConnectionToClient_
+  commentId: M:Global.IfThermometer.CmdVerify(System.Int32,Mirror.NetworkConnectionToClient)
+  fullName: IfThermometer.CmdVerify(System.Int32, Mirror.NetworkConnectionToClient)
+  nameWithType: IfThermometer.CmdVerify(Int32, NetworkConnectionToClient)
+- uid: Global.IfThermometer.CmdVerify*
+  name: CmdVerify
+  href: api/Global.IfThermometer.html#Global_IfThermometer_CmdVerify_
+  commentId: Overload:Global.IfThermometer.CmdVerify
+  isSpec: "True"
+  fullName: IfThermometer.CmdVerify
+  nameWithType: IfThermometer.CmdVerify
+- uid: Global.IfThermometer.OnStartClient
+  name: OnStartClient()
+  href: api/Global.IfThermometer.html#Global_IfThermometer_OnStartClient
+  commentId: M:Global.IfThermometer.OnStartClient
+  fullName: IfThermometer.OnStartClient()
+  nameWithType: IfThermometer.OnStartClient()
+- uid: Global.IfThermometer.OnStartClient*
+  name: OnStartClient
+  href: api/Global.IfThermometer.html#Global_IfThermometer_OnStartClient_
+  commentId: Overload:Global.IfThermometer.OnStartClient
+  isSpec: "True"
+  fullName: IfThermometer.OnStartClient
+  nameWithType: IfThermometer.OnStartClient
+- uid: Global.IfThermometer.OnStartServer
+  name: OnStartServer()
+  href: api/Global.IfThermometer.html#Global_IfThermometer_OnStartServer
+  commentId: M:Global.IfThermometer.OnStartServer
+  fullName: IfThermometer.OnStartServer()
+  nameWithType: IfThermometer.OnStartServer()
+- uid: Global.IfThermometer.OnStartServer*
+  name: OnStartServer
+  href: api/Global.IfThermometer.html#Global_IfThermometer_OnStartServer_
+  commentId: Overload:Global.IfThermometer.OnStartServer
+  isSpec: "True"
+  fullName: IfThermometer.OnStartServer
+  nameWithType: IfThermometer.OnStartServer
+- uid: Global.IfThermometer.SelectedPrint
+  name: SelectedPrint()
+  href: api/Global.IfThermometer.html#Global_IfThermometer_SelectedPrint
+  commentId: M:Global.IfThermometer.SelectedPrint
+  fullName: IfThermometer.SelectedPrint()
+  nameWithType: IfThermometer.SelectedPrint()
+- uid: Global.IfThermometer.SelectedPrint*
+  name: SelectedPrint
+  href: api/Global.IfThermometer.html#Global_IfThermometer_SelectedPrint_
+  commentId: Overload:Global.IfThermometer.SelectedPrint
+  isSpec: "True"
+  fullName: IfThermometer.SelectedPrint
+  nameWithType: IfThermometer.SelectedPrint
+- uid: Global.IfThermometer.SelectNothing
+  name: SelectNothing()
+  href: api/Global.IfThermometer.html#Global_IfThermometer_SelectNothing
+  commentId: M:Global.IfThermometer.SelectNothing
+  fullName: IfThermometer.SelectNothing()
+  nameWithType: IfThermometer.SelectNothing()
+- uid: Global.IfThermometer.SelectNothing*
+  name: SelectNothing
+  href: api/Global.IfThermometer.html#Global_IfThermometer_SelectNothing_
+  commentId: Overload:Global.IfThermometer.SelectNothing
+  isSpec: "True"
+  fullName: IfThermometer.SelectNothing
+  nameWithType: IfThermometer.SelectNothing
 - uid: Global.IInteractuableBehaviour
   name: IInteractuableBehaviour
   href: api/Global.IInteractuableBehaviour.html
@@ -1744,57 +1854,6 @@ references:
   isSpec: "True"
   fullName: IInteractuableBehaviour.OnApproach
   nameWithType: IInteractuableBehaviour.OnApproach
-- uid: Global.IntPuzzle
-  name: IntPuzzle
-  href: api/Global.IntPuzzle.html
-  commentId: T:Global.IntPuzzle
-  fullName: IntPuzzle
-  nameWithType: IntPuzzle
-- uid: Global.IntPuzzle.OnInputUpdate(System.Single)
-  name: OnInputUpdate(Single)
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_System_Single_
-  commentId: M:Global.IntPuzzle.OnInputUpdate(System.Single)
-  fullName: IntPuzzle.OnInputUpdate(System.Single)
-  nameWithType: IntPuzzle.OnInputUpdate(Single)
-- uid: Global.IntPuzzle.OnInputUpdate(System.String)
-  name: OnInputUpdate(String)
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_System_String_
-  commentId: M:Global.IntPuzzle.OnInputUpdate(System.String)
-  fullName: IntPuzzle.OnInputUpdate(System.String)
-  nameWithType: IntPuzzle.OnInputUpdate(String)
-- uid: Global.IntPuzzle.OnInputUpdate*
-  name: OnInputUpdate
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnInputUpdate_
-  commentId: Overload:Global.IntPuzzle.OnInputUpdate
-  isSpec: "True"
-  fullName: IntPuzzle.OnInputUpdate
-  nameWithType: IntPuzzle.OnInputUpdate
-- uid: Global.IntPuzzle.OnStartClient
-  name: OnStartClient()
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartClient
-  commentId: M:Global.IntPuzzle.OnStartClient
-  fullName: IntPuzzle.OnStartClient()
-  nameWithType: IntPuzzle.OnStartClient()
-- uid: Global.IntPuzzle.OnStartClient*
-  name: OnStartClient
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartClient_
-  commentId: Overload:Global.IntPuzzle.OnStartClient
-  isSpec: "True"
-  fullName: IntPuzzle.OnStartClient
-  nameWithType: IntPuzzle.OnStartClient
-- uid: Global.IntPuzzle.OnStartServer
-  name: OnStartServer()
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartServer
-  commentId: M:Global.IntPuzzle.OnStartServer
-  fullName: IntPuzzle.OnStartServer()
-  nameWithType: IntPuzzle.OnStartServer()
-- uid: Global.IntPuzzle.OnStartServer*
-  name: OnStartServer
-  href: api/Global.IntPuzzle.html#Global_IntPuzzle_OnStartServer_
-  commentId: Overload:Global.IntPuzzle.OnStartServer
-  isSpec: "True"
-  fullName: IntPuzzle.OnStartServer
-  nameWithType: IntPuzzle.OnStartServer
 - uid: Global.ItemUIHandling
   name: ItemUIHandling
   href: api/Global.ItemUIHandling.html
@@ -3145,18 +3204,18 @@ references:
   commentId: T:Global.PuzzleId
   fullName: PuzzleId
   nameWithType: PuzzleId
-- uid: Global.PuzzleId.BoilersVariableInteger
-  name: BoilersVariableInteger
-  href: api/Global.PuzzleId.html#Global_PuzzleId_BoilersVariableInteger
-  commentId: F:Global.PuzzleId.BoilersVariableInteger
-  fullName: PuzzleId.BoilersVariableInteger
-  nameWithType: PuzzleId.BoilersVariableInteger
 - uid: Global.PuzzleId.DoWhileMotorStarter
   name: DoWhileMotorStarter
   href: api/Global.PuzzleId.html#Global_PuzzleId_DoWhileMotorStarter
   commentId: F:Global.PuzzleId.DoWhileMotorStarter
   fullName: PuzzleId.DoWhileMotorStarter
   nameWithType: PuzzleId.DoWhileMotorStarter
+- uid: Global.PuzzleId.ForMixing
+  name: ForMixing
+  href: api/Global.PuzzleId.html#Global_PuzzleId_ForMixing
+  commentId: F:Global.PuzzleId.ForMixing
+  fullName: PuzzleId.ForMixing
+  nameWithType: PuzzleId.ForMixing
 - uid: Global.PuzzleId.ForWashingBucket
   name: ForWashingBucket
   href: api/Global.PuzzleId.html#Global_PuzzleId_ForWashingBucket
@@ -3199,30 +3258,24 @@ references:
   commentId: F:Global.PuzzleId.Substring
   fullName: PuzzleId.Substring
   nameWithType: PuzzleId.Substring
-- uid: Global.PuzzleId.TheoryVariety
-  name: TheoryVariety
-  href: api/Global.PuzzleId.html#Global_PuzzleId_TheoryVariety
-  commentId: F:Global.PuzzleId.TheoryVariety
-  fullName: PuzzleId.TheoryVariety
-  nameWithType: PuzzleId.TheoryVariety
+- uid: Global.PuzzleId.TemperatureCompareInt
+  name: TemperatureCompareInt
+  href: api/Global.PuzzleId.html#Global_PuzzleId_TemperatureCompareInt
+  commentId: F:Global.PuzzleId.TemperatureCompareInt
+  fullName: PuzzleId.TemperatureCompareInt
+  nameWithType: PuzzleId.TemperatureCompareInt
 - uid: Global.PuzzleId.VariableBoolean
   name: VariableBoolean
   href: api/Global.PuzzleId.html#Global_PuzzleId_VariableBoolean
   commentId: F:Global.PuzzleId.VariableBoolean
   fullName: PuzzleId.VariableBoolean
   nameWithType: PuzzleId.VariableBoolean
-- uid: Global.PuzzleId.VariableFloat
-  name: VariableFloat
-  href: api/Global.PuzzleId.html#Global_PuzzleId_VariableFloat
-  commentId: F:Global.PuzzleId.VariableFloat
-  fullName: PuzzleId.VariableFloat
-  nameWithType: PuzzleId.VariableFloat
-- uid: Global.PuzzleId.VariableString
-  name: VariableString
-  href: api/Global.PuzzleId.html#Global_PuzzleId_VariableString
-  commentId: F:Global.PuzzleId.VariableString
-  fullName: PuzzleId.VariableString
-  nameWithType: PuzzleId.VariableString
+- uid: Global.PuzzleId.WhileFillCows
+  name: WhileFillCows
+  href: api/Global.PuzzleId.html#Global_PuzzleId_WhileFillCows
+  commentId: F:Global.PuzzleId.WhileFillCows
+  fullName: PuzzleId.WhileFillCows
+  nameWithType: PuzzleId.WhileFillCows
 - uid: Global.PuzzleId.WhileFillingBucket
   name: WhileFillingBucket
   href: api/Global.PuzzleId.html#Global_PuzzleId_WhileFillingBucket
