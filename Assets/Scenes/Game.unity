@@ -1254,7 +1254,7 @@ GameObject:
   - component: {fileID: 36365107}
   - component: {fileID: 36365106}
   m_Layer: 9
-  m_Name: VariableString
+  m_Name: ForMixing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 12
+  opens: 11
 --- !u!114 &36365109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110830,7 +110830,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 13
+  opens: 12
 --- !u!114 &1982578739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112348,7 +112348,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  opens: 11
+  opens: 10
 --- !u!114 &2024700093
 MonoBehaviour:
   m_ObjectHideFlags: 0
