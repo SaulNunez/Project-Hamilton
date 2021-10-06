@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class CompletingWhilePuzzle : PuzzleBase
 {
+    [Header("Puzzle information")]
+    [SerializeField]
+    PuzzleId puzzleId;
+
     const int MORE_THAN = 0;
     const int MORE_OR_EQUAL = 1;
     const int LESS_OR_EQUAL = 2;
@@ -144,7 +148,7 @@ public class CompletingWhilePuzzle : PuzzleBase
 
         if (iterations == expectedIterations)
         {
-            PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking, sender.identity);
+            PuzzleCompletion.instance.MarkCompleted(puzzleId, sender.identity);
             TargetClosePuzzle(sender);
             TargetRunCorrectFeedback(sender);
         }

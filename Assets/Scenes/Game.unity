@@ -82349,6 +82349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  puzzleId: 12
   expectedIterations: 9
   initialValueInputField: {fileID: 1245587736}
   endVerificationValueInputField: {fileID: 222765873}
@@ -97074,6 +97075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  puzzleId: 11
   expectedIterations: 12
   initialValueInputField: {fileID: 569074041}
   endVerificationValueInputField: {fileID: 406021312}
