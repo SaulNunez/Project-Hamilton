@@ -101,30 +101,44 @@ public class PuzzlesListUi : NetworkBehaviour
         var taskList = "";
         foreach(var task in AvailablePuzzles())
         {
-            switch (task) {
+            switch (task)
+            {
                 case PuzzleId.Sequence1:
-                    taskList += "Garage: Pasa un laberinto de cajas \n";
+                    taskList += "Garage: Pasa un laberinto de cajas. \n";
                     break;
                 case PuzzleId.VariableBoolean:
-                    taskList += "Electricidad: Encender generador \n";
+                    taskList += "Electricidad: Encender generador. \n";
                     break;
                 case PuzzleId.DoWhileMotorStarter:
-                    taskList += "Garage: Enciende el automovil \n";
+                    taskList += "Garage: Enciende el automovil. \n";
                     break;
                 case PuzzleId.ForWashingBucket:
-                    taskList += "Lavandería: Lava la ropa \n";
+                    taskList += "Lavandería: Lava la ropa. \n";
                     break;
                 case PuzzleId.WhileFillingBucket:
-                    taskList += "Saguán: Carga agua a la cubeta \n";
+                    taskList += "Saguán: Carga agua a la cubeta. \n";
                     break;
                 case PuzzleId.IfFlowerPicking:
-                    taskList += "Saguán: Recoge el tipo de flor correcto \n";
+                    taskList += "Saguán: Recoge el tipo de flor correcto. \n";
                     break;
                 case PuzzleId.Substring:
-                    taskList += "Telegrafo: Obten la subcadena de una cadena \n";
+                    taskList += "Telegrafo: Obten la subcadena de una cadena. \n";
                     break;
                 case PuzzleId.IfElse:
-                    taskList += "Cocina: Decora el cupcake o el pastel \n";
+                    taskList += "Cocina: Decora el cupcake o el pastel. \n";
+                    break;
+                case PuzzleId.Sequence2:
+                    break;
+                case PuzzleId.Sequence3:
+                    break;
+                case PuzzleId.TemperatureCompareInt:
+                    taskList += "Boilers: Revisa la temperatura del agua. \n";
+                    break;
+                case PuzzleId.ForMixing:
+                    taskList += "Cocina: Ayuda a nanabot a mezclar la harina para un pastel \n";
+                    break;
+                case PuzzleId.WhileFillCows:
+                    taskList += "Corral (arriba de cuarto de boilers): Llenar el abrevadero. \n";
                     break;
             }
         }
@@ -164,7 +178,7 @@ public class PuzzlesListUi : NetworkBehaviour
                 {
                     return true;
                 }
-                return !PuzzleCompletion.instance.puzzlesCompleted.Where(x => x.netIdentity == NetworkClient.connection.identity).Any(x => x.Id == pId);
+                return !PuzzleCompletion.instance.puzzlesCompleted.Any(x => x.netIdentity == NetworkClient.localPlayer && x.Id == pId);
             })
             .ToList();
 }
