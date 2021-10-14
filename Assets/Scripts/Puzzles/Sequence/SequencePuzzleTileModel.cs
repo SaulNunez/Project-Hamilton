@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 
 /// <summary>
-/// Model for setup of sequence tiles
+/// Model for setup of sequence tiles.
+/// This model serves as abstraction between implementation specifics and the idea of a tile containing several layers.
 /// </summary>
 public class SequencePuzzleTileModel : MonoBehaviour
 {

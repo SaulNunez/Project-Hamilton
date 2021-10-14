@@ -10,12 +10,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GridLayoutGroup))]
 public class SequenceGrid : MonoBehaviour
 {
-    //---EVENTS
-    public static event Action<Vector2Int> OnPositionUpdate;
-
-    //---STATE
-    Vector2Int currentPosition;
-
     //--INSTANCED PREFABS
     GameObject[] tilesSpawned;
 
@@ -105,13 +99,20 @@ public class SequenceGrid : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    SequencePuzzle sequencePuzzle;
+    private Vector2Int currentPosition;
+    public Vector2Int CurrentPosition 
+    {
+        get => currentPosition;
+        set {
+            currentPosition = value;
+
+            UpdateBkgSprite();
+            UpdateOverlaySprite();
+        }
+    }
 
     private void Start()
     {
-        currentPosition = sequence.startPosition;
-
         tilesSpawned = new GameObject[sequence.horizontalSize * sequence.verticalSize];
 
         for (var i = 0; i < tilesSpawned.Length; i++)
@@ -124,62 +125,17 @@ public class SequenceGrid : MonoBehaviour
         grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         grid.constraintCount = sequence.horizontalSize;
 
+        ResetSequence();
+    }
+
+    public void ResetSequence()
+    {
+        CurrentPosition = sequence.startPosition;
+
         UpdateBkgSprite();
         UpdateOverlaySprite();
     }
 
-    private void Update()
-    {
-        var updated = false;
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            print("Go up");
-            updated = true;
-            // No idea why down goes up
-            currentPosition += Vector2Int.down;
-        } 
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            print("Go down");
-            updated = true;
-            currentPosition += Vector2Int.up;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-        {
-            print("Go left");
-            updated = true;
-            currentPosition += Vector2Int.left;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-        {
-            print("Go right");
-            updated = true;
-            currentPosition += Vector2Int.right;
-        }
-
-        if (!updated)
-        {
-            return;
-        }
-
-        currentPosition.Clamp(Vector2Int.zero, new Vector2Int(sequence.horizontalSize, sequence.verticalSize));
-
-        if (!sequence.floor[(currentPosition.y * sequence.horizontalSize) + currentPosition.x])
-        {
-            currentPosition = sequence.startPosition;
-            PuzzleSoundFeedback.instance.WrongAnswer();
-        }
-
-        if(currentPosition == sequence.endPosition)
-        {
-            sequencePuzzle.SetPuzzleComplete();
-            PuzzleSoundFeedback.instance.CorrectAnswer();
-        }
-
-        OnPositionUpdate?.Invoke(currentPosition);
-
-        UpdateOverlaySprite();
-    }
 
     private void UpdateBkgSprite()
     {
@@ -191,7 +147,7 @@ public class SequenceGrid : MonoBehaviour
 
     private void UpdateOverlaySprite()
     {
-        var currentPlayerPos = (currentPosition.y * sequence.horizontalSize) + currentPosition.x;
+        var currentPlayerPos = (CurrentPosition.y * sequence.horizontalSize) + CurrentPosition.x;
         for (int i = 0; i < tilesSpawned.Length; i++)
         {
             tilesSpawned[i].GetComponent<SequencePuzzleTileModel>().ForegroundSprite = currentPlayerPos == i ? player : null;
