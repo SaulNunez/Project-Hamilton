@@ -12,12 +12,6 @@ public class CompletingForPuzzle : PuzzleBase
     [SerializeField]
     PuzzleId puzzleId;
 
-    const int MORE_THAN = 0;
-    const int MORE_OR_EQUAL = 1;
-    const int LESS_OR_EQUAL = 2;
-    const int LESS_THAN = 3;
-    const int EQUAL = 4;
-
     [SerializeField]
     int expectedIterations = 0;
 
@@ -29,7 +23,7 @@ public class CompletingForPuzzle : PuzzleBase
     TMP_InputField endVerificationValueInputField;
 
     [SerializeField]
-    TMP_Dropdown operatorDropdownUi;
+    TMP_InputField stepInputField;
 
     [Header("Execution settings")]
     [SerializeField]
@@ -38,13 +32,13 @@ public class CompletingForPuzzle : PuzzleBase
     // Client variables
     int currentStartCount = 0;
     int currentEndVerificationValue = 0;
-    int operatorSelected = 0;
+    int stepCount = 0;
 
     public override void OnStartClient()
     {
         base.OnStartClient();
 
-        operatorDropdownUi.onValueChanged.AddListener(SetCompareType);
+        stepInputField.onValueChanged.AddListener(SetSteps);
         initialValueInputField.onValueChanged.AddListener(SetStartCount);
         endVerificationValueInputField.onValueChanged.AddListener(SetEndVerification);
     }
@@ -54,7 +48,8 @@ public class CompletingForPuzzle : PuzzleBase
         try
         {
             currentStartCount = int.Parse(value);
-        } catch (Exception)
+        }
+        catch (Exception)
         {
 
         }
@@ -65,81 +60,39 @@ public class CompletingForPuzzle : PuzzleBase
         try
         {
             currentEndVerificationValue = int.Parse(value);
-        } catch (Exception)
+        }
+        catch (Exception)
         {
 
         }
     }
 
-    void SetCompareType(int selectedOperatorIndex)
+    void SetSteps(string value)
     {
-        operatorSelected = selectedOperatorIndex;
+        stepCount = int.Parse(value);
     }
+
 
     public void Verify()
     {
-        CmdVerification(currentStartCount, currentEndVerificationValue, operatorSelected);
+        CmdVerification(currentStartCount, currentEndVerificationValue, stepCount);
     }
 
     [Command(requiresAuthority = false)]
-    void CmdVerification(int startCount, int endVerification, int compare, NetworkConnectionToClient sender = null)
+    void CmdVerification(int startCount, int endVerification, int steps, NetworkConnectionToClient sender = null)
     {
         int iterations = 0;
-        switch (compare)
+
+        for (int i = startCount; i <= endVerification; i+=steps)
         {
-            case MORE_THAN:
-                for(int i = startCount; i > endVerification; i++)
-                {
-                    iterations++;
-                    if(iterations >= stopVerificationAtIteration)
-                    {
-                        break;
-                    }
-                }
+            iterations++;
+            if (iterations >= stopVerificationAtIteration)
+            {
                 break;
-            case MORE_OR_EQUAL:
-                for (int i = startCount; i >= endVerification; i++)
-                {
-                    iterations++;
-                    if (iterations >= stopVerificationAtIteration)
-                    {
-                        break;
-                    }
-                }
-                break;
-            case LESS_OR_EQUAL:
-                for (int i = startCount; i <= endVerification; i++)
-                {
-                    iterations++;
-                    if (iterations >= stopVerificationAtIteration)
-                    {
-                        break;
-                    }
-                }
-                break;
-            case LESS_THAN:
-                for (int i = startCount; i < endVerification; i++)
-                {
-                    iterations++;
-                    if (iterations >= stopVerificationAtIteration)
-                    {
-                        break;
-                    }
-                }
-                break;
-            case EQUAL:
-                for (int i = startCount; i == endVerification; i++)
-                {
-                    iterations++;
-                    if (iterations >= stopVerificationAtIteration)
-                    {
-                        break;
-                    }
-                }
-                break;
+            }
         }
 
-        if(iterations == expectedIterations)
+        if (iterations == expectedIterations)
         {
             PuzzleCompletion.instance.MarkCompleted(puzzleId, sender.identity);
             TargetClosePuzzle(sender);
