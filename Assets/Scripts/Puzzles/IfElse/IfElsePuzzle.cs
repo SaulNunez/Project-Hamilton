@@ -1,6 +1,7 @@
 ﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class IfElsePuzzle : PuzzleBase
 
     [Header("Puzzle setup")]
     [SerializeField]
-    Image toDecoratedImage;
+    TMP_Text isCakeTextValue;
     
     [Header("Sprites")]
     [SerializeField]
@@ -32,13 +33,7 @@ public class IfElsePuzzle : PuzzleBase
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (isCake)
-        {
-            toDecoratedImage.sprite = cake;
-        } else
-        {
-            toDecoratedImage.sprite = cupcake;
-        }
+        isCakeTextValue.text = isCake ? "Verdero" : "Falso";
     }
 
     //Pastel se decora con cerezas, cupcake con chispitas
