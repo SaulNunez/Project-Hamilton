@@ -1,10 +1,8 @@
 ﻿using Mirror;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// Controls logic for if puzzle.
@@ -15,10 +13,21 @@ using UnityEngine.UI;
 /// </summary>
 public class SetupDefaultFlowers: PuzzleBase {
     [SyncVar]
-    string defaultFlowerType;
+    string foundFlowerType;
+    [SyncVar]
+    string codeFlowerType;
 
     [SerializeField]
-    Image defaultFlowerImage;
+    [FormerlySerializedAs("defaultFlowerImage")]
+    Image foundFlowerImage;
+    [SerializeField]
+    TMP_Text foundFlowerText;
+    [SerializeField]
+    TMP_Text flowerTextInCode;
+    [SerializeField]
+    Button selectFlowerHappensButton;
+    [SerializeField]
+    Button nothingHappensButton;
 
     [Header("Sprites")]
     [SerializeField]
@@ -37,19 +46,51 @@ public class SetupDefaultFlowers: PuzzleBase {
     {
         base.OnStartClient();
 
-        switch (defaultFlowerType)
+        switch (foundFlowerType)
         {
             case FlowerTypes.Sunflower:
-                defaultFlowerImage.sprite = sunflowerSprite;
+                foundFlowerImage.sprite = sunflowerSprite;
                 break;
             case FlowerTypes.Tulip:
-                defaultFlowerImage.sprite = tulipSprite;
+                foundFlowerImage.sprite = tulipSprite;
                 break;
             case FlowerTypes.Roses:
-                defaultFlowerImage.sprite = rosesSprite;
+                foundFlowerImage.sprite = rosesSprite;
                 break;
             case FlowerTypes.Daisy:
-                defaultFlowerImage.sprite = daisySprite;
+                foundFlowerImage.sprite = daisySprite;
+                break;
+        }
+
+        switch (foundFlowerType)
+        {
+            case FlowerTypes.Sunflower:
+                foundFlowerText.text = "Girasol";
+                break;
+            case FlowerTypes.Tulip:
+                foundFlowerText.text = "Tulipan";
+                break;
+            case FlowerTypes.Roses:
+                foundFlowerText.text = "Rosa";
+                break;
+            case FlowerTypes.Daisy:
+                foundFlowerText.text = "Margarita";
+                break;
+        }
+
+        switch (codeFlowerType)
+        {
+            case FlowerTypes.Sunflower:
+                flowerTextInCode.text = "Girasol";
+                break;
+            case FlowerTypes.Tulip:
+                flowerTextInCode.text = "Tulipan";
+                break;
+            case FlowerTypes.Roses:
+                flowerTextInCode.text = "Rosa";
+                break;
+            case FlowerTypes.Daisy:
+                flowerTextInCode.text = "Margarita";
                 break;
         }
     }
@@ -58,7 +99,8 @@ public class SetupDefaultFlowers: PuzzleBase {
     {
         base.OnStartServer();
 
-        defaultFlowerType = FlowerTypes.Types.PickRandom();
+        foundFlowerType = FlowerTypes.Types.PickRandom();
+        codeFlowerType = FlowerTypes.Types.PickRandom();
     }
 
     public void ClickSunflowerButton() => CmdOnButtonClick(FlowerTypes.Sunflower);
@@ -70,7 +112,7 @@ public class SetupDefaultFlowers: PuzzleBase {
     [Command(requiresAuthority = false)]
     void CmdOnButtonClick(string clickFlowerType, NetworkConnectionToClient sender = null)
     {
-        if(clickFlowerType == defaultFlowerType)
+        if(clickFlowerType == foundFlowerType)
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking, sender.identity);
             TargetClosePuzzle(sender);
