@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using Random = UnityEngine.Random;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// Setup for for puzzle
@@ -12,35 +13,20 @@ using Random = UnityEngine.Random;
 /// On puzzle used, there's a convertion in client to a number and then sent to the server for checking, 
 /// if correct, it's registered as a done puzzle and closes puzzle for player.
 /// </summary>
-public class ForPuzzle : NetworkBehaviour
+public class ForPuzzle : PuzzleBase
 {
     [SyncVar]
     int turnsToWash;
 
     [Tooltip("Input field to input the expected amount needed to wash")]
     [SerializeField]
-    TMP_InputField input;
+    [FormerlySerializedAs("input")]
+    TMP_InputField topTurnText;
 
     [SerializeField]
-    TextMeshProUGUI turnsText;
+    TMP_InputField turnsInput;
 
-    [TextArea]
-    [SerializeField]
-    string textToShowTurnsAvailable;
-
-    int turnsInClient;
-
-    public void CountOneMoreTurn()
-    {
-        turnsInClient++;
-
-        turnsText.text = string.Format(textToShowTurnsAvailable, turnsInClient);
-
-        if (turnsInClient == turnsToWash)
-        {
-            CmdFinishPuzzle();
-        }
-    }
+    int currentPlayerInput;
 
     public override void OnStartServer()
     {
@@ -53,21 +39,45 @@ public class ForPuzzle : NetworkBehaviour
     {
         base.OnStartClient();
 
-        input.text = turnsToWash.ToString();
-
-        turnsText.text = string.Format(textToShowTurnsAvailable, turnsInClient);
+        topTurnText.text = turnsToWash.ToString();
+        turnsInput.onEndEdit.AddListener(SaveNewInputValue);
     }
 
+    [Client]
+    void SaveNewInputValue(string value)
+    {
+        try
+        {
+            currentPlayerInput = int.Parse(value);
+        } catch (Exception)
+        {
+
+        }
+    }
+
+    [Client]
+    public void Verify()
+    {
+        CmdFinishPuzzle(currentPlayerInput);
+    }
 
     /// <summary>
     /// Checks client input to match turnsToWash.
     /// </summary>
     /// <param name="input"></param>
     [Command(requiresAuthority = false)]
-    void CmdFinishPuzzle(NetworkConnectionToClient sender = null)
+    void CmdFinishPuzzle(int playerInput, NetworkConnectionToClient sender = null)
     {
-        PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);
-        RpcClosePuzzle(sender);
+        if(playerInput == turnsToWash + 1)
+        {
+            PuzzleCompletion.instance.MarkCompleted(PuzzleId.ForWashingBucket, sender.identity);
+            RpcClosePuzzle(sender); 
+            TargetRunCorrectFeedback(sender);
+        }
+        else
+        {
+            TargetRunWrongFeedback(sender);
+        }
     }
 
     [TargetRpc]
