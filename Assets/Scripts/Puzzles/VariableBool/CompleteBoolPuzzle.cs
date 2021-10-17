@@ -1,6 +1,7 @@
 ﻿using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,31 +10,57 @@ using UnityEngine.UI;
 /// </summary>
 public class CompleteBoolPuzzle : PuzzleBase
 {
-    [Tooltip("Sprite to use for on state")]
-    [SerializeField]
-    Sprite onLever;
+    [SyncVar]
+    bool gen1IsTurnOn;
 
-    [Tooltip("UI element for puzzle that show current lever state")]
-    [SerializeField]
-    Image leverElement;
+    [SyncVar]
+    bool gen2IsTurnOn;
 
-    /// <summary>
-    /// For UI, it sends a server command to complete and sets button to show the lever has been activated
-    /// </summary>
-    public void CompletePuzzle()
+    [SerializeField]
+    TextMeshProUGUI generator1IsTurnOnText;
+    [SerializeField]
+    TextMeshProUGUI generator2IsTurnOnText;
+    [SerializeField]
+    Button supportGenTurnOnButton;
+    [SerializeField]
+    Button supportGenDoesntTurnOnButton;
+
+    private string BoolToPSeIntLiteral(bool value) => value ? "Verdadero" : "Falso";
+
+    public override void OnStartServer()
     {
-        CmdSendPuzzleState(true);
-        leverElement.sprite = onLever;
+        base.OnStartServer();
+
+        gen1IsTurnOn = Random.value > 0.5f;
+        gen2IsTurnOn = Random.value > 0.5f;
     }
 
-    [Command(requiresAuthority = false)]
-    void CmdSendPuzzleState(bool toggleState, NetworkConnectionToClient sender = null)
+    public override void OnStartClient()
     {
-        if (toggleState)
+        base.OnStartClient();
+
+        generator1IsTurnOnText.text = BoolToPSeIntLiteral(gen1IsTurnOn);
+        generator2IsTurnOnText.text = BoolToPSeIntLiteral(gen2IsTurnOn);
+    }
+
+    [Client]
+    public void TurnsOn() => CmdSendPuzzleState(turnsOnBackup: true);
+
+    [Client]
+    public void TurnsOff() => CmdSendPuzzleState(turnsOnBackup: false);
+
+    [Command(requiresAuthority = false)]
+    void CmdSendPuzzleState(bool turnsOnBackup, NetworkConnectionToClient sender = null)
+    {
+        if ((turnsOnBackup && (gen1IsTurnOn || gen2IsTurnOn)) 
+            || (!turnsOnBackup && !(gen1IsTurnOn || gen2IsTurnOn)))
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableBoolean, sender.identity);
             TargetClosePuzzle(sender);
             TargetRunCorrectFeedback(sender);
+        } else
+        {
+            TargetRunWrongFeedback(sender);
         }
     }
 }
