@@ -47,6 +47,7 @@ public class SequencePuzzle : PuzzleBase
 
             stepsChosen[i] = dropdown.value;
         }
+        print("Steps took: " + string.Join(",", stepsChosen));
 
         CmdCompletePuzzle(stepsChosen);
 
@@ -82,6 +83,7 @@ public class SequencePuzzle : PuzzleBase
     [Command(requiresAuthority = false)]
     void CmdCompletePuzzle(int[] stepsChosen, NetworkConnectionToClient sender = null)
     {
+        print("Server steps took: " + string.Join(",", stepsChosen));
         var stepsTaken = CheckStepsForPuzzle(stepsChosen);
         if(stepsTaken.Last() == sequencePuzzle.endPosition)
         {
@@ -95,37 +97,52 @@ public class SequencePuzzle : PuzzleBase
 
         int currentInstruction = 0;
         bool finished = currentInstruction >= stepsChosen.Length;
-        Vector2Int currentPosition = steps.Last();
+        Vector2Int currentPosition = Vector2Int.zero;
+        steps.Add(sequencePuzzle.startPosition);
 
         while (!finished)
         {
+            currentPosition = steps.Last();
+            Vector2Int nextPosition = currentPosition;
             switch (stepsChosen[currentInstruction])
             {
                 case NOTHING:
-                    currentInstruction++;
-                    break;
+                    continue;
                 case GO_RIGHT:
-                    currentPosition += Vector2Int.right;
+                    nextPosition += Vector2Int.right;
                     break;
                 case GO_LEFT:
-                    currentPosition += Vector2Int.left;
+                    nextPosition += Vector2Int.left;
                     break;
                 case GO_DOWN:
-                    currentPosition += Vector2Int.up;
+                    nextPosition += Vector2Int.up;
                     break;
                 case GO_UP:
-                    currentPosition += Vector2Int.down;
+                    nextPosition += Vector2Int.down;
                     break;
             }
 
-            if (sequencePuzzle.floor[(currentPosition.y * sequencePuzzle.horizontalSize) + currentPosition.x])
+            print($"Sequence: {nextPosition.x}, {nextPosition.y}");
+            print($"Current instruction: {currentInstruction}");
+            if(nextPosition.y >= sequencePuzzle.verticalSize)
             {
-                steps.Add(currentPosition);
+                currentInstruction++;
+            }
+            else if(nextPosition.y < 0)
+            {
+                currentInstruction++;
+            }
+            else if (sequencePuzzle.floor[(nextPosition.y * sequencePuzzle.horizontalSize) + nextPosition.x])
+            {
+                print("Added movement");
+                steps.Add(nextPosition);
             }
             else
             {
                 currentInstruction++;
             }
+
+            finished = currentInstruction >= stepsChosen.Length;
         }
 
         return steps.ToArray();
