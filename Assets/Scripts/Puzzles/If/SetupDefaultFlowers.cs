@@ -93,6 +93,9 @@ public class SetupDefaultFlowers: PuzzleBase {
                 flowerTextInCode.text = "Margarita";
                 break;
         }
+
+        selectFlowerHappensButton.onClick.AddListener(ActivatesFunction);
+        nothingHappensButton.onClick.AddListener(DoesntActivatesFunction);
     }
 
     public override void OnStartServer()
@@ -103,16 +106,16 @@ public class SetupDefaultFlowers: PuzzleBase {
         codeFlowerType = FlowerTypes.Types.PickRandom();
     }
 
-    public void ClickSunflowerButton() => CmdOnButtonClick(FlowerTypes.Sunflower);
-    public void ClickTulipButton() => CmdOnButtonClick(FlowerTypes.Tulip);
-    public void ClickRosesButton() => CmdOnButtonClick(FlowerTypes.Roses);
-    public void ClickDaisyButton() => CmdOnButtonClick(FlowerTypes.Daisy);
-
+    void ActivatesFunction() => CmdOnButtonClick(activatesFunction: true);
+    void DoesntActivatesFunction() => CmdOnButtonClick(activatesFunction: false);
 
     [Command(requiresAuthority = false)]
-    void CmdOnButtonClick(string clickFlowerType, NetworkConnectionToClient sender = null)
+    void CmdOnButtonClick(bool activatesFunction, NetworkConnectionToClient sender = null)
     {
-        if(clickFlowerType == foundFlowerType)
+        if((activatesFunction
+            && codeFlowerType == foundFlowerType) ||
+            (!activatesFunction
+            && codeFlowerType != foundFlowerType))
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.IfFlowerPicking, sender.identity);
             TargetClosePuzzle(sender);
