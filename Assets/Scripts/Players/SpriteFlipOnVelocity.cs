@@ -5,22 +5,30 @@ using UnityEngine;
 public class SpriteFlipOnVelocity : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
-    new Rigidbody2D rigidbody2D;
+    Vector2 velocityDelta;
+    Vector2 lastPosition;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        lastPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if(rigidbody2D.velocity.x > 0)
+        UpdateVelocityDelta();
+        if (velocityDelta.x > 0)
         {
             spriteRenderer.flipX = false;
-        } else
+        } else if(velocityDelta.x < 0)
         {
             spriteRenderer.flipX = true;
         }
+    }
+
+    void UpdateVelocityDelta()
+    {
+        velocityDelta = (Vector2)transform.position - lastPosition;
+        lastPosition = transform.position;
     }
 }
