@@ -184,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.CompleteBoolPuzzle.html",
-          "hash": "/1RYWB+h6nUKjGWRbVnJ4bRlrsZHQf4jsrtR3CnSI9k="
+          "hash": "T753ESlghcDEtCvV6F4gJyn/+IUs3Bt/begxEz/dfUQ="
         }
       },
       "is_incremental": false,
@@ -448,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ForPuzzle.html",
-          "hash": "1Jglq5NfFrwM3xZyhwbmwV6Uobuy3wKoqAn18QP72+U="
+          "hash": "gfo/gpHslUuz1CEU2ikL/mDiDmIApah5BjSm9xEomBg="
         }
       },
       "is_incremental": false,
@@ -928,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PuzzleBase.html",
-          "hash": "EiSOLkY14EyZHd+Wp6Sc/o0fs9v87R8WmAb2tHOIHlk="
+          "hash": "joVOohjKPNX4sfiEhCBh4yhyh0N1b29FES9Fu/p1QWc="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SequenceGrid.html",
-          "hash": "CrbkC3U/HkjjR17+S3KmT4XWvPhDxNtUIiKhcPawJfk="
+          "hash": "bh5C3AKclTQ0ibhoTeFz/wbPtAFLfq8YHmT0wPNtLfg="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1252,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SequencePuzzle.html",
-          "hash": "9qn0yDLAwIt68WHPBWsS7yyffH+1CpTwmLPLzyTkwFw="
+          "hash": "Y1fE58chT0K7eCFEHG5tg2FFS8kcDFyTj6NNv55E36E="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1264,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SequencePuzzleTileModel.html",
-          "hash": "k688I91EAENoQV+A5IPdYCpvNTowQkQvXVjRzg1AApY="
+          "hash": "y1iUNry2HLQuto0E5Q4F3NskA2oYfZdtZyD9YwrDZb4="
         }
       },
       "is_incremental": false,
@@ -1324,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SetupDefaultFlowers.html",
-          "hash": "REe4EeW/btKIavenT2n+kjaeVQST14O+e2rxwYzkHZo="
+          "hash": "kWKw/d1XwIg+UtlCmwS/a2fdNksjmHT3Qx3rwqVKEGk="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "srpFWRMZAEF0qH3uLoCIJTIekbEK7sLljxeiMnQ/4mY="
+          "hash": "7VcviKc5iH8oQPgRrzjSooQ8fYArjXIp07DBZTOBxf8="
         }
       },
       "is_incremental": false,

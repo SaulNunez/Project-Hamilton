@@ -435,19 +435,58 @@ references:
   commentId: T:Global.CompleteBoolPuzzle
   fullName: CompleteBoolPuzzle
   nameWithType: CompleteBoolPuzzle
-- uid: Global.CompleteBoolPuzzle.CompletePuzzle
-  name: CompletePuzzle()
-  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle
-  commentId: M:Global.CompleteBoolPuzzle.CompletePuzzle
-  fullName: CompleteBoolPuzzle.CompletePuzzle()
-  nameWithType: CompleteBoolPuzzle.CompletePuzzle()
-- uid: Global.CompleteBoolPuzzle.CompletePuzzle*
-  name: CompletePuzzle
-  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_CompletePuzzle_
-  commentId: Overload:Global.CompleteBoolPuzzle.CompletePuzzle
+- uid: Global.CompleteBoolPuzzle.OnStartClient
+  name: OnStartClient()
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_OnStartClient
+  commentId: M:Global.CompleteBoolPuzzle.OnStartClient
+  fullName: CompleteBoolPuzzle.OnStartClient()
+  nameWithType: CompleteBoolPuzzle.OnStartClient()
+- uid: Global.CompleteBoolPuzzle.OnStartClient*
+  name: OnStartClient
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_OnStartClient_
+  commentId: Overload:Global.CompleteBoolPuzzle.OnStartClient
   isSpec: "True"
-  fullName: CompleteBoolPuzzle.CompletePuzzle
-  nameWithType: CompleteBoolPuzzle.CompletePuzzle
+  fullName: CompleteBoolPuzzle.OnStartClient
+  nameWithType: CompleteBoolPuzzle.OnStartClient
+- uid: Global.CompleteBoolPuzzle.OnStartServer
+  name: OnStartServer()
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_OnStartServer
+  commentId: M:Global.CompleteBoolPuzzle.OnStartServer
+  fullName: CompleteBoolPuzzle.OnStartServer()
+  nameWithType: CompleteBoolPuzzle.OnStartServer()
+- uid: Global.CompleteBoolPuzzle.OnStartServer*
+  name: OnStartServer
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_OnStartServer_
+  commentId: Overload:Global.CompleteBoolPuzzle.OnStartServer
+  isSpec: "True"
+  fullName: CompleteBoolPuzzle.OnStartServer
+  nameWithType: CompleteBoolPuzzle.OnStartServer
+- uid: Global.CompleteBoolPuzzle.TurnsOff
+  name: TurnsOff()
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_TurnsOff
+  commentId: M:Global.CompleteBoolPuzzle.TurnsOff
+  fullName: CompleteBoolPuzzle.TurnsOff()
+  nameWithType: CompleteBoolPuzzle.TurnsOff()
+- uid: Global.CompleteBoolPuzzle.TurnsOff*
+  name: TurnsOff
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_TurnsOff_
+  commentId: Overload:Global.CompleteBoolPuzzle.TurnsOff
+  isSpec: "True"
+  fullName: CompleteBoolPuzzle.TurnsOff
+  nameWithType: CompleteBoolPuzzle.TurnsOff
+- uid: Global.CompleteBoolPuzzle.TurnsOn
+  name: TurnsOn()
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_TurnsOn
+  commentId: M:Global.CompleteBoolPuzzle.TurnsOn
+  fullName: CompleteBoolPuzzle.TurnsOn()
+  nameWithType: CompleteBoolPuzzle.TurnsOn()
+- uid: Global.CompleteBoolPuzzle.TurnsOn*
+  name: TurnsOn
+  href: api/Global.CompleteBoolPuzzle.html#Global_CompleteBoolPuzzle_TurnsOn_
+  commentId: Overload:Global.CompleteBoolPuzzle.TurnsOn
+  isSpec: "True"
+  fullName: CompleteBoolPuzzle.TurnsOn
+  nameWithType: CompleteBoolPuzzle.TurnsOn
 - uid: Global.CompletingForPuzzle
   name: CompletingForPuzzle
   href: api/Global.CompletingForPuzzle.html
@@ -1223,19 +1262,6 @@ references:
   commentId: T:Global.ForPuzzle
   fullName: ForPuzzle
   nameWithType: ForPuzzle
-- uid: Global.ForPuzzle.CountOneMoreTurn
-  name: CountOneMoreTurn()
-  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CountOneMoreTurn
-  commentId: M:Global.ForPuzzle.CountOneMoreTurn
-  fullName: ForPuzzle.CountOneMoreTurn()
-  nameWithType: ForPuzzle.CountOneMoreTurn()
-- uid: Global.ForPuzzle.CountOneMoreTurn*
-  name: CountOneMoreTurn
-  href: api/Global.ForPuzzle.html#Global_ForPuzzle_CountOneMoreTurn_
-  commentId: Overload:Global.ForPuzzle.CountOneMoreTurn
-  isSpec: "True"
-  fullName: ForPuzzle.CountOneMoreTurn
-  nameWithType: ForPuzzle.CountOneMoreTurn
 - uid: Global.ForPuzzle.OnStartClient
   name: OnStartClient()
   href: api/Global.ForPuzzle.html#Global_ForPuzzle_OnStartClient
@@ -1262,6 +1288,19 @@ references:
   isSpec: "True"
   fullName: ForPuzzle.OnStartServer
   nameWithType: ForPuzzle.OnStartServer
+- uid: Global.ForPuzzle.Verify
+  name: Verify()
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_Verify
+  commentId: M:Global.ForPuzzle.Verify
+  fullName: ForPuzzle.Verify()
+  nameWithType: ForPuzzle.Verify()
+- uid: Global.ForPuzzle.Verify*
+  name: Verify
+  href: api/Global.ForPuzzle.html#Global_ForPuzzle_Verify_
+  commentId: Overload:Global.ForPuzzle.Verify
+  isSpec: "True"
+  fullName: ForPuzzle.Verify
+  nameWithType: ForPuzzle.Verify
 - uid: Global.FunctionCheck
   name: FunctionCheck
   href: api/Global.FunctionCheck.html
@@ -4073,6 +4112,19 @@ references:
   commentId: T:Global.SequenceGrid
   fullName: SequenceGrid
   nameWithType: SequenceGrid
+- uid: Global.SequenceGrid.CurrentPosition
+  name: CurrentPosition
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_CurrentPosition
+  commentId: P:Global.SequenceGrid.CurrentPosition
+  fullName: SequenceGrid.CurrentPosition
+  nameWithType: SequenceGrid.CurrentPosition
+- uid: Global.SequenceGrid.CurrentPosition*
+  name: CurrentPosition
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_CurrentPosition_
+  commentId: Overload:Global.SequenceGrid.CurrentPosition
+  isSpec: "True"
+  fullName: SequenceGrid.CurrentPosition
+  nameWithType: SequenceGrid.CurrentPosition
 - uid: Global.SequenceGrid.floorBackground
   name: floorBackground
   href: api/Global.SequenceGrid.html#Global_SequenceGrid_floorBackground
@@ -4092,12 +4144,6 @@ references:
   isSpec: "True"
   fullName: SequenceGrid.FloorBackground
   nameWithType: SequenceGrid.FloorBackground
-- uid: Global.SequenceGrid.OnPositionUpdate
-  name: OnPositionUpdate
-  href: api/Global.SequenceGrid.html#Global_SequenceGrid_OnPositionUpdate
-  commentId: E:Global.SequenceGrid.OnPositionUpdate
-  fullName: SequenceGrid.OnPositionUpdate
-  nameWithType: SequenceGrid.OnPositionUpdate
 - uid: Global.SequenceGrid.Player
   name: Player
   href: api/Global.SequenceGrid.html#Global_SequenceGrid_Player
@@ -4111,6 +4157,19 @@ references:
   isSpec: "True"
   fullName: SequenceGrid.Player
   nameWithType: SequenceGrid.Player
+- uid: Global.SequenceGrid.ResetSequence
+  name: ResetSequence()
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_ResetSequence
+  commentId: M:Global.SequenceGrid.ResetSequence
+  fullName: SequenceGrid.ResetSequence()
+  nameWithType: SequenceGrid.ResetSequence()
+- uid: Global.SequenceGrid.ResetSequence*
+  name: ResetSequence
+  href: api/Global.SequenceGrid.html#Global_SequenceGrid_ResetSequence_
+  commentId: Overload:Global.SequenceGrid.ResetSequence
+  isSpec: "True"
+  fullName: SequenceGrid.ResetSequence
+  nameWithType: SequenceGrid.ResetSequence
 - uid: Global.SequenceGrid.Sequence
   name: Sequence
   href: api/Global.SequenceGrid.html#Global_SequenceGrid_Sequence
@@ -4143,19 +4202,19 @@ references:
   commentId: T:Global.SequencePuzzle
   fullName: SequencePuzzle
   nameWithType: SequencePuzzle
-- uid: Global.SequencePuzzle.SetPuzzleComplete
-  name: SetPuzzleComplete()
-  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_SetPuzzleComplete
-  commentId: M:Global.SequencePuzzle.SetPuzzleComplete
-  fullName: SequencePuzzle.SetPuzzleComplete()
-  nameWithType: SequencePuzzle.SetPuzzleComplete()
-- uid: Global.SequencePuzzle.SetPuzzleComplete*
-  name: SetPuzzleComplete
-  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_SetPuzzleComplete_
-  commentId: Overload:Global.SequencePuzzle.SetPuzzleComplete
+- uid: Global.SequencePuzzle.VerifyPuzzle
+  name: VerifyPuzzle()
+  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_VerifyPuzzle
+  commentId: M:Global.SequencePuzzle.VerifyPuzzle
+  fullName: SequencePuzzle.VerifyPuzzle()
+  nameWithType: SequencePuzzle.VerifyPuzzle()
+- uid: Global.SequencePuzzle.VerifyPuzzle*
+  name: VerifyPuzzle
+  href: api/Global.SequencePuzzle.html#Global_SequencePuzzle_VerifyPuzzle_
+  commentId: Overload:Global.SequencePuzzle.VerifyPuzzle
   isSpec: "True"
-  fullName: SequencePuzzle.SetPuzzleComplete
-  nameWithType: SequencePuzzle.SetPuzzleComplete
+  fullName: SequencePuzzle.VerifyPuzzle
+  nameWithType: SequencePuzzle.VerifyPuzzle
 - uid: Global.SequencePuzzleTileModel
   name: SequencePuzzleTileModel
   href: api/Global.SequencePuzzleTileModel.html
@@ -4262,58 +4321,6 @@ references:
   commentId: T:Global.SetupDefaultFlowers
   fullName: SetupDefaultFlowers
   nameWithType: SetupDefaultFlowers
-- uid: Global.SetupDefaultFlowers.ClickDaisyButton
-  name: ClickDaisyButton()
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickDaisyButton
-  commentId: M:Global.SetupDefaultFlowers.ClickDaisyButton
-  fullName: SetupDefaultFlowers.ClickDaisyButton()
-  nameWithType: SetupDefaultFlowers.ClickDaisyButton()
-- uid: Global.SetupDefaultFlowers.ClickDaisyButton*
-  name: ClickDaisyButton
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickDaisyButton_
-  commentId: Overload:Global.SetupDefaultFlowers.ClickDaisyButton
-  isSpec: "True"
-  fullName: SetupDefaultFlowers.ClickDaisyButton
-  nameWithType: SetupDefaultFlowers.ClickDaisyButton
-- uid: Global.SetupDefaultFlowers.ClickRosesButton
-  name: ClickRosesButton()
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickRosesButton
-  commentId: M:Global.SetupDefaultFlowers.ClickRosesButton
-  fullName: SetupDefaultFlowers.ClickRosesButton()
-  nameWithType: SetupDefaultFlowers.ClickRosesButton()
-- uid: Global.SetupDefaultFlowers.ClickRosesButton*
-  name: ClickRosesButton
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickRosesButton_
-  commentId: Overload:Global.SetupDefaultFlowers.ClickRosesButton
-  isSpec: "True"
-  fullName: SetupDefaultFlowers.ClickRosesButton
-  nameWithType: SetupDefaultFlowers.ClickRosesButton
-- uid: Global.SetupDefaultFlowers.ClickSunflowerButton
-  name: ClickSunflowerButton()
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickSunflowerButton
-  commentId: M:Global.SetupDefaultFlowers.ClickSunflowerButton
-  fullName: SetupDefaultFlowers.ClickSunflowerButton()
-  nameWithType: SetupDefaultFlowers.ClickSunflowerButton()
-- uid: Global.SetupDefaultFlowers.ClickSunflowerButton*
-  name: ClickSunflowerButton
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickSunflowerButton_
-  commentId: Overload:Global.SetupDefaultFlowers.ClickSunflowerButton
-  isSpec: "True"
-  fullName: SetupDefaultFlowers.ClickSunflowerButton
-  nameWithType: SetupDefaultFlowers.ClickSunflowerButton
-- uid: Global.SetupDefaultFlowers.ClickTulipButton
-  name: ClickTulipButton()
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickTulipButton
-  commentId: M:Global.SetupDefaultFlowers.ClickTulipButton
-  fullName: SetupDefaultFlowers.ClickTulipButton()
-  nameWithType: SetupDefaultFlowers.ClickTulipButton()
-- uid: Global.SetupDefaultFlowers.ClickTulipButton*
-  name: ClickTulipButton
-  href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_ClickTulipButton_
-  commentId: Overload:Global.SetupDefaultFlowers.ClickTulipButton
-  isSpec: "True"
-  fullName: SetupDefaultFlowers.ClickTulipButton
-  nameWithType: SetupDefaultFlowers.ClickTulipButton
 - uid: Global.SetupDefaultFlowers.OnStartClient
   name: OnStartClient()
   href: api/Global.SetupDefaultFlowers.html#Global_SetupDefaultFlowers_OnStartClient
