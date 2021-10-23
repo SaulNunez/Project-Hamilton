@@ -12,6 +12,12 @@ using UnityEngine.UI;
 /// </summary>
 public class PlayerSelectionInLobby : NetworkBehaviour
 {
+    [SerializeField]
+    bool blockUsedPlayers = true;
+
+    [SerializeField]
+    bool mindRepeatedCharacter = true;
+
     /// <summary>
     /// Tiny container class that matches toggle with a character type
     /// </summary>
@@ -47,7 +53,7 @@ public class PlayerSelectionInLobby : NetworkBehaviour
         while (true)
         {
             var characterType = (CharacterTypes)characterTypes.GetValue(UnityEngine.Random.Range(0, characterTypes.Length));
-            if (!memory.Value.CharacterUsed(characterType))
+            if (!mindRepeatedCharacter || !memory.Value.CharacterUsed(characterType))
             {
                 CmdSetCharacterOnServer(characterType);
                 memory.Value.CmdSetPlayerSelection((NetworkManager.singleton as HamiltonNetworkRoomManager).UniquenessId, characterType);
@@ -91,6 +97,11 @@ public class PlayerSelectionInLobby : NetworkBehaviour
 
     private void DisableCharacter(CharacterTypes typeOccupied)
     {
+        if (!blockUsedPlayers)
+        {
+            return;
+        }
+
         if (typeOccupied != player.characterType)
         {
             toggles.Find(x => x.characterType == typeOccupied).toggle.interactable = false;

@@ -403,6 +403,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  blockUsedPlayers: 0
+  mindRepeatedCharacter: 0
   player: {fileID: 689386715880538707}
   toggles:
   - characterType: 2
