@@ -848,8 +848,6 @@ GameObject:
   - component: {fileID: 654267507}
   - component: {fileID: 654267508}
   - component: {fileID: 654267511}
-  - component: {fileID: 654267514}
-  - component: {fileID: 654267513}
   - component: {fileID: 654267512}
   - component: {fileID: 654267506}
   - component: {fileID: 654267518}
@@ -952,7 +950,7 @@ MonoBehaviour:
   onlineScene: Assets/Scenes/Lobby.unity
   transport: {fileID: 654267506}
   networkAddress: localhost
-  maxConnections: 8
+  maxConnections: 25
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
@@ -1011,32 +1009,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 1, a: 1}
   padding: 2
---- !u!114 &654267513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654267505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6e8eccf4b6f4dc7b24c276ef47fde8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 0523ccbafc761a3438f5c8ac32843130, type: 2}
---- !u!114 &654267514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654267505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7627623f2b9fad4484082517cd73e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showExceptionStackTrace: 1
 --- !u!114 &654267515
 MonoBehaviour:
   m_ObjectHideFlags: 0
