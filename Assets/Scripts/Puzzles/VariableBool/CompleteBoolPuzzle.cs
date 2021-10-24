@@ -52,8 +52,9 @@ public class CompleteBoolPuzzle : PuzzleBase
     [Command(requiresAuthority = false)]
     void CmdSendPuzzleState(bool turnsOnBackup, NetworkConnectionToClient sender = null)
     {
-        if ((turnsOnBackup && (gen1IsTurnOn || gen2IsTurnOn)) 
-            || (!turnsOnBackup && !(gen1IsTurnOn || gen2IsTurnOn)))
+        bool puzzleLogicResult = !(gen1IsTurnOn || gen2IsTurnOn);
+        if ((turnsOnBackup && puzzleLogicResult)
+            || (!turnsOnBackup && !puzzleLogicResult))
         {
             PuzzleCompletion.instance.MarkCompleted(PuzzleId.VariableBoolean, sender.identity);
             TargetClosePuzzle(sender);
