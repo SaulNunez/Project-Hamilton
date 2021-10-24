@@ -84183,7 +84183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Definir i como Entero;\t\r\ni<-0;\r\nMientras i <= 10 Hacer\r\n\tEscribir
+  m_text: "Definir i como Entero;\t\r\ni<-1;\r\nMientras i <= 10 Hacer\r\n\tEscribir
     (i);\r\n\ti<-i+1;\r\nFinMientras"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
@@ -90065,7 +90065,7 @@ MonoBehaviour:
   - buttonForSelectingAnswer: {fileID: 1324870022}
     isACorrectAnswer: 0
   - buttonForSelectingAnswer: {fileID: 366221903}
-    isACorrectAnswer: 0
+    isACorrectAnswer: 1
 --- !u!114 &849759982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124681,8 +124681,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Definir giros Como Entero;\ngiros <- 0\r;\nMientras i < 8 Hacer\n    Girar();\r\n   
-    giros <- giros + 1;\nFinMientras\r\n"
+  m_text: "Definir giros Como Entero;\ngiros <- 0\r;\nMientras giros < 8 Hacer\n   
+    Girar();\r\n    giros <- giros + 1;\nFinMientras\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
   m_sharedMaterial: {fileID: -3898616781953877022, guid: df10f50ea460bf948a27e148e3c3d38e,
@@ -124752,7 +124752,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1500055496}
-    characterCount: 112
+    characterCount: 116
     spriteCount: 0
     spaceCount: 27
     wordCount: 17
@@ -135356,7 +135356,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Definir giros como Entero;\ngiros <- 0;\nRepetir\n\tGirar();\r\n\tgiros
-    <- giros + 1;\r\nHasta Que giros <= 7\r"
+    <- giros + 1;\r\nHasta Que giros <= 8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
   m_sharedMaterial: {fileID: -3898616781953877022, guid: df10f50ea460bf948a27e148e3c3d38e,
@@ -135426,7 +135426,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1826772548}
-    characterCount: 101
+    characterCount: 100
     spriteCount: 0
     spaceCount: 20
     wordCount: 17
