@@ -1715,12 +1715,6 @@ references:
   commentId: F:Global.HubConfig.numberOfImpostors
   fullName: HubConfig.numberOfImpostors
   nameWithType: HubConfig.numberOfImpostors
-- uid: Global.HubConfig.numberOfTasks
-  name: numberOfTasks
-  href: api/Global.HubConfig.html#Global_HubConfig_numberOfTasks
-  commentId: F:Global.HubConfig.numberOfTasks
-  fullName: HubConfig.numberOfTasks
-  nameWithType: HubConfig.numberOfTasks
 - uid: Global.HubConfig.secondsEmergencyDuration
   name: secondsEmergencyDuration
   href: api/Global.HubConfig.html#Global_HubConfig_secondsEmergencyDuration
@@ -3512,31 +3506,6 @@ references:
   isSpec: "True"
   fullName: PuzzleSoundFeedback.WrongAnswer
   nameWithType: PuzzleSoundFeedback.WrongAnswer
-- uid: Global.PuzzlesToDo
-  name: PuzzlesToDo
-  href: api/Global.PuzzlesToDo.html
-  commentId: T:Global.PuzzlesToDo
-  fullName: PuzzlesToDo
-  nameWithType: PuzzlesToDo
-- uid: Global.PuzzlesToDo.OnStartServer
-  name: OnStartServer()
-  href: api/Global.PuzzlesToDo.html#Global_PuzzlesToDo_OnStartServer
-  commentId: M:Global.PuzzlesToDo.OnStartServer
-  fullName: PuzzlesToDo.OnStartServer()
-  nameWithType: PuzzlesToDo.OnStartServer()
-- uid: Global.PuzzlesToDo.OnStartServer*
-  name: OnStartServer
-  href: api/Global.PuzzlesToDo.html#Global_PuzzlesToDo_OnStartServer_
-  commentId: Overload:Global.PuzzlesToDo.OnStartServer
-  isSpec: "True"
-  fullName: PuzzlesToDo.OnStartServer
-  nameWithType: PuzzlesToDo.OnStartServer
-- uid: Global.PuzzlesToDo.puzzles
-  name: puzzles
-  href: api/Global.PuzzlesToDo.html#Global_PuzzlesToDo_puzzles
-  commentId: F:Global.PuzzlesToDo.puzzles
-  fullName: PuzzlesToDo.puzzles
-  nameWithType: PuzzlesToDo.puzzles
 - uid: Global.PuzzleUI
   name: PuzzleUI
   href: api/Global.PuzzleUI.html

@@ -568,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HubConfig.html",
-          "hash": "EkX57ZYZA/NiNp4+6RrtiEmPsOz9in3Br9/SwUx0vYo="
+          "hash": "op5Sjwkvg5oyohSfAN/C5eAaN3st5nNcp3Jcp10Ykxs="
         }
       },
       "is_incremental": false,
@@ -1085,18 +1085,6 @@
         ".html": {
           "relative_path": "api/Global.PuzzlesListUi.html",
           "hash": "SqM84qlLkoOigxhOt4pR4vntpIw+RaopVttlyJ+zQYg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.PuzzlesToDo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.PuzzlesToDo.html",
-          "hash": "x7rsdWqs2qY9Wm2pFcXHrgCgTtNz3VgmcMIRoxKX1XQ="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "7VcviKc5iH8oQPgRrzjSooQ8fYArjXIp07DBZTOBxf8="
+          "hash": "piv6a3azjtTrBq+vmbT2Xd3F2u6vJGYQ3V8Gi5ym3EI="
         }
       },
       "is_incremental": false,
@@ -1720,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "W1XLFgeZeOBXDU8YihExEQNrzaKz6QU0XP8GGUp/YaE="
+          "hash": "t6Mb9MpRlryP9GndJUB7Can83/aZBcBNRw4JWEfPfRs="
         }
       },
       "is_incremental": false,
@@ -1829,7 +1817,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 141,
+          "total_file_count": 140,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
