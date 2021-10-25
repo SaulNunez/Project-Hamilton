@@ -6,7 +6,7 @@ using UnityEngine;
 public class HubConfig : NetworkBehaviour
 {
     [SyncVar]
-    public int numberOfImpostors = 1;
+    public int numberOfImpostors = 5;
 
     [SyncVar]
     public int numberOfTasks = 4;
