@@ -86722,7 +86722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Definir i Como Entero; \ni <- 1;\r\nMientras i < 6 Hacer\r\n\tLlenarCubeta();\r\n\ti
+  m_text: "Definir i Como Entero; \ni <- 1;\r\nMientras i <= 6 Hacer\r\n\tLlenarCubeta();\r\n\ti
     = i + 1;\r\nFinMientras"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
@@ -86793,7 +86793,7 @@ MonoBehaviour:
   m_margin: {x: 4, y: 4, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 767567790}
-    characterCount: 97
+    characterCount: 98
     spriteCount: 0
     spaceCount: 21
     wordCount: 16
@@ -86881,7 +86881,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Definir i Como Entero; \ni <- 0\r;\nMientras i <= 6 Hacer\r\n\tLlenarCubeta();\r\n\ti
-    <- i + 1;\r\nFin Mientras"
+    <- i + 1;\r\nFinMientras"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
   m_sharedMaterial: {fileID: -3898616781953877022, guid: df10f50ea460bf948a27e148e3c3d38e,
@@ -86951,10 +86951,10 @@ MonoBehaviour:
   m_margin: {x: 4, y: 4, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 773374128}
-    characterCount: 100
+    characterCount: 99
     spriteCount: 0
-    spaceCount: 22
-    wordCount: 18
+    spaceCount: 21
+    wordCount: 17
     linkCount: 0
     lineCount: 6
     pageCount: 1
@@ -121653,7 +121653,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Definir i Como Entero; \ni <- 0;\r\nMientras i >= 6 Hacer\r\n\tLlenarCubeta();\r\n\ti
-    <- i + 1;\r\nFin Mientras\r"
+    <- i + 1;\r\nFinMientras\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: df10f50ea460bf948a27e148e3c3d38e, type: 2}
   m_sharedMaterial: {fileID: -3898616781953877022, guid: df10f50ea460bf948a27e148e3c3d38e,
@@ -121723,10 +121723,10 @@ MonoBehaviour:
   m_margin: {x: 4, y: 4, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1407213011}
-    characterCount: 101
+    characterCount: 100
     spriteCount: 0
-    spaceCount: 22
-    wordCount: 18
+    spaceCount: 21
+    wordCount: 17
     linkCount: 0
     lineCount: 6
     pageCount: 1
