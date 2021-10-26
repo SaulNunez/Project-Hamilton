@@ -69,7 +69,13 @@ public class CompletingForPuzzle : PuzzleBase
 
     void SetSteps(string value)
     {
-        stepCount = int.Parse(value);
+        try
+        {
+            stepCount = int.Parse(value);
+        } catch (Exception)
+        {
+
+        }
     }
 
 
