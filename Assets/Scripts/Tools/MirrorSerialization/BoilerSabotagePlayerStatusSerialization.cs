@@ -10,14 +10,14 @@ public static class BoilerSabotagePlayerStatusSerialization
     SabotageBoilers.PlayerStatus playerStatus)
     {
         writer.WriteNetworkIdentity(playerStatus.playerOnButton);
-        writer.WriteUInt64((ulong)playerStatus.startClick.Ticks);
+        writer.WriteULong((ulong)playerStatus.startClick.Ticks);
     }
 
     public static SabotageBoilers.PlayerStatus ReadBoilerSabotagePlayerStatusSelection(this NetworkReader reader)
     {
         return new SabotageBoilers.PlayerStatus {
             playerOnButton = reader.ReadNetworkIdentity(),
-            startClick = new DateTime((long)reader.ReadUInt64())
+            startClick = new DateTime((long)reader.ReadULong())
         };
     }
 }

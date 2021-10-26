@@ -37,7 +37,7 @@ public class SetResultOnGameEnd : NetworkBehaviour
     {
         if(newValue == EndGameResult.AssasinsWin)
         {
-            var killing = ClientScene.localPlayer.GetComponent<Killing>();
+            var killing = NetworkClient.localPlayer.GetComponent<Killing>();
             if (killing != null && killing.IsAssasin)
             {
                 winnerScreen.SetActive(true);
@@ -47,7 +47,7 @@ public class SetResultOnGameEnd : NetworkBehaviour
             }
         } else if (newValue == EndGameResult.ProgrammersWin)
         {
-            var killing = ClientScene.localPlayer.GetComponent<Killing>();
+            var killing = NetworkClient.localPlayer.GetComponent<Killing>();
             if (killing != null && killing.IsAssasin)
             {
                 looserScreen.SetActive(true);

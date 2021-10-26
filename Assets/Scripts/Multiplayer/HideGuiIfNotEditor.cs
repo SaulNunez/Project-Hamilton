@@ -11,7 +11,7 @@ public class HideGuiIfNotEditor : MonoBehaviour
         if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
             var hud = GetComponent<NetworkManagerHUD>();
-            hud.showGUI = false;
+            hud.enabled = false;
         }
     }
 }

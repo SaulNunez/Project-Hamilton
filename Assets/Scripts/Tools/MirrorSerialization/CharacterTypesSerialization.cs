@@ -10,12 +10,12 @@ public static class CharacterTypesSerialization
 {
     public static void WriteCharacterTypes(this NetworkWriter writer, CharacterTypes characterType)
     {
-        writer.WriteInt32((int)characterType);
+        writer.WriteInt((int)characterType);
     }
 
     public static CharacterTypes ReadCharacterTypes(this NetworkReader reader)
     {
-        return (CharacterTypes)reader.ReadInt32();
+        return (CharacterTypes)reader.ReadInt();
     }
 }
 

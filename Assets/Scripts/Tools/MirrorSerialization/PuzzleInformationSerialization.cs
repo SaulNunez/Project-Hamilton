@@ -10,11 +10,11 @@ public static class PuzzleInformationSerialization
 {
     public static void WritePuzzleId(this NetworkWriter writer, PuzzleInformation pi)
     {
-        writer.WriteBoolean(pi.completed);
+        writer.WriteBool(pi.completed);
     }
 
     public static PuzzleInformation ReadPuzzleInformation(this NetworkReader reader)
     {
-        return new PuzzleInformation(reader.ReadBoolean());
+        return new PuzzleInformation(reader.ReadBool());
     }
 }

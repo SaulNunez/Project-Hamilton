@@ -7,11 +7,11 @@ public static class PuzzleIdSerialization
 {
     public static void WritePuzzleId(this NetworkWriter writer, PuzzleId puzzleId)
     {
-        writer.WriteInt32((int)puzzleId);
+        writer.WriteInt((int)puzzleId);
     }
 
     public static PuzzleId ReadPuzzleId(this NetworkReader reader)
     {
-        return (PuzzleId)reader.ReadInt32();
+        return (PuzzleId)reader.ReadInt();
     }
 }
