@@ -93,7 +93,7 @@ public class Killing : NetworkBehaviour
 
             foreach (var collider in foundPlayerColliders)
             {
-                if(collider != null && collider.gameObject != this.gameObject)
+                if (collider != null && collider.gameObject != this.gameObject)
                 {
                     if (collider)
                     {
@@ -114,8 +114,15 @@ public class Killing : NetworkBehaviour
     {
         if (canKillSomeone && isAssasin)
         {
+            var killingComponentInOther = other.gameObject.GetComponent<Killing>();
+            var otherCanBeKilled = true;
+            if (killingComponentInOther != null)
+            {
+                otherCanBeKilled = !killingComponentInOther.isAssasin;
+            }
+
             var dieComponent = other.gameObject.GetComponent<Die>();
-            if (dieComponent != null)
+            if (dieComponent != null && !otherCanBeKilled)
             {
                 dieComponent.SetDed();
                 endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
