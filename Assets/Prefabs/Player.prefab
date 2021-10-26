@@ -505,6 +505,8 @@ MonoBehaviour:
   playersLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  thisPlayerLabel: {fileID: 4536559564012180173}
+  assasinTagColor: {r: 0.7924528, g: 0.011213934, b: 0.011213934, a: 0}
 --- !u!114 &1029578670153045496
 MonoBehaviour:
   m_ObjectHideFlags: 0

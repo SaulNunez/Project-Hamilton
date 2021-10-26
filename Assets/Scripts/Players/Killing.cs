@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -27,6 +28,13 @@ public class Killing : NetworkBehaviour
 
     [SerializeField]
     private LayerMask playersLayerMask;
+
+    [Header("Marked name on assasins")]
+    [SerializeField]
+    TextMeshPro thisPlayerLabel;
+
+    [SerializeField]
+    Color assasinTagColor;
 
     HubConfig config;
 
@@ -74,6 +82,31 @@ public class Killing : NetworkBehaviour
         base.OnStartClient();
 
         GameUI.onKillButtonClick += AttemptToKill;
+
+        SetAssasinAsRedNameIfPlayerInClientAssasin();
+    }
+
+    void SetAssasinAsRedNameIfPlayerInClientAssasin()
+    {
+        if (!isAssasin)
+        {
+            return;
+        }
+
+        var playerKillingComponent = NetworkClient.localPlayer.GetComponent<Killing>();
+        var playerIsAssasin = false;
+
+        if (playerKillingComponent != null)
+        {
+            playerIsAssasin = playerKillingComponent.isAssasin;
+        }
+
+        if (!playerIsAssasin)
+        {
+            return;
+        }
+
+        thisPlayerLabel.color = assasinTagColor;
     }
 
     /// <summary>
