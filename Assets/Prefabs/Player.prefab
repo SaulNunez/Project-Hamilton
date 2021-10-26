@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3140559867586116167}
   - component: {fileID: 4536559564012180173}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Nametag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,6 +643,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   ghostingDurationInSeconds: 20
+  nametag: {fileID: 1505082205951820283}
   ghostInOtherPlayersClient: {r: 0, g: 0, b: 0, a: 0.1}
   ghostOnOwnClient: {r: 1, g: 1, b: 1, a: 0.75}
   normal: {r: 1, g: 1, b: 1, a: 1}

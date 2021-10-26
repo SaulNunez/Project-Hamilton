@@ -9,6 +9,10 @@ public class Ghosting : NetworkBehaviour
     [SerializeField]
     public int ghostingDurationInSeconds = 20;
 
+
+    [SerializeField]
+    GameObject nametag;
+
     /// <summary>
     /// Use int so they don't loose a ghost mode invocation because they did two puzzles before using them
     /// </summary>
@@ -96,6 +100,8 @@ public class Ghosting : NetworkBehaviour
         {
             renderer.material.color = normal;
         }
+
+        nametag.SetActive(!isOnGhostMode);
     }
 
     void GhostModesAvailableChanged(int oldValue, int newValue)
