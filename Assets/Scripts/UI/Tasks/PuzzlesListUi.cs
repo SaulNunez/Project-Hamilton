@@ -104,7 +104,7 @@ public class PuzzlesListUi : NetworkBehaviour
             switch (task)
             {
                 case PuzzleId.Sequence1:
-                    taskList += "Garage: Pasa un laberinto de cajas. \n";
+                    taskList += "Libreria: Completa el algoritmo para llegar al otro lado. \n";
                     break;
                 case PuzzleId.VariableBoolean:
                     taskList += "Electricidad: Encender generador. \n";
@@ -122,14 +122,16 @@ public class PuzzlesListUi : NetworkBehaviour
                     taskList += "Saguán: Recoge el tipo de flor correcto. \n";
                     break;
                 case PuzzleId.Substring:
-                    taskList += "Telegrafo: Obten la subcadena de una cadena. \n";
+                    taskList += "Telegrafo: Completa un ejercicio. \n";
                     break;
                 case PuzzleId.IfElse:
                     taskList += "Cocina: Decora el cupcake o el pastel. \n";
                     break;
                 case PuzzleId.Sequence2:
+                    taskList += "Salón de baile: Completa el algoritmo para llegar al otro lado. \n";
                     break;
                 case PuzzleId.Sequence3:
+                    taskList += "Garage: Completa el algoritmo para llegar al otro lado. \n";
                     break;
                 case PuzzleId.TemperatureCompareInt:
                     taskList += "Boilers: Revisa la temperatura del agua. \n";
