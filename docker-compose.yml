@@ -10,10 +10,3 @@ services:
         image: snuez99/night_in_the_house_of_hunt_server:master
         ports:
             - 7778
-    apache:
-        image: httpd:2.4
-        ports:
-            - "80:80"
-            - "443:443"
-        volumes:
-            - ./LocalServerSetup/httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
