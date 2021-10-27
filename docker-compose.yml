@@ -4,9 +4,9 @@ services:
     web-client:
         image: snuez99/night_in_the_house_of_hunt:master
         ports:
-            - 80
-            - 443
+            - "80:80"
+            - "443:443"
     server:
         image: snuez99/night_in_the_house_of_hunt_server:master
         ports:
-            - 7778
+            - "7778:7778"
