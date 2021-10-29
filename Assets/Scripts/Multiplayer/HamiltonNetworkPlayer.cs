@@ -1,16 +1,18 @@
 ﻿using Mirror;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// Custom network player, has some player information that persists between sessions.
 /// </summary>
 public class HamiltonNetworkPlayer : NetworkRoomPlayer
 {
+    [Header("Player Information")]
     [SyncVar]
     public CharacterTypes characterType = CharacterTypes.AndreaLewis;
 
     [SyncVar]
-    public string name;
+    public string playerName;
 
     [Client]
     public void SetPlayerName(string name) => CmdSetPlayerName(name);
@@ -18,7 +20,7 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     [Command]
     void CmdSetPlayerName(string newName)
     {
-        name = newName;
+        playerName = newName;
     }
 
     [SyncVar]
@@ -39,6 +41,6 @@ public class HamiltonNetworkPlayer : NetworkRoomPlayer
     {
         base.OnStartServer();
 
-        name = $"{sustantivos.PickRandom()} {verbos.PickRandom()}";
+        playerName = $"{sustantivos.PickRandom()} {verbos.PickRandom()}";
     }
 }

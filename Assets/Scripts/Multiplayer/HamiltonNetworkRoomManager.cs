@@ -53,13 +53,13 @@ public class HamiltonNetworkRoomManager : NetworkRoomManager
         killingComponent.IsAssasin = networkPlayer.isImpostor;
 
         var characterSelected = networkPlayer.characterType;
-        print($"{networkPlayer.characterType}");
+        print($"{networkPlayer.characterType} - {networkPlayer.playerName}");
 
         var playerSkinSetup = gamePlayer.GetComponent<PlayerSkin>();
         playerSkinSetup.characterSelected = characterSelected;
 
         var playerName = gamePlayer.GetComponent<PlayerName>();
-        playerName.SetName(networkPlayer.name);
+        playerName.SetName(networkPlayer.playerName);
 
         return base.OnRoomServerSceneLoadedForPlayer(conn, roomPlayer, gamePlayer);
     }
