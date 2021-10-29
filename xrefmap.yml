@@ -76,94 +76,6 @@ references:
   commentId: F:Global.AvailableCharacters.characters
   fullName: AvailableCharacters.characters
   nameWithType: AvailableCharacters.characters
-- uid: Global.AvailableCharactersMemory
-  name: AvailableCharactersMemory
-  href: api/Global.AvailableCharactersMemory.html
-  commentId: T:Global.AvailableCharactersMemory
-  fullName: AvailableCharactersMemory
-  nameWithType: AvailableCharactersMemory
-- uid: Global.AvailableCharactersMemory.CharacterSelection
-  name: AvailableCharactersMemory.CharacterSelection
-  href: api/Global.AvailableCharactersMemory.CharacterSelection.html
-  commentId: T:Global.AvailableCharactersMemory.CharacterSelection
-  fullName: AvailableCharactersMemory.CharacterSelection
-  nameWithType: AvailableCharactersMemory.CharacterSelection
-- uid: Global.AvailableCharactersMemory.CharacterSelection.#ctor(CharacterTypes,System.String)
-  name: CharacterSelection(CharacterTypes, String)
-  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection__ctor_CharacterTypes_System_String_
-  commentId: M:Global.AvailableCharactersMemory.CharacterSelection.#ctor(CharacterTypes,System.String)
-  fullName: AvailableCharactersMemory.CharacterSelection.CharacterSelection(CharacterTypes, System.String)
-  nameWithType: AvailableCharactersMemory.CharacterSelection.CharacterSelection(CharacterTypes, String)
-- uid: Global.AvailableCharactersMemory.CharacterSelection.#ctor*
-  name: CharacterSelection
-  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection__ctor_
-  commentId: Overload:Global.AvailableCharactersMemory.CharacterSelection.#ctor
-  isSpec: "True"
-  fullName: AvailableCharactersMemory.CharacterSelection.CharacterSelection
-  nameWithType: AvailableCharactersMemory.CharacterSelection.CharacterSelection
-- uid: Global.AvailableCharactersMemory.CharacterSelection.characterName
-  name: characterName
-  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection_characterName
-  commentId: F:Global.AvailableCharactersMemory.CharacterSelection.characterName
-  fullName: AvailableCharactersMemory.CharacterSelection.characterName
-  nameWithType: AvailableCharactersMemory.CharacterSelection.characterName
-- uid: Global.AvailableCharactersMemory.CharacterSelection.characterSelected
-  name: characterSelected
-  href: api/Global.AvailableCharactersMemory.CharacterSelection.html#Global_AvailableCharactersMemory_CharacterSelection_characterSelected
-  commentId: F:Global.AvailableCharactersMemory.CharacterSelection.characterSelected
-  fullName: AvailableCharactersMemory.CharacterSelection.characterSelected
-  nameWithType: AvailableCharactersMemory.CharacterSelection.characterSelected
-- uid: Global.AvailableCharactersMemory.CharacterUsed(CharacterTypes)
-  name: CharacterUsed(CharacterTypes)
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CharacterUsed_CharacterTypes_
-  commentId: M:Global.AvailableCharactersMemory.CharacterUsed(CharacterTypes)
-  fullName: AvailableCharactersMemory.CharacterUsed(CharacterTypes)
-  nameWithType: AvailableCharactersMemory.CharacterUsed(CharacterTypes)
-- uid: Global.AvailableCharactersMemory.CharacterUsed*
-  name: CharacterUsed
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CharacterUsed_
-  commentId: Overload:Global.AvailableCharactersMemory.CharacterUsed
-  isSpec: "True"
-  fullName: AvailableCharactersMemory.CharacterUsed
-  nameWithType: AvailableCharactersMemory.CharacterUsed
-- uid: Global.AvailableCharactersMemory.CmdSetPlayerSelection(System.String,CharacterTypes)
-  name: CmdSetPlayerSelection(String, CharacterTypes)
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CmdSetPlayerSelection_System_String_CharacterTypes_
-  commentId: M:Global.AvailableCharactersMemory.CmdSetPlayerSelection(System.String,CharacterTypes)
-  fullName: AvailableCharactersMemory.CmdSetPlayerSelection(System.String, CharacterTypes)
-  nameWithType: AvailableCharactersMemory.CmdSetPlayerSelection(String, CharacterTypes)
-- uid: Global.AvailableCharactersMemory.CmdSetPlayerSelection*
-  name: CmdSetPlayerSelection
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_CmdSetPlayerSelection_
-  commentId: Overload:Global.AvailableCharactersMemory.CmdSetPlayerSelection
-  isSpec: "True"
-  fullName: AvailableCharactersMemory.CmdSetPlayerSelection
-  nameWithType: AvailableCharactersMemory.CmdSetPlayerSelection
-- uid: Global.AvailableCharactersMemory.OnCharacterAvailable
-  name: OnCharacterAvailable
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnCharacterAvailable
-  commentId: E:Global.AvailableCharactersMemory.OnCharacterAvailable
-  fullName: AvailableCharactersMemory.OnCharacterAvailable
-  nameWithType: AvailableCharactersMemory.OnCharacterAvailable
-- uid: Global.AvailableCharactersMemory.OnCharacterOccupied
-  name: OnCharacterOccupied
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnCharacterOccupied
-  commentId: E:Global.AvailableCharactersMemory.OnCharacterOccupied
-  fullName: AvailableCharactersMemory.OnCharacterOccupied
-  nameWithType: AvailableCharactersMemory.OnCharacterOccupied
-- uid: Global.AvailableCharactersMemory.OnStartClient
-  name: OnStartClient()
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnStartClient
-  commentId: M:Global.AvailableCharactersMemory.OnStartClient
-  fullName: AvailableCharactersMemory.OnStartClient()
-  nameWithType: AvailableCharactersMemory.OnStartClient()
-- uid: Global.AvailableCharactersMemory.OnStartClient*
-  name: OnStartClient
-  href: api/Global.AvailableCharactersMemory.html#Global_AvailableCharactersMemory_OnStartClient_
-  commentId: Overload:Global.AvailableCharactersMemory.OnStartClient
-  isSpec: "True"
-  fullName: AvailableCharactersMemory.OnStartClient
-  nameWithType: AvailableCharactersMemory.OnStartClient
 - uid: Global.BoilerSabotagePlayerStatusSerialization
   name: BoilerSabotagePlayerStatusSerialization
   href: api/Global.BoilerSabotagePlayerStatusSerialization.html
@@ -311,38 +223,6 @@ references:
   isSpec: "True"
   fullName: CharacterRadioButton.Toggle
   nameWithType: CharacterRadioButton.Toggle
-- uid: Global.CharacterSelectionSerialization
-  name: CharacterSelectionSerialization
-  href: api/Global.CharacterSelectionSerialization.html
-  commentId: T:Global.CharacterSelectionSerialization
-  fullName: CharacterSelectionSerialization
-  nameWithType: CharacterSelectionSerialization
-- uid: Global.CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
-  name: ReadPCharacterSelection(NetworkReader)
-  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_ReadPCharacterSelection_Mirror_NetworkReader_
-  commentId: M:Global.CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
-  fullName: CharacterSelectionSerialization.ReadPCharacterSelection(Mirror.NetworkReader)
-  nameWithType: CharacterSelectionSerialization.ReadPCharacterSelection(NetworkReader)
-- uid: Global.CharacterSelectionSerialization.ReadPCharacterSelection*
-  name: ReadPCharacterSelection
-  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_ReadPCharacterSelection_
-  commentId: Overload:Global.CharacterSelectionSerialization.ReadPCharacterSelection
-  isSpec: "True"
-  fullName: CharacterSelectionSerialization.ReadPCharacterSelection
-  nameWithType: CharacterSelectionSerialization.ReadPCharacterSelection
-- uid: Global.CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter,AvailableCharactersMemory.CharacterSelection)
-  name: WriteCharacterSelection(NetworkWriter, AvailableCharactersMemory.CharacterSelection)
-  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_WriteCharacterSelection_Mirror_NetworkWriter_AvailableCharactersMemory_CharacterSelection_
-  commentId: M:Global.CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter,AvailableCharactersMemory.CharacterSelection)
-  fullName: CharacterSelectionSerialization.WriteCharacterSelection(Mirror.NetworkWriter, AvailableCharactersMemory.CharacterSelection)
-  nameWithType: CharacterSelectionSerialization.WriteCharacterSelection(NetworkWriter, AvailableCharactersMemory.CharacterSelection)
-- uid: Global.CharacterSelectionSerialization.WriteCharacterSelection*
-  name: WriteCharacterSelection
-  href: api/Global.CharacterSelectionSerialization.html#Global_CharacterSelectionSerialization_WriteCharacterSelection_
-  commentId: Overload:Global.CharacterSelectionSerialization.WriteCharacterSelection
-  isSpec: "True"
-  fullName: CharacterSelectionSerialization.WriteCharacterSelection
-  nameWithType: CharacterSelectionSerialization.WriteCharacterSelection
 - uid: Global.CharacterTypes
   name: CharacterTypes
   href: api/Global.CharacterTypes.html
@@ -1563,12 +1443,6 @@ references:
   commentId: F:Global.HamiltonNetworkPlayer.isImpostor
   fullName: HamiltonNetworkPlayer.isImpostor
   nameWithType: HamiltonNetworkPlayer.isImpostor
-- uid: Global.HamiltonNetworkPlayer.name
-  name: name
-  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_name
-  commentId: F:Global.HamiltonNetworkPlayer.name
-  fullName: HamiltonNetworkPlayer.name
-  nameWithType: HamiltonNetworkPlayer.name
 - uid: Global.HamiltonNetworkPlayer.OnStartServer
   name: OnStartServer()
   href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_OnStartServer
@@ -1582,6 +1456,12 @@ references:
   isSpec: "True"
   fullName: HamiltonNetworkPlayer.OnStartServer
   nameWithType: HamiltonNetworkPlayer.OnStartServer
+- uid: Global.HamiltonNetworkPlayer.playerName
+  name: playerName
+  href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_playerName
+  commentId: F:Global.HamiltonNetworkPlayer.playerName
+  fullName: HamiltonNetworkPlayer.playerName
+  nameWithType: HamiltonNetworkPlayer.playerName
 - uid: Global.HamiltonNetworkPlayer.SetCharacter(CharacterTypes)
   name: SetCharacter(CharacterTypes)
   href: api/Global.HamiltonNetworkPlayer.html#Global_HamiltonNetworkPlayer_SetCharacter_CharacterTypes_
@@ -2692,19 +2572,6 @@ references:
   isSpec: "True"
   fullName: PlayerSelectionInLobby.OnStartClient
   nameWithType: PlayerSelectionInLobby.OnStartClient
-- uid: Global.PlayerSelectionInLobby.OnStopClient
-  name: OnStopClient()
-  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStopClient
-  commentId: M:Global.PlayerSelectionInLobby.OnStopClient
-  fullName: PlayerSelectionInLobby.OnStopClient()
-  nameWithType: PlayerSelectionInLobby.OnStopClient()
-- uid: Global.PlayerSelectionInLobby.OnStopClient*
-  name: OnStopClient
-  href: api/Global.PlayerSelectionInLobby.html#Global_PlayerSelectionInLobby_OnStopClient_
-  commentId: Overload:Global.PlayerSelectionInLobby.OnStopClient
-  isSpec: "True"
-  fullName: PlayerSelectionInLobby.OnStopClient
-  nameWithType: PlayerSelectionInLobby.OnStopClient
 - uid: Global.PlayerSelectionInLobby.ToggleAndCharacter
   name: PlayerSelectionInLobby.ToggleAndCharacter
   href: api/Global.PlayerSelectionInLobby.ToggleAndCharacter.html

@@ -72,30 +72,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.AvailableCharactersMemory.CharacterSelection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.AvailableCharactersMemory.CharacterSelection.html",
-          "hash": "/iseU4gm9MFMuNlrkBA8Bdvy/F2UzyR2VKLxhIbJZ9M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.AvailableCharactersMemory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.AvailableCharactersMemory.html",
-          "hash": "WUF36bIY2krvn2dD+9ndblkHfgJ6hhYi88Vpba7cn/E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Global.BoilerSabotagePlayerStatusSerialization.yml",
       "output": {
         ".html": {
@@ -137,18 +113,6 @@
         ".html": {
           "relative_path": "api/Global.CharacterRadioButton.html",
           "hash": "ZXGhO+mtW/5Ur3lT2jNlvwhmhopWIc7amPLdD0ULlPo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.CharacterSelectionSerialization.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.CharacterSelectionSerialization.html",
-          "hash": "QMmx1yrDCpkUK2m+Tax8QhiXZDleX24MC5Es6XYqhWw="
         }
       },
       "is_incremental": false,
@@ -520,7 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.HamiltonNetworkPlayer.html",
-          "hash": "dFWDfOfZqzBt7dLX0iPhH45tazkxXuxoswdOnoPZh84="
+          "hash": "oLlvQ/ZSe7nnSYEg3d4ERz0W/xHp3/AdFF7FbR0KOVE="
         }
       },
       "is_incremental": false,
@@ -820,7 +784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.PlayerSelectionInLobby.html",
-          "hash": "VGKawq1/QtP+bOiQY/AbwXqXdme668Nw6EbBlW3SJjM="
+          "hash": "1LjTT1d4Eu+V8IbXM/RkoBTS0W1ZWf4Oy0f/yUxCpTk="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "f1SBr+AvNvSJX6qDKe6/Gcp1sU3cEj0BiaScoQBRDAQ="
+          "hash": "wqWsbJ3EzMnjJ0+DUO/Al37tus1MZpAziGlCPaVBcfE="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "t6Mb9MpRlryP9GndJUB7Can83/aZBcBNRw4JWEfPfRs="
+          "hash": "Sqq5PVELuouBw038u3qe4QkY5o+HW2tHsrGfHhu48L0="
         }
       },
       "is_incremental": false,
@@ -1817,7 +1781,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 140,
+          "total_file_count": 137,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
