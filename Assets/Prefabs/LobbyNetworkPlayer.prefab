@@ -372,7 +372,7 @@ MonoBehaviour:
   readyToBegin: 0
   index: 0
   characterType: 0
-  name: 
+  playerName: 
   isImpostor: 0
 --- !u!114 &2672863412610184004
 MonoBehaviour:
@@ -403,8 +403,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  blockUsedPlayers: 0
-  mindRepeatedCharacter: 0
   player: {fileID: 689386715880538707}
   toggles:
   - characterType: 2
@@ -4407,8 +4405,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 165615782171702700}
   m_HandleRect: {fileID: 3435340094724700834}
   m_Direction: 2
-  m_Value: 0.99999964
-  m_Size: 0.46681097
+  m_Value: 0.9999998
+  m_Size: 0.29256073
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11164,7 +11162,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0000651291, y: 0.000030108635}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 478.6811}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1203091411533745128
 MonoBehaviour:
