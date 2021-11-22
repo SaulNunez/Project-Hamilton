@@ -1,4 +1,4 @@
-﻿using Mirror;
+using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -81,7 +81,10 @@ public class Killing : NetworkBehaviour
     {
         base.OnStartClient();
 
+        if (hasAuthority)
+        {
         GameUI.onKillButtonClick += AttemptToKill;
+        }
 
         SetAssasinAsRedNameIfPlayerInClientAssasin();
     }
@@ -207,7 +210,10 @@ public class Killing : NetworkBehaviour
     {
         base.OnStopClient();
 
+        if (hasAuthority)
+        {
         GameUI.onKillButtonClick -= AttemptToKill;
+        }
     }
 
     public override void OnStopServer()
