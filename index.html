@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Project-Hamilton | A night in the house of Hunt </title>
+    <title>A night in the house of Hunt | A night in the house of Hunt </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Project-Hamilton | A night in the house of Hunt ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="title" content="A night in the house of Hunt | A night in the house of Hunt ">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -70,8 +70,54 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="project-hamilton">Project-Hamilton</h1>
+<h1 id="a-night-in-the-house-of-hunt">A night in the house of Hunt</h1>
 
+<p>Un juego para reforzar el conocimiento de los temas de programación estructurada.</p>
+<h2 id="mécanicas-del-juego">Mécanicas del juego</h2>
+<p>Este juego esta inspirado en Among Us, se separan aleatoriamente los jugadores entre programadores e impostores.</p>
+<h3 id="programadores">Programadores</h3>
+<p>El trabajo de los programadores es completar todos los ejercicios para ganar. También pueden ganar si encuentran y sacan a todos los impostores.</p>
+<h3 id="impostores">Impostores</h3>
+<p>Evita que los programadores terminen sus tareas. Pueden hacerlo creando emergencias que obliguen a los programadores a tener que moverse al otro lado del mapa. O matar en el juego a todos los programadores. Resuelve acertijos para obtener modo fantasma, este acertijo no cuenta para que los programadores terminen sus tareas, pero dan 30 segundos para escapar de cualquier situación díficil de ser necesario. Evita ser encontrado, porque si los programadores sacan a todos los impostores, ganan los programadores. </p>
+<p>Este juego fue creado como proyecto de titulación para la carrera de Ingeniería en Software.</p>
+<h2 id="como-ejecutarlo-localmente">Como ejecutarlo localmente</h2>
+<p>El juego usa una arquitectura cliente/servidor. El docente o alguien designado del grupo tiene que instalar el servidor en una computadora o servidor propio. Esta maquina tiene que tener instalado Docker y Docker Compose.</p>
+<ol>
+<li>Clona este proyecto descargando el .zip del proyecto o usando <code>git clone</code>.</li>
+<li>Abre una terminal en la carpeta del proyecto y orquestra los contenedores usando <code>docker-compose up</code>.</li>
+<li>Si introduce <code>localhost:80</code> en el navegador, debería de cargarse el juego.</li>
+<li>Usa <code>ipconfig</code> para Windows o <code>ifconfig</code> en Linux o MacOS para obtener tu dirección IP si todos estan jugador en la misma red local.</li>
+</ol>
+<h2 id="puzzles">Puzzles</h2>
+<p>Tiene acertijos para repasar distintos temas de programación estructurada como:</p>
+<ul>
+<li>If sencillo</li>
+<li>If/else</li>
+<li>Operador condicionales</li>
+<li>Ciclo For (Para)</li>
+<li>Ciclo While (Mientras)</li>
+<li>Ciclo Do While (Repetir)</li>
+</ul>
+<p>Los puzzles estan creados con pseudocódigo con la sintaxis de PSeInt.</p>
+<h3 id="puzzles-para-reforzar-creación-de-algoritmos">Puzzles para reforzar creación de algoritmos</h3>
+<p><img src="https://user-images.githubusercontent.com/13012976/140199758-fc786a64-caef-4a97-8be9-f14136b61c77.png" alt="Puzzle secuencia 1">
+<img src="https://user-images.githubusercontent.com/13012976/140199760-8e1fa496-ad76-472a-a4a6-00334004f3ee.png" alt="Puzzle secuencia 2">
+<img src="https://user-images.githubusercontent.com/13012976/140199762-46f0ace3-5331-4c3f-9e9d-3d465c5acb9e.png" alt="Puzzle secuencia 3"></p>
+<h3 id="ifelse-sino">If/else (si/no)</h3>
+<p><img src="https://user-images.githubusercontent.com/13012976/140199767-61923ef4-0331-44fe-a96c-f0a417e13752.png" alt="Puzzle If/else">
+<img src="https://user-images.githubusercontent.com/13012976/140199778-c3184f3f-8917-47c5-a086-01b3728daef5.png" alt="Puzzle If">
+<img src="https://user-images.githubusercontent.com/13012976/140199780-1a8404e4-e596-4e6a-a015-ded35999acad.png" alt="Puzzle If">
+<img src="https://user-images.githubusercontent.com/13012976/140199782-f46b716e-ba10-4ab4-b942-1c54e0d7bc5e.png" alt="Puzzle If"></p>
+<h3 id="ciclos">Ciclos</h3>
+<h4 id="elegir-ciclo-que-hace-la-acción-necesaria">Elegir ciclo que hace la acción necesaria</h4>
+<p><img src="https://user-images.githubusercontent.com/13012976/140199766-f824b2d2-ec6f-4a2b-91d4-f3e6e5889d5d.png" alt="Elegir ciclo correcto 1">
+<img src="https://user-images.githubusercontent.com/13012976/140199783-a54f6b39-edac-4f25-9d2f-814567910c9b.png" alt="Elegir ciclo correcto 2">
+<img src="https://user-images.githubusercontent.com/13012976/140214693-057c4e54-00c6-40f8-ab59-5d5463a5023c.png" alt="Elegir ciclo correcto 3"></p>
+<h4 id="completar-los-ciclos">Completar los ciclos</h4>
+<p><img src="https://user-images.githubusercontent.com/13012976/140199771-4eec29bc-cc26-4050-8c4d-f3a3021c21b6.png" alt="Completar For">
+<img src="https://user-images.githubusercontent.com/13012976/140199781-df60beec-33b8-41f3-99ca-dc750f8ba7f7.png" alt="Completar while"></p>
+<h4 id="contar-vueltas">Contar vueltas</h4>
+<p><img src="https://user-images.githubusercontent.com/13012976/140199775-8a7cb22f-f633-458e-bb33-5beaed575f7b.png" alt="Contar vueltas For"></p>
 </article>
           </div>
           
