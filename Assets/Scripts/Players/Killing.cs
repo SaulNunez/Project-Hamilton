@@ -1,4 +1,4 @@
-using Mirror;
+﻿using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -83,7 +83,7 @@ public class Killing : NetworkBehaviour
 
         if (hasAuthority)
         {
-        GameUI.onKillButtonClick += AttemptToKill;
+            GameUI.onKillButtonClick += AttemptToKill;
         }
 
         SetAssasinAsRedNameIfPlayerInClientAssasin();
@@ -124,17 +124,15 @@ public class Killing : NetworkBehaviour
     {
         if (isServer && isAssasin)
         {
-            canKillSomeone = endOfCooldown <= NetworkTime.time &&
-                Physics2D.OverlapCircleNonAlloc(transform.position, config.actDistance, foundPlayerColliders, playersLayerMask) > 0;
+            int targetsInRange = Physics2D.OverlapCircleNonAlloc(transform.position, config.actDistance, foundPlayerColliders, playersLayerMask);
+            canKillSomeone = endOfCooldown <= NetworkTime.time && targetsInRange > 0;
 
-            foreach (var collider in foundPlayerColliders)
+            for (int i = 0; i < targetsInRange; i++)
             {
-                if (collider != null && collider.gameObject != this.gameObject)
+                if (foundPlayerColliders[i] != null && foundPlayerColliders[i].gameObject != this.gameObject)
                 {
-                    if (collider)
-                    {
-                        other = collider;
-                    }
+
+                    other = foundPlayerColliders[i];
                     break;
                 }
             }
@@ -148,7 +146,7 @@ public class Killing : NetworkBehaviour
     [Command]
     public void CmdMurder()
     {
-        if (canKillSomeone && isAssasin)
+        if (canKillSomeone && isAssasin && other)
         {
             var killingComponentInOther = other.gameObject.GetComponent<Killing>();
             var otherCanBeKilled = true;
@@ -158,7 +156,7 @@ public class Killing : NetworkBehaviour
             }
 
             var dieComponent = other.gameObject.GetComponent<Die>();
-            if (dieComponent != null && !otherCanBeKilled)
+            if (dieComponent != null && otherCanBeKilled)
             {
                 dieComponent.SetDed();
                 endOfCooldown = NetworkTime.time + config.secondsOfCooldownsForKill;
@@ -212,7 +210,7 @@ public class Killing : NetworkBehaviour
 
         if (hasAuthority)
         {
-        GameUI.onKillButtonClick -= AttemptToKill;
+            GameUI.onKillButtonClick -= AttemptToKill;
         }
     }
 
