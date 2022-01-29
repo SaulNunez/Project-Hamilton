@@ -26,7 +26,7 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: Test results
-          artifactsPath: ${{ steps.tests.outputs.artifactsPath }}
+          path: ${{ steps.tests.outputs.artifactsPath }}
   build-server:
     name: Building game for Linux
     runs-on: ubuntu-latest
