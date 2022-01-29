@@ -23,7 +23,7 @@ jobs:
         id: tests
         with:
           unityVersion: 2019.4.8f1
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v1
         with:
           name: Test results
           artifactsPath: ${{ steps.tests.outputs.artifactsPath }}
