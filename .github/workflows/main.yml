@@ -19,7 +19,7 @@ jobs:
           restore-keys: |
             Library-MyProjectName-
             Library-
-      - uses: webbertakken/unity-test-runner@v1.7
+      - uses: game-ci/unity-test-runner@v2
         id: tests
         with:
           unityVersion: 2019.4.8f1
@@ -38,7 +38,7 @@ jobs:
         with:
           path: Library
           key: Library
-      - uses: webbertakken/unity-builder@v1.4
+      - uses: game-ci/unity-builder@v2
         with:
           unityVersion: 2019.4.8f1
           targetPlatform: StandaloneLinux64
@@ -86,7 +86,7 @@ jobs:
         with:
           path: Library
           key: Library
-      - uses: webbertakken/unity-builder@v1.4
+      - uses: game-ci/unity-builder@v2
         with:
           unityVersion: 2019.4.8f1
           targetPlatform: WebGL
