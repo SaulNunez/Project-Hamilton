@@ -19,14 +19,14 @@ jobs:
           restore-keys: |
             Library-MyProjectName-
             Library-
-      - uses: webbertakken/unity-test-runner@v1.7
+      - uses: webbertakken/unity-test-runner@v2
         id: tests
         with:
           unityVersion: 2019.4.8f1
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: Test results
-          path: ${{ steps.tests.outputs.artifactsPath }}
+          artifactsPath: ${{ steps.tests.outputs.artifactsPath }}
   build-server:
     name: Building game for Linux
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
         with:
           path: Library
           key: Library
-      - uses: webbertakken/unity-builder@v1.4
+      - uses: webbertakken/unity-builder@v2
         with:
           unityVersion: 2019.4.8f1
           targetPlatform: StandaloneLinux64
